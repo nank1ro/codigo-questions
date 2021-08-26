@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In Python we can loop through a list in a very simple way using the `for..in` keywords:
+```
+>>> numbers = [1, 2, 3]
+>>> for num in numbers:
+>>> 	print(num)
+1
+2
+3
+```
+A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+</section>
+<section id="instructions">
+Print out each item in the list by multiplying it by `2`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["numbers = [2, 4, 6]\n", "[/]", "[/]", "[/]", "[/]", ":\n\tprint(", "[/]", "[/]", "[/]", ")"],
+	"buttons": ["for ", "num ", "in ", "numbers", "num ", "* ", "2", "** "],
+	"correct": "numbers = [2, 4, 6]\nfor num in numbers:\n\tprint(num * 2)"
+}
+</section>
+<section id="preOutput">
+4
+8
+12
+</section>

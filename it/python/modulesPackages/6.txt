@@ -1,0 +1,17 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Supponiamo di aver salvato un modulo come `miomodulo.py`.
+Come potremmo inserirlo in un altro script?
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["import ", "[/]"],
+	"buttons": ["miomodulo.py", "miomodulo"],
+	"correct": "import miomodulo"
+}
+</section>

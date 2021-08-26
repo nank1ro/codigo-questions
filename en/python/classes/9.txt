@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Which of these statements are true about __methods__?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Methods are functions that belong to a class", "Methods have a self parameter","Methods are variables that belong to a class","Methods have to change the attributes of a class"],
+	"corrects": ["Methods are functions that belong to a class", "Methods have a self parameter"]
+}
+</section>

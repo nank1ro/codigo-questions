@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do you recognize a formatted string?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["By the character f in front of the string","By the character f at the end of the string","There's no difference between strings and formatted strings"],
+	"correct": "By the character f in front of the string"
+}
+</section>

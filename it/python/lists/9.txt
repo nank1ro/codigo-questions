@@ -1,0 +1,38 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A volte e' necessario cercare un elemento in una lista.
+In Python possiamo usare il metodo `index()`:
+```
+>>> nomi = ["Trevor", "Zac", "Glenn"]
+>>> print(nomi.index("Zac"))
+1
+```
+Il codice qui sopra stampa il primo indice che contiene la stringa `"Zac"`, `1` in questo caso.
+Possiamo anche inserire elementi in una lista in un indice specifico, usando il metodo `insert()`:
+```
+>>> nomi.insert(1, "Ali")
+>>> print(nomi)
+['Trevor', 'Ali', 'Zac', 'Glenn']
+```
+Il codice qui sopra inserisce `"Ali"` all'indice `1`, e incrementa l'indice di 1 a tutti gli elementi che lo seguono
+</section>
+<section id="instructions">
+- Utilizza il metodo `index()` per stampare l'indice di `"cane"`.
+- Usa il metodo `insert()` per aggiungere `"orso"` come primo elemento della lista
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["animali = [\"gatto\", \"scimmia\", \"cane\"]\nprint(","[/]","[/]","[/]",")\nanimali.","[/]", "(", "[/]", ", ", "[/]",")\nprint(animali)"],
+	"buttons": ["animali", ".index", "(\"cane\")", "insert", "add", "0", "1", "\"orso\""],
+	"correct": "animali = [\"gatto\", \"scimmia\", \"cane\"]\nprint(animali.index(\"cane\"))\nanimali.insert(0, \"orso\")\nprint(animali)"
+}
+</section>
+<section id="preOutput">
+2
+['orso', 'gatto', 'scimmia', 'cane']
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can store the boolean value `true` in a variable just like a number or a string.
+</section>
+<section id="instructions">
+Display the output of the variable `musicOn`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var musicOn = true;\n","console.log(","[/]",");"],
+	"buttons": ["true","\"true\"","musicOn","\"musicOn\""],
+	"correct": "var musicOn = true;\nconsole.log(musicOn);"
+}
+</section>
+<section id="preOutput">
+true
+</section>

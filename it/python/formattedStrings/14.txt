@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa una stringa formattata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["quota = 50","\n","[/]","[/]","[/]"],
+	"buttons": ["print(",")","f\"{quota} e' la quota\"","50 e' la quota"],
+	"correct": "quota = 50\nprint(f\"{quota} e' la quota\")"
+}
+</section>
+<section id="preOutput">
+50 e' la quota
+</section>

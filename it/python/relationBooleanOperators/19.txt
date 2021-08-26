@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output del seguente codice?
+```
+risultato = 10
+print(risultato <= 10)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["True","False","true","false"],
+	"correct": "True"
+}
+</section>

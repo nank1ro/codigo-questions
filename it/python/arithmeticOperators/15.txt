@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output del seguente codice?
+```
+prodotto = 5 * 3
+print(prodotto)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["15","8","2","125"],
+	"correct": "15"
+}
+</section>

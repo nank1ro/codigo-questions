@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo usare `<` per eseguire il ciclo fino al numero che lo segue escluso, oppure `<=`per eseguire il ciclo fino al numero che lo segue incluso
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice in modo da eseguire il blocco di codice `3` volte
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for (int i = 1; i", "[/]", "3; i++) {\n\t\tprintf(\"%d\\n\", i);\n}"],
+	"buttons": [" ... "," ..< "," ..> "," .< ", " <= ", " < ", " >= "],
+	"correct": "for (int i = 1; i <= 3; i++) {\n\t\tprintf(\"%d\\n\", i);\n}"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+</section>

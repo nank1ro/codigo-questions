@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the ouput of the following code?
+```
+product = 5 * 3
+print(product)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["15","8","2","125"],
+	"correct": "15"
+}
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+A cosa servono le stringhe formattate?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Per visualizzare diversi tipi di valori insieme in una stringa", "Per allineare il testo", "Per concatenare piu' stringhe"],
+	"correct": "Per visualizzare diversi tipi di valori insieme in una stringa"
+}
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you get this script to use the renamed `choice()` function from `random`?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["from random import choice", "names = ['Shane','Keanu', 'Khia']","name = choice(names)","print(f'Hello {name}')"],
+	"correct": "from random import choicenames = ['Shane','Keanu', 'Khia']name = choice(names)print(f'Hello {name}')"
+}
+</section>

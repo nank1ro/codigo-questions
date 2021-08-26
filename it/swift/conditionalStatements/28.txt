@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+var online = false
+if online {
+	print("Ciao Utente!")
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Ciao utente!","\"Ciao utente!\"","Niente, il codice viene saltato"],
+	"correct": "Niente, il codice viene saltato"
+}
+</section>

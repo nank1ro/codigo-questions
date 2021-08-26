@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Vediamo la **divisione floor**, chiamata anche *divisione intera*, utilizzando la funzione `floor()`.
+Questa funzione restituisce la parte integrale del quoziente, ad esempio:
+```
+>>> 5.0 / 2
+2.5
+>>> floor(2.5)
+2.0
+```
+Il valore risultante e' un numero intero, sebbene il *tipo* del risultato non sia necessariamente `int`.
+</section>
+<section id="instructions">
+Calcola la divisione floor tra i numeri 10.0 e 3, quindi stampa la variabile `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["double divisione = ","[/]"," / ","[/]",";\nint risultato = ","[/]", "(","[/]",");\nprintf(\"%d\\n\", risultato);"],
+	"buttons": ["5","3"," % "," * ","625"," ** ", "pow", "floor", "divisione", "10.0"],
+	"correct": "double divisione = 10.0 / 3;\nint risultato = floor(divisione);\nprintf(\"%d\\n\", risultato);"
+}
+</section>
+<section id="preOutput">
+3.0
+</section>

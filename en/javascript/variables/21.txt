@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+var movie = "A Beautiful Mind";
+movie = "Agent " + "Cody " + "Banks";
+console.log(movie);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["A Beautiful Mind","Agent Cody Banks","A Beautiful MindAgent Cody Banks","AgentCodyBanks"],
+	"correct": "Agent Cody Banks"
+}
+</section>

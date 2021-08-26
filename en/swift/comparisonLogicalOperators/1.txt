@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's start with the **equal** `==` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+```
+print(2 == 2) // true
+print(2 == 3) // false
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is equal to `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","== ","= ","5"],
+	"correct": "var num = 5\nprint(num == 5)"
+}
+</section>
+<section id="preOutput">
+true
+</section>

@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salva il valore `false` nella variabile `acceso`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var ","[/]","[/]","[/]",";"],
+	"buttons": ["acceso ","\"acceso\"","\"false\"","False","false","= "],
+	"correct": "var acceso = false;"
+}
+</section>

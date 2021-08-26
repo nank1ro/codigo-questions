@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
+A basic class consists only of the `class` keyword and its name, for example:
+```
+class ClassName {
+	// class definition
+}
+```
+</section>
+<section id="instructions">
+Create a class called `Animal`, for now, leave the class emtpy.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]"," {\n\t\n}"],
+	"buttons": ["class ","Class ","Animal","\"Animal\"","Animal()"],
+	"correct": "class Animal {\n\t\n}"
+}
+</section>

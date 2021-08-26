@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]","[/]",")"],
+	"buttons": ["f","\"{6} friends\""],
+	"correct": "print(f\"{6} friends\")"
+}
+</section>
+<section id="preOutput">
+6 friends
+</section>

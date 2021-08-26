@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *power assignment* calculate the `num` (base) by the power of 5 (exponent), then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 5\n","[/]","[/]","[/]","\nprint(num)"],
+	"buttons": ["num ","**= ","=** ","5","*= ","num "],
+	"correct": "num = 5\nnum **= 5\nprint(num)"
+}
+</section>
+<section id="preOutput">
+3125
+</section>

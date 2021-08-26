@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In un ciclo `for` possiamo specificare quante volte vogliamo che il nostro ciclo si ripeta
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for (let i = ","[/]","; i","[/]","4; i++) {\n\tconsole.log(`${i} secondi\`);\n}"],
+	"buttons": [" < ","for","loop","\"through\"","0"],
+	"correct": "for (let i = 0; i < 4; i++) {\n\tconsole.log(`${i} secondi`);\n}"
+}
+</section>
+<section id="preOutput">
+0 secondi
+1 secondi
+2 secondi
+3 secondi
+</section>

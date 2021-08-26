@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *multiplication assignment* multiply `num` by 5, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\n","[/]","[/]","[/]","\nprint(num)"],
+	"buttons": ["num ","*= ","=* ","5","- ","num "],
+	"correct": "var num = 5\nnum *= 5\nprint(num)"
+}
+</section>
+<section id="preOutput">
+25
+</section>

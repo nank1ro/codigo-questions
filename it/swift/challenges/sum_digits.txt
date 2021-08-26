@@ -1,0 +1,61 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Ti viene dato un numero intero `N`.
+Scrivi un programma per calcolare la somma di tutte le cifre di N
+</section>
+
+<section id="instructions">
+Restituisci la somma delle cifre di `N`
+</section>
+
+<section id="seed">
+func sommaCifre() {
+
+}
+</section>
+
+<section id="test">
+import XCTest
+
+class SumDigitsTests: XCTestCase {
+
+    func testSumOfDigits1() {
+        XCTAssertEqual(sommaCifre(12345), 15, "La tua funzione deve restituire 15")
+    }
+
+    func testSumOfDigits2() {
+        XCTAssertEqual(sommaCifre(57253), 22, "La tua funzione deve restituire 22")
+    }
+
+    func testSumOfDigits3() {
+        XCTAssertEqual(sommaCifre(122), 5, "La tua funzione deve restituire 5")
+    }
+
+    func testSumOfDigits4() {
+        XCTAssertEqual(sommaCifre(91979997), 60, "La tua funzione deve restituire 60")
+    }
+
+    func testSumOfDigits5() {
+        XCTAssertEqual(sommaCifre(2147483647), 46, "La tua funzione deve restituire 46")
+    }
+
+    static var allTests: [(String, (SumDigitsTests) -> () throws -> Void)] {
+        return [
+            ("testSumOfDigits1", testSumOfDigits1),
+            ("testSumOfDigits2", testSumOfDigits2),
+            ("testSumOfDigits3", testSumOfDigits3),
+            ("testSumOfDigits4", testSumOfDigits4),
+            ("testSumOfDigits5", testSumOfDigits5),
+        ]
+    }
+}
+
+XCTMain([testCase(SumDigitsTests.allTests),])
+</section>

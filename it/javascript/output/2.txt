@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per ottenere l'output desiderato: `Ciao JavaScript!`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.","[/]","[/]","[/]","[/]","[/]","\")"],
+	"buttons": ["console","Ciao"," JavaScript!", "(",")",",","Print","[","]","\"","\"","log"],
+	"correct": "console.log(\"Ciao JavaScript!\")"
+}
+</section>
+<section id="preOutput">
+Ciao JavaScript!
+</section>

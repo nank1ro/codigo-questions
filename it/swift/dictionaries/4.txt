@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+La lunghezza `count` di un dizionario e' il numero di coppie _chiave-valore_ che ha.
+Ogni coppia conta una sola volta, anche se il valore e' un'array. (Esatto: si possono anche inserire liste all'interno dei dizionari!)
+</section>
+<section id="instructions">
+Stampa la lunghezza del dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nprint(","[/]","[/]","[/]", ")"],
+	"buttons": ["utente","len","length","\"utente\"",".","count"],
+	"correct": "var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nprint(utente.count)"
+}
+</section>
+<section id="preOutput">
+3
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Moltiplica 5 per 15.5, poi stampa il `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let risultato = 5","[/]","[/]","\nprint(risultato)"],
+	"buttons": ["15.5"," / "," - "," + "," * "],
+	"correct": "let risultato = 5 * 15.5\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+77.5
+</section>

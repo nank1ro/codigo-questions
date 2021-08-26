@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Scegli la variabile corretta per un utente che si è appena disconnesso
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["bool online = true;","bool online = false;","bool online = \"false\";","bool online = \"true\";"],
+	"correct": "bool online = false;"
+}
+</section>

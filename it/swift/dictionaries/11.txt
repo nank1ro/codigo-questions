@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Precedentemente abbiamo visto come rimuovere una coppia di _chiave-valore_ dal dizionario con il metodo `removeValue()`
+Possiamo anche rimuovere un elemento assegnando il valore `nil` alla chiave
+```
+nomeDizionario[keyName] = nil
+// keyName e' stato rimosso dal dizionario nomeDizionario
+```
+</section>
+<section id="instructions">
+Rimuovi la seconda chiave dal dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\n","[/]", "[","[/]","] = ","[/]","\nprint(utente)"],
+	"buttons": ["utente","\"cognome\"","cognome","nil","null"],
+	"correct": "var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nutente[\"cognome\"] = nil\nprint(utente)"
+}
+</section>
+<section id="preOutput">
+["eta": 30, "nome": "John"]
+</section>

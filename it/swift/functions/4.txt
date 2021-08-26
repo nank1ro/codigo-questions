@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le funzioni possono avere parametri di ingresso multipli, che vengono scritti tra le parentesi della funzione, separati dalle virgole.
+```
+func saluta(name: String, nuovoUtente: Bool) -> String {
+  var saluto: String = "Ciao \(name)!"
+  if (nuovoUtente) {
+    saluto += " Benvenuto a bordo :)"
+  }
+  return saluto
+}
+// stampa "Ciao Smith! Benvenuto a bordo :)"
+print(saluta(name: "Smith", nuovoUtente: true))
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da creare una funzione valida chiamata `sommaNumeri` passando il seguente array di numeri `[15, 24, 31, 79]` e `true` per stamparne il risultato
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func sommaNumeri(_ numeri: [Int], _ stampaRisultato: Bool) -> Int {\n\t/* Il metodo reduce viene utilizzato per sommare tutti i numeri, partendo da 0 e utilizzando il segno +\n\t*/\n\tlet risultato = numeri.reduce(0, +)\n\tif ","[/]"," { print(risultato) }\n\treturn risultato\n}\nlet risultato = ","[/]","(","[/]","15, 24, 31, ","[/]","[/]",", ","[/]",")"],
+	"buttons": ["sommaNumeri","sum","79","]","[","true","false","True","stampaRisultato","print","true"],
+	"correct": "func sommaNumeri(_ numeri: [Int], _ stampaRisultato: Bool) -> Int {\n\t/* Il metodo reduce viene utilizzato per sommare tutti i numeri, partendo da 0 e utilizzando il segno +\n\t*/\n\tlet risultato = numeri.reduce(0, +)\n\tif stampaRisultato { print(risultato) }\n\treturn risultato\n}\nlet risultato = sommaNumeri([15, 24, 31, 79], true)"
+}
+</section>
+<section id="preOutput">
+149
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do you display numeric values with formatted strings?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["We place them between curly braces {}","We can't display numeric values with formatted strings","We place them between square brackets []","We place them between round brackets ()"],
+	"correct": "We place them between curly braces {}"
+}
+</section>

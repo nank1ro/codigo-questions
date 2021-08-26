@@ -1,0 +1,20 @@
+<section id="options">
+{
+"langueta": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+E se volessimo elencare tutte le chiavi del dizionario?
+Beh, possiamo usare il metodo `Object.keys()`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\nconsole.log(","[/]","[/]","(","[/]","));"],
+	"buttons": ["utente",".keys()",".keys",".key",".allKeys()","Object"],
+	"correct": "var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\nconsole.log(Object.keys(utente));"
+}
+</section>
+<section id="preOutput">
+["nome", "cognome", "eta"]
+</section>

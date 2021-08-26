@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Allo stesso modo, possiamo convertire una lista in una tupla
+</section>
+<section id="instructions">
+Usa la funzione `tuple()` per convertire la lista in una tupla
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["list1 = [\"cane\", \"orso\", \"gatto\"]\ntupla1 = ", "[/]", "\nprint(tupla1)"],
+	"buttons": ["tuple[list1]", "tuple(list1)"],
+	"correct": "list1 = [\"cane\", \"orso\", \"gatto\"]\ntupla1 = tuple(list1)\nprint(tupla1)"
+}
+</section>
+<section id="preOutput">
+('cane', 'orso', 'gatto')
+</section>

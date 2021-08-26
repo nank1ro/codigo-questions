@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `Internet` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",")"],
+	"buttons": ["print","\"Ciao\"","\"Swift!\"","Ciao","Swift!","Internet","\"Internet\""],
+	"correct": "print(\"Internet\")"
+}
+</section>
+<section id="preOutput">
+Internet
+</section>

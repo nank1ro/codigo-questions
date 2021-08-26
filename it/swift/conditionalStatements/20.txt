@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]","[/]","[/]","\n\tprint(\"Sono pronto!\")\n","}"],
+	"buttons": ["true ","false","\"true\"","\"false\"","if ","else ","else if ","}","{"],
+	"correct": "if true {\n\tprint(\"Sono pronto!\")\n}"
+}
+</section>
+<section id="preOutput">
+Sono pronto!
+</section>

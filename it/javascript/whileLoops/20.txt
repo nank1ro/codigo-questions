@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come facciamo a sapere che il ciclo `while` salta il suo blocco di codice?
+```
+var caricamento = false;
+
+while (caricamento) {
+    console.log("Caricamento...");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["La variabile nella condizione viene confrontata con true", "La variabile nella condizione viene confrontata con false"],
+	"correct": "La variabile nella condizione viene confrontata con true"
+}
+</section>

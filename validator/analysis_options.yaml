@@ -1,0 +1,38 @@
+# Defines a default set of lint rules enforced for projects at Google. For
+# details and rationale, see
+# https://github.com/dart-lang/pedantic#enabled-lints.
+
+include: package:lints/recommended.yaml
+# For lint rules and documentation, see http://dart-lang.github.io/linter/lints.
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+  errors:
+    # Causes false positives (https://github.com/dart-lang/sdk/issues/41571)
+    top_level_function_literal_block: ignore
+    avoid_classes_with_only_static_members: error
+    sort_pub_dependencies: error
+    use_key_in_widget_constructors: error
+    always_use_package_imports: error
+    sort_constructors_first: error
+    prefer_const_constructors: error
+
+# Uncomment to specify additional rules.
+linter:
+  rules:
+    - camel_case_types
+    - avoid_classes_with_only_static_members
+    - sort_pub_dependencies
+    - use_key_in_widget_constructors
+    - always_use_package_imports
+    - prefer_const_constructors
+    - package_api_docs
+    - slash_for_doc_comments
+    - sort_constructors_first

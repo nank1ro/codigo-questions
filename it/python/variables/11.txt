@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa la stringa seguita dalla variabile nell'output.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["nome = \"Sofia\"","\n","[/]","(","[/]",")","\n","print(","[/]",")"],
+	"buttons": ["print","Ciao","nome","\"Ciao\""],
+	"correct": "nome = \"Sofia\"\nprint(\"Ciao\")\nprint(nome)"
+}
+</section>
+<section id="preOutput">
+Ciao
+Sofia
+</section>

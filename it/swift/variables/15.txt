@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Imposta `"50 dollari"` come valore a `prezzo`
+</section>
+<section id="seed">
+var prezzo = "20 dollari"
+// scrivi dopo questa linea
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(prezzo == \"50 dollari\", \"il prezzo deve essere uguale a 50 dollari\")"
+        }
+    ]
+}
+</section>

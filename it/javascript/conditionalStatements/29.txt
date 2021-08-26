@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale dichiarazione di stampa fa parte del blocco di codice dell'istruzione?
+```
+var online = false;
+if (online) {
+	console.log("Ciao Utente!");
+}
+console.log("Ciao Utente");
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["console.log(\"Ciao Utente!\");","console.log(Ciao Utente!);","console.log(\"Ciao Utente\");","console.log(Ciao Utente);"],
+	"correct": "console.log(\"Ciao Utente!\");"
+}
+</section>

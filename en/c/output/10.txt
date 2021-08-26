@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display `Terminal` as output.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]","[/]"],
+	"buttons": ["printf(","\"","\"","Terminal",");","]","[",";"],
+	"correct": "printf(\"Terminal\");"
+}
+</section>
+<section id="preOutput">
+Terminal
+</section>

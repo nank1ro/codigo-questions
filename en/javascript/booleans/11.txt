@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Store the value `false` in the variable `continue`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var continue = ","[/]",";"],
+	"buttons": ["\"False\"","false","False","\"false\""],
+	"correct": "var continue = false;"
+}
+</section>

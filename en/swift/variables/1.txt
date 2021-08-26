@@ -1,0 +1,40 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Variables are containers for storing data values.
+Every variable in Swift is an object.
+To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
+A variable is created the moment you first assign a value to it.
+In Swift you declare constants with the `let` keyword and variables with the `var` keyword.
+The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
+An example of a variable creation named `x` is:
+```
+var x = 1
+```
+In this way we have assigned the value `1` to the variable named `x`.
+If we print the variable `x` we get back the number `1`:
+```
+print(x) // prints 1
+```
+</section>
+<section id="instructions">
+Assign to the variable `y` the value `2`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(y == 2,\"y is not equal to 2\")"
+        }
+    ]
+}
+</section>

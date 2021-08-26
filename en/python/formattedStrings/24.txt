@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Save the string inside `animal`, then display the formatted string
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","\n","muscles = 32","\n","print(","[/]"," muscles in each ear\")"],
+	"buttons": ["animal = \"cat\"","f\"A {animal} has {muscles}","f\"animal = 'cat'\""],
+	"correct": "animal = \"cat\"\nmuscles = 32\nprint(f\"A {animal} has {muscles} muscles in each ear\")"
+}
+</section>
+<section id="preOutput">
+A cat has 32 muscles in each ear
+</section>

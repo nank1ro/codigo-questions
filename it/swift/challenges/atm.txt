@@ -1,0 +1,59 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+James vorrebbe prelevare N euro da un bancomat.
+Il bancomat accetterà la transazione solo se N è un multiplo di 5 e il conto di James ha abbastanza contante per eseguire il prelievo (incluse le commissioni bancarie).
+Per ogni prelievo effettuato con successo, la banca addebita 0.50€.
+Calcola il saldo del conto di James dopo un tentativo di transazione.
+Gli input sono nell'ordine seguente:
+1. la quantità di contanti che James desidera prelevare è nel seguente intervallo: `0 < N <= 2000`.
+2. Il saldo iniziale di James viene fornito con due cifre decimali ed è nel seguente intervallo: `0 < B <= 2000`.
+</section>
+
+<section id="instructions">
+Restituisci il saldo del conto, con due cifre decimali, dopo il tentativo di transazione.
+Se non c'è abbastanza denaro nel conto per completare l'operazione, restituire il saldo bancario corrente.
+</section>
+
+<section id="seed">
+func saldoConto() -> Double {
+    return
+}
+</section>
+
+<section id="test">
+import XCTest
+
+class ATMTests: XCTestCase {
+    func testSuccessfulTransaction() {
+        let expected: Double = 69.50
+        XCTAssertEqual(saldoConto(50, 120.00), expected, "La funzione deve restituire 69.50")
+    }
+
+    func testInsufficientFunds() {
+        let expected: Double = 120.00
+        XCTAssertEqual(saldoConto(200, 120.00), expected, "La funzione deve restituire 120.00")
+    }
+
+    func testNotMultipleOf5() {
+        let expected: Double = 120.00
+        XCTAssertEqual(saldoConto(22, 120.00), expected, "La funzione deve restituire 120.00")
+    }
+
+    static var allTests: [(String, (ATMTests) -> () throws -> Void)] {
+        return [
+            ("testSuccessfulTransaction", testSuccessfulTransaction),
+            ("testInsufficientFunds", testInsufficientFunds),
+            ("testNotMultipleOf5", testNotMultipleOf5),
+        ]
+    }
+}
+
+XCTMain([testCase(ATMTests.allTests),])
+</section>

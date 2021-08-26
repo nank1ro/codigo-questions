@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Accedere ai valori del dizionario con la chiave e' come accedere ai valori della lista con l'indice:
+```
+utente['eta']
+# ottieni il valore dell'età dal dizionario utente
+```
+</section>
+<section id="instructions">
+Stampa il valore della chiave `cognome`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nprint(","[/]" ,"[/]","[/]","[/]" , ")"],
+	"buttons": ["utente", "[", "]", "cognome","\"cognome\""],
+	"correct": "utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nprint(utente[\"cognome\"])"
+}
+</section>
+<section id="preOutput">
+Hood
+</section>

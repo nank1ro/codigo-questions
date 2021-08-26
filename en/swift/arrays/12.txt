@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Can you find one way to create an array?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["var animals = [\"dog\", \"cat\"]", "var animals = (\"dog\", \"cat\")", "var animals = \"dog\", \"cat\"","var animals = tuple((\"dog\", \"cat\"))"],
+	"correct": "var animals = [\"dog\", \"cat\"]"
+}
+</section>

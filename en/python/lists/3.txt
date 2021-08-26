@@ -1,0 +1,36 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A list index behaves like any other variable name! It can be used to access as well as assign values.
+You saw how to access a list index like this:
+```
+names = ["Jeremiah", "Barney", "Ivan", "Noel"]
+names[0] # Gets the value "Jeremiah"
+```
+This is how an assignment works:
+```
+names = ["Jeremiah", "Barney", "Ivan", "Noel"]
+names[0] = "Jordan"
+names[0] # Gets the new value "Jordan"
+```
+</section>
+<section id="instructions">
+Complete the code in order to replace the item that currently holds the value `"Mia"` with the name `"Sophie"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["names = [\"Charlotte\", \"Mia\", \"Jessica\", \"Hollie\"]\n","[/]","[/]"," = \"Sophie\"\nfor name in names:\n\tprint(name)"],
+	"buttons": ["[0]", "[1]", "[2]", "[3]", "[4]", "names"],
+	"correct": "names = [\"Charlotte\", \"Mia\", \"Jessica\", \"Hollie\"]\nnames[1] = \"Sophie\"\nfor name in names:\n\tprint(name)"
+}
+</section>
+<section id="preOutput">
+Charlotte
+Sophie
+Jessica
+Hollie
+</section>

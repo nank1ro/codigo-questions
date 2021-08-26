@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+</section>
+<section id="instructions">
+Check if the `user` dictionary is empty
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif (","[/]","[/]","[/]",") {\n\tprint(\"user dictionary is empty\")\n} else {\n\tprint(\"user dictionary is NOT empty\")\n}"],
+	"buttons": ["user",".","isEmpty","isEmpty()","is_empty"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif (user.isEmpty) {\n\tprint(\"user dictionary is empty\")\n} else {\n\tprint(\"user dictionary is NOT empty\")\n}"
+}
+</section>
+<section id="preOutput">
+user dictionary is NOT empty
+</section>

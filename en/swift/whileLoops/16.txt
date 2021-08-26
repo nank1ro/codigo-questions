@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Print a string in the code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while true {\n\t","[/]","[/]","[/]","[/]","\n}"],
+	"buttons": ["print","(",")","\"Hello!\""],
+	"correct": "while true {\n\tprint(\"Hello!\")\n}"
+}
+</section>
+<section id="preOutput">
+Hello!
+Hello!
+Hello!
+Hello!
+...
+</section>

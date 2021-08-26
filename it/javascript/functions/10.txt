@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa la funzione in modo da stampare il risultato corretto chiamando la funzione `potenza` con una base di `4` e un esponente di `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["const potenza = (base, ","[/]",") => Math.pow(base, ","[/]",");\nvar base = 4;\nvar ","[/]"," = 5;\nvar risultato = potenza(","[/]",", esponente);\nconsole.log(`${base} alla potenza di ${esponente} è uguale a ${","[/]","}`);"],
+	"buttons": ["5", "base", "esponente", "exp", "potenza","esponente","Double","Int","potenza","risultato"],
+	"correct": "const potenza = (base, esponente) => Math.pow(base, esponente);\nvar base = 4;\nvar esponente = 5;\nvar risultato = potenza(base, esponente);\nconsole.log(`${base} alla potenza di ${esponente} è uguale a ${risultato}`);"
+}
+</section>
+<section id="preOutput">
+4 alla potenza di 5 è uguale a 1024
+</section>

@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Una classe di base e' composta solo dalla parola chiave `class` e dal nome della classe, per esempio:
+```
+class NomeClasse:
+	pass
+```
+</section>
+<section id="instructions">
+Creare una classe chiamata `Animale`.
+Per ora, nel blocco di codice della vostra classe, usate la parola chiave `pass`.
+(`pass` non fa nulla, ma e' utile come segnaposto in aree del vostro codice dove Python si aspetta un'espressione)
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]",":\n\t","[/]"],
+	"buttons": ["class ","Class ","Animale","'Animale'","Animale()","pass","return"],
+	"correct": "class Animale:\n\tpass"
+}
+</section>

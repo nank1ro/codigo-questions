@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come si chiamano le linee di codice indentate dopo un'istruzione condizionale?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Blocco di codice","Linee indentate","Istruzioni","Condizioni"],
+	"correct": "Blocco di codice"
+}
+</section>

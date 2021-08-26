@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Make the code block **NOT** to run by assigning a value to the variable
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool coffee_time = ", "[/]", ";\nif (coffee_time) {\n\tprintf(\"It's time for coffee!\\n\");\n}"],
+	"buttons": ["true", "false", "\"true\"", "\"false\""],
+	"correct": "bool coffee_time = false;\nif (coffee_time) {\n\tprintf(\"It's time for coffee!\\n\");\n}"
+}
+</section>

@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
+The expression `a` is always of an optional type.
+The expression `b` must match the type that is stored inside a.
+The nil-coalescing operator is shorthand for the code below:
+```
+a != nil ? a! : b
+```
+</section>
+<section id="instructions">
+Use the _nil-coalescing operator_
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var name: String? // name is nil\nvar greet: String = \"Hello \";\ngreet += name ","[/]"," \"World\"\nprint(greet)"],
+	"buttons": ["if","==", "=","else","?","??"],
+	"correct": "var name: String? // name is nil\nvar greet: String = \"Hello \";\ngreet += name ?? \"World\"\nprint(greet)"
+}
+</section>
+<section id="preOutput">
+Hello World
+</section>

@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Set `amount` to the value `"50 dollars"`
+</section>
+<section id="seed">
+char amount[] = "20 dollars";
+// write after this line
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "regex": "assert(strcmp(amount, \"50 dollars\") == 0);"
+        }
+    ]
+}
+</section>

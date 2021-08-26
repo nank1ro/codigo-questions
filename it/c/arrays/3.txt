@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+L'indice di una lista si comporta come qualsiasi altro nome di variabile!
+Può essere usato per ottenere e assegnare valori.
+Abbiamo visto come accedere ad una valore di una lista:
+```
+int numeri[4] = {5, 6, 7, 8};
+numeri[0]; // Gets the value 5
+```
+Ecco come funziona l'assegnazione:
+```
+int numeri[4] = {5, 6, 7, 8};
+numeri[0] = 1;
+printf("%d\n", numeri[0]); // stampa il nuovo valore 1
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da sostituire il valore `5` con il nuovo valore `10`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int numeri", "[/]", " = {10, 4, 6, 5};\n\nnumeri", "[/]", " = 10;\n\nfor (int i = 0; i < 4; i++) {\n\tprintf(\"%d\\n\", ", "[/]", "[i]);\n}"],
+	"buttons": ["[0]", "[1]", "[2]", "[3]", "[4]", "numeri"],
+	"correct": "int numeri[4] = {10, 4, 6, 5};\n\nnumeri[3] = 10;\n\nfor (int i = 0; i < 4; i++) {\n\tprintf(\"%d\\n\", numeri[i]);\n}"
+}
+</section>
+<section id="preOutput">
+10
+4
+6
+10
+</section>

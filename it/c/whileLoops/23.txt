@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Crea una variabile per il ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", "[/]", "[/]", "[/]", "[/]", "\nwhile (caricamento) {\n\tprintf(\"Caricamento...\\n\");\n}"],
+	"buttons": ["true", "\"true\"", "\"false\"", " caricamento", " = ", "bool", ",", ";"],
+	"correct": "bool caricamento = true;\nwhile (caricamento) {\n\tprintf(\"Caricamento...\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Caricamento...
+Caricamento...
+Caricamento...
+Caricamento...
+...
+</section>

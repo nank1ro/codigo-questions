@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a riordinare queste righe in modo che visualizzino `Il valore rimosso e' John.` nell'output?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["var user = [String: Any]()","user[\"nome\"] = \"John\"","if let valoreRimosso = user.removeValue(forKey: \"nome\") {","\tprint(\"Il valore rimosso e' \\(valoreRimosso).\")","}"],
+	"correct": "var user = [String: Any]()user[\"nome\"] = \"John\"if let valoreRimosso = user.removeValue(forKey: \"nome\") {\tprint(\"Il valore rimosso e' \\(valoreRimosso).\")}"
+}
+</section>
+<section id="preOutput">
+Il valore rimosso e' John.
+</section>

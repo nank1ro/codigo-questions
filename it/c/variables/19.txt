@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `U.S. Route 66` nell'output aggiungendo il valore.
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["printf(\"", "[/]", "[/]", "\\n\", \"U.S. Route\", ", "[/]", ");"],
+	"buttons": ["\"", "\"", "66", "=", "+", "),", "$s", "%s", "%c", " %i"],
+	"correct": "printf(\"%s %i\\n\", \"U.S. Route\", 66);"
+}
+</section>
+<section id="preOutput">
+U.S. Route 66
+</section>

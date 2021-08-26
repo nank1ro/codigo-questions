@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+If we want a variable name with multiple words, we use **snake case**.
+It means using `_` to connect the additional words.
+</section>
+<section id="instructions">
+Fill in the blanks to create a *snake case* variable.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["first","[/]","name"],
+	"buttons": ["+","-","_"],
+	"correct": "first_name"
+}
+</section>

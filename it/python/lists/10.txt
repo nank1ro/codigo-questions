@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In Python possiamo far scorrere una lista in un ciclo in un modo molto semplice usando le parole chiave `for..in`:
+```
+>>> numeri = [1, 2, 3]
+>>> for num in numeri:
+>>> 	print(num)
+1
+2
+3
+```
+Un nome di variabile segue la parola chiave `for`, ad essa verrà assegnato il valore di ogni elemento della lista a turno.
+</section>
+<section id="instructions">
+Stampa ogni valore della lista moltiplicandolo per `2`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["numeri = [2, 4, 6]\n", "[/]", "[/]", "[/]", "[/]", ":\n\tprint(", "[/]", "[/]", "[/]", ")"],
+	"buttons": ["for ", "num ", "in ", "numeri", "num ", "* ", "2", "** "],
+	"correct": "numeri = [2, 4, 6]\nfor num in numeri:\n\tprint(num * 2)"
+}
+</section>
+<section id="preOutput">
+4
+8
+12
+</section>

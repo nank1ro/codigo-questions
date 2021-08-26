@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+L'inserimento di variabili come "amici" tra le parentesi graffe mostra anche il loro valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["amici = 5","\n","print(f\"{","[/]","} amici\")"],
+	"buttons": ["amici","5"],
+	"correct": "amici = 5\nprint(f\"{amici} amici\")"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

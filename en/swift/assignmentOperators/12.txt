@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the output of the following code?
+```
+var result = 50
+result += 10
+print(result)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["50","60","10","5010"],
+	"correct": "60"
+}
+</section>

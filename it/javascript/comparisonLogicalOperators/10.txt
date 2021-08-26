@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `num` e' uguale a `5.0`, stampando il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5;\n","console.log(","[/]","[/]","[/]",");"],
+	"buttons": ["num ","num ","== ","= ","5"],
+	"correct": "var num = 5;\nconsole.log(num == 5);"
+}
+</section>
+<section id="preOutput">
+true
+</section>

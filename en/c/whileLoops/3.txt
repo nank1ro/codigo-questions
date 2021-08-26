@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Then, we use a comparison in the condition to compare the `counter` variable to a number.
+</section>
+<section id="instructions">
+Compare the `counter` variable with a number
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int counter = 3;\nwhile (", "[/]", "[/]", "[/]", ") {}"],
+	"buttons": ["while", "true", " < ", "5", "\"5\"", ":", ";", "counter"],
+	"correct": "int counter = 3;\nwhile (counter < 5) {}"
+}
+</section>

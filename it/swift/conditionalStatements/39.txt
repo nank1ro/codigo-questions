@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var mattina = false\nvar pomeriggio = !mattina\nif ","[/]"," {\n\tprint(\"Buon pomeriggio!\")\n}"],
+	"buttons": ["mattina","pomeriggio","\"mattina\"","\"pomeriggio\""],
+	"correct": "var mattina = false\nvar pomeriggio = !mattina\nif pomeriggio {\n\tprint(\"Buon pomeriggio!\")\n}"
+}
+</section>
+<section id="preOutput">
+Buon pomeriggio!
+</section>

@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+E se volessimo __rimuovere__ un valore da un dizionario?
+Possiamo usare il metodo `pop()`:
+```
+nome_dizionario.pop("nome_chiave")
+```
+</section>
+<section id="instructions">
+Rimuovi la seconda chiave dal dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nutente.","[/]","(","[/]",")","\nprint(utente)"],
+	"buttons": ["update","add","insert","pop","del","delete","\"cognome\"","\"nome\"","\"eta\""],
+	"correct": "utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nutente.pop(\"cognome\")\nprint(utente)"
+}
+</section>
+<section id="preOutput">
+{'nome': 'John', 'eta': 30}
+</section>

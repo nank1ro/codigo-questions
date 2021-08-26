@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Create an infinite loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (","[/]",") {\n\tprintf(\"infinite loop!\\n\");\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while (true) {\n\tprintf(\"infinite loop!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+infinite loop
+infinite loop
+infinite loop
+infinite loop
+...
+</section>

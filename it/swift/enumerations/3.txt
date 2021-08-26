@@ -1,0 +1,35 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo abbinare i singoli valori dell'enumerazione con una dichiarazione `switch`:
+```
+let colori = Colori.red
+switch colori {
+	case .blu:
+		print("Blu")
+	case .rosso:
+		print("Rosso")
+	case .verde:
+		print("Verde")
+}
+// stampa "Rosso"
+```
+Tieni presente che se non vuoi fornire un `case` per ogni caso di enumerazione, puoi fornire un `default` case per coprire tutti i casi che non sono stati affrontati esplicitamente
+</section>
+<section id="instructions">
+Completa l'istruzione di `switch` in modo da ricoprire tutti i casi
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let giorno = Settimana.lunedi\n","[/]","[/]"," {\n\tcase .sabato, .","[/]",":\n\t\tprint(\"Week-end\")\n\t","[/]",":\n\t\tprint(\"Lavoro\")\n}"],
+	"buttons": ["switch ","giorno","domenica","default"],
+	"correct": "let giorno = Settimana.lunedi\nswitch giorno {\n\tcase .sabato, .domenica:\n\t\tprint(\"Week-end\")\n\tdefault:\n\t\tprint(\"Lavoro\")\n}"
+}
+</section>
+<section id="preOutput">
+Lavoro
+</section>

@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Mostra i numeri da `5` a `8` nell'output impostando il valore di `contatore`
+</section>
+<section id="seed">
+int contatore = 
+
+while (contatore < 9) {
+    printf("%d\n", contatore);
+    contatore++;
+}
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output":"5\n6\n7\n8"
+        }
+    ]
+}
+</section>

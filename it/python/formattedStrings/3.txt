@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le stringhe formattate ci consentono di mostrare espressioni come stringhe con numeri, senza ricevere alcun errore.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]",")"],
+	"buttons": ["f\"{5} amici\""],
+	"correct": "print(f\"{5} amici\")"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

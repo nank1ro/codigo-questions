@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale output produce il seguente codice:
+```
+printf("%d\n", 25 + 50);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["75","2550","25","\"2550\""],
+	"correct": "75"
+}
+</section>

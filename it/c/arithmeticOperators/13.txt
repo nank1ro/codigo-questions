@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calcola l'elevamento a potenza dei numeri 3 (*base*) e 5 (*esponente*), quindi stampa il `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int risultato = ","[/]","(","[/]",", ","[/]",");\nprintf(\"%i\\n\", risultato);"],
+	"buttons": ["3","5"," - "," * "," ** ", "pow"],
+	"correct": "int risultato = pow(3, 5);\nprintf(\"%i\\n\", risultato);"
+}
+</section>
+<section id="preOutput">
+243
+</section>

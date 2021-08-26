@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calculate the difference between 25 and 15
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let difference = ","[/]","[/]","[/]",";\nconsole.log(difference);"],
+	"buttons": ["25","15","10"," - "," + "," * "],
+	"correct": "let difference = 25 - 15;\nconsole.log(difference);"
+}
+</section>
+<section id="preOutput">
+10
+</section>

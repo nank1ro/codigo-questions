@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Più casi di enumerazione possono essere presenti in una singola riga, separati da virgole:
+```
+enum Colori {
+	case blu, rosso, verde
+}
+```
+</section>
+<section id="instructions">
+Dichiara tutti i casi in un'unica riga di codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," Settimana {\n\t","[/]"," lunedi', martedi', mercoledi', giovedi', ","[/]",", sabato, domenica\n}"],
+	"buttons": ["enum", "enumeration","venerdi'", "\"venerdi'\"","case","sabato"],
+	"correct": "enum Settimana {\n\tcase lunedi', martedi', mercoledi', giovedi', venerdi', sabato, domenica\n}"
+}
+</section>

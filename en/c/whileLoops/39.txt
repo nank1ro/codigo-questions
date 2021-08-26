@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display the number `1` through `3` in the output changing the condition
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int number = 1;\nwhile (number", "[/]", "3) {\n\tprintf(\"%d\\n\", number);\n\tnumber++;\n}"],
+	"buttons": [" < "," > "," >= "," <= "],
+	"correct": "int number = 1;\nwhile (number <= 3) {\n\tprintf(\"%d\\n\", number);\n\tnumber++;\n}"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+</section>

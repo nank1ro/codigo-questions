@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Abbiamo anche l'operatore di **assegnazione di sottrazione** `-=`.
+La funzionalità e' la stessa dell'operatore di assegnazione di addizione, l'unica differenza e' che, ovviamente, esegue la sottrazione.
+Quindi le seguenti linee di codice eseguono la stessa operazione:
+```
+num = num - 5;
+// è uguale a 
+num -= 5;
+```
+</section>
+<section id="instructions">
+Sottrai alla variabile `risultato` il valore `15` usando l'operatore di *assegnazione di sottrazione*, quindi stampane il valore
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int risultato = 75;\nrisultato", "[/]", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": [" - ", " -= ", " =- ", "50", "15", "risultato"],
+	"correct": "int risultato = 75;\nrisultato -= 15;\nprintf(\"%d\\n\", risultato);"
+}
+</section>
+<section id="preOutput">
+60
+</section>

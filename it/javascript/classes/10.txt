@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a rendere `Cane` come sottoclasse di `Animale`
+`zampe` deve essere dichiarato all'interno della classe `Animale`, mentre `razza` deve essere all'interno della classe `Cane`
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Animale {\t","\tconstructor(zampe = 4) {","\t\tthis.zampe = zampe;","\t}","}","class Cane extends Animale {","\tconstructor(verso) {","\t\tsuper();","\t\tthis.verso = verso;","\t}","}","let max = new Cane();","max.verso = \"Chihuahua\";","console.log(max.verso);"],
+	"correct": "class Animale {\t\tconstructor(zampe = 4) {\t\tthis.zampe = zampe;\t}}class Cane extends Animale {\tconstructor(verso) {\t\tsuper();\t\tthis.verso = verso;\t}}let max = new Cane();max.verso = \"Chihuahua\";console.log(max.verso);"
+}
+</section>

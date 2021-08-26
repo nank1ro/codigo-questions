@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to always print `Hello World`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var online = false\nif online {\n\tprint(\"Hello User!\")\n}\n","[/]","[/]","[/]","[/]"],
+	"buttons": ["print","Print","(",")",":","\"Hello World\"","Hello World"],
+	"correct": "var online = false\nif online {\n\tprint(\"Hello User!\")\n}\nprint(\"Hello World\")"
+}
+</section>
+<section id="preOutput">
+Hello World
+</section>

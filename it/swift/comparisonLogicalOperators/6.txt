@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Continuiamo con l'operatore di comparazione **minore di o uguale a** `<=`.
+Restituisce un valore **booleano** (`true` o `false`) affermando se un'espressione e' minore o uguale all'altra, per esempio:
+```
+print(2 <= 2) // true
+print(3 <= 2) // false
+print(3 <= 4) // true
+```
+</section>
+<section id="instructions">
+Stampa un valore booleano verificando se `num` e' minore o uguale a `4`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","!= ","<= ","4","< "],
+	"correct": "var num = 5\nprint(num <= 4)"
+}
+</section>
+<section id="preOutput">
+false
+</section>

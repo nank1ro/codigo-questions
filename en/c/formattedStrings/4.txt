@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Next, we add the different kind of value. Like here, with `%i`
+</section>
+<section id="instructions">
+Fill in the empty space to get this output
+```
+5 friends
+```
+</section>
+<section id="seed">
+printf(" friends")
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "5 friends"
+        }
+    ]
+}
+</section>

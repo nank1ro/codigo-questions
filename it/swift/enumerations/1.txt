@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Una `enumerazione` definisce un tipo comune per un gruppo di valori correlati e consente di lavorare con questi valori in modo sicuro all'interno del proprio codice.
+Dichiariamo le enumerazioni utilizzando la parola chiave `enum`:
+```
+enum Colori {
+	case blu
+	case rosso
+	case verde
+}
+```
+I valori definiti in un'enumerazione (come `blu`, `rosso` e `verde`) sono i suoi _casi_.
+Utilizziamo la parola chiave `case` per introdurre nuovi casi di enumerazione
+</section>
+<section id="instructions">
+Dichiara una valida enumerazione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," Settimana {\n\tcase lunedi'\n\tcase martedi'\n\t","[/]"," mercoledi'\n\tcase giovedi'\n\tcase venerdi'\n\tcase ","[/]","\n\tcase domenica\n}"],
+	"buttons": ["enum", "enumeration","sabato", "\"sabato\"","case","\"case\""],
+	"correct": "enum Settimana {\n\tcase lunedi'\n\tcase martedi'\n\tcase mercoledi'\n\tcase giovedi'\n\tcase venerdi'\n\tcase sabato\n\tcase domenica\n}"
+}
+</section>

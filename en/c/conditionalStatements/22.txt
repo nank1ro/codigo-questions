@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know that `Hello World` will always be printed?
+```
+bool online = false;
+if (online) {
+    printf("User is online\n");
+}
+printf("Hello World\n");
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Because its not inside the conditional statement","Because the if statement can't have more than one line","Because there isn't an else statement","Because there isn't an else if statement"],
+	"correct": "Because its not inside the conditional statement"
+}
+</section>

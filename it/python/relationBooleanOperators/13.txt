@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `num` e' **maggiore di o uguale a** `8`, stampa il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 8\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","'num'","== ","= ","num",">= ","8"],
+	"correct": "num = 8\nprint(num >= 8)"
+}
+</section>
+<section id="preOutput">
+True
+</section>

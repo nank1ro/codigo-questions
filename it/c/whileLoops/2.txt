@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Per controllare le ripetizioni di un ciclo `while`, si inizializza una variabile con un determinato numero.
+Chiamiamo questa variabile contatore
+</section>
+<section id="instructions">
+Assegna alla variabile `contatore` un numero
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int contatore = ","[/]", ";"],
+	"buttons": ["while","true","3","\"3\""],
+	"correct": "int contatore = 3;"
+}
+</section>

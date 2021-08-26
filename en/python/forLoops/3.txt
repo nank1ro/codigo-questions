@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Adding a number like `5`, inside the `range()` function means it will loop over the code block 5 times, from `0` until `4`
+</section>
+<section id="instructions">
+Complete the `for` loop in the following code in order to execute the code block `3` times
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in range(","[/]","):\n\tprint(i)"],
+	"buttons": ["3","2","4"],
+	"correct": "for i in range(3):\n\tprint(i)"
+}
+</section>
+<section id="preOutput">
+0
+1
+2
+</section>

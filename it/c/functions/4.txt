@@ -1,0 +1,38 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le funzioni possono avere parametri di ingresso multipli, che vengono scritti tra le parentesi della funzione, separati dalle virgole
+```
+void saluta(char *nome, bool nuovo_utente) {
+  char saluto[40] = "Ciao ";
+  strcat(saluto, nome);
+  if (nuovo_utente) {
+    strcat(saluto, "! Benvenuto a bordo :)");
+  }
+  printf("%s\n", saluto);
+}
+
+int main(void) {
+    // stampa "Ciao Luca"
+    saluta("Luca", false);
+    return 0;
+};
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da creare una valida funziona chiamata `saluta` passando `true` al secondo parametro e stampando il risultato
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["void ", "[/]", "(char *nome, ", "[/]", "[/]", ") {\n\tchar saluto[40] = \"Ciao \";\n\t// usato per concatenare le stringhe\n\tstrcat(saluto, nome);\n\tif (nuovo_utente) {\n\tstrcat(saluto, \"! Benvenuto a bordo :)\");\n\t}\n\tprintf(\"%s\\n\", saluto);\n}\n\nint main(void) {\n\tsaluta(\"Luca\", true);\n\treturn 0;\n}"],
+	"buttons": ["saluta", "bool ", "nuovo_utente", "string "],
+	"correct": "void saluta(char *nome, bool nuovo_utente) {\n\tchar saluto[40] = \"Ciao \";\n\t// usato per concatenare le stringhe\n\tstrcat(saluto, nome);\n\tif (nuovo_utente) {\n\tstrcat(saluto, \"! Benvenuto a bordo :)\");\n\t}\n\tprintf(\"%s\\n\", saluto);\n}\n\nint main(void) {\n\tsaluta(\"Luca\", true);\n\treturn 0;\n}"
+}
+</section>
+<section id="preOutput">
+Ciao Luca! Benvenuto a bordo :)
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Formatted strings allow us to display expressions like adding a string to a number, without any error.
+To display an integer we use the `%i` expression
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["printf(\"", "[/]", " friends\\n\", ", "[/]", ");"],
+	"buttons": ["%i", "?i", "%0", "5"],
+	"correct": "printf(\"%i friends\\n\", 5);"
+}
+</section>
+<section id="preOutput">
+5 friends
+</section>

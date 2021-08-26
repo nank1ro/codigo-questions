@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the **not equal** `!=` relational operator.
+It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+```
+>>> 2 != 2
+False
+>>> 2 != 3
+True
+```
+It is exactly the opposite of the *equal* operator
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is **NOT** equal to `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","!= ","= ","5","! "],
+	"correct": "num = 5\nprint(num != 5)"
+}
+</section>
+<section id="preOutput">
+False
+</section>

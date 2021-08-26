@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+You can access the properties of an instance using _dot syntax_.
+In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+```
+someInstance.someProperty
+```
+Using the same syntax we can also update the value of a property
+</section>
+<section id="instructions">
+Assign to the `Animal` instance, the `"female"` gender.
+Print the gender of the `Animal` instance
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal {\n\tconstructor(gender, legs = 4) {\n\t\tthis.gender = gender;\n\t\tthis.legs = legs;\n\t}\n}\nlet dog = new Animal(gender= \"male\");\n","[/]",".","[/]"," = ","[/]",";\nconsole.log(dog.gender);"],
+	"buttons": ["class ","Dog","Animal","Dog","()","Dog()","dog",".","gender","\"female\""],
+	"correct": "class Animal {\n\tconstructor(gender, legs = 4) {\n\t\tthis.gender = gender;\n\t\tthis.legs = legs;\n\t}\n}\nlet dog = new Animal(gender= \"male\");\ndog.gender = \"female\";\nconsole.log(dog.gender);"
+}
+</section>
+<section id="preOutput">
+female
+</section>

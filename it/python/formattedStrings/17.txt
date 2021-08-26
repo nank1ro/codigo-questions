@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa stampa questo codice nell'output?
+```
+print(f"Il {12}% della popolazione tedesca e' costituito da bambini fino a 14 anni")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Il 12% della popolazione tedesca e' costituito da bambini fino a 14 anni", "Il {12}% della popolazione tedesca e' costituito da bambini fino a 14 anni", "f\"Il {12}% della popolazione tedesca e' costituito da bambini fino a 14 anni\""],
+	"correct": "Il 12% della popolazione tedesca e' costituito da bambini fino a 14 anni"
+}
+</section>

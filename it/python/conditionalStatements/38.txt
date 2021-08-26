@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["mattina = True\npomeriggio = not mattina\nif (","[/]","):\n\tprint(\"Buongiorno!\")"],
+	"buttons": ["mattina","pomeriggio","\"mattina\"","\"pomeriggio\""],
+	"correct": "mattina = True\npomeriggio = not mattina\nif (mattina):\n\tprint(\"Buongiorno!\")"
+}
+</section>
+<section id="preOutput">
+Buongiorno!
+</section>

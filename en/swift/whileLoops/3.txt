@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Then, we use a comparison in the condition to compare the `counter` variable to a number.
+</section>
+<section id="instructions">
+Compare the `counter` variable with a number
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var counter = 3\n", "while ", "[/]", "[/]", "[/]", "[/]", "[/]"],
+	"buttons": ["while", "true", " < ", "5", "\"5\"", " {", "}","counter"],
+	"correct": "var counter = 3\nwhile counter < 5 {}"
+}
+</section>

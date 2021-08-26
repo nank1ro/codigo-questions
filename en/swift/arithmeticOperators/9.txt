@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Subtract 18.8 from 20.3, then print the `result`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let result = ","[/]","[/]","[/]","\nprint(result)"],
+	"buttons": ["20.3","18.8"," - "," + "," * "],
+	"correct": "let result = 20.3 - 18.8\nprint(result)"
+}
+</section>
+<section id="preOutput">
+1.5
+</section>

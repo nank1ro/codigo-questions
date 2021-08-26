@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le **tuple** sono come le liste, ma sono molto piu' veloci.
+Tuttavia, i valori delle tuple non possono essere modifigattoi.
+Tendiamo ad usare le tuple per i dati **di sola lettura** che rimangono costanti mentre il programma e' in esecuzione.
+Per creare una tupla usiamo le parentesi tonde `()`. 
+</section>
+<section id="instructions">
+Crea una valida tupla
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["tupla1 = ", "[/]", "\"cane\", \"orso\", \"gatto\"", "[/]", "\nfor x in tupla1:\n\tprint(x)"],
+	"buttons": ["(", ")", "[", "]", "{", "}"],
+	"correct": "tupla1 = (\"cane\", \"orso\", \"gatto\")\nfor x in tupla1:\n\tprint(x)"
+}
+</section>
+<section id="preOutput">
+cane
+orso
+gatto
+</section>

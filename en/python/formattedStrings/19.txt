@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+percentage = 11
+print(f"{percentage}% of people are left handed")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["11% of people are left handed","{11}% of people are left handed","f\"{11}% of people are left handed\""],
+	"correct": "11% of people are left handed"
+}
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Inseriamo qualcosa all'interno della nostra classe `Animale`.
+Per aggiungere alcuni _attributi_ dobbiamo usare il `construttore` di default
+</section>
+<section id="instructions">
+Aggiungi gli attributi `genere` e `zampe` all'interno della classe
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["class Animale {\n\tconstructor(","[/]",", zampe) {\n\tthis.genere = ","[/]",";\n\tthis.","[/]"," = zampe;\n\t}\n}"],
+	"buttons": ["genere","zampe","Animale","'genere'","'zampe'", "genere"],
+	"correct": "class Animale {\n\tconstructor(genere, zampe) {\n\tthis.genere = genere;\n\tthis.zampe = zampe;\n\t}\n}"
+}
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Salva il valore `true` nella variabile `acceso`
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "console.assert(acceso === true)"
+        }
+    ]
+}
+</section>

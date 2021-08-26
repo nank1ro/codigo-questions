@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In C we use the `printf` function with an expression in order to display two or more values together, like:
+```
+>>> char c = 'C';
+>>> printf("Hello %c\n", c);
+Hello C!
+```
+`%c` is used to display a single character
+</section>
+<section id="instructions">
+Print the name using the `%s` espression (used to display an _array of characters_ or a _string_)
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char c[] = \"Robot\";\nprintf(\"Mr ","[/]","\\n\", ","[/]",");"],
+	"buttons": ["+","f","-","=", "%s", "c"],
+	"correct": "char c[] = \"Robot\";\nprintf(\"Mr %s\\n\", c);"
+}
+</section>
+<section id="preOutput">
+Mr. Robot
+</section>

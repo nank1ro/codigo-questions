@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calculate the exponentiation of the numbers 3 (*base*) and 5 (*exponent*), then print the `result`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["result = ","[/]","[/]","[/]","\nprint(result)"],
+	"buttons": ["3","5"," - "," * "," ** "],
+	"correct": "result = 3 ** 5\nprint(result)"
+}
+</section>
+<section id="preOutput">
+243
+</section>

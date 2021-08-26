@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+All'interno del blocco di codice del cilo `for`, mostra il valore della variabile del contatore
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["for (int c = 0; c <= 2; c++) {\n\t\tprintf(\"ripeti\\n\");\n\t\t", "[/]", "(\"", "[/]", "\\n\", ", "[/]", ");\n}"],
+	"buttons": ["printf", "i", "(", ")", "c", "%d"],
+	"correct": "for (int c = 0; c <= 2; c++) {\n\t\tprintf(\"ripeti\\n\");\n\t\tprintf(\"%d\\n\", c);\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+0
+ripeti
+1
+ripeti
+2
+</section>

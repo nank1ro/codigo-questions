@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you make `Dog` a subclass of `Animal`?
+`legs` should be inside the `Animal` class while `breed` should be inside the `Dog` class
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Animal {\t","\tconstructor(legs = 4) {","\t\tthis.legs = legs;","\t}","}","class Dog extends Animal {","\tconstructor(breed) {","\t\tsuper();","\t\tthis.breed = breed;","\t}","}","let max = new Dog();","max.breed = \"Chihuahua\";","console.log(max.breed);"],
+	"correct": "class Animal {\t\tconstructor(legs = 4) {\t\tthis.legs = legs;\t}}class Dog extends Animal {\tconstructor(breed) {\t\tsuper();\t\tthis.breed = breed;\t}}let max = new Dog();max.breed = \"Chihuahua\";console.log(max.breed);"
+}
+</section>

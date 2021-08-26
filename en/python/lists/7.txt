@@ -1,0 +1,31 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+```
+list_name[:2]
+# Grabs the first two items
+list_name[3:]
+# Grabs the fourth through last items
+```
+If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+</section>
+<section id="instructions">
+- Assign to `first_name` a slice of `full_name` from index `0` up until *but not including* index `4`.
+- Assign to `last_name` a slice of `full_name` from index `4` until the end of the string
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["full_name = \"Sam Smith\"\nfirst_name = ","[/]","[/]","\nlast_name = ","[/]", "[/]","\nprint(first_name)\nprint(last_name)"],
+	"buttons": ["full_name", "[:4]", "[:3]", "full_name", "[4:]","[4:2]"],
+	"correct": "full_name = \"Sam Smith\"\nfirst_name = full_name[:3]\nlast_name = full_name[4:]\nprint(first_name)\nprint(last_name)"
+}
+</section>
+<section id="preOutput">
+Sam
+Smith
+</section>

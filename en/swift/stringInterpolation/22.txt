@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Insert the variables in order.
+First `animals`, then `legs` and finally `action`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let animals = \"Dragonflies\"","\n","let legs = 6","\n","let action = \"walk\"","\n","print(\"","[/]"," have ","[/]"," legs but can't ","[/]","\")"],
+	"buttons": ["animals","legs","action","\\(animals)","\\(legs)","\\(action)"],
+	"correct": "let animals = \"Dragonflies\"\nlet legs = 6\nlet action = \"walk\"\nprint(\"\\(animals) have \\(legs) legs but can't \\(action)\")"
+}
+</section>
+<section id="preOutput">
+Dragonflies have 6 legs but can't walk
+</section>

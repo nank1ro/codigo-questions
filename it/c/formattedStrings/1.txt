@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In C possiamo usare la funzione `printf' con un'espressione, per concatenare due o più stringhe insieme, come:
+```
+>>> char c = 'C';
+>>> printf("Ciao %c\n", c);
+Ciao C!
+```
+`%c` viene usato per inserire un singolo carattere
+</section>
+<section id="instructions">
+Stampa il nome utilizzando l'espressione `%s` (usata per mostrare un'_array di caratteri_ o una _stringa_)
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char c[] = \"Robot\";\nprintf(\"Mr ","[/]","\\n\", ","[/]",");"],
+	"buttons": ["+","f","-","=", "%s", "c"],
+	"correct": "char c[] = \"Robot\";\nprintf(\"Mr %s\\n\", c);"
+}
+</section>
+<section id="preOutput">
+Mr. Robot
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Which of these statements create `dog` as an __instance__ of `Animal`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["let dog = Animal()", "dog = new Animal(Animal)", "class Animal(dog)","dog.Animal()"],
+	"correct": "let dog = Animal()"
+}
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Crea un ciclo infinito
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (","[/]",") {\n\tprintf(\"ciclo infinito!\\n\");\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while (true) {\n\tprintf(\"ciclo infinito!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+ciclo infinito
+ciclo infinito
+ciclo infinito
+ciclo infinito
+...
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Booleans represent one of two values: `True` or `False`.
+You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+</section>
+<section id="instructions">
+Assign to the variable `music_on` the boolean value `True`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["music_on","[/]","[/]"],
+	"buttons": ["False","true","\"True\"","True","="],
+	"correct": "music_on=True"
+}
+</section>

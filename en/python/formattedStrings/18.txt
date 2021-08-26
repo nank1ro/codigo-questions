@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+<section id="instructions">
+Use opening `{` and closing `}` curly braces to insert the number `500` in the empty space of the formatted string
+</section>
+<section id="seed">
+print(f"There are  items")
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "There are 500 items"
+        }
+    ]
+}
+</section>

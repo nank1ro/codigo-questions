@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+E se volessimo elencare tutti i valori del dizionario?
+Beh, possiamo usare la proprietà `values`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nprint(","[/]","[/]" , ")"],
+	"buttons": ["utente",".values()",".values",".value",".allValues()"],
+	"correct": "var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nprint(utente.values)"
+}
+</section>
+<section id="preOutput">
+["John", "Hood", 30]
+</section>

@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale codice genera il seguente output: `Ciao Python!` (Python 3)?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["print(\"Ciao Python!\")", "print(\"Ciao World!\")", "print(Ciao Python!\"", "print \"Ciao Python!\""],
+	"correct": "print(\"Ciao Python!\")"
+}
+</section>
+<section id="preOutput">
+Ciao Python!
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calculate the modulus from the division between 22 and 6, then print the `result`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["result = ","[/]","[/]","[/]","\nprint(result)"],
+	"buttons": ["22","6"," - "," + "," % "],
+	"correct": "result = 22 % 6\nprint(result)"
+}
+</section>
+<section id="preOutput">
+4
+</section>

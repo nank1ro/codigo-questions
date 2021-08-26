@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *addition assignment* add 25 to the variable `num`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 25;\n","[/]","[/]","[/]",";\nconsole.log(num);"],
+	"buttons": ["num ","+= ","=+ ","25","+ ","num "],
+	"correct": "var num = 25;\nnum += 25;\nconsole.log(num);"
+}
+</section>
+<section id="preOutput">
+50
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Il valore opposto di `true` è `false`
+</section>
+<section id="instructions">
+Assegna il valore booleano `false` alla variabile `musica_accesa`, quindi stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool musica_accesa = ", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": ["false", "false", "\"false\"", "true", "musica_accesa", "\"musica_accesa\""],
+	"correct": "bool musica_accesa = false;\nprintf(\"%d\\n\", musica_accesa);"
+}
+</section>
+<section id="preOutput">
+0
+</section>

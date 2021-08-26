@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Swift has a basic Boolean type, called `Bool`.
+Boolean values are referred to as logical, because they can only ever be true or false.
+You can evaluate any expression in Swift, and get one of two answers, `true` or `false`.
+</section>
+<section id="instructions">
+Assign to the variable `musicOn` the boolean value `true`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["musicOn ","[/]","[/]"],
+	"buttons": ["False","True","\"true\"","true","= "],
+	"correct": "musicOn = true"
+}
+</section>

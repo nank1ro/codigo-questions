@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know this loop doesn't stop?
+```
+is_loading = True
+
+while is_loading:
+    print("Loading...")
+    is_loading = True
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Because the variable doesn't update to False inside the code block","Because all while loops don't stop", "Because the variable updates to False"],
+	"correct": "Because the variable doesn't update to False inside the code block"
+}
+</section>

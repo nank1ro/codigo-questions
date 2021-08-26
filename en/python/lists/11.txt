@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+**Tuples** are like lists but are much faster.
+However, tuple values cannot be changed.
+We tend to use tuples for **read-only** data that remains constant while the program is running.
+To create a tuple we use the round brackets `()` 
+</section>
+<section id="instructions">
+Create a valid tuple
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["tuple1 = ", "[/]", "\"dog\", \"bear\", \"cat\"", "[/]", "\nfor x in tuple1:\n\tprint(x)"],
+	"buttons": ["(", ")", "[", "]", "{", "}"],
+	"correct": "tuple1 = (\"dog\", \"bear\", \"cat\")\nfor x in tuple1:\n\tprint(x)"
+}
+</section>
+<section id="preOutput">
+dog
+bear
+cat
+</section>

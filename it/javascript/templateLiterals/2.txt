@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le stringhe template ci permettono di visualizzare espressioni come l'aggiunta di una stringa a un numero, senza usare il segno `+`.
+Per creare una stringa templata valida è necessario utilizzare i backticks `` invece delle virgolette doppie o singole.
+Si possono inserire variabili all'interno della stringa templata usando il segno del dollaro e le parentesi graffe `${espressione}`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(","[/]",");"],
+	"buttons": ["`${5} amici`"],
+	"correct": "console.log(`${5} amici`);"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

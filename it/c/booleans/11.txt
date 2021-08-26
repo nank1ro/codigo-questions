@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salva il valore `false` nella variabile `continua`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","continua = ","[/]", ";"],
+	"buttons": ["\"false\"","false","false","\"false\"", "bool ", "boolean "],
+	"correct": "bool continua = false;"
+}
+</section>

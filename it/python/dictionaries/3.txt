@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Come le liste, i dizionari sono _mutabili_.
+Ciò significa che possono essere modificati dopo essere stati creati.
+Un vantaggio e' che possiamo aggiungere nuove coppie di _chiave/valore_ al dizionario dopo che e' stato creato, ad esempio:
+```
+nome_dizionario[nuovo_nome_chiave] = nuovo_valore
+```
+</section>
+<section id="instructions">
+Aggiungi un'altra coppia _chiave-valore_ alla variabile `utente`, con il nome `"professione"` per la chiave e `"Sviluppatore"` come valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\n", "[/]", "[/]", "[/]", "[/]", "[/]", "[/]", "\nprint(utente[\"professione\"])"],
+	"buttons": ["utente", "[", "]","\"professione\"", "\"Sviluppatore\"", "[3]", " = "],
+	"correct": "utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nutente[\"professione\"] = \"Sviluppatore\"\nprint(utente[\"professione\"])"
+}
+</section>
+<section id="preOutput">
+Sviluppatore
+</section>

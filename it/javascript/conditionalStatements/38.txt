@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come possiamo chiamare le istruzioni che eseguono o saltano il codice a seconda che una condizione sia `true` o `false`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Istruzioni condizionali","Istruzioni decisionali","Comparazioni"],
+	"correct": "Istruzioni condizionali"
+}
+</section>

@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A volte si vuole accedere solo a una parte di un'array.
+Considera il seguente codice:
+```
+let numeri = [1, 2, 3, 4]
+let fetta = numeri[1...2]
+print(fetta)
+// stampa [2, 3]
+```
+Per prima cosa, creiamo un array chiamato `numeri`.
+Poi, prendiamo una sottosezione dell'array e la memorizziamo nel nuovo array `fetta`.
+Lo facciamo definendo gli indici che vogliamo includere dopo il nome: `numeri[1...2]`.
+In Swift possiamo includere l'ultimo indice utilizzando`...`, ma possiamo anche escluderlo usando `..<`
+</section>
+<section id="instructions">
+Crea un'array chiamato `fetta` contenente solo i due numeri al centro di `numeri`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let numeri = [10, 5, 5, 5, 3, 2, 1, 0]\nlet fetta = ", "[/]", "[","[/]","[/]" ,"[/]" ,"]\nprint(fetta)"],
+	"buttons": ["numeri", "2", ":", "3", "-1","6","3","5","...","..<"],
+	"correct": "let numeri = [10, 5, 5, 5, 3, 2, 1, 0]\nlet fetta = numeri[3..<5]\nprint(fetta)"
+}
+</section>
+<section id="preOutput">
+[5, 3]
+</section>

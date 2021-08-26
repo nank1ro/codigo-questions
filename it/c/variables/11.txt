@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa la stringa seguita dalla variabile nell'output.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char nome[] = \"Kate\";\n","[/]","(\"","[/]"," %s\\n\", ","[/]",");"],
+	"buttons": ["print","Ciao","nome","\"Ciao\"","printf"],
+	"correct": "char nome[] = \"Kate\";\nprintf(\"Ciao %s\\n\", nome);"
+}
+</section>
+<section id="preOutput">
+Ciao Kate
+</section>

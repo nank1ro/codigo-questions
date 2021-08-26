@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Il processo decisionale e' necessario quando vogliamo eseguire il codice solo se una certa condizione viene soddisfatta.
+Supponiamo di voler giocare all'aperto solo se il tempo e' bello.
+In programmazione, possiamo salvare una variabile booleana `bel_tempo` ed eseguire l'azione di giocare fuori **solo** se (`if`) questa variabile e' `True`, come:
+```
+bel_tempo = True
+if (bel_tempo):
+	# gioca fuori
+```
+</section>
+<section id="instructions">
+Creare un'istruzione `if` controllando se `ora` e' inferiore a `12`, poi nel blocco di codice stampare la stringa "Mattina".
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["ora = 8\n","[/]"," (ora < 12):\n\tprint(\"Mattina\")"],
+	"buttons": ["if","==", "=","else","?"],
+	"correct": "ora = 8\nif (ora < 12):\n\tprint(\"Mattina\")"
+}
+</section>
+<section id="preOutput">
+Mattina
+</section>

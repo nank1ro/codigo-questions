@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The length `len()` of a dictionary is the number of _key-value pairs_ it has.
+Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+</section>
+<section id="instructions">
+Print out the length of the dictionary
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30}\nprint(", "[/]","(", "[/]", "))"],
+	"buttons": ["user","len","length","\"user\""],
+	"correct": "user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30}\nprint(len(user))"
+}
+</section>
+<section id="preOutput">
+3
+</section>

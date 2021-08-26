@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What do we call a loop that repeats itself forever?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["An infinite loop", "A code block", "A while loop", "A for loop"],
+	"correct": "An infinite loop"
+}
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'e' di vero sui __moduli__?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Sono file che contengono codice Python", "Sono cartelle con file .py", "Finiscono in .py", "Ci permettono di riutilizzare il codice"],
+	"corrects": ["Sono file che contengono codice Python", "Finiscono in .py", "Ci permettono di riutilizzare il codice"]
+}
+</section>

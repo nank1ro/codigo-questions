@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'e' che non va in questo codice?
+```
+for i in range(5):
+	print(i)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Non c'e' niente che non va nel codice", "Manca la variabile del contatore", "Dovremmo stampare i tra le virgolette"],
+	"correct": "Non c'e' niente che non va nel codice"
+}
+</section>

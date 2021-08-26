@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Display the numbers `5` through `8` in the output by settings the `counter` variable's value
+</section>
+<section id="seed">
+int counter = 
+
+while (counter < 9) {
+    printf("%d\n", counter);
+    counter++;
+}
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output":"5\n6\n7\n8"
+        }
+    ]
+}
+</section>

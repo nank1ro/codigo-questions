@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo aggiungere tutte le istruzioni `else if` che vogliamo, non ci sono limiti
+```
+int num = 4;
+if (num == 2) {
+	printf("il numero è 2");
+} else if (num == 3) {
+	printf("il numero è 3");
+} else if (num == 4) {
+	printf("il numero è 4");
+} else if (num == 5) {
+	printf("il numero è 5");
+} else if (num == 6) {
+	printf("il numero è 6");
+}
+```
+e l'output del codice è `il numero è 4`.
+</section>
+<section id="instructions">
+Aggiungi una nuova istruzione `else if` controllando se `ora` e' uguale a `0` e, nel blocco di codice, stampa la stringa `"Mezzanotte"`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int ora = 0;\nif (ora < 12) {\n\tprintf(\"Mattina\\n\");\n} else if (ora == 12) {\n\tprintf(\"Mezzogiorno\\n\");\n}", "[/]", "(", "[/]", "[/]", "0) {\n\tprintf(\"Mezzanotte\\n\");\n} else {\n\tprintf(\"Pomeriggio\\n\");\n}"],
+	"buttons": ["0", " else if ", " < ", " == ", ":", ";", "ora", " elif ", " elseif ", " else "],
+	"correct": "int ora = 0;\nif (ora < 12) {\n\tprintf(\"Mattina\\n\");\n} else if (ora == 12) {\n\tprintf(\"Mezzogiorno\\n\");\n} else if (ora == 0) {\n\tprintf(\"Mezzanotte\\n\");\n} else {\n\tprintf(\"Pomeriggio\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Mezzanotte
+</section>

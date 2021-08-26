@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Utilizzare la parentesi graffa aperta `{` e chiusa `}` per inserire il numero `500` nello spazio vuoto della stringa formattata
+</section>
+<section id="seed">
+print(f"Ci sono  oggetti")
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "Ci sono 500 oggetti"
+        }
+    ]
+}
+</section>

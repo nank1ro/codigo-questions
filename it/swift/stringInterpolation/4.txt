@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Ogni istruzione di interpolazione di stringa è costituita da due parti, la `\()` dove inseriamo il numero o la variabile, e la stringa normale
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]","[/]",")"],
+	"buttons": ["\"\\(","6) amici\"",")"],
+	"correct": "print(\"\\(6) amici\")"
+}
+</section>
+<section id="preOutput">
+6 amici
+</section>

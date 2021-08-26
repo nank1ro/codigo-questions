@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Use snake case for this variable name
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," = ","\"Russia\""],
+	"buttons": ["largest_country","largestCountry","largest"],
+	"correct": "largest_country = \"Russia\""
+}
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Ogni stringa templata è composta da due parti, i caratteri `${}` dove inseriamo il numero o la variabile, e la normale stringa
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(","[/]","[/]",");"],
+	"buttons": ["`${","6} amici`",")"],
+	"correct": "console.log(`${6} amici`);"
+}
+</section>
+<section id="preOutput">
+6 amici
+</section>

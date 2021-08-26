@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a ordinare queste righe in uno script funzionale?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["animali = [\"cane\", \"orso\", \"gatto\"]", "if len(animali) == 3:", "\tanimali.append(\"rana\")", "print(animali[3])"],
+	"correct": "animali = [\"cane\", \"orso\", \"gatto\"]if len(animali) == 3:\tanimali.append(\"rana\")print(animali[3])"
+}
+</section>

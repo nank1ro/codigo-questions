@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salta il ciclo usando `caricamento` come condizione del ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["caricamento = False\n\nwhile ","[/]", ":\n\tprint(\"Caricamento...\")\n\tcaricamento = False"],
+	"buttons": ["True", "False", "caricamento"],
+	"correct": "caricamento = False\n\nwhile caricamento:\n\tprint(\"Caricamento...\")\n\tcaricamento = False"
+}
+</section>

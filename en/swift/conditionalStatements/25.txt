@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know that `Hello World` will always be printed?
+```
+var online = False;
+if online {
+	print("User is online")
+}
+print("Hello World")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Because it's not inside a block of code","Because the if statement can't have more than one line","Because there isn't an else statement","Because there isn't an else if statement"],
+	"correct": "Because it's not inside a block of code"
+}
+</section>

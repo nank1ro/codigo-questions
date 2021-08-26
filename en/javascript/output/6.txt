@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+When we can use `console.log()` to display the value of a variable?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Before or after we create the variable","Before we create the variable","After we create the variable"],
+	"correct": "After we create the variable"
+}
+</section>

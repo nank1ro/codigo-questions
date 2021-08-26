@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How many times will this loop over its code block?
+```
+for (int i = 0; i < 3; i++) {
+	printf("round: %d\n", i);
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["3", "2", "4", "1"],
+	"correct": "3"
+}
+</section>

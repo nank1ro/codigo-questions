@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional code?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Dog {","\tconstructor(name) {","\t\tthis.name = name;","\t}","}","let dog = new Dog(\"Max\");","console.log(dog.name);"],
+	"correct": "class Dog {\tconstructor(name) {\t\tthis.name = name;\t}}let dog = new Dog(\"Max\");console.log(dog.name);"
+}
+</section>
+<section id="preOutput">
+Max
+</section>

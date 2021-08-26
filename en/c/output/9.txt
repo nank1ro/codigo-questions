@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks to display the desired output: `Cafe`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]"],
+	"buttons": ["printf","Cafe","coffee","(\"","\");","'",";"],
+	"correct": "printf(\"Cafe\");"
+}
+</section>
+<section id="preOutput">
+Cafe
+</section>

@@ -1,0 +1,35 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Abbiamo già inizializzato una variabile `totale`
+```
+int totale = 5;
+```
+Ipotizziamo di voler aggiungere il numero `2` alla variabile` totale`, possiamo scrivere
+```
+totale = totale + 2;
+```
+Ok, funziona! Ma esiste una versione piu' breve per fare la stessa cosa:
+```
+totale += 2;
+```
+Il segno `+=` si chiama operatore di **assegnazione di addizione**.
+Somma un determinato valore al valore corrente della variabile, infine assegna il risultato alla suddetta variable.
+</section>
+<section id="instructions">
+Aggiungi alla variabile `num` il valore` 15` usando l'operatore di *assegnazione di addizione*, quindi stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 75;\n", "[/]", "[/]", "[/]", ";\nprintf(\"%d\\n\", num);"],
+	"buttons": [" + ", " += ", " =+ ", "num", "15"],
+	"correct": "int num = 75;\nnum += 15;\nprintf(\"%d\\n\", num);"
+}
+</section>
+<section id="preOutput">
+90
+</section>

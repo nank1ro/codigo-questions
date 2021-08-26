@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do you display integer values with formatted strings?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["We place them using the %i expression","We can't display numeric values with formatted strings","We place them between square brackets []","We place them between round brackets ()"],
+	"correct": "We place them using the %i expression"
+}
+</section>

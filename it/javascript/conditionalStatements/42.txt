@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quante righe di codice possiamo scrivere all'interno di un blocco `if`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Quante ne vogliamo","Una","Tre","Non piu' di due"],
+	"correct": "Quante ne vogliamo"
+}
+</section>

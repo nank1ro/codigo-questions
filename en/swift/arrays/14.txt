@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we check if an array is empty?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["if listName.count == 0", "if listName == 0", "if listName.length == 0", "if listName[0] == false","if listName.isEmpty"],
+	"corrects": ["if listName.count == 0", "if listName.isEmpty"]
+}
+</section>

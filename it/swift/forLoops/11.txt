@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' la variabile contatore del ciclo `for`?
+```
+for i in 0..<3 {
+	print("giro: \(i)")
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["i", "range", "for", "print(\"giro: \\(i)\")"],
+	"correct": "i"
+}
+</section>

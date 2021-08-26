@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salva la stringa in `animale`, quindi stampa la stringa formattata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","\n","muscoli = 32","\n","print(","[/]"," muscoli in ogni orecchio\")"],
+	"buttons": ["animale = \"gatto\"","f\"Un {animale} ha {muscoli}","f\"animale = 'gatto'\""],
+	"correct": "animale = \"gatto\"\nmuscoli = 32\nprint(f\"Un {animale} ha {muscoli} muscoli in ogni orecchio\")"
+}
+</section>
+<section id="preOutput">
+Un gatto ha 32 muscoli in ogni orecchio
+</section>

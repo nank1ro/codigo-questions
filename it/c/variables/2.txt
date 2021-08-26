@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Le variabili vengono chiamate in questo modo perche' il valore che memorizzano può cambiare.
+Possiamo aggiornare `x` usando `=` assegnando un nuovo valore:
+```
+>>> x = 1;
+>>> printf("%i\n", x);
+1
+>>> x = 2;
+>>> printf("%i\n", x);
+2
+```
+</section>
+<section id="instructions">
+Aggiorna il valore della variabile `x` con il numero `10`
+</section>
+<section id="seed">
+int x = 5;
+// scrivi dopo questa linea
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(x == 10);"
+        }
+    ]
+}
+</section>

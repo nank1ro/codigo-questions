@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the **greater than** `>` relational operator.
+It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+```
+>>> 2 > 2
+0
+>>> 3 > 2
+1
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is greater than `4`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 5;\nprintf(\"%d\\n\", ", "[/]", "[/]", "[/]", ");"],
+	"buttons": ["num", "num", " < ", " = ", "4", " > "],
+	"correct": "int num = 5;\nprintf(\"%d\\n\", num > 4);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

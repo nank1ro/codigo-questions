@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+String interpolation allow us to display expressions like adding a string to a number, without any error.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]",")"],
+	"buttons": ["\"\\(5) friends\""],
+	"correct": "print(\"\\(5) friends\")"
+}
+</section>
+<section id="preOutput">
+5 friends
+</section>

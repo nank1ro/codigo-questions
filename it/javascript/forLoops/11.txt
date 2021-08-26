@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice in modo da ripetere il blocco di codice **3** volte
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for (let i = ", "[/]","; i", "[/]", "[/]","; ", "[/]", ") {\n\tconsole.log(\"lavoro\");\n}"],
+	"buttons": ["loop","for ", "range", "0", "3", "...", "..<", " {", " < ", "i++"],
+	"correct": "for (let i = 0; i < 3; i++) {\n\tconsole.log(\"lavoro\");\n}"
+}
+</section>
+<section id="preOutput">
+lavoro
+lavoro
+lavoro
+</section>

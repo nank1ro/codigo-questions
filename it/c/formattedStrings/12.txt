@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa una stringa formattata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int quota = 50;\n","[/]","[/]",", quota","[/]",";"],
+	"buttons": ["printf(",")","\"%i è la quota\\n\"","50 è la quota"],
+	"correct": "int quota = 50;\nprintf(\"%i è la quota\\n\", quota);"
+}
+</section>
+<section id="preOutput">
+50 è la quota
+</section>

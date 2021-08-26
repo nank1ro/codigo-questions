@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
+It works because every item in the array has the same type, and as such the same size.
+The resulting *length* is the number of items it contains
+</section>
+<section id="instructions">
+Complete the code in order to print the length of the array `numbers`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int numbers[4] = {5, 6, 8, 4};\n\nint length =", "[/]", "numbers /", "[/]", "numbers", "[/]", ";\n\nprintf(\"%d\\n\", length);"],
+	"buttons": ["len", "str", "loop", "for", " sizeof ", "[0]", " sizeof "],
+	"correct": "int numbers[4] = {5, 6, 8, 4};\n\nint length = sizeof numbers / sizeof numbers[0];\n\nprintf(\"%d\\n\", length);"
+}
+</section>
+<section id="preOutput">
+4
+</section>

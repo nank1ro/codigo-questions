@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional script?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["char animals[3][5] = {\"dog\", \"bear\", \"cat\"};","for (int i = 0; i < 3; i++) {","\tprintf(\"%s\\n\", animals[i]);","}"],
+	"correct": "char animals[3][5] = {\"dog\", \"bear\", \"cat\"};for (int i = 0; i < 3; i++) {\tprintf(\"%s\\n\", animals[i]);}"
+}
+</section>
+<section id="preOutput">
+dog
+bear
+cat
+</section>

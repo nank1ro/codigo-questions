@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+"__Hello, World!__" e' il primo programma che si impara quando si inizia a programmare in un nuovo linguaggio.
+Usiamo la funzione `print()` per inviare i dati al dispositivo di output (schermo).
+Per stampare "Hello, World!" sullo schermo con Swift possiamo scrivere:
+```
+print("Hello, World!")
+```
+</section>
+<section id="instructions">
+Il tuo programma deve stampare la stringa `Ciao, Swift!` sullo schermo
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",", ","[/]",")"],
+	"buttons": ["print","\"Ciao","Swift!\"","Ciao","Swift!"],
+	"correct": "print(\"Ciao, Swift!\")"
+}
+</section>
+<section id="preOutput">
+Ciao Swift!
+</section>

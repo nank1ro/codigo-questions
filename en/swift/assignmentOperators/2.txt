@@ -1,0 +1,35 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We already have an initialized variable `total`
+```
+var total = 5
+```
+Let's say that we want to add the number `2` to the variable `total`, we can write
+```
+total = total + 2
+```
+Okay, it works! But there is a shorter version to do the same thing:
+```
+total += 2
+```
+The sign `+=` is called **addition assignment**.
+It adds a value to the variable value and assigns the result to that variable.
+</section>
+<section id="instructions">
+Add to the variable `num` the value `15` using the *addition assignment* operator, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 75\n","[/]","[/]","[/]","\nprint(num)"],
+	"buttons": ["+","+=","=+","num "," 15"],
+	"correct": "var num = 75\nnum += 15\nprint(num)"
+}
+</section>
+<section id="preOutput">
+90
+</section>

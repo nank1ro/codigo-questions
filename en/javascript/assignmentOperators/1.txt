@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We've already learned that to assign a value to a variable we can use the `=` sign, like:
+```
+let a = 5;
+```
+</section>
+<section id="instructions">
+Assign to the variable `num` the value `20`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let num ","[/]","[/]",";\nconsole.log(num);"],
+	"buttons": ["= ","/ ","* ","20"],
+	"correct": "let num = 20;\nconsole.log(num);"
+}
+</section>
+<section id="preOutput">
+20
+</section>

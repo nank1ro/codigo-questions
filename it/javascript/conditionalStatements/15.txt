@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+if (false) {
+	console.log("Ciao!");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Ciao!","Niente perchè il blocco di codice viene saltato"],
+	"correct": "Niente perchè il blocco di codice viene saltato"
+}
+</section>

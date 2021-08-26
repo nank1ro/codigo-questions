@@ -1,0 +1,31 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Si può tagliare una stringa esattamente come una lista! Infatti, si può pensare alle stringhe come a liste di caratteri: ogni carattere e' un elemento sequenziale nella lista, a partire dall'indice `0`.
+```
+nome_lista[:2]
+# Ottieni i primi due elementi
+nome_lista[3:]
+# Ottieni dal quarto fino all'ultimo elemento
+```
+Se la tua fetta comprende il primo o l'ultimo elemento di una lista (o una stringa), l'indice non deve essere incluso
+</section>
+<section id="instructions">
+- Assegna a `nome` una fetta di `nome_completo` partendo dall'indice `0` fino a *ma non incluso* l'indice `4`.
+- Assegna a `cognome` una fetta di `nome_completo` partendo dall'indice `4` fino alla fine della stringa
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["nome_completo = \"Sam Smith\"\nnome = ","[/]","[/]","\ncognome = ","[/]", "[/]","\nprint(nome)\nprint(cognome)"],
+	"buttons": ["nome_completo", "[:4]", "[:3]", "nome_completo", "[4:]","[4:2]"],
+	"correct": "nome_completo = \"Sam Smith\"\nnome = nome_completo[:3]\ncognome = nome_completo[4:]\nprint(nome)\nprint(cognome)"
+}
+</section>
+<section id="preOutput">
+Sam
+Smith
+</section>

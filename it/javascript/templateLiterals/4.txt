@@ -1,0 +1,31 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Poi, aggiungiamo il diverso tipo di valore tra le parentesi graffe in modo che venga visualizzato come un'unica dichiarazione di print.
+Come qui, con `${5}`
+</section>
+<section id="instructions">
+Riempi lo spazio vuoto per ottenere questo output
+```
+5 amici
+```
+</section>
+<section id="seed">
+console.log( amici);
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "5 amici"
+        }
+    ]
+}
+</section>

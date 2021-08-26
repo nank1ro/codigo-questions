@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come si riconosce una stringa formattata?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Dal carattere f davanti alla stringa", "Dal carattere f alla fine della stringa", "Non c'e' differenza tra stringhe e stringhe formattate"],
+	"correct": "Dal carattere f davanti alla stringa"
+}
+</section>

@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines so that `"dog"` is displayed in the output?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["var animals = [\"frog\"];","animals.push(\"bear\");", "animals.push(\"dog\");", "console.log(animals[2]);"],
+	"correct": "var animals = [\"frog\"];animals.push(\"bear\");animals.push(\"dog\");console.log(animals[2]);"
+}
+</section>
+<section id="preOutput>
+dog
+</section>

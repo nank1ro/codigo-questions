@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Scegli la variabile corretta per un utente che si e' appena disconnesso
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["online = True","online = False","online = \"False\"","online = \"True\""],
+	"correct": "online = False"
+}
+</section>

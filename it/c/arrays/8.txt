@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a riordinare queste linee di codice per creare un programma funzionale?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["char animali[3][5] = {\"cane\", \"orso\", \"gatto\"};","for (int i = 0; i < 3; i++) {","\tprintf(\"%s\\n\", animali[i]);","}"],
+	"correct": "char animali[3][5] = {\"cane\", \"orso\", \"gatto\"};for (int i = 0; i < 3; i++) {\tprintf(\"%s\\n\", animali[i]);}"
+}
+</section>
+<section id="preOutput">
+cane
+orso
+gatto
+</section>

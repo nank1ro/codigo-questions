@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display?
+```
+var friends = 5;
+console.log(`I have ${friends} friends in total`);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["I have 5 friends in total","I have ${friends} friends in total","\"I have ${friends} friends in total\""],
+	"correct": "I have 5 friends in total"
+}
+</section>

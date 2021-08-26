@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In Swift we can slice an array as we want!
+```
+// Grabs the first two items
+listName[..<2]
+// Grabs the fourth through last items
+listName[3...]
+```
+If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+</section>
+<section id="instructions">
+Divide the `animals` exactly in half within the two groups
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let animals = [\"dog\", \"cat\", \"frog\", \"bear\", \"lion\", \"butterfly\"]\nlet firstGroup = ","[/]","[","[/]","[/]","]","\nlet secondGroup = ","[/]","[","[/]","[/]","]\nprint(firstGroup)\nprint(secondGroup)"],
+	"buttons": ["3", "4", "1", "3","..<", "...","animals","animals"],
+	"correct": "let animals = [\"dog\", \"cat\", \"frog\", \"bear\", \"lion\", \"butterfly\"]\nlet firstGroup = animals[..<3]\nlet secondGroup = animals[3...]\nprint(firstGroup)\nprint(secondGroup)"
+}
+</section>
+<section id="preOutput">
+["dog", "cat", "frog"]
+["bear", "lion", "butterfly"]
+</section>

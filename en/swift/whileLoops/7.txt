@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Use a `while` loop to repeat the code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," true {\n\tprint(\"repeat\")\n}"],
+	"buttons": ["while","for","loop","\"while\""],
+	"correct": "while true {\n\tprint(\"repeat\")\n}"
+}
+</section>
+<section id="preOutput">
+repeat
+repeat
+repeat
+repeat
+...
+</section>

@@ -1,0 +1,51 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Spesso in programmazione, e' necessario ripetere un blocco di codice, ad esempio:
+```
+print("2 secondi")
+print("3 secondi")
+print("4 secondi")
+print("5 secondi")
+```
+Questo produce il seguente output:
+```
+2 secondi
+3 secondi
+4 secondi
+5 secondi
+```
+Ovviamente, per lunghe dichiarazioni passeremmo molto tempo a scrivere il codice, ma fortunatamente possiamo usare i cicli.
+Usiamo il ciclo `while`, in modo da ottenene lo stesso output di sopra.
+```
+contatore = 2
+while (contatore <= 5):
+    print(f"{contatore} secondi")
+    contatore += 1
+```
+Quindi abbiamo creato una variabile `contatore` assegnandole `2`, il valore iniziale.
+Poi abbiamo usato la parola chiave `while` che eseguirà il blocco di codice finche' la condizione `contatore <= 5` e' `True`.
+All'interno del blocco di codice, **NON** dovremo dimenticare la linea di codice `contatore += 1`.
+In quanto incrementa il valore del `contatore`, altrimenti il nostro ciclo sarà infinito
+</section>
+<section id="instructions">
+Riempire gli spazi vuoti con il ciclo `while` per ripetere il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," True:","\n\tprint(\"ripeti\")"],
+	"buttons": ["while","\"while\"","for","loop"],
+	"correct": "while True:\n\tprint(\"ripeti\")"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+...
+</section>

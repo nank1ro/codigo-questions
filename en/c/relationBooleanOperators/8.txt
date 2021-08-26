@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the **or** `||` boolean operator.
+It returns the first operand that evaluates to *true* or the last one if all are *false*.
+```
+>>> 2 == 2 || 2 == 3
+1
+>>> 1 == 2 || 1 == 3
+0
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is equal to `5` **or** `num2` is different from `3` (in this order)
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 5;\nint num2 = 4;\nprintf(\"%d\\n\", ", "[/]", "[/]", "[/]", "[/]", "[/]", "[/]", "[/]", ");"],
+	"buttons": ["num", "num2", " == ", " == ", "5", " and ", "5", " != ", " && ", " || ", " | ", "3"],
+	"correct": "int num = 5;\nint num2 = 4;\nprintf(\"%d\\n\", num == 5 || num2 != 3);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

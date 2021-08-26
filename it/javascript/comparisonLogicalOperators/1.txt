@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Iniziamo con l'operatore di comparazione **uguale** `==`.
+Restituisce un valore **booleano** (`true` o `false`) affermando se due espressioni sono uguali, ad esempio:
+```
+console.log(2 == 2); 
+// stampa true
+console.log(2 == 3);
+// stampa false
+```
+</section>
+<section id="instructions">
+Stampa un valore booleano verificando se `num` e' uguale a `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5;\n","console.log(","[/]","[/]","[/]",");"],
+	"buttons": ["num ","num ","== ","= ","5"],
+	"correct": "var num = 5;\nconsole.log(num == 5);"
+}
+</section>
+<section id="preOutput">
+true
+</section>

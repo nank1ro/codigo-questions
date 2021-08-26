@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Nelle funzioni possiamo aggiungere un _commento opzionale_ che spieghi il funzionamento di una funzione:
+```
+/// Stampa 'Hello World' nella console.
+func helloWorld() {
+    print("Hello, World!")
+}
+```
+Possiamo usare `///` per commentare una singola linea, mentre `/** */` per un commento multi-linea
+</section>
+<section id="instructions">
+Aggiungi un valido commento alla funzione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]"," Restituisce il prodotto tra i numeri n1 e n2\nfunc prodotto( _ n1: Int, _ n2: Int) -> Int {\n\treturn n1 * n2\n}"],
+	"buttons": ["/","/","/","\\","\\","\\","/*","/**"],
+	"correct": "/// Restituisce il prodotto tra i numeri n1 e n2\nfunc prodotto( _ n1: Int, _ n2: Int) -> Int {\n\treturn n1 * n2\n}"
+}
+</section>

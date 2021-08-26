@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `U.S. Route 66` nell'output aggiungendo una stringa
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(","\"U.S. Route \" ","[/]","[/]","[/]","[/]","[/]",";"],
+	"buttons": ["\"","\"","66","=","+",")"],
+	"correct": "console.log(\"U.S. Route \" +\"66\");"
+}
+</section>
+<section id="preOutput">
+U.S. Route 66
+</section>

@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In JavaScript we also have the **do-while** variation of the `while` loop.
+It performs a single pass through the loop block first, _before_ considering the loop's condition.
+It then continues to repeat the loop until the condition is `false`.
+</section>
+<section id="instructions">
+Print the numbers from `2` to `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var counter = 1;\ndo {\n\t","[/]","[/]","[/]",";\n\t","[/]","[/]","[/]","[/]",";\n} ","[/]"," (counter", "[/]", "5);"],
+	"buttons": ["counter","print","(",")","counter", " += ","1", " < ", "while"],
+	"correct": "var counter = 1;\ndo {\n\tcounter += 1;\n\tconsole.log(counter);\n} while (counter < 5);"
+}
+</section>
+<section id="preOutput">
+2
+3
+4
+5
+</section>

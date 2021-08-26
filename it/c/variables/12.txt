@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Assegna una stringa alla variabile `eta` e stampa il suo valore.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char eta[] = ","[/]",";\n","[/]","(\"%s\\n\", ","[/]",");"],
+	"buttons": ["eta","print","18 anni","\"24 anni\"","printf"],
+	"correct": "char eta[] = \"24 anni\";\nprintf(\"%s\\n\", eta);"
+}
+</section>
+<section id="preOutput">
+24 anni
+</section>

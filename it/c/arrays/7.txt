@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Riesci a trovare un modo per creare un valido array bidimensionale
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["char nomi[2][6] = {\"Alex\", \"James\"};", "char nomi[2] = {\"Alex\", \"James\"};", "char nomi[2][] = {\"Alex\", \"James\"};", "char nomi[2][10] = [\"Alex\", \"James\"];"],
+	"correct": "char nomi[2][6] = {\"Alex\", \"James\"};"
+}
+</section>

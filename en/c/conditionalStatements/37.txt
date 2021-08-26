@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to execute the block of code
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool is_morning = true;\nbool is_afternoon = !is_morning;\nif (", "[/]", ") {\n\tprintf(\"Good morning!\\n\");\n}"],
+	"buttons": ["is_morning", "is_afternoon", "\"is_morning\"", "\"is_afternoon\""],
+	"correct": "bool is_morning = true;\nbool is_afternoon = !is_morning;\nif (is_morning) {\n\tprintf(\"Good morning!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Good morning!
+</section>

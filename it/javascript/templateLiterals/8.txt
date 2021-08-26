@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+A cosa servono le stringhe template?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Per mostrare diversi tipo di valori insieme in una stringa","Per allineare il testo","Per mostrare solo le stringhe assieme"],
+	"correct": "Per mostrare diversi tipo di valori insieme in una stringa"
+}
+</section>

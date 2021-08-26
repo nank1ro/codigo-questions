@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a riordinare queste righe in modo che formino una vera e propria __funzione__?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["def saluta(name):","\t\"\"\"Questa funzione saluta la persona che riceve come parametro\"\"\"","\tprint(f'Ciao, {name}. Buongiorno!')","saluta('Alex')"],
+	"correct": "def saluta(name):\t\"\"\"Questa funzione saluta la persona che riceve come parametro\"\"\"\tprint(f'Ciao, {name}. Buongiorno!')saluta('Alex')"
+}
+</section>

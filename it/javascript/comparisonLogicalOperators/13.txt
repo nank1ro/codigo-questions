@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `num` e' **maggiore di o uguale a** `8`, stampa il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 8;\n","console.log(","[/]","[/]","[/]",");"],
+	"buttons": ["num ","'num'","== ","= ","num",">= ","8"],
+	"correct": "var num = 8;\nconsole.log(num >= 8);"
+}
+</section>
+<section id="preOutput">
+true
+</section>

@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+print(f"The {12}% of the population of Germany are children up to 14 years")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The 12% of the population of Germany are children up to 14 years","The {12}% of the population of Germany are children up to 14 years","f\"The {12}% of the population of Germany are children up to 14 years\""],
+	"correct": "The 12% of the population of Germany are children up to 14 years"
+}
+</section>

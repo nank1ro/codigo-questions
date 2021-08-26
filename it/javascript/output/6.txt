@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quando possiamo usare `console.log()` per stampare il valore di una variabile?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Prima o dopo aver creato la variabile", "Prima di creare la variabile", "Dopo aver creato la variabile"],
+	"correct": "Dopo aver creato la variabile"
+}
+</section>

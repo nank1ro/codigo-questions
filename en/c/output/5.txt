@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "c",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Sort the items to produce the following output: `Hello C!`?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["printf(", "\"Hello ", "C!", "\");"],
+	"correct": "printf(\"Hello C!\");"
+}
+</section>
+<section id="preOutput">
+Hello C!
+</section>

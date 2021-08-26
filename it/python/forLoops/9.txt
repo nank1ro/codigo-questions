@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' la variabile contatore del ciclo `for`?
+```
+for i in range(3):
+	print("ciao")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["i", "range", "for", "print(\"ciao\")"],
+	"correct": "i"
+}
+</section>

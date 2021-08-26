@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' il numero massimo di righe che un blocco di codice può avere?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Una","Due","Tre","Quante ne vogliamo"],
+	"correct": "Quante ne vogliamo"
+}
+</section>

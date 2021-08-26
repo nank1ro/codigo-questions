@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Esegui il blocco di codice assegnando un valore alla variabile
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var oraCaffe = ","[/]",";\nif (oraCaffe) {\n\tconsole.log(\"È ora del caffè!\");\n","[/]"],
+	"buttons": ["true","false","\"true\"","\"false\"","}"],
+	"correct": "var oraCaffe = true;\nif (oraCaffe) {\n\tconsole.log(\"È ora del caffè!\");\n}"
+}
+</section>
+<section id="preOutput">
+È ora del caffè!
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if (", "[/]", ") {\n\tprintf(\"Esegui Codice\\n\");\n}"],
+	"buttons": ["True","False","true","false","\"True\"","\"False\""],
+	"correct": "if (true) {\n\tprintf(\"Esegui Codice\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Esegui Codice
+</section>

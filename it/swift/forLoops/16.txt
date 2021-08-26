@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+All'interno del blocco di codice del cilo `for`, mostra il valore della variabile del contatore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for c in 0...2 {\n\tprint(\"ripeti\")\n\t","[/]","[/]","[/]","[/]","\n}"],
+	"buttons": ["print", "i","(",")","c"],
+	"correct": "for c in 0...2 {\n\tprint(\"ripeti\")\n\tprint(c)\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+0
+ripeti
+1
+ripeti
+2
+</section>

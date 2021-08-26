@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+**Objects** are similar to arrays, but you access values by looking up a *key* instead of an index
+A key can be any string or number.
+Objects are enclosed in curly brackets, like so:
+```
+var objectName = {"key1": 1, "key2": 2, "key3": 3};
+```
+This is a dictionary called `objectName` with three *key-value pairs*.
+The key `key1` points to the value `1`, `key2` to `2`, and so on.
+</section>
+<section id="instructions">
+Complete the code in order to create a valid dictionary (object)
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\nvar firstName = user[","[/]","];\nconsole.log(`The first name is ${","[/]","}`);"],
+	"buttons": ["Any","String","Int","[","{","}","]","\"first_name\"","first_name","firstName"],
+	"correct": "var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\nvar firstName = user[\"first_name\"];\nconsole.log(`The first name is ${firstName}`);"
+}
+</section>
+<section id="preOutput">
+The first name is John
+</section>

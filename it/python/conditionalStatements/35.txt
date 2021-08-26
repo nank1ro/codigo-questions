@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]","[/]","[/]","[/]","[/]","\n\tprint(\"Ciao Utente!\")"],
+	"buttons": ["True","False","\"True\"","\"False\"",":",";","if ", "else ","elif ","(",")"],
+	"correct": "if (True):\n\tprint(\"Ciao Utente!\")"
+}
+</section>
+<section id="preOutput">
+Ciao Utente!
+</section>

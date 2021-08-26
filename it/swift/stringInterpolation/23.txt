@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'è di sbagliato nel codice?
+```
+let pezzi = 5
+let label = "Abbiamo \(pezzi) pezzi"
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Non possiamo salvare le stringhe formattate nelle variabili", "I caratteri \\() mancano", "Non possiamo usare le variabili all'interno di \\()", "Nulla è sbagliato nel codice"],
+	"correct": "Non possiamo salvare le stringhe formattate nelle variabili"
+}
+</section>

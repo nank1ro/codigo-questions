@@ -1,0 +1,35 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+When we update a variable, it forgets its previous value.
+Here we can display the `x` variable twice and see how its value updates.
+```
+var x = 5;
+console.log(x); // prints 5
+x = 10;
+console.log(x); // prints 10
+```
+</section>
+<section id="instructions">
+Update the value of the variable `x` with the number `3`.
+</section>
+<section id="seed">
+var x = 1;
+// write after this line
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"console.assert(x == 3, \"x must be equal to 3\")"
+        }
+    ]
+}
+</section>

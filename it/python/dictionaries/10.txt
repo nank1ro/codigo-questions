@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Per __aggiungere__ o __modificare__ i valori in un dizionario, possiamo anche usare il metodo `update()` con le coppie di _chiave-valore_ che vogliamo aggiungere tra le parentesi
+</section>
+<section id="instructions">
+Aggiungi una nuova coppia _chiave-valore_ nel dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nutente.","[/]","({\"professione\": \"Sviluppatore\"})\nprint(utente)"],
+	"buttons": ["update","add","insert"],
+	"correct": "utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30}\nutente.update({\"professione\": \"Sviluppatore\"})\nprint(utente)"
+}
+</section>
+<section id="preOutput">
+{'nome': 'John', 'cognome': 'Hood', 'eta': 30, 'professione': 'Sviluppatore'}
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+if (true) {
+	printf("Hello!\n");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Hello!","Nothing because the code block gets skipped"],
+	"correct": "Hello!"
+}
+</section>

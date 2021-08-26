@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Crea un ciclo infinito
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (","[/]",") {\n\tconsole.log(\"ciclo infinito\");\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while (true) {\n\tconsole.log(\"ciclo infinito\");\n}"
+}
+</section>
+<section id="preOutput">
+ciclo infinito
+ciclo infinito
+ciclo infinito
+ciclo infinito
+...
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+È possibile specificare i valori di un'enumerazione assegnando un valore.
+Assegnare i numeri `Int` corretti ad ogni caso di enumerazione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["enum NumeriDispari: ","[/]"," {\n\tcase uno = ","[/]","\n\tcase tre = 3\n\tcase cinque","[/]","[/]","\n}\nlet numero = ","[/]",".cinque\nprint(numero.rawValue)"],
+	"buttons": ["CaseIterable","Int","1","2"," = ", "5","NumeriDispari","NumeriDispari"],
+	"correct": "enum NumeriDispari: Int {\n\tcase uno = 1\n\tcase tre = 3\n\tcase cinque = 5\n}\nlet numero = NumeriDispari.cinque\nprint(numero.rawValue)"
+}
+</section>
+<section id="preOutput">
+5
+</section>

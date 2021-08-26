@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le liste sono un tipo di dati che si può utilizzare per memorizzare una collezione di informazioni diverse come una sequenza sotto un'unica variabile.
+Una lista memorizza valori multipli di qualsiasi tipo e utilizza gli **indici** per distinguere questi valori.
+E' possibile assegnare gli elementi ad una lista con un'espressione della forma:
+```
+nome_lista = [item1, item2]
+```
+</section>
+<section id="instructions">
+Completa il codice per creare una lista valida
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," = ", "[/]", "2, 4, 6", "[/]","\nfor num in numeri:\n\tprint(num)"],
+	"buttons": ["numeri","\"numeri\"","[","]","(",")"],
+	"correct": "numeri = [2, 4, 6]\nfor num in numeri:\n\tprint(num)"
+}
+</section>
+<section id="preOutput">
+2
+4
+6
+</section>

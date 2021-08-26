@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `Terminal` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]","[/]"],
+	"buttons": ["print(","\"","\"","Terminale",")","]","[",";"],
+	"correct": "print(\"Terminale\")"
+}
+</section>
+<section id="preOutput">
+Terminale
+</section>

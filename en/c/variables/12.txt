@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Assign a string to the variable `age` and display its value.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char age[] = ","[/]",";\n","[/]","(\"%s\\n\", ","[/]",");"],
+	"buttons": ["age","print","18 years old","\"24 years old\"","printf"],
+	"correct": "char age[] = \"24 years old\";\nprintf(\"%s\\n\", age);"
+}
+</section>
+<section id="preOutput">
+24 years old
+</section>

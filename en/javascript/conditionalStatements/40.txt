@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to execute the block of code
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var isMorning = true;\nvar isAfternoon = !isMorning;\nif (","[/]",") {\n\tconsole.log(\"Good morning!\");\n}"],
+	"buttons": ["isMorning","isAfternoon","\"isMorning\"","\"isAfternoon\""],
+	"correct": "var isMorning = true;\nvar isAfternoon = !isMorning;\nif (isMorning) {\n\tconsole.log(\"Good morning!\");\n}"
+}
+</section>
+<section id="preOutput">
+Good morning!
+</section>

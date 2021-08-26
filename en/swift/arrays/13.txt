@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional code?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["var animals = [\"dog\", \"bear\", \"cat\"]", "if animals.count == 3 {", "\tanimals.append(\"frog\")", "print(animals[3])","}"],
+	"correct": "var animals = [\"dog\", \"bear\", \"cat\"]if animals.count == 3 {\tanimals.append(\"frog\")}print(animals[3])"
+}
+</section>
+<section id="preOuput">
+frog
+</section>

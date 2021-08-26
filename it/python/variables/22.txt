@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Memorizza il valore della variabile `score` nella variabile `high_score`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["score = 25\n","high_score = ","[/]","\n","print(high_score)"],
+	"buttons": ["50","\"50\"","score","\"score\""],
+	"correct": "score = 25\nhigh_score = score\nprint(high_score)"
+}
+</section>
+<section id="preOutput">
+25
+</section>

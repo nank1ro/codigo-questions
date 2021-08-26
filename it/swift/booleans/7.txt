@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Perche' `"true"` e' diverso da `true`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["\"true\" e true sono la stessa cosa","Il primo e' una stringa","L'ultimo e' una stringa","Il primo e' un booleano"],
+	"correct": "Il primo e' una stringa"
+}
+</section>

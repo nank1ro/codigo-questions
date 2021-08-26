@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display `Internet` as output.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",")"],
+	"buttons": ["console.log","\"Hello\"","\"JavaScript!\"","Hello","JavaScript!","Internet","\"Internet\""],
+	"correct": "console.log(\"Internet\")"
+}
+</section>
+<section id="preOutput">
+Internet
+</section>

@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Decision making is required when we want to execute code only if a certain condition is satisfied.
+Let's assume we want to play outside only if the weather is nice.
+In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+```
+var niceWeather = true;
+if (niceWeather) {
+	// play outside
+}
+```
+</section>
+<section id="instructions">
+Create an `if` statement checking if the `time` is lower than `12`, then in the code block print the string `"It's morning"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var time = 8;\n","[/]"," (time < 12) {\n\tconsole.log(\"It's morning\");\n}"],
+	"buttons": ["if","==", "=","else","?"],
+	"correct": "var time = 8;\nif (time < 12) {\n\tconsole.log(\"It's morning\");\n}"
+}
+</section>
+<section id="preOutput">
+It's morning
+</section>

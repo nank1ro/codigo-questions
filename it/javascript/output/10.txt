@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `Terminale` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]","[/]"],
+	"buttons": ["console.log(","\"","\"","Terminale",")","]","[",";"],
+	"correct": "console.log(\"Terminale\")"
+}
+</section>
+<section id="preOutput">
+Terminale
+</section>

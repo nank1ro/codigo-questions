@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the maximum number of lines that a code block can have?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["One","Two","Four","As many as we want"],
+	"correct": "As many as we want"
+}
+</section>

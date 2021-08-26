@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a riordinare queste righe in un codice funzionale?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Cane {","\tconstructor(nome) {","\t\tthis.nome = nome;","\t}","}","let cane = new Cane(\"Max\");","console.log(cane.nome);"],
+	"correct": "class Cane {\tconstructor(nome) {\t\tthis.nome = nome;\t}}let cane = new Cane(\"Max\");console.log(cane.nome);"
+}
+</section>
+<section id="preOutput">
+Max
+</section>

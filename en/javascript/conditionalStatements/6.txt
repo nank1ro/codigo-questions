@@ -1,0 +1,39 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+```
+var num = 4;
+if (num < 3) {
+	console.log("the number is lower than 3");
+} else {
+	if (num == 3) {
+		console.log("the number is 3");
+	} else if (num == 4) {
+		console.log("the number is 4");
+	} else {
+		console.log("the number is greather than 4");
+	}
+}
+```
+and the output of this code is `the number is 4`.
+</section>
+<section id="instructions">
+Let's change the program of the day time, nesting a conditional statement inside the `else` statement.
+The nested conditional statement should check if `time` is *lower* than `18` and in the block of code should print `"It's afternoon"`.
+If the previous condition is `false`, print `"It's evening"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var time = 19;\nif (time > 0 && time < 12) {\n\tconsole.log(\"It's morning\");\n} else if (time == 12) {\n\tconsole.log(\"It's midday\");\n} else if (time == 0) {\n\tconsole.log(\"it's midnight\");\n} else {\n\t","[/]","(","[/]","[/]","[/]", ") {\n\t\tconsole.log(\"it's afternoon\");\n\t} ","[/]"," {\n\t\tconsole.log(\"it's evening\");\n\t}\n}"],
+	"buttons": ["18","elif "," < "," == ", ":",";","time","else if:","elseif:","else","if "],
+	"correct": "var time = 19;\nif (time > 0 && time < 12) {\n\tconsole.log(\"it's morning\");\n} else if (time == 12) {\n\tconsole.log(\"it's midday\");\n} else if (time == 0) {\n\tconsole.log(\"it's midnight\");\n} else {\n\tif (time < 18) {\n\t\tconsole.log(\"it's afternoon\");\n\t} else {\n\t\tconsole.log(\"it's evening\");\n\t}\n}"
+}
+</section>
+<section id="preoutput">
+it's evening
+</section>

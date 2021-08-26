@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo memorizzare il valore booleano `true` in una variabile proprio come un numero o una stringa.
+</section>
+<section id="instructions">
+Stampa l'output della variabile `musicaAttiva`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var musicaAttiva = true;\n","console.log(","[/]",");"],
+	"buttons": ["true","\"true\"","musicaAttiva","\"musicaAttiva\""],
+	"correct": "var musicaAttiva = true;\nconsole.log(musicaAttiva);"
+}
+</section>
+<section id="preOutput">
+true
+</section>

@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Variables are called in this way because the value they store can change.
+We can update `x` by using `=` and giving it a new value.
+```
+>>> x = 1;
+>>> printf("%i\n", x);
+1
+>>> x = 2;
+>>> printf("%i\n", x);
+2
+```
+</section>
+<section id="instructions">
+Update the value of the variable `x` with the number `10`.
+</section>
+<section id="seed">
+int x = 5;
+// write after this line
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(x == 10);"
+        }
+    ]
+}
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `Internet` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",")"],
+	"buttons": ["console.log","\"Ciao\"","\"JavaScript!\"","Ciao","JavaScript!","Internet","\"Internet\""],
+	"correct": "console.log(\"Internet\")"
+}
+</section>
+<section id="preOutput">
+Internet
+</section>

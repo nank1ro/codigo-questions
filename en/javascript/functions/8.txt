@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines so they form a proper __function__?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["// This function greets to the person passed in as argument","const greet = (name) => `Hello, ${name}. Good morning!`;","console.log(greet(\"Alex\"));"],
+	"correct": "// This function greets to the person passed in as argumentconst greet = (name) => `Hello, ${name}. Good morning!`;console.log(greet(\"Alex\"));"
+}
+</section>
+<section id="preOutput">
+Hello, Alex. Good morning!
+</section>

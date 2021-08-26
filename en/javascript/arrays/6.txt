@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Sometimes, you only want to access a portion of an array.
+Consider the following code:
+```
+let numbers = [1, 2, 3, 4];
+let slice = numbers.slice(1, 3);
+console.log(slice);
+// prints [2, 3]
+```
+First, we create an array called `numbers`.
+Then, we take a subsection of the array and store it in the slice array.
+We do this by defining the indices we want to include after the name of the array: `numbers.slice(1, 3)`.
+Keep in mind that the right index is excluded
+</section>
+<section id="instructions">
+Create an array called `middle` containing only the two middle numbers from `numbers`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let numbers = [10, 5, 5, 5, 3, 2, 1, 0];\nlet middle = ", "[/]",".slice(","[/]","[/]" ,"[/]" ,");\nconsole.log(middle);"],
+	"buttons": ["numbers", "2", ":", "3", "-1","6","3","5","...","..<", ", "],
+	"correct": "let numbers = [10, 5, 5, 5, 3, 2, 1, 0];\nlet middle = numbers.slice(3, 5);\nconsole.log(middle);"
+}
+</section>
+<section id="preOutput">
+[5, 3]
+</section>

@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da **NON** eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if ","[/]", " {\n\tprint(\"Esegui Codice\")\n}"],
+	"buttons": ["True","False","true","false","\"True\"","\"False\""],
+	"correct": "if false {\n\tprint(\"Esegui Codice\")\n}"
+}
+</section>

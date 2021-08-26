@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Ci sono molti __moduli integrati__ che possono aiutarci in ogni genere di cose, come lavorare con date e orari.
+Per includere un modulo utilizziamo la parola chiave `import`
+</section>
+<section id="instructions">
+Includi il modulo `datetime`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","\n\ndata = datetime.date(2020, 7, 9)\nprint(date)"],
+	"buttons": ["import ", "include", "add","datetime","date","time"],
+	"correct": "import datetime\n\ndate = datetime.date(2020, 7, 9)\nprint(data)"
+}
+</section>
+<section id="preOutput">
+2020-07-09
+</section>

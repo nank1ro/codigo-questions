@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Nelle funzioni possiamo aggiungere un _commento opzionale_ che spiega cosa fa la funzione:
+```
+"""
+Stampa 'Ciao Mondo' nella console.
+"""
+```
+</section>
+<section id="instructions">
+Aggiungi un valido commento nella funzione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["def prodotto(n1, n2):\n","[/]","\nRestituisce il prodotto tra i numeri n1 e n2\n","[/]","\nreturn n1 * n2\n\nrisultato = prodotto(5, 5)\nprint(risultato)"],
+	"buttons": ["\"\"\"","\"\"\"","''","''"],
+	"correct": "def prodotto(n1, n2):\n\"\"\"\nRestituisce il prodotto tra i numeri n1 e n2\n\"\"\"\nreturn n1 * n2\n\nrisultato = prodotto(5, 5)\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+25
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Create a variable for the `while` loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]",";\n\nwhile (isLoading) {\n\tconsole.log(\"Loading...\");\n}"],
+	"buttons": ["true","\"true\"","\"false\"","isLoading", " = ", "var "],
+	"correct": "var isLoading = true;\n\nwhile (isLoading) {\n\tconsole.log(\"Loading...\");\n}"
+}
+</section>
+<section id="preOutput">
+Loading...
+Loading...
+Loading...
+Loading...
+...
+</section>

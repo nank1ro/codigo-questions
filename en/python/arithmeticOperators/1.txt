@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Operators are used to perform operations on variables and values.
+Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
+It is used to add two numbers, like:
+```
+>>> 5+3
+8
+```
+</section>
+<section id="instructions">
+Calculate the sum between the numbers 4 and 9 (in this order), then print the variable `sum`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["sum = ","[/]","[/]","[/]","\nprint(sum)"],
+	"buttons": ["4","9","+","*","13"],
+	"correct": "sum = 4+9\nprint(sum)"
+}
+</section>
+<section id="preOutput">
+13
+</section>

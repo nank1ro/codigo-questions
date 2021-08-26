@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Vediamo l'operatore di **assegnazione di potenza** `**=`.
+Serve ad elevare il valore di una variabile a una potenza specificata e assegna il risultato alla suddetta variabile.
+Quindi le seguenti linee di codice eseguono la stessa operazione:
+```
+num = num ** 5
+# e' uguale a
+num **= 5
+```
+</section>
+<section id="instructions">
+Calcola l'elevamento a potenza di `risultato` con la potenza di` 3` usando l'operatore  di *assegnazione di potenza*, quindi stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["risultato = 5\n","risultato ","[/]","[/]","\nprint(risultato)"],
+	"buttons": ["* ","*= ","=* ","**= ","=** ","3"],
+	"correct": "risultato = 5\nrisultato **= 3\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+125
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A volte vogliamo che una funzione __restituisca__ un valore.
+Bene, possiamo usare la parola chiave `return`
+</section>
+<section id="instructions">
+Completa il codice in modo da restituire il prodotto tra i due numeri
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func prodotto(_ n1: Int, _ n2: Int) -> Int {\n\t","[/]","[/]","[/]","[/]","\n}\nlet risultato = prodotto(2, 2)\nprint(risultato)"],
+	"buttons": ["return ", "\"return \"", "n1", " * ", "n2", "2"],
+	"correct": "func prodotto(_ n1: Int, _ n2: Int) -> Int {\n\treturn n1 * n2\n}\nlet risultato = prodotto(2, 2)\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+4
+</section>

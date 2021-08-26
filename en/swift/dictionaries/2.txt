@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Accessing dictionary values by key is just like accessing array values by index:
+```
+// gets the age value from the user dictionary
+user['age']
+```
+</section>
+<section id="instructions">
+Print out the value of the key `last_name`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif let lastName = ","[/]","[/]","[/]","[/]", " {\n\tprint(\"The last name is ", "[/]", "\")\n}"],
+	"buttons": ["user", "[", "]", "last_name","\"last_name\"","\\(lastName)"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif let lastName = user[\"last_name\"] {\n\tprint(\"The last name is \\(lastName)\")\n}"
+}
+</section>
+<section id="preOutput">
+The last name is Hood
+</section>

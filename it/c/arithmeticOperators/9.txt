@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calcola la differenza tra 25 e 15
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int differenza = ","[/]","[/]","[/]",";\nprintf(\"%d\\n\", differenza);"],
+	"buttons": ["25","15","10"," - "," + " ," * "],
+	"correct": "int differenza = 25 - 15;\nprintf(\"%d\\n\", differenza);"
+}
+</section>
+<section id="preOutput">
+10
+</section>

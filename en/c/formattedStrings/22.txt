@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Save the string inside `animal`, then display the formatted string
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char ","[/]",";\nchar muscles = 32;\nprintf(","[/]","\\n\", animal, muscles);"],
+	"buttons": ["animal = \"cat\"","\"A %s has %i muscles in each ear","animal[] = \"cat\""],
+	"correct": "char animal[] = \"cat\";\nchar muscles = 32;\nprintf(\"A %s has %i muscles in each ear\\n\", animal, muscles);"
+}
+</section>
+<section id="preOutput">
+A cat has 32 muscles in each ear
+</section>

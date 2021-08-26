@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the ouput of the following code?
+```
+result = 30 / 10
+print(result)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["3.0","30","10","0"],
+	"correct": "3.0"
+}
+</section>

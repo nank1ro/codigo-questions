@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa una stringa templata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var cifra = 50",";\n","[/]","[/]","[/]"],
+	"buttons": ["console.log(`",");","${cifra} è la cifra`","50 è la cifra"],
+	"correct": "var cifra = 50;\nconsole.log(`${cifra} è la cifra`);"
+}
+</section>
+<section id="preOutput">
+50 è la cifra
+</section>

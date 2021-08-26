@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional code?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Animal:","\tdef __init__(self, name):","\t\tself.name = name","dog = Animal('Max')","print(dog.name)"],
+	"correct": "class Animal:\tdef __init__(self, name):\t\tself.name = namedog = Animal('Max')print(dog.name)"
+}
+</section>
+<section id="preOutput">
+Max
+</section>

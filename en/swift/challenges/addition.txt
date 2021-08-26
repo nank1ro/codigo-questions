@@ -1,0 +1,50 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Given two integers `num1` and `num2`, write a program to add these two numbers
+</section>
+
+<section id="instructions">
+Write a function that returns the sum of two numbers
+</section>
+
+<section id="seed">
+func addition() {
+
+}
+</section>
+
+<section id="test">
+import XCTest
+
+class AdditionTests: XCTestCase {
+
+    func testAddition1() {
+        XCTAssertEqual(addition(1, 3), 4, "Your function should return 4")
+    }
+
+    func testAddition2() {
+        XCTAssertEqual(addition(200, 210), 410, "Your function should return 410")
+    }
+
+    func testAddition3() {
+        XCTAssertEqual(addition(15, 35), 50, "Your function should return 50")
+    }
+
+    static var allTests: [(String, (AdditionTests) -> () throws -> Void)] {
+        return [
+            ("testAddition1", testAddition1),
+            ("testAddition2", testAddition2),
+            ("testAddition3", testAddition3),
+        ]
+    }
+}
+
+XCTMain([testCase(AdditionTests.allTests),])
+</section>

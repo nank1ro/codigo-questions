@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per creare un'istruzione condizionale
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", " true {\n\tprint(\"E' vero!\")\n}"],
+	"buttons": ["if", "else", "elif", "else if"],
+	"correct": "if true {\n\tprint(\"E' vero!\")\n}"
+}
+</section>
+<section id="preOutput">
+E' vero!
+</section>

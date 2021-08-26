@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual è l'output di questo codice?
+```
+let ciboPreferito = "Pizza";
+console.log(ciboPreferito);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Pizza","ciboPreferito","\"Pizza\""],
+	"correct": "Pizza"
+}
+</section>

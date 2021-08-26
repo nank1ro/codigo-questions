@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's put something inside our `Animal` class
+To add some parameters we have to use the default `constructor`
+</section>
+<section id="instructions">
+Add the parameters `gender` and `legs` inside the class
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["class Animal {\n\tconstructor(","[/]",", legs) {\n\tthis.gender = ","[/]",";\n\tthis.","[/]"," = legs;\n\t}\n}"],
+	"buttons": ["gender","legs","Animal","'gender'","'legs'", "gender"],
+	"correct": "class Animal {\n\tconstructor(gender, legs) {\n\tthis.gender = gender;\n\tthis.legs = legs;\n\t}\n}"
+}
+</section>

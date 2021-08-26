@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+var contatore = 1;
+
+do {
+	contatore += 1;
+} while contatore < 5;
+
+console.log(contatore);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["1", "5","3","4"],
+	"correct": "5"
+}
+</section>

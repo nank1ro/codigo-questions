@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know that `Hello World` will always be printed?
+```
+online = False;
+if (online):
+	print("User is online")
+print("Hello World")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Because of its indentation","Because the if statement can't have more than one line","Because there isn't an else statement","Because there isn't an elif statement"],
+	"correct": "Because of its indentation"
+}
+</section>

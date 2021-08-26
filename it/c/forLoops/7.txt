@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quante volte questo ciclo eseguirà il suo blocco di codice?
+```
+for (int i = 0; i < 3; i++) {
+	printf("giro: %d\n", i);
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["3", "2", "4", "1"],
+	"correct": "3"
+}
+</section>

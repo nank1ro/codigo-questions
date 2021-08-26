@@ -1,0 +1,34 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+```
+>>> int x = 5;
+>>> int y = x;
+>>> printf("%i\n", y);
+5
+```
+</section>
+<section id="instructions">
+Create a new variable named `y` and assign it the value of the variable `x`.
+</section>
+<section id="seed">
+int x = 1;
+// write after this line
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(y == x);"
+        }
+    ]
+}
+</section>

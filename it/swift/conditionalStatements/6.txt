@@ -1,0 +1,39 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo anche nidificare un'istruzione condizionale (`if`, `elif` o `else`) all'interno di un'altra istruzione condizionale, per creare una struttura piu' complessa.
+```
+var num = 4
+if num < 3 {
+	print("il numero e' minore di 3")
+} else {
+	if num == 3 {
+		print("il numero e' 3")
+	} else if num == 4 {
+		print("il numero e' 4")
+	} else {
+		print("il numero e' maggiore di 4")
+	}
+}
+```
+e l'output del codice e' `il numero e' 4`.
+</section>
+<section id="instructions">
+Cambiamo il programma dell'ora del giorno, annidando un'istruzione condizionale all'interno dell'istruzione `else`.
+L'istruzione condizionale annidata dovrebbe controllare se l'ora e' *inferiore* a `18` e nel blocco di codice dovrebbe stampare `"Pomeriggio"`.
+Se la condizione precedente e' `False`, stampa `"Sera"`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var orario = 19\nif orario > 0 && orario < 12 {\n\tprint(\"Mattina\")\n} else if orario == 12 {\n\tprint(\"Mezzogiorno\")\n} else if orario == 0 {\n\tprint(\"Mezzanotte\")\n} else {\n\t","[/]","[/]","[/]","[/]", " {\n\t\tprint(\"Pomeriggio\")\n\t} ","[/]"," {\n\t\tprint(\"Sera\")\n\t}\n}"],
+	"buttons": ["6","elif "," < "," == ", ":",";","orario","else if:","elseif:","else","if "],
+	"correct": "var orario = 19\nif orario > 0 && orario < 12 {\n\tprint(\"Mattina\")\n} else if orario == 12 {\n\tprint(\"Mezzogiorno\")\n} else if orario == 0 {\n\tprint(\"Mezzanotte\")\n} else {\n\tif orario < 6 {\n\t\tprint(\"Pomeriggio\")\n\t} else {\n\t\tprint(\"Sera\")\n\t}\n}"
+}
+</section>
+<section id="preOutput">
+Sera
+</section>

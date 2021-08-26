@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know the `while` loop skips its code block?
+```
+bool is_loading = false;
+
+while (is_loading) {
+    printf("Loading...\n");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The variable in the condition is compared to true","The variable in the condition is compared to false"],
+	"correct": "The variable in the condition is compared to true"
+}
+</section>

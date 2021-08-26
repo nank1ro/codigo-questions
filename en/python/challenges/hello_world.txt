@@ -1,0 +1,34 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+</section>
+
+<section id="instructions">
+Write a function that returns the string "Hello, World!".
+</section>
+
+<section id="seed">
+def hello():
+	pass
+</section>
+
+<section id="test">
+import unittest
+
+from hello_world import hello
+
+class HelloWorldTest(unittest.TestCase):
+    def test_say_hi(self):
+        self.assertEqual(hello(), "Hello, World!")
+
+
+if __name__ == "__main__":
+    unittest.main()
+</section>

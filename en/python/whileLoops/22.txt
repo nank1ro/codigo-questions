@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+is_loading = True
+
+while is_loading:
+    print("Loading...")
+    is_loading = False
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["This code displays nothing in the output", "Loading..."],
+	"correct": "Loading..."
+}
+</section>

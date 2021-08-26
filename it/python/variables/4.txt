@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Quando aggiorniamo una variabile, essa dimentica il suo valore precedente.
+Qui stampiamo due volte la variabile `x` e vediamo come cambia il suo valore
+```
+>>> x = 5
+>>> print(x)
+5
+>>> x = 10
+>>> print(x)
+10
+```
+</section>
+<section id="instructions">
+Aggiorna il valore della variabile `x` con la stringa `"aggiornato"`
+</section>
+<section id="seed">
+x = 1
+# scrivi dopo questa linea 
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(x.lower() == \"aggiornato\".lower())"
+        }
+    ]
+}
+</section>

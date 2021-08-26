@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Because dictionaries variables are mutable, they can be changed in many ways.
+Items can be removed from a dictionary with the 'delete' keyword:
+```
+delete dictName[keyName];
+```
+will remove the key `keyName` and its associated value from the dictionary.
+</section>
+<section id="instructions">
+Delete the key `age` from the dictionary
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\n","[/]"," user[","[/]","];\nconsole.log(","[/]",");"],
+	"buttons": ["del ", "delete", "clear", "pop", "user", "\"age\"","removeValue"],
+	"correct": "var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\ndelete user[\"age\"];\nconsole.log(user);"
+}
+</section>
+<section id="preOutput">
+{
+    first_name:"John",
+    last_name:"Hood"
+}
+</section>

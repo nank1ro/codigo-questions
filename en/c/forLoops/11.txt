@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the `for` loop block of code, display the value of the counter variable
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["for (int c = 0; c <= 2; c++) {\n\t\tprintf(\"repeat\\n\");\n\t\t", "[/]", "(\"", "[/]", "\\n\", ", "[/]", ");\n}"],
+	"buttons": ["printf", "i", "(", ")", "c", "%d"],
+	"correct": "for (int c = 0; c <= 2; c++) {\n\t\tprintf(\"repeat\\n\");\n\t\tprintf(\"%d\\n\", c);\n}"
+}
+</section>
+<section id="preOutput">
+repeat
+0
+repeat
+1
+repeat
+2
+</section>

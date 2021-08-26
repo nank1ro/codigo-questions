@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Increment the `counter` variable inside the code block by `1` in each loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var counter = 1\n\nwhile counter < 5 {\n\tprint(counter)\n\t","[/]","[/]","[/]","\n}"],
+	"buttons": ["counter", " < "," > ", " += ", "1"],
+	"correct": "var counter = 1\n\nwhile counter < 5 {\n\tprint(counter)\n\tcounter += 1\n}"
+}
+</section>

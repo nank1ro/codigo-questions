@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Poiche' i dizionari sono mutabili, possono essere cambiati in molti modi.
+I valori possono essere rimossi da un dizionario con il metodo `removeValue(forKey:)`:
+```
+if let valoreRimosso = nomeDizionario.removeValue(forKey: "nomeChiave") {
+    print("Il valore rimosso e' \(valoreRimosso).") // stampa il valore rimosso, se la chiave esiste
+}
+```
+rimuoverà la chiave `nomeChiave` e il suo valore associato dal dizionario
+</section>
+<section id="instructions">
+Elimina la chiave `eta` dal dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nif let valoreRimosso = utente.", "[/]", "(forKey: ","[/]", ") {\n\tprint(\"Il valore rimosso e' \\(valoreRimosso)\")\n}\nprint(utente)"],
+	"buttons": ["del ", "delete", "clear", "pop", "utente", "\"eta\"","removeValue"],
+	"correct": "var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nif let valoreRimosso = utente.removeValue(forKey: \"eta\") {\n\tprint(\"Il valore rimosso e' \\(valoreRimosso)\")\n}\nprint(utente)"
+}
+</section>
+<section id="preOutput">
+Il valore rimosso e' 30
+["nome": "John", "cognome": "Hood"]
+</section>

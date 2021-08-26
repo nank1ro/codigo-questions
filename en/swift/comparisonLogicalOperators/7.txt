@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
+It returns the first operand that evaluates to *false* or the last one if all are *true*.
+```
+print(2 == 2 && 2 == 3) // false
+print(1 == 1 && 1 == 1.0) // true
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` and `num2` are both equal to 5 (in this order)
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\nvar num2 = 5\n","print(","[/]","[/]","[/]","[/]","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num2 ","== ","== ","5"," && ","5","!= "],
+	"correct": "var num = 5\nvar num2 = 5\nprint(num == 5 && num2 == 5)"
+}
+</section>
+<section id="preOutput">
+true
+</section>

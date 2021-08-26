@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+if (false) {
+	console.log("Hello!");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Hello!","Nothing because the code block gets skipped"],
+	"correct": "Nothing because the code block gets skipped"
+}
+</section>

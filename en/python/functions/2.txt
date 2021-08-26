@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The parentheses in the __function definition__ don't have to be empty.
+Within them, we can specify parameters
+</section>
+<section id="instructions">
+Complete the code in order to call the function with the name `Smith`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["def say_hello(name):\nprint(f'Hello {name}!')\n\nsay_hello(","[/]",")"],
+	"buttons": ["'Smith'","name:'Smith'"],
+	"correct": "def say_hello(name):\nprint(f'Hello {name}!')\n\nsay_hello('Smith')"
+}
+</section>
+<section id="preOutput">
+Hello Smith!
+</section>

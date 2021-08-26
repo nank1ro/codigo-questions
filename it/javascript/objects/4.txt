@@ -1,0 +1,30 @@
+<section id="options">
+{
+"langueta": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Poiche' i dizionari (dichiarati come variabili) sono mutabili, possono essere cambiati in molti modi.
+I valori possono essere rimossi da un dizionario con il metodo `removeValue(forKey:)`:
+```
+delete nomeDizionario[nomeChiave];
+```
+rimuoverà la chiave `nomeChiave` e il suo valore associato dal dizionario
+</section>
+<section id="instructions">
+Elimina la chiave `eta` dal dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\n","[/]"," utente[","[/]","];\nconsole.log(","[/]",");"],
+	"buttons": ["del ", "delete", "clear", "pop", "utente", "\"eta\"","removeValue"],
+	"correct": "var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\ndelete utente[\"eta\"];\nconsole.log(utente);"
+}
+</section>
+<section id="preOutput">
+{
+    nome:"John",
+    cognome:"Hood"
+}
+</section>

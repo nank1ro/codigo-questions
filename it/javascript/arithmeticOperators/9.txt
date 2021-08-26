@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Sottrai 18.8 da 20.3, poi stampa il `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let risultato = ","[/]","[/]","[/]",";\nconsole.log(risultato);"],
+	"buttons": ["20.3","18.8"," - "," + "," * "],
+	"correct": "let risultato = 20.3 - 18.8;\nconsole.log(risultato);"
+}
+</section>
+<section id="preOutput">
+1.5
+</section>

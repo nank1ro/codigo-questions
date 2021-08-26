@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+</section>
+<section id="instructions">
+Complete the code in order to create a valid function called `minMax` passing the following array of numbers `[15, 24, 31, 79, 44]`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func minMax(array: [Int]) -> ","[/]","min: Int, max: Int","[/]"," {\n\tvar currentMin = array[0]\n\tvar currentMax = array[0]\n\tarray.forEach { num in\n\t\tif num < currentMin {\n\t\t\tcurrentMin = num\n\t\t} else if num > currentMax {\n\t\t\tcurrentMax = num\n\t\t}\n\t}\n\treturn ","[/]","[/]",", ","[/]","[/]","\n}\nlet numbers: [Int] = [15, 24, 31, 79, 44]\nprint(minMax(","[/]",": numbers))"],
+	"buttons": ["(",")","[","]","{","}","(",")","array","numbers","currentMin","currentMax"],
+	"correct": "func minMax(array: [Int]) -> (min: Int, max: Int) {\n\tvar currentMin = array[0]\n\tvar currentMax = array[0]\n\tarray.forEach { num in\n\t\tif num < currentMin {\n\t\t\tcurrentMin = num\n\t\t} else if num > currentMax {\n\t\t\tcurrentMax = num\n\t\t}\n\t}\n\treturn (currentMin, currentMax)\n}\nlet numbers: [Int] = [15, 24, 31, 79, 44]\nprint(minMax(array: numbers))"
+}
+</section>
+<section id="preOutput">
+(min: 15, max: 79)
+</section>

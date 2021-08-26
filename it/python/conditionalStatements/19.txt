@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per aggiungere una nuova riga valida nel blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if (True):\n\t","[/]","(","[/]",")","\n\tprint(\"Seconda linea\")"],
+	"buttons": ["print","printf","Print","\"Prima linea\"","Prima linea"],
+	"correct": "if (True):\n\tprint(\"Prima linea\")\n\tprint(\"Seconda linea\")"
+}
+</section>
+<section id="preOutput">
+Prima linea
+Seconda linea
+</section>

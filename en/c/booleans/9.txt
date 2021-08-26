@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Store the value `true` in the variable `power`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool ", "[/]", "[/]", "[/]", ";"],
+	"buttons": ["power", "\"power\"", "\"true\"", "true", "true", " = "],
+	"correct": "bool power = true;"
+}
+</section>

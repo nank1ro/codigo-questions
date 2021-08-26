@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'e' che non va in questo codice?
+```
+int manchester_united = 0;
+int barcelona = 1;
+printf("Il punteggio è %i : %i\n", manchester_united, barcelona);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Non c'è nulla di sbagliato nel codice","manchester_united e barcelona non hanno valori","Non possiamo usare variabili all'interno della stringa formatatta","Non possiamo usare %i due volte nella stessa stringa"],
+	"correct": "Non c'è nulla di sbagliato nel codice"
+}
+</section>

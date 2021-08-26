@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale dichiarazione di stampa fa parte del blocco di codice dell'istruzione?
+```
+bool online = false;
+if (online) {
+	printf("Ciao Utente!\n");
+}
+printf("Ciao Mondo\n");
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["printf(\"Ciao Utente!\\n\")","printf(Ciao Utente!\\n)","printf(\"Ciao Mondo\\n\")","printf(Ciao Mondo\\n)"],
+	"correct": "printf(\"Ciao Utente!\\n\")"
+}
+</section>

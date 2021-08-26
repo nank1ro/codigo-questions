@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+All'interno del blocco di codice, ferma il loop dopo la sua esecuzione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["giocando = True\n\nwhile giocando:\n\tprint(\"Giocando...\")\n\tgiocando = ","[/]"],
+	"buttons": ["True", "False","\"True\"","\"False\""],
+	"correct": "giocando = True\n\nwhile giocando:\n\tprint(\"Giocando...\")\n\tgiocando = False"
+}
+</section>
+<section id="preOutput">
+Giocando...
+</section>

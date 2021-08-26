@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Continuiamo con l'operatore relazionale **minore di** `<`.
+Restituisce un valore **booleano**, vero `1` o falso `0` ,affermando se un'espressione e' minore dell'altra, per esempio:
+```
+>>> 2 < 2
+0
+>>> 2 < 3
+1
+```
+</section>
+<section id="instructions">
+Stampa un valore booleano verificando se `num` e' minore di `4`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 5;\nprintf(\"%d\\n\", ", "[/]", "[/]", "[/]", ");"],
+	"buttons": ["num", "num", " < ", " = ", "4", " > "],
+	"correct": "int num = 5;\nprintf(\"%d\\n\", num < 4);"
+}
+</section>
+<section id="preOutput">
+0
+</section>

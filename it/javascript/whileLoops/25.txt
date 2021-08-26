@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+All'interno del blocco di codice, ferma il loop dopo la sua esecuzione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var caricamento = true;\n\nwhile (caricamento) {\n\tconsole.log(\"Caricamento...\");\n\t","[/]","[/]","[/]",";\n}"],
+	"buttons": ["true", "false", "caricamento", " = ", " == "],
+	"correct": "var caricamento = true;\n\nwhile (caricamento) {\n\tconsole.log(\"Caricamento...\");\n\tcaricamento = false;\n}"
+}
+</section>
+<section id="preOutput">
+Caricamento...
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display a string interpolation
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let amount = 50","\n","[/]","[/]","[/]"],
+	"buttons": ["print(\"",")","\\(amount) is the amount\"","50 is the amount"],
+	"correct": "let amount = 50\nprint(\"\\(amount) is the amount\")"
+}
+</section>
+<section id="preOutput">
+50 is the amount
+</section>

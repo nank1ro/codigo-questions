@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Where do we write the if statement's condition?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Between round brackets ()","Between square brackets []","Between the if keyword and the colon :","Before the if keyword"],
+	"correct": "Between the if keyword and the colon :"
+}
+</section>

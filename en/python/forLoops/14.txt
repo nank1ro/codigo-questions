@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the `for` loop block of code, display the value of the counter variable
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for c in range(2):\n\tprint(\"repeat\")\n\t","[/]","[/]","[/]","[/]"],
+	"buttons": ["print", "i","(",")","c"],
+	"correct": "for c in range(2):\n\tprint(\"repeat\")\n\tprint(c)"
+}
+</section>
+<section id="preOutput">
+repeat
+0
+repeat
+1
+</section>

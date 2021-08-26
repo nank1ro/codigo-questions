@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa stampa questo codice nell'output?
+```
+percentuale = 11
+print(f"L'{percentuale}% delle persone sono mancine")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["L'11% delle persone sono mancine","L'{11}% delle persone sono mancine","f\"L'{11}% delle persone sono mancine\""],
+	"correct": "L'11% delle persone sono mancine"
+}
+</section>

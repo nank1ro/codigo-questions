@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Sort the items to produce the following output: `Hello Python!` (Python 3)?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["print(", "'Hello ", "Python!", "')"],
+	"correct": "print('Hello Python!')"
+}
+</section>
+<section id="preOutput">
+Hello Python!
+</section>

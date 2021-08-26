@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+C non ha un operatore per l'elevamento a potenza, quindi dobbiamo usare la funzione `pow()` inclusa nella libreria `math.h`.
+L'elevamento a potenza corrisponde alla moltiplicazione ripetuta della base: vale a dire **b** con esponente *n* e' il prodotto della moltiplicazione della base *n* volte:
+![exponentiation](https://learn-to-code-x.web.app/images/exponentiation.jpg)
+```
+>>> pow(5, 2);
+25
+```
+</section>
+<section id="instructions">
+Calcola l'elevamento a potenza dei numeri 5 (base) e 3 (esponente), quindi stampa la variabile `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int risultato = ","[/]", "(","[/]",", ","[/]",");\nprintf(\"%d\\n\", risultato);"],
+	"buttons": ["5","3"," % "," * ","625"," ** ", "pow"],
+	"correct": "int risultato = pow(5, 3);\nprintf(\"%d\\n\", risultato);"
+}
+</section>
+<section id="preOutput">
+125
+</section>

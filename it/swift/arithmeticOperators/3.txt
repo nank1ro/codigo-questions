@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Continuiamo con l'operatore della **moltiplicazione** `*`.
+Viene utilizzato per moltiplicare due numeri insieme, come:
+```
+print(5 * 3) // 15
+```
+</section>
+<section id="instructions">
+Calcola il prodotto tra i numeri 9 e 4 (in questo ordine), quindi stampa la variabile `prodotto`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let prodotto = ","[/]","[/]","[/]","\nprint(prodotto)"],
+	"buttons": ["4","9"," + "," - ","36"," * "],
+	"correct": "let prodotto = 9 * 4\nprint(prodotto)"
+}
+</section>
+<section id="preOutput">
+36
+</section>

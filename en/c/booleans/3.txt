@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The opposite value of `true` is `false`
+</section>
+<section id="instructions">
+Assign the boolean value `false` to the variable `music_on`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool music_on = ", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": ["false", "false", "\"false\"", "true", "music_on", "\"music_on\""],
+	"correct": "bool music_on = false;\nprintf(\"%d\\n\", music_on);"
+}
+</section>
+<section id="preOutput">
+0
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quali sono i valori che decidono se un blocco di codice viene eseguito o meno?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Condizioni","Stringhe", "Interi"],
+	"correct": "Condizioni"
+}
+</section>

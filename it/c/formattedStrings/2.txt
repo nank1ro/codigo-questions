@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le stringhe formattate ci consentono di mostrare espressioni come stringhe con numeri, senza ricevere alcun errore.
+Per mostrare un numero intero usiamo l'espressione `%i`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["printf(\"", "[/]", " amici\\n\", ", "[/]", ");"],
+	"buttons": ["%i", "?i", "%0", "5"],
+	"correct": "printf(\"%i amici\\n\", 5);"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

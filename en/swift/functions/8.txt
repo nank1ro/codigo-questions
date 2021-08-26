@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A _variadic parameter_ accepts zero or more values of a specified type.
+You use a variadic parameter to specify that the parameter can be passed a varying number of input values when the function is called.
+Write variadic parameters by inserting three period characters `...` after the parameter's type name.
+The values passed to a variadic parameter are made available within the function's body as an array of the appropriate type.
+For example, a variadic parameter with a name of `numbers` and a type of `Double...` is made available within the function's body as a constant array called numbers of type `[Double]`
+</section>
+<section id="instructions">
+Complete the code in order to calculate the average for the following list of numbers `1, 4, 6, 7, 9`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func average(_ numbers: ","[/]","[/]",") -> Double {\n\tlet total: Double = numbers.reduce(0, +)\n\t","[/]"," total / Double(numbers.count)\n}\nprint(average","[/]","1, 4, 6, 7, 9","[/]",")"],
+	"buttons": ["Double","\"Double\"","double", "...","..<","(",")","return"],
+	"correct": "func average(_ numbers: Double...) -> Double {\n\tlet total: Double = numbers.reduce(0, +)\n\treturn total / Double(numbers.count)\n}\nprint(average(1, 4, 6, 7, 9))"
+}
+</section>
+<section id="preOutput">
+5.4
+</section>
