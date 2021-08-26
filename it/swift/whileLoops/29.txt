@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'è che non va in questo codice?
+```
+while caricamento {
+    print("Caricamento...")
+    caricamento = false
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["caricamento non e' un nome di variabile valido","Il ciclo while ha un'istruzione di stampa all'interno del blocco di codice", "Il blocco di codice non ha l'indentazione corretta"],
+	"correct": "caricamento non e' un nome di variabile valido"
+}
+</section>

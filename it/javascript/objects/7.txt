@@ -1,0 +1,30 @@
+<section id="options">
+{
+"langueta": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Esattamente come per gli array, possiamo fare un ciclo per gli elementi del dizionario usando il metodo `Object.entries()`.
+```
+var utente = {"nome": "John", "cognome": "Hood", "eta": 30};
+for (const [chiave, valore] of Object.entries(utente)) {
+    console.log(`${chiave}: ${valore}`);
+}
+```
+</section>
+<section id="instructions">
+Passa in rassegna tutti gli elementi del dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\n","[/]"," (const [","[/]",", ","[/]","] of Object.","[/]","(utente)) {\n  console.log(`${chiave}: ","[/]","`);\n}"],
+	"buttons": ["chiave","valore","valore","utente", "\"utente\"","\\(valore)","${valore}","entries","for"],
+	"correct": "var utente = {\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30};\nfor (const [chiave, valore] of Object.entries(utente)) {\n  console.log(`${chiave}: ${valore}`);\n}"
+}
+</section>
+<section id="preOutput">
+nome = John
+cognome = Hood
+eta = 30
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+counter = 1
+
+while counter < 5:
+    print(counter)
+    counter += 1
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The numbers 1 through 4","The numbers 1 through 10", "The numbers 1 through 5","The numbers 2 through 4"],
+	"correct": "The numbers 1 through 4"
+}
+</section>

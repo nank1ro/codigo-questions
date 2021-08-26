@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Usa la variabile `ripeti` nella condizione del ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["bool ripeti = true;\nwhile (", "[/]", ") {\n\tprintf(\"ripeti\\n\");\n}"],
+	"buttons": ["true","ripeti","\"true\"","\"ripeti\""],
+	"correct": "bool ripeti = true;\nwhile (ripeti) {\n\tprintf(\"ripeti\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+...
+</section>

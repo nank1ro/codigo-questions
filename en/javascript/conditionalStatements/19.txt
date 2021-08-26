@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to do **NOT** execute the block of code
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if (","[/]",")","[/]","\n\tconsole.log(\"Hello!\");\n","[/]"],
+	"buttons": ["true", "false", "True", "False", " {","}"],
+	"correct": "if (false) {\n\tconsole.log(\"Hello!\");\n}"
+}
+</section>

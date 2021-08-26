@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `false` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(","[/]",");"],
+	"buttons": ["false","true","\"false\"","true"],
+	"correct": "console.log(false);"
+}
+</section>
+<section id="preOutput">
+false
+</section>

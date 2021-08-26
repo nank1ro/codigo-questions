@@ -1,0 +1,52 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Often in programming, we need to repeat a block of code, for example:
+```
+printf("2 seconds\n");
+printf("3 seconds\n");
+printf("4 seconds\n");
+printf("5 seconds\n");
+```
+This produces the following output:
+```
+2 seconds
+3 seconds
+4 seconds
+5 seconds
+```
+Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
+Let's learn the `while` loop, getting the same output above.
+```
+int count = 2;
+while (count <= 5) {
+    printf("%d seconds\n", count);
+    count++;
+}
+```
+So we created a variable `count` assigning `2`, the initial value.
+Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
+Inside the block of code, we should **NOT** miss to add the line `count++;`.
+It increments the `count` value, otherwise, our loop will be infinite
+</section>
+<section id="instructions">
+Fill in the blanks with the `while` loop to repeat the block of code
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," (true) {\n\tprintf(\"repeat\\n\");\n}"],
+	"buttons": ["while","\"while\"","for","loop"],
+	"correct": "while (true) {\n\tprintf(\"repeat\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+repeat
+repeat
+repeat
+repeat
+...
+</section>

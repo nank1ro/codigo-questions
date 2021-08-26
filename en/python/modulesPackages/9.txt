@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How might we call a function named `choice()` from a module named `random`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["import choice", "import random", "import random from choice"],
+	"correct": "import random"
+}
+</section>

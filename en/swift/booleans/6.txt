@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Choose the correct variable for a user who has just logged out
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["var isLogged = true","var isLogged = false","var isLogged = \"false\"","var isLogged = \"true\""],
+	"correct": "var isLogged = false"
+}
+</section>

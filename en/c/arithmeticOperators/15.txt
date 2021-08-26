@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the ouput of the following code?
+```
+int product = 5 * 3;
+printf("%d\n", product);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["15","8","2","125"],
+	"correct": "15"
+}
+</section>

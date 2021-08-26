@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Like Arrays, Dictionaries are _mutable_.
+This means they can be changed after they are created (if are not declared constant).
+One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+```
+dictName[newKeyName] = newValue
+```
+</section>
+<section id="instructions">
+Add one more _key-value pair_ to the `user` variable, with the name `"profession"` for the key and `"Developer"` as the value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\n","[/]","[/]","[/]","[/]", " = ", "[/]", "\nif let profession = user[\"profession\"] {\n\tprint(\"The profession is \\(profession)\")\n}"],
+	"buttons": ["user", "[", "]","\"profession\"", "\"Developer\"", "[3]"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nuser[\"profession\"] = \"Developer\"\nif let profession = user[\"profession\"] {\n\tprint(\"The profession is \\(profession)\")\n}"
+}
+</section>
+<section id="preOutput">
+The profession is Developer
+</section>

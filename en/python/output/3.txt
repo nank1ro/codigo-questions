@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Which code produces the following output: `Hello Python!` (Python 3)?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["print(\"Hello Python!\")", "print(\"Hello World!\")", "print(Hello Python!\"", "print \"Hello Python!\""],
+	"correct": "print(\"Hello Python!\")"
+}
+</section>

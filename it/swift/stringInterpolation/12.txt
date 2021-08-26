@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice?
+```
+let amici = 5
+print("Ho \(amici) amici in totale")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Ho 5 amici in totale","Ho \\(amici) amici in totale","\"Ho \\(amici) amici in totale\""],
+	"correct": "Ho 5 amici in totale"
+}
+</section>

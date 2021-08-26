@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the previous example.
+```
+nice_weather = True
+if (nice_weather):
+	# play outside
+```
+We've seen that the `if` statement executes the block of code only if the condition is `True`.
+Another important thing to consider is represented by the **colons** `:` and the **indentation**, which indicate a code block start.
+Indentation refers to the spaces at the beginning of a code line.
+Where in other programming languages the indentation in code is for readability only, the indentation in Python is essential.
+You can use your favorite number of spaces (2, 4, 6, 8), noting that the preferred is 4.
+Here in the app, we suggest using the **TAB** key to indent your line of codes
+</section>
+<section id="instructions">
+Fix the `if` statement adding the *colons* `:`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["time = 8\n","if (time < 12)","[/]", "\n", "\tprint(\"It's morning\")"],
+	"buttons": ["if","==", "=","else","?",":"],
+	"correct": "time = 8\nif (time < 12):\n\tprint(\"It's morning\")"
+}
+</section>
+<section id="preOutput">
+It's morning
+</section>

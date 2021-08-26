@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *modulus assignment* calculate the modulus of `num` divided by `7`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 55\n","[/]","[/]","[/]","\nprint(num)"],
+	"buttons": ["num ","%= ","=% ","% ","7","num "],
+	"correct": "num = 55\nnum %= 7\nprint(num)"
+}
+</section>
+<section id="preOutput">
+6
+</section>

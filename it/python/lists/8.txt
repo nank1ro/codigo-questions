@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Gli elementi della lista possono essere di qualsiasi tipo:
+```
+nome_lista = ["uno", 2, True]
+```
+Difatti, sopra abbiamo, in quest'ordine, una stringa, un intero e un booleano.
+Ma possiamo anche avere una lista di liste, e così via!
+</section>
+<section id="instructions">
+Stampa un valore dalla lista
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["list1 = [\"a\", \"b\", \"c\"]\nlist2 = [\"x\", \"y\", \"z\"]\nlist3 = [list1, list2]\nprint(", "[/]", ")"],
+	"buttons": ["list3", "list3[[2]]","list3[0][2][0]","list3[1][0]"],
+	"correct": "list1 = [\"a\", \"b\", \"c\"]\nlist2 = [\"x\", \"y\", \"z\"]\nlist3 = [list1, list2]\nprint(list3[1][0])"
+}
+</section>
+<section id="preOutput">
+x
+</section>

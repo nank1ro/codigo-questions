@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines so they display `"John"` in the output?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["dict = {}","dict['name'] = 'John'","if 'name' in dict.keys():","\telement = dict.pop('name')","\tprint(element)"],
+	"correct": "dict = {}dict['name'] = 'John'if 'name' in dict.keys():\telement = dict.pop('name')\tprint(element)"
+}
+</section>
+<section id="preOutput">
+John
+</section>

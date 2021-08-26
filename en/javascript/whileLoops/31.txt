@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does `counter += 1` do?
+```
+var counter = 1;
+
+while (counter < 5) {
+    console.log(counter);
+    counter += 1;
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["It increases counter by one each time the loop runs its code block","It creates the counter variable", "It increases counter by two each time","It increases counter by three each time"],
+	"correct": "It increases counter by one each time the loop runs its code block"
+}
+</section>

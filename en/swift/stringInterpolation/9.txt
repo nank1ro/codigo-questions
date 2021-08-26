@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What are string interpolations for?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["For displaying different kinds of values together in a string","For aligning the text","For displaying just string values together"],
+	"correct": "For displaying different kinds of values together in a string"
+}
+</section>

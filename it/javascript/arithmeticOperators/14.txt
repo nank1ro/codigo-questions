@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output del seguente codice?
+```
+let risultato = 30 / 10;
+console.log(risultato);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["3","30","10","0"],
+	"correct": "3"
+}
+</section>

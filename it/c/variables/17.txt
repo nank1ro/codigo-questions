@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+char frase[] = "ruota del";
+printf("%s tram\n", frase);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["ruota del tram", "ruota deltram", "tram ruota del", "ruotadeltram"],
+	"correct": "ruota del tram"
+}
+</section>
+<section id="preOutput">
+ruota del tram
+</section>

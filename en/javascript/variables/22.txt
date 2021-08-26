@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Store the value of the `score` variable in the `highScore` variable
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let score = 25;\n","let highScore = ","[/]",";\n","console.log(highScore);"],
+	"buttons": ["50","\"50\"","score","\"score\""],
+	"correct": "let score = 25;\nlet highScore = score;\nconsole.log(highScore);"
+}
+</section>
+<section id="preOutput">
+25
+</section>

@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display the number `1` through `3` in the output changing the condition
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var number = 1\n\nrepeat {\n\tprint(number)\n\tnumber += 1\n} while number", "[/]", "3"],
+	"buttons": [" < "," > "," >= "," <= "],
+	"correct": "var number = 1\n\nrepeat {\n\tprint(number)\n\tnumber += 1\n} while number <= 3"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+</section>

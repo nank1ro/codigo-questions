@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's wrong with this code?
+```
+for i in range(5):
+	print(i)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Nothing is wrong with the code", "The counter variable is missing", "We should print inside the quotes"],
+	"correct": "Nothing is wrong with the code"
+}
+</section>

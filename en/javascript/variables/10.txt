@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Why is `first name` not a valid variable name?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Because both words need to be capitalized","Because it's not descriptive","Because it contains a space between first and name"],
+	"correct": "Because it contains a space between first and name"
+}
+</section>

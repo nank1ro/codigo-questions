@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the **subtraction** `-` operator.
+It is used to subtract one number from another, like:
+```
+>>> 5-3
+2
+```
+</section>
+<section id="instructions">
+Calculate the difference between the numbers 9 and 4, then print the variable `difference`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["difference = ","[/]","[/]","[/]","\nprint(difference)"],
+	"buttons": ["4","9","+","-","5"],
+	"correct": "difference = 9-4\nprint(difference)"
+}
+</section>
+<section id="preOutput">
+5
+</section>

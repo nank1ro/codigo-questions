@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come facciamo a sapere che `Ciao Mondo` verrà sempre stampato?
+```
+bool online = false;
+if (online) {
+    printf("L'utente è online\n");
+}
+printf("Ciao Mondo\n");
+```
+</section>
+<section id="answerButtons">
+
+{
+	"buttons": ["Perchè non è all'interno dell'istruzione condizionale","Perchè l'istruzione if non può avere piu' di una riga","Perchè non c'è un'istruzione else","Perchè non c'è un'istruzione else if"],
+	"correct": "Perchè non è all'interno dell'istruzione condizionale"
+}
+</section>

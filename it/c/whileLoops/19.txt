@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come facciamo a sapere che questo è un ciclo infinito?
+```
+bool online = false;
+
+while (true) {
+    printf("Effettua il login\n");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Questo ciclo non verrà eseguito poiche' la condizione e' false", "Non c'è nessuna variabile nella condizione", "Questo ciclo verrà eseguito una volta", "Questo ciclo verrà eseguito due volte"],
+	"correct": "Non c'è nessuna variabile nella condizione"
+}
+</section>

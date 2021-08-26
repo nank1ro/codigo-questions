@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+To control the times a `while` loop repeats, we start with a variable set to a number.
+We call this variable a counter variable
+</section>
+<section id="instructions">
+Assign to the variable `counter` a number
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int counter = ","[/]", ";"],
+	"buttons": ["while","true","3","\"3\""],
+	"correct": "int counter = 3;"
+}
+</section>

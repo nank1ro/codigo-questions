@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *modulus assignment* calculate the modulus of `num` divided by `7`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int ", "[/]", " = 55;\n", "[/]", "[/]", "[/]", ";\nprintf(\"%d\\n\", num);"],
+	"buttons": ["num", " /= ", " =/ ", "7", " * ", "num", " %= ", " - "],
+	"correct": "int num = 55;\nnum %= 7;\nprintf(\"%d\\n\", num);"
+}
+</section>
+<section id="preOutput">
+6
+</section>

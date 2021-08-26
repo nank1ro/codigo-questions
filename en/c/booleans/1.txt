@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Booleans represent one of two values: `true` or `false`.
+You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+</section>
+<section id="instructions">
+Assign to the variable `music_on` the boolean value `true`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool music_on", "[/]", "[/]", ";"],
+	"buttons": ["false", "true", "\"true\"", "true", " = "],
+	"correct": "bool music_on = true;"
+}
+</section>

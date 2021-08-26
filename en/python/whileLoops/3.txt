@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Then, we use a comparison in the condition to compare the `counter` variable to a number.
+</section>
+<section id="instructions">
+Compare the `counter` variable with a number
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["counter = 3\n", "while ", "[/]", "[/]", "[/]", "[/]"],
+	"buttons": ["while", "True", " < ", "5", "\"5\"", ":", ";","counter"],
+	"correct": "counter = 3\nwhile counter < 5:"
+}
+</section>

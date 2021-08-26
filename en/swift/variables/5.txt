@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+In Swift string variables can be declared only by using double quotes:
+```
+let x = "May"
+```
+</section>
+<section id="instructions">
+Declare a variable named `month` with the value of `June`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(month.lowercased() == \"june\", \"month must contain june\")"
+        }
+    ]
+}
+</section>

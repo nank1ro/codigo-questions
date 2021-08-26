@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the code block, stop the loop after running its code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var isLoading = true;\n\nwhile (isLoading) {\n\tconsole.log(\"Loading...\");\n\t","[/]","[/]","[/]",";\n}"],
+	"buttons": ["true", "false", "isLoading", " = ", " == "],
+	"correct": "var isLoading = true;\n\nwhile (isLoading) {\n\tconsole.log(\"Loading...\");\n\tisLoading = false;\n}"
+}
+</section>
+<section id="preOutput">
+Loading...
+</section>

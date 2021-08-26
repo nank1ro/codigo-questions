@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Assegna una stringa alla variabile `eta` e stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var eta ","= ","[/]","\n","console.log(","[/]",")"],
+	"buttons": ["eta","console.log","18 anni","\"24 anni\""],
+	"correct": "var eta = \"24 anni"\nconsole.log(eta)"
+}
+</section>
+<section id="preOutput">
+24 anni
+</section>

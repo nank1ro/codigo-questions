@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi per creare un ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," false {\n\tprint(\"saltato\")\n}"],
+	"buttons": ["while","\"while\"","loop","for","if"],
+	"correct": "while false {\n\tprint(\"saltato\")\n}"
+}
+</section>

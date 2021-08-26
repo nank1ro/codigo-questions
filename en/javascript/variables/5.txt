@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+In JavaScript string variables can be declared using both double quotes and single quotes:
+```
+let x = "May";
+// both are the same string
+let y = 'May';
+console.log(x === y);
+// prints true
+```
+</section>
+<section id="instructions">
+Declare a variable named `month` with the value of `June`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"console.assert(month.toLowerCase() == \"june\", \"month must contain june\")"
+        }
+    ]
+}
+</section>

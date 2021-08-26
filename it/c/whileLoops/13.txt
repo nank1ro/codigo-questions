@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa succede quando la condizione del ciclo `while` rimane `true`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Il ciclo si ripete per sempre", "Il ciclo esegue il suo blocco di codice una volta","Il ciclo esegue il suo blocco di codice due volte","Il ciclo esegue il suo blocco di codice tre volte"],
+	"correct": "Il ciclo si ripete per sempre"
+}
+</section>

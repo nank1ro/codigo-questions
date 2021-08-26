@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the `for` loop block of code, display the value of the counter variable
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for (let c = 0; c <= 2; c++) {\n\tconsole.log(\"repeat\");\n\t","[/]","[/]","[/]","[/]",";\n}"],
+	"buttons": ["console.log", "i","(",")","c"],
+	"correct": "for (let c = 0; c <= 2; c++) {\n\tconsole.log(\"repeat\");\n\tconsole.log(c);\n}"
+}
+</section>
+<section id="preOutput">
+repeat
+0
+repeat
+1
+repeat
+2
+</section>

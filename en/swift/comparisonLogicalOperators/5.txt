@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's continue with the **greater than or equal to** `>=` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+```
+print(2 >= 2) // true
+print(3 >= 2) // true
+print(3 >= 4) // false
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is greater than or equal to `4`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","!= ",">= ","4","> "],
+	"correct": "var num = 5\nprint(num >= 4)"
+}
+</section>
+<section id="preOutput">
+true
+</section>

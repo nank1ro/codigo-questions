@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Imposta il valore `true` alla variabile `online`
+</section>
+<section id="seed">
+let online  true
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(online == true, \"online deve essere uguale a true\")"
+        }
+    ]
+}
+</section>

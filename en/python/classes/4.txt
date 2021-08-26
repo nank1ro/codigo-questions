@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Of course, the `__init__()` method can use more parameters than `self` 
+</section>
+<section id="instructions">
+Add the parameters `gender` and `legs` to the `__init__()` method
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal:\n\tdef __init__(self, ","[/]",", " ,"[/]", "):\n\t\tpass"],
+	"buttons": ["gender","legs","Animal","'gender'","'legs'"],
+	"correct": "class Animal:\n\tdef __init__(self, gender, legs):\n\t\tpass"
+}
+</section>

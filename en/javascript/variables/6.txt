@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+If we want a variable name with multiple words, we use **camelCase**.
+It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+</section>
+<section id="instructions">
+Fill in the blanks to create a *camelCase* variable name.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["first","[/]","ame"],
+	"buttons": ["+","-","_","N","n"],
+	"correct": "firstName"
+}
+</section>

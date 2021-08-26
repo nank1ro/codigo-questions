@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know this loop stops?
+```
+bool is_loading = true;
+
+while (is_loading) {
+    printf("Loading...\n");
+    is_loading = false;
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The variable in the loop updates to false","The loop will never stop"],
+	"correct": "The variable in the loop updates to false"
+}
+</section>

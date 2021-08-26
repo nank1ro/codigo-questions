@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Crea un ciclo infinito
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while ","[/]"," {\n\tprint(\"ciclo infinito\")\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while true {\n\tprint(\"ciclo infinito\")\n}"
+}
+</section>
+<section id="preOutput">
+ciclo infinito
+ciclo infinito
+ciclo infinito
+ciclo infinito
+...
+</section>

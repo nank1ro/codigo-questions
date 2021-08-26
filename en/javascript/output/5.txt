@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Sort the items to produce the following output: `Hello JavaScript!`?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["console.log(", "'Hello ", "JavaScript!", "')"],
+	"correct": "console.log('Hello JavaScript!')"
+}
+</section>
+<section id="preOutput">
+Hello JavaScript!
+</section>

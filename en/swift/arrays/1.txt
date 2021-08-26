@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
+An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
+You can assign items to an array with an expression of the form:
+```
+var arrayName: [itemsType] = [item1, item2]
+```
+`itemsType` stands for the type of the items inside the array, for example, it can be `Int`, `String`, `Any`...
+</section>
+<section id="instructions">
+Complete the code in order to create a valid array
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var ","[/]",": [Int] = ", "[/]", "2, 4, 6", "[/]","\nfor num in numbers {\n\tprint(num)\n}"],
+	"buttons": ["numbers","\"numbers\"","[","]","(",")"],
+	"correct": "var numbers: [Int] = [2, 4, 6]\nfor num in numbers {\n\tprint(num)\n}"
+}
+</section>
+<section id="preOutput">
+2
+4
+6
+</section>

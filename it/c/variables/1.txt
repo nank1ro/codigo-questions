@@ -1,0 +1,39 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Le variabili sono contenitori per la memorizzazione di valori (dati).
+Ogni variabile in C è un oggetto e come altri linguaggi di programmazione, C necessita di comandi per dichiarare le variabili.
+Per creare una variabile, dobbiamo darle un **tipo** e un **nome** tenendo presente che non deve contenere spazi.
+Viene creata una variabile nel momento in cui le si assegna per la prima volta un valore.
+Un esempio di creazione di una variabile denominata `x` e':
+```
+int x = 1;
+```
+In questo modo, abbiamo assegnato il valore `1` alla variabile _intera_ chiamata `x`.
+Se stampiamo la variabile `x` otteniamo il numero `1`:
+```
+>>> printf("%i\n", x);
+1
+```
+</section>
+<section id="instructions">
+Assegna alla variabile `y` il valore `2`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(y == 2);"
+        }
+    ]
+}
+</section>

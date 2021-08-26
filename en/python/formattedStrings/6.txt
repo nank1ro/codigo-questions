@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Inserting variables like `friends` between the curly braces displays their value too
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["friends = 5","\n","print(f\"{","[/]","} friends\")"],
+	"buttons": ["friends","5"],
+	"correct": "friends = 5\nprint(f\"{friends} friends\")"
+}
+</section>
+<section id="preOutput">
+5 friends
+</section>

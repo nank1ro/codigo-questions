@@ -1,0 +1,36 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Structures and classes in Swift have many things in common. Both can:
+- Define properties to store values
+- Define methods to provide functionality
+- Define subscripts to provide access to their values using subscript syntax
+- Define initializers to set up their initial state
+- Be extended to expand their functionality beyond a default implementation
+- Conform to protocols to provide standard functionality of a certain kind
+
+But classes have additional capabilities that structures don't have:
+- Inheritance enables one class to inherit the characteristics of another
+- Type casting enables you to check and interpret the type of a class instance at runtime
+- Deinitializers enable an instance of a class to free up any resources it has assigned
+- Reference counting allows more than one reference to a class instance
+</section>
+<section id="instructions">
+Using the inheritance create a `Dog` class that inherits the `Animal` class
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal {\n\tvar gender: String?\n\tvar legs = 4\n\tfunc description() {\n\t\tif let gender = self.gender { print(gender) }\n\t\tprint(self.legs)\n\t}\n}\n","[/]","[/]",": ","[/]"," {\n\tfunc speak() {\n\t\tprint(\"Bau Bau!!\")\n\t}\n}\nlet dog = ","[/]","[/]","\ndog.gender = \"female\"\ndog.description()\ndog.speak()"],
+	"buttons": ["class ","Dog","Animal","Dog","()","Dog[]"],
+	"correct": "class Animal {\n\tvar gender: String?\n\tvar legs = 4\n\tfunc description() {\n\t\tif let gender = self.gender { print(gender) }\n\t\tprint(self.legs)\n\t}\n}\nclass Dog: Animal {\n\tfunc speak() {\n\t\tprint(\"Bau Bau!!\")\n\t}\n}\nlet dog = Dog()\ndog.gender = \"female\"\ndog.description()\ndog.speak()"
+}
+</section>
+<section id="preOutput">
+female
+4
+Bau Bau!!
+</section>

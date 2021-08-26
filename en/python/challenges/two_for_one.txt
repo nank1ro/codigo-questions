@@ -1,0 +1,52 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Given a name, return a string with the message:
+`One for X, one for me.`
+Where `X` is the given name.
+However, if the name is missing, return the string:
+`One for you, one for me.`
+</section>
+
+<section id="instructions">
+Write a function that returns the correct string, examples:
+
+**input**: `Walter`
+**output**: `One for Walter, one for me.`
+
+**input**: `James`
+**output**: `One for James, one for me.`
+
+**input**: `Martha`
+**output**: `One for Martha, one for me.`
+</section>
+
+<section id="seed">
+def two_for_one(name):
+	pass
+</section>
+
+<section id="test">
+import unittest
+
+from two_for_one import two_for_one
+
+class TwoForOneTest(unittest.TestCase):
+    def test_no_name_given(self):
+        self.assertEqual(two_for_one(), "One for you, one for me.")
+
+    def test_a_name_given(self):
+        self.assertEqual(two_for_one("James"), "One for James, one for me.")
+
+    def test_another_name_given(self):
+        self.assertEqual(two_for_one("Martha"), "One for Martha, one for me.")
+
+if __name__ == "__main__":
+	unittest.main(exit=False)
+</section>

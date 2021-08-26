@@ -1,0 +1,36 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In JavaScript we have also the `forEach` loop.
+In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+```
+// this is an array, we'll see about that soon
+let numbers = [1, 3, 5, 7, 9];
+numbers.forEach((num) => console.log(num));}
+```
+Using the `forEach` method is distinct from a `for` loop in two important ways:
+1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
+2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+</section>
+<section id="instructions">
+Complete the code in order to print the following numbers `(3, 24, 9, 12, 18)` using a `forEach` loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let numbers = [3, 24, 9, 12, 18];\n","[/]",".","[/]","((","[/]",") => console.log(num));}"],
+	"buttons": ["for","numbers","forEach","num"],
+	"correct": "let numbers = [3, 24, 9, 12, 18];\nnumbers.forEach((num) => console.log(num));"
+}
+</section>
+<section id="preOutput">
+3
+24
+9
+12
+18
+</section>

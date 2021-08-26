@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to execute the block of code
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if ","[/]","[/]","\n\tprint(\"Hello!\")\n","[/]"],
+	"buttons": ["true","false","(false)","}"," {"],
+	"correct": "if true {\n\tprint(\"Hello!\")\n}"
+}
+</section>
+<section id="preOutput">
+Hello!
+</section>

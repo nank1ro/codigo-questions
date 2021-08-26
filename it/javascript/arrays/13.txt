@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come si verifica se un'array e' vuoto?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["if nomeLista.count == 0", "if nomeLista == 0", "if nomeLista.length == 0", "if nomeLista[0] == false","if nomeLista.isEmpty"],
+	"correct": ["if nomeLista.length == 0"]
+}
+</section>

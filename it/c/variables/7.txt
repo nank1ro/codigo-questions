@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Imposta `true` come valore a `online`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["bool online ","[/]"," true;"],
+	"buttons": ["=","+","-","=="],
+	"correct": "bool online = true;"
+}
+</section>

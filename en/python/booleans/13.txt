@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Store the value `True` in the variable `power`
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(power == True)"
+        }
+    ]
+}
+</section>

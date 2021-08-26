@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Set `is_logged` to value `true`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["bool is_logged ","[/]"," true;"],
+	"buttons": ["=","+","-","=="],
+	"correct": "bool is_logged = true;"
+}
+</section>

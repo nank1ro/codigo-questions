@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice in modo da ripetere il blocco di codice **3** volte
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in ", "[/]", "[/]", "[/]", "[/]", "[/]", "\n\tprint(\"lavoro\")"],
+	"buttons": ["loop","for ","i","i", "range", "(4)", "3", "(", ")",":"],
+	"correct": "for i in range(3):\n\tprint(\"lavoro\")"
+}
+</section>
+<section id="preOutput">
+lavoro
+lavoro
+lavoro
+</section>

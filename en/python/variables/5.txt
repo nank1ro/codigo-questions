@@ -1,0 +1,31 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+String variables can be declared either by using single or double quotes:
+```
+>>> x = "May"
+>>> x = 'May'
+```
+Both are the same thing.
+</section>
+<section id="instructions">
+Declare a variable named `month` with the value of `June`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(month.lower() == \"june\".lower())"
+        }
+    ]
+}
+</section>

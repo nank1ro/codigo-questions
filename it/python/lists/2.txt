@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+E' possibile accedere ad un singolo valore della lista tramite il suo indice.
+Un indice e' come un indirizzo che identifica il posto dell'elemento nella lista.
+L'indice si inserisce direttamente dopo il nome della lista, tra le parentesi quadre, in questo modo:
+```
+nome_lista[indice]
+```
+Gli indici delle liste iniziano con `0`, **non** `1`! Per ottenere il primo valore della lista usiamo: `nome_lista[0]`.
+Il secondo elemento della lista si trova all'indice 1: `nome_lista[1]`. 
+</section>
+<section id="instructions">
+Completa il codice in modo da stampare la somma tra il **secondo** e il **quarto** elemento della lista
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["numeri = [5, 6, 7, 8]\nprint(numeri","[/]", "[/]", "numeri", "[/]",")"],
+	"buttons": ["[0]", "[1]", "[2]", "[3]", "[4]", " + "],
+	"correct": "numeri = [5, 6, 7, 8]\nprint(numeri[1] + numeri[3])"
+}
+</section>
+<section id="preOutput">
+14
+</section>

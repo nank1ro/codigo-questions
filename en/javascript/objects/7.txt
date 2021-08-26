@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+As for arrays, we can loop between dictionary elements using the `Object.entries()` method.
+```
+var user = {"first_name": "John", "last_name": "Hood", "age": 30};
+for (const [key, value] of Object.entries(user)) {
+    console.log(`${key}: ${value}`);
+}
+```
+</section>
+<section id="instructions">
+Loop through the dictionary items
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\n","[/]"," (const [","[/]",", ","[/]","] of Object.","[/]","(user)) {\n  console.log(`${key}: ","[/]","`);\n}"],
+	"buttons": ["key","value","value","user", "\"user\"","\\(value)","${value}","entries","for"],
+	"correct": "var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\nfor (const [key, value] of Object.entries(user)) {\n  console.log(`${key}: ${value}`);\n}"
+}
+</section>
+<section id="preOutput">
+first_name = John
+last_name = Hood
+age = 30
+</section>

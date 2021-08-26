@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+<section id="instructions">
+Usa `\()` per inserire il numero `500` nello spazio vuoto dell'interpolazione di stringa
+</section>
+<section id="seed">
+print("Ci sono  oggetti")
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "Ci sono 500 oggetti"
+        }
+    ]
+}
+</section>

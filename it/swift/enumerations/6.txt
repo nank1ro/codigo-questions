@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Abbina i singoli valori di enumerazione utilizzando l'apposita dichiarazione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["enum StatoVolo {\n\tcase inOrario, ","[/]",", ritardo\n}\nlet stato = StatoVolo.cancellato\n","[/]","[/]"," {\n\tcase .inOrario:\n\t\tprint(\"Il volo e' in orario\")\n\tcase .cancellato:\n\t\tprint(\"Il volo e' stato cancellato\")\n\tcase ","[/]",":\n\t\tprint(\"Il volo e' in ritardo\")\n}"],
+	"buttons": ["cancellato","switch ","stato",".ritardo","ritardo"],
+	"correct": "enum StatoVolo {\n\tcase inOrario, cancellato, ritardo\n}\nlet stato = StatoVolo.cancellato\nswitch stato {\n\tcase .inOrario:\n\t\tprint(\"Il volo e' in orario\")\n\tcase .cancellato:\n\t\tprint(\"Il volo e' stato cancellato\")\n\tcase .ritardo:\n\t\tprint(\"Il volo e' in ritardo\")\n}"
+}
+</section>
+<section id="preOutput">
+Il volo e' stato cancellato
+</section>

@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Skip the code block of the `while` loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while ","[/]",":\n\tprint(\"skip\")"],
+	"buttons": ["True","False","\"True\"","\"False\""],
+	"correct": "while False:\n\tprint(\"skip\")"
+}
+</section>

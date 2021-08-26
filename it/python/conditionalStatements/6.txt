@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo anche nidificare un'istruzione condizionale (`if`, `elif` o `else`) all'interno di un'altra istruzione condizionale, per creare una struttura piu' complessa.
+```
+num = 4
+if (num < 3):
+	print("il numero e' minore di 3")
+else:
+	if (num == 3):
+		print("il numero e' 3")
+	elif (num == 4):
+		print("il numero e' 4")
+	else:
+		print("il numero e' maggiore di 4")
+```
+e l'output del codice e' `il numero e' 4`.
+</section>
+<section id="instructions">
+Cambiamo il programma dell'ora del giorno, annidando un'istruzione condizionale all'interno dell'istruzione `else`.
+L'istruzione condizionale annidata dovrebbe controllare se l'ora e' *inferiore* a `18` e nel blocco di codice dovrebbe stampare `"Pomeriggio"`.
+Se la condizione precedente e' `False`, stampa `"Sera"`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["time = 19\nif ((time > 0) and (time < 12)):\n\tprint(\"Mattina\")\nelif (time == 12):\n\tprint(\"Mezzogiorno\")\nelif (time == 0):\n\tprint(\"Mezzanotte\")\nelse:\n\t","[/]","(","[/]","[/]","[/]", "):\n\t\tprint(\"Pomeriggio\")\n\t","[/]","\n\t\tprint(\"Sera\")"],
+	"buttons": ["6","18","elif "," < "," == ", ":",";","time","else if:","elseif:","else:","if "],
+	"correct": "time = 19\nif ((time > 0) and (time < 12)):\n\tprint(\"Mattina\")\nelif (time == 12):\n\tprint(\"Mezzogiorno\")\nelif (time == 0):\n\tprint(\"Mezzanotte\")\nelse:\n\tif (time < 18):\n\t\tprint(\"Pomeriggio\")\n\telse:\n\t\tprint(\"Sera\")"
+}
+</section>
+<section id="preOutput">
+Sera
+</section>

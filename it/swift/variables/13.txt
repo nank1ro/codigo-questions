@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Usa il _camel case_ per il nome di questa variabile
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let ","[/]"," = ","\"Russia\""],
+	"buttons": ["largest_country","largestCountry","largest"],
+	"correct": "let largestCountry = \"Russia\""
+}
+</section>

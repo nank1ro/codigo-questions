@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+You can specify the values of an enumeration assigning a value.
+Assign the correct `Int` numbers to each enumeration case
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["enum OddNumber: ","[/]"," {\n\tcase one = ","[/]","\n\tcase three = 3\n\tcase five","[/]","[/]","\n}\nlet number = ","[/]",".five\nprint(number.rawValue)"],
+	"buttons": ["CaseIterable","Int","1","2"," = ", "5","OddNumber","oddNumber"],
+	"correct": "enum OddNumber: Int {\n\tcase one = 1\n\tcase three = 3\n\tcase five = 5\n}\nlet number = OddNumber.five\nprint(number.rawValue)"
+}
+</section>
+<section id="preOutput">
+5
+</section>

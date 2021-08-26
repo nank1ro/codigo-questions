@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output del seguente codice?
+```
+let prodotto = 25 - 1.1 + 1.10
+print(prodotto)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["25","23.9","26.10","25.00"],
+	"correct": "25"
+}
+</section>

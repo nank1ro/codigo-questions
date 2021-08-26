@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quali di queste affermazioni sono vere riguardo ai __metodi__?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["I metodi sono funzioni che appartengono ad una classe", "I metodi hanno parametro self", "I metodi sono variabili che appartengono ad una classe", "I metodi devono cambiare gli attributi di una classe"],
+	"corrects": ["I metodi sono funzioni che appartengono ad una classe", "I metodi hanno parametro self"]
+}
+</section>

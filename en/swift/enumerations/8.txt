@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+<section id="instructions">
+You have an enum called `Gender`.
+Add the missing cases (`male` and `female`)
+</section>
+<section id="seed">
+enum Gender {
+    
+}
+print(Gender.male)
+// print also the other gender
+print
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "male\nfemale"
+        }
+    ]
+}
+</section>

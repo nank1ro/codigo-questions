@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Set `isLogged` to value `true`
+</section>
+<section id="seed">
+let isLogged  true
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(isLogged == true, \"isLogged must be equal to true\")"
+        }
+    ]
+}
+</section>

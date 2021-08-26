@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+```
+if let removedValue = dictName.removeValue(forKey: "keyName") {
+    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+}
+```
+will remove the key `keyName` and its associated value from the dictionary.
+</section>
+<section id="instructions">
+Delete the key `age` from the dictionary
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif let removedValue = user.", "[/]", "(forKey: ","[/]", ") {\n\tprint(\"The removed value is \\(removedValue)\")\n}\nprint(user)"],
+	"buttons": ["del ", "delete", "clear", "pop", "user", "\"age\"","removeValue"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nif let removedValue = user.removeValue(forKey: \"age\") {\n\tprint(\"The removed value is \\(removedValue)\")\n}\nprint(user)"
+}
+</section>
+<section id="preOutput">
+The removed value is 30
+["first_name": "John", "last_name": "Hood"]
+</section>

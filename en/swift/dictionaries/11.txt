@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
+We can also remove an element by assigning to the key the value `nil`
+```
+dictName[keyName] = nil
+// keyName has been removed from the dictionary dictName
+```
+</section>
+<section id="instructions">
+Remove the second key from the dictionary
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\n","[/]", "[","[/]","] = ","[/]","\nprint(user)"],
+	"buttons": ["user","\"last_name\"","last_name","nil","null"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nuser[\"last_name\"] = nil\nprint(user)"
+}
+</section>
+<section id="preOutput">
+["age": 30, "first_name": "John"]
+</section>

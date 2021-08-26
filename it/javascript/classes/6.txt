@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+JavaScript ci permette di creare una classe che eredita da un'altra classe, utilizzando la parola chiave `extends`
+</section>
+<section id="instructions">
+Utilizzando l'ereditarietà crea una classe `Cane` che eredita la classe `Animale`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animale {\n\tconstructor(genere, zampe = 4) {\n\t\tthis.genere = genere;\n\t\tthis.zampe = zampe;\n\t}\n\tdescrizione() {\n\t\tconsole.log(this.genere);\n\t\tconsole.log(this.zampe);\n\t}\n}\n","[/]","[/]","[/]","Animale {\n\tverso() {\n\t  console.log(\"Bau Bau!!\");\n\t}\n}\nlet cane = new ","[/]","(\"femmina\");\ncane.descrizione();\ncane.verso();"],
+	"buttons": ["class ","Cane","Animale","Cane","()","Cane[]"," extends "],
+	"correct": "class Animale {\n\tconstructor(genere, zampe = 4) {\n\t\tthis.genere = genere;\n\t\tthis.zampe = zampe;\n\t}\n\tdescrizione() {\n\t\tconsole.log(this.genere);\n\t\tconsole.log(this.zampe);\n\t}\n}\nclass Cane extends Animale {\n\tverso() {\n\t  console.log(\"Bau Bau!!\");\n\t}\n}\nlet cane = new Cane(\"femmina\");\ncane.descrizione();\ncane.verso();"
+}
+</section>
+<section id="preOutput">
+femmina
+4
+Bau Bau!!
+</section>

@@ -1,0 +1,47 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+You're given an integer `N`.
+Write a program to calculate the sum of all the digits of N
+</section>
+
+<section id="instructions">
+Return the sum of digits of `N`
+</section>
+
+<section id="seed">
+def sum_digits():
+	pass
+</section>
+
+<section id="test">
+import unittest
+
+from sum_digits import sum_digits
+
+class SumDigitsTest(unittest.TestCase):
+    def test_sum_of_digits_1(self):
+        self.assertEqual(sum_digits(12345), 15)
+
+    def test_sum_of_digits_2(self):
+        self.assertEqual(sum_digits(57253), 22)
+
+    def test_sum_of_digits_3(self):
+        self.assertEqual(sum_digits(122), 5)
+
+    def test_sum_of_digits_4(self):
+        self.assertEqual(sum_digits(91979997), 60)
+
+    def test_sum_of_digits_5(self):
+        self.assertEqual(sum_digits(2147483647), 46)
+
+
+if __name__ == "__main__":
+    unittest.main()
+</section>

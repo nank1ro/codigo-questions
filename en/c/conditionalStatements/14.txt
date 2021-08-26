@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What are the values that decide whether a code block runs or not?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Conditions","Strings", "Integers"],
+	"correct": "Conditions"
+}
+</section>

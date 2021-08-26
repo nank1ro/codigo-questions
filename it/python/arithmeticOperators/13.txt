@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calcola l'elevamento a potenza dei numeri 3 (*base*) e 5 (*esponente*), quindi stampa il `risultato`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["risultato = ","[/]","[/]","[/]","\nprint(risultato)"],
+	"buttons": ["3","5"," - "," * "," ** "],
+	"correct": "risultato = 3 ** 5\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+243
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Assign a string to the variable `age` and display its value.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var age ","= ","[/]","\n","print(","[/]",")"],
+	"buttons": ["age","print","18 years old","\"24 years old\""],
+	"correct": "var age = \"24 years old\"\nprint(age)"
+}
+</section>
+<section id="preOutput">
+24 years old
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+L'inserimento di variabili come `amici` permette di mostrare il relativo valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int amici = ","[/]",";\nprintf(\"%i amici\\n\", ", "[/]",");"],
+	"buttons": ["amici","5"],
+	"correct": "int amici = 5;\nprintf(\"%i amici\\n\", amici);"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

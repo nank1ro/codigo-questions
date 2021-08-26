@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa causa il crash di questo programma?
+```
+while true {
+    print("ripeti")
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Il codice ha un ciclo infinito", "Nulla causa il crash di questo programma", "Il ciclo while non ha la corretta indentazione", "Il blocco di codice non ha la corretta indentazione"],
+	"correct": "Il codice ha un ciclo infinito"
+}
+</section>

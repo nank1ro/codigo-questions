@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Attenzione, usare il segno `+` per aggiungere un numero come '10' a una stringa come `" amici"` produce un errore in quanto sono un diverso tipo di valori
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(10","[/]","[/]",")"],
+	"buttons": ["+","\" amici\"","="],
+	"correct": "print(10+\" amici\")"
+}
+</section>
+<section id="preOutput">
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</section>

@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to create a `while` loop
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," (false) {\n\tprintf(\"skipped\\n\");\n}"],
+	"buttons": ["while","\"while\"","loop","for","if"],
+	"correct": "while (false) {\n\tprintf(\"skipped\\n\");\n}"
+}
+</section>

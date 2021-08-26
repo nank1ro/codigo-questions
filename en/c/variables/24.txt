@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+int value = 50;
+value = 25;
+value = 75;
+char value2[] = "Hello";
+printf("%i\n", value);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Hello","50","25","75"],
+	"correct": "75"
+}
+</section>

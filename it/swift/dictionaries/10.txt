@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Per __aggiungere__ o __modificare__ i valori di un dizionario, possiamo anche usare il metodo `updateValue(_:forKey:)`
+</section>
+<section id="instructions">
+Aggiorna la chiave `eta` con il valore `20` nel dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nif let ","[/]"," = ","[/]","[/]","[/]", "(","[/]",", forKey: ","[/]",") {\n\tprint(\"La vecchia eta' era \\(vecchiaEta)\")\n}\nprint(utente)"],
+	"buttons": ["update","add","insert","utente",".","updateValue","20","\"eta\"","vecchiaEta"],
+	"correct": "var utente: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nif let vecchiaEta = utente.updateValue(20, forKey: \"eta\") {\n\tprint(\"La vecchia eta' era \\(vecchiaEta)\")\n}\nprint(utente)"
+}
+</section>
+<section id="preOutput">
+La vecchia eta' era 30
+["eta": 20, "nome": "John", "cognome": "Hood"]
+</section>

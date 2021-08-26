@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Aggiungi le parti mancanti della stringa templata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(","[/]","La larghezza è di ${50} metri e l'altezza è di ${10} metri","[/]","[/]",";"],
+	"buttons": [")","(","`","`"],
+	"correct": "console.log(`La larghezza è di ${50} metri e l'altezza è di ${10} metri`);"
+}
+</section>
+<section id="preOutput">
+La larghezza è di 50 metri e l'altezza è di 10 metri
+</section>

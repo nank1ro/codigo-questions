@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+L'inserimento di variabili come `amici` tra le parantesi graffe ne mostra il loro valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var amici = 5",";\n","console.log(`${","[/]","} amici`);"],
+	"buttons": ["amici","5"],
+	"correct": "var amici = 5;\nconsole.log(`${amici} amici`);"
+}
+</section>
+<section id="preOutput">
+5 amici
+</section>

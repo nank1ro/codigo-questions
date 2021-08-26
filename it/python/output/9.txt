@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per visualizzare l'output desiderato: `Caffe'`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]","[/]"],
+	"buttons": ["print","Caffe'","(\"","\")","'",";"],
+	"correct": "print(\"Caffe'\")"
+}
+</section>
+<section id="preOutput">
+Caffe'
+</section>

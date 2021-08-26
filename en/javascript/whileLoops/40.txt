@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display in the output?
+```
+var counter = 1;
+
+while (counter <= 3) {
+    counter += 1;
+}
+console.log(counter);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["1", "2","3","4"],
+	"correct": "4"
+}
+</section>

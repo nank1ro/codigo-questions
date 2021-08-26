@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Just like in the addition assignment, we have the **decrement assignment** `-=`.
+The functionality is the same, the only difference is that it performs the subtraction.
+So the followings are exactly the same
+```
+num = num - 5
+# is equal to
+num -= 5
+```
+</section>
+<section id="instructions">
+Subtract to the variable `result` the value `15` using the *decrement assignment* operator, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["result = 75\n","result ","[/]","[/]","\nprint(result)"],
+	"buttons": ["- ","-= ","=- ","50","15"],
+	"correct": "result = 75\nresult -= 15\nprint(result)"
+}
+</section>
+<section id="preOutput">
+60
+</section>

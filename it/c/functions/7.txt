@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual è il __problema__ di questo frammento di codice?
+```
+saluta("Daniel");
+void saluta(char *nome) {
+    printf("Ciao %s!\n", nome);
+};
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Non possiamo usare la funzione saluta() prima di definirla","Non possiamo usare la funzione saluta() due volte","saluta() non restituisce nulla","Non possiamo usare nome come parametro"],
+	"correct": "Non possiamo usare la funzione saluta() prima di definirla"
+}
+</section>

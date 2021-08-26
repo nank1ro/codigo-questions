@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+A volte vogliamo che una funzione __restituisca__ un valore.
+Bene, possiamo usare la parola chiave `return`
+</section>
+<section id="instructions">
+Completa il codice in modo da restituire il prodotto tra i due numeri
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["def prodotto(n1, n2):\n","[/]","[/]","[/]","[/]","\n\nrisultato = prodotto(2, 2)\nprint(risultato)"],
+	"buttons": ["return ", "'return '", "n1", " * ", "n2", "2"],
+	"correct": "def prodotto(n1, n2):\nreturn n1 * n2\n\nrisultato = prodotto(2, 2)\nprint(risultato)"
+}
+</section>
+<section id="preOutput">
+4
+</section>

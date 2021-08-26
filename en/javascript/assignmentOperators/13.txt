@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the output of the following code?
+```
+var result = 50;
+result -= 10;
+console.log(result);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["40","50","10","50-10"],
+	"correct": "40"
+}
+</section>

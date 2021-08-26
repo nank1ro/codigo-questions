@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+A cosa serve il segno `=`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Divide un numero per un altro numero", "Assegna un valore ad una variabile", "Concatena stringhe insieme", "Moltiplica un numero per un altro numero"],
+	"correct": "Assegna un valore ad una variabile"
+}
+</section>

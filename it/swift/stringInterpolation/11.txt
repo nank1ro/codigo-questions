@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come fai a mostrare i valori numerici con l'interpolazione di stringa?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Li mettiamo tra \\()","Non possiamo mostrare i valori numerici con l'interpolazione di stringa","Li mettiamo tra \\[]","Li mettiamo tra \\{}"],
+	"correct": "Li mettiamo tra \\()"
+}
+</section>

@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The order you write code affects the output.
+</section>
+<section id="instructions">
+Print the numbers from `2` to `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["counter = 1\nwhile counter < 5:\n\t","[/]","[/]","[/]","\n\t","[/]","[/]","[/]","[/]"],
+	"buttons": ["counter","print","(",")","counter", " += ","1"],
+	"correct": "counter = 1\nwhile counter < 5:\n\tcounter += 1\n\tprint(counter)"
+}
+</section>
+<section id="preOutput">
+2
+3
+4
+5
+</section>

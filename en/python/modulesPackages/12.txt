@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's up with __packages__, really?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["They're a way to group together modules", "They need to contain an __init__.py file", "Its modules have nothing to do with each other"],
+	"corrects": ["They're a way to group together modules", "They need to contain an __init__.py file"]
+}
+</section>

@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a riordinare queste righe in un codice funzionale?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["struct Animale {","\tvar nome: String","}","let cane = Animale(nome: \"Max\")","print(cane.nome)"],
+	"correct": "struct Animale {\tvar nome: String}let cane = Animale(nome: \"Max\")print(cane.nome)"
+}
+</section>
+<section id="preOutput">
+Max
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' un buon uso dei valori booleani `true` e` false`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Memorizzare numeri da 1 a 9", "Memorizzare stringhe", "Mostrare se qualcosa e' vero o falso", "Memorizzare stringhe formattate"],
+	"correct": "Mostrare se qualcosa e' vero o falso"
+}
+</section>

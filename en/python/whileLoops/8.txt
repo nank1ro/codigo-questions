@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to print `"Hello"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while True:\n\t","[/]","[/]","[/]","[/]"],
+	"buttons": ["print","(",")","\"Hello\"","Hello","Print","["],
+	"correct": "while True:\n\tprint(\"Hello\")"
+}
+</section>
+<section id="preOutput">
+Hello
+Hello
+Hello
+Hello
+...
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Se vogliamo assegnare piu' parole al nome di una variabile, utilizziamo il **camelCase**.
+È la pratica di scrivere frasi in modo tale che ogni parola al centro della frase inizi con la lettera maiuscola
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da creare una valida variabile *camelCase*
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["secondo","[/]","ome"],
+	"buttons": ["+","-","_","N","n"],
+	"correct": "secondoNome"
+}
+</section>

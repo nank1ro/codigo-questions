@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output del seguente codice?
+```
+double risultato = 30 / 10;
+printf("%f\n", risultato);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["3.0","30","10","0"],
+	"correct": "3.0"
+}
+</section>

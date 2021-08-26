@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Swift is an object-oriented programming language, which means it manipulates programming constructs called objects.
+You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
+For example, when you call:
+```
+dictName.removeValue(forKey: "keyName")
+```
+Swift checks to see if `dictName` has a `removeValue()` method (which all dictionaries have) and executes that method if it finds it.
+</section>
+<section id="instructions">
+Call the `removeLast()` method to remove the last item from the list
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var animals = [\"dog\", \"cat\", \"frog\"]\n","[/]",".","[/]","[/]","\nprint(animals)"],
+	"buttons": ["removeLast","()","animals","[]","removeLast(\"frog\")"],
+	"correct": "var animals = [\"dog\", \"cat\", \"frog\"]\nanimals.removeLast()\nprint(animals)"
+}
+</section>
+<section id="preOutput">
+["dog", "cat"]
+</section>

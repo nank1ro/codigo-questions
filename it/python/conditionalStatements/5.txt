@@ -1,0 +1,36 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo aggiungere tutte le istruzioni `elif` che vogliamo, non ci sono limiti
+```
+num = 4
+if (num == 2):
+	print("il numero e' 2")
+elif (num == 3):
+	print("il numero e' 3")
+elif (num == 4):
+	print("il numero e' 4")
+elif (num == 5):
+	print("il numero e' 5")
+elif (num == 6):
+	print("il numero e' 6")
+```
+e l'output del codice e' `il numero e' 4`.
+</section>
+<section id="instructions">
+Aggiungi una nuova istruzione `elif` controllando se `time` e' uguale a `0` e, nel blocco di codice, stampa la stringa `"Mezzanotte"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["time = 0\nif ((time > 0) and (time < 12)):\n\tprint(\"Mattina\")\nelif (time == 12):\n\tprint(\"Mezzogiorno\")\n","[/]","(","[/]","[/]","[/]","):\n\tprint(\"Mezzanotte\")","\nelse:\n\tprint(\"Pomeriggio\")"],
+	"buttons": ["0","elif"," < "," == ", ":",";","time","else if","elseif","else"],
+	"correct": "time = 0\nif ((time > 0) and (time < 12)):\n\tprint(\"Mattina\")\nelif (time == 12):\n\tprint(\"Mezzogiorno\")\nelif(time == 0):\n\tprint(\"Mezzanotte\")\nelse:\n\tprint(\"Pomeriggio\")"
+}
+</section>
+<section id="preOutput">
+Mezzanotte
+</section>

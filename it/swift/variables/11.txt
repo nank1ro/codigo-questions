@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa la stringa seguita dalla variabile nell'output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["nome = \"Kate\"","\n","[/]","(","[/]",")","\n","print(","[/]",")"],
+	"buttons": ["print","Ciao","nome","\"Ciao\""],
+	"correct": "nome = \"Kate\"\nprint(\"Ciao\")\nprint(nome)"
+}
+</section>
+<section id="preOutput">
+Ciao
+Kate
+</section>

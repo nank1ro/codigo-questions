@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do you recognize a template literal?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["By the backticks `` and the characters ${} inside the string","By the character f at the end of the string","There's no difference between strings and template literals"],
+	"correct": "By the backticks `` and the characters ${} inside the string"
+}
+</section>

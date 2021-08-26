@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' la parola chiave per un'istruzione `if`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["if","while","for","else"],
+	"correct": "if"
+}
+</section>

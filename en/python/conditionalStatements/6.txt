@@ -1,0 +1,37 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can also nest a conditional statement (`if`, `elif` or `else`) inside another conditional statement, to create a more complex structure.
+```
+num = 4
+if (num < 3):
+	print("the number is lower than 3")
+else:
+	if (num == 3):
+		print("the number is 3")
+	elif (num == 4):
+		print("the number is 4")
+	else:
+		print("the number is greather than 4")
+```
+and the output of this code is `the number is 4`.
+</section>
+<section id="instructions">
+Let's change the program of the day time, nesting a conditional statement inside the `else` statement.
+The nested conditional statement should check if `time` is *lower* than `18` and in the block of code should print `"It's afternoon"`.
+If the previous condition is `False`, print `"It's evening"`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["time = 19\nif ((time > 0) and (time < 12)):\n\tprint(\"It's morning\")\nelif (time == 12):\n\tprint(\"It's midday\")\nelif (time == 0):\n\tprint(\"It's midnight\")\nelse:\n\t","[/]","(","[/]","[/]","[/]", "):\n\t\tprint(\"It's afternoon\")\n\t","[/]","\n\t\tprint(\"It's evening\")"],
+	"buttons": ["18","elif "," < "," == ", ":",";","time","else if:","elseif:","else:","if "],
+	"correct": "time = 19\nif ((time > 0) and (time < 12)):\n\tprint(\"It's morning\")\nelif (time == 12):\n\tprint(\"It's midday\")\nelif (time == 0):\n\tprint(\"It's midnight\")\nelse:\n\tif (time < 18):\n\t\tprint(\"It's afternoon\")\n\telse:\n\t\tprint(\"It's evening\")"
+}
+</section>
+<section id="preOutput">
+It's evening
+</section>

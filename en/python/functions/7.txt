@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Complete the function to print out the correct result calling the `power` function with a base of `4` and an exponent of `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["def power(", "[/]", ", ", "[/]", "):\n\tresult = base ** exponent\n\tprint(f\"{base} to the power of {exponent} is {result}\")\n\npower(","[/]",", ", "[/]",")"],
+	"buttons": ["4", "5", "base", "exponent", "exp", "power"],
+	"correct": "def power(base, exponent):\n\tresult = base ** exponent\n\tprint(f\"{base} to the power of {exponent} is {result}\")\n\npower(4, 5)"
+}
+</section>
+<section id="preOutput">
+4 to the power of 5 is 1024
+</section>

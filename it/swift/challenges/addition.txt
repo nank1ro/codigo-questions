@@ -1,0 +1,50 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+Dati due number interi `num1` e `num2`, scrivi un programma per sommare questi due numeri
+</section>
+
+<section id="instructions">
+Scrivi una funzione che restituisca la somma tra i due numeri
+</section>
+
+<section id="seed">
+func somma() {
+
+}
+</section>
+
+<section id="test">
+import XCTest
+
+class AdditionTests: XCTestCase {
+
+    func testAddition1() {
+        XCTAssertEqual(somma(1, 3), 4, "La tua funzione deve restituire 4")
+    }
+
+    func testAddition2() {
+        XCTAssertEqual(somma(200, 210), 410, "La tua funzione deve restituire 410")
+    }
+
+    func testAddition3() {
+        XCTAssertEqual(somma(15, 35), 50, "La tua funzione deve restituire 50")
+    }
+
+    static var allTests: [(String, (AdditionTests) -> () throws -> Void)] {
+        return [
+            ("testAddition1", testAddition1),
+            ("testAddition2", testAddition2),
+            ("testAddition3", testAddition3),
+        ]
+    }
+}
+
+XCTMain([testCase(AdditionTests.allTests),])
+</section>

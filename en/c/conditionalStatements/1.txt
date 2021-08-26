@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Decision making is required when we want to execute code only if a certain condition is satisfied.
+Let's assume we want to play outside only if the weather is nice.
+In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+```
+bool nice_weather = true;
+if (nice_weather) {
+	// play outside
+}
+```
+</section>
+<section id="instructions">
+Create an `if` statement checking if the `time` is lower than `12`, then in the code block print the string `"It's morning"`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int time = 8;\n", "[/]", " (time", "[/]", "12) {\n\tprintf(\"It's morning\\n\");\n}"],
+	"buttons": ["if", " == ", " = ", "else", " ? ", " < "],
+	"correct": "int time = 8;\nif (time < 12) {\n\tprintf(\"It's morning\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+It's morning
+</section>

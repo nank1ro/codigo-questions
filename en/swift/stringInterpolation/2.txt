@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(10","[/]","[/]",")"],
+	"buttons": ["+","\" friends\"","="],
+	"correct": "print(10+\" friends\")"
+}
+</section>
+<section id="preOutput">
+error: binary operator '+' cannot be applied to operands of type 'Int' and 'String'
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale codice genera il seguente output: `Ciao JavaScript!`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["console.log(\"Ciao JavaScript!\")", "console.log(\"Ciao World!\")", "console.log(Ciao JavaScript!\"", "console.log \"Ciao JavaScript!\""],
+	"correct": "console.log(\"Ciao JavaScript!\")"
+}
+</section>

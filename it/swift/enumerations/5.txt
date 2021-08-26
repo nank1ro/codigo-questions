@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Dichiara una valida enumerazione e stampa ogni caso
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," Stagione: ","[/]"," {\n\t","[/]"," primavera, estate, autunno, inverno\n}\nStagione.","[/]",".forEach { print(","[/]",") }"],
+	"buttons": ["enum", "enumeration","case","CaseIterable","caseIterable","Iterable","allcases","allCases","allCases()","$0","$1"],
+	"correct": "enum Stagione: CaseIterable {\n\tcase primavera, estate, autunno, inverno\n}\nStagione.allCases.forEach { print($0) }"
+}
+</section>
+<section id="preOutput">
+primavera
+estate
+autunno
+inverno
+</section>

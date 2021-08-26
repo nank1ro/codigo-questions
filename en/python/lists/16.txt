@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we check if a list is empty?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["if len(list_name) == 0:", "if list_name == 0:", "if list_name.length == 0:", "if list_name[0] == False:","if not list_name:"],
+	"corrects": ["if not list_name:", "if len(list_name) == 0:"]
+}
+</section>

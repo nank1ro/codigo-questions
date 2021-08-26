@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quale dichiarazione di stampa fa parte del blocco di codice dell'istruzione?
+```
+var online = false
+if online {
+	print("Ciao Utente!")
+}
+print("Ciao Mondo")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["print(\"Ciao Utente!\")","print(Ciao Utente!)","print(\"Ciao Mondo\")","print(Ciao Mondo)"],
+	"correct": "print(\"Ciao Utente!\")"
+}
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Insert the variables in order.
+First `animals`, then `legs` and finally `action`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char animals[] = \"Dragonflies\";\nint legs = 6;\nchar action[] = \"walk\";\nprintf(\"","[/]"," have ","[/]"," legs but can't ","[/]","\\n\", ","[/]",", ","[/]",", ","[/]",");"],
+	"buttons": ["animals","legs","action","%s","%s","%i","%o","%o"],
+	"correct": "char animals[] = \"Dragonflies\";\nint legs = 6;\nchar action[] = \"walk\";\nprintf(\"%s have %i legs but can't %s\\n\", animals, legs, action);"
+}
+</section>
+<section id="preOutput">
+Dragonflies have 6 legs but can't walk
+</section>

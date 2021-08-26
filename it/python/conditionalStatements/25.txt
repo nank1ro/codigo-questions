@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+online = True
+if (online):
+	print("Ciao utente!")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Ciao utente!","\"Ciao utente!\"","Niente, il codice viene saltato"],
+	"correct": "Ciao utente!"
+}
+</section>

@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
+You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
+For example, when you call:
+```
+dict_name.items()
+```
+Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+</section>
+<section id="instructions">
+Call the `len` method to print out the length of the list
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["animals = ['dog', 'cat', 'frog']\nprint(","[/]","(","[/]","))"],
+	"buttons": ["len","length","animals","\"animals\""],
+	"correct": "animals = ['dog', 'cat', 'frog']\nprint(len(animals))"
+}
+</section>
+<section id="preOutput">
+3
+</section>

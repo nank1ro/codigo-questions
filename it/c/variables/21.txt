@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+char film[] = "A Beautiful Mind";
+strcpy(film, "Agent Cody Banks");
+printf("%s\n", film);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["A Beautiful Mind","Agent Cody Banks","A Beautiful MindAgent Cody Banks","AgentCodyBanks"],
+	"correct": "Agent Cody Banks"
+}
+</section>

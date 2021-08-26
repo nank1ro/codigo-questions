@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per aggiungere una nuova riga valida nel blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if (true) {\n\tprintf(\"Prima linea\\n\");\n\t", "[/]", "(\"", "[/]", "\\n\");\n}"],
+	"buttons": ["print", "printf", "Print", "\"Prima linea\"", "Seconda linea"],
+	"correct": "if (true) {\n\tprintf(\"Prima linea\\n\");\n\tprintf(\"Seconda linea\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Prima linea
+Seconda linea
+</section>

@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Continuiamo con l'operatore relazionale **minore di** `<`.
+Restituisce un valore **booleano** (`True` o `False`) affermando se un'espressione e' minore dell'altra, per esempio:
+```
+>>> 2 < 2
+False
+>>> 2 < 3
+True
+```
+</section>
+<section id="instructions">
+Stampa un valore booleano verificando se `num` e' minore di `4`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","!= ","< ","4","<< "],
+	"correct": "num = 5\nprint(num < 4)"
+}
+</section>
+<section id="preOutput">
+False
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Scegli la variabile corretta per un utente che si e' appena disconnesso
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["var online = true","var online = false","var online = \"false\"","var online = \"true\""],
+	"correct": "var online = false"
+}
+</section>

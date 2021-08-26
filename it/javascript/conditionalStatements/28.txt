@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+var online = false;
+if (online) {
+	console.log("Ciao Utente!");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Ciao Utente!","\"Ciao Utente!\"","Niente, il codice viene saltato"],
+	"correct": "Niente, il codice viene saltato"
+}
+</section>

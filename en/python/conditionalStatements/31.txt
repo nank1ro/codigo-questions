@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Make the code block **NOT** to run by assigning a value to the variable
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["coffee_time = ","[/]","\nif (coffee_time):\n\tprint(\"It's time for coffee!\")"],
+	"buttons": ["True","False","\"True\"","\"False\""],
+	"correct": "coffee_time = False\nif (coffee_time):\n\tprint(\"It's time for coffee!\")"
+}
+</section>

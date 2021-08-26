@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Riesci a ordinare queste righe in codice funzionale?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["var animali = [\"cane\", \"orso\", \"gatto\"]", "if animali.count == 3 {", "\tanimali.append(\"rana\")", "print(animali[3])","}"],
+	"correct": "var animali = [\"cane\", \"orso\", \"gatto\"]if animali.count == 3 {\tanimali.append(\"rana\")}print(animali[3])"
+}
+</section>
+<section id="preOuput">
+rana
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Esegui il blocco di codice assegnando un valore alla variabile
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var oraCaffe = ","[/]","\nif oraCaffe {\n\tprint(\"E' ora del caffe'!\")\n","[/]"],
+	"buttons": ["true","false","\"true\"","\"false\"","}"],
+	"correct": "var oraCaffe = true\nif oraCaffe {\n\tprint(\"E' ora del caffe'!\")\n}"
+}
+</section>
+<section id="preOutput">
+E' ora del caffe'!
+</section>

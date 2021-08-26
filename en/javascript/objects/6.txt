@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+What if we want to list all the values of the dictionary?
+Well, these's the `Object.values()` method.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\nconsole.log(","[/]","[/]","(","[/]","));"],
+	"buttons": ["user",".values()",".values",".value",".allValues()","Object"],
+	"correct": "var user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30};\nconsole.log(Object.values(user));"
+}
+</section>
+<section id="preOutput">
+["John", "Hood", 30]
+</section>

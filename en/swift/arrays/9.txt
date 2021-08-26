@@ -1,0 +1,39 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Sometimes you need to search for an item in an array.
+In Swift we can use the `firstIndex()` method:
+```
+var names: [String] = ["Trevor", "Zac", "Glenn"]
+if let index = names.firstIndex(of: "Zac") {
+  print(index)
+}
+// prints 1
+```
+The code above prints the first index that contains the string `"Zac"`, `1` in this case.
+We can also insert items into an array in a specific index, using the `insert()` method:
+```
+names.insert("Ali", at: 1)
+// prints ["Trevor", "Ali", "Zac", "Glenn"]
+```
+The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+</section>
+<section id="instructions">
+- Use the `firstIndex()` method to print the index of `"dog"`.
+- Then use the `insert()` method to add `"bear"` as first item of the array
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var animals = [\"cat\", \"monkey\", \"dog\"]\nif let i = animals.", "[/]", "(of: ", "[/]", ") {\n\tprint(i)\n}\nanimals.", "[/]", "(\"bear\", at: ","[/]", ")\nprint(animals)"],
+	"buttons": ["index", "firstIndex","dog","\"dog\"", "insert", "append", "add", "0", "1"],
+	"correct": "var animals = [\"cat\", \"monkey\", \"dog\"]\nif let i = animals.firstIndex(of: \"dog\") {\n\tprint(i)\n}\nanimals.insert(\"bear\", at: 0)\nprint(animals)"
+}
+</section>
+<section id="preOutput">
+2
+["bear", "cat", "monkey", "dog"]
+</section>

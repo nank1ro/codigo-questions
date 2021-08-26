@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le parentesi nella definizione di __funzione__ non devono essere necessariamente vuote.
+All'interno di esse, possiamo specificare dei parametri
+</section>
+<section id="instructions">
+Completa il codice in modo da chiamare la funzione con il nome `Smith`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["def saluta(name):\nprint(f'Ciao {name}!')\n\nsaluta(","[/]",")"],
+    "buttons": ["'Smith'","name:'Smith'"],
+	"correct": "def saluta(name):\nprint(f'Ciao {name}!')\n\nsaluta('Smith')"
+}
+</section>
+<section id="preOutput">
+Ciao Smith!
+</section>

@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Ovviamente, il metodo `__init__()` può usare piu' parametri oltre `self`
+</section>
+<section id="instructions">
+Aggiungi i parametri `genere` e `zampe` al metodo `__init__()`.
+
+Add the parameters `genere` and `zampe` to the `__init__()` method
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal:\n\tdef __init__(self, ","[/]",", " ,"[/]", "):\n\t\tpass"],
+	"buttons": ["genere","zampe","Animal","'genere'","'zampe'"],
+	"correct": "class Animal:\n\tdef __init__(self, genere, zampe):\n\t\tpass"
+}
+</section>

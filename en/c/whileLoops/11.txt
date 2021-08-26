@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's the indented code after `false` called?
+```
+while (false) {
+    printf("repeat\n");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["A condition", "A code block", "A comparison", "An operation"],
+	"correct": "A code block"
+}
+</section>

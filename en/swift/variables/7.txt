@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Set `isLogged` to value `true`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let isLogged ","[/]"," true"],
+	"buttons": ["=","+","-","=="],
+	"correct": "let isLogged = true"
+}
+</section>

@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+"__Hello, World!__" is the traditional first program for beginning programming in a new language.
+We use the `console.log()` function to output data to the standard output device (screen).
+To print `Hello, World!` on the screen with JavaScript we can write
+```
+console.log("Hello, World!")
+```
+</section>
+<section id="instructions">
+Your program should print the string `Hello, JavaScript!` on the screen.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",", ","[/]",")"],
+	"buttons": ["console.log","\"Hello","JavaScript!\"","Hello","JavaScript!"],
+	"correct": "console.log(\"Hello, JavaScript!\")"
+}
+</section>
+<section id="preOutput">
+Hello JavaScript!
+</section>

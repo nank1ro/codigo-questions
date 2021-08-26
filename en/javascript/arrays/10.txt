@@ -1,0 +1,32 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In JavaScript we can loop through an array in a very simple way using the `for..of` keywords:
+```
+var numbers = [1, 2, 3];
+for (num of numbers) {
+	console.log(num);
+}
+// prints 1, 2, 3 
+```
+A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+</section>
+<section id="instructions">
+Print out each item in the array by multiplying it by `2`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var numbers = [2, 4, 6];\n", "[/]","(", "[/]", "[/]", "[/]", ") {\n\tconsole.log(", "[/]", "[/]", "[/]", ");\n}"],
+	"buttons": ["for ", "num ", "in ", "numbers", "num ", "* ", "2", "** ", "of "],
+	"correct": "var numbers = [2, 4, 6];\nfor (num of numbers) {\n\tconsole.log(num * 2);\n}"
+}
+</section>
+<section id="preOutput">
+4
+8
+12
+</section>

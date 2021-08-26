@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da **NON** eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["ora_caffe = ","[/]","\nif (ora_caffe):\n\tprint(\"E' ora del caffe'!\")"],
+	"buttons": ["True","False","\"True\"","\"False\""],
+	"correct": "ora_caffe = False\nif (ora_caffe):\n\tprint(\"E' ora del caffe'!\")"
+}
+</section>

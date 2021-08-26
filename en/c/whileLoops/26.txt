@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the code block, stop the loop after running its code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["bool is_playing = true;\nwhile (is_playing) {\n\tprintf(\"Playing...\\n\");\n\t", "[/]", "[/]", "[/]", ";\n}"],
+	"buttons": ["true", "false", "is_playing", " = ", " == "],
+	"correct": "bool is_playing = true;\nwhile (is_playing) {\n\tprintf(\"Playing...\\n\");\n\tis_playing = false;\n}"
+}
+</section>
+<section id="preOutput">
+Playing...
+</section>

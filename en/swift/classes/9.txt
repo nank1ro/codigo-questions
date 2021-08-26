@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Which of these statements are true about __objects__?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["They're the same thing as classes","Objects can have attributes and methods", "Objects are instances of classes", "Variables within objects are called attributes"],
+	"corrects": ["Objects can have attributes and methods", "Objects are instances of classes", "Variables within objects are called attributes"]
+}
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+</section>
+<section id="instructions">
+Add the new _key-value pair_ in the dictionary
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30}\nuser.","[/]","({\"profession\": \"Developer\"})\nprint(user)"],
+	"buttons": ["update","add","insert"],
+	"correct": "user = {\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30}\nuser.update({\"profession\": \"Developer\"})\nprint(user)"
+}
+</section>
+<section id="preOutput">
+{'first_name': 'John', 'last_name': 'Hood', 'age': 30, 'profession': 'Developer'}
+</section>

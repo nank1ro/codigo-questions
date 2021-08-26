@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Make the code block **NOT** to run by assigning a value to the variable
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var coffeeTime = ","[/]",";\nif (coffeeTime) {\n\tconsole.log(\"It's time for coffee!\");\n","[/]"],
+	"buttons": ["true","false","\"true\"","\"false\"","}"],
+	"correct": "var coffeeTime = false;\nif (coffeeTime) {\n\tconsole.log(\"It's time for coffee!\");\n}"
+}
+</section>

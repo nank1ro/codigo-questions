@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quali tipi di valori possiamo visualizzare insieme nelle stringhe formattate?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Solo stringhe", "Solo numeri", "Qualsiasi tipo di valore"],
+	"correct": "Qualsiasi tipo di valore"
+}
+</section>

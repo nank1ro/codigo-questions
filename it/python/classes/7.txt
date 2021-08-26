@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Quando una classe ha le proprie funzioni, queste si chiamano __metodi__.
+Abbiamo già visto uno di questi metodi: `__init__()`.
+Ma possiamo anche definire i nostri metodi!
+</section>
+<section id="instructions">
+Aggiungi il metodo `descrizione`, alla classe `Animale`.
+Usando due dichiarazioni separate di stampa `print`, dovresti stampare il `genere` e le `zampe` dell'animale.
+Infine richiama il metodo `descrizione`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animale:\n\tdef __init__(self, genere, zampe):\n\t\tself.genere = genere\n\t\tself.zampe = zampe\n\tdef ","[/]","(","[/]","):\n\t\t","[/]","(","[/]","[/]","[/]",")\n\t\t","[/]","(","[/]","[/]","[/]",")\n\ncane = Animale(\"femmina\", 5)\ncane.descrizione()"], "buttons": ["descrizione","self","Animale","print","print","self","self","genere","zampe",".","."],
+	"correct": "class Animale:\n\tdef __init__(self, genere, zampe):\n\t\tself.genere = genere\n\t\tself.zampe = zampe\n\tdef descrizione(self):\n\t\tprint(self.genere)\n\t\tprint(self.zampe)\n\ncane = Animale(\"femmina\", 5)\ncane.descrizione()"
+}
+</section>
+<section id="preOutput">
+femmina
+5
+</section>

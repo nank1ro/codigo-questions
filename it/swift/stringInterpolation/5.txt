@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": true
+}
+</section>
+<section id="description">
+Successivamente, aggiungiamo il tipo diverso di valore tra le parentesi graffe in modo che venga mostrato come un'istruzione di print.
+Come qui, con `\()`
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per ottenere il seguente output
+```
+5 amici
+```
+</section>
+<section id="seed">
+print(" amici")
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "5 amici"
+        }
+    ]
+}
+</section>

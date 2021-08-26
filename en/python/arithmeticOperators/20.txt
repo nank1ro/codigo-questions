@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Create a new variable `revenue` and assign to it the difference between `earnings` and `costs`, then print its value
+</section>
+<section id="seed">
+earnings = 2000
+costs = 750
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output": "1250"
+        },
+        {
+            "type": "assert",
+            "assert": "assert(revenue == 1250)"
+        }
+    ]
+}
+</section>

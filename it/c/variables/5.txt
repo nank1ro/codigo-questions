@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+In C le variabili di tipo stringa possono essere dichiarate soltanto utilizzando le doppie virgolette:
+```
+char x[] = "Maggio";
+```
+</section>
+<section id="instructions">
+Dichiara una variabile denominata `mese` con il valore `"giugno"` (tutto minuscolo).
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(strcmp(mese, \"giugno\") == 0);"
+        }
+    ]
+}
+</section>

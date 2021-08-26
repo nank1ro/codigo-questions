@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's start with the **equal** `==` relational operator.
+It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+```
+>>> 2 == 2
+1
+>>> 2 == 3
+0
+```
+</section>
+<section id="instructions">
+Print a boolean checking if `num` is equal to `5`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 5;\nprintf(\"%d\\n\", ", "[/]", "[/]", "[/]", ");"],
+	"buttons": ["num", "num", " == ", " = ", "5"],
+	"correct": "int num = 5;\nprintf(\"%d\\n\", num == 5);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per creare un'istruzione condizionale
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]"," (true) {\n\tprintf(\"È vero!\\n\");\n}"],
+	"buttons": ["if", "else", "else if", "elseif"],
+	"correct": "if (true) {\n\tprintf(\"È vero!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+È vero!
+</section>

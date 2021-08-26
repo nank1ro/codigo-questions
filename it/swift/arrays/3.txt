@@ -1,0 +1,40 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+L'indice di un'array si comporta come qualsiasi altro nome di variabile!
+Può essere usato per ottenere e assegnare valori.
+Abbiamo visto come accedere ad una valore di un'array:
+```
+var nomi = ["Jeremiah", "Barney", "Ivan", "Noel"]
+// Stampa il valore "Jeremiah"
+print(nomi[0])
+```
+Ecco come funziona l'assegnazione:
+```
+var nomi = ["Jeremiah", "Barney", "Ivan", "Noel"]
+// Assegna il nuovo valore "Jordan"
+nomi[0] = "Jordan"
+// Stampa il valore "Jordan"
+print(nomi[0])
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da sostituire `"Mia"` con il nome `"Sophie"`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var nomi = [\"Charlotte\", \"Mia\", \"Jessica\", \"Hollie\"]\n","[/]","[/]"," = \"Sophie\"\nfor nome in nomi {\n\tprint(nome)\n}"],
+	"buttons": ["[0]", "[1]", "[2]", "[3]", "[4]", "nomi"],
+	"correct": "var nomi = [\"Charlotte\", \"Mia\", \"Jessica\", \"Hollie\"]\nnomi[1] = \"Sophie\"\nfor nome in nomi {\n\tprint(nome)\n}"
+}
+</section>
+<section id="preOutput">
+Charlotte
+Sophie
+Jessica
+Hollie
+</section>

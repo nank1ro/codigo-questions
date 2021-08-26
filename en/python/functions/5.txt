@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines so they form a proper __function__?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["def greet(name):","\t\"\"\"This function greets to the person passed in as a parameter\"\"\"","\tprint(f'Hello, {name}. Good morning!')","greet('Alex')"],
+	"correct": "def greet(name):\t\"\"\"This function greets to the person passed in as a parameter\"\"\"\tprint(f'Hello, {name}. Good morning!')greet('Alex')"
+}
+</section>

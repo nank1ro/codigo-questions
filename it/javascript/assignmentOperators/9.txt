@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Usando l'operatore di *assegnazione di moltiplicazione* moltiplica `num` per 5, quindi stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5;\n","[/]","[/]","[/]",";\nconsole.log(num);"],
+	"buttons": ["num ","*= ","=* ","5","- ","num "],
+	"correct": "var num = 5;\nnum *= 5;\nconsole.log(num);"
+}
+</section>
+<section id="preOutput">
+25
+</section>

@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+All'interno del blocco di codice del cilo `for`, mostra il valore della variabile del contatore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for (let c = 0; c <= 2; c++) {\n\tconsole.log(\"ripeti\");\n\t","[/]","[/]","[/]","[/]",";\n}"],
+	"buttons": ["console.log", "i","(",")","c"],
+	"correct": "for (let c = 0; c <= 2; c++) {\n\tconsole.log(\"ripeti\");\n\tconsole.log(c);\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+0
+ripeti
+1
+ripeti
+2
+</section>

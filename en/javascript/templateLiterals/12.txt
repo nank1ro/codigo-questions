@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What kinds of values can we display together in template literals?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Only strings","Only numbers","Any kind of values"],
+	"correct": "Any kind of values"
+}
+</section>

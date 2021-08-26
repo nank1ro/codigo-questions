@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Skip the loop by using `is_loading` inside the `while` condition
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["is_loading = False\n\nwhile ","[/]", ":\n\tprint(\"Loading...\")\n\tis_loading = False"],
+	"buttons": ["True", "False", "is_loading"],
+	"correct": "is_loading = False\n\nwhile is_loading:\n\tprint(\"Loading...\")\n\tis_loading = False"
+}
+</section>

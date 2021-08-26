@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Usa un ciclo `while` per ripetere il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," (true) {\n\tconsole.log(\"ripeti\");\n}"],
+	"buttons": ["while","for","loop","\"while\""],
+	"correct": "while (true) {\n\tconsole.log(\"ripeti\");\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+...
+</section>

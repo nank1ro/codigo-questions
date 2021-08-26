@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can store the boolean value `true` in a variable just like a number or a string.
+</section>
+<section id="instructions">
+Display the output of the variable `music_on`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool music_on = ", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": ["true", "\"true\"", "music_on", "\"music_on\""],
+	"correct": "bool music_on = true;\nprintf(\"%d\\n\", music_on);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

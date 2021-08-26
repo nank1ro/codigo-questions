@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In JavaScript possiamo usare il segno `+` per concatenare due o più stringhe assieme, come:
+```
+console.log("Ciao " + "JavaScript!"); // stampa "Ciao JavaScript!"
+```
+</section>
+<section id="instructions">
+Fai lo stesso con il codice seguente
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["console.log(\"Mr.\"","[/]","\" Robot\");"],
+	"buttons": ["+","f","-","="],
+	"correct": "console.log(\"Mr.\"+\" Robot\");"
+}
+</section>
+<section id="preOutput">
+Mr. Robot
+</section>

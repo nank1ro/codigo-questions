@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Set `is_logged` to value `true`
+</section>
+<section id="seed">
+is_logged  true
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(is_logged == true);"
+        }
+    ]
+}
+</section>

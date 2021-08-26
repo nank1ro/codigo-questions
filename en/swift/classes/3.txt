@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Let's put something inside our `Animal` class
+</section>
+<section id="instructions">
+Add the parameters `gender` and `legs` inside the class
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal {\n\tvar ","[/]",": ","[/]","?\n\tvar ","[/]"," = 2\n}"],
+	"buttons": ["gender","legs","Animal","'gender'","'legs'","String","Int"],
+	"correct": "class Animal {\n\tvar gender: String?\n\tvar legs = 2\n}"
+}
+</section>

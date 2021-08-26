@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Store the value `false` in the variable `power`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var ","[/]","[/]","[/]",";"],
+	"buttons": ["power ","\"power\"","\"false\"","False","false","= "],
+	"correct": "var power = false;"
+}
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What code does the `while` loop run over and over again?
+```
+bool repeat = false;
+
+while (true) {
+    printf("repeat\n");
+}
+printf("Hello\n")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["printf(\"repeat\\n\")","printf(\"Hello\\n\")","true","bool repeat = false;"],
+	"correct": "printf(\"repeat\\n\")"
+}
+</section>

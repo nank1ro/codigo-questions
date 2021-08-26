@@ -1,0 +1,36 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le strutture e le classi di Swift hanno molte cose in comune. Entrambe possono:
+- Definire le proprietà per memorizzare i valori
+- Definire i metodi per fornire funzionalità
+- Definire i subscript per fornire l'accesso ai loro valori utilizzando la sintassi dei subscript
+- Definire gli inizializzatori per impostare il loro stato iniziale
+- Essere esteso per espandere le loro funzionalità al di là di un'implementazione predefinita
+- Conformarsi ai protocolli per fornire funzionalità standard di un certo tipo
+
+Ma le classi hanno capacità aggiuntive che le strutture non hanno:
+- L'ereditarietà permette ad una classe di ereditare le caratteristiche di un'altra
+- Il Type casting consente di controllare e interpretare il tipo di istanza di classe durante il runtime
+- I deinizializzatori consentono ad un'istanza di una classe di liberare le risorse che ha assegnato
+- Il conteggio dei riferimenti permette più di un riferimento ad un'istanza di classe
+</section>
+<section id="instructions">
+Utilizzando l'ereditarietà crea una classe `Cane` che eredita la classe `Animale`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animale {\n\tvar genere: String?\n\tvar zampe = 4\n\tfunc descrizione() {\n\t\tif let genere = self.genere { print(genere) }\n\t\tprint(self.zampe)\n\t}\n}\n","[/]","[/]",": ","[/]"," {\n\tfunc verso() {\n\t\tprint(\"Bau Bau!!\")\n\t}\n}\nlet Cane = ","[/]","[/]","\nCane.genere = \"femmina\"\nCane.description()\nCane.verso()"],
+	"buttons": ["class ","Cane","Animale","Cane","()","Cane[]"],
+	"correct": "class Animale {\n\tvar genere: String?\n\tvar zampe = 4\n\tfunc descrizione() {\n\t\tif let genere = self.genere { print(genere) }\n\t\tprint(self.zampe)\n\t}\n}\nclass Cane: Animale {\n\tfunc verso() {\n\t\tprint(\"Bau Bau!!\")\n\t}\n}\nlet Cane = Cane()\nCane.genere = \"femmina\"\nCane.description()\nCane.verso()"
+}
+</section>
+<section id="preOutput">
+femmina
+4
+Bau Bau!!
+</section>

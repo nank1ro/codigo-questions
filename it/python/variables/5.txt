@@ -1,0 +1,31 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Le variabili stringa possono essere dichiarate usando virgolette singole o doppie:
+```
+>>> x = "Maggio"
+>>> x = 'Maggio'
+```
+Entrambe sono la stessa cosa
+</section>
+<section id="instructions">
+Dichiara una variabile denominata `mese` con il valore `Giugno`.
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(mese.lower() == \"giugno\".lower())"
+        }
+    ]
+}
+</section>

@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Operators are used to perform operations on variables and values.
+Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
+It is used to add two numbers, like:
+```
+print(5 + 3) // 8
+```
+</section>
+<section id="instructions">
+Calculate the sum between the numbers 4 and 9 (in this order), then print the variable `sum`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let sum = ","[/]","[/]","[/]","\nprint(sum)"],
+	"buttons": ["4","9"," + "," * ","13"],
+	"correct": "let sum = 4 + 9\nprint(sum)"
+}
+</section>
+<section id="preOutput">
+13
+</section>

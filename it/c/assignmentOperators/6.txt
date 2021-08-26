@@ -1,0 +1,29 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Vediamo l'operatore di **assegnazione di modulo** `%=`.
+Serve a calcolare il modulo della variabile e un valore e assegna il risultato alla suddetta variabile.
+Quindi le seguenti linee di codice eseguono la stessa operazione:
+```
+num = num % 5;
+// è uguale a
+num %= 5;
+```
+</section>
+<section id="instructions">
+Calcola il modulo di `risultato` con il valore `3` usando l'operatore di *assegnazione di modulo*, quindi stampa il suo valore
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int risultato = 5;\nrisultato", "[/]", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": [" % ", " =% ", " %= ", "3", "risultato"],
+	"correct": "int risultato = 5;\nrisultato %= 3;\nprintf(\"%d\\n\", risultato);"
+}
+</section>
+<section id="preOutput">
+2
+</section>

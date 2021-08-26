@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le stringhe formattate sono utilizzate al meglio nelle istruzioni di stampa, in quanto non e' possibile memorizzarle in variabili come le stringhe normali.
+</section>
+<section id="instructions">
+Stampa la stringa formattata
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["label = \"Ciao amici\"","\n","print(","[/]",")"],
+	"buttons": ["f\"{2} amici\"","2 amici"],
+	"correct": "label = \"Ciao amici\"\nprint(f\"{2} amici\")"
+}
+</section>
+<section id="preOutput">
+2 amici
+</section>

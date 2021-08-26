@@ -1,0 +1,40 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Sappiamo come ripetere il codice usando un ciclo `while`.
+Come questo programma che ripete le istruzioni per stampare `ciao`.
+```
+var contatore = 0
+
+while contatore < 5 {
+	print("ciao")
+	contatore += 1
+}
+```
+Ma possiamo fare lo stesso con i cicli `for`:
+```
+for i in 0..<5 {
+	print("ciao")
+}
+```
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]"," i in 0..<4 {\n\tprint(\"ripeti\")\n}"],
+	"buttons": ["while","\"while\"","for","loop","\"for\""],
+	"correct": "for i in 0..<4 {\n\tprint(\"ripeti\")\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Perche' `\"True\"` e' diverso da `True`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["\"True\" e True sono la stessa cosa","Il primo e' una stringa","L'ultimo e' una stringa","Il primo e' un booleano"],
+	"correct": "Il primo e' una stringa"
+}
+</section>

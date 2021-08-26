@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you make `Dog` a subclass of `Animal`?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["class Animal:","\tdef __init__(self,type):","\t\tself.type = type","class Dog(Animal):","\tdef __init__(self, breed)","\t\tAnimal.__init__(self, 'mammal')","\t\tself.breed = breed"],
+	"correct": "class Animal:\tdef __init__(self,type):\t\tself.type = typeclass Dog(Animal):\tdef __init__(self, breed)\t\tAnimal.__init__(self, 'mammal')\t\tself.breed = breed"
+}
+</section>

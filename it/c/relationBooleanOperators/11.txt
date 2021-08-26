@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Check if `num` is equal to `5.0`, printing the boolean result.
+Sii consapevoli che la funzione `strcmp` restituisce `0` solo quando le stringhe sono **uguali**, quindi non farti ingannare dal fatto che lo 0 che restituisce è simile al booleano false
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char parola[] = \"gatto\";\nbool parole_uguali = strcmp(parola, \"gatto\")", "[/]", "[/]",";\nprintf(\"%d\\n\", ", "[/]",");"],
+	"buttons": ["parola","\"dog\""," == "," = ","dog"," != ", "0", "parole_uguali"],
+	"correct": "char parola[] = \"gatto\";\nbool parole_uguali = strcmp(parola, \"gatto\") == 0;\nprintf(\"%d\\n\", parole_uguali);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

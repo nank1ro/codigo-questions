@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]", "[/]", " in ", "[/]", "[/]", ":\n\tprint(\"ripeti\")"],
+	"buttons": ["loop","for ","i","i", "range", "(4)"],
+	"correct": "for i in range(4):\n\tprint(\"ripeti\")"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+</section>

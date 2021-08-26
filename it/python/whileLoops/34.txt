@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+contatore = 1
+
+while contatore <= 10:
+    print(contatore)
+    contatore += 1
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["I numeri da 1 a 9", "I numeri da 1 a 10", "I numeri da 1 a 11", "I numeri da 2 a 9"],
+	"correct": "I numeri da 1 a 10"
+}
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+var caricamento = true;
+
+while (caricamento) {
+    console.log("Caricamento...");
+    caricamento = false;
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Questo codice non visualizza nulla nell'output", "Caricamento..."],
+	"correct": "Caricamento..."
+}
+</section>

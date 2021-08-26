@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `num` e' **minore di** `3`, stampa il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","'num' ","== ","< ","num ","<= ",">= ","3"],
+	"correct": "var num = 5\nprint(num < 3)"
+}
+</section>
+<section id="preOutput">
+false
+</section>

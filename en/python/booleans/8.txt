@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display `False` as output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]",")"],
+	"buttons": ["False","true","\"False\"","True"],
+	"correct": "print(False)"
+}
+</section>
+<section id="preOutput">
+False
+</section>

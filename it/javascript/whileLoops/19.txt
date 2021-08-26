@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come facciamo a sapere che questo è un ciclo infinito?
+```
+var online = false;
+
+while (true) {
+    console.log("Effettua il login");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Questo ciclo non verrà eseguito poichè la condizione è false", "Non c'è nessuna variabile nella condizione", "Questo ciclo verrà eseguito una volta", "Questo ciclo verrà eseguito due volte"],
+	"correct": "Non c'è nessuna variabile nella condizione"
+}
+</section>

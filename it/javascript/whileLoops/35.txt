@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Mostra i numeri da `1` a `5` impostando l'appropriata condizione
+</section>
+<section id="seed">
+var numero = 1;
+
+while  {
+    console.log(numero);
+    numero += 1;
+}
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output":"1\n2\n3\n4\n5"
+        }
+    ]
+}
+</section>

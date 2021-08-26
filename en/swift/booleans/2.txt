@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can store the boolean value `true` in a variable just like a number or a string.
+</section>
+<section id="instructions">
+Display the output of the variable `musicOn`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["musicOn = true\n","print(","[/]",")"],
+	"buttons": ["true","\"true\"","musicOn","\"musicOn\""],
+	"correct": "musicOn = true\nprint(musicOn)"
+}
+</section>
+<section id="preOutput">
+true
+</section>

@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+With the `stride()` function we can also use closed ranges, by using:
+```
+stride(from:through:by:)
+```
+In this case the `through` value is included
+</section>
+<section id="instructions">
+Complete the `stride()` function in the following code in order to print the following numbers `(3, 6, 9, 12, 15)`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in stride(from: ","[/]",", through: ","[/]", ", by: ", "[/]",")"," {\n\tprint(i)\n}"],
+	"buttons": ["3","16","6","3","1","15"],
+	"correct": "for i in stride(from: 3, through: 15, by: 3) {\n\tprint(i)\n}"
+}
+</section>
+<section id="preOutput">
+3
+6
+9
+12
+15
+</section>

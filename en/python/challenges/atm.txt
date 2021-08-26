@@ -1,0 +1,48 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+James would like to withdraw N dollars from an ATM.
+The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
+For each successful withdrawal the bank charges `0.50$`.
+Calculate James' account balance after an attempted transaction.
+The inputs are in the following order:
+1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
+2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+</section>
+
+<section id="instructions">
+Return the account balance after the attempted transaction, given as a number with two digits of precision.
+If there is not enough money in the account to complete the transaction, return the current bank balance.
+</section>
+
+<section id="seed">
+def account_balance():
+    return
+</section>
+
+<section id="test">
+import unittest
+
+from atm import account_balance
+
+
+class ATMTest(unittest.TestCase):
+    def test_successful_transaction(self):
+        self.assertEqual(account_balance(50, 120.00), 69.50)
+
+    def test_insufficient_funds(self):
+        self.assertEqual(account_balance(200, 120.00), 120.00)
+
+    def test_not_multiple_of_5(self):
+        self.assertEqual(account_balance(22, 120.00), 120.00)
+
+
+if __name__ == "__main__":
+    unittest.main()
+</section>

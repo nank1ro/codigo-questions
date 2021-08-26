@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In C programming, you can create an array of arrays.
+Nella programmazione in C, puoi creare array di array.
+Questi array sono conosciuti come array multidimensionali, per esempio:
+```
+int numeri[2][3] = {{1, 2, 3}, {4, 5, 6}};
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da creare un valido array 2D e stampane ogni singolo valore
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int numeri","[/]","[/]"," = {{1, 2}, {3, 4}};\n\nfor (int i = 0; i < 2; i++) {\n\tfor (int j = 0; j < 2; j++) {\n\t\tprintf(\"%d\\n\", numeri","[/]","[/]",");\n\t}\n}"],
+	"buttons": ["[2]","[1]","[2]", "[i]", "[j]", "[i]", "[j]"],
+	"correct": "int numeri[2][2] = {{1, 2}, {3, 4}};\n\nfor (int i = 0; i < 2; i++) {\n\tfor (int j = 0; j < 2; j++) {\n\t\tprintf(\"%d\\n\", numeri[i][j]);\n\t}\n}"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+4
+</section>

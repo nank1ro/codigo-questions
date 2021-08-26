@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+</section>
+<section id="instructions">
+Complete the code in order to call the function with the name `Smith`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func sayHello(name: String) {\n\tprint(\"Hello \\(name)!\")\n}\n","[/]","(","[/]",")"],
+	"buttons": ["\"Smith\"","name: \"Smith\"","sayHello"],
+	"correct": "func sayHello(name: String) {\n\tprint(\"Hello \\(name)!\")\n}\nsayHello(name: \"Smith\")"
+}
+</section>
+<section id="preOutput">
+Hello Smith!
+</section>

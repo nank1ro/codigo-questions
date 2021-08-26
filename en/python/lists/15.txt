@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional script?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["animals = [\"dog\", \"bear\", \"cat\"]", "if len(animals) == 3:", "\tanimals.append(\"frog\")", "print(animals[3])"],
+	"correct": "animals = [\"dog\", \"bear\", \"cat\"]if len(animals) == 3:\tanimals.append(\"frog\")print(animals[3])"
+}
+</section>

@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In a `for` loop we can specify how many times we'd like our loop to run with the `range()` function
+</section>
+<section id="instructions">
+Complete the `for` loop in the following code
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in ","[/]","(4):\n\tprint(f\"{i} seconds\")"],
+	"buttons": ["range","\"range\"","for","loop","\"through\""],
+	"correct": "for i in range(4):\n\tprint(f\"{i} seconds\")"
+}
+</section>
+<section id="preOutput">
+0 seconds
+1 seconds
+2 seconds
+3 seconds
+</section>

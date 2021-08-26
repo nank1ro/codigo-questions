@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le parentesi nella definizione di __funzione__ non devono essere vuote se vogliamo specificare i parametri
+</section>
+<section id="instructions">
+Completa il codice in modo da chiamare la funzione con il nome `Marco`.
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["void saluta(", "[/]", "[/]", ") {\n\tprintf(\"Ciao %s!\\n\", nome);\n}\n\nint main(void) {\n\tsaluta(\"Marco\");\n\treturn 0;\n}"],
+	"buttons": ["void ", "saluta", "char ", "string ", "%s", "%c", "nome", "*nome", "\"Marco\""],
+	"correct": "void saluta(char *nome) {\n\tprintf(\"Ciao %s!\\n\", nome);\n}\n\nint main(void) {\n\tsaluta(\"Marco\");\n\treturn 0;\n}"
+}
+</section>
+<section id="preOutput">
+Ciao Marco!
+</section>

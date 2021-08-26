@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+C doesn't have an **exponentiation** operator, so we have to use the `pow()` function included in the `math.h` library.
+Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+![exponentiation](https://learn-to-code-x.web.app/images/exponentiation.jpg)
+```
+>>> pow(5, 2);
+25
+```
+</section>
+<section id="instructions">
+Calculate the exponentiation between the numbers 5 (base) and 3 (exponent), then print the variable `result`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int result = ","[/]", "(","[/]",", ","[/]",");\nprintf(\"%d\\n\", result);"],
+	"buttons": ["5","3"," % "," * ","625"," ** ", "pow"],
+	"correct": "int result = pow(5, 3);\nprintf(\"%d\\n\", result);"
+}
+</section>
+<section id="preOutput">
+125
+</section>

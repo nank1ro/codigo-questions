@@ -1,0 +1,35 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Avrai potuto considerare la situazione in cui vorresti riutilizzare un pezzo di codice, cambiando solo alcuni valori.
+Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione, che può poi essere utilizzata ripetutamente.
+In C usiamo il `tipo di ritorno` seguito dal nome della funzione, per esempio:
+```
+void saluta() {
+	printf("Ciao!\n");
+}
+
+int main(void) {
+	saluta();
+	// prints "Ciao!"
+	return 0;
+}
+```
+</section>
+<section id="instructions">
+Completa il codice per creare una funzione valida chiamata `saluta` ad un nome specifico
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", "[/]", "(", "[/]", "*nome) {\n\tprintf(\"Ciao ", "[/]", "!\\n\", nome);\n}\n\nint main(void) {\n\tsaluta(", "[/]", ");\n\treturn 0;\n}"],
+	"buttons": ["void ", "saluta", "char ", "string ", "%s", "%c", "nome", "*nome", "\"Tom\""],
+	"correct": "void saluta(char *nome) {\n\tprintf(\"Ciao %s!\\n\", nome);\n}\n\nint main(void) {\n\tsaluta(\"Tom\");\n\treturn 0;\n}"
+}
+</section>
+<section id="preOutput">
+Ciao Tom!
+</section>

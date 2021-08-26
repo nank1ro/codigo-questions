@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Perchè questo codice non è una stringa?
+```
+Ciao Mondo!
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Perchè c'è uno spazio tra le parole", "Perchè le parole sono in maiuscolo", "Perchè non ci sono le doppie virgolette attorno"],
+	"correct": "Perchè non ci sono le doppie virgolette attorno"
+}
+</section>

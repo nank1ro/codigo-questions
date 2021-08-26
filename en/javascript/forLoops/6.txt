@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What type of loop does this code have?
+```
+for (let i = 1; i <= 3; i++) {
+	console.log("loop");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["while","for","if","elif"],
+	"correct": "for"
+}
+</section>

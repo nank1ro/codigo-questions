@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks to create a conditional statement
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", " true {\n\tprint(\"It's True!\")\n}"],
+	"buttons": ["if", "else", "elif", "else if"],
+	"correct": "if true {\n\tprint(\"It's True!\")\n}"
+}
+</section>
+<section id="preOutput">
+It's True!
+</section>

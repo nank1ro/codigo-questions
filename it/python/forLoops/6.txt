@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa la funzione `range()` nel seguente codice per stampare i numeri da `3` a `19`, ma incrementa il passo di `2`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in range(","[/]",", ","[/]",", ","[/]",")",":\n\tprint(i)"],
+	"buttons": ["3","5","19","20","2","1"],
+	"correct": "for i in range(3, 19, 2):\n\tprint(i)"
+}
+</section>
+<section id="preOutput">
+3
+5
+7
+9
+11
+13
+15
+17
+19
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da stampare sempre `Ciao Mondo`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var online = false\nif (online) {\n\tconsole.log(\"Ciao Utente!\");\n}\n","[/]","[/]","[/]","[/]"],
+	"buttons": ["console.log","Print","(",");",":","\"Ciao Mondo\"","Ciao Mondo"],
+	"correct": "var online = false\nif (online) {\n\tconsole.log(\"Ciao Utente!\");\n}\nconsole.log(\"Ciao Mondo\");"
+}
+</section>
+<section id="preOutput">
+Ciao Mondo
+</section>

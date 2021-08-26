@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Vediamo l'operatore della **divisione** `/`.
+Viene utilizzato per dividere due numeri insieme, come:
+```
+>>> 10 / 5
+2
+```
+</section>
+<section id="instructions">
+Calcola il quoziente tra i numeri 40 e 5, quindi stampa la variabile "quoziente"
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int quoziente = ", "[/]", "[/]", "[/]", ";\nprintf(\"%d\\n\", quoziente);"],
+	"buttons": ["40", "5", " + ", " * ", "8", " / "],
+	"correct": "int quoziente = 40 / 5;\nprintf(\"%d\\n\", quoziente);"
+}
+</section>
+<section id="preOutput">
+8
+</section>

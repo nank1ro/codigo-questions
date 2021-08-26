@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the output of the following code?
+```
+let num1 = 10
+print(!(num1 >= 10))
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["True","False","true","false"],
+	"correct": "false"
+}
+</section>

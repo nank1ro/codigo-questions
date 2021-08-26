@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Aggiungi le parti mancanti della stringa formattata.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(","[/]","[/]","La larghezza e' di {50} metri e l'altezza e' di {10} metri","[/]","[/]"],
+	"buttons": [")","(","f","\"","\""],
+	"correct": "print(f\"La larghezza e' di {50} metri e l'altezza e' di {10} metri\")"
+}
+</section>
+<section id="preOutput">
+La larghezza e' di 50 metri e l'altezza e' di 10 metri
+</section>

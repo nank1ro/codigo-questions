@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the code block, stop the loop after running its code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["is_loading = True\n\nwhile is_loading:\n\tprint(\"Loading...\")\n\t","[/]","[/]","[/]"],
+	"buttons": ["True", "False", "is_loading", " = ", " == "],
+	"correct": "is_loading = True\n\nwhile is_loading:\n\tprint(\"Loading...\")\n\tis_loading = False"
+}
+</section>
+<section id="preOutput">
+Loading...
+</section>

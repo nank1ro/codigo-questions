@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+As for arrays, we can loop between dictionary elements using the keywords `for..in`.
+To get both the key and the value in the loop we don't have to specify any property:
+```
+for (key, value) in dictName {
+    print("\(key): \(value)")
+}
+```
+</section>
+<section id="instructions">
+Loop through the dictionary items
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nfor (", "[/]",", ","[/]", ") in ","[/]", " {\n\tprint(\"\\(key) = ","[/]", "\")\n}"],
+	"buttons": ["key","value","value","user", "\"user\"","\\(value)","\\(\"value\")"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nfor (key, value) in user {\n\tprint(\"\\(key) = \\(value)\")\n}"
+}
+</section>
+<section id="preOutput">
+first_name = John
+last_name = Hood
+age = 30
+</section>

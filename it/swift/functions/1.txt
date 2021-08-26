@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Avrai potuto considerare la situazione in cui vorresti riutilizzare un pezzo di codice, cambiando solo alcuni valori.
+Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione, che può poi essere utilizzata ripetutamente.
+In Swift usiamo la parola chiave `func` seguita dal nome della funzione:
+```
+func saluta() {
+	print("Ciao!")
+}
+saluta() // stampa "Ciao!"
+```
+</section>
+<section id="instructions">
+Completa il codice per creare una funzione valida chiamata `saluta`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","(nome: String) {\n\tprint(\"Ciao \\(","[/]",")!\")\n}\nsaluta(nome: \"Tobi\")"],
+	"buttons": ["nome","\"nome\"","func ","function","function","saluta"],
+	"correct": "func saluta(nome: String) {\n\tprint(\"Ciao \\(nome)!\")\n}\nsaluta(nome: \"Tobi\")"
+}
+</section>
+<section id="preOutput">
+Ciao Tobi!
+</section>

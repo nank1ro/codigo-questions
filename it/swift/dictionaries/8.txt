@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Esattamente come per gli array, possiamo fare un ciclo per gli elementi del dizionario usando le parole chiave `for..in`
+Per ottenere sia la chiave che il valore nel ciclo non dobbiamo specificare alcuna proprietà:
+```
+for (chiave, valore) in nomeDizionario {
+    print("\(chiave): \(valore)")
+}
+```
+</section>
+<section id="instructions">
+Passa in rassegna tutti gli elementi del dizionario
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nfor (", "[/]",", ","[/]", ") in ","[/]", " {\n\tprint(\"\\(chiave) = ","[/]", "\")\n}"],
+	"buttons": ["chiave","valore","valore","user", "\"user\"","\\(valore)","\\(\"valore\")"],
+	"correct": "var user: [String: Any] = [\"nome\": \"John\", \"cognome\": \"Hood\", \"eta\": 30]\nfor (chiave, valore) in user {\n\tprint(\"\\(chiave) = \\(valore)\")\n}"
+}
+</section>
+<section id="preOutput">
+nome = John
+cognome = Hood
+eta = 30
+</section>

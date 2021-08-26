@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do you display numeric values with template literals?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["We place them between ${}","We can't display numeric values with Template literalss","We place them between \\[]","We place them between \\{}"],
+	"correct": "We place them between ${}"
+}
+</section>

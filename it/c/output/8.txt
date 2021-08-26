@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa `Internet` come output
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(","[/]",");"],
+	"buttons": ["printf","\"Ciao\"","\"C!\"","Ciao","C!","Internet","\"Internet\""],
+	"correct": "printf(\"Internet\");"
+}
+</section>
+<section id="preOutput">
+Internet
+</section>

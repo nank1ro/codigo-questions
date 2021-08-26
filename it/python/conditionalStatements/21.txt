@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da **NON** eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["online = ","[/]","\nif (online):\n\t","print(\"Ciao Utente!\")"],
+	"buttons": ["True","False","true","false","\"True\"","\"False\""],
+	"correct": "online = False\nif (online):\n\tprint(\"Ciao Utente!\")"
+}
+</section>

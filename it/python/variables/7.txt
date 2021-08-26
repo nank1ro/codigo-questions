@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Imposta `True` come valore a `musica_attiva`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["musica_attiva ","[/]"," True"],
+	"buttons": ["=","+","-","=="],
+	"correct": "musica_attiva = True"
+}
+</section>

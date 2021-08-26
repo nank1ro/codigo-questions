@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Calculate the exponentiation of the numbers 3 (*base*) and 5 (*exponent*), then print the `result`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["int result = ","[/]","(","[/]",", ","[/]",");\nprintf(\"%i\\n\", result);"],
+	"buttons": ["3","5"," - "," * "," ** ", "pow"],
+	"correct": "int result = pow(3, 5);\nprintf(\"%i\\n\", result);"
+}
+</section>
+<section id="preOutput">
+243
+</section>

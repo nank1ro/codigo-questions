@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per ottenere l'output desiderato: `Ciao Python!`
+</section>
+<section id="seedButtons">
+{
+    "buttons": ["print","Ciao"," Python!", "(",")",",","Print","[","]","\"","\""]
+}
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print","[/]","[/]","[/]","[/]","\")"],
+	"buttons": ["print","Ciao"," Python!", "(",")",",","Print","[","]","\"","\""],
+	"correct": "print(\"Ciao Python!\")"
+}
+</section>
+<section id="preOutput">
+Ciao Python!
+</section>

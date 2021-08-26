@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to add a new valid line of code in the code block
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if true {\n\t","[/]","(","[/]",")","\n\tprint(\"Second line\")\n","[/]"],
+	"buttons": ["print","printf","Print","\"First line\"","First line","}"],
+	"correct": "if true {\n\tprint(\"First line\")\n\tprint(\"Second line\")\n}"
+}
+</section>
+<section id="preOutput">
+First line
+Second line
+</section>

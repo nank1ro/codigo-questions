@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per ottenere l'output desiderato: `Ciao C!`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["#include <stdio.h>\n\nint main()\n{\n\t","[/]","(\"","[/]","[/]","\\n\");\n\treturn 0;\n}"],
+	"buttons": ["printf","Ciao"," C!", "(",")",",","Printf","[","]","\"","\""],
+	"correct": "#include <stdio.h>\n\nint main()\n{\n\tprintf(\"Ciao C!\\n\");\n\treturn 0;\n}"
+}
+</section>
+<section id="preOutput">
+Ciao C!
+</section>

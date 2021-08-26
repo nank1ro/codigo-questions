@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Using the *floor division assignment* calculate the floor division of `num` divided by `12`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 55\n","[/]","[/]","[/]","\nprint(num)"],
+	"buttons": ["num ","//= ","=// ","/ ","12","num "],
+	"correct": "num = 55\nnum //= 12\nprint(num)"
+}
+</section>
+<section id="preOutput">
+4
+</section>

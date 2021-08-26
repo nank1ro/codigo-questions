@@ -1,0 +1,34 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+
+<section id="description">
+Possiamo anche dare alle variabili i valori di altre variabili.
+Qui, possiamo dare alla variabile `y` il valore di` x`
+```
+var x = 5
+var y = x
+print(y) // prints 5
+```
+</section>
+<section id="instructions">
+Crea una nuova variabile chiamata `y` e assegnale il valore della variabile` x`.
+</section>
+<section id="seed">
+var x = 1
+// scrivi dopo questa linea
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert":"assert(y == x, \"y deve essere uguale a x\")"
+        }
+    ]
+}
+</section>

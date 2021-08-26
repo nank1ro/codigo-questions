@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per creare un'istruzione condizionale
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", " (true) {\n\tconsole.log(\"È vero!\");\n}"],
+	"buttons": ["if", "else", "elif", "else if"],
+	"correct": "if (true) {\n\tconsole.log(\"È vero!\");\n}"
+}
+</section>
+<section id="preOutput">
+È vero!
+</section>

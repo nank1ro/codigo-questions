@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+The opposite value of `true` is `false`
+</section>
+<section id="instructions">
+Assign the boolean value `false` to the variable `musicOn`, then print its value
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["musicOn = ","[/]","\nprint(","[/]",")"],
+	"buttons": ["false","false","\"false\"","true","musicOn","\"musicOn\""],
+	"correct": "musicOn = false\nprint(musicOn)"
+}
+</section>
+<section id="preOutput">
+false
+</section>

@@ -1,0 +1,24 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+JavaScript allows us to create a class as a child of another, using the `extends` keyword 
+</section>
+<section id="instructions">
+Create a new `Dog` class as sub class of the `Animal` class
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["class Animal {\n\tconstructor(gender, legs = 4) {\n\t\tthis.gender = gender;\n\t\tthis.legs = legs;\n\t}\n\tdescription() {\n\t\tconsole.log(this.gender);\n\t\tconsole.log(this.legs);\n\t}\n}\n","[/]","[/]","[/]","Animal {\n\tspeak() {\n\t  console.log(\"Bau Bau!!\");\n\t}\n}\nlet dog = new ","[/]","(\"female\");\ndog.description();\ndog.speak();"],
+	"buttons": ["class ","Dog","Animal","Dog","()","Dog[]"," extends "],
+	"correct": "class Animal {\n\tconstructor(gender, legs = 4) {\n\t\tthis.gender = gender;\n\t\tthis.legs = legs;\n\t}\n\tdescription() {\n\t\tconsole.log(this.gender);\n\t\tconsole.log(this.legs);\n\t}\n}\nclass Dog extends Animal {\n\tspeak() {\n\t  console.log(\"Bau Bau!!\");\n\t}\n}\nlet dog = new Dog(\"female\");\ndog.description();\ndog.speak();"
+}
+</section>
+<section id="preOutput">
+female
+4
+Bau Bau!!
+</section>

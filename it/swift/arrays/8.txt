@@ -1,0 +1,27 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Gli elementi dell'array possono essere di qualsiasi tipo, se specifichiamo il tipo `Any`:
+```
+var nomeArray: [Any] = ["uno", 2, true]
+```
+Difatti, sopra abbiamo, in quest'ordine, una stringa, un intero e un booleano.
+Ma possiamo anche avere un'array di array, e così via!
+</section>
+<section id="instructions">
+Stampa un valore dell'array
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var array1 = [\"a\", \"b\", \"c\"]\nvar array2 = [\"x\", \"y\", \"z\"]\nvar array3 = [array1, array2]\nprint(", "[/]", ")"],
+	"buttons": ["array3", "array3[[2]]","array3[0][2][0]","array3[1][0]"],
+	"correct": "var array1 = [\"a\", \"b\", \"c\"]\nvar array2 = [\"x\", \"y\", \"z\"]\nvar array3 = [array1, array2]\nprint(array3[1][0])"
+}
+</section>
+<section id="preOutput">
+x
+</section>

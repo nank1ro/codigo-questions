@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Ordina gli elementi per generare il seguente output: `Ciao Swift!`?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["print(", "'Ciao ", "Swift!", "')"],
+	"correct": "print('Ciao Swift!')"
+}
+</section>
+<section id="preOutput">
+Ciao Swift!
+</section>

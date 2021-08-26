@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "c",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+__"Hello, World!"__ e' il primo programma tradizionale per iniziare a programmare in un nuovo linguaggio o ambiente.
+</section>
+
+<section id="instructions">
+Scrivi una funzione che restituisce "Hello, World!".
+</section>
+
+<section id="seed">
+char* hello() {
+  
+}
+</section>
+
+<section id="test">
+int main(void) {
+  assert(strcmp(hello(), "Hello, World!") == 0);
+  return 0;
+}
+</section>

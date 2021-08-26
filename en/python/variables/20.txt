@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's the `=` sign for?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["It divides a number by another number","It gives a value to a variable","It adds string values together","It multiplies a number by another number"],
+	"correct": "It gives a value to a variable"
+}
+</section>

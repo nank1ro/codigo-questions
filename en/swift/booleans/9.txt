@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Store the value `true` in the variable `power`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","[/]","[/]"],
+	"buttons": ["power","\"power\"","\"true\"","true","true"," = "],
+	"correct": "power = true"
+}
+</section>

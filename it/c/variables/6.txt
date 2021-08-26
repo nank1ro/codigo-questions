@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Se vogliamo assegnare piu' parole al nome di una variabile, utilizziamo lo **snake case**.
+Bisogna quindi usare `_` per collegare le parole aggiuntive.
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per creare una variabile *snake case*.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["first","[/]","name"],
+	"buttons": ["+","-","_"],
+	"correct": "first_name"
+}
+</section>

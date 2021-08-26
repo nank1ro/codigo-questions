@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salta il blocco di codice del ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (","[/]",") {\n\tprintf(\"salta\\n\");\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while (false) {\n\tprintf(\"salta\\n\");\n}"
+}
+</section>

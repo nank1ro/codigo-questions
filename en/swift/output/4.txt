@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the empty spaces to produce the following output: `Hello Swift!`?
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","Hello","[/]","[/]"],
+	"buttons": ["print(\""," Swift!","\")"],
+	"correct": "print(\"Hello Swift!\")"
+}
+</section>
+<section id="preOutput">
+Hello Swift!
+</section>

@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Che tipo di ciclo ha questo codice?
+```
+for (int i = 1; i <= 3; i++) {
+	printf("ciclo\n");
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["while","for","if","elif"],
+	"correct": "for"
+}
+</section>

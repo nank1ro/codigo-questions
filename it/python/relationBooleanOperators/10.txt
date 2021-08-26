@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `num` e' uguale a `5.0`, stampando il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["num = 5\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["num ","num ","== ","= ","5.0"],
+	"correct": "num = 5\nprint(num == 5.0)"
+}
+</section>
+<section id="preOutput">
+True
+</section>

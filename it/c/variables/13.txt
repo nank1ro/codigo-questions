@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Usa lo *snake case* per il nome di questa variabile
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["char ","[/]","[] = ","\"Russia\";"],
+	"buttons": ["paese_piu_grande","paesePiuGrande","paesepiugrande"],
+	"correct": "char paese_piu_grande[] = \"Russia\";"
+}
+</section>

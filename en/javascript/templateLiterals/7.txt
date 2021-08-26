@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Template literals are best used in print statements, but we can also store them in variables like normal strings.
+</section>
+<section id="instructions">
+Display the template literal here
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var label = `${2} friends`",";\n","console.log(","[/]",");"],
+	"buttons": ["\"label\"","label"],
+	"correct": "var label = `${2} friends`;\nconsole.log(label);"
+}
+</section>
+<section id="preOutput">
+2 friends
+</section>

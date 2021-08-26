@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display `1` through `8` in the output changing the condition
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["counter = 1\n\nwhile ","[/]","[/]","[/]",":\n\tprint(counter)\n\tcounter += 1"],
+	"buttons": ["counter", " < "," > ", " += ", "9","8"],
+	"correct": "counter = 1\n\nwhile counter < 9:\n\tprint(counter)\n\tcounter += 1"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+4
+5
+6
+7
+8
+</section>

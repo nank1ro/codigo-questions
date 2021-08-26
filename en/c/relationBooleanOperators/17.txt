@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What is the output of the following code?
+```
+int result = 50;
+printf("%d\n", result > 50);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["True", "False", "true", "false", "0", "1"],
+	"correct": "0"
+}
+</section>

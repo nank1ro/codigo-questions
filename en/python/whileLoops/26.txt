@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Inside the code block, stop the loop after running its code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["is_playing = True\n\nwhile is_playing:\n\tprint(\"Playing...\")\n\tis_playing = ","[/]"],
+	"buttons": ["True", "False","\"True\"","\"False\""],
+	"correct": "is_playing = True\n\nwhile is_playing:\n\tprint(\"Playing...\")\n\tis_playing = False"
+}
+</section>
+<section id="preOutput">
+Playing...
+</section>

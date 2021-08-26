@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+What if we want to list all the values of the dictionary?
+Well, these's the `values` property.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nprint(","[/]","[/]" , ")"],
+	"buttons": ["user",".values()",".values",".value",".allValues()"],
+	"correct": "var user: [String: Any] = [\"first_name\": \"John\", \"last_name\": \"Hood\", \"age\": 30]\nprint(user.values)"
+}
+</section>
+<section id="preOutput">
+["John", "Hood", 30]
+</section>

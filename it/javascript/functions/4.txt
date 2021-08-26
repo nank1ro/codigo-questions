@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le funzioni possono avere parametri di ingresso multipli, che vengono scritti tra le parentesi della funzione, separati dalle virgole.
+```
+function saluta(nome, nuovoUtente) {
+  var saluto = `Ciao ${nome}!`;
+  if (nuovoUtente) {
+    saluto += "Benvenuto a bordo :)";
+  }
+  return saluto;
+}
+// prints "Ciao Smith! Benvenuto a bordo :)":)"
+console.log(saluta("Smith", true));
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da creare una funzione valida chiamata `sommaNumeri` passando il seguente array di numeri `[15, 24, 31, 79]` e `true` per stamparne il risultato
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["const riduttore = (accumulatore, valoreCorrente) => accumulatore + valoreCorrente;\n\nfunction sommaNumeri(numeri, ","[/]",") {\n\tlet risultato = numeri.reduce(riduttore);\n\tif (stampaRisultato) { ","[/]","(risultato); }\n\treturn risultato;\n}\n\nlet risultato = ","[/]","([15, 24, 31, ","[/]","], ","[/]",");"],
+	"buttons": ["sommaNumeri","sum","79","]","[","true","false","True","stampaRisultato","console.log","true"],
+	"correct": "const riduttore = (accumulatore, valoreCorrente) => accumulatore + valoreCorrente;\n\nfunction sommaNumeri(numeri, stampaRisultato) {\n\tlet risultato = numeri.reduce(riduttore);\n\tif (stampaRisultato) { console.log(risultato); }\n\treturn risultato;\n}\n\nlet risultato = sommaNumeri([15, 24, 31, 79], true);"
+}
+</section>
+<section id="preOutput">
+149
+</section>

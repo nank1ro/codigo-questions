@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Verifica se `parola` **NON** e' uguale a `cane`, stampa il risultato booleano
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["parola = 'gatto'\n","print(","[/]","[/]","[/]",")"],
+	"buttons": ["parola "," 'cane'","== ","= ","cane","!="],
+	"correct": "parola = 'gatto'\nprint(parola != 'cane')"
+}
+</section>
+<section id="preOutput">
+True
+</section>

@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Il processo decisionale e' necessario quando vogliamo eseguire il codice solo se una certa condizione viene soddisfatta.
+Supponiamo di voler giocare all'aperto solo se il tempo e' bello.
+In programmazione, possiamo salvare una variabile booleana `bel_tempo` ed eseguire l'azione di giocare fuori **solo** se (`if`) questa variabile e' `True`, come:
+```
+bool bel_tempo = true;
+if (bel_tempo) {
+	// giocare fuori
+}
+```
+</section>
+<section id="instructions">
+Creare un'istruzione `if` controllando se `ora` e' inferiore a `12`, poi nel blocco di codice stampare la stringa "Mattina".
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int ora = 8;\n", "[/]", " (ora", "[/]", "12) {\n\tprintf(\"Mattina\\n\");\n}"],
+	"buttons": ["if", " == ", " = ", "else", " ? ", " < "],
+	"correct": "int ora = 8;\nif (ora < 12) {\n\tprintf(\"Mattina\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Mattina
+</section>

@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "swift",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional code?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["struct Animal {","\tvar name: String","}","let dog = Animal(name: \"Max\")","print(dog.name)"],
+	"correct": "struct Animal {\tvar name: String}let dog = Animal(name: \"Max\")print(dog.name)"
+}
+</section>
+<section id="preOutput">
+Max
+</section>

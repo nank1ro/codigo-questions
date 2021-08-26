@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Display the number `1` through `5` by setting the appropriate condition
+</section>
+<section id="seed">
+var number = 1
+
+while  {
+    print(number)
+    number += 1
+}
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "output":"1\n2\n3\n4\n5"
+        }
+    ]
+}
+</section>

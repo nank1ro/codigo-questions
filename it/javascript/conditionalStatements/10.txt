@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti in modo da eseguire il blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["if (","[/]", ") {\n\tconsole.log(\"Esegui Codice\");\n}"],
+	"buttons": ["True","False","true","false","\"True\"","\"False\""],
+	"correct": "if (true) {\n\tconsole.log(\"Esegui Codice\");\n}"
+}
+</section>
+<section id="preOutput">
+Esegui Codice
+</section>

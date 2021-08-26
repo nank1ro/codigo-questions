@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa mostra questo codice nell'output?
+```
+caricamento = True
+
+while caricamento:
+    print("Caricamento...")
+    caricamento = False
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Questo codice non visualizza nulla nell'output", "Caricamento..."],
+	"correct": "Caricamento..."
+}
+</section>

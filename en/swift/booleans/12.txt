@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Store the value `false` in the variable `isOn`
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(isOn == false)"
+        }
+    ]
+}
+</section>

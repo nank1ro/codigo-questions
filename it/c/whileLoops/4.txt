@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+All'interno del blocco di codice, per fermare il ciclo `while`, incrementiamo la variabile `contatore`.
+</section>
+<section id="instructions">
+Incrementa la variabile `contatore` all'interno del blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int contatore = 3;\nwhile (contatore < 5) {\n\tprintf(\"%d\\n\", ", "[/]", ");\n\t", "[/]", "[/]", ";\n}"],
+	"buttons": ["contatore", " +", "= ", "-", "*", "1", "contatore", "++"],
+	"correct": "int contatore = 3;\nwhile (contatore < 5) {\n\tprintf(\"%d\\n\", contatore);\n\tcontatore++;\n}"
+}
+</section>
+<section id="preOutput">
+3
+4
+</section>

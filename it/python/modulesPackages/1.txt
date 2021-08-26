@@ -1,0 +1,17 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Un __modulo__ e' un file che può contenere qualsiasi tipo di codice Python.
+I moduli ci permettono di usare il codice piu' e piu' volte.
+Quale di queste cose potrebbe appartenere a un modulo?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["File","Variabili","Script","Funzioni"],
+	"corrects": ["Variabili","Script","Funzioni"]
+}
+</section>

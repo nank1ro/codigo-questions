@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "python",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Which print statement is part of the statement's code block?
+```
+online = False
+if (online):
+	print("Hello User!")
+print("Hello World")
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["print(\"Hello User!\")","print(Hello User!)","print(\"Hello World\")","print(Hello World)"],
+	"correct": "print(\"Hello User!\")"
+}
+</section>

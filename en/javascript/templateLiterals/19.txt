@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Display the current score between `Manchester United` and `Barcelona`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var manchesterUnited = 0;\nvar barcelona = 1\nconsole.log(`The score is ","[/]","`);"],
+	"buttons": ["${manchesterUnited} : ${barcelona}","manchesterUnited : barcelona","manchesterUnited} : ${barcelona}"],
+	"correct": "var manchesterUnited = 0;\nvar barcelona = 1\nconsole.log(`The score is ${manchesterUnited} : ${barcelona}`);"
+}
+</section>
+<section id="preOutput">
+The score is 0 : 1
+</section>

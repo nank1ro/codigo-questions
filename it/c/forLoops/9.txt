@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", " (", "[/]", "i = ", "[/]", "; i", "[/]", "[/]", "; i++) {\n\t\tprintf(\"ripeti\\n\");\n}"],
+	"buttons": ["loop", "for", "_", "stride", "...", "... <", "0", "3", "let ", " <= ", "int "],
+	"correct": "for (int i = 0; i <= 3; i++) {\n\t\tprintf(\"ripeti\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can use expressions to insert values as often as we like inside the formatted string
+</section>
+<section id="instructions">
+See it here with `2` and then with `8`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["printf(\"%i new friends and %i old friends\\n\", ", "[/]",", ","[/]",");"],
+	"buttons": ["2","8"],
+	"correct": "printf(\"%i new friends and %i old friends\\n\", 2, 8);"
+}
+</section>
+<section id="preOutput">
+2 new friends and 8 old friends
+</section>

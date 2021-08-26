@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual è l'output di questo codice?
+```
+char cibo_preferito[] = "Pizza";
+printf("%s\n", cibo_preferito);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Pizza","cibo_preferito","\"Pizza\""],
+	"correct": "Pizza"
+}
+</section>

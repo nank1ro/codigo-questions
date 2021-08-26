@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+È possibile definire un valore di _default_ per qualsiasi parametro di una funzione assegnando un valore al parametro dopo il suo tipo.
+Se viene definito un valore di default, si può omettere quel parametro quando si chiama la funzione
+```
+function unaFunzione(parametroSenzaDefault, parametroConDefault = 12) {
+	// esegui qui il codice della funzione
+}
+```
+</section>
+<section id="instructions">
+Completa il codice in modo da richiamare la funzione senza l'argomento di _default_
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["function saluta(nome","[/]","[/]",") {\n\tconsole.log(`Ciao ${nome}!`);\n}\n","[/]","();"],
+	"buttons": [" = ","\"Mondo\"","saluta", " == "],
+	"correct": "function saluta(nome = \"Mondo\") {\n\tconsole.log(`Ciao ${nome}!`);\n}\nsaluta();"
+}
+</section>
+<section id="preOutput">
+Ciao Mondo!
+</section>

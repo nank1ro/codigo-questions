@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Cosa c'e' che non va in questo codice?
+```
+for (let i = 4; i <= 20; i += 2) {
+	console.log(i);
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Non c'e' niente che non va nel codice", "Manca la variabile del contatore", "Dovremmo stampare i tra le virgolette"],
+	"correct": "Non c'e' niente che non va nel codice"
+}
+</section>

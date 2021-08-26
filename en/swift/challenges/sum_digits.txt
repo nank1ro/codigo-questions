@@ -1,0 +1,61 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": true
+}
+</section>
+
+<section id="description">
+You're given an integer `N`.
+Write a program to calculate the sum of all the digits of N
+</section>
+
+<section id="instructions">
+Return the sum of digits of `N`
+</section>
+
+<section id="seed">
+func sumDigits() {
+
+}
+</section>
+
+<section id="test">
+import XCTest
+
+class SumDigitsTests: XCTestCase {
+
+    func testSumOfDigits1() {
+        XCTAssertEqual(sumDigits(12345), 15, "Your function should return 15")
+    }
+
+    func testSumOfDigits2() {
+        XCTAssertEqual(sumDigits(57253), 22, "Your function should return 22")
+    }
+
+    func testSumOfDigits3() {
+        XCTAssertEqual(sumDigits(122), 5, "Your function should return 5")
+    }
+
+    func testSumOfDigits4() {
+        XCTAssertEqual(sumDigits(91979997), 60, "Your function should return 60")
+    }
+
+    func testSumOfDigits5() {
+        XCTAssertEqual(sumDigits(2147483647), 46, "Your function should return 46")
+    }
+
+    static var allTests: [(String, (SumDigitsTests) -> () throws -> Void)] {
+        return [
+            ("testSumOfDigits1", testSumOfDigits1),
+            ("testSumOfDigits2", testSumOfDigits2),
+            ("testSumOfDigits3", testSumOfDigits3),
+            ("testSumOfDigits4", testSumOfDigits4),
+            ("testSumOfDigits5", testSumOfDigits5),
+        ]
+    }
+}
+
+XCTMain([testCase(SumDigitsTests.allTests),])
+</section>

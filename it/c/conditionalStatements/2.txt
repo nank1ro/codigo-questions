@@ -1,0 +1,30 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Continuiamo con l'esempio precedente.
+```
+bool bel_tempo = true;
+if (bel_tempo) {
+	// giocare fuori
+}
+```
+Abbiamo visto che l'istruzione `if` esegue il blocco di codice solo se la condizione e' `true`.
+Un'altra cosa importante da considerare e' rappresentata dalle **parantesi graffe** che indica l'inizio di un blocco di codice.
+</section>
+<section id="instructions">
+Sistema l'istruzione `if` aggiungendo le *parantesi graffe* `{}`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int ora = 8;\n", "[/]", " (ora", "[/]", "12) ", "[/]","\n\tprintf(\"Mattina\\n\");\n", "[/]"],
+	"buttons": ["if", " == ", " = ", "else", " ? ", " < ", "{", "}"],
+	"correct": "int ora = 8;\nif (ora < 12) {\n\tprintf(\"Mattina\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Mattina
+</section>

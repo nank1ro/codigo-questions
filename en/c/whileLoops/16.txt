@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Print a string in the code block
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (true) {\n\t","[/]","(\"","[/]","\\n\");\n}"],
+	"buttons": ["print","(",")","\"Hello!\"", "printf", "Hello!"],
+	"correct": "while (true) {\n\tprintf(\"Hello!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Hello!
+Hello!
+Hello!
+Hello!
+...
+</section>

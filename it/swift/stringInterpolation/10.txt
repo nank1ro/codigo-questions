@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come fai a riconoscere un'interpolazione di stringa?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Con i caratteri \\() all'interno della stringa","Con il carattere f alla fine della stringa","Non c'è differenza tra stringa ed interpolazione di stringa"],
+	"correct": "Con i caratteri \\() all'interno della stringa"
+}
+</section>

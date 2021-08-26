@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What happens when the condition of the `while` loop stays `true`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The loop repeats itself forever", "The loop run its code block once","The loop run its code block twice","The loop run its code block thrice"],
+	"correct": "The loop repeats itself forever"
+}
+</section>

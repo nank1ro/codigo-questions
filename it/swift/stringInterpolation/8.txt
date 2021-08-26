@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Le interpolazione di stringhe vengono usate al meglio nelle istruzioni di `print`, ma possiamo anche salvarla in variabili come normali stringhe
+</section>
+<section id="instructions">
+Stampa l'interpolazione di stringa utilizzando la variabile `label`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["let label = \"\\(2) amici\"","\n","print(","[/]",")"],
+	"buttons": ["\"label\"","label"],
+	"correct": "let label = \"\\(2) amici\"\nprint(label)"
+}
+</section>
+<section id="preOutput">
+2 amici
+</section>

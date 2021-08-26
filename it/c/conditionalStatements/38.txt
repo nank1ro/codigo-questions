@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Dove scriviamo l'istruzione `if`?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Tra le parentesi tonde ()","Tra le parantesi quadre []","Tra la parola chiave if e la parentesi graffa aperta {","Prima della parola chiave if"],
+	"correct": "Tra la parola chiave if e la parentesi graffa aperta {"
+}
+</section>

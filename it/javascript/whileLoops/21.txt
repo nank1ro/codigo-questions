@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Come facciamo a sapere che questo ciclo si ferma?
+```
+var caricamento = true;
+
+while (caricamento) {
+    console.log("Caricamento...");
+    caricamento = false;
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["La variabile nel ciclo diventa false", "Il ciclo non si fermerà mai"],
+	"correct": "La variabile nel ciclo diventa false"
+}
+</section>

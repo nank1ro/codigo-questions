@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Che tipo di ciclo ha questo codice?
+```
+for _ in 1...3 {
+	print("ciclo")
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["while","for","if","elif"],
+	"correct": "for"
+}
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa una stringa nel blocco di codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (true) {\n\t","[/]","(\"","[/]","\\n\");\n}"],
+	"buttons": ["print","(",")","\"Ciao!\"", "printf", "Ciao!"],
+	"correct": "while (true) {\n\tprintf(\"Ciao!\\n\");\n}"
+}
+</section>
+<section id="preOutput">
+Ciao!
+Ciao!
+Ciao!
+Ciao!
+...
+</section>

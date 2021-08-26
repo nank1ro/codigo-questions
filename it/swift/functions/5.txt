@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+È possibile utilizzare una tupla come `return` di una funzione, in modo da restituire più valori assieme.
+</section>
+<section id="instructions">
+Completa il codice in modo da creare una funzione valida chiamata `minMax` passando il seguente array di numeri `[15, 24, 31, 79, 44]`.
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["func minMax(array: [Int]) -> ","[/]","min: Int, max: Int","[/]"," {\n\tvar attualeMin = array[0]\n\tvar attualeMax = array[0]\n\tarray.forEach { num in\n\t\tif num < attualeMin {\n\t\t\tattualeMin = num\n\t\t} else if num > attualeMax {\n\t\t\tattualeMax = num\n\t\t}\n\t}\n\treturn ","[/]","[/]",", ","[/]","[/]","\n}\nlet numeri: [Int] = [15, 24, 31, 79, 44]\nprint(minMax(","[/]",": numeri))"],
+	"buttons": ["(",")","[","]","{","}","(",")","array","numeri","attualeMin","attualeMax"],
+	"correct": "func minMax(array: [Int]) -> (min: Int, max: Int) {\n\tvar attualeMin = array[0]\n\tvar attualeMax = array[0]\n\tarray.forEach { num in\n\t\tif num < attualeMin {\n\t\t\tattualeMin = num\n\t\t} else if num > attualeMax {\n\t\t\tattualeMax = num\n\t\t}\n\t}\n\treturn (attualeMin, attualeMax)\n}\nlet numeri: [Int] = [15, 24, 31, 79, 44]\nprint(minMax(array: numeri))"
+}
+</section>
+<section id="preOutput">
+(min: 15, max: 79)
+</section>

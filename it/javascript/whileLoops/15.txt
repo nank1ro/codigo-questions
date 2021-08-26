@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Salta il blocco di codice del ciclo `while`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["while (","[/]",") {\n\tconsole.log(\"salta\");\n}"],
+	"buttons": ["true","false","\"true\"","\"false\""],
+	"correct": "while (false) {\n\tconsole.log(\"salta\");\n}"
+}
+</section>

@@ -1,0 +1,26 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Su Swift possiamo usare il segno `+` per mostrare two o più stringhe assieme, as esempio:
+```
+>>> print("Ciao " + "Swift!")
+Ciao Swift!
+```
+</section>
+<section id="instructions">
+Esegui lo stesso con il codice seguente
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["print(\"Mr.\"","[/]","\" Robot\")"],
+	"buttons": ["+","f","-","="],
+	"correct": "print(\"Mr.\"+\" Robot\")"
+}
+</section>
+<section id="preOutput">
+Mr. Robot
+</section>

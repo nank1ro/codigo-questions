@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Fill in the blanks in order to append a new line of code inside the code block
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["var online = true;\nif (online) {\n\tconsole.log(\"Hello User!\");\n\t","[/]","[/]","[/]","[/]",";\n}"],
+	"buttons": ["console.log","Print","(",")",":","\"Hello World\"","Hello World"],
+	"correct": "var online = true;\nif (online) {\n\tconsole.log(\"Hello User!\");\n\tconsole.log(\"Hello World\");\n}"
+}
+</section>
+<section id="preOutput">
+Hello User!
+Hello World
+</section>

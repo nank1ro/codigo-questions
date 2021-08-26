@@ -1,0 +1,16 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Skip the loop by using `isLoading` inside the `while` condition
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var isLoading = false\n\nwhile ","[/]", " {\n\tprint(\"Loading...\")\n\tisLoading = false\n}"],
+	"buttons": ["true", "false", "isLoading"],
+	"correct": "var isLoading = false\n\nwhile isLoading {\n\tprint(\"Loading...\")\n\tisLoading = false\n}"
+}
+</section>

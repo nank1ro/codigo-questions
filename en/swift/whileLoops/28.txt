@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What causes this program to crash?
+```
+while true {
+    print("repeat")
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["The code has an infinite loop","Nothing causes this code to crash","The while loop doesn't have the correct indentation","The block of code doesn't have the correct indentation"],
+	"correct": "The code has an infinite loop"
+}
+</section>

@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Just like strings, arrays have a **length**.
+An arrays's length is the number of items it contains
+</section>
+<section id="instructions">
+Complete the code in order to print the length of the array
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var numbers = [5, 6, 8, 4];\nconsole.log(","[/]","[/]","[/]",");"],
+	"buttons": ["len","length","numbers", "count","."],
+	"correct": "var numbers = [5, 6, 8, 4];\nconsole.log(numbers.length);"
+}
+</section>
+<section id="preOutput">
+4
+</section>

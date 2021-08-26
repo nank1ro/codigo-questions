@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo memorizzare il valore booleano `true` in una variabile proprio come un numero o una stringa.
+</section>
+<section id="instructions">
+Stampa l'output della variabile `musica_accesa`
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["bool musica_accesa = ", "[/]", ";\nprintf(\"%d\\n\", ", "[/]", ");"],
+	"buttons": ["true", "\"true\"", "musica_accesa", "\"musica_accesa\""],
+	"correct": "bool musica_accesa = true;\nprintf(\"%d\\n\", musica_accesa);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

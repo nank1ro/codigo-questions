@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+We can store the boolean value `True` in a variable just like a number or a string.
+</section>
+<section id="instructions">
+Display the output of the variable `music_on`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["music_on = True\n","print(","[/]",")"],
+	"buttons": ["True","\"True\"","music_on","\"music_on\""],
+	"correct": "music_on = True\nprint(music_on)"
+}
+</section>
+<section id="preOutput">
+True
+</section>

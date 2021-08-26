@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's wrong with this code?
+```
+let pieces = 5
+let label = "we have \(pieces) pieces"
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["We can't save string interpolations in variables","The characters \\() are missing","We can't use variables inside of \\()","Nothing is wrong with the code"],
+	"correct": "Nothing is wrong with the code"
+}
+</section>

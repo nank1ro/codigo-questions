@@ -1,0 +1,20 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What's wrong with this code?
+```
+for i in stride(from:4, through: 20, by: 2) {
+	print(i)
+}
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Nothing is wrong with the code", "The counter variable is missing", "We should print inside the quotes"],
+	"correct": "Nothing is wrong with the code"
+}
+</section>

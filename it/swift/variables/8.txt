@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Qual e' l'output di questo codice?
+```
+let ciboPreferito = "Pizza"
+print(ciboPreferito)
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Pizza","ciboPreferito","\"Pizza\""],
+	"correct": "Pizza"
+}
+</section>

@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What does this code display?
+```
+int friends = 5;
+printf("I have %i friends in total\n", friends);
+```
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["I have 5 friends in total","I have {friends} friends in total","f\"I have {friends} friends in total\""],
+	"correct": "I have 5 friends in total"
+}
+</section>

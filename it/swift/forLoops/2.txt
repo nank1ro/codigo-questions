@@ -1,0 +1,25 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+In un ciclo `for` possiamo specificare quante volte vogliamo che il nostro ciclo si ripeta
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["for i in ","[/]","[/]","4 {\n\tprint(\"\\(i) secondi\")\n}"],
+	"buttons": ["..<","for","loop","\"through\"","0"],
+	"correct": "for i in 0..<4 {\n\tprint(\"\\(i) secondi\")\n}"
+}
+</section>
+<section id="preOutput">
+0 secondi
+1 secondi
+2 secondi
+3 secondi
+</section>

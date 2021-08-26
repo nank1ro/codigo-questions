@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Complete the function to print out the correct result calling the `power` function with a base of `4` and an exponent of `5`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["import Foundation\n\nfunc power(_ base: Double, _ exponent: Double) -> ","[/]"," {\n\treturn pow(base, ","[/]",")\n}\n\nvar ","[/]", ": Double = 4\nvar ","[/]",": Double = ","[/]","\nvar result = ","[/]","(base, exponent)\nprint(\"\\(base) to the power of \\(exponent) is equal to \\(","[/]",")\")"],
+	"buttons": ["5", "base", "exponent", "exp", "power","exponent","Double","Int","power","result"],
+	"correct": "import Foundation\n\nfunc power(_ base: Double, _ exponent: Double) -> Double {\n\treturn pow(base, exponent)\n}\n\nvar base: Double = 4\nvar exponent: Double = 5\nvar result = power(base, exponent)\nprint(\"\\(base) to the power of \\(exponent) is equal to \\(result)\")"
+}
+</section>
+<section id="preOutput">
+4.0 to the power of 5.0 is equal to 1024.0
+</section>

@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+Quali tipi di valori possiamo mostrare assieme nelle stringhe template?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Solo le stringhe","Solo i numeri","Tutti i tipi di valori"],
+	"correct": "Tutti i tipi di valori"
+}
+</section>

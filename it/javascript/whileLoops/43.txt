@@ -1,0 +1,21 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Stampa i numeri partendo dall'`1` al `3` nell'output modificando la condizione
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var numero = 1;\n\ndo {\n\tconsole.log(numero);\n\tnumero += 1;\n} while (numero", "[/]", "3);"],
+	"buttons": [" < "," > "," >= "," <= "],
+	"correct": "var numero = 1;\n\ndo {\n\tconsole.log(numero);\n\tnumero += 1;\n} while (numero <= 3);"
+}
+</section>
+<section id="preOutput">
+1
+2
+3
+</section>

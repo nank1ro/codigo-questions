@@ -1,0 +1,18 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "sortItems"
+}
+</section>
+<section id="instructions">
+Can you order these lines into a functional code?
+</section>
+<section id="sortItems">
+{
+	"buttons": ["var animals = [\"dog\", \"bear\", \"cat\"];", "if (animals.length == 3) {", "\tanimals.push(\"frog\");", "console.log(animals[3]);","}"],
+	"correct": "var animals = [\"dog\", \"bear\", \"cat\"];if (animals.length == 3) {\tanimals.push(\"frog\");}console.log(animals[3]);"
+}
+</section>
+<section id="preOuput">
+frog
+</section>

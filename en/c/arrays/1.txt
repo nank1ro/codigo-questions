@@ -1,0 +1,33 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
+An array stores multiple values of a single type and uses **indexes** to distinguish these values.
+You can assign items to an array with an expression of the form:
+```
+data_type array_name[array_size] = {item1, item2};
+```
+`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
+`array_name` is the name of the variable that stores the items.
+`array_size` is the maximum size that the array can have.
+Finally, `item1` and `item2` are the values that we want to save in the array
+</section>
+<section id="instructions">
+Complete the code in order to create a valid array
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["[/]", "[/]", "[3] = ", "[/]", "2, 4, 6", "[/]", ";\n\nfor (int i = 0; i < 3; i++) {\n\t\tprintf(\"%d\\n\", numbers[i]);\n}"],
+	"buttons": ["numbers", "\"numbers\"", "[", "]", "(", ")", "int ", "{", "}"],
+	"correct": "int numbers[3] = {2, 4, 6};\n\nfor (int i = 0; i < 3; i++) {\n\t\tprintf(\"%d\\n\", numbers[i]);\n}"
+}
+</section>
+<section id="preOutput">
+2
+4
+6
+</section>

@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Possiamo usare le espressioni per inserire i valori quante volte vogliamo all'interno di una stringa formattata
+</section>
+<section id="instructions">
+Prova qui inserendo prima il `2` e poi l'`8`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["printf(\"%i nuovi amici e %i vecchi amici\\n\", ", "[/]",", ","[/]",");"],
+	"buttons": ["2","8"],
+	"correct": "printf(\"%i nuovi amici e %i vecchi amici\\n\", 2, 8);"
+}
+</section>
+<section id="preOutput">
+2 nuovi amici e 8 vecchi amici
+</section>

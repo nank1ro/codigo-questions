@@ -1,0 +1,28 @@
+<section id="options">
+{
+"language": "swift",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Swift e' un linguaggio di programmazione orientato agli oggetti, il che significa che manipola i costrutti di programmazione chiamati oggetti.
+Si può pensare ad un oggetto come ad una singola struttura di dati che contiene sia dati che funzioni; le funzioni di un oggetto sono chiamate i suoi metodi.
+Per esempio, quando richiami:
+```
+nomeDizionario.removeValue(forKey: "nomeChiave")
+```
+Swift controlla se `nomeDizionario` ha un metodo chiamato `removeValue()` (che tutti i dizionari hanno) ed esegue quel metodo se lo trova.
+</section>
+<section id="instructions">
+Richiama il metodo `removeLast()` per rimuovere l'ultimo elemento dall'array
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["var animali = [\"cane\", \"gatto\", \"rana\"]\n","[/]",".","[/]","[/]","\nprint(animali)"],
+	"buttons": ["removeLast","()","animali","[]","removeLast(\"rana\")"],
+	"correct": "var animali = [\"cane\", \"gatto\", \"rana\"]\nanimali.removeLast()\nprint(animali)"
+}
+</section>
+<section id="preOutput">
+["cane", "gatto"]
+</section>

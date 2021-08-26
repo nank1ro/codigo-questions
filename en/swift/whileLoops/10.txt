@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+How do we know when a `while` loop will stop?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["By checking its condition","By checking its keyword","By checking its code block"],
+	"correct": "By checking its condition"
+}
+</section>

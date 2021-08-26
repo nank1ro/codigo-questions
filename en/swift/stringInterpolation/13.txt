@@ -1,0 +1,15 @@
+<section id="options">
+{
+"language": "swift",
+"type": "answerButtons"
+}
+</section>
+<section id="instructions">
+What kinds of values can we display together in string interpolations?
+</section>
+<section id="answerButtons">
+{
+	"buttons": ["Only strings","Only numbers","Any kind of values"],
+	"correct": "Any kind of values"
+}
+</section>

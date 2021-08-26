@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Riempi gli spazi vuoti per ottenere l'output desiderato: `Ciao Python!`
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","Ciao","[/]","[/]"],
+	"buttons": ["print(\""," Python!","\")"],
+	"correct": "print(\"Ciao Python!\")"
+}
+</section>
+<section id="preOutput">
+Ciao Python!
+</section>

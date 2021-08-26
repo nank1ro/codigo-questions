@@ -1,0 +1,19 @@
+<section id="options">
+{
+"language": "c",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Check if `num` is **less than or equal** to `8`, printing the boolean result
+</section>
+<section id="fillEmptySpaces">
+{
+	"seed": ["int num = 7;\nprintf(\"%d\\n\", ", "[/]", "[/]", "[/]", ");"],
+	"buttons": ["num", "\"num\"", " == ", " > ", "num", " >= ", "8", " <= "],
+	"correct": "int num = 7;\nprintf(\"%d\\n\", num <= 8);"
+}
+</section>
+<section id="preOutput">
+1
+</section>

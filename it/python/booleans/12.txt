@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "python",
+"type": "runCode",
+"showRun": false
+}
+</section>
+<section id="instructions">
+Salva il valore `False` nella variabile `attivo`
+</section>
+<section id="seed">
+</section>
+<section id="tests">
+{
+    "tests": [
+        {
+            "type": "assert",
+            "assert": "assert(attivo == False)"
+        }
+    ]
+}
+</section>

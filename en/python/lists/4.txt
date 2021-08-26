@@ -1,0 +1,23 @@
+<section id="options">
+{
+"language": "python",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="description">
+Just like strings, lists have a **length**.
+A list's length is the number of items it contains
+</section>
+<section id="instructions">
+Complete the code in order to print the length of the list
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["numbers = [5, 6, 8, 4]\nprint(","[/]","(numbers))"],
+	"buttons": ["len","str","loop", "for"],
+	"correct": "numbers = [5, 6, 8, 4]\nprint(len(numbers))"
+}
+</section>
+<section id="preOutput">
+4
+</section>

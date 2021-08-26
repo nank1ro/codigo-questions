@@ -1,0 +1,22 @@
+<section id="options">
+{
+"language": "javascript",
+"type": "fillEmptySpaces"
+}
+</section>
+<section id="instructions">
+Completa il ciclo `for` nel seguente codice
+</section>
+<section id="fillEmptySpaces">
+{
+    "seed": ["[/]","(", "[/]", "i = ", "[/]","; i", "[/]", "[/]", "; i++) {\n\tconsole.log(\"ripeti\");\n}"],
+	"buttons": ["loop","for ","_", "stride", "...","... <","0","3", "let ", " <= "],
+	"correct": "for (let i = 0; i <= 3; i++) {\n\tconsole.log(\"ripeti\");\n}"
+}
+</section>
+<section id="preOutput">
+ripeti
+ripeti
+ripeti
+ripeti
+</section>
