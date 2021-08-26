@@ -3,7 +3,7 @@ name: Deploy to Firebase Storage
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
