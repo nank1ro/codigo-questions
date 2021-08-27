@@ -23,11 +23,11 @@ jobs:
         with:
           credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: en
-          destination: ${{ secrets.BUCKET_NAME }}/en
+          destination: ${{ secrets.BUCKET_NAME }}
 
       - id: upload-it
         uses: google-github-actions/upload-cloud-storage@main
         with:
           credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: it
-          destination: ${{ secrets.BUCKET_NAME }}/it
+          destination: ${{ secrets.BUCKET_NAME }}
