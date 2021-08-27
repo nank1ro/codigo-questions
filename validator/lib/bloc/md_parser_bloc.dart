@@ -59,7 +59,10 @@ class MDParserBLoC {
 
     final List<AssertModel>? asserts = _getAssertsFromContent(fileContent);
 
-    final answers = _getAnswersFromContent(fileContent);
+    final answers = _getAnswersFromContent(
+      content: fileContent,
+      isSortItems: frontMatterModel.exerciseType == 4,
+    );
 
     final List<String>? solutions = _getSolutionsFromContent(fileContent);
 
@@ -264,13 +267,25 @@ class MDParserBLoC {
   }
 
   /// Returns all the answers retrieved from the content.
-  List<String>? _getAnswersFromContent(String content) {
+  List<String>? _getAnswersFromContent({
+    required String content,
+    required bool isSortItems,
+  }) {
     final answersContent = _getContentBetweenTag(
       tag: kAnswersTag,
       fullContent: content,
     );
     if (answersContent == null) return null;
-    final answers = _getAllItemsInList(answersContent);
+
+    List<String> answers;
+    if (isSortItems) {
+      answers = _getListOfContentBetweenBackticks(
+        content: answersContent,
+        skipHeadings: true,
+      );
+    } else {
+      answers = _getAllItemsInList(answersContent);
+    }
     return answers;
   }
 

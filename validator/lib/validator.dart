@@ -71,6 +71,13 @@ void _validateExercise({
       model: exerciseModel,
     );
   }
+
+  if (exerciseModel.frontMatterModel.exerciseType == 4) {
+    _runSortItemsTests(
+      exercisePath: exercisePath,
+      model: exerciseModel,
+    );
+  }
 }
 
 /// Validates the front matter
@@ -310,6 +317,26 @@ must contain the error message: $errorMessage""",
       reason: _fancyLogger(
         message:
             "The challenge solution must not be null or empty and must be only one",
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+}
+
+void _runSortItemsTests({
+  required ExerciseModel model,
+  required String exercisePath,
+}) {
+  _testHandler('Verify that the sort items exercise contains valid answers',
+      () {
+    expect(
+      model.answers,
+      allOf([
+        isNot(equals(null)),
+        isNotEmpty,
+      ]),
+      reason: _fancyLogger(
+        message: "The sort items exercise answers must not be null or empty",
         exercisePath: exercisePath,
       ),
     );
