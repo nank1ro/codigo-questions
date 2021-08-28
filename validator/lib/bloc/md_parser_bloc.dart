@@ -24,12 +24,16 @@ class MDParserBLoC {
   final FrontMatterParserService _frontMatterParserService =
       const FrontMatterParserService();
 
+  late String filePath;
+
   /// Parses the entire [file] and returns the
   /// [ExerciseModel] with all the retrieved data.
   Future<ExerciseModel> parse({
     /// The content of the MD file.
     required File file,
   }) async {
+    filePath = file.path.split('..')[1];
+
     final frontMatterModel = await _parseFrontMatter(file.path);
 
     final fileContent = await _getContentFromFile(file);
@@ -135,7 +139,10 @@ class MDParserBLoC {
 
     assert(
       descriptions.length == unitTests.length,
-      'Asserts and unit tests must have the same length. Did you provide both the description and the unit test?',
+      '''
+Asserts and unit tests must have the same length. Did you provide both the description and the unit test?
+Exercise file path: $filePath
+      ''',
     );
 
     return List.generate(

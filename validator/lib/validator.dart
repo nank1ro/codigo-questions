@@ -26,7 +26,6 @@ Future<void> main() async {
     // Get the language directory.
     final languageDir = Directory('${Directory.current.path}/../$language');
 
-    int index = 0;
     // List directory contents, recursing into sub-directories,
     // but not following symbolic links.
     await for (final entity in languageDir.list(
@@ -40,16 +39,11 @@ Future<void> main() async {
 
         // e.g:
         // `/en/c/challenges/atm.md`
-
         final relativePath = entity.path.split('..')[1];
         _validateExercise(
           exerciseModel: exerciseModel,
           exercisePath: relativePath,
         );
-
-        index++;
-
-        //if (index == 10) return;
       }
     }
   }
@@ -72,12 +66,58 @@ void _validateExercise({
     );
   }
 
-  if (exerciseModel.frontMatterModel.exerciseType == 4) {
+  if (exerciseModel.frontMatterModel.exerciseType == 1) {
+    _runCodeTests(
+      exercisePath: exercisePath,
+      model: exerciseModel,
+    );
+  } else if (exerciseModel.frontMatterModel.exerciseType == 4) {
     _runSortItemsTests(
       exercisePath: exercisePath,
       model: exerciseModel,
     );
   }
+
+  _validateSolutions(
+    exerciseType: exerciseModel.frontMatterModel.exerciseType,
+    solutions: exerciseModel.solutions,
+    exercisePath: exercisePath,
+  );
+}
+
+/// Validates the Run Code exercises
+void _runCodeTests({
+  required String exercisePath,
+  required ExerciseModel model,
+}) {
+  _testHandler('Verify that the RunCode exercises contains an output', () {
+    expect(
+      model.output,
+      isNot(equals(null)),
+      reason: _fancyLogger(
+        message: "You must provide an output for the RunCode exercise",
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+}
+
+/// Validates all the solutions
+void _validateSolutions({
+  required int exerciseType,
+  required String exercisePath,
+  List<String>? solutions,
+}) {
+  _testHandler('Verify that there is at least one solution', () {
+    expect(
+      solutions,
+      isNotEmpty,
+      reason: _fancyLogger(
+        message: "You must provide a solution for each exercise",
+        exercisePath: exercisePath,
+      ),
+    );
+  });
 }
 
 /// Validates the front matter
