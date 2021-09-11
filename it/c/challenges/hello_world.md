@@ -28,7 +28,7 @@ char* hello() {
 #include <string.h>
 #include <assert.h>
 
-int main(void) {
+int main() {
 ```
 
 # --asserts--

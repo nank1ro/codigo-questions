@@ -90,16 +90,41 @@ void _runCodeTests({
   required String exercisePath,
   required ExerciseModel model,
 }) {
-  _testHandler('Verify that the RunCode exercises contains an output', () {
-    expect(
-      model.output,
-      isNot(equals(null)),
-      reason: _fancyLogger(
-        message: "You must provide an output for the RunCode exercise",
-        exercisePath: exercisePath,
-      ),
-    );
-  });
+  if (model.frontMatterModel.language == 'c' &&
+      model.codeBeforeAsserts != null) {
+    _testHandler(
+        'Verify that the `C` RunCode exercise, contains the intestation in the before-asserts tag: `int main() {`',
+        () {
+      expect(
+        model.codeBeforeAsserts,
+        contains('int main() {'),
+        reason: _fancyLogger(
+          message:
+              "You must provide the `int main() {` line of code in the before-asserts code",
+          exercisePath: exercisePath,
+        ),
+      );
+    });
+
+    _testHandler(
+        'Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `    return 0;\n}`',
+        () {
+      expect(
+        model.codeAfterAsserts,
+        contains('''    return 0;
+}'''),
+        reason: _fancyLogger(
+          message: """You must provide the
+```
+    return 0;
+}
+```
+lines of code in the after-asserts code""",
+          exercisePath: exercisePath,
+        ),
+      );
+    });
+  }
 }
 
 /// Validates all the solutions
