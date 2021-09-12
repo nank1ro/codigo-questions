@@ -33,17 +33,20 @@ Future<void> main() async {
       followLinks: false,
     )) {
       if (isMDFile(entity)) {
-        final exerciseModel = await parser.parse(file: entity as File);
-
         // The relative path of the exercise:
 
         // e.g:
         // `/en/c/challenges/atm.md`
         final relativePath = entity.path.split('..')[1];
+
+        // if (relativePath == '/en/c/challenges/hello_world.md') {
+        final exerciseModel = await parser.parse(file: entity as File);
+
         _validateExercise(
           exerciseModel: exerciseModel,
           exercisePath: relativePath,
         );
+        // }
       }
     }
   }
@@ -91,12 +94,13 @@ void _runCodeTests({
   required ExerciseModel model,
 }) {
   if (model.frontMatterModel.language == 'c' &&
-      model.codeBeforeAsserts != null) {
+      model.codeBeforeAsserts?.code != null &&
+      model.codeAfterAsserts?.code != null) {
     _testHandler(
         'Verify that the `C` RunCode exercise, contains the intestation in the before-asserts tag: `int main() {`',
         () {
       expect(
-        model.codeBeforeAsserts,
+        model.codeBeforeAsserts!.code,
         contains('int main() {'),
         reason: _fancyLogger(
           message:
@@ -107,12 +111,11 @@ void _runCodeTests({
     });
 
     _testHandler(
-        'Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `    return 0;\n}`',
+        'Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `  return 0;\n}`',
         () {
       expect(
-        model.codeAfterAsserts,
-        contains('''    return 0;
-}'''),
+        model.codeAfterAsserts!.code,
+        contains('''  return 0;\n}'''),
         reason: _fancyLogger(
           message: """You must provide the
 ```

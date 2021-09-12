@@ -265,7 +265,7 @@ Exercise file path: $filePath
   ///
   /// becomes [1, 2]
   List<String> _getAllItemsInList(String content) {
-    final regex = RegExp(r'(?<=- )[^^-]*(^[\n- ]|$)', multiLine: true);
+    final regex = RegExp(r'(?<=- ).*(^[\n- ]|$)', multiLine: true);
     final allMatches = regex.allMatches(content);
     final groups = allMatches.map((e) => e.group(0)).toList();
 
