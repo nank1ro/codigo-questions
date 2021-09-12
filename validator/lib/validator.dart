@@ -92,6 +92,20 @@ void _runCodeTests({
   required String exercisePath,
   required ExerciseModel model,
 }) {
+  _testHandler(
+      '''Verify that run-code exercise contains at least an assert or an output''',
+      () {
+    expect(
+      [model.asserts, model.output],
+      isNot(equals([null, null])),
+      reason: _fancyLogger(
+        message:
+            '''The run-code exercise must contain at least an assert or an output to validate it''',
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+
   if (model.frontMatterModel.language == 'c' &&
       model.codeBeforeAsserts?.code != null &&
       model.codeAfterAsserts?.code != null) {
