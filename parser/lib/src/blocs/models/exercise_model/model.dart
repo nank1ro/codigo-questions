@@ -1,12 +1,12 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../assert_model/model.dart';
-import '../code_model/model.dart';
-import '../frontmatter_model/model.dart';
+import 'package:parser/src/blocs/models/assert_model/model.dart';
+import 'package:parser/src/blocs/models/code_model/model.dart';
+import 'package:parser/src/blocs/models/frontmatter_model/model.dart';
 
 part 'model.freezed.dart';
 part 'model.g.dart';
 
+// ignore_for_file: public_member_api_docs
 @freezed
 class ExerciseModel with _$ExerciseModel {
   const factory ExerciseModel({

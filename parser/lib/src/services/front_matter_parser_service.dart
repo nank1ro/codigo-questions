@@ -1,6 +1,7 @@
 import 'package:front_matter/front_matter.dart' as fm;
 import 'package:yaml/yaml.dart';
 
+// ignore_for_file: public_member_api_docs
 typedef JSON = Map<String, dynamic>;
 
 // Default delimiter for YAML.
