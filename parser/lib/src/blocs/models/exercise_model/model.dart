@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:validator/bloc/models/assert_model/model.dart';
-import 'package:validator/bloc/models/code_model/model.dart';
-import 'package:validator/bloc/models/frontmatter_model/model.dart';
+
+import '../assert_model/model.dart';
+import '../code_model/model.dart';
+import '../frontmatter_model/model.dart';
 
 part 'model.freezed.dart';
 part 'model.g.dart';

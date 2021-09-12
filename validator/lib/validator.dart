@@ -1,22 +1,20 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'package:parser/parser.dart';
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
-import 'package:validator/bloc/md_parser_bloc.dart';
-import 'package:validator/bloc/models/exercise_model/model.dart';
-import 'package:validator/bloc/models/frontmatter_model/model.dart';
 
 /// Returns all the available exercise languages.
 List<String> get locales => ['en', 'it'];
 
 /// The list of currently supported programming languages
 const supportedProgrammingLanguages = <String>{
-  "python",
-  "swift",
-  "bash",
-  "javascript",
-  "c",
+  'python',
+  'swift',
+  'bash',
+  'javascript',
+  'c',
 };
 
 Future<void> main() async {
@@ -97,32 +95,33 @@ void _runCodeTests({
       model.codeBeforeAsserts?.code != null &&
       model.codeAfterAsserts?.code != null) {
     _testHandler(
-        'Verify that the `C` RunCode exercise, contains the intestation in the before-asserts tag: `int main() {`',
+        '''Verify that the `C` RunCode exercise, contains the intestation in the before-asserts tag: `int main() {`''',
         () {
       expect(
         model.codeBeforeAsserts!.code,
         contains('int main() {'),
         reason: _fancyLogger(
           message:
-              "You must provide the `int main() {` line of code in the before-asserts code",
+              '''You must provide the `int main() {` line of code in the before-asserts code''',
           exercisePath: exercisePath,
         ),
       );
     });
 
-    _testHandler(
-        'Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `  return 0;\n}`',
+    _testHandler('''
+Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `  return 0;\n}`''',
         () {
       expect(
         model.codeAfterAsserts!.code,
         contains('''  return 0;\n}'''),
         reason: _fancyLogger(
-          message: """You must provide the
+          message: '''
+You must provide the
 ```
     return 0;
 }
 ```
-lines of code in the after-asserts code""",
+lines of code in the after-asserts code''',
           exercisePath: exercisePath,
         ),
       );
@@ -141,7 +140,7 @@ void _validateSolutions({
       solutions,
       isNotEmpty,
       reason: _fancyLogger(
-        message: "You must provide a solution for each exercise",
+        message: 'You must provide a solution for each exercise',
         exercisePath: exercisePath,
       ),
     );
@@ -159,23 +158,23 @@ void _validateFrontMatter({
       supportedProgrammingLanguages,
       contains(language),
       reason: _fancyLogger(
-        message:
-            "The language provided `$language` is not supported, the currently supported languages are: $supportedProgrammingLanguages.",
+        message: '''
+The language provided `$language` is not supported, the currently supported languages are: $supportedProgrammingLanguages.''',
         exercisePath: exercisePath,
       ),
     );
   });
 
   final languageFromPath = exerciseLanguageFromPath(exercisePath);
-  _testHandler(
-      'Verify that the language is the same to the language retrieved from the exercise path',
+  _testHandler('''
+Verify that the language is the same to the language retrieved from the exercise path''',
       () {
     expect(
       languageFromPath,
       equals(language),
       reason: _fancyLogger(
-        message:
-            "The language provided `$language` is different from the one retrieved from the exercise path: `$languageFromPath`. Did you put the exercise in the correct location?",
+        message: '''
+The language provided `$language` is different from the one retrieved from the exercise path: `$languageFromPath`. Did you put the exercise in the correct location?''',
         exercisePath: exercisePath,
       ),
     );
@@ -190,8 +189,8 @@ void _validateFrontMatter({
       _supportedExerciseTypes,
       contains(exerciseType),
       reason: _fancyLogger(
-        message:
-            "The exercise provided `$exerciseType` is not supported, the currently supported exercise types are: $_supportedExerciseTypes",
+        message: '''
+The exercise provided `$exerciseType` is not supported, the currently supported exercise types are: $_supportedExerciseTypes''',
         exercisePath: exercisePath,
       ),
     );
@@ -206,7 +205,7 @@ void _validateFrontMatter({
         isNot(equals(null)),
         reason: _fancyLogger(
           message:
-              "You have to provide a `difficulty` inside the front matter.",
+              'You have to provide a `difficulty` inside the front matter.',
           exercisePath: exercisePath,
         ),
       );
@@ -214,8 +213,8 @@ void _validateFrontMatter({
         _supportedExerciseDifficulties,
         contains(frontMatterModel.difficulty),
         reason: _fancyLogger(
-          message:
-              "The difficulty provided `${frontMatterModel.difficulty}` is not supported, the currently supported difficulties are: $_supportedExerciseDifficulties",
+          message: '''
+The difficulty provided `${frontMatterModel.difficulty}` is not supported, the currently supported difficulties are: $_supportedExerciseDifficulties''',
           exercisePath: exercisePath,
         ),
       );
@@ -226,7 +225,7 @@ void _validateFrontMatter({
         frontMatterModel.title,
         isNot(equals(null)),
         reason: _fancyLogger(
-          message: "You have to provide a `title` to the challenge",
+          message: 'You have to provide a `title` to the challenge',
           exercisePath: exercisePath,
         ),
       );
@@ -244,7 +243,7 @@ void _runChallengeTests({
       model.description?.trim(),
       isNotEmpty,
       reason: _fancyLogger(
-        message: "You have to provide a `description` to the challenge",
+        message: 'You have to provide a `description` to the challenge',
         exercisePath: exercisePath,
       ),
     );
@@ -255,7 +254,7 @@ void _runChallengeTests({
       model.instructions?.trim(),
       isNotEmpty,
       reason: _fancyLogger(
-        message: "You have to provide `instructions` to the challenge",
+        message: 'You have to provide `instructions` to the challenge',
         exercisePath: exercisePath,
       ),
     );
@@ -266,7 +265,7 @@ void _runChallengeTests({
       model.seed?.code,
       isNotEmpty,
       reason: _fancyLogger(
-        message: "You have to provide a `seed` to the challenge",
+        message: 'You have to provide a `seed` to the challenge',
         exercisePath: exercisePath,
       ),
     );
@@ -274,8 +273,8 @@ void _runChallengeTests({
       model.seed?.language,
       supportedProgrammingLanguages.contains,
       reason: _fancyLogger(
-        message:
-            "You have to provide a supported language code to the `seed`. The supported languages are $supportedProgrammingLanguages",
+        message: '''
+You have to provide a supported language code to the `seed`. The supported languages are $supportedProgrammingLanguages''',
         exercisePath: exercisePath,
       ),
     );
@@ -290,8 +289,8 @@ void _runChallengeTests({
         isNotEmpty,
       ]),
       reason: _fancyLogger(
-        message:
-            "Your `before asserts` code must not be empty. If you don't want to add it, remove the tag.",
+        message: """
+Your `before asserts` code must not be empty. If you don't want to add it, remove the tag.""",
         exercisePath: exercisePath,
       ),
     );
@@ -302,8 +301,8 @@ void _runChallengeTests({
         supportedProgrammingLanguages.contains,
       ]),
       reason: _fancyLogger(
-        message:
-            "Your `before asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python",
+        message: '''
+Your `before asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python''',
         exercisePath: exercisePath,
       ),
     );
@@ -318,8 +317,8 @@ void _runChallengeTests({
         isNotEmpty,
       ]),
       reason: _fancyLogger(
-        message:
-            "Your `after asserts` code must not be empty. If you don't want to add it, remove the tag.",
+        message: """
+Your `after asserts` code must not be empty. If you don't want to add it, remove the tag.""",
         exercisePath: exercisePath,
       ),
     );
@@ -330,8 +329,8 @@ void _runChallengeTests({
         supportedProgrammingLanguages.contains,
       ]),
       reason: _fancyLogger(
-        message:
-            "Your `after asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python",
+        message: '''
+Your `after asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python''',
         exercisePath: exercisePath,
       ),
     );
@@ -345,14 +344,14 @@ void _runChallengeTests({
         isNotEmpty,
       ]),
       reason: _fancyLogger(
-        message: "The challenge asserts must not be null or empty",
+        message: 'The challenge asserts must not be null or empty',
         exercisePath: exercisePath,
       ),
     );
   });
 
-  _testHandler(
-      'Verify that the challenge unit tests (asserts) contains the `--err-t{testNumber}--` message',
+  _testHandler('''
+Verify that the challenge unit tests (asserts) contains the `--err-t{testNumber}--` message''',
       () {
     for (var i = 0; i < (model.asserts?.length ?? 0); i++) {
       final errorMessage = '--err-t${i + 1}--';
@@ -361,12 +360,12 @@ void _runChallengeTests({
         unitTest,
         contains(errorMessage),
         reason: _fancyLogger(
-          message: """
+          message: '''
 The challenge unit test:
 ```
 $unitTest
 ```
-must contain the error message: $errorMessage""",
+must contain the error message: $errorMessage''',
           exercisePath: exercisePath,
         ),
       );
@@ -383,8 +382,8 @@ must contain the error message: $errorMessage""",
         hasLength(1),
       ]),
       reason: _fancyLogger(
-        message:
-            "The challenge solution must not be null or empty and must be only one",
+        message: '''
+The challenge solution must not be null or empty and must be only one''',
         exercisePath: exercisePath,
       ),
     );
@@ -404,7 +403,7 @@ void _runSortItemsTests({
         isNotEmpty,
       ]),
       reason: _fancyLogger(
-        message: "The sort items exercise answers must not be null or empty",
+        message: 'The sort items exercise answers must not be null or empty',
         exercisePath: exercisePath,
       ),
     );
@@ -421,7 +420,7 @@ bool isMDFile(FileSystemEntity entity) {
 /// It must take a path like this:
 /// `/en/python/challenges/atm.md`
 bool isAChallenge(String relativePath) {
-  final Uri path = Uri(path: relativePath);
+  final path = Uri(path: relativePath);
   return path.pathSegments[2] == 'challenges';
 }
 
@@ -430,7 +429,7 @@ bool isAChallenge(String relativePath) {
 ///
 /// it returns `python`.
 String exerciseLanguageFromPath(String relativePath) {
-  final Uri path = Uri(path: relativePath);
+  final path = Uri(path: relativePath);
   return path.pathSegments[1];
 }
 
@@ -461,8 +460,9 @@ String _fancyLogger({
 }) {
   final lines = message.split('\n');
 
-  // add the exercise path message to the list, to check if this is the longest line
-  final exerciseMessage = "Exercise relative path => $exercisePath";
+  // add the exercise path message to the list,
+  // to check if this is the longest line
+  final exerciseMessage = 'Exercise relative path => $exercisePath';
   lines.add(exerciseMessage);
 
   final maxLineLength = lines.map((e) => e.length).reduce(max);
