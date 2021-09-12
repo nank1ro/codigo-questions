@@ -32,7 +32,7 @@ Future<void> main() async {
     )) {
       final relativePath = getRelativePath(entity);
       if (isAnExerciseDirectory(entity, relativePath)) {
-        _validateExerciseDirectory(
+        await _validateExerciseDirectory(
           directory: entity as Directory,
           relativePath: relativePath,
           parser: parser,
@@ -412,11 +412,11 @@ void _runSortItemsTests({
 }
 
 /// Checks if the directory has a consisten structure of the files.
-void _validateExerciseDirectory({
+Future<void> _validateExerciseDirectory({
   required Directory directory,
   required String relativePath,
   required MDParserBLoC parser,
-}) {
+}) async {
   final files = directory.listSync(followLinks: false);
   final totalMDFiles = files.where(isMDFile).toList()
     // Sort the files
@@ -428,10 +428,16 @@ void _validateExerciseDirectory({
       ),
     );
 
-  bool lastFileHasDescription = false;
+  // A map with the file name `1.md` with a boolean indicating
+  // if the file has a description or not.
+  final filesHaveDescription = <String, bool>{};
 
   for (var i = 0; i < totalMDFiles.length; i++) {
     final fileName = path.basename(totalMDFiles[i].path);
+
+    final exerciseModel = await parser.parse(file: totalMDFiles[i] as File);
+    filesHaveDescription[fileName] = exerciseModel.description != null;
+
     _testHandler('Verify that the MD files are in order', () {
       expect(
         fileName,
@@ -447,25 +453,34 @@ But the file `$fileName` is not in order.
         ),
       );
     });
+  }
+
+  final entries = filesHaveDescription.entries.toList();
+  for (var i = 0; i < filesHaveDescription.length - 1; i++) {
+    final entry = entries[i];
+    final currentHasDescription = entry.value;
+
+    final nextEntry = entries[i + 1];
+    final nextHasDescription = nextEntry.value;
 
     _testHandler('''
 Verify that the exercises with a description come before the ones without''',
         () async {
-      final exerciseModel = await parser.parse(file: totalMDFiles[i] as File);
-      lastFileHasDescription = exerciseModel.description != null;
-      if (!lastFileHasDescription) {
-        expect(
-          exerciseModel.description,
-          equals(null),
-          reason: _fancyLogger(
-            message: '''
-The exercises with a description must be put before the ones without.
-But `$fileName` doesn't have a description.
-''',
-            exercisePath: relativePath,
+      expect(
+        [currentHasDescription, nextHasDescription],
+        isNot(
+          equals(
+            [false, true],
           ),
-        );
-      }
+        ),
+        reason: _fancyLogger(
+          message: '''
+The exercises with a description must be put before the ones without.
+But `${entry.key}` doesn't have a description while ${nextEntry.key} has one.
+''',
+          exercisePath: relativePath,
+        ),
+      );
     });
   }
 }
