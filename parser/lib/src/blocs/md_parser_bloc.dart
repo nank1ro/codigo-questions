@@ -1,12 +1,18 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:validator/bloc/models/assert_model/model.dart';
-import 'package:validator/bloc/models/code_model/model.dart';
-import 'package:validator/bloc/models/exercise_model/model.dart';
-import 'package:validator/bloc/models/frontmatter_model/model.dart';
-import 'package:validator/services/front_matter_parser_service.dart';
+import 'package:parser/src/blocs/models/assert_model/model.dart';
+import 'package:parser/src/blocs/models/code_model/model.dart';
+import 'package:parser/src/blocs/models/exercise_model/model.dart';
+import 'package:parser/src/blocs/models/frontmatter_model/model.dart';
+import 'package:parser/src/services/front_matter_parser_service.dart';
 
+export 'models/assert_model/model.dart';
+export 'models/code_model/model.dart';
+export 'models/exercise_model/model.dart';
+export 'models/frontmatter_model/model.dart';
+
+// ignore_for_file: public_member_api_docs
 const String kDescriptionTag = '# --description--';
 const String kInstructionsTag = '# --instructions--';
 const String kAssertsTag = '# --asserts--';
@@ -18,18 +24,22 @@ const String kAfterAssertsTag = '# --after-asserts--';
 const String kOutputTag = '# --output--';
 final RegExp languageCodeRegex = RegExp('(?<=```).+');
 
-/// Parses the md [fileContent] with its [parse] method,
-/// returning an [exerciseModel].
+/// Parses the md `fileContent`  with its [parse] method,
+/// returning an `exerciseModel`.
 class MDParserBLoC {
   final FrontMatterParserService _frontMatterParserService =
       const FrontMatterParserService();
 
+  late String filePath;
+
   /// Parses the entire [file] and returns the
-  /// [ExerciseModel] with all the retrieved data.
+  /// `ExerciseModel` with all the retrieved data.
   Future<ExerciseModel> parse({
     /// The content of the MD file.
     required File file,
   }) async {
+    filePath = file.path.split('..')[1];
+
     final frontMatterModel = await _parseFrontMatter(file.path);
 
     final fileContent = await _getContentFromFile(file);
@@ -57,14 +67,14 @@ class MDParserBLoC {
     final codeAfterAsserts =
         _getCodeBetweenTag(fileContent: fileContent, tag: kAfterAssertsTag);
 
-    final List<AssertModel>? asserts = _getAssertsFromContent(fileContent);
+    final asserts = _getAssertsFromContent(fileContent);
 
     final answers = _getAnswersFromContent(
       content: fileContent,
       isSortItems: frontMatterModel.exerciseType == 4,
     );
 
-    final List<String>? solutions = _getSolutionsFromContent(fileContent);
+    final solutions = _getSolutionsFromContent(fileContent);
 
     return ExerciseModel(
       frontMatterModel: frontMatterModel,
@@ -135,7 +145,10 @@ class MDParserBLoC {
 
     assert(
       descriptions.length == unitTests.length,
-      'Asserts and unit tests must have the same length. Did you provide both the description and the unit test?',
+      '''
+Asserts and unit tests must have the same length. Did you provide both the description and the unit test?
+Exercise file path: $filePath
+      ''',
     );
 
     return List.generate(
@@ -157,7 +170,7 @@ class MDParserBLoC {
   ///         self.assertEqual(hello(), "Hello, World!", "--err-t1--")
   /// ```
   ///
-  /// if this method is called with [skipHeadings] set to [false], then
+  /// if this method is called with [skipHeadings] set to `false`, then
   /// the return List is: `[The function should return "Hello, World!".]`
   ///
   /// Otherwise, if the [skipHeadings] is set to true, the returned List is:
@@ -185,7 +198,7 @@ class MDParserBLoC {
         if (encodedValue.trim().isNotEmpty) {
           result.update(
             index,
-            (prev) => "$prev\n$encodedValue",
+            (prev) => '$prev\n$encodedValue',
             ifAbsent: () => encodedValue,
           );
         }
@@ -203,7 +216,8 @@ class MDParserBLoC {
     return utf8.decode(encoded);
   }
 
-  /// Returns the language declared in the code, in order to highlight it properly.
+  /// Returns the language declared in the code, in order to highlight
+  /// it properly.
   ///
   /// e.g. => given this code:
   /// ```javascript
@@ -258,7 +272,7 @@ class MDParserBLoC {
   ///
   /// becomes [1, 2]
   List<String> _getAllItemsInList(String content) {
-    final regex = RegExp(r'(?<=- )[^^-]*(^[\n- ]|$)', multiLine: true);
+    final regex = RegExp(r'(?<=- ).*(^[\n- ]|$)', multiLine: true);
     final allMatches = regex.allMatches(content);
     final groups = allMatches.map((e) => e.group(0)).toList();
 
