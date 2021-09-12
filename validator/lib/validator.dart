@@ -30,13 +30,14 @@ Future<void> main() async {
       recursive: true,
       followLinks: false,
     )) {
-      if (isMDFile(entity)) {
-        // The relative path of the exercise:
-
-        // e.g:
-        // `/en/c/challenges/atm.md`
-        final relativePath = entity.path.split('..')[1];
-
+      final relativePath = getRelativePath(entity);
+      if (isAnExerciseDirectory(entity, relativePath)) {
+        _validateExerciseDirectory(
+          directory: entity as Directory,
+          relativePath: relativePath,
+          parser: parser,
+        );
+      } else if (isMDFile(entity)) {
         // if (relativePath == '/en/c/challenges/hello_world.md') {
         final exerciseModel = await parser.parse(file: entity as File);
 
@@ -410,10 +411,80 @@ void _runSortItemsTests({
   });
 }
 
+/// Checks if the directory has a consisten structure of the files.
+void _validateExerciseDirectory({
+  required Directory directory,
+  required String relativePath,
+  required MDParserBLoC parser,
+}) {
+  final files = directory.listSync(followLinks: false);
+  final totalMDFiles = files.where(isMDFile).toList()
+    // Sort the files
+    ..sort(
+      (a, b) => int.parse(getFileNameWithoutExtension(a.path)).compareTo(
+        int.parse(
+          getFileNameWithoutExtension(b.path),
+        ),
+      ),
+    );
+
+  bool lastFileHasDescription = false;
+
+  for (var i = 0; i < totalMDFiles.length; i++) {
+    final fileName = path.basename(totalMDFiles[i].path);
+    _testHandler('Verify that the MD files are in order', () {
+      expect(
+        fileName,
+        equals('${i + 1}.md'),
+        reason: _fancyLogger(
+          message: '''
+The MD files must be in order, for example:
+[1.md, 2.md, 3.md]
+
+But the file `$fileName` is not in order.
+''',
+          exercisePath: relativePath,
+        ),
+      );
+    });
+
+    _testHandler('''
+Verify that the exercises with a description come before the ones without''',
+        () async {
+      final exerciseModel = await parser.parse(file: totalMDFiles[i] as File);
+      lastFileHasDescription = exerciseModel.description != null;
+      if (!lastFileHasDescription) {
+        expect(
+          exerciseModel.description,
+          equals(null),
+          reason: _fancyLogger(
+            message: '''
+The exercises with a description must be put before the ones without.
+But `$fileName` doesn't have a description.
+''',
+            exercisePath: relativePath,
+          ),
+        );
+      }
+    });
+  }
+}
+
+/// Returns if the provided [entity] is an exercise [Directory]
+bool isAnExerciseDirectory(FileSystemEntity entity, String relativePath) {
+  return entity is Directory && !isAChallenge(relativePath);
+}
+
 /// Returns if the provided [entity] is a [File] ending the [.md] extension.
 bool isMDFile(FileSystemEntity entity) {
   return entity is File && path.extension(entity.path) == '.md';
 }
+
+/// The relative path of the exercise:
+
+/// e.g:
+/// `/en/c/challenges/atm.md`
+String getRelativePath(FileSystemEntity entity) => entity.path.split('..')[1];
 
 /// Tells if the exercise is a challenge
 ///
@@ -421,8 +492,15 @@ bool isMDFile(FileSystemEntity entity) {
 /// `/en/python/challenges/atm.md`
 bool isAChallenge(String relativePath) {
   final path = Uri(path: relativePath);
-  return path.pathSegments[2] == 'challenges';
+  return path.pathSegments.length >= 3 && path.pathSegments[2] == 'challenges';
 }
+
+/// Returns the file name, see [path.basename]
+String getFileName(String filePath) => path.basename(filePath);
+
+/// Returns the file name without the extension, see [path.basename]
+String getFileNameWithoutExtension(String filePath) =>
+    getFileName(filePath).split('.').first;
 
 /// Returns the exercise language, for example for:
 /// `/en/python/challenges/atm.md`
