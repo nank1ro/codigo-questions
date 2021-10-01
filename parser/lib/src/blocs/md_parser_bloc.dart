@@ -38,7 +38,11 @@ class MDParserBLoC {
     /// The content of the MD file.
     required File file,
   }) async {
-    filePath = file.path.split('..')[1];
+    if (file.path.contains('..')) {
+      filePath = file.path.split('..')[1];
+    } else {
+      filePath = file.path;
+    }
 
     final frontMatterModel = await _parseFrontMatter(file.path);
 
