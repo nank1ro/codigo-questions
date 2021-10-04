@@ -12,12 +12,14 @@
 
 ## Issue link
 
+<!--
 If your PR closes an issue, use the `closes` keyword followed
 by its link, for example: 
 
 > closes https://github.com/nank1ro/codigo-questions/issues/{ISSUE_NUMBER}
 
 replacing `{ISSUE_NUMBER}` with the number, like: `1`
+-->
 
 ## Type of Change
 
