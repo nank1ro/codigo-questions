@@ -199,13 +199,11 @@ Exercise file path: $filePath
       }
       if (!_skip && !containsCodeOperator) {
         final encodedValue = _parseToUtf8(val);
-        if (encodedValue.trim().isNotEmpty) {
-          result.update(
-            index,
-            (prev) => '$prev\n$encodedValue',
-            ifAbsent: () => encodedValue,
-          );
-        }
+        result.update(
+          index,
+          (prev) => '$prev\n$encodedValue',
+          ifAbsent: () => encodedValue,
+        );
       } else if (_skip) {
         index++;
       }
