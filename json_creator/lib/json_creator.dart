@@ -25,7 +25,9 @@ Future<void> main() async {
     };
 
     final curriculum = File('${Directory.current.path}/../curriculum.json');
-    await curriculum.writeAsString(jsonEncode(resultingMap));
+    const encoder = JsonEncoder.withIndent('  ');
+
+    await curriculum.writeAsString(encoder.convert(resultingMap));
   }
 
   final parser = MDParserBLoC();
@@ -45,8 +47,8 @@ Future<void> main() async {
     )) {
       // Skip directories
       if (entity is Directory) continue;
-      // Skip all .txt files cause the're deprecated
-      if (extension(entity.path) == '.txt') continue;
+      // Skip all non .md files
+      if (extension(entity.path) != '.md') continue;
 
       final relativePath = _getRelativePath(entity);
       final languageName = relativePath.split('/')[2];
