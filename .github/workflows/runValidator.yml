@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd validator
+          cd ./validator
           dart pub get
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
@@ -45,7 +45,8 @@ jobs:
       # Create the curriculum.json file
       - name: Create curriculum.json
         run: |
-          cd ../json_creator
+          cd ..
+          cd ./json_creator
           dart pub get
           dart run lib/json_creator.dart
 
