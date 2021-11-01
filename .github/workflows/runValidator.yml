@@ -5,14 +5,16 @@
 
 name: Validate exercises
 
+# Only trigger, when the build curriculum succeeded
 on:
-  push:
-    branches: [ main ]
-  pull_request:
+  workflow_run:
+    workflows: ["Build curriculum"]
+    types: [completed]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     defaults:
       run:
         working-directory: ./validator
@@ -25,7 +27,7 @@ jobs:
       # https://github.com/dart-lang/setup-dart/blob/main/README.md
       # - uses: dart-lang/setup-dart@v1
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-      
+
       - name: Install dependencies
         run: dart pub get
 
