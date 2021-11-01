@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./
+        working-directory: ./validator
 
     steps:
       - uses: actions/checkout@v2
@@ -41,11 +41,11 @@ jobs:
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
       - name: Run tests
-        run: dart test validator/lib/validator.dart --chain-stack-traces
+        run: dart test lib/validator.dart --chain-stack-traces
 
       # Create the curriculum.json file
       - name: Create curriculum.json
-        run: dart run json_creator/lib/json_creator.dart
+        run: dart run ../json_creator/lib/json_creator.dart
 
       # Used to auto-commit the curriculum.json file
       - uses: stefanzweifel/git-auto-commit-action@v4
