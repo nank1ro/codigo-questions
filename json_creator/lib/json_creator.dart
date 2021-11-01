@@ -25,6 +25,7 @@ Future<void> main() async {
     };
 
     final curriculum = File('${Directory.current.path}/../curriculum.json');
+    // Prettify the json.
     const encoder = JsonEncoder.withIndent('  ');
 
     await curriculum.writeAsString(encoder.convert(resultingMap));
