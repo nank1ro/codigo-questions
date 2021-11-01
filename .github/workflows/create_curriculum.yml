@@ -31,10 +31,7 @@ jobs:
 
       # Create the curriculum.json file
       - name: Create curriculum.json
-        run: |
-          cd ./json_creator
-          dart pub get
-          dart run lib/json_creator.dart
+        run: dart run lib/json_creator.dart
 
       # Used to auto-commit the curriculum.json file
       - uses: stefanzweifel/git-auto-commit-action@v4
