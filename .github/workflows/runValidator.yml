@@ -27,6 +27,9 @@ jobs:
         run: |
           cd ./validator
           dart pub get
+          cd ../json_creator
+          dart pub get
+          cd ../validator
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
@@ -47,7 +50,6 @@ jobs:
         run: |
           cd ..
           cd ./json_creator
-          dart pub get
           dart run lib/json_creator.dart
 
       # Used to auto-commit the curriculum.json file
