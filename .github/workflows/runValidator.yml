@@ -13,9 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./validator
 
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +24,9 @@ jobs:
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
 
       - name: Install dependencies
-        run: dart pub get
+        run: |
+          cd validator
+          dart pub get
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
@@ -45,7 +44,9 @@ jobs:
 
       # Create the curriculum.json file
       - name: Create curriculum.json
-        run: dart run ../json_creator/lib/json_creator.dart
+        run: |
+          cd ../json_creator
+          dart run lib/json_creator.dart
 
       # Used to auto-commit the curriculum.json file
       - uses: stefanzweifel/git-auto-commit-action@v4
