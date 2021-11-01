@@ -42,3 +42,4 @@ jobs:
           # Optional glob pattern of files which should be added to the commit
           # Defaults to all (.)
           file_pattern: curriculum.json
+          push_options: "--force"
