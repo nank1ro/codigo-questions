@@ -46,6 +46,7 @@ jobs:
       - name: Create curriculum.json
         run: |
           cd ../json_creator
+          dart pub get
           dart run lib/json_creator.dart
 
       # Used to auto-commit the curriculum.json file
