@@ -39,12 +39,13 @@ jobs:
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
       - name: Run tests
-        run: dart test lib/validator.dart --chain-stack-traces
+        run: |
+          cd ./validator
+          dart test lib/validator.dart --chain-stack-traces
 
       # Create the curriculum.json file
       - name: Create curriculum.json
         run: |
-          cd ..
           cd ./json_creator
           dart pub get
           dart run lib/json_creator.dart
