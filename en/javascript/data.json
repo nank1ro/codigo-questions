@@ -1,0 +1,47 @@
+{
+	"output": {
+		"order": 1
+	},
+	"templateLiterals": {
+		"order": 2
+	},
+	"variables": {
+		"order": 3
+	},
+	"booleans": {
+		"order": 4
+	},
+	"arithmeticOperators": {
+		"order": 5
+	},
+	"assignmentOperators": {
+		"order": 6
+	},
+	"comparisonLogicalOperators": {
+		"order": 7
+	},
+	"conditionalStatements": {
+		"order": 8
+	},
+	"whileLoops": {
+		"order": 9
+	},
+	"forLoops": {
+		"order": 10
+	},
+	"arrays": {
+		"order": 11
+	},
+	"objects": {
+		"order": 12,
+		"isPro": true
+	},
+	"functions": {
+		"order": 13,
+		"isPro": true
+	},
+	"classes": {
+		"order": 14,
+		"isPro": true
+	}
+}
