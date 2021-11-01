@@ -43,3 +43,4 @@ jobs:
           # Defaults to all (.)
           file_pattern: curriculum.json
           push_options: "--force"
+          skip_dirty_check: true
