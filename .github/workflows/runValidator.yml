@@ -5,10 +5,12 @@
 
 name: Validate exercises
 
+# Only trigger, when the build curriculum succeeded
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_run:
+    workflows: ["Build curriculum"]
+    types:
+      - completed
 
 jobs:
   build:
