@@ -13,6 +13,9 @@ on:
 jobs:
   build_curriculum:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.head_ref }}
+      cancel-in-progress: true
     defaults:
       run:
         working-directory: ./json_creator
@@ -46,6 +49,9 @@ jobs:
   validate_exercises:
     needs: build_curriculum
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.head_ref }}
+      cancel-in-progress: true
     defaults:
       run:
         working-directory: ./validator
