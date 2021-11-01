@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:json_creator/src/models/argument.dart';
@@ -19,18 +20,12 @@ Future<void> main() async {
 
   /// Saves the result in a JSON format.
   Future<void> saveResultInJSON(List<LanguageLocale> results) async {
-    for (var i = 0; i < results.length; i++) {
-      final res = results[i];
-      var resultingJsonString = '${res.locale}: ${res.languages}';
+    final resultingMap = <String, dynamic>{
+      for (final res in results) res.locale: res.languages,
+    };
 
-// If it's not the last index, add a comma after the locale.
-      if (i != results.length - 1) {
-        resultingJsonString += ',';
-      }
-
-      final curriculum = File('${Directory.current.path}/../curriculum.json');
-      await curriculum.writeAsString(resultingJsonString);
-    }
+    final curriculum = File('${Directory.current.path}/../curriculum.json');
+    await curriculum.writeAsString(jsonEncode(resultingMap));
   }
 
   final parser = MDParserBLoC();
