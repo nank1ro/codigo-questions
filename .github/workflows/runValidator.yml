@@ -3,11 +3,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Validate exercises
+name: Validate exercises and build curriculum.json
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./validator
+        working-directory: ./
 
     steps:
       - uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
       # https://github.com/dart-lang/setup-dart/blob/main/README.md
       # - uses: dart-lang/setup-dart@v1
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-      
+
       - name: Install dependencies
         run: dart pub get
 
@@ -41,4 +41,18 @@ jobs:
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
       - name: Run tests
-        run: dart test lib/validator.dart --chain-stack-traces
+        run: dart test validator/lib/validator.dart --chain-stack-traces
+
+      # Create the curriculum.json file
+      - name: Create curriculum.json
+        run: dart run json_creator/lib/json_creator.dart
+
+      # Used to auto-commit the curriculum.json file
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional, but recommended
+          # Defaults to "Apply automatic changes"
+          commit_message: Add builded curriculum.json
+          # Optional glob pattern of files which should be added to the commit
+          # Defaults to all (.)
+          file_pattern: curriculum.json
