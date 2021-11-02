@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Build and validate
+name: Validate and build
 
 on:
   push:
@@ -11,43 +11,7 @@ on:
   pull_request:
 
 jobs:
-  build_curriculum:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.head_ref }}
-      cancel-in-progress: true
-    defaults:
-      run:
-        working-directory: ./json_creator
-
-    steps:
-      - uses: actions/checkout@v2
-
-      # Note: This workflow uses the latest stable version of the Dart SDK.
-      # You can specify other versions if desired, see documentation here:
-      # https://github.com/dart-lang/setup-dart/blob/main/README.md
-      # - uses: dart-lang/setup-dart@v1
-      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-
-      - name: Install dependencies
-        run: dart pub get
-
-      # Create the curriculum.json file
-      - name: Create curriculum.json
-        run: dart run lib/json_creator.dart
-
-      # Used to auto-commit the curriculum.json file
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          # Optional, but recommended
-          # Defaults to "Apply automatic changes"
-          commit_message: build curriculum
-          # Optional glob pattern of files which should be added to the commit
-          # Defaults to all (.)
-          file_pattern: curriculum.json
-
   validate_exercises:
-    needs: build_curriculum
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.head_ref }}
@@ -81,3 +45,38 @@ jobs:
       # want to change this to 'flutter test'.
       - name: Run tests
         run: dart test lib/validator.dart --chain-stack-traces
+  build_curriculum:
+    needs: validate_exercises
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.head_ref }}
+      cancel-in-progress: true
+    defaults:
+      run:
+        working-directory: ./json_creator
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Note: This workflow uses the latest stable version of the Dart SDK.
+      # You can specify other versions if desired, see documentation here:
+      # https://github.com/dart-lang/setup-dart/blob/main/README.md
+      # - uses: dart-lang/setup-dart@v1
+      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+
+      - name: Install dependencies
+        run: dart pub get
+
+      # Create the curriculum.json file
+      - name: Create curriculum.json
+        run: dart run lib/json_creator.dart
+
+      # Used to auto-commit the curriculum.json file
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional, but recommended
+          # Defaults to "Apply automatic changes"
+          commit_message: build curriculum
+          # Optional glob pattern of files which should be added to the commit
+          # Defaults to all (.)
+          file_pattern: curriculum.json
