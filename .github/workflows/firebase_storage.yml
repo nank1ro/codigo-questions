@@ -31,3 +31,10 @@ jobs:
           credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: it
           destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-curriculum
+        uses: google-github-actions/upload-cloud-storage@main
+        with:
+          credentials: ${{ secrets.GCP_CREDENTIALS }}
+          path: curriculum.json
+          destination: ${{ secrets.BUCKET_NAME }}
