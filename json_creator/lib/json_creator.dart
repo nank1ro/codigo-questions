@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:collection/collection.dart';
 import 'package:json_creator/src/models/argument.dart';
 import 'package:json_creator/src/models/language.dart';
 import 'package:json_creator/src/models/language_locale.dart';
@@ -11,6 +12,11 @@ import 'package:path/path.dart';
 List<String> get locales => ['en', 'it'];
 
 Future<void> main() async {
+  /// Returns if the provided [entity] is a [File] ending the [.md] extension.
+  bool isMDFile(FileSystemEntity entity) {
+    return entity is File && extension(entity.path) == '.md';
+  }
+
   /// Tells if the exercise is a challenge
   ///
   /// It must take a path like this:
@@ -53,19 +59,22 @@ Future<void> main() async {
 
     results.add(LanguageLocale(locale: locale));
     // Loop through the locale directory to check for the available languages.
-    final sortedFiles = languageDir.listSync(
-      recursive: true,
-    )..sort();
+    final sortedFiles = languageDir
+        .listSync(
+          recursive: true,
+        )
+        // Skip all non .md files
+        .where(isMDFile)
+        // Skip the `challenges` folder
+        .whereNot((f) => isAChallenge(_getRelativePath(f)))
+        .toList()
+      ..sort(
+        // Sort by file names
+        (a, b) => a.path.compareTo(b.path),
+      );
+
     for (final entity in sortedFiles) {
-      // Skip directories
-      if (entity is Directory) continue;
-      // Skip all non .md files
-      if (extension(entity.path) != '.md') continue;
-
       final relativePath = _getRelativePath(entity);
-
-      // Skip the `challenges` folder
-      if (isAChallenge(relativePath)) continue;
 
       final languageName = relativePath.split('/')[2];
 
