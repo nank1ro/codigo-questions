@@ -129,6 +129,7 @@ Future<void> main() async {
                 totalExercises: 1,
               ),
             ],
+            totalExercises: languageBefore.totalExercises + 1,
           );
           results[index] = results[index].copyWith(
             languages: [

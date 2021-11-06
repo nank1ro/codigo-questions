@@ -64,7 +64,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 228
+      "totalExercises": 239
     },
     {
       "name": "javascript",
@@ -140,7 +140,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 256
+      "totalExercises": 269
     },
     {
       "name": "python",
@@ -221,7 +221,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 282
+      "totalExercises": 296
     },
     {
       "name": "swift",
@@ -302,7 +302,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 280
+      "totalExercises": 294
     }
   ],
   "it": [
@@ -370,7 +370,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 228
+      "totalExercises": 239
     },
     {
       "name": "javascript",
@@ -446,7 +446,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 256
+      "totalExercises": 269
     },
     {
       "name": "python",
@@ -527,7 +527,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 282
+      "totalExercises": 296
     },
     {
       "name": "swift",
@@ -608,7 +608,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 280
+      "totalExercises": 294
     }
   ]
 }
