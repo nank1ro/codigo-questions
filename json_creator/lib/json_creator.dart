@@ -1,9 +1,10 @@
-import 'dart:convert';
 import 'dart:io';
 
+import 'package:collection/collection.dart';
 import 'package:json_creator/src/models/argument.dart';
 import 'package:json_creator/src/models/language.dart';
 import 'package:json_creator/src/models/language_locale.dart';
+import 'package:json_sorter/json_sorter.dart';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart';
 
@@ -11,6 +12,21 @@ import 'package:path/path.dart';
 List<String> get locales => ['en', 'it'];
 
 Future<void> main() async {
+  /// Returns if the provided [entity] is a [File] ending the [.md] extension.
+  bool isMDFile(FileSystemEntity entity) {
+    return entity is File && extension(entity.path) == '.md';
+  }
+
+  /// Tells if the exercise is a challenge
+  ///
+  /// It must take a path like this:
+  /// `/en/python/challenges/atm.md`
+  bool isAChallenge(String relativePath) {
+    final path = Uri(path: relativePath);
+    return path.pathSegments.length >= 3 &&
+        path.pathSegments[2] == 'challenges';
+  }
+
   /// The relative path of the exercise:
 
   /// e.g:
@@ -26,7 +42,7 @@ Future<void> main() async {
 
     final curriculum = File('${Directory.current.path}/../curriculum.json');
     // Prettify the json.
-    const encoder = JsonEncoder.withIndent('  ');
+    const encoder = JsonSortedEncoder.withIndent('  ');
 
     await curriculum.writeAsString(encoder.convert(resultingMap));
   }
@@ -43,15 +59,23 @@ Future<void> main() async {
 
     results.add(LanguageLocale(locale: locale));
     // Loop through the locale directory to check for the available languages.
-    await for (final entity in languageDir.list(
-      recursive: true,
-    )) {
-      // Skip directories
-      if (entity is Directory) continue;
-      // Skip all non .md files
-      if (extension(entity.path) != '.md') continue;
+    final sortedFiles = languageDir
+        .listSync(
+          recursive: true,
+        )
+        // Skip all non .md files
+        .where(isMDFile)
+        // Skip the `challenges` folder
+        .whereNot((f) => isAChallenge(_getRelativePath(f)))
+        .toList()
+      ..sort(
+        // Sort by file names
+        (a, b) => a.path.compareTo(b.path),
+      );
 
+    for (final entity in sortedFiles) {
       final relativePath = _getRelativePath(entity);
+
       final languageName = relativePath.split('/')[2];
 
       final argumentName = relativePath.split('/')[3];
@@ -105,6 +129,7 @@ Future<void> main() async {
                 totalExercises: 1,
               ),
             ],
+            totalExercises: languageBefore.totalExercises + 1,
           );
           results[index] = results[index].copyWith(
             languages: [

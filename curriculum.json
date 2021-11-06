@@ -4,14 +4,24 @@
       "name": "c",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 7,
+          "totalExercises": 21
+        },
+        {
           "name": "arrays",
           "trainUntil": 6,
           "totalExercises": 8
         },
         {
-          "name": "relationBooleanOperators",
-          "trainUntil": 9,
-          "totalExercises": 23
+          "name": "assignmentOperators",
+          "trainUntil": 6,
+          "totalExercises": 16
+        },
+        {
+          "name": "booleans",
+          "trainUntil": 3,
+          "totalExercises": 13
         },
         {
           "name": "conditionalStatements",
@@ -19,29 +29,14 @@
           "totalExercises": 42
         },
         {
-          "name": "formattedStrings",
-          "trainUntil": 6,
-          "totalExercises": 22
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
           "name": "forLoops",
           "trainUntil": 4,
           "totalExercises": 12
         },
         {
-          "name": "variables",
+          "name": "formattedStrings",
           "trainUntil": 6,
-          "totalExercises": 24
-        },
-        {
-          "name": "arithmeticOperators",
-          "trainUntil": 7,
-          "totalExercises": 21
+          "totalExercises": 22
         },
         {
           "name": "functions",
@@ -49,100 +44,45 @@
           "totalExercises": 8
         },
         {
-          "name": "whileLoops",
-          "trainUntil": 5,
-          "totalExercises": 40
-        },
-        {
-          "name": "assignmentOperators",
-          "trainUntil": 6,
-          "totalExercises": 16
-        },
-        {
-          "name": "challenges",
+          "name": "output",
           "trainUntil": 1,
-          "totalExercises": 1
+          "totalExercises": 10
         },
-        {
-          "name": "booleans",
-          "trainUntil": 3,
-          "totalExercises": 13
-        }
-      ],
-      "totalExercises": 228
-    },
-    {
-      "name": "python",
-      "arguments": [
         {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
         },
         {
-          "name": "conditionalStatements",
-          "trainUntil": 6,
-          "totalExercises": 43
-        },
-        {
-          "name": "formattedStrings",
-          "trainUntil": 8,
-          "totalExercises": 24
-        },
-        {
-          "name": "lists",
-          "trainUntil": 13,
-          "totalExercises": 17
-        },
-        {
-          "name": "dictionaries",
-          "trainUntil": 11,
-          "totalExercises": 12
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
-          "name": "classes",
-          "trainUntil": 7,
-          "totalExercises": 12
-        },
-        {
-          "name": "forLoops",
-          "trainUntil": 5,
-          "totalExercises": 16
-        },
-        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
         },
         {
-          "name": "arithmeticOperators",
-          "trainUntil": 7,
-          "totalExercises": 21
-        },
-        {
-          "name": "functions",
-          "trainUntil": 4,
-          "totalExercises": 7
-        },
-        {
           "name": "whileLoops",
           "trainUntil": 5,
           "totalExercises": 40
+        }
+      ],
+      "totalExercises": 239
+    },
+    {
+      "name": "javascript",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
+          "name": "arrays",
+          "trainUntil": 10,
+          "totalExercises": 14
         },
         {
           "name": "assignmentOperators",
-          "trainUntil": 8,
-          "totalExercises": 22
-        },
-        {
-          "name": "challenges",
           "trainUntil": 6,
-          "totalExercises": 6
+          "totalExercises": 16
         },
         {
           "name": "booleans",
@@ -150,45 +90,9 @@
           "totalExercises": 13
         },
         {
-          "name": "modulesPackages",
-          "trainUntil": 4,
-          "totalExercises": 12
-        }
-      ],
-      "totalExercises": 287
-    },
-    {
-      "name": "javascript",
-      "arguments": [
-        {
-          "name": "arrays",
-          "trainUntil": 10,
-          "totalExercises": 14
-        },
-        {
-          "name": "conditionalStatements",
-          "trainUntil": 8,
-          "totalExercises": 45
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
           "name": "classes",
           "trainUntil": 7,
           "totalExercises": 10
-        },
-        {
-          "name": "forLoops",
-          "trainUntil": 5,
-          "totalExercises": 13
-        },
-        {
-          "name": "variables",
-          "trainUntil": 6,
-          "totalExercises": 24
         },
         {
           "name": "comparisonLogicalOperators",
@@ -196,14 +100,19 @@
           "totalExercises": 23
         },
         {
-          "name": "arithmeticOperators",
-          "trainUntil": 5,
-          "totalExercises": 17
+          "name": "conditionalStatements",
+          "trainUntil": 8,
+          "totalExercises": 45
         },
         {
-          "name": "templateLiterals",
+          "name": "forLoops",
+          "trainUntil": 5,
+          "totalExercises": 13
+        },
+        {
+          "name": "functions",
           "trainUntil": 7,
-          "totalExercises": 23
+          "totalExercises": 10
         },
         {
           "name": "objects",
@@ -211,14 +120,121 @@
           "totalExercises": 7
         },
         {
-          "name": "functions",
-          "trainUntil": 7,
+          "name": "output",
+          "trainUntil": 1,
           "totalExercises": 10
+        },
+        {
+          "name": "templateLiterals",
+          "trainUntil": 7,
+          "totalExercises": 23
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         },
         {
           "name": "whileLoops",
           "trainUntil": 6,
           "totalExercises": 44
+        }
+      ],
+      "totalExercises": 269
+    },
+    {
+      "name": "python",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 7,
+          "totalExercises": 21
+        },
+        {
+          "name": "assignmentOperators",
+          "trainUntil": 8,
+          "totalExercises": 22
+        },
+        {
+          "name": "booleans",
+          "trainUntil": 3,
+          "totalExercises": 13
+        },
+        {
+          "name": "classes",
+          "trainUntil": 7,
+          "totalExercises": 12
+        },
+        {
+          "name": "conditionalStatements",
+          "trainUntil": 6,
+          "totalExercises": 43
+        },
+        {
+          "name": "dictionaries",
+          "trainUntil": 11,
+          "totalExercises": 12
+        },
+        {
+          "name": "forLoops",
+          "trainUntil": 5,
+          "totalExercises": 16
+        },
+        {
+          "name": "formattedStrings",
+          "trainUntil": 8,
+          "totalExercises": 24
+        },
+        {
+          "name": "functions",
+          "trainUntil": 4,
+          "totalExercises": 7
+        },
+        {
+          "name": "lists",
+          "trainUntil": 13,
+          "totalExercises": 17
+        },
+        {
+          "name": "modulesPackages",
+          "trainUntil": 4,
+          "totalExercises": 12
+        },
+        {
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
+        },
+        {
+          "name": "relationBooleanOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 40
+        }
+      ],
+      "totalExercises": 296
+    },
+    {
+      "name": "swift",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
+          "name": "arrays",
+          "trainUntil": 11,
+          "totalExercises": 15
         },
         {
           "name": "assignmentOperators",
@@ -229,17 +245,16 @@
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
-        }
-      ],
-      "totalExercises": 256
-    },
-    {
-      "name": "swift",
-      "arguments": [
+        },
         {
-          "name": "arrays",
-          "trainUntil": 11,
-          "totalExercises": 15
+          "name": "classes",
+          "trainUntil": 8,
+          "totalExercises": 12
+        },
+        {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
@@ -252,14 +267,9 @@
           "totalExercises": 12
         },
         {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
-          "name": "classes",
-          "trainUntil": 8,
-          "totalExercises": 12
+          "name": "enumerations",
+          "trainUntil": 4,
+          "totalExercises": 9
         },
         {
           "name": "forLoops",
@@ -267,14 +277,14 @@
           "totalExercises": 18
         },
         {
-          "name": "enumerations",
-          "trainUntil": 4,
-          "totalExercises": 9
+          "name": "functions",
+          "trainUntil": 9,
+          "totalExercises": 12
         },
         {
-          "name": "variables",
-          "trainUntil": 6,
-          "totalExercises": 24
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
         },
         {
           "name": "stringInterpolation",
@@ -282,42 +292,17 @@
           "totalExercises": 24
         },
         {
-          "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
-          "totalExercises": 23
-        },
-        {
-          "name": "arithmeticOperators",
-          "trainUntil": 5,
-          "totalExercises": 17
-        },
-        {
-          "name": "functions",
-          "trainUntil": 9,
-          "totalExercises": 12
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         },
         {
           "name": "whileLoops",
           "trainUntil": 6,
           "totalExercises": 44
-        },
-        {
-          "name": "assignmentOperators",
-          "trainUntil": 6,
-          "totalExercises": 16
-        },
-        {
-          "name": "challenges",
-          "trainUntil": 6,
-          "totalExercises": 6
-        },
-        {
-          "name": "booleans",
-          "trainUntil": 3,
-          "totalExercises": 13
         }
       ],
-      "totalExercises": 285
+      "totalExercises": 294
     }
   ],
   "it": [
@@ -325,14 +310,24 @@
       "name": "c",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 7,
+          "totalExercises": 21
+        },
+        {
           "name": "arrays",
           "trainUntil": 6,
           "totalExercises": 8
         },
         {
-          "name": "relationBooleanOperators",
-          "trainUntil": 9,
-          "totalExercises": 23
+          "name": "assignmentOperators",
+          "trainUntil": 6,
+          "totalExercises": 16
+        },
+        {
+          "name": "booleans",
+          "trainUntil": 3,
+          "totalExercises": 13
         },
         {
           "name": "conditionalStatements",
@@ -340,29 +335,14 @@
           "totalExercises": 42
         },
         {
-          "name": "formattedStrings",
-          "trainUntil": 6,
-          "totalExercises": 22
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
           "name": "forLoops",
           "trainUntil": 4,
           "totalExercises": 12
         },
         {
-          "name": "variables",
+          "name": "formattedStrings",
           "trainUntil": 6,
-          "totalExercises": 24
-        },
-        {
-          "name": "arithmeticOperators",
-          "trainUntil": 7,
-          "totalExercises": 21
+          "totalExercises": 22
         },
         {
           "name": "functions",
@@ -370,100 +350,45 @@
           "totalExercises": 8
         },
         {
-          "name": "whileLoops",
-          "trainUntil": 5,
-          "totalExercises": 40
-        },
-        {
-          "name": "assignmentOperators",
-          "trainUntil": 6,
-          "totalExercises": 16
-        },
-        {
-          "name": "challenges",
+          "name": "output",
           "trainUntil": 1,
-          "totalExercises": 1
+          "totalExercises": 10
         },
-        {
-          "name": "booleans",
-          "trainUntil": 3,
-          "totalExercises": 13
-        }
-      ],
-      "totalExercises": 228
-    },
-    {
-      "name": "python",
-      "arguments": [
         {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
         },
         {
-          "name": "conditionalStatements",
-          "trainUntil": 6,
-          "totalExercises": 43
-        },
-        {
-          "name": "formattedStrings",
-          "trainUntil": 8,
-          "totalExercises": 24
-        },
-        {
-          "name": "lists",
-          "trainUntil": 13,
-          "totalExercises": 17
-        },
-        {
-          "name": "dictionaries",
-          "trainUntil": 11,
-          "totalExercises": 12
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
-          "name": "classes",
-          "trainUntil": 7,
-          "totalExercises": 12
-        },
-        {
-          "name": "forLoops",
-          "trainUntil": 5,
-          "totalExercises": 16
-        },
-        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
         },
         {
-          "name": "arithmeticOperators",
-          "trainUntil": 7,
-          "totalExercises": 21
-        },
-        {
-          "name": "functions",
-          "trainUntil": 4,
-          "totalExercises": 7
-        },
-        {
           "name": "whileLoops",
           "trainUntil": 5,
           "totalExercises": 40
+        }
+      ],
+      "totalExercises": 239
+    },
+    {
+      "name": "javascript",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
+          "name": "arrays",
+          "trainUntil": 10,
+          "totalExercises": 14
         },
         {
           "name": "assignmentOperators",
-          "trainUntil": 8,
-          "totalExercises": 22
-        },
-        {
-          "name": "challenges",
           "trainUntil": 6,
-          "totalExercises": 6
+          "totalExercises": 16
         },
         {
           "name": "booleans",
@@ -471,45 +396,9 @@
           "totalExercises": 13
         },
         {
-          "name": "modulesPackages",
-          "trainUntil": 4,
-          "totalExercises": 12
-        }
-      ],
-      "totalExercises": 287
-    },
-    {
-      "name": "javascript",
-      "arguments": [
-        {
-          "name": "arrays",
-          "trainUntil": 10,
-          "totalExercises": 14
-        },
-        {
-          "name": "conditionalStatements",
-          "trainUntil": 8,
-          "totalExercises": 45
-        },
-        {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
           "name": "classes",
           "trainUntil": 7,
           "totalExercises": 10
-        },
-        {
-          "name": "forLoops",
-          "trainUntil": 5,
-          "totalExercises": 13
-        },
-        {
-          "name": "variables",
-          "trainUntil": 6,
-          "totalExercises": 24
         },
         {
           "name": "comparisonLogicalOperators",
@@ -517,14 +406,19 @@
           "totalExercises": 23
         },
         {
-          "name": "arithmeticOperators",
-          "trainUntil": 5,
-          "totalExercises": 17
+          "name": "conditionalStatements",
+          "trainUntil": 8,
+          "totalExercises": 45
         },
         {
-          "name": "templateLiterals",
+          "name": "forLoops",
+          "trainUntil": 5,
+          "totalExercises": 13
+        },
+        {
+          "name": "functions",
           "trainUntil": 7,
-          "totalExercises": 23
+          "totalExercises": 10
         },
         {
           "name": "objects",
@@ -532,14 +426,121 @@
           "totalExercises": 7
         },
         {
-          "name": "functions",
-          "trainUntil": 7,
+          "name": "output",
+          "trainUntil": 1,
           "totalExercises": 10
+        },
+        {
+          "name": "templateLiterals",
+          "trainUntil": 7,
+          "totalExercises": 23
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         },
         {
           "name": "whileLoops",
           "trainUntil": 6,
           "totalExercises": 44
+        }
+      ],
+      "totalExercises": 269
+    },
+    {
+      "name": "python",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 7,
+          "totalExercises": 21
+        },
+        {
+          "name": "assignmentOperators",
+          "trainUntil": 8,
+          "totalExercises": 22
+        },
+        {
+          "name": "booleans",
+          "trainUntil": 3,
+          "totalExercises": 13
+        },
+        {
+          "name": "classes",
+          "trainUntil": 7,
+          "totalExercises": 12
+        },
+        {
+          "name": "conditionalStatements",
+          "trainUntil": 6,
+          "totalExercises": 43
+        },
+        {
+          "name": "dictionaries",
+          "trainUntil": 11,
+          "totalExercises": 12
+        },
+        {
+          "name": "forLoops",
+          "trainUntil": 5,
+          "totalExercises": 16
+        },
+        {
+          "name": "formattedStrings",
+          "trainUntil": 8,
+          "totalExercises": 24
+        },
+        {
+          "name": "functions",
+          "trainUntil": 4,
+          "totalExercises": 7
+        },
+        {
+          "name": "lists",
+          "trainUntil": 13,
+          "totalExercises": 17
+        },
+        {
+          "name": "modulesPackages",
+          "trainUntil": 4,
+          "totalExercises": 12
+        },
+        {
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
+        },
+        {
+          "name": "relationBooleanOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 40
+        }
+      ],
+      "totalExercises": 296
+    },
+    {
+      "name": "swift",
+      "arguments": [
+        {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
+          "name": "arrays",
+          "trainUntil": 11,
+          "totalExercises": 15
         },
         {
           "name": "assignmentOperators",
@@ -550,17 +551,16 @@
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
-        }
-      ],
-      "totalExercises": 256
-    },
-    {
-      "name": "swift",
-      "arguments": [
+        },
         {
-          "name": "arrays",
-          "trainUntil": 11,
-          "totalExercises": 15
+          "name": "classes",
+          "trainUntil": 8,
+          "totalExercises": 12
+        },
+        {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
@@ -573,14 +573,9 @@
           "totalExercises": 12
         },
         {
-          "name": "output",
-          "trainUntil": 1,
-          "totalExercises": 10
-        },
-        {
-          "name": "classes",
-          "trainUntil": 8,
-          "totalExercises": 12
+          "name": "enumerations",
+          "trainUntil": 4,
+          "totalExercises": 9
         },
         {
           "name": "forLoops",
@@ -588,14 +583,14 @@
           "totalExercises": 18
         },
         {
-          "name": "enumerations",
-          "trainUntil": 4,
-          "totalExercises": 9
+          "name": "functions",
+          "trainUntil": 9,
+          "totalExercises": 12
         },
         {
-          "name": "variables",
-          "trainUntil": 6,
-          "totalExercises": 24
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
         },
         {
           "name": "stringInterpolation",
@@ -603,42 +598,17 @@
           "totalExercises": 24
         },
         {
-          "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
-          "totalExercises": 23
-        },
-        {
-          "name": "arithmeticOperators",
-          "trainUntil": 5,
-          "totalExercises": 17
-        },
-        {
-          "name": "functions",
-          "trainUntil": 9,
-          "totalExercises": 12
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         },
         {
           "name": "whileLoops",
           "trainUntil": 6,
           "totalExercises": 44
-        },
-        {
-          "name": "assignmentOperators",
-          "trainUntil": 6,
-          "totalExercises": 16
-        },
-        {
-          "name": "challenges",
-          "trainUntil": 6,
-          "totalExercises": 6
-        },
-        {
-          "name": "booleans",
-          "trainUntil": 3,
-          "totalExercises": 13
         }
       ],
-      "totalExercises": 285
+      "totalExercises": 294
     }
   ]
 }
