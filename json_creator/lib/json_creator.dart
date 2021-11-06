@@ -11,6 +11,16 @@ import 'package:path/path.dart';
 List<String> get locales => ['en', 'it'];
 
 Future<void> main() async {
+  /// Tells if the exercise is a challenge
+  ///
+  /// It must take a path like this:
+  /// `/en/python/challenges/atm.md`
+  bool isAChallenge(String relativePath) {
+    final path = Uri(path: relativePath);
+    return path.pathSegments.length >= 3 &&
+        path.pathSegments[2] == 'challenges';
+  }
+
   /// The relative path of the exercise:
 
   /// e.g:
@@ -52,6 +62,10 @@ Future<void> main() async {
       if (extension(entity.path) != '.md') continue;
 
       final relativePath = _getRelativePath(entity);
+
+      // Skip the `challenges` folder
+      if (isAChallenge(relativePath)) continue;
+
       final languageName = relativePath.split('/')[2];
 
       final argumentName = relativePath.split('/')[3];
