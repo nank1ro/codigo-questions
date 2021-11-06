@@ -1,9 +1,9 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:json_creator/src/models/argument.dart';
 import 'package:json_creator/src/models/language.dart';
 import 'package:json_creator/src/models/language_locale.dart';
+import 'package:json_sorter/json_sorter.dart';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart';
 
@@ -36,7 +36,7 @@ Future<void> main() async {
 
     final curriculum = File('${Directory.current.path}/../curriculum.json');
     // Prettify the json.
-    const encoder = JsonEncoder.withIndent('  ');
+    const encoder = JsonSortedEncoder.withIndent('  ');
 
     await curriculum.writeAsString(encoder.convert(resultingMap));
   }
@@ -53,9 +53,10 @@ Future<void> main() async {
 
     results.add(LanguageLocale(locale: locale));
     // Loop through the locale directory to check for the available languages.
-    await for (final entity in languageDir.list(
+    final sortedFiles = languageDir.listSync(
       recursive: true,
-    )) {
+    )..sort();
+    for (final entity in sortedFiles) {
       // Skip directories
       if (entity is Directory) continue;
       // Skip all non .md files
