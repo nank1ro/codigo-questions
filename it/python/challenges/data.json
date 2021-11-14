@@ -1,0 +1,26 @@
+{
+	"addition": {
+		"difficulty": 1,
+		"name": "Somma"
+	},
+	"atm": {
+		"difficulty": 1,
+		"name": "ATM"
+	},
+	"hello_world": {
+		"difficulty": 1,
+		"name": "Hello World!"
+	},
+	"raindrops": {
+		"difficulty": 1,
+		"name": "Gocce di pioggia"
+	},
+	"sum_digits": {
+		"difficulty": 1,
+		"name": "Somma cifre"
+	},
+	"two_for_one": {
+		"difficulty": 1,
+		"name": "Due per uno"
+	}
+}
