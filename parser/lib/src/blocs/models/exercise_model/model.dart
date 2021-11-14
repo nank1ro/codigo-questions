@@ -33,6 +33,29 @@ class ExerciseModel with _$ExerciseModel {
     /// ```
     CodeModel? seed,
 
+    /// An optional code placed before the seed.
+    ///
+    /// This is used to wrap the seed in something (e.g. a function)
+    /// hiding it to the final user.
+    /// e.g.:
+    /// ```
+    /// #include <stdio.h>
+    ///
+    /// int main() {
+    /// ```
+    CodeModel? beforeSeed,
+
+    /// An optional code placed after the seed.
+    ///
+    /// This is used to wrap the seed in something (e.g. a function)
+    /// hiding it to the final user.
+    /// e.g.:
+    /// ```
+    ///   return 0;
+    /// }
+    /// ```
+    CodeModel? afterSeed,
+
     /// The asserts used to validate the exercise.
     List<AssertModel>? asserts,
 

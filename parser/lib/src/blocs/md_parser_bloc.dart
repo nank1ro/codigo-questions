@@ -16,7 +16,9 @@ export 'models/frontmatter_model/model.dart';
 const String kDescriptionTag = '# --description--';
 const String kInstructionsTag = '# --instructions--';
 const String kAssertsTag = '# --asserts--';
+const String kBeforeSeedTag = '# --before-seed--';
 const String kSeedTag = '# --seed--';
+const String kAfterSeedTag = '# --after-seed--';
 const String kSolutionsTag = '# --solutions--';
 const String kAnswersTag = '# --answers--';
 const String kBeforeAssertsTag = '# --before-asserts--';
@@ -63,7 +65,13 @@ class MDParserBLoC {
       fullContent: fileContent,
     );
 
+    final beforeSeed =
+        _getCodeBetweenTag(fileContent: fileContent, tag: kBeforeSeedTag);
+
     final seed = _getCodeBetweenTag(fileContent: fileContent, tag: kSeedTag);
+
+    final afterSeed =
+        _getCodeBetweenTag(fileContent: fileContent, tag: kAfterSeedTag);
 
     final codeBeforeAsserts =
         _getCodeBetweenTag(fileContent: fileContent, tag: kBeforeAssertsTag);
@@ -91,6 +99,8 @@ class MDParserBLoC {
       output: output,
       answers: answers,
       solutions: solutions,
+      beforeSeed: beforeSeed,
+      afterSeed: afterSeed,
     );
   }
 

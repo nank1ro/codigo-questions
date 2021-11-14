@@ -26,6 +26,8 @@ class _$ExerciseModelTearOff {
       String? description,
       String? instructions,
       CodeModel? seed,
+      CodeModel? beforeSeed,
+      CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
       List<String>? solutions,
@@ -37,6 +39,8 @@ class _$ExerciseModelTearOff {
       description: description,
       instructions: instructions,
       seed: seed,
+      beforeSeed: beforeSeed,
+      afterSeed: afterSeed,
       asserts: asserts,
       answers: answers,
       solutions: solutions,
@@ -78,6 +82,29 @@ mixin _$ExerciseModel {
   ///     return "";
   /// ```
   CodeModel? get seed => throw _privateConstructorUsedError;
+
+  /// An optional code placed before the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  /// #include <stdio.h>
+  ///
+  /// int main() {
+  /// ```
+  CodeModel? get beforeSeed => throw _privateConstructorUsedError;
+
+  /// An optional code placed after the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  ///   return 0;
+  /// }
+  /// ```
+  CodeModel? get afterSeed => throw _privateConstructorUsedError;
 
   /// The asserts used to validate the exercise.
   List<AssertModel>? get asserts => throw _privateConstructorUsedError;
@@ -127,6 +154,8 @@ abstract class $ExerciseModelCopyWith<$Res> {
       String? description,
       String? instructions,
       CodeModel? seed,
+      CodeModel? beforeSeed,
+      CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
       List<String>? solutions,
@@ -136,6 +165,8 @@ abstract class $ExerciseModelCopyWith<$Res> {
 
   $FrontMatterModelCopyWith<$Res> get frontMatterModel;
   $CodeModelCopyWith<$Res>? get seed;
+  $CodeModelCopyWith<$Res>? get beforeSeed;
+  $CodeModelCopyWith<$Res>? get afterSeed;
   $CodeModelCopyWith<$Res>? get codeBeforeAsserts;
   $CodeModelCopyWith<$Res>? get codeAfterAsserts;
 }
@@ -155,6 +186,8 @@ class _$ExerciseModelCopyWithImpl<$Res>
     Object? description = freezed,
     Object? instructions = freezed,
     Object? seed = freezed,
+    Object? beforeSeed = freezed,
+    Object? afterSeed = freezed,
     Object? asserts = freezed,
     Object? answers = freezed,
     Object? solutions = freezed,
@@ -178,6 +211,14 @@ class _$ExerciseModelCopyWithImpl<$Res>
       seed: seed == freezed
           ? _value.seed
           : seed // ignore: cast_nullable_to_non_nullable
+              as CodeModel?,
+      beforeSeed: beforeSeed == freezed
+          ? _value.beforeSeed
+          : beforeSeed // ignore: cast_nullable_to_non_nullable
+              as CodeModel?,
+      afterSeed: afterSeed == freezed
+          ? _value.afterSeed
+          : afterSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
       asserts: asserts == freezed
           ? _value.asserts
@@ -225,6 +266,28 @@ class _$ExerciseModelCopyWithImpl<$Res>
   }
 
   @override
+  $CodeModelCopyWith<$Res>? get beforeSeed {
+    if (_value.beforeSeed == null) {
+      return null;
+    }
+
+    return $CodeModelCopyWith<$Res>(_value.beforeSeed!, (value) {
+      return _then(_value.copyWith(beforeSeed: value));
+    });
+  }
+
+  @override
+  $CodeModelCopyWith<$Res>? get afterSeed {
+    if (_value.afterSeed == null) {
+      return null;
+    }
+
+    return $CodeModelCopyWith<$Res>(_value.afterSeed!, (value) {
+      return _then(_value.copyWith(afterSeed: value));
+    });
+  }
+
+  @override
   $CodeModelCopyWith<$Res>? get codeBeforeAsserts {
     if (_value.codeBeforeAsserts == null) {
       return null;
@@ -259,6 +322,8 @@ abstract class _$ExerciseModelCopyWith<$Res>
       String? description,
       String? instructions,
       CodeModel? seed,
+      CodeModel? beforeSeed,
+      CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
       List<String>? solutions,
@@ -270,6 +335,10 @@ abstract class _$ExerciseModelCopyWith<$Res>
   $FrontMatterModelCopyWith<$Res> get frontMatterModel;
   @override
   $CodeModelCopyWith<$Res>? get seed;
+  @override
+  $CodeModelCopyWith<$Res>? get beforeSeed;
+  @override
+  $CodeModelCopyWith<$Res>? get afterSeed;
   @override
   $CodeModelCopyWith<$Res>? get codeBeforeAsserts;
   @override
@@ -293,6 +362,8 @@ class __$ExerciseModelCopyWithImpl<$Res>
     Object? description = freezed,
     Object? instructions = freezed,
     Object? seed = freezed,
+    Object? beforeSeed = freezed,
+    Object? afterSeed = freezed,
     Object? asserts = freezed,
     Object? answers = freezed,
     Object? solutions = freezed,
@@ -316,6 +387,14 @@ class __$ExerciseModelCopyWithImpl<$Res>
       seed: seed == freezed
           ? _value.seed
           : seed // ignore: cast_nullable_to_non_nullable
+              as CodeModel?,
+      beforeSeed: beforeSeed == freezed
+          ? _value.beforeSeed
+          : beforeSeed // ignore: cast_nullable_to_non_nullable
+              as CodeModel?,
+      afterSeed: afterSeed == freezed
+          ? _value.afterSeed
+          : afterSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
       asserts: asserts == freezed
           ? _value.asserts
@@ -353,6 +432,8 @@ class _$_ExerciseModel implements _ExerciseModel {
       this.description,
       this.instructions,
       this.seed,
+      this.beforeSeed,
+      this.afterSeed,
       this.asserts,
       this.answers,
       this.solutions,
@@ -390,6 +471,31 @@ class _$_ExerciseModel implements _ExerciseModel {
   ///     return "";
   /// ```
   final CodeModel? seed;
+  @override
+
+  /// An optional code placed before the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  /// #include <stdio.h>
+  ///
+  /// int main() {
+  /// ```
+  final CodeModel? beforeSeed;
+  @override
+
+  /// An optional code placed after the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  ///   return 0;
+  /// }
+  /// ```
+  final CodeModel? afterSeed;
   @override
 
   /// The asserts used to validate the exercise.
@@ -431,7 +537,7 @@ class _$_ExerciseModel implements _ExerciseModel {
 
   @override
   String toString() {
-    return 'ExerciseModel(frontMatterModel: $frontMatterModel, description: $description, instructions: $instructions, seed: $seed, asserts: $asserts, answers: $answers, solutions: $solutions, codeBeforeAsserts: $codeBeforeAsserts, codeAfterAsserts: $codeAfterAsserts, output: $output)';
+    return 'ExerciseModel(frontMatterModel: $frontMatterModel, description: $description, instructions: $instructions, seed: $seed, beforeSeed: $beforeSeed, afterSeed: $afterSeed, asserts: $asserts, answers: $answers, solutions: $solutions, codeBeforeAsserts: $codeBeforeAsserts, codeAfterAsserts: $codeAfterAsserts, output: $output)';
   }
 
   @override
@@ -449,6 +555,12 @@ class _$_ExerciseModel implements _ExerciseModel {
                     .equals(other.instructions, instructions)) &&
             (identical(other.seed, seed) ||
                 const DeepCollectionEquality().equals(other.seed, seed)) &&
+            (identical(other.beforeSeed, beforeSeed) ||
+                const DeepCollectionEquality()
+                    .equals(other.beforeSeed, beforeSeed)) &&
+            (identical(other.afterSeed, afterSeed) ||
+                const DeepCollectionEquality()
+                    .equals(other.afterSeed, afterSeed)) &&
             (identical(other.asserts, asserts) ||
                 const DeepCollectionEquality()
                     .equals(other.asserts, asserts)) &&
@@ -475,6 +587,8 @@ class _$_ExerciseModel implements _ExerciseModel {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(instructions) ^
       const DeepCollectionEquality().hash(seed) ^
+      const DeepCollectionEquality().hash(beforeSeed) ^
+      const DeepCollectionEquality().hash(afterSeed) ^
       const DeepCollectionEquality().hash(asserts) ^
       const DeepCollectionEquality().hash(answers) ^
       const DeepCollectionEquality().hash(solutions) ^
@@ -499,6 +613,8 @@ abstract class _ExerciseModel implements ExerciseModel {
       String? description,
       String? instructions,
       CodeModel? seed,
+      CodeModel? beforeSeed,
+      CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
       List<String>? solutions,
@@ -536,6 +652,31 @@ abstract class _ExerciseModel implements ExerciseModel {
   ///     return "";
   /// ```
   CodeModel? get seed => throw _privateConstructorUsedError;
+  @override
+
+  /// An optional code placed before the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  /// #include <stdio.h>
+  ///
+  /// int main() {
+  /// ```
+  CodeModel? get beforeSeed => throw _privateConstructorUsedError;
+  @override
+
+  /// An optional code placed after the seed.
+  ///
+  /// This is used to wrap the seed in something (e.g. a function)
+  /// hiding it to the final user.
+  /// e.g.:
+  /// ```
+  ///   return 0;
+  /// }
+  /// ```
+  CodeModel? get afterSeed => throw _privateConstructorUsedError;
   @override
 
   /// The asserts used to validate the exercise.
