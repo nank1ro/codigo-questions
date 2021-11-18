@@ -107,27 +107,31 @@ void _runCodeTests({
   });
 
   if (model.frontMatterModel.language == 'c' &&
-      model.codeBeforeAsserts?.code != null &&
-      model.codeAfterAsserts?.code != null) {
+          (model.codeBeforeAsserts?.code != null &&
+              model.codeAfterAsserts?.code != null) ||
+      (model.beforeSeed?.code != null)) {
     _testHandler(
-        '''Verify that the `C` RunCode exercise, contains the intestation in the before-asserts tag: `int main() {`''',
+        '''Verify that the `C` RunCode exercise, contains the intestation in the before-seed or before-asserts tag: `int main() {`''',
         () {
+      final codeBefore =
+          model.beforeSeed?.code ?? model.codeBeforeAsserts?.code;
       expect(
-        model.codeBeforeAsserts!.code,
+        codeBefore,
         contains('int main() {'),
         reason: _fancyLogger(
           message:
-              '''You must provide the `int main() {` line of code in the before-asserts code''',
+              '''You must provide the `int main() {` line of code inside the before-seed or before-asserts before-asserts tag''',
           exercisePath: exercisePath,
         ),
       );
     });
 
     _testHandler('''
-Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag: `  return 0;\n}`''',
+Verify that the `C` RunCode exercise, contains the end of intestation in the after-seed or after-asserts tag: `  return 0;\n}`''',
         () {
+      final codeAfter = model.afterSeed?.code ?? model.codeAfterAsserts?.code;
       expect(
-        model.codeAfterAsserts!.code,
+        codeAfter,
         contains('''  return 0;\n}'''),
         reason: _fancyLogger(
           message: '''
@@ -136,7 +140,7 @@ You must provide the
     return 0;
 }
 ```
-lines of code in the after-asserts code''',
+lines of code in the after-seed or after-asserts code''',
           exercisePath: exercisePath,
         ),
       );
