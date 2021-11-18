@@ -15,6 +15,12 @@ _$_ExerciseModel _$$_ExerciseModelFromJson(Map<String, dynamic> json) =>
       seed: json['seed'] == null
           ? null
           : CodeModel.fromJson(json['seed'] as Map<String, dynamic>),
+      beforeSeed: json['beforeSeed'] == null
+          ? null
+          : CodeModel.fromJson(json['beforeSeed'] as Map<String, dynamic>),
+      afterSeed: json['afterSeed'] == null
+          ? null
+          : CodeModel.fromJson(json['afterSeed'] as Map<String, dynamic>),
       asserts: (json['asserts'] as List<dynamic>?)
           ?.map((e) => AssertModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -40,6 +46,8 @@ Map<String, dynamic> _$$_ExerciseModelToJson(_$_ExerciseModel instance) =>
       'description': instance.description,
       'instructions': instance.instructions,
       'seed': instance.seed,
+      'beforeSeed': instance.beforeSeed,
+      'afterSeed': instance.afterSeed,
       'asserts': instance.asserts,
       'answers': instance.answers,
       'solutions': instance.solutions,

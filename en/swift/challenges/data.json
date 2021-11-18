@@ -1,0 +1,26 @@
+{
+	"addition": {
+		"difficulty": 1,
+		"name": "Addition"
+	},
+	"atm": {
+		"difficulty": 1,
+		"name": "ATM"
+	},
+	"hello_world": {
+		"difficulty": 1,
+		"name": "Hello World!"
+	},
+	"raindrops": {
+		"difficulty": 1,
+		"name": "Raindrops"
+	},
+	"sum_digits": {
+		"difficulty": 1,
+		"name": "Sum of digits"
+	},
+	"two_for_one": {
+		"difficulty": 1,
+		"name": "Two for one"
+	}
+}

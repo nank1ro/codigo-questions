@@ -1,0 +1,50 @@
+{
+	"output": {
+		"order": 1
+	},
+	"formattedStrings": {
+		"order": 2
+	},
+	"variables": {
+		"order": 3
+	},
+	"booleans": {
+		"order": 4
+	},
+	"arithmeticOperators": {
+		"order": 5
+	},
+	"assignmentOperators": {
+		"order": 6
+	},
+	"relationBooleanOperators": {
+		"order": 7
+	},
+	"conditionalStatements": {
+		"order": 8
+	},
+	"whileLoops": {
+		"order": 9
+	},
+	"forLoops": {
+		"order": 10
+	},
+	"lists": {
+		"order": 11
+	},
+	"dictionaries": {
+		"order": 12
+	},
+	"functions": {
+		"order": 13,
+		"isPro": true
+	},
+	"modulesPackages": {
+		"order": 14,
+		"isPro": true
+	},
+	"classes": {
+		"order": 15,
+		"isPro": true
+	}
+}

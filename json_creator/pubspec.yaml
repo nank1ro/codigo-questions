@@ -1,0 +1,22 @@
+name: json_creator
+description: A simple command-line application.
+publish_to: none
+version: 1.0.0
+# homepage: https://www.example.com
+environment:
+  sdk: ">=2.14.3 <3.0.0"
+
+dependencies:
+  freezed: ^0.14.5
+  json_annotation: ^4.3.0
+  json_serializable: ^6.0.1
+  json_sorter: ^1.0.0
+  parser:
+    path: ../parser
+  path: ^1.8.0
+
+dev_dependencies:
+  build_runner: ^2.1.1
+  freezed_annotation: ^0.14.3
+  test: ^1.17.11
+  very_good_analysis: ^2.3.0
