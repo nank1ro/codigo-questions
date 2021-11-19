@@ -20,6 +20,15 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "OdinV",
+      "name": "OdinV",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72207152?v=4",
+      "profile": "https://github.com/OdinV",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
