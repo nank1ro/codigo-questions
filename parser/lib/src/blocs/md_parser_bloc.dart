@@ -141,7 +141,7 @@ class MDParserBLoC {
       startIndex + tag.length,
       endIndex != -1 ? endIndex : fullContent.length,
     );
-    return content.trim();
+    return content.trimNewLines();
   }
 
   /// Returns the list of asserts (if any) from the provided [fileContent].
@@ -342,5 +342,25 @@ Exercise file path: $filePath
       solutions = _getAllItemsInList(solutionsContent);
     }
     return solutions;
+  }
+}
+
+extension on String {
+  /// Creates a new string with the last occurrence of [from] replaced by [to].
+  String replaceLast(Pattern from, String to) {
+    final match = from.allMatches(this).last;
+    return replaceRange(match.start, match.end, to);
+  }
+
+  /// Trims out all the new lines (`\n` specifically) in both the leading and the trailing sides.
+  String trimNewLines() {
+    var initialString = this;
+    while (initialString.startsWith('\n')) {
+      initialString = initialString.replaceFirst('\n', '');
+    }
+    while (initialString.endsWith('\n')) {
+      initialString = initialString.replaceLast('\n', '');
+    }
+    return initialString;
   }
 }
