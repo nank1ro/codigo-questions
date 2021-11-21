@@ -33,7 +33,7 @@ int main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+La funzione deve restituire "Hello, World!".
 
 ```c
   assert((strcmp(hello(), "Hello, World!") == 0) && "--err-t1--");
