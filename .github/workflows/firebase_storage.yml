@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "curriculum.json"
+      - "en/**"
+      - "it/**"
+      - "assets/**"
   workflow_dispatch:
 
 jobs:
