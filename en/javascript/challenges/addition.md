@@ -65,7 +65,7 @@ tryAssert(addition(15, 35) == 50, "--err-t3--");
 ```javascript
 // Don't edit these lines below
 if (_testsFailed > 0) {
-  console.error(`FAILED with ${_testsFailed} failures`)
+  console.error(`FAILED with ${_testsFailed} failures and ${_testsPassed} passed`)
 } else {
   console.log(`PASSED with 0 failures`)
 }
