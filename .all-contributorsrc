@@ -1,50 +1,58 @@
 {
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "commit": false,
-  "contributors": [
-    {
-      "login": "nank1ro",
-      "name": "Alexandru Mariuti",
-      "avatar_url": "https://avatars.githubusercontent.com/u/60045235?v=4",
-      "profile": "http://www.bestofcode.dev",
-      "contributions": [
-        "code",
-        "bug",
-        "maintenance",
-        "question",
-        "review",
-        "doc",
-        "infra",
-        "test"
-      ]
-    },
-    {
-      "login": "OdinV",
-      "name": "OdinV",
-      "avatar_url": "https://avatars.githubusercontent.com/u/72207152?v=4",
-      "profile": "https://github.com/OdinV",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
-      "login": "brunicorno",
-      "name": "Bruno",
-      "avatar_url": "https://avatars.githubusercontent.com/u/28707292?v=4",
-      "profile": "https://github.com/brunicorno",
-      "contributions": [
-        "bug",
-        "question"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7,
-  "projectName": "codigo-questions",
-  "projectOwner": "nank1ro",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "skipCi": true
+	"files": [
+		"README.md"
+	],
+	"imageSize": 100,
+	"commit": false,
+	"contributors": [
+		{
+			"login": "nank1ro",
+			"name": "Alexandru Mariuti",
+			"avatar_url": "https://avatars.githubusercontent.com/u/60045235?v=4",
+			"profile": "http://www.bestofcode.dev",
+			"contributions": [
+				"code",
+				"bug",
+				"maintenance",
+				"question",
+				"review",
+				"doc",
+				"infra",
+				"test"
+			]
+		},
+		{
+			"login": "OdinV",
+			"name": "OdinV",
+			"avatar_url": "https://avatars.githubusercontent.com/u/72207152?v=4",
+			"profile": "https://github.com/OdinV",
+			"contributions": [
+				"bug"
+			]
+		},
+		{
+			"login": "brunicorno",
+			"name": "Bruno",
+			"avatar_url": "https://avatars.githubusercontent.com/u/28707292?v=4",
+			"profile": "https://github.com/brunicorno",
+			"contributions": [
+				"bug"
+			]
+		},
+		{
+			"login": "vicberger",
+			"name": "vicberger",
+			"avatar_url": "https://avatars.githubusercontent.com/u/49183536?v=4",
+			"profile": "https://github.com/vicberger",
+			"contributions": [
+				"bug"
+			]
+		}
+	],
+	"contributorsPerLine": 7,
+	"projectName": "codigo-questions",
+	"projectOwner": "nank1ro",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"skipCi": true
 }
