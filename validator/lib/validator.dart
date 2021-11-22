@@ -12,7 +12,6 @@ List<String> get locales => ['en', 'it'];
 const supportedProgrammingLanguages = <String>{
   'python',
   'swift',
-  'bash',
   'javascript',
   'c',
 };
@@ -145,6 +144,30 @@ lines of code in the after-seed or after-asserts code''',
         ),
       );
     });
+
+    if (model.asserts?.isNotEmpty ?? false) {
+      _testHandler('''
+Verify that the `C` RunCode exercise, contains the assert import if there are asserts''',
+          () {
+        final containsImport = [
+          model.beforeSeed?.code,
+          model.codeBeforeAsserts?.code
+        ].any((element) => element?.contains('#include <assert.h>') ?? false);
+        expect(
+          containsImport,
+          equals(true),
+          reason: _fancyLogger(
+            message: '''
+You must provide the
+```
+#include <assert.h>
+```
+import code in the before-seed or before-asserts code''',
+            exercisePath: exercisePath,
+          ),
+        );
+      });
+    }
   }
 }
 
