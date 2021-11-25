@@ -65,6 +65,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "simolado",
+      "name": "simolado",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91845095?v=4",
+      "profile": "https://github.com/simolado",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
