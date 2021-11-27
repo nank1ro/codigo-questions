@@ -71,7 +71,7 @@ errordef(c_err)
 
 ```c
 int addition() {
-
+    
 }
 ```
 
