@@ -81,7 +81,6 @@ int addition() {
 int main() {
     int _testsPassed = 0;
     int _testsFailed = 0;
-    
 ```
 
 # --asserts--
