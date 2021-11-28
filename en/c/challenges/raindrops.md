@@ -28,56 +28,129 @@ Write a function that returns the correct string, examples:
 # --before-seed--
 
 ```c
-#include <string.h>
 // DO NOT EDIT FROM HERE
-// ----------------------
+#include <setjmp.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdbool.h>
 
+#ifndef _CEXCEPTION_H
+#define _CEXCEPTION_H
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+//This is the value to assign when there isn't an exception
+#ifndef CEXCEPTION_NONE
+#define CEXCEPTION_NONE      (0x5A5A5A5A)
+#endif
+
+//This is number of exception stacks to keep track of (one per task)
+#ifndef CEXCEPTION_NUM_ID
+#define CEXCEPTION_NUM_ID    (1) //there is only the one stack by default
+#endif
+
+//This is the method of getting the current exception stack index (0 if only one stack)
+#ifndef CEXCEPTION_GET_ID
+#define CEXCEPTION_GET_ID    (0) //use the first index always because there is only one anyway
+#endif
+
+//The type to use to store the exception values.
+#ifndef CEXCEPTION_T
+#define CEXCEPTION_T         unsigned int
+#endif
+
+//This is an optional special handler for when there is no global Catch
+#ifndef CEXCEPTION_NO_CATCH_HANDLER
+#define CEXCEPTION_NO_CATCH_HANDLER(id)
+#endif
+
+//These hooks allow you to inject custom code into places, particularly useful for saving and restoring additional state
+#ifndef CEXCEPTION_HOOK_START_TRY
+#define CEXCEPTION_HOOK_START_TRY
+#endif
+#ifndef CEXCEPTION_HOOK_HAPPY_TRY
+#define CEXCEPTION_HOOK_HAPPY_TRY
+#endif
+#ifndef CEXCEPTION_HOOK_AFTER_TRY
+#define CEXCEPTION_HOOK_AFTER_TRY
+#endif
+#ifndef CEXCEPTION_HOOK_START_CATCH
+#define CEXCEPTION_HOOK_START_CATCH
+#endif
+
+//exception frame structures
 typedef struct {
-    unsigned int  id;
-    char         *name;
-    char         *msg;
-} error;
+  jmp_buf* pFrame;
+  CEXCEPTION_T volatile Exception;
+} CEXCEPTION_FRAME_T;
 
-#define _printerr(e, s, ...) fprintf(stderr, "\033[1m\033[37m" "%s:%d: " "\033[1m\033[31m" e ":" "\033[1m\033[37m" " ‘%s_error’ " "\033[0m" s "\n", __FILE__, __LINE__, (*__err)->name, ##__VA_ARGS__)
-#define printerr(s, ...) _printerr("error", s, ##__VA_ARGS__)
-#define printuncaughterr() _printerr("uncaught error", "%s", (*__err)->msg)
+//actual root frame storage (only one if single-tasking)
+extern volatile CEXCEPTION_FRAME_T CExceptionFrames[];
 
-#define _errordef(n, _id) \
-error* new_##n##_error_msg(char* msg) { \
-    error* self = malloc(sizeof(error)); \
-    self->id = _id; \
-    self->name = #n; \
-    self->msg = msg; \
-    return self; \
-} \
-error* new_##n##_error() { return new_##n##_error_msg(""); }
+//Try
+#define Try                                                         \
+    {                                                               \
+        jmp_buf *PrevFrame, NewFrame;                               \
+        unsigned int MY_ID = CEXCEPTION_GET_ID;                     \
+        PrevFrame = CExceptionFrames[MY_ID].pFrame;                 \
+        CExceptionFrames[MY_ID].pFrame = (jmp_buf*)(&NewFrame);     \
+        CExceptionFrames[MY_ID].Exception = CEXCEPTION_NONE;        \
+        CEXCEPTION_HOOK_START_TRY;                                  \
+        if (setjmp(NewFrame) == 0) {                                \
+            if (1)
 
-#define errordef(n) _errordef(n, __COUNTER__ +1)
+//Catch
+#define Catch(e)                                                    \
+            else { }                                                \
+            CExceptionFrames[MY_ID].Exception = CEXCEPTION_NONE;    \
+            CEXCEPTION_HOOK_HAPPY_TRY;                              \
+        }                                                           \
+        else                                                        \
+        {                                                           \
+            e = CExceptionFrames[MY_ID].Exception;                  \
+            (void)e;                                                \
+            CEXCEPTION_HOOK_START_CATCH;                            \
+        }                                                           \
+        CExceptionFrames[MY_ID].pFrame = PrevFrame;                 \
+        CEXCEPTION_HOOK_AFTER_TRY;                                  \
+    }                                                               \
+    if (CExceptionFrames[CEXCEPTION_GET_ID].Exception != CEXCEPTION_NONE)
 
-#define try(try_block, err, err_name, catch_block) { \
-    error * err_name = NULL; \
-    error ** __err = & err_name; \
-    void __try_fn() try_block \
-    __try_fn(); \
-    void __catch_fn() { \
-        if (err_name == NULL) return; \
-        unsigned int __##err_name##_id = new_##err##_error()->id; \
-        if (__##err_name##_id != 0 && __##err_name##_id != err_name->id) \
-            printuncaughterr(); \
-        else if (__##err_name##_id != 0 || __##err_name##_id != err_name->id) \
-            catch_block \
-    } \
-    __catch_fn(); \
+#endif
+
+volatile CEXCEPTION_FRAME_T CExceptionFrames[CEXCEPTION_NUM_ID] = {{ 0 }};
+
+void Throw(CEXCEPTION_T ExceptionID)
+{
+    unsigned int MY_ID = CEXCEPTION_GET_ID;
+    CExceptionFrames[MY_ID].Exception = ExceptionID;
+    if (CExceptionFrames[MY_ID].pFrame)
+    {
+        longjmp(*CExceptionFrames[MY_ID].pFrame, 1);
+    }
+    CEXCEPTION_NO_CATCH_HANDLER(ExceptionID);
 }
 
-#define throw(e) { *__err = e; return; }
+CEXCEPTION_T e;
+int _test_failed_count = 0;
+int _test_count = 0;
 
-_errordef(any, 0)
-errordef(c_err)
-// ----------------------
+void try_catch(bool assertion) {
+    _test_count++;
+    Try {
+        if (!assertion) {
+            Throw(_test_count);
+        }
+    } Catch (e) {
+        _test_failed_count += 1;
+        printf("Test Case '--err-t%i--' failed\n", e);
+    }
+}
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -92,8 +165,6 @@ char* convert(int number) {
 
 ```c
 int main() {
-    int _testsPassed = 0;
-    int _testsFailed = 0;
 ```
 
 # --asserts--
@@ -101,260 +172,116 @@ int main() {
 The sound for 1 is "1"
 
 ```c
-    try ({
-        if (strcmp(convert(1), "1") != 0) {
-            throw(new_c_err_error_msg("--err-t1--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(1), "1") == 0);
 ```
 
 The sound for 3 is "Pling"
 
 ```c
-    try ({
-        if (strcmp(convert(3), "Pling") != 0) {
-            throw(new_c_err_error_msg("--err-t2--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(3), "Pling") == 0);
 ```
 
 The sound for 5 is "Plang"
 
 ```c
-    try ({
-        if (strcmp(convert(5), "Plang") != 0) {
-            throw(new_c_err_error_msg("--err-t3--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(5), "Plang") == 0);
 ```
 
 The sound for 7 is "Plong"
 
 ```c
-    try ({
-        if (strcmp(convert(7), "Plong") != 0) {
-            throw(new_c_err_error_msg("--err-t4--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(7), "Plong") == 0);
 ```
 
 The sound for 6 is "Pling"
 
 ```c
-    try ({
-        if (strcmp(convert(6), "Pling") != 0) {
-            throw(new_c_err_error_msg("--err-t5--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(6), "Pling") == 0);
 ```
 
 The sound for 8 is "8"
 
 ```c
-    try ({
-        if (strcmp(convert(8), "8") != 0) {
-            throw(new_c_err_error_msg("--err-t6--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(8), "8") == 0);
 ```
 
 The sound for 9 is "Pling"
 
 ```c
-    try ({
-        if (strcmp(convert(9), "Pling") != 0) {
-            throw(new_c_err_error_msg("--err-t7--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(9), "Pling") == 0);
 ```
 
 The sound for 10 is "Plang"
 
 ```c
-    try ({
-        if (strcmp(convert(10), "Plang") != 0) {
-            throw(new_c_err_error_msg("--err-t8--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(10), "Plang") == 0);
 ```
 
 The sound for 14 is "Plong"
 
 ```c
-    try ({
-        if (strcmp(convert(14), "Plong") != 0) {
-            throw(new_c_err_error_msg("--err-t9--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(14), "Plong") == 0);
 ```
 
 The sound for 15 is "PlingPlang"
 
 ```c
-    try ({
-        if (strcmp(convert(15), "PlingPlang") != 0) {
-            throw(new_c_err_error_msg("--err-t10--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(15), "PlingPlang") == 0);
 ```
 
 The sound for 21 is "PlingPlong"
 
 ```c
-    try ({
-        if (strcmp(convert(21), "PlingPlong") != 0) {
-            throw(new_c_err_error_msg("--err-t11--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(21), "PlingPlong") == 0);
 ```
 
 The sound for 25 is "Plang"
 
 ```c
-    try ({
-        if (strcmp(convert(25), "Plang") != 0) {
-            throw(new_c_err_error_msg("--err-t12--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(25), "Plang") == 0);
 ```
 
 The sound for 27 is "Pling"
 
 ```c
-    try ({
-        if (strcmp(convert(27), "Pling") != 0) {
-            throw(new_c_err_error_msg("--err-t13--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(27), "Pling") == 0);
 ```
 
 The sound for 35 is "PlangPlong"
 
 ```c
-    try ({
-        if (strcmp(convert(35), "PlangPlong") != 0) {
-            throw(new_c_err_error_msg("--err-t14--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(35), "PlangPlong") == 0);
 ```
 
 The sound for 49 is "Plong"
 
 ```c
-    try ({
-        if (strcmp(convert(49), "Plong") != 0) {
-            throw(new_c_err_error_msg("--err-t15--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(49), "Plong") == 0);
 ```
 
 The sound for 52 is "52"
 
 ```c
-    try ({
-        if (strcmp(convert(52), "52") != 0) {
-            throw(new_c_err_error_msg("--err-t16--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(52), "52") == 0);
 ```
 
 The sound for 105 is "PlingPlangPlong"
 
 ```c
-    try ({
-        if (strcmp(convert(105), "PlingPlangPlong") != 0) {
-            throw(new_c_err_error_msg("--err-t17--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(105), "PlingPlangPlong") == 0);
 ```
 
 
 The sound for 3125 is "Plang"
 
 ```c
-    try ({
-        if (strcmp(convert(3125), "Plang") != 0) {
-            throw(new_c_err_error_msg("--err-t18--"));
-        }
-        _testsPassed += 1;
-    }, any, e, {
-        _testsFailed += 1;
-        printf("Test Case '%s' failed\n", e->msg);
-    })
+    try_catch(strcmp(convert(3125), "Plang") == 0);
 ```
 
 # --after-asserts--
 
 ```c
-    printf("Executed %d tests, with %d failures", _testsPassed + _testsFailed, _testsFailed);
+    printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
 }
 ```
