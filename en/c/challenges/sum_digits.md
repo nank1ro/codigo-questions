@@ -2,23 +2,17 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: ATM
+title: Sum of digits
 ---
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+You're given an integer `num`.
+Write a program to calculate the sum of all the digits of `num`
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Return the sum of digits of `num`
 
 # --before-seed--
 
@@ -144,12 +138,13 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <math.h>
 ```
 
 # --seed--
 
 ```c
-float account_balance() {
+int sum_digits(int num) {
     
 }
 ```
@@ -162,34 +157,40 @@ int main() {
 
 # --asserts--
 
-Perform a successful transaction
+The sum of the digits of 12345 is 15
 
 ```c
-    try_catch(account_balance(50, 120.00) == 69.50);
+    try_catch(sum_digits(12345) == 15);
 ```
 
-Insufficient funds
+The sum of the digits of 57253 is 22
 
 ```c
-    try_catch(account_balance(200, 120.00) == 120.00);
+    try_catch(sum_digits(57253) == 22);
 ```
 
-Refused transaction, invalid amount
+The sum of the digits of 122 is 5
 
 ```c
-    try_catch(account_balance(22, 120.00) == 120.00);
+    try_catch(sum_digits(122) == 5);
 ```
 
-Withdraw all money successfully
+The sum of the digits of 91979997 is 60
 
 ```c
-    try_catch(account_balance(95, 95.50) == 0.00);
+    try_catch(sum_digits(91979997) == 60);
+```
+
+The sum of the digits of 2147483647 is 46
+
+```c
+    try_catch(sum_digits(2147483647) == 46);
 ```
 
 # --after-asserts--
 
 ```c
-    printf("Executed %d tests, with %d failures", _testsPassed + _testsFailed, _testsFailed);
+    printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
 }
 ```
@@ -197,10 +198,12 @@ Withdraw all money successfully
 # --solutions--
 
 ```c
-float account_balance(int withdraw, float balance) {
-    if ((withdraw % 5 == 0) && (balance >= (withdraw + 0.50))) {
-        return balance - withdraw - 0.50;
+int sum_digits(int num) {
+    int result = 0;
+    while (num > 0) {
+        result += num % 10;
+        num = floor(num / 10);
     }
-    return balance;
+    return result;
 }
 ```
