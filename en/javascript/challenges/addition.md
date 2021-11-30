@@ -13,6 +13,24 @@ Given two integers `num1` and `num2`, write a program to add these two numbers
 
 Write a function that returns the sum of two numbers
 
+# --before-seed--
+
+```javascript
+// DO NOT EDIT FROM HERE (implements error handler)
+var _testFailedCount = 0;
+var _testCount = 0;
+var assert = require('assert')
+const tryCatch = (...args) => {
+	_testCount++
+  try { assert(...args) }
+  catch (e) {
+    _testFailedCount++
+    console.log(`Test Case '--err-t${_testCount}--' failed`);
+  }
+};
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```javascript
@@ -21,54 +39,32 @@ function addition() {
 }
 ```
 
-# --before-asserts--
-
-```javascript
-// Don't edit these lines below
-var _testsPassed = 0
-var _testsFailed = 0
-var assert = require('assert')
-const tryAssert = (...args) => {
-  try { 
-    assert(...args)
-    _testsPassed += 1
-  }
-  catch (e) {
-    _testsFailed += 1
-    console.error(e)
-  }
-};
-```
-
 # --asserts--
 
 The sum of 1 and 3 must equal 4
 
 ```javascript
-tryAssert(addition(1, 3) == 4, "--err-t1--");
+tryCatch(addition(1, 3) == 4);
 ```
 
 The sum of 200 and 210 must equal 410
 
 ```javascript
-tryAssert(addition(200, 210) == 410, "--err-t2--");
+tryCatch(addition(200, 210) == 410);
 ```
 
 The sum of 15 and 35 must equal 50
 
 ```javascript
-tryAssert(addition(15, 35) == 50, "--err-t3--");
+tryCatch(addition(15, 35) == 50);
 ```
 
 # --after-asserts--
 
 ```javascript
-// Don't edit these lines below
-if (_testsFailed > 0) {
-  console.error(`FAILED with ${_testsFailed} failures and ${_testsPassed} passed`)
-} else {
-  console.log(`PASSED with 0 failures`)
-}
+// DO NOT EDIT FROM HERE 
+console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
+// DO NOT EDIT UNTIL HERE
 ```
 
 # --solutions--
