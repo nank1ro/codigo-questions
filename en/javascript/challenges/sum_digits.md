@@ -2,16 +2,17 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: Sum of digits
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+You're given an integer `num`.
+Write a program to calculate the sum of all the digits of `num`
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+Return the sum of digits of `num`
 
 # --before-seed--
 
@@ -34,29 +35,41 @@ const tryCatch = (...args) => {
 # --seed--
 
 ```javascript
-function addition() {
+function sumDigits(num) {
   
 }
 ```
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+The sum of the digits of 12345 is 15
 
 ```javascript
-tryCatch(addition(1, 3) === 4);
+tryCatch(sumDigits(12345) === 15);
 ```
 
-The sum of 200 and 210 must equal 410
+The sum of the digits of 57253 is 22
 
 ```javascript
-tryCatch(addition(200, 210) === 410);
+tryCatch(sumDigits(57253) === 22);
 ```
 
-The sum of 15 and 35 must equal 50
+The sum of the digits of 122 is 5
 
 ```javascript
-tryCatch(addition(15, 35) === 50);
+tryCatch(sumDigits(122) === 5);
+```
+
+The sum of the digits of 91979997 is 60
+
+```javascript
+tryCatch(sumDigits(91979997) === 60);
+```
+
+The sum of the digits of 2147483647 is 46
+
+```javascript
+tryCatch(sumDigits(2147483647) === 46);
 ```
 
 # --after-asserts--
@@ -70,7 +83,12 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 # --solutions--
 
 ```javascript
-function addition(num1, num2) {
-  return num1 + num2
+function sumDigits(num) {
+	var result = 0
+	while (num > 0) {
+		result += num % 10
+		num = Math.floor(num / 10)
+	}
+  return result
 }
 ```

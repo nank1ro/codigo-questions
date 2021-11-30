@@ -1,8 +1,8 @@
 ---
 language: javascript
 exerciseType: 1
-title: Addition
 difficulty: 1
+title: Addition
 ---
 
 # --description--
@@ -44,19 +44,19 @@ function addition() {
 The sum of 1 and 3 must equal 4
 
 ```javascript
-tryCatch(addition(1, 3) == 4);
+tryCatch(addition(1, 3) === 4);
 ```
 
 The sum of 200 and 210 must equal 410
 
 ```javascript
-tryCatch(addition(200, 210) == 410);
+tryCatch(addition(200, 210) === 410);
 ```
 
 The sum of 15 and 35 must equal 50
 
 ```javascript
-tryCatch(addition(15, 35) == 50);
+tryCatch(addition(15, 35) === 50);
 ```
 
 # --after-asserts--
