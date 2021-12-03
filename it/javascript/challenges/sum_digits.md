@@ -2,16 +2,17 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Addizione
+title: Somma cifre
 ---
 
 # --description--
 
-Dati due number interi `num1` e `num2`, scrivi un programma per sommare questi due numeri
+Ti viene dato un numero intero `num`.
+Scrivi un programma per calcolare la somma di tutte le cifre di `num`
 
 # --instructions--
 
-Scrivi una funzione che restituisca la somma tra i due numeri
+Restituisci la somma delle cifre di `num`
 
 # --before-seed--
 
@@ -34,29 +35,41 @@ const tryCatch = (...args) => {
 # --seed--
 
 ```javascript
-function somma() {
+function sommaCifre(num) {
   
 }
 ```
 
 # --asserts--
 
-La somma di 1 e 3 deve essere uguale a 4
+La somma delle cifre di 12345 è 15
 
 ```javascript
-tryCatch(somma(1, 3) === 4);
+tryCatch(sommaCifre(12345) === 15);
 ```
 
-La somma di 200 e 210 deve essere uguale a 410
+La somma delle cifre di 57253 è 22
 
 ```javascript
-tryCatch(somma(200, 210) === 410);
+tryCatch(sommaCifre(57253) === 22);
 ```
 
-La somma di 15 e 35 deve essere uguale a 50
+La somma delle cifre di 122 è 5
 
 ```javascript
-tryCatch(somma(15, 35) === 50);
+tryCatch(sommaCifre(122) === 5);
+```
+
+La somma delle cifre di 91979997 è 60
+
+```javascript
+tryCatch(sommaCifre(91979997) === 60);
+```
+
+La somma delle cifre di 2147483647 è 46
+
+```javascript
+tryCatch(sommaCifre(2147483647) === 46);
 ```
 
 # --after-asserts--
@@ -70,7 +83,12 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 # --solutions--
 
 ```javascript
-function somma(num1, num2) {
-  return num1 + num2
+function sommaCifre(num) {
+	var risultato = 0
+	while (num > 0) {
+		risultato += num % 10
+		num = Math.floor(num / 10)
+	}
+  return risultato
 }
 ```
