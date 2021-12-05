@@ -6,9 +6,9 @@ import 'package:parser/parser.dart';
 
 Future<void> main(List<String> arguments) async {
   exitCode = 0;
-  final parser = ArgParser()..addFlag('path', negatable: false, abbr: 'p');
+  final argsParser = ArgParser()..addFlag('path', negatable: false, abbr: 'p');
 
-  ArgResults argResults = parser.parse(arguments);
+  ArgResults argResults = argsParser.parse(arguments);
   final path = argResults.rest.first;
 
   print(path);
