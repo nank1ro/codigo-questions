@@ -23,7 +23,7 @@ Se non c'è abbastanza denaro nel conto per completare l'operazione, restituire 
 # --before-seed--
 
 ```c
-// DO NOT EDIT FROM HERE (implements exception handler)
+// DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -189,7 +189,7 @@ Preleva tutti i soldi con successo
 # --after-asserts--
 
 ```c
-    printf("Executed %d tests, with %d failures", _testsPassed + _testsFailed, _testsFailed);
+    printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
 }
 ```

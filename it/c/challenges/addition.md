@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la somma tra i due numeri
 # --before-seed--
 
 ```c
-// DO NOT EDIT FROM HERE (implements exception handler)
+// DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -112,13 +112,13 @@ volatile CEXCEPTION_FRAME_T CExceptionFrames[CEXCEPTION_NUM_ID] = {{ 0 }};
 
 void Throw(CEXCEPTION_T ExceptionID)
 {
-  unsigned int MY_ID = CEXCEPTION_GET_ID;
-  CExceptionFrames[MY_ID].Exception = ExceptionID;
-  if (CExceptionFrames[MY_ID].pFrame)
-  {
-      longjmp(*CExceptionFrames[MY_ID].pFrame, 1);
-  }
-  CEXCEPTION_NO_CATCH_HANDLER(ExceptionID);
+    unsigned int MY_ID = CEXCEPTION_GET_ID;
+    CExceptionFrames[MY_ID].Exception = ExceptionID;
+    if (CExceptionFrames[MY_ID].pFrame)
+    {
+        longjmp(*CExceptionFrames[MY_ID].pFrame, 1);
+    }
+    CEXCEPTION_NO_CATCH_HANDLER(ExceptionID);
 }
 
 CEXCEPTION_T e;
@@ -126,15 +126,15 @@ int _test_failed_count = 0;
 int _test_count = 0;
 
 void try_catch(bool assertion) {
-  _test_count++;
-  Try {
-      if (!assertion) {
-          Throw(_test_count);
-      }
-  } Catch (e) {
-      _test_failed_count += 1;
-      printf("Test Case '--err-t%i--' failed\n", e);
-  }
+    _test_count++;
+    Try {
+        if (!assertion) {
+            Throw(_test_count);
+        }
+    } Catch (e) {
+        _test_failed_count += 1;
+        printf("Test Case '--err-t%i--' failed\n", e);
+    }
 }
 // DO NOT EDIT UNTIL HERE
 ```
@@ -143,7 +143,7 @@ void try_catch(bool assertion) {
 
 ```c
 int somma() {
-  
+    
 }
 ```
 
@@ -158,26 +158,26 @@ int main() {
 La somma di 1 e 3 deve essere uguale a 4
 
 ```c
-  try_catch(somma(1, 3) == 4);
+    try_catch(somma(1, 3) == 4);
 ```
 
 La somma di 200 e 210 deve essere uguale a 410
 
 ```c
-  try_catch(somma(200, 210) == 410);
+    try_catch(somma(200, 210) == 410);
 ```
 
 La somma di 15 e 35 deve essere uguale a 50
 
 ```c
-  try_catch(somma(15, 35) == 50);
+    try_catch(somma(15, 35) == 50);
 ```
 
 # --after-asserts--
 
 ```c
-  printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
-  return 0;
+    printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
+    return 0;
 }
 ```
 
@@ -185,6 +185,6 @@ La somma di 15 e 35 deve essere uguale a 50
 
 ```c
 int somma(int num1, int num2) {
-  return num1 + num2;
+    return num1 + num2;
 }
 ```

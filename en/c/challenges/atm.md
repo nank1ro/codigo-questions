@@ -23,7 +23,7 @@ If there is not enough money in the account to complete the transaction, return 
 # --before-seed--
 
 ```c
-// DO NOT EDIT FROM HERE (implements exception handler)
+// DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -189,7 +189,7 @@ Withdraw all money successfully
 # --after-asserts--
 
 ```c
-    printf("Executed %d tests, with %d failures", _testsPassed + _testsFailed, _testsFailed);
+    printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
 }
 ```

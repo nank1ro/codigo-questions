@@ -1,34 +1,6 @@
----
-language: c
-exerciseType: 1
-difficulty: 1
-title: Two for one
----
+// ignore_for_file: public_member_api_docs
 
-# --description--
-
-Given a name, return a string with the message:
-`One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
-`One for you, one for me.`
-
-# --instructions--
-
-Write a function that returns the correct string, examples:
-
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
-
-**input**: `""`
-**output**: `One for you, one for me.`
-
-**input**: `"David"`
-**output**: `One for David, one for me.`
-
-# --before-seed--
-
-```c
+const cBeforeSeedCode = r'''
 // DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
@@ -149,61 +121,29 @@ void try_catch(bool assertion) {
         printf("Test Case '--err-t%i--' failed\n", e);
     }
 }
-// DO NOT EDIT UNTIL HERE
-#include <string.h>
-```
+// DO NOT EDIT UNTIL HERE''';
 
-# --seed--
-
-```c
-char* two_for_one(char* name) {
-
-}
-```
-
-# --before-asserts--
-
-```c
-int main() {
-```
-
-# --asserts--
-
-No name given
-
-```c
-    try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
-```
-
-Pass "James" as name
-
-```c
-    try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
-```
-
-Pass "Martha" as name
-
-```c
-    try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);
-```
-
-# --after-asserts--
-
-```c
+const cAfterAssertsCode = '''
     printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
-}
-```
+}''';
 
-# --solutions--
+const javascriptBeforeSeedCode = r'''
+// DO NOT EDIT FROM HERE
+var _testFailedCount = 0;
+var _testCount = 0;
+var assert = require('assert')
+const tryCatch = (...args) => {
+  _testCount++
+  try { assert(...args) }
+  catch (e) {
+    _testFailedCount++
+    console.log(`Test Case '--err-t${_testCount}--' failed`);
+  }
+};
+// DO NOT EDIT UNTIL HERE''';
 
-```c
-char* two_for_one(char* name) {
-    if (strlen(name) == 0) {
-        return "One for you, one for me.";
-    }
-    char *result = malloc(sizeof(char) * 80);
-    sprintf(result, "One for %s, one for me.", name);
-    return result;
-}
-```
+const javascriptAfterAssertsCode = r'''
+// DO NOT EDIT FROM HERE 
+console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
+// DO NOT EDIT UNTIL HERE''';

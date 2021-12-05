@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
+import 'package:validator/constants.dart';
 
 /// Returns all the available exercise languages.
 List<String> get locales => ['en', 'it'];
@@ -106,63 +107,84 @@ void _runCodeTests({
   });
 
   if (model.frontMatterModel.language == 'c' &&
-          (model.codeBeforeAsserts?.code != null &&
-              model.codeAfterAsserts?.code != null) ||
-      (model.beforeSeed?.code != null)) {
-    _testHandler(
-        '''Verify that the `C` RunCode exercise, contains the intestation in the before-seed or before-asserts tag: `int main() {`''',
-        () {
-      final codeBefore =
-          model.beforeSeed?.code ?? model.codeBeforeAsserts?.code;
-      expect(
-        codeBefore,
-        contains('int main() {'),
-        reason: _fancyLogger(
-          message:
-              '''You must provide the `int main() {` line of code inside the before-seed or before-asserts before-asserts tag''',
-          exercisePath: exercisePath,
-        ),
-      );
-    });
-
-    _testHandler('''
-Verify that the `C` RunCode exercise, contains the end of intestation in the after-seed or after-asserts tag: `  return 0;\n}`''',
-        () {
-      final codeAfter = model.afterSeed?.code ?? model.codeAfterAsserts?.code;
-      expect(
-        codeAfter,
-        contains('''  return 0;\n}'''),
-        reason: _fancyLogger(
-          message: '''
-You must provide the
-```
-    return 0;
-}
-```
-lines of code in the after-seed or after-asserts code''',
-          exercisePath: exercisePath,
-        ),
-      );
-    });
-
-    if (model.asserts?.isNotEmpty ?? false) {
-      _testHandler('''
-Verify that the `C` RunCode exercise, contains the assert import if there are asserts''',
+      (model.asserts?.isNotEmpty ?? false)) {
+    if (model.beforeSeed?.code != null) {
+      _testHandler(
+          '''Verify that the `C` RunCode exercise, contains the intestation in the before-seed tag''',
           () {
-        final containsImport = [
-          model.beforeSeed?.code,
-          model.codeBeforeAsserts?.code
-        ].any((element) => element?.contains('#include <assert.h>') ?? false);
         expect(
-          containsImport,
-          equals(true),
+          model.beforeSeed?.code,
+          contains(cBeforeSeedCode),
+          reason: _fancyLogger(
+            message: '''
+You must provide the 
+```
+$cBeforeSeedCode
+````
+ lines of code inside the before-seed tag''',
+            exercisePath: exercisePath,
+          ),
+        );
+      });
+    }
+
+    if (model.codeAfterAsserts?.code != null) {
+      _testHandler('''
+Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag''',
+          () {
+        expect(
+          model.codeAfterAsserts?.code,
+          cAfterAssertsCode,
           reason: _fancyLogger(
             message: '''
 You must provide the
 ```
-#include <assert.h>
+$cAfterAssertsCode
 ```
-import code in the before-seed or before-asserts code''',
+lines of code in the after-asserts tag''',
+            exercisePath: exercisePath,
+          ),
+        );
+      });
+    }
+  }
+
+  if (model.frontMatterModel.language == 'javascript' &&
+      (model.asserts?.isNotEmpty ?? false)) {
+    if (model.beforeSeed?.code != null) {
+      _testHandler(
+          '''Verify that the `JavaScript` RunCode exercise, contains the intestation in the before-seed tag''',
+          () {
+        expect(
+          model.beforeSeed?.code,
+          contains(javascriptBeforeSeedCode),
+          reason: _fancyLogger(
+            message: '''
+You must provide the 
+```
+$javascriptBeforeSeedCode
+````
+ lines of code inside the before-seed tag''',
+            exercisePath: exercisePath,
+          ),
+        );
+      });
+    }
+
+    if (model.codeAfterAsserts?.code != null) {
+      _testHandler('''
+Verify that the `JavaScript` RunCode exercise, contains the end of intestation in the after-asserts tag''',
+          () {
+        expect(
+          model.codeAfterAsserts?.code,
+          javascriptAfterAssertsCode,
+          reason: _fancyLogger(
+            message: '''
+You must provide the
+```
+$javascriptAfterAssertsCode
+```
+lines of code in the after-asserts tag''',
             exercisePath: exercisePath,
           ),
         );
@@ -336,18 +358,21 @@ Your `before asserts` code must not be empty. If you don't want to add it, remov
         exercisePath: exercisePath,
       ),
     );
-    expect(
-      model.codeBeforeAsserts?.language,
-      allOf([
-        isNot(equals(null)),
-        supportedProgrammingLanguages.contains,
-      ]),
-      reason: _fancyLogger(
-        message: '''
+
+    if (model.codeBeforeAsserts != null) {
+      expect(
+        model.codeBeforeAsserts?.language,
+        allOf([
+          isNot(equals(null)),
+          supportedProgrammingLanguages.contains,
+        ]),
+        reason: _fancyLogger(
+          message: '''
 Your `before asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python''',
-        exercisePath: exercisePath,
-      ),
-    );
+          exercisePath: exercisePath,
+        ),
+      );
+    }
   });
 
   _testHandler(
@@ -364,18 +389,20 @@ Your `after asserts` code must not be empty. If you don't want to add it, remove
         exercisePath: exercisePath,
       ),
     );
-    expect(
-      model.codeAfterAsserts?.language,
-      allOf([
-        isNot(equals(null)),
-        supportedProgrammingLanguages.contains,
-      ]),
-      reason: _fancyLogger(
-        message: '''
+    if (model.codeAfterAsserts != null) {
+      expect(
+        model.codeAfterAsserts?.language,
+        allOf([
+          isNot(equals(null)),
+          supportedProgrammingLanguages.contains,
+        ]),
+        reason: _fancyLogger(
+          message: '''
 Your `after asserts` language code cannot be null or is unsupported. The supported languages are $supportedProgrammingLanguages. Add it after the backticks, for example ```python''',
-        exercisePath: exercisePath,
-      ),
-    );
+          exercisePath: exercisePath,
+        ),
+      );
+    }
   });
 
   _testHandler('Verify that the challenge contains valid asserts', () {
@@ -392,27 +419,30 @@ Your `after asserts` language code cannot be null or is unsupported. The support
     );
   });
 
-  _testHandler('''
+  if (model.frontMatterModel.language != 'c' &&
+      model.frontMatterModel.language != 'javascript') {
+    _testHandler('''
 Verify that the challenge unit tests (asserts) contains the `--err-t{testNumber}--` message''',
-      () {
-    for (var i = 0; i < (model.asserts?.length ?? 0); i++) {
-      final errorMessage = '--err-t${i + 1}--';
-      final unitTest = model.asserts![i].unitTest;
-      expect(
-        unitTest,
-        contains(errorMessage),
-        reason: _fancyLogger(
-          message: '''
+        () {
+      for (var i = 0; i < (model.asserts?.length ?? 0); i++) {
+        final errorMessage = '--err-t${i + 1}--';
+        final unitTest = model.asserts![i].unitTest;
+        expect(
+          unitTest,
+          contains(errorMessage),
+          reason: _fancyLogger(
+            message: '''
 The challenge unit test:
 ```
 $unitTest
 ```
 must contain the error message: $errorMessage''',
-          exercisePath: exercisePath,
-        ),
-      );
-    }
-  });
+            exercisePath: exercisePath,
+          ),
+        );
+      }
+    });
+  }
 
   _testHandler('Verify that the challenge contains a valid single solution',
       () {

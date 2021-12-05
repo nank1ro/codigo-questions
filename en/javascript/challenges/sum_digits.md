@@ -17,12 +17,12 @@ Return the sum of digits of `num`
 # --before-seed--
 
 ```javascript
-// DO NOT EDIT FROM HERE (implements error handler)
+// DO NOT EDIT FROM HERE
 var _testFailedCount = 0;
 var _testCount = 0;
 var assert = require('assert')
 const tryCatch = (...args) => {
-	_testCount++
+  _testCount++
   try { assert(...args) }
   catch (e) {
     _testFailedCount++

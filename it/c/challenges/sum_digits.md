@@ -17,7 +17,7 @@ Restituisci la somma delle cifre di `num`
 # --before-seed--
 
 ```c
-// DO NOT EDIT FROM HERE (implements exception handler)
+// DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>

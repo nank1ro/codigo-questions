@@ -28,7 +28,7 @@ Scrivi una funzione che restituisca la stringa corretta, ad esempio:
 # --before-seed--
 
 ```javascript
-// DO NOT EDIT FROM HERE (implements error handler)
+// DO NOT EDIT FROM HERE
 var _testFailedCount = 0;
 var _testCount = 0;
 var assert = require('assert')
