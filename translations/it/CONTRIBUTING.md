@@ -52,14 +52,14 @@ __Riesaminerò la tua PR solo dopo che tutti questi passaggi sono stati completa
 
 > 1. Maggiori informazioni sui controlli (checks) su Github
 
-<img src="local_assets/github-checks.png"/>
+<img src="/local_assets/github-checks.png"/>
 
 Questi sono i controlli di GitHub, ognuno di questi "semafori" deve essere verde.
 Se il controllo `validate_exercises` fallisce, clicca sul pulsante destro __Details__
 
 Scorri verso il basso fino a trovare gli errori, come in questa immagine:
 
-<img src="local_assets/failed-assert.png"/>
+<img src="/local_assets/failed-assert.png"/>
 
 Leggi l'errore e correggilo seguendo le istruzioni fornite.
 
@@ -69,7 +69,7 @@ Il _percorso relativo all'esercizio_ ti dice in quale esercizio si è verificato
 
 Per comporre un esercizio per farlo funzionare nell'app, usiamo il seguente ordine:
 
-<img src="local_assets/exercise-composition.svg" width="180"/>
+<img src="/local_assets/exercise-composition.svg" width="180"/>
 
 Non tutte queste sezioni sono richieste, questo varia in base al tipo di esercizio.
 
@@ -91,7 +91,7 @@ c_2 => Un esercizio di _riempimento di spazi vuoti_ nel linguaggio di programmaz
 Puoi copiare un modello e sostituire tutto il testo con il tuo nuovo esercizio, così non dovrai riscrivere la struttura dell'esercizio da zero ogni volta.
 
 Se stai scrivendo un esercizio di tipo __esegui il codice__ (codice: 1), puoi anche usare la CLI.
-Per maggiori informazioni leggi il [CLI Readme.md](./cli/README.md)
+Per maggiori informazioni leggi il [CLI Readme.md](/cli/README.md)
 
 ## Q&A
 
