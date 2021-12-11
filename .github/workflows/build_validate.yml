@@ -8,6 +8,9 @@ name: Validate and build
 on:
   push:
     branches: [main]
+    paths:
+      - "en/**"
+      - "it/**"
   pull_request:
 
 jobs:

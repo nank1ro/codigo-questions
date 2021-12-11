@@ -20,6 +20,69 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "OdinV",
+      "name": "OdinV",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72207152?v=4",
+      "profile": "https://github.com/OdinV",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "brunicorno",
+      "name": "Bruno",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28707292?v=4",
+      "profile": "https://github.com/brunicorno",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "vicberger",
+      "name": "vicberger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49183536?v=4",
+      "profile": "https://github.com/vicberger",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "adriawh",
+      "name": "Adrian Wist Hakvåg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70323886?v=4",
+      "profile": "http://www.linkedin.com/in/adrian-wist-hakvåg",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "zeykk",
+      "name": "zeykk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94829947?v=4",
+      "profile": "https://github.com/zeykk",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "simolado",
+      "name": "simolado",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91845095?v=4",
+      "profile": "https://github.com/simolado",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Dm-89",
+      "name": "Dm-89",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95239408?v=4",
+      "profile": "https://github.com/Dm-89",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
