@@ -75,7 +75,23 @@ Not all of these sections are required, this vary based on the exercise type.
 
 ## Add new questions
 
+To add new question we suggest to start using our predefined templates, that you can find in the
+/translations/{langCode}/templates
 
+Currenly Codigo supports four types of exercises:
+- run code (code: 1)
+- fill empty spaces (code: 2)
+- choose answer (code: 3)
+- sort code (code: 4)
+
+In the templates you can find the programming language, followed by the language code, e.g:
+
+c_2 => A _fill empty spaces_ exercise in the C programming language
+
+You can copy a template, and replace all the text with your new exercise, so you don't have to write the exercise structure from scratch each time.
+
+If you're writing a __run code__ exercise (code: 1), you can also you the CLI.
+For more info read the [CLI Readme.md](./cli/README.md)
 
 ## Q&A
 
