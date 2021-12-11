@@ -7,6 +7,10 @@
 
 All the codigo questions for the `Codigo: Learn to Code` app.
 
+# Contributing
+
+If you would like to contribute, read our [CONTRIBUTING](/CONTRIBUTING.md) guide
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
