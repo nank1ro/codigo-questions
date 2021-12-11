@@ -1,6 +1,6 @@
 # Benvenuto
 
-#### _Leggi questo in altre lingue:
+#### _Leggi questo in altre lingue_:
 
 <kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" width="22"> English](../../CONTRIBUTING.md)</kbd>
 
