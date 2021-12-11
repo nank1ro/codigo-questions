@@ -54,7 +54,7 @@ Dividi con "Daniele"
 
 ```python
     def test_a_name_given(self):
-        self.assertEqual(due_per_uno("James"), "Uno per Daniele, uno per me.", "--err-t2--")
+        self.assertEqual(due_per_uno("Daniele"), "Uno per Daniele, uno per me.", "--err-t2--")
 ```
 
 

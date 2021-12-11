@@ -1,6 +1,6 @@
 ![Firebase Hosting](https://github.com/nank1ro/Codigo-Questions/workflows/Deploy%20to%20Firebase%20Storage/badge.svg)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Codigo-Questions
@@ -26,6 +26,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Dm-89"><img src="https://avatars.githubusercontent.com/u/95239408?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dm-89</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3ADm-89" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/PRNUT"><img src="https://avatars.githubusercontent.com/u/94775631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>PRNUT</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3APRNUT" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/cipoleon"><img src="https://avatars.githubusercontent.com/u/60713159?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aux Ciprián</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3Acipoleon" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
