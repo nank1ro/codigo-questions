@@ -1,9 +1,11 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'package:diff_match_patch/diff_match_patch.dart';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
+import 'package:trotter/trotter.dart';
 import 'package:validator/constants.dart';
 
 /// Returns all the available exercise languages.
@@ -16,6 +18,8 @@ const supportedProgrammingLanguages = <String>{
   'javascript',
   'c',
 };
+
+final RegExp _codeSpaceRegex = RegExp(r'\[\/\]', dotAll: true);
 
 Future<void> main() async {
   final parser = MDParserBLoC();
@@ -38,9 +42,8 @@ Future<void> main() async {
           parser: parser,
         );
       } else if (isMDFile(entity)) {
-        // if (relativePath == '/en/c/challenges/hello_world.md') {
+        // if (relativePath == '/en/javascript/whileLoops/6.md') {
         final exerciseModel = await parser.parse(file: entity as File);
-
         _validateExercise(
           exerciseModel: exerciseModel,
           exercisePath: relativePath,
@@ -72,6 +75,16 @@ void _validateExercise({
     _runCodeTests(
       exercisePath: exercisePath,
       model: exerciseModel,
+    );
+  } else if (exerciseModel.frontMatterModel.exerciseType == 2) {
+    _runFillInEmptySpacesTests(
+      model: exerciseModel,
+      exercisePath: exercisePath,
+    );
+  } else if (exerciseModel.frontMatterModel.exerciseType == 3) {
+    _runChooseAnAnswerTests(
+      model: exerciseModel,
+      exercisePath: exercisePath,
     );
   } else if (exerciseModel.frontMatterModel.exerciseType == 4) {
     _runSortItemsTests(
@@ -462,12 +475,219 @@ The challenge solution must not be null or empty and must be only one''',
   });
 }
 
+void _runFillInEmptySpacesTests({
+  required ExerciseModel model,
+  required String exercisePath,
+}) {
+  _testHandler(
+      'Verify that the exercise can be completed successfully with the answers provided',
+      () {
+    final answers = model.answers!;
+    final seed = model.seed!.code;
+    final solutions = model.solutions!;
+    final emptySpacesCount = _codeSpaceRegex.allMatches(seed).length;
+    final emptySpacesMatches = _codeSpaceRegex.allMatches(seed).toList();
+
+    /// Returns all the empty spaces' start position.
+    /// ? Each `[/]` is counted as a single char.
+    /// e.g.:
+    /// `[/][/]` -> [0, 1]
+    /// `[/]code[/]`-> [0, 5]
+    List<int> getEmptySpacesPosition() {
+      final positions = <int>[];
+      for (var i = 0; i < emptySpacesMatches.length; i++) {
+        final curr = emptySpacesMatches[i];
+        if (positions.isEmpty) {
+          positions.add(curr.start);
+        } else {
+          positions.add(curr.start - (2 * positions.length));
+        }
+      }
+      return positions..sort();
+    }
+
+    /// Returns true if the are two empty spaces that touch each other, e.g:
+    /// `[/][/] some code` -> true
+    /// `[/]some code[/]` -> false
+    bool hasNearbyEmptySpaces() {
+      final positions = getEmptySpacesPosition();
+      return positions.any(
+        (p) => positions.contains(p - 1) || positions.contains(p + 1),
+      );
+    }
+
+    /// Returns the list of differences between the solution and the
+    /// seed without empty spaces.
+    List<String> getDifferences(String solution) {
+      final seedWithoutEmptySpaces = seed.replaceAll(_codeSpaceRegex, '');
+
+      final differences = diff(solution, seedWithoutEmptySpaces);
+
+      return differences
+          .where((d) => d.operation == -1)
+          .map((e) => e.text)
+          .toList();
+    }
+
+    /// * This method is slower that the counterpart, because
+    /// * it uses permutations to find the correct order of the answers
+    /// * needed to complete the exercise successfully.
+    bool validateEmptySpacesNearby() {
+      var exerciseIsValid = false;
+
+      for (final solution in solutions) {
+        exerciseIsValid = false;
+        final expectedAnswers = <String>[];
+        final availableAnswers = [...answers];
+
+        Map<int, int> groupEmptySpacePositions() {
+          final emptyPositions = getEmptySpacesPosition();
+          final answersPerGroup = <int, int>{
+            emptyPositions.first: 1,
+          };
+          var lastAddedIndex = emptyPositions.first;
+          for (var i = 1; i < emptyPositions.length; i++) {
+            final curr = emptyPositions[i];
+            final prev = emptyPositions[i - 1];
+
+            if (prev + 1 != curr) {
+              lastAddedIndex = curr;
+            }
+
+            answersPerGroup.update(
+              lastAddedIndex,
+              (value) => value + 1,
+              ifAbsent: () => 1,
+            );
+          }
+          return answersPerGroup;
+        }
+
+        final groupedEmptySpacePositions = groupEmptySpacePositions();
+
+        final differences = getDifferences(solution);
+
+        assert(differences.length == groupedEmptySpacePositions.length,
+            'The differences found in the exercise are more than the empty spaces in $exercisePath');
+
+        var differenceIndex = 0;
+        for (final entry in groupedEmptySpacePositions.entries) {
+          final answersCount = entry.value;
+          final difference = differences[differenceIndex];
+
+          final possibleAnswers =
+              availableAnswers.where(difference.contains).toList();
+
+          assert(answersCount <= possibleAnswers.length,
+              "There are more answers than possibilities in $exercisePath");
+
+          final indexes =
+              List.generate(possibleAnswers.length, (index) => index);
+          final permutations = Permutations(answersCount, indexes);
+
+          for (final combo in permutations()) {
+            final finalAnswers = <String>[];
+            for (final c in combo) {
+              finalAnswers.add(possibleAnswers[c]);
+            }
+
+            if (difference == finalAnswers.join()) {
+              expectedAnswers.addAll(finalAnswers);
+              for (final c in combo) {
+                availableAnswers.remove(possibleAnswers[c]);
+              }
+              differenceIndex++;
+              break;
+            }
+          }
+        }
+
+        if (expectedAnswers.length == emptySpacesCount) {
+          exerciseIsValid = true;
+        }
+
+        // Solution found, stop the iteration over the next solution.
+        if (exerciseIsValid) break;
+      }
+
+      return exerciseIsValid;
+    }
+
+    /// * This method is faster that the counterpart, because
+    /// * it simply finds the answers from the solution.
+    bool validateEmptySpacesNotNearby() {
+      var exerciseIsValid = true;
+
+      for (final solution in solutions) {
+        exerciseIsValid = true;
+        // Gets the difference between the solution and the seed
+        final differences = getDifferences(solution);
+        final expectedAnswers = <String>[];
+        final availableAnswers = [...answers];
+
+        for (final dif in differences) {
+          // If there is a difference, it should be an answer, check if the
+          // [availableAnswers] contains it and remove it.
+          // In case the answer is not present, the exercise is not valid.
+          expectedAnswers.add(dif);
+          if (availableAnswers.contains(dif)) {
+            availableAnswers.remove(dif);
+          } else {
+            exerciseIsValid = false;
+            break;
+          }
+        }
+        // Solution found, stop the iteration over the next solution.
+        if (exerciseIsValid) break;
+      }
+
+      return exerciseIsValid;
+    }
+
+    bool hasValidCombo() {
+      final hasNearbySpaces = hasNearbyEmptySpaces();
+      if (hasNearbySpaces) return validateEmptySpacesNearby();
+      return validateEmptySpacesNotNearby();
+    }
+
+    expect(
+      hasValidCombo(),
+      equals(true),
+      reason: _fancyLogger(
+        message:
+            'The exercise cannot be completed successfully with the answers provided',
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+}
+
+void _runChooseAnAnswerTests({
+  required ExerciseModel model,
+  required String exercisePath,
+}) {
+  _testHandler(
+      'Verify that the exercise can be completed successfully with the solutions provided',
+      () {
+    final solutionsAreValid =
+        model.solutions!.every((s) => model.answers!.contains(s));
+    expect(
+      solutionsAreValid,
+      equals(true),
+      reason: _fancyLogger(
+        message:
+            'The exercise cannot be completed successfully with the solutions provided',
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+}
+
 void _runSortItemsTests({
   required ExerciseModel model,
   required String exercisePath,
 }) {
-  _testHandler('Verify that the sort items exercise contains valid answers',
-      () {
+  _testHandler('Verify that the sort items exercise contains some answers', () {
     expect(
       model.answers,
       allOf([
@@ -476,6 +696,40 @@ void _runSortItemsTests({
       ]),
       reason: _fancyLogger(
         message: 'The sort items exercise answers must not be null or empty',
+        exercisePath: exercisePath,
+      ),
+    );
+  });
+
+  _testHandler('Verify that the sort items exercise contains valid answers',
+      () {
+    bool checkValidity() {
+      final solutions = model.solutions!;
+      final answers = model.answers!;
+      var isValid = false;
+
+      for (final solution in solutions) {
+        var _sol = solution;
+        for (final answer in answers) {
+          // Remove all the answer from the solution
+          _sol = _sol.replaceFirst(answer, '');
+        }
+        // Remove also all the new lines
+        _sol = _sol.replaceAll('\n', '');
+        if (_sol.isEmpty) {
+          isValid = true;
+          break;
+        }
+      }
+      return isValid;
+    }
+
+    expect(
+      checkValidity(),
+      equals(true),
+      reason: _fancyLogger(
+        message:
+            'The sort items exercise cannot be completed with the answers provided',
         exercisePath: exercisePath,
       ),
     );
