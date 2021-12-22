@@ -184,7 +184,7 @@ $javascriptBeforeSeedCode
       });
     }
 
-    if (model.codeAfterAsserts?.code != null) {
+    if (model.asserts != null) {
       _testHandler('''
 Verify that the `JavaScript` RunCode exercise, contains the end of intestation in the after-asserts tag''',
           () {
