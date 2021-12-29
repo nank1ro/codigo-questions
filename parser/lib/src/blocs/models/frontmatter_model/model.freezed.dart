@@ -71,7 +71,7 @@ mixin _$FrontMatterModel {
   /// 3 => hard
   int? get difficulty => throw _privateConstructorUsedError;
 
-  /// An optional string that defines with all the compiler options,
+  /// An optional string that defines all the compiler options,
   /// e.g.: `-lm` in C tells to link with the standard C libraries
   String? get compilerOptions => throw _privateConstructorUsedError;
 
@@ -239,7 +239,7 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   final int? difficulty;
   @override
 
-  /// An optional string that defines with all the compiler options,
+  /// An optional string that defines all the compiler options,
   /// e.g.: `-lm` in C tells to link with the standard C libraries
   final String? compilerOptions;
 
@@ -330,7 +330,7 @@ abstract class _FrontMatterModel implements FrontMatterModel {
   int? get difficulty => throw _privateConstructorUsedError;
   @override
 
-  /// An optional string that defines with all the compiler options,
+  /// An optional string that defines all the compiler options,
   /// e.g.: `-lm` in C tells to link with the standard C libraries
   String? get compilerOptions => throw _privateConstructorUsedError;
   @override
