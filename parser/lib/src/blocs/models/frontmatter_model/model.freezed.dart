@@ -25,12 +25,14 @@ class _$FrontMatterModelTearOff {
       {required String language,
       required int exerciseType,
       String? title,
-      int? difficulty}) {
+      int? difficulty,
+      String? compilerOptions}) {
     return _FrontMatterModel(
       language: language,
       exerciseType: exerciseType,
       title: title,
       difficulty: difficulty,
+      compilerOptions: compilerOptions,
     );
   }
 
@@ -69,6 +71,10 @@ mixin _$FrontMatterModel {
   /// 3 => hard
   int? get difficulty => throw _privateConstructorUsedError;
 
+  /// An optional string that defines with all the compiler options,
+  /// e.g.: `-lm` in C tells to link with the standard C libraries
+  String? get compilerOptions => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FrontMatterModelCopyWith<FrontMatterModel> get copyWith =>
@@ -81,7 +87,11 @@ abstract class $FrontMatterModelCopyWith<$Res> {
           FrontMatterModel value, $Res Function(FrontMatterModel) then) =
       _$FrontMatterModelCopyWithImpl<$Res>;
   $Res call(
-      {String language, int exerciseType, String? title, int? difficulty});
+      {String language,
+      int exerciseType,
+      String? title,
+      int? difficulty,
+      String? compilerOptions});
 }
 
 /// @nodoc
@@ -99,6 +109,7 @@ class _$FrontMatterModelCopyWithImpl<$Res>
     Object? exerciseType = freezed,
     Object? title = freezed,
     Object? difficulty = freezed,
+    Object? compilerOptions = freezed,
   }) {
     return _then(_value.copyWith(
       language: language == freezed
@@ -117,6 +128,10 @@ class _$FrontMatterModelCopyWithImpl<$Res>
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
               as int?,
+      compilerOptions: compilerOptions == freezed
+          ? _value.compilerOptions
+          : compilerOptions // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -129,7 +144,11 @@ abstract class _$FrontMatterModelCopyWith<$Res>
       __$FrontMatterModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String language, int exerciseType, String? title, int? difficulty});
+      {String language,
+      int exerciseType,
+      String? title,
+      int? difficulty,
+      String? compilerOptions});
 }
 
 /// @nodoc
@@ -149,6 +168,7 @@ class __$FrontMatterModelCopyWithImpl<$Res>
     Object? exerciseType = freezed,
     Object? title = freezed,
     Object? difficulty = freezed,
+    Object? compilerOptions = freezed,
   }) {
     return _then(_FrontMatterModel(
       language: language == freezed
@@ -167,6 +187,10 @@ class __$FrontMatterModelCopyWithImpl<$Res>
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
               as int?,
+      compilerOptions: compilerOptions == freezed
+          ? _value.compilerOptions
+          : compilerOptions // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -178,7 +202,8 @@ class _$_FrontMatterModel implements _FrontMatterModel {
       {required this.language,
       required this.exerciseType,
       this.title,
-      this.difficulty});
+      this.difficulty,
+      this.compilerOptions});
 
   factory _$_FrontMatterModel.fromJson(Map<String, dynamic> json) =>
       _$$_FrontMatterModelFromJson(json);
@@ -212,10 +237,15 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   /// 2 => medium
   /// 3 => hard
   final int? difficulty;
+  @override
+
+  /// An optional string that defines with all the compiler options,
+  /// e.g.: `-lm` in C tells to link with the standard C libraries
+  final String? compilerOptions;
 
   @override
   String toString() {
-    return 'FrontMatterModel(language: $language, exerciseType: $exerciseType, title: $title, difficulty: $difficulty)';
+    return 'FrontMatterModel(language: $language, exerciseType: $exerciseType, title: $title, difficulty: $difficulty, compilerOptions: $compilerOptions)';
   }
 
   @override
@@ -232,7 +262,10 @@ class _$_FrontMatterModel implements _FrontMatterModel {
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.difficulty, difficulty) ||
                 const DeepCollectionEquality()
-                    .equals(other.difficulty, difficulty)));
+                    .equals(other.difficulty, difficulty)) &&
+            (identical(other.compilerOptions, compilerOptions) ||
+                const DeepCollectionEquality()
+                    .equals(other.compilerOptions, compilerOptions)));
   }
 
   @override
@@ -241,7 +274,8 @@ class _$_FrontMatterModel implements _FrontMatterModel {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(exerciseType) ^
       const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(difficulty);
+      const DeepCollectionEquality().hash(difficulty) ^
+      const DeepCollectionEquality().hash(compilerOptions);
 
   @JsonKey(ignore: true)
   @override
@@ -259,7 +293,8 @@ abstract class _FrontMatterModel implements FrontMatterModel {
       {required String language,
       required int exerciseType,
       String? title,
-      int? difficulty}) = _$_FrontMatterModel;
+      int? difficulty,
+      String? compilerOptions}) = _$_FrontMatterModel;
 
   factory _FrontMatterModel.fromJson(Map<String, dynamic> json) =
       _$_FrontMatterModel.fromJson;
@@ -293,6 +328,11 @@ abstract class _FrontMatterModel implements FrontMatterModel {
   /// 2 => medium
   /// 3 => hard
   int? get difficulty => throw _privateConstructorUsedError;
+  @override
+
+  /// An optional string that defines with all the compiler options,
+  /// e.g.: `-lm` in C tells to link with the standard C libraries
+  String? get compilerOptions => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FrontMatterModelCopyWith<_FrontMatterModel> get copyWith =>
