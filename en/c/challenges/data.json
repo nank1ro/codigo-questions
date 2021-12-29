@@ -22,5 +22,9 @@
 	"two_for_one": {
 		"difficulty": 1,
 		"name": "Two for one"
+	},
+	"100_doors": {
+		"difficulty": 1,
+		"name": "100 doors"
 	}
 }
