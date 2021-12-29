@@ -120,8 +120,7 @@ void try_catch(bool assertion) {
         _test_failed_count += 1;
         printf("Test Case '--err-t%i--' failed\n", e);
     }
-}
-// DO NOT EDIT UNTIL HERE''';
+}''';
 
 const cAfterAssertsCode = '''
     printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
@@ -140,8 +139,7 @@ const tryCatch = (...args) => {
     _testFailedCount++
     console.log(`Test Case '--err-t${_testCount}--' failed`);
   }
-};
-// DO NOT EDIT UNTIL HERE''';
+};''';
 
 const javascriptAfterAssertsCode = r'''
 // DO NOT EDIT FROM HERE 
