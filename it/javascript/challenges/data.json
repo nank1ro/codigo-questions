@@ -26,5 +26,9 @@
 	"100_doors": {
 		"difficulty": 1,
 		"name": "100 porte"
+	},
+	"ackermann_function": {
+		"difficulty": 1,
+		"name": "Funzione di Ackermann"
 	}
 }
