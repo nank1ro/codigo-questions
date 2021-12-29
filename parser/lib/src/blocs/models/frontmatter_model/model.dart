@@ -31,6 +31,10 @@ class FrontMatterModel with _$FrontMatterModel {
     /// 2 => medium
     /// 3 => hard
     int? difficulty,
+
+    /// An optional string that defines all the compiler options,
+    /// e.g.: `-lm` in C tells to link with the standard C libraries
+    String? compilerOptions,
   }) = _FrontMatterModel;
 
   factory FrontMatterModel.fromJson(Map<String, dynamic> json) =>

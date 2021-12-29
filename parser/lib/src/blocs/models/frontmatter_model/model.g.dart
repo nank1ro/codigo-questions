@@ -12,6 +12,7 @@ _$_FrontMatterModel _$$_FrontMatterModelFromJson(Map<String, dynamic> json) =>
       exerciseType: json['exerciseType'] as int,
       title: json['title'] as String?,
       difficulty: json['difficulty'] as int?,
+      compilerOptions: json['compilerOptions'] as String?,
     );
 
 Map<String, dynamic> _$$_FrontMatterModelToJson(_$_FrontMatterModel instance) =>
@@ -20,4 +21,5 @@ Map<String, dynamic> _$$_FrontMatterModelToJson(_$_FrontMatterModel instance) =>
       'exerciseType': instance.exerciseType,
       'title': instance.title,
       'difficulty': instance.difficulty,
+      'compilerOptions': instance.compilerOptions,
     };
