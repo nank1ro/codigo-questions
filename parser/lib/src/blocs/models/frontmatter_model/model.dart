@@ -32,7 +32,7 @@ class FrontMatterModel with _$FrontMatterModel {
     /// 3 => hard
     int? difficulty,
 
-    /// An optional string that defines with all the compiler options,
+    /// An optional string that defines all the compiler options,
     /// e.g.: `-lm` in C tells to link with the standard C libraries
     String? compilerOptions,
   }) = _FrontMatterModel;
