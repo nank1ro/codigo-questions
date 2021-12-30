@@ -46,7 +46,7 @@ bool isMDFile(FileSystemEntity entity) {
 
 String _getFullCode(ExerciseModel model) {
   final codeBeforeSeed = model.beforeSeed?.code;
-  final seedCode = model.seed?.code;
+  final solution = model.solutions?.first;
   final codeAfterSeed = model.afterSeed?.code;
 
   final codeBeforeHints = model.codeBeforeAsserts?.code;
@@ -56,8 +56,8 @@ String _getFullCode(ExerciseModel model) {
   if (codeBeforeSeed != null) {
     fullSourceCode += '$codeBeforeSeed\n';
   }
-  if (seedCode != null) {
-    fullSourceCode += '$seedCode\n';
+  if (solution != null) {
+    fullSourceCode += '$solution\n';
   }
 
   if (codeAfterSeed != null) {
