@@ -149,9 +149,14 @@
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
+        },
+        {
+          "name": "stringTemplates",
+          "trainUntil": 9,
+          "totalExercises": 25
         }
       ],
-      "totalExercises": 11
+      "totalExercises": 36
     },
     {
       "name": "python",
@@ -466,9 +471,14 @@
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
+        },
+        {
+          "name": "stringTemplates",
+          "trainUntil": 9,
+          "totalExercises": 25
         }
       ],
-      "totalExercises": 11
+      "totalExercises": 36
     },
     {
       "name": "python",
