@@ -17,6 +17,7 @@ const supportedProgrammingLanguages = <String>{
   'swift',
   'javascript',
   'c',
+  'kotlin'
 };
 
 final RegExp _codeSpaceRegex = RegExp(r'\[\/\]', dotAll: true);
@@ -141,7 +142,7 @@ $cBeforeSeedCode
       });
     }
 
-    if (model.codeAfterAsserts?.code != null) {
+    if (model.asserts != null) {
       _testHandler('''
 Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag''',
           () {
