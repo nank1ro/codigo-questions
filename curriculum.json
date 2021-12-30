@@ -143,6 +143,17 @@
       "totalExercises": 269
     },
     {
+      "name": "kotlin",
+      "arguments": [
+        {
+          "name": "output",
+          "trainUntil": 2,
+          "totalExercises": 11
+        }
+      ],
+      "totalExercises": 11
+    },
+    {
       "name": "python",
       "arguments": [
         {
@@ -447,6 +458,17 @@
         }
       ],
       "totalExercises": 269
+    },
+    {
+      "name": "kotlin",
+      "arguments": [
+        {
+          "name": "output",
+          "trainUntil": 2,
+          "totalExercises": 11
+        }
+      ],
+      "totalExercises": 11
     },
     {
       "name": "python",
