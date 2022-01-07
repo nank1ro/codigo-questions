@@ -628,7 +628,6 @@ void _runFillInEmptySpacesTests({
     /// * it simply finds the answers from the solution.
     bool validateEmptySpacesNotNearby() {
       var exerciseIsValid = false;
-      print("validate empty spaces not nearby");
 
       for (final solution in solutions) {
         exerciseIsValid = false;
