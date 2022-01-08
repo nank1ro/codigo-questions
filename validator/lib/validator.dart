@@ -43,13 +43,13 @@ Future<void> main() async {
           parser: parser,
         );
       } else if (isMDFile(entity)) {
-        // if (relativePath == '/en/javascript/whileLoops/6.md') {
+        /* if (relativePath == '/it/javascript/objects/1.md') { */
         final exerciseModel = await parser.parse(file: entity as File);
         _validateExercise(
           exerciseModel: exerciseModel,
           exercisePath: relativePath,
         );
-        // }
+        /* } */
       }
     }
   }
@@ -548,6 +548,16 @@ void _runFillInEmptySpacesTests({
       return differences.where((d) => d.operation == -1).map((e) => e.text).toList();
     }
 
+    /// Returns true if the answers fill correctly and compose a solution equal
+    /// to one available
+    bool checkIfAnswersFillCorrectly(List<String> answers, String solution) {
+      var filledSeed = seed;
+      for (final answer in answers) {
+        filledSeed = filledSeed.replaceFirst(_codeSpaceRegex, answer);
+      }
+      return filledSeed == solution;
+    }
+
     /// * This method is slower that the counterpart, because
     /// * it uses permutations to find the correct order of the answers
     /// * needed to complete the exercise successfully.
@@ -619,7 +629,8 @@ void _runFillInEmptySpacesTests({
         }
 
         if (expectedAnswers.length == emptySpacesCount) {
-          exerciseIsValid = true;
+          exerciseIsValid =
+              checkIfAnswersFillCorrectly(expectedAnswers, solution);
         }
 
         // Solution found, stop the iteration over the next solution.
@@ -632,10 +643,10 @@ void _runFillInEmptySpacesTests({
     /// * This method is faster that the counterpart, because
     /// * it simply finds the answers from the solution.
     bool validateEmptySpacesNotNearby() {
-      var exerciseIsValid = true;
+      var exerciseIsValid = false;
 
       for (final solution in solutions) {
-        exerciseIsValid = true;
+        exerciseIsValid = false;
         // Gets the difference between the solution and the seed
         final differences = getDifferences(solution);
         final expectedAnswers = <String>[];
@@ -654,6 +665,9 @@ void _runFillInEmptySpacesTests({
           }
         }
         // Solution found, stop the iteration over the next solution.
+
+        exerciseIsValid =
+            checkIfAnswersFillCorrectly(expectedAnswers, solution);
         if (exerciseIsValid) break;
       }
 
