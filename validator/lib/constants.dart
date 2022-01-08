@@ -147,3 +147,25 @@ const javascriptAfterAssertsCode = r'''
 // DO NOT EDIT FROM HERE 
 console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 // DO NOT EDIT UNTIL HERE''';
+
+const kotlinBeforeSeedCode = r'''
+// DO NOT EDIT FROM HERE
+var _testFailedCount = 0;
+var _testCount = 0;
+fun tryCatch(assertion: Boolean) {
+  _testCount++
+    try { 
+        if (!assertion) throw Exception()
+    }
+    catch (e: Throwable) {
+        _testFailedCount++
+        println("Test Case '--err-t$_testCount--' failed");
+  }
+};
+// DO NOT EDIT UNTIL HERE''';
+
+const kotlinAfterAssertsCode = r'''
+// DO NOT EDIT FROM HERE 
+    println("Executed $_testCount tests, with $_testFailedCount failures");
+}
+// DO NOT EDIT UNTIL HERE''';
