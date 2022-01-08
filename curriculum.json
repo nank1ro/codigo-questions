@@ -146,6 +146,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 19
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -154,9 +159,14 @@
           "name": "stringTemplates",
           "trainUntil": 9,
           "totalExercises": 25
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         }
       ],
-      "totalExercises": 36
+      "totalExercises": 79
     },
     {
       "name": "python",
@@ -476,9 +486,14 @@
           "name": "stringTemplates",
           "trainUntil": 9,
           "totalExercises": 25
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
         }
       ],
-      "totalExercises": 36
+      "totalExercises": 60
     },
     {
       "name": "python",
