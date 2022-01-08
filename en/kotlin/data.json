@@ -1,0 +1,14 @@
+{
+	"output": {
+		"order": 1
+	},
+	"stringTemplates": {
+		"order": 2
+	},
+	"variables": {
+		"order": 3
+	},
+	"booleans": {
+		"order": 4
+	}
+}
