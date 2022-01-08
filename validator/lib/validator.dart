@@ -22,6 +22,8 @@ const supportedProgrammingLanguages = <String>{
 
 final RegExp _codeSpaceRegex = RegExp(r'\[\/\]', dotAll: true);
 
+// * TODO: add challenge asset image validation
+
 Future<void> main() async {
   final parser = MDParserBLoC();
 

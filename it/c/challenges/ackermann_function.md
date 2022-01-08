@@ -1,6 +1,27 @@
-// ignore_for_file: public_member_api_docs
+---
+language: c
+exerciseType: 1
+difficulty: 1
+title: Ackermann function
+---
 
-const cBeforeSeedCode = r'''
+# --description--
+
+La funzione Ackermann è un classico esempio di funzione ricorsiva, nota soprattutto perché non è una funzione ricorsiva primitiva. Cresce molto rapidamente in valore, così come la dimensione delle chiamate.
+
+La funzione Ackermann è solitamente definita come segue:
+
+![ackermann_function](https://bit.ly/3z9u4zh)
+
+La funzione termina sempre e i suoi argomenti non sono mai negativi
+
+# --instructions--
+
+Scrivi una funzione che restituisca il valore della funzione Ackermann.
+
+# --before-seed--
+
+```c
 // DO NOT EDIT FROM HERE
 #include <setjmp.h>
 #include <stdio.h>
@@ -120,50 +141,69 @@ void try_catch(bool assertion) {
         _test_failed_count += 1;
         printf("Test Case '--err-t%i--' failed\n", e);
     }
-}''';
+}
+// DO NOT EDIT UNTIL HERE
+```
 
-const cAfterAssertsCode = '''
+# --seed--
+
+```c
+int ack(int m, int n) {
+    
+}
+```
+
+# --before-asserts--
+
+```c
+int main() {
+```
+
+# --asserts--
+
+`ack(0, 0)` deve restituire 1.
+
+```c
+    try_catch(ack(0, 0) == 1);
+```
+
+`ack(1, 1)` deve restituire 3.
+
+```c
+    try_catch(ack(1, 1) == 3);
+```
+
+`ack(2, 5)` deve restituire 13.
+
+```c
+    try_catch(ack(2, 5) == 13);
+```
+
+`ack(3, 3)` deve restituire 61.
+
+```c
+    try_catch(ack(3, 3) == 61);
+```
+
+# --after-asserts--
+
+```c
     printf("Executed %d tests, with %d failures", _test_count, _test_failed_count);
     return 0;
-}''';
-
-const javascriptBeforeSeedCode = r'''
-// DO NOT EDIT FROM HERE
-var _testFailedCount = 0;
-var _testCount = 0;
-var assert = require('assert')
-const tryCatch = (...args) => {
-  _testCount++
-  try { assert(...args) }
-  catch (e) {
-    _testFailedCount++
-    console.log(`Test Case '--err-t${_testCount}--' failed`);
-  }
-};''';
-
-const javascriptAfterAssertsCode = r'''
-// DO NOT EDIT FROM HERE 
-console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
-// DO NOT EDIT UNTIL HERE''';
-
-const kotlinBeforeSeedCode = r'''
-// DO NOT EDIT FROM HERE
-var _testFailedCount = 0;
-var _testCount = 0;
-fun tryCatch(assertion: Boolean) {
-  _testCount++
-    try { 
-        if (!assertion) throw Exception()
-    }
-    catch (e: Throwable) {
-        _testFailedCount++
-        println("Test Case '--err-t$_testCount--' failed");
-  }
-};
-// DO NOT EDIT UNTIL HERE''';
-
-const kotlinAfterAssertsCode = r'''
-// DO NOT EDIT FROM HERE 
-    println("Executed $_testCount tests, with $_testFailedCount failures");
 }
-// DO NOT EDIT UNTIL HERE''';
+```
+
+# --solutions--
+
+```c
+int ack(int m, int n) {
+    if (m == 0) {
+        return n + 1;
+    } else {
+        if (n == 0) {
+            return ack(m - 1, 1);
+        }
+        return ack(m - 1, ack(m, n - 1));
+    }
+}
+```

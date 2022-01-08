@@ -33,21 +33,21 @@ class CodigoTests(unittest.TestCase):
 The sum of 1 and 3 must equal 4
 
 ```python
-    def test_addition1(self):
+    def test1(self):
         self.assertEqual(addition(1, 3), 4, "--err-t1--")
 ```
 
 The sum of 200 and 210 must equal 410
 
 ```python
-    def test_addition2(self):
+    def test2(self):
         self.assertEqual(addition(200, 210), 410, "--err-t2--")
 ```
 
 The sum of 15 and 35 must equal 50
 
 ```python
-    def test_addition3(self):
+    def test3(self):
         self.assertEqual(addition(15, 35), 50, "--err-t3--")
 ```
 

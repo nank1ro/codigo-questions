@@ -42,7 +42,7 @@ class CodigoTests: XCTestCase {
 The sum of 1 and 3 must equal 4
 
 ```swift
-    func testAddition1() {
+    func test1() {
         XCTAssertEqual(addition(1, 3), 4, "--err-t1--")
     }
 ```
@@ -50,7 +50,7 @@ The sum of 1 and 3 must equal 4
 The sum of 200 and 210 must equal 410
 
 ```swift
-    func testAddition2() {
+    func test2() {
         XCTAssertEqual(addition(200, 210), 410, "--err-t2--")
     }
 ```
@@ -58,7 +58,7 @@ The sum of 200 and 210 must equal 410
 The sum of 15 and 35 must equal 50
 
 ```swift
-    func testAddition3() {
+    func test3() {
         XCTAssertEqual(addition(15, 35), 50, "--err-t3--")
     }
 ```
@@ -71,9 +71,9 @@ The sum of 15 and 35 must equal 50
 extension CodigoTests {
     static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
-            ("testAddition1", testAddition1),
-            ("testAddition2", testAddition2),
-            ("testAddition3", testAddition3),
+            ("test1", test1),
+            ("test2", test2),
+            ("test3", test3),
         ]
     }
 }
