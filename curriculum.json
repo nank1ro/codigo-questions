@@ -143,6 +143,32 @@
       "totalExercises": 269
     },
     {
+      "name": "kotlin",
+      "arguments": [
+        {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 19
+        },
+        {
+          "name": "output",
+          "trainUntil": 2,
+          "totalExercises": 11
+        },
+        {
+          "name": "stringTemplates",
+          "trainUntil": 9,
+          "totalExercises": 25
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
+        }
+      ],
+      "totalExercises": 79
+    },
+    {
       "name": "python",
       "arguments": [
         {
@@ -447,6 +473,32 @@
         }
       ],
       "totalExercises": 269
+    },
+    {
+      "name": "kotlin",
+      "arguments": [
+        {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 19
+        },
+        {
+          "name": "output",
+          "trainUntil": 2,
+          "totalExercises": 11
+        },
+        {
+          "name": "stringTemplates",
+          "trainUntil": 9,
+          "totalExercises": 25
+        },
+        {
+          "name": "variables",
+          "trainUntil": 6,
+          "totalExercises": 24
+        }
+      ],
+      "totalExercises": 79
     },
     {
       "name": "python",
