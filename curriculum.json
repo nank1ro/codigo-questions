@@ -146,6 +146,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -166,7 +171,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 79
+      "totalExercises": 96
     },
     {
       "name": "python",
@@ -478,6 +483,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -498,7 +508,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 79
+      "totalExercises": 96
     },
     {
       "name": "python",
