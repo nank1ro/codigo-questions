@@ -108,28 +108,45 @@ void _runCodeTests({
   required String exercisePath,
   required ExerciseModel model,
 }) {
-  _testHandler('''Verify that run-code exercise contains at least an assert or an output''', () {
+  _testHandler(
+      '''Verify that run-code exercise contains at least an assert or an output''',
+      () {
     expect(
       [model.asserts, model.output],
       isNot(equals([null, null])),
       reason: _fancyLogger(
-        message: '''The run-code exercise must contain at least an assert or an output to validate it''',
+        message:
+            '''The run-code exercise must contain at least an assert or an output to validate it''',
         exercisePath: exercisePath,
       ),
     );
   });
+  final languageName = model.frontMatterModel.language;
 
-  if (model.frontMatterModel.language == 'c' && (model.asserts?.isNotEmpty ?? false)) {
-    if (model.beforeSeed?.code != null) {
-      _testHandler('''Verify that the `C` RunCode exercise, contains the intestation in the before-seed tag''', () {
-        expect(
+  if (!requiredRunCodeExerciseCodes.containsKey(languageName)) return;
+  final requiredCode = requiredRunCodeExerciseCodes[languageName];
+
+  if (model.asserts?.isNotEmpty ?? false) {
+    final beforeSeed = requiredCode![kBeforeSeedTag]!;
+    final afterAsserts = requiredCode[kAfterAssertsTag]!;
+    if (model.beforeSeed?.code != null ||
+        model.codeBeforeAsserts?.code != null) {
+      _testHandler(
+          '''Verify that the `$languageName` RunCode exercise, contains the intestation in the before-seed or before-asserts tag''',
+          () {
+        final hasContent = [
           model.beforeSeed?.code,
-          contains(cBeforeSeedCode),
+          model.codeBeforeAsserts?.code
+        ].any((c) => c != null && c.contains(beforeSeed));
+
+        expect(
+          hasContent,
+          equals(true),
           reason: _fancyLogger(
             message: '''
 You must provide the 
 ```
-$cBeforeSeedCode
+$beforeSeed
 ````
  lines of code inside the before-seed tag''',
             exercisePath: exercisePath,
@@ -138,104 +155,23 @@ $cBeforeSeedCode
       });
     }
 
-    if (model.asserts != null) {
-      _testHandler('''
-Verify that the `C` RunCode exercise, contains the end of intestation in the after-asserts tag''', () {
-        expect(
-          model.codeAfterAsserts?.code,
-          cAfterAssertsCode,
-          reason: _fancyLogger(
-            message: '''
+    _testHandler('''
+Verify that the `$languageName` RunCode exercise, contains the end of intestation in the after-asserts tag''',
+        () {
+      expect(
+        model.codeAfterAsserts?.code,
+        contains(afterAsserts),
+        reason: _fancyLogger(
+          message: '''
 You must provide the
 ```
 $cAfterAssertsCode
 ```
 lines of code in the after-asserts tag''',
-            exercisePath: exercisePath,
-          ),
-        );
-      });
-    }
-  }
-
-  if (model.frontMatterModel.language == 'javascript' && (model.asserts?.isNotEmpty ?? false)) {
-    if (model.beforeSeed?.code != null) {
-      _testHandler('''Verify that the `JavaScript` RunCode exercise, contains the intestation in the before-seed tag''',
-          () {
-        expect(
-          model.beforeSeed?.code,
-          contains(javascriptBeforeSeedCode),
-          reason: _fancyLogger(
-            message: '''
-You must provide the 
-```
-$javascriptBeforeSeedCode
-````
- lines of code inside the before-seed tag''',
-            exercisePath: exercisePath,
-          ),
-        );
-      });
-    }
-
-    if (model.asserts != null) {
-      _testHandler('''
-Verify that the `JavaScript` RunCode exercise, contains the end of intestation in the after-asserts tag''', () {
-        expect(
-          model.codeAfterAsserts?.code,
-          javascriptAfterAssertsCode,
-          reason: _fancyLogger(
-            message: '''
-You must provide the
-```
-$javascriptAfterAssertsCode
-```
-lines of code in the after-asserts tag''',
-            exercisePath: exercisePath,
-          ),
-        );
-      });
-    }
-  }
-
-  if (model.frontMatterModel.language == 'kotlin' && (model.asserts?.isNotEmpty ?? false)) {
-    if (model.beforeSeed?.code != null) {
-      _testHandler('''Verify that the `Kotlin` RunCode exercise, contains the intestation in the before-seed tag''',
-          () {
-        expect(
-          model.beforeSeed?.code,
-          contains(kotlinBeforeSeedCode),
-          reason: _fancyLogger(
-            message: '''
-You must provide the 
-```
-$cBeforeSeedCode
-````
- lines of code inside the before-seed tag''',
-            exercisePath: exercisePath,
-          ),
-        );
-      });
-    }
-
-    if (model.asserts != null) {
-      _testHandler('''
-Verify that the `Kotlin` RunCode exercise, contains the end of intestation in the after-asserts tag''', () {
-        expect(
-          model.codeAfterAsserts?.code,
-          kotlinAfterAssertsCode,
-          reason: _fancyLogger(
-            message: '''
-You must provide the
-```
-$cAfterAssertsCode
-```
-lines of code in the after-asserts tag''',
-            exercisePath: exercisePath,
-          ),
-        );
-      });
-    }
+          exercisePath: exercisePath,
+        ),
+      );
+    });
   }
 }
 
@@ -277,7 +213,8 @@ The language provided `$language` is not supported, the currently supported lang
 
   final languageFromPath = exerciseLanguageFromPath(exercisePath);
   _testHandler('''
-Verify that the language is the same to the language retrieved from the exercise path''', () {
+Verify that the language is the same to the language retrieved from the exercise path''',
+      () {
     expect(
       languageFromPath,
       equals(language),
@@ -313,7 +250,8 @@ The exercise provided `$exerciseType` is not supported, the currently supported 
         frontMatterModel.difficulty,
         isNot(equals(null)),
         reason: _fancyLogger(
-          message: 'You have to provide a `difficulty` inside the front matter.',
+          message:
+              'You have to provide a `difficulty` inside the front matter.',
           exercisePath: exercisePath,
         ),
       );
@@ -388,7 +326,8 @@ You have to provide a supported language code to the `seed`. The supported langu
     );
   });
 
-  _testHandler('Verify that the challenge contains a valid - before asserts - code', () {
+  _testHandler(
+      'Verify that the challenge contains a valid - before asserts - code', () {
     expect(
       model.codeBeforeAsserts?.code.trim(),
       anyOf([
@@ -418,7 +357,8 @@ Your `before asserts` language code cannot be null or is unsupported. The suppor
     }
   });
 
-  _testHandler('Verify that the challenge contains a valid - after asserts - code', () {
+  _testHandler(
+      'Verify that the challenge contains a valid - after asserts - code', () {
     expect(
       model.codeAfterAsserts?.code.trim(),
       anyOf([
@@ -461,9 +401,11 @@ Your `after asserts` language code cannot be null or is unsupported. The support
     );
   });
 
-  if (model.frontMatterModel.language != 'c' && model.frontMatterModel.language != 'javascript') {
+  if (model.frontMatterModel.language != 'c' &&
+      model.frontMatterModel.language != 'javascript') {
     _testHandler('''
-Verify that the challenge unit tests (asserts) contains the `--err-t{testNumber}--` message''', () {
+Verify that the challenge unit tests (asserts) contains the `--err-t{testNumber}--` message''',
+        () {
       for (var i = 0; i < (model.asserts?.length ?? 0); i++) {
         final errorMessage = '--err-t${i + 1}--';
         final unitTest = model.asserts![i].unitTest;
@@ -484,7 +426,8 @@ must contain the error message: $errorMessage''',
     });
   }
 
-  _testHandler('Verify that the challenge contains a valid single solution', () {
+  _testHandler('Verify that the challenge contains a valid single solution',
+      () {
     expect(
       model.solutions,
       allOf([
@@ -505,7 +448,9 @@ void _runFillInEmptySpacesTests({
   required ExerciseModel model,
   required String exercisePath,
 }) {
-  _testHandler('Verify that the exercise can be completed successfully with the answers provided', () {
+  _testHandler(
+      'Verify that the exercise can be completed successfully with the answers provided',
+      () {
     final answers = model.answers!;
     final seed = model.seed!.code;
     final solutions = model.solutions!;
@@ -547,7 +492,10 @@ void _runFillInEmptySpacesTests({
 
       final differences = diff(solution, seedWithoutEmptySpaces);
 
-      return differences.where((d) => d.operation == -1).map((e) => e.text).toList();
+      return differences
+          .where((d) => d.operation == -1)
+          .map((e) => e.text)
+          .toList();
     }
 
     /// Returns true if the answers fill correctly and compose a solution equal
@@ -606,11 +554,14 @@ void _runFillInEmptySpacesTests({
           final answersCount = entry.value;
           final difference = differences[differenceIndex];
 
-          final possibleAnswers = availableAnswers.where(difference.contains).toList();
+          final possibleAnswers =
+              availableAnswers.where(difference.contains).toList();
 
-          assert(answersCount <= possibleAnswers.length, "There are more answers than possibilities in $exercisePath");
+          assert(answersCount <= possibleAnswers.length,
+              "There are more answers than possibilities in $exercisePath");
 
-          final indexes = List.generate(possibleAnswers.length, (index) => index);
+          final indexes =
+              List.generate(possibleAnswers.length, (index) => index);
           final permutations = Permutations(answersCount, indexes);
 
           for (final combo in permutations()) {
@@ -686,7 +637,8 @@ void _runFillInEmptySpacesTests({
       hasValidCombo(),
       equals(true),
       reason: _fancyLogger(
-        message: 'The exercise cannot be completed successfully with the answers provided',
+        message:
+            'The exercise cannot be completed successfully with the answers provided',
         exercisePath: exercisePath,
       ),
     );
@@ -697,13 +649,17 @@ void _runChooseAnAnswerTests({
   required ExerciseModel model,
   required String exercisePath,
 }) {
-  _testHandler('Verify that the exercise can be completed successfully with the solutions provided', () {
-    final solutionsAreValid = model.solutions!.every((s) => model.answers!.contains(s));
+  _testHandler(
+      'Verify that the exercise can be completed successfully with the solutions provided',
+      () {
+    final solutionsAreValid =
+        model.solutions!.every((s) => model.answers!.contains(s));
     expect(
       solutionsAreValid,
       equals(true),
       reason: _fancyLogger(
-        message: 'The exercise cannot be completed successfully with the solutions provided',
+        message:
+            'The exercise cannot be completed successfully with the solutions provided',
         exercisePath: exercisePath,
       ),
     );
@@ -728,7 +684,8 @@ void _runSortItemsTests({
     );
   });
 
-  _testHandler('Verify that the sort items exercise contains valid answers', () {
+  _testHandler('Verify that the sort items exercise contains valid answers',
+      () {
     bool checkValidity() {
       final solutions = model.solutions!;
       final answers = model.answers!;
@@ -754,7 +711,8 @@ void _runSortItemsTests({
       checkValidity(),
       equals(true),
       reason: _fancyLogger(
-        message: 'The sort items exercise cannot be completed with the answers provided',
+        message:
+            'The sort items exercise cannot be completed with the answers provided',
         exercisePath: exercisePath,
       ),
     );
@@ -814,7 +772,8 @@ But the file `$fileName` is not in order.
     final nextHasDescription = nextEntry.value;
 
     _testHandler('''
-Verify that the exercises with a description come before the ones without''', () async {
+Verify that the exercises with a description come before the ones without''',
+        () async {
       expect(
         [currentHasDescription, nextHasDescription],
         isNot(
@@ -863,7 +822,8 @@ bool isAChallenge(String relativePath) {
 String getFileName(String filePath) => path.basename(filePath);
 
 /// Returns the file name without the extension, see [path.basename]
-String getFileNameWithoutExtension(String filePath) => getFileName(filePath).split('.').first;
+String getFileNameWithoutExtension(String filePath) =>
+    getFileName(filePath).split('.').first;
 
 /// Returns the exercise language, for example for:
 /// `/en/python/challenges/atm.md`

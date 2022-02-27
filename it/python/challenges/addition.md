@@ -25,7 +25,7 @@ def somma():
 ```python
 import unittest
 
-class AdditionTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

@@ -26,7 +26,7 @@ def sum_digits(num: int):
 ```python
 import unittest
 
-class SumDigitsTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

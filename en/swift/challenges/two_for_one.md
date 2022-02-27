@@ -40,7 +40,7 @@ func twoForOne(name: String) -> String {
 import Foundation
 import XCTest
 
-class TwoForOneTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -77,8 +77,8 @@ Pass "Martha" as name
 ```swift
 }
 
-extension TwoForOneTests {
-    static var allTests : [(String, (TwoForOneTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("testNoNameGiven", testNoNameGiven),
             ("testANameGiven", testANameGiven),
@@ -87,7 +87,7 @@ extension TwoForOneTests {
     }
 }
 
-XCTMain([testCase(TwoForOneTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--

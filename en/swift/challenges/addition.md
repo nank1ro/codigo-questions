@@ -34,7 +34,7 @@ func addition() {
 import Foundation
 import XCTest
 
-class AdditionTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -68,8 +68,8 @@ The sum of 15 and 35 must equal 50
 ```swift
 }
 
-extension AdditionTests {
-    static var allTests : [(String, (AdditionTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("testAddition1", testAddition1),
             ("testAddition2", testAddition2),
@@ -78,7 +78,7 @@ extension AdditionTests {
     }
 }
 
-XCTMain([testCase(AdditionTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--

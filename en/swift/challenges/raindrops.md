@@ -47,7 +47,7 @@ func raindrops() {
 import Foundation
 import XCTest
 
-class RaindropsTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -201,8 +201,8 @@ The sound for 3125 is "Plang"
 ```swift
 }
 
-extension RaindropsTests {
-    static var allTests : [(String, (RaindropsTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("test1", test1),
             ("test3", test3),
@@ -226,7 +226,7 @@ extension RaindropsTests {
     }
 }
 
-XCTMain([testCase(RaindropsTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--

@@ -38,7 +38,7 @@ def due_per_uno(nome):
 ```python
 import unittest
 
-class TwoForOneTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

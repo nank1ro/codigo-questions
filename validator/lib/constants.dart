@@ -1,4 +1,28 @@
 // ignore_for_file: public_member_api_docs
+import 'package:parser/parser.dart';
+
+final requiredRunCodeExerciseCodes = {
+  'c': {
+    kBeforeSeedTag: cBeforeSeedCode,
+    kAfterAssertsTag: cAfterAssertsCode,
+  },
+  'python': <String, String>{
+    kBeforeSeedTag: pythonBeforeSeedCode,
+    kAfterAssertsTag: pythonAfterAssertsCode,
+  },
+  'kotlin': {
+    kBeforeSeedTag: kotlinBeforeSeedCode,
+    kAfterAssertsTag: kotlinAfterAssertsCode,
+  },
+  'javascript': {
+    kBeforeSeedTag: javascriptBeforeSeedCode,
+    kAfterAssertsTag: javascriptAfterAssertsCode,
+  },
+  'swift': {
+    kBeforeSeedTag: swiftBeforeSeedCode,
+    kAfterAssertsTag: swiftAfterAssertsCode,
+  },
+};
 
 const cBeforeSeedCode = r'''
 // DO NOT EDIT FROM HERE
@@ -167,3 +191,20 @@ const kotlinAfterAssertsCode = r'''
     println("Executed $_testCount tests, with $_testFailedCount failures");
 }
 // DO NOT EDIT UNTIL HERE''';
+
+const pythonBeforeSeedCode = '''
+import unittest
+
+class CodigoTests(unittest.TestCase):''';
+
+const pythonAfterAssertsCode = '''
+if __name__ == "__main__":
+    unittest.main()''';
+
+const swiftBeforeSeedCode = '''
+import XCTest
+
+class CodigoTests: XCTestCase {''';
+
+const swiftAfterAssertsCode = '''
+XCTMain([testCase(CodigoTests.allTests)])''';
