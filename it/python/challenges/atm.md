@@ -32,7 +32,7 @@ def saldo_conto():
 ```python
 import unittest
 
-class ATMTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

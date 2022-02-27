@@ -25,7 +25,7 @@ def hello():
 ```python
 import unittest
 
-class HelloWorldTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

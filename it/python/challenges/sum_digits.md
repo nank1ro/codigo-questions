@@ -26,7 +26,7 @@ def somma_cifre():
 ```python
 import unittest
 
-class SumDigitsTest(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

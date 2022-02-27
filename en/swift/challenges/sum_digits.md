@@ -35,7 +35,7 @@ func sumDigits() {
 import Foundation
 import XCTest
 
-class SumDigitsTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -85,8 +85,8 @@ The sum of the digits of 2147483647 is 46
 ```swift
 }
 
-extension SumDigitsTests {
-    static var allTests : [(String, (SumDigitsTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("testSumOfDigits1", testSumOfDigits1),
             ("testSumOfDigits2", testSumOfDigits2),
@@ -97,7 +97,7 @@ extension SumDigitsTests {
     }
 }
 
-XCTMain([testCase(SumDigitsTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--

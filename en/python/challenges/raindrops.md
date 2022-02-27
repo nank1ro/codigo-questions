@@ -37,7 +37,7 @@ def convert(number):
 ```python
 import unittest
 
-class Raindrops(unittest.TestCase):
+class CodigoTests(unittest.TestCase):
 ```
 
 # --asserts--

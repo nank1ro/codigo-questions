@@ -27,7 +27,7 @@ func hello() -> String {
 import Foundation
 import XCTest
 
-class HelloWorldTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -46,15 +46,15 @@ The function should return "Hello, World!".
 ```swift
 }
 
-extension HelloWorldTests {
-    static var allTests : [(String, (HelloWorldTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("testHi", testHi),
         ]
     }
 }
 
-XCTMain([testCase(HelloWorldTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--

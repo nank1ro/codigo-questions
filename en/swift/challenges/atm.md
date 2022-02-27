@@ -42,7 +42,7 @@ func accountBalance() -> Double {
 import Foundation
 import XCTest
 
-class ATMTests: XCTestCase {
+class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -88,8 +88,8 @@ Withdraw all money successfully
 ```swift
 }
 
-extension ATMTests {
-    static var allTests : [(String, (ATMTests) -> () throws -> Void)] {
+extension CodigoTests {
+    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
         return [
             ("testSuccessfulTransaction", testSuccessfulTransaction),
             ("testInsufficientFunds", testInsufficientFunds),
@@ -99,7 +99,7 @@ extension ATMTests {
     }
 }
 
-XCTMain([testCase(ATMTests.allTests)])
+XCTMain([testCase(CodigoTests.allTests)])
 ```
 
 # --solutions--
