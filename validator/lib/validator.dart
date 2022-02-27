@@ -124,8 +124,7 @@ void _runCodeTests({
   final languageName = model.frontMatterModel.language;
 
   if (!requiredRunCodeExerciseCodes.containsKey(languageName)) return;
-  final requiredCode =
-      requiredRunCodeExerciseCodes[model.frontMatterModel.language];
+  final requiredCode = requiredRunCodeExerciseCodes[languageName];
 
   if (model.asserts?.isNotEmpty ?? false) {
     final beforeSeed = requiredCode![kBeforeSeedTag]!;
