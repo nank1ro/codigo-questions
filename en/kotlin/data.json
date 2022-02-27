@@ -1,8 +1,8 @@
 {
-        "output": {
-                "order": 1
+	"output": {
+		"order": 1
 	},
-        "stringTemplates": {
+	"stringTemplates": {
 		"order": 2
 	},
 	"variables": {
@@ -10,5 +10,8 @@
 	},
 	"booleans": {
 		"order": 4
+	},
+	"arithmeticOperators": {
+		"order": 5
 	}
 }

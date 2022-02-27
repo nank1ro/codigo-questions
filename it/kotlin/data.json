@@ -10,5 +10,8 @@
 	},
 	"booleans": {
 		"order": 4
+	},
+	"arithmeticOperators": {
+		"order": 5
 	}
 }
