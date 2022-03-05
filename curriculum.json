@@ -156,6 +156,11 @@
           "totalExercises": 19
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -171,7 +176,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 96
+      "totalExercises": 119
     },
     {
       "name": "python",
@@ -493,6 +498,11 @@
           "totalExercises": 19
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 9,
+          "totalExercises": 23
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -508,7 +518,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 96
+      "totalExercises": 119
     },
     {
       "name": "python",
