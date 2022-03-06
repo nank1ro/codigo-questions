@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
@@ -30,6 +31,13 @@ Future<void> main() async {
   for (final language in locales) {
     // Get the language directory.
     final languageDir = Directory('${Directory.current.path}/../$language');
+
+    for (final language in supportedProgrammingLanguages) {
+      await _validateDataJson(
+          directory: Directory('${languageDir.path}/$language'));
+      // TODO: add validate data json for challenges
+      // TODO: add validate assets based on arguments
+    }
 
     // List directory contents, recursing into sub-directories,
     // but not following symbolic links.
@@ -787,6 +795,39 @@ The exercises with a description must be put before the ones without.
 But `${entry.key}` doesn't have a description while ${nextEntry.key} has one.
 ''',
           exercisePath: relativePath,
+        ),
+      );
+    });
+  }
+}
+
+Future<void> _validateDataJson({
+  required Directory directory,
+}) async {
+  final dataFile = File('${directory.path}/data.json');
+
+  final jsonString = await dataFile.readAsString();
+  final json = jsonDecode(jsonString) as Map<String, dynamic>;
+
+  final arguments = [...json.keys];
+
+  final subDirectories = directory
+      .listSync(followLinks: false)
+      .whereType<Directory>()
+      .where((e) => e.path.split('/').last != 'challenges');
+
+  for (final dir in subDirectories) {
+    final argumentOfDir = dir.path.split('/').last;
+    _testHandler('''
+Verify that the argument is defined in the data.json file''', () async {
+      expect(
+        arguments,
+        contains(argumentOfDir),
+        reason: _fancyLogger(
+          message: '''
+The argument `$argumentOfDir` has not been declared in the `data.json` file.
+''',
+          exercisePath: dir.path,
         ),
       );
     });
