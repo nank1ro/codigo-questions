@@ -40,17 +40,17 @@ Future<void> main() async {
 
       await _validateDataJson(directory: languageDir);
 
-      final targetDirectories =
-          languageDir.listSync(followLinks: false).whereType<Directory>();
-
       await _validateLanguageAssets(
           assetsDir: argumentAssetsDir, targetDir: languageDir);
 
-      for (final dir in targetDirectories) {
-        if (getFileNameWithoutExtension(dir.path) == 'challenges') {
-          await _validateChallengeAssets(
-              assetsDir: challengesAssetsDir, targetDir: dir);
-        }
+      final challengeDirectories = languageDir
+          .listSync(followLinks: false)
+          .whereType<Directory>()
+          .where((e) => getFileNameWithoutExtension(e.path) == 'challenges');
+
+      for (final dir in challengeDirectories) {
+        await _validateChallengeAssets(
+            assetsDir: challengesAssetsDir, targetDir: dir);
       }
     }
 
