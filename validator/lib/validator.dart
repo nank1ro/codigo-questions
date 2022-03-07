@@ -23,25 +23,40 @@ const supportedProgrammingLanguages = <String>{
 
 final RegExp _codeSpaceRegex = RegExp(r'\[\/\]', dotAll: true);
 
-// * TODO: add challenge asset image validation
-
 Future<void> main() async {
   final parser = MDParserBLoC();
 
-  for (final language in locales) {
+  final argumentAssetsDir =
+      Directory('${Directory.current.path}/../assets/arguments');
+  final challengesAssetsDir =
+      Directory('${Directory.current.path}/../assets/challenges');
+  for (final lang in locales) {
     // Get the language directory.
-    final languageDir = Directory('${Directory.current.path}/../$language');
+    final langDir = Directory('${Directory.current.path}/../$lang');
 
     for (final language in supportedProgrammingLanguages) {
-      await _validateDataJson(
-          directory: Directory('${languageDir.path}/$language'));
-      // TODO: add validate data json for challenges
-      // TODO: add validate assets based on arguments
+      // Get the language directory.
+      final languageDir = Directory('${langDir.path}/$language');
+
+      await _validateDataJson(directory: languageDir);
+
+      final targetDirectories =
+          languageDir.listSync(followLinks: false).whereType<Directory>();
+
+      await _validateLanguageAssets(
+          assetsDir: argumentAssetsDir, targetDir: languageDir);
+
+      for (final dir in targetDirectories) {
+        if (getFileNameWithoutExtension(dir.path) == 'challenges') {
+          await _validateChallengeAssets(
+              assetsDir: challengesAssetsDir, targetDir: dir);
+        }
+      }
     }
 
     // List directory contents, recursing into sub-directories,
     // but not following symbolic links.
-    await for (final entity in languageDir.list(
+    await for (final entity in langDir.list(
       recursive: true,
       followLinks: false,
     )) {
@@ -62,6 +77,65 @@ Future<void> main() async {
         /* } */
       }
     }
+  }
+}
+
+Iterable<String> _getSvgAssetNames(Directory assetsDir) {
+  final assets = assetsDir
+      .listSync(followLinks: false)
+      .where((e) => path.extension(e.path) == '.svg');
+  return assets.map((e) => getFileNameWithoutExtension(e.path));
+}
+
+Future<void> _validateLanguageAssets({
+  required Directory assetsDir,
+  required Directory targetDir,
+}) async {
+  final assetNames = _getSvgAssetNames(assetsDir);
+  final arguments =
+      targetDir.listSync(followLinks: false).whereType<Directory>().where(
+            (e) => getFileNameWithoutExtension(e.path) != 'challenges',
+          );
+  final argumentNames =
+      arguments.map((e) => getFileNameWithoutExtension(e.path));
+  for (final argumentName in argumentNames) {
+    _testHandler('''Verify that argument asset is present''', () {
+      final errorDir = Directory('${targetDir.path}/$argumentName.md');
+      expect(
+        assetNames,
+        contains(argumentName),
+        reason: _fancyLogger(
+          message:
+              '''The argument asset `$argumentName` is not present in the `assets` folder''',
+          exercisePath: getRelativePath(errorDir),
+        ),
+      );
+    });
+  }
+}
+
+Future<void> _validateChallengeAssets({
+  required Directory assetsDir,
+  required Directory targetDir,
+}) async {
+  final assetNames = _getSvgAssetNames(assetsDir);
+  final challenges = targetDir.listSync(followLinks: false).where(isMDFile);
+  final challengeNames =
+      challenges.map((e) => getFileNameWithoutExtension(e.path));
+
+  for (final challengeName in challengeNames) {
+    _testHandler('''Verify that challenge asset is present''', () {
+      final errorDir = Directory('${targetDir.path}/$challengeName.md');
+      expect(
+        assetNames,
+        contains(challengeName),
+        reason: _fancyLogger(
+          message:
+              '''The challenge asset `$challengeName` is not present in the `assets` folder''',
+          exercisePath: getRelativePath(errorDir),
+        ),
+      );
+    });
   }
 }
 
@@ -801,36 +875,58 @@ But `${entry.key}` doesn't have a description while ${nextEntry.key} has one.
   }
 }
 
-Future<void> _validateDataJson({
-  required Directory directory,
-}) async {
-  final dataFile = File('${directory.path}/data.json');
+Future<Iterable<String>> _getArgumentsInPath(String path) async {
+  final dataFile = File('$path/data.json');
 
   final jsonString = await dataFile.readAsString();
   final json = jsonDecode(jsonString) as Map<String, dynamic>;
 
-  final arguments = [...json.keys];
+  return json.keys;
+}
 
-  final subDirectories = directory
-      .listSync(followLinks: false)
-      .whereType<Directory>()
-      .where((e) => e.path.split('/').last != 'challenges');
+Future<void> _validateDataJson({
+  required Directory directory,
+}) async {
+  final subDirectories =
+      directory.listSync(followLinks: false).whereType<Directory>();
 
   for (final dir in subDirectories) {
-    final argumentOfDir = dir.path.split('/').last;
-    _testHandler('''
+    final argumentOfDir = getFileNameWithoutExtension(dir.path);
+    if (argumentOfDir == 'challenges') {
+      final challenges = await _getArgumentsInPath(dir.path);
+      final files = dir.listSync(followLinks: false).where(isMDFile);
+      for (final file in files) {
+        final challengeName = getFileNameWithoutExtension(file.path);
+        _testHandler('''
+Verify that the challenge is defined in the data.json file''', () async {
+          expect(
+            challenges,
+            contains(challengeName),
+            reason: _fancyLogger(
+              message: '''
+The challenge `$challengeName` has not been declared in the `data.json` file.
+''',
+              exercisePath: dir.path,
+            ),
+          );
+        });
+      }
+    } else {
+      final arguments = await _getArgumentsInPath(directory.path);
+      _testHandler('''
 Verify that the argument is defined in the data.json file''', () async {
-      expect(
-        arguments,
-        contains(argumentOfDir),
-        reason: _fancyLogger(
-          message: '''
+        expect(
+          arguments,
+          contains(argumentOfDir),
+          reason: _fancyLogger(
+            message: '''
 The argument `$argumentOfDir` has not been declared in the `data.json` file.
 ''',
-          exercisePath: dir.path,
-        ),
-      );
-    });
+            exercisePath: dir.path,
+          ),
+        );
+      });
+    }
   }
 }
 
