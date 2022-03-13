@@ -7,16 +7,16 @@ environment:
   sdk: ">=2.14.3 <3.0.0"
 
 dependencies:
-  freezed: ^0.14.5
-  json_annotation: ^4.3.0
-  json_serializable: ^6.0.1
+  freezed_annotation: ^1.1.0
+  json_annotation: ^4.4.0
   json_sorter: ^1.0.0
   parser:
     path: ../parser
   path: ^1.8.0
 
 dev_dependencies:
-  build_runner: ^2.1.1
-  freezed_annotation: ^0.14.3
+  build_runner: ^2.1.7
+  freezed: ^1.1.1
+  json_serializable: ^6.1.4
   test: ^1.17.11
   very_good_analysis: ^2.3.0
