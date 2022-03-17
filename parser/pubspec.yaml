@@ -10,7 +10,7 @@ dependencies:
   freezed_annotation: ^1.1.0
   front_matter:
     git:
-      url: git://github.com/nank1ro/front-matter.git
+      url: https://github.com/nank1ro/front-matter
   json_annotation: ^4.4.0
   path: ^1.8.0
 
