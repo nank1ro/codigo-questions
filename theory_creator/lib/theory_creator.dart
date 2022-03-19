@@ -14,10 +14,10 @@ List<String> get locales => ['en', 'it'];
 
 Future<void> main() async {
   /// Returns true if the provided [entity] is a [File]
-  /// ending with the [.md] extension
-  bool isMDFile(FileSystemEntity entity) {
-    return entity is File && extension(entity.path) == '.md';
-  }
+  /// and is an exercise
+  bool isExerciseFile(FileSystemEntity entity) =>
+      entity is File &&
+      int.tryParse(basenameWithoutExtension(entity.path)) != null;
 
   final parser = MDParserBLoC();
 
@@ -40,7 +40,7 @@ Future<void> main() async {
         final theoryContent = StringBuffer();
 
         // Get all the exercises for an argument
-        final exercises = argument.listSync().where(isMDFile);
+        final exercises = argument.listSync().where(isExerciseFile);
         for (final exercise in exercises) {
           final exerciseModel = await parser.parse(file: exercise as File);
           // If there isn't a description, stop the iteration.
@@ -53,10 +53,16 @@ Future<void> main() async {
           }
           theoryContent.write(exerciseModel.description);
         }
-        await saveFile(
-          result: theoryContent.toString(),
-          argumentPath: argument.path,
-        );
+        if (theoryContent.isNotEmpty) {
+          // Append a new line at the end of the file
+          theoryContent.writeln();
+
+          // Save the file in the argument directory
+          await saveFile(
+            result: theoryContent.toString(),
+            argumentPath: argument.path,
+          );
+        }
       }
     }
   }
@@ -67,4 +73,4 @@ Future<void> saveFile({
   required String result,
   required String argumentPath,
 }) =>
-    File(argumentPath).writeAsString(result);
+    File('$argumentPath/_theory.md').writeAsString(result);
