@@ -83,3 +83,38 @@ jobs:
           # Optional glob pattern of files which should be added to the commit
           # Defaults to all (.)
           file_pattern: curriculum.json
+  build_theory:
+    needs: validate_exercises
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.head_ref }}
+      cancel-in-progress: true
+    defaults:
+      run:
+        working-directory: ./theory_creator
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Note: This workflow uses the latest stable version of the Dart SDK.
+      # You can specify other versions if desired, see documentation here:
+      # https://github.com/dart-lang/setup-dart/blob/main/README.md
+      # - uses: dart-lang/setup-dart@v1
+      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+
+      - name: Install dependencies
+        run: dart pub get
+
+      # Create the _theory.md file for each argument
+      - name: Create _theory.md
+        run: dart run lib/theory_creator.dart
+
+      # Used to auto-commit the curriculum.json file
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional, but recommended
+          # Defaults to "Apply automatic changes"
+          commit_message: build theory
+          # Optional glob pattern of files which should be added to the commit
+          # Defaults to all (.)
+          # file_pattern: .
