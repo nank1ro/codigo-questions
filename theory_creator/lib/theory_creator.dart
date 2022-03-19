@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:collection/collection.dart';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart';
 
@@ -40,7 +41,22 @@ Future<void> main() async {
         final theoryContent = StringBuffer();
 
         // Get all the exercises for an argument
-        final exercises = argument.listSync().where(isExerciseFile);
+        final exercises = argument
+            .listSync()
+            // Grab only the files that are an exercise
+            .where(isExerciseFile)
+            // Sort the exercises by number
+            .sorted(
+              (a, b) => int.parse(
+                basenameWithoutExtension(a.path),
+              ).compareTo(
+                int.parse(
+                  basenameWithoutExtension(
+                    b.path,
+                  ),
+                ),
+              ),
+            );
         for (final exercise in exercises) {
           final exerciseModel = await parser.parse(file: exercise as File);
           // If there isn't a description, stop the iteration.
