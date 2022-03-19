@@ -2,7 +2,6 @@ name: theory_creator
 description: Creates a theory document for each argument
 publish_to: none
 version: 1.0.0
-# homepage: https://www.example.com
 environment:
   sdk: ">=2.14.3 <3.0.0"
 
