@@ -1,0 +1,10 @@
+"__Hello, World!__" e' il primo programma che si impara quando si inizia a programmare in un nuovo linguaggio.
+Usiamo la funzione `printf()` per inviare i dati al dispositivo di output (schermo).
+Ogni programma in C usa le librerie, che ci permettono di eseguire le funzioni necessarie.
+Per esempio la funzione per stampare a schermo è definita nell'header file `stdio.h`
+Il codice che viene sempre eseguito per primo deve risiedere nella funzione `main`.
+Per stampare "Hello, World!" sullo schermo con C possiamo scrivere:
+```c
+printf("Hello, World!");
+```
+Infine, restituiamo `0` per indicare che il nostro programma ha avuto successo
