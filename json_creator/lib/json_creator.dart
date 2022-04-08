@@ -12,9 +12,12 @@ import 'package:path/path.dart';
 List<String> get locales => ['en', 'it'];
 
 Future<void> main() async {
-  /// Returns if the provided [entity] is a [File] ending the [.md] extension.
-  bool isMDFile(FileSystemEntity entity) {
-    return entity is File && extension(entity.path) == '.md';
+  /// Returns if the provided [entity] is a [File] named with a number that ends
+  /// with the [.md] extension.
+  bool isExerciseFile(FileSystemEntity entity) {
+    return entity is File &&
+        extension(entity.path) == '.md' &&
+        int.tryParse(basenameWithoutExtension(entity.path)) != null;
   }
 
   /// Tells if the exercise is a challenge
@@ -64,7 +67,7 @@ Future<void> main() async {
           recursive: true,
         )
         // Skip all non .md files
-        .where(isMDFile)
+        .where(isExerciseFile)
         // Skip the `challenges` folder
         .whereNot((f) => isAChallenge(_getRelativePath(f)))
         .toList()
