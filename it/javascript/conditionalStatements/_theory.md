@@ -24,7 +24,7 @@ Un'altra cosa importante da considerare e' rappresentata dalle **parentesi graff
 
 Abbiamo appena visto come eseguire un blocco di codice se si verifica una condizione, ora vediamo come eseguire un altro blocco di codice se la prima condizione fallisce.
 Andiamo a giocare fuori se il tempo e' bello, altrimenti restiamo a casa.
-In Swift possiamo usare l'istruzione `else`, come:
+In JavaScript possiamo usare l'istruzione `else`, come:
 ```javascript
 var belTempo = true;
 if (belTempo) {
