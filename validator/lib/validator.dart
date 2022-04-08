@@ -937,7 +937,9 @@ bool isAnExerciseDirectory(FileSystemEntity entity, String relativePath) {
 
 /// Returns if the provided [entity] is a [File] ending the [.md] extension.
 bool isMDFile(FileSystemEntity entity) {
-  return entity is File && path.extension(entity.path) == '.md';
+  return entity is File &&
+      path.extension(entity.path) == '.md' &&
+      int.tryParse(path.basenameWithoutExtension(entity.path)) != null;
 }
 
 /// The relative path of the exercise:
