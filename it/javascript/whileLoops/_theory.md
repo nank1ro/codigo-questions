@@ -45,7 +45,7 @@ L'ordine di scrittura del codice influisce sull'output
 
 ---
 
-In Swift abbiamo anche la variante **repeat-while** del ciclo `while`.
+In JavaScript abbiamo anche la variante **repeat-while** del ciclo `while`.
 Esegue un singolo passaggio attraverso il blocco del ciclo _prima_ di considerare la condizione del ciclo.
 Poi continua a ripetere il loop fino a quando la condizione è `false`.
-Il ciclo __repeat-while__ in Swift è analogo al ciclo __do-while__ in altri linguaggi di programmazione
+Il ciclo __repeat-while__ in JavaScript è analogo al ciclo __do-while__ in altri linguaggi di programmazione
