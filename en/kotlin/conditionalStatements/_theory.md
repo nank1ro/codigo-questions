@@ -4,7 +4,7 @@ In programming, we can save a boolean variable `niceWeather` and perform the act
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-	// play outside
+    // play outside
 }
 ```
 
@@ -14,7 +14,7 @@ Let's continue with the previous example.
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-	// play outside
+    // play outside
 }
 ```
 We've seen that the `if` statement executes the block of code only if the condition is `true`.
@@ -28,9 +28,9 @@ In Kotlin we can use the `else` statement, like:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-	// play outside
+    // play outside
 } else {
-	// stay home
+    // stay home
 }
 ```
 
@@ -40,11 +40,11 @@ Let's assume we have another condition to check, like in this example:
 ```kotlin
 var num = 3
 if (num == 2) {
-	println("the number is 2")
+    println("the number is 2")
 } else if (num == 3) {
-	println("the number is 3")
+    println("the number is 3")
 } else {
-	println("do something else")
+    println("do something else")
 }
 ```
 and the output of this code is `the number is 3`.
