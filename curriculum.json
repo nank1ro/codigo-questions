@@ -161,6 +161,11 @@
           "totalExercises": 23
         },
         {
+          "name": "conditionalStatements",
+          "trainUntil": 7,
+          "totalExercises": 44
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -176,7 +181,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 119
+      "totalExercises": 163
     },
     {
       "name": "python",
@@ -503,6 +508,11 @@
           "totalExercises": 23
         },
         {
+          "name": "conditionalStatements",
+          "trainUntil": 7,
+          "totalExercises": 44
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -518,7 +528,7 @@
           "totalExercises": 24
         }
       ],
-      "totalExercises": 119
+      "totalExercises": 163
     },
     {
       "name": "python",
