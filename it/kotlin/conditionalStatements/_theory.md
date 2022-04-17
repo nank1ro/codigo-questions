@@ -4,7 +4,7 @@ In programmazione, possiamo salvare una variabile booleana `belTempo` ed eseguir
 ```kotlin
 var belTempo = true
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 }
 ```
 
@@ -14,7 +14,7 @@ Continuiamo con l'esempio precedente.
 ```kotlin
 var belTempo = true
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 }
 ```
 Abbiamo visto che l'istruzione `if` esegue il blocco di codice solo se la condizione e' `true`.
@@ -28,9 +28,9 @@ In Kotlin possiamo usare l'istruzione `else`, come:
 ```kotlin
 var belTempo = true
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 } else {
-	// resta a casa
+    // resta a casa
 }
 ```
 
@@ -40,11 +40,11 @@ Supponiamo di avere un'altra condizione da verificare, come in questo esempio:
 ```kotlin
 var num = 3
 if (num == 2) {
-	println("il numero è 2")
+    println("il numero è 2")
 } else if (num == 3) {
-	println("il numero è 3")
+    println("il numero è 3")
 } else {
-	println("fai qualcos'altro")
+    println("fai qualcos'altro")
 }
 ```
 e l'output di questo codice e' `il numero e' 3`.
