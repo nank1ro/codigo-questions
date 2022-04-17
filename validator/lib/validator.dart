@@ -67,7 +67,7 @@ Future<void> main() async {
           relativePath: relativePath,
           parser: parser,
         );
-      } else if (isMDFile(entity)) {
+      } else if (isExerciseFile(entity)) {
         /* if (relativePath == '/it/javascript/objects/1.md') { */
         final exerciseModel = await parser.parse(file: entity as File);
         _validateExercise(
@@ -119,7 +119,8 @@ Future<void> _validateChallengeAssets({
   required Directory targetDir,
 }) async {
   final assetNames = _getSvgAssetNames(assetsDir);
-  final challenges = targetDir.listSync(followLinks: false).where(isMDFile);
+  final challenges =
+      targetDir.listSync(followLinks: false).where(isExerciseFile);
   final challengeNames =
       challenges.map((e) => getFileNameWithoutExtension(e.path));
 
@@ -808,7 +809,7 @@ Future<void> _validateExerciseDirectory({
   required MDParserBLoC parser,
 }) async {
   final files = directory.listSync(followLinks: false);
-  final totalMDFiles = files.where(isMDFile).toList()
+  final totalMDFiles = files.where(isExerciseFile).toList()
     // Sort the files
     ..sort(
       (a, b) => int.parse(getFileNameWithoutExtension(a.path)).compareTo(
@@ -894,7 +895,7 @@ Future<void> _validateDataJson({
     final argumentOfDir = getFileNameWithoutExtension(dir.path);
     if (argumentOfDir == 'challenges') {
       final challenges = await _getArgumentsInPath(dir.path);
-      final files = dir.listSync(followLinks: false).where(isMDFile);
+      final files = dir.listSync(followLinks: false).where(isExerciseFile);
       for (final file in files) {
         final challengeName = getFileNameWithoutExtension(file.path);
         _testHandler('''
@@ -935,9 +936,12 @@ bool isAnExerciseDirectory(FileSystemEntity entity, String relativePath) {
   return entity is Directory && !isAChallenge(relativePath);
 }
 
-/// Returns if the provided [entity] is a [File] ending the [.md] extension.
-bool isMDFile(FileSystemEntity entity) {
-  return entity is File && path.extension(entity.path) == '.md';
+/// Returns if the provided [entity] is a [File] named with a number that ends
+/// with the [.md] extension.
+bool isExerciseFile(FileSystemEntity entity) {
+  return entity is File &&
+      path.extension(entity.path) == '.md' &&
+      int.tryParse(path.basenameWithoutExtension(entity.path)) != null;
 }
 
 /// The relative path of the exercise:
