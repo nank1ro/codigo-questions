@@ -57,7 +57,7 @@ function duePerUno() {
 Nessun nome fornito
 
 ```javascript
-tryCatch(duePerUno() === "One per te, uno per me.");
+tryCatch(duePerUno() === "Uno per te, uno per me.");
 ```
 
 Dividi con "Daniele"
