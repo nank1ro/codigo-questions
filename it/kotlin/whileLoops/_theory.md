@@ -39,7 +39,7 @@ while (contatore < 100) { // [2]
 - __[2]__: L'espressione condizione per il _while_ loop dice: "ripeti le dichiarazioni nel corpo finché il contatore è inferiore a _100_"
 - __[3]__: L'operatore `+=` aggiunge _10_ al `contatore` e assegna il resultato al `contatore` in una singola operazione.
 
-L'output del codice di sopra sono i numeri che vanno da _10_ a _100_ inclusi
+L'output del codice di sopra è _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
@@ -47,7 +47,7 @@ C'è un secondo modo di usare _while_, in congiunzione con la parola chiave `do`
 ```kotlin
 do {
   // Codice da ripetere
-} while (expressione-booleana)
+} while (espressione-booleana)
 ```
 Come puoi vedere il `do-while` è abbastanza simile al ciclo `while`, tranne che per una differenza importante:
 > Il corpo del ciclo viene eseguito una volta prima che la condizione venga valutata.

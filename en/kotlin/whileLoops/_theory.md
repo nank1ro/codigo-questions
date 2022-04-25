@@ -39,7 +39,7 @@ while (counter < 100) { // [2]
 - __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
 - __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
 
-The ouput of the code above are the numbers ranging from _10_ to _100_ inclusive
+The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
