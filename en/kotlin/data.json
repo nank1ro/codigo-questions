@@ -19,5 +19,8 @@
 	},
 	"conditionalStatements": {
 		"order": 7
+	},
+	"whileLoops": {
+		"order": 8
 	}
 }
