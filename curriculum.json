@@ -179,9 +179,14 @@
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 44
         }
       ],
-      "totalExercises": 163
+      "totalExercises": 207
     },
     {
       "name": "python",
