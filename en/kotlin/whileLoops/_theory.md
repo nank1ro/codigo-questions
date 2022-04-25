@@ -29,15 +29,15 @@ It decrements the `x` value, otherwise, our loop will be infinite.
 
 Let's analyze this snippet of code.
 ```kotlin
-var count = 0 // [1]
-while (count < 100) { // [2]
-    count += 10 // [3]
-    println(count)
+var counter = 0 // [1]
+while (counter < 100) { // [2]
+    counter += 10 // [3]
+    println(counter)
 }
 ```
-- __[1]__: We initialize the `count` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as count is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `count` and assigns the result to `count` in a single operation.
+- __[1]__: We initialize the `counter` variable to __0__.
+- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
+- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
 
 The ouput of the code above are the numbers ranging from _10_ to _100_ inclusive
 
