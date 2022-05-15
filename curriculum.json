@@ -166,6 +166,11 @@
           "totalExercises": 44
         },
         {
+          "name": "forLoops",
+          "trainUntil": 9,
+          "totalExercises": 34
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -186,7 +191,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 207
+      "totalExercises": 241
     },
     {
       "name": "python",
@@ -518,6 +523,11 @@
           "totalExercises": 44
         },
         {
+          "name": "forLoops",
+          "trainUntil": 9,
+          "totalExercises": 34
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -538,7 +548,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 207
+      "totalExercises": 241
     },
     {
       "name": "python",
