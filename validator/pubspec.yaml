@@ -10,9 +10,9 @@ dependencies:
   diff_match_patch: ^0.4.1
   parser:
     path: ../parser
-  path: ^1.8.0
-  trotter: ^2.0.0-dev.1
+  path: ^1.8.1
+  trotter: ^1.2.0
 
 dev_dependencies:
-  test: ^1.17.11
-  very_good_analysis: ^2.3.0
+  test: ^1.21.1
+  very_good_analysis: ^3.0.0
