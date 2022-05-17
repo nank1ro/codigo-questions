@@ -11,7 +11,7 @@ dependencies:
   parser:
     path: ../parser
   path: ^1.8.1
-  trotter: ^1.2.0
+  trotter: ^2.0.0-dev.1
 
 dev_dependencies:
   test: ^1.21.1
