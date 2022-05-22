@@ -1,5 +1,5 @@
 ---
-language: javascript
+language: kotlin
 exerciseType: 1
 difficulty: 1
 title: Funzione di Ackermann
@@ -19,80 +19,81 @@ La funzione termina sempre e i suoi argomenti non sono mai negativi
 
 Scrivi una funzione che restituisca il valore della funzione Ackermann.
 
+# --seed--
+
+```kotlin
+fun ack(m: Int, n: Int): Int {
+    
+}
+```
+
 # --before-seed--
 
-```javascript
+```kotlin
 // DO NOT EDIT FROM HERE
 var _testFailedCount = 0;
 var _testCount = 0;
-var assert = require('assert')
-const tryCatch = (...args) => {
+fun tryCatch(assertion: Boolean) {
   _testCount++
-  try { assert(...args) }
-  catch (e) {
-    _testFailedCount++
-    console.log(`Test Case '--err-t${_testCount}--' failed`);
+    try { 
+        if (!assertion) throw Exception()
+    }
+    catch (e: Throwable) {
+        _testFailedCount++
+        println("Test Case '--err-t$_testCount--' failed");
   }
 };
 // DO NOT EDIT UNTIL HERE
-```
-
-# --seed--
-
-```javascript
-function ack(m, n) {
-    
-}
+fun main() {
 ```
 
 # --asserts--
 
 `ack(0, 0)` deve restituire 1.
 
-```javascript
-tryCatch(ack(0, 0) === 1);
+```kotlin
+    tryCatch(ack(0, 0) == 1)
 ```
 
 `ack(1, 1)` deve restituire 3.
 
-```javascript
-tryCatch(ack(1, 1) === 3);
+```kotlin
+    tryCatch(ack(1, 1) == 3)
 ```
 
 `ack(2, 5)` deve restituire 13.
 
-```javascript
-tryCatch(ack(2, 5) === 13);
+```kotlin
+    tryCatch(ack(2, 5) == 13)
 ```
 
 `ack(3, 3)` deve restituire 61.
 
-```javascript
-tryCatch(ack(3, 3) === 61);
-```
-
-`ack(3, 7)` deve restituire 1021.
-
-```javascript
-tryCatch(ack(3, 7) === 1021);
+```kotlin
+    tryCatch(ack(3, 3) == 61)
 ```
 
 # --after-asserts--
 
-```javascript
+```kotlin
 // DO NOT EDIT FROM HERE 
-console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
+    println("Executed $_testCount tests, with $_testFailedCount failures");
+}
 // DO NOT EDIT UNTIL HERE
 ```
 
 # --solutions--
 
-```javascript
-function ack(m, n) {
-    return m == 0 ?
-      n + 1 :
-      ack(m - 1, n == 0 ?
-        1 :
-        ack(m, n -1))
+```kotlin
+fun ack(m: Int, n: Int): Int {
+    return if(m == 0)
+            n + 1
+        else (ack(m - 1, 
+            if (n == 0)
+                1
+            else
+                ack(m, n - 1)
+            )
+        ) 
 }
 ```
