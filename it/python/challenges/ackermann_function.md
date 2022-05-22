@@ -1,7 +1,7 @@
 ---
 language: python
 exerciseType: 1
-title: Ackermann function
+title: Funzione di Ackermann
 difficulty: 1
 ---
 

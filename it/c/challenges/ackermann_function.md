@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Ackermann function
+title: Funzione di Ackermann
 ---
 
 # --description--
