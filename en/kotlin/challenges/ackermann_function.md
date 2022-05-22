@@ -86,7 +86,7 @@ fun main() {
 
 ```kotlin
 fun ack(m: Int, n: Int): Int {
-    return if(m == 0)
+    return if (m == 0)
             n + 1
         else (ack(m - 1, 
             if (n == 0)
