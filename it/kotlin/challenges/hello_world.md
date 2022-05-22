@@ -43,7 +43,7 @@ fun main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+La funzione deve restituire "Hello, World!".
 
 ```kotlin
     val expected = "Hello, World!"

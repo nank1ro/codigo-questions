@@ -7,7 +7,7 @@ title: Addizione
 
 # --description--
 
-Dati due number interi `num1` e `num2`, scrivi un programma per sommare questi due numeri
+Dati due numeri interi `num1` e `num2`, scrivi un programma per sommare questi due numeri
 
 # --instructions--
 
@@ -49,19 +49,19 @@ fun main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+La somma di 1 e 3 deve essere uguale a 4
 
 ```kotlin
     tryCatch(somma(1, 3) == 4)
 ```
 
-The sum of 200 and 210 must equal 410
+La somma di 200 e 210 deve essere uguale a 410
 
 ```kotlin
     tryCatch(somma(200, 210) == 410)
 ```
 
-The sum of 15 and 35 must equal 50
+La somma di 15 e 35 deve essere uguale a 50
 
 ```kotlin
     tryCatch(somma(15, 35) == 50)
