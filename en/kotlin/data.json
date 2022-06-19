@@ -25,5 +25,8 @@
     },
     "forLoops": {
         "order": 9
+    },
+    "lists": {
+        "order": 10
     }
 }
