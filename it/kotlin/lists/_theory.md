@@ -108,6 +108,7 @@ val fetta = numeri.slice(1..2) // [2]
 println(fetta)
 // stampa [2, 3]
 ```
+
 __[1]__: per prima cosa abbiamo creato una lista in _sola-lettura_ chiamata `numeri`.
 __[2]__: successivamente, abbiamo preso un sottoinsieme usando la funzione `slice` ed abbiamo salvato il valore nella variabile `fetta`.
 In Kotlin possiamo includere l'indice finale usando `..`, mentre possiamo escluderlo usando `until`.
@@ -118,20 +119,21 @@ Gli elementi della lista possono essere di qualsiasi tipo, se specifichiamo il t
 ```kotlin
 var nomeLista: List<Any> = listOf("uno", 2, true)
 ```
-Difatti, qui sopra abbiamo appena, in ordine, una `String`, un `Integer` ed un `Boolean`.
+
+Difatti, qui sopra abbiamo, in ordine, una `String`, un `Integer` ed un `Boolean`.
 Potremmo anche avere liste di liste.
 
 ---
 
 A volte è necessario cercare un elemento in una lista.
-In Kotline possiamo usare il metodo `indexOfFirst`:
+In Kotlin possiamo usare il metodo `indexOfFirst`:
 ```kotlin
 val nomi = mutableListOf("Trevor", "Zac", "Glenn")
 println(nomi.indexOfFirst { it == "Zac"})
 // stampa 1
 ```
 
-Il metodo `indexOfFirst` prende una funzione __predigattoo__ che verrà valutata per ogni elemento della lista finchè non è `true`, restituendo l'_indice_ dell'elemento.
+Il metodo `indexOfFirst` prende una funzione __predicato__ che verrà valutata per ogni elemento della lista finchè non è `true`, restituendo l'_indice_ dell'elemento.
 Il codice di sopra stampa il primo indice della lista che corrisponde alla stringa `Zac`, in questo caso `1`.
 
 Possiamo anche inserire elementi all'interno di una lista modificabile ad un indice specifico, utilizzando il metodo `add(index, element)`:
@@ -148,7 +150,7 @@ In Kotlin possiamo far scorrere una lista in un ciclo in un modo molto semplice 
 ```kotlin
 val numeri = listOf(1, 2, 3)
 for (num in numeri) {
-	println(num)
+    println(num)
 }
 // stampa 1, 2, 3 
 ```
