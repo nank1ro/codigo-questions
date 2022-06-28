@@ -1,10 +1,10 @@
-Gli array sono un tipo di dati che si può utilizzare per memorizzare una collezione di informazioni diverse come una sequenza sotto un'unica variabile.
-Un'array memorizza valori multipli di qualsiasi tipo e utilizza gli **indici** per distinguere questi valori.
-E' possibile assegnare gli elementi ad un array con un'espressione della forma:
+Le liste sono un tipo di dati che si può utilizzare per memorizzare una collezione di informazioni diverse come una sequenza sotto un'unica variabile.
+Una lista memorizza valori multipli di qualsiasi tipo e utilizza gli **indici** per distinguere questi valori.
+E' possibile assegnare gli elementi ad una lista con un'espressione della forma:
 ```kotlin
-val nomeArray = listOf<tipoElementi>(elemento1, elemento2)
+val nomeLista = listOf<tipoElementi>(elemento1, elemento2)
 ```
-`tipoElementi` sta ad indicare il tipo degli elementi all'interno dell'array, per esempio, può essere  `Int`, `String`, `Any`...
+`tipoElementi` sta ad indicare il tipo degli elementi all'interno della lista, per esempio, può essere  `Int`, `String`, `Any`...
 
 ---
 
@@ -36,7 +36,7 @@ L'indice si inserisce direttamente dopo il nome della lista, tra le parentesi, i
 ```kotlin
 nomeLista[index]
 ```
-Gli indici degli array iniziano con `0`, **non** `1`! Per ottenere il primo valore dell'array usiamo: `nomeLista[0]` oppure `nomeLista.get(0)` o ancora `nomeLista.first()`.
+Gli indici delle liste iniziano con `0`, **non** `1`! Per ottenere il primo valore della lista usiamo: `nomeLista[0]` oppure `nomeLista.get(0)` o ancora `nomeLista.first()`.
 Il secondo elemento della lista si trova all'indice __1__: `nomeLista[1]`.
 
 ---
@@ -62,7 +62,7 @@ println(nomi[0])
 ---
 
 Proprio come le stringhe, le liste hanno una __lunghezza__ ottenuta con il getter `size`.
-La lunghezza di un array e' il numero di elementi che contiene
+La lunghezza di una lista e' il numero di elementi che contiene
 
 ---
 
@@ -114,7 +114,7 @@ In Kotlin possiamo includere l'indice finale usando `..`, mentre possiamo esclud
 
 ---
 
-Gli elementi dell'array possono essere di qualsiasi tipo, se specifichiamo il tipo `Any`:
+Gli elementi della lista possono essere di qualsiasi tipo, se specifichiamo il tipo `Any`:
 ```kotlin
 var nomeLista: List<Any> = listOf("uno", 2, true)
 ```
@@ -123,7 +123,7 @@ Potremmo anche avere liste di liste.
 
 ---
 
-A volte è necessario cercare un elemento in un array.
+A volte è necessario cercare un elemento in una lista.
 In Kotline possiamo usare il metodo `indexOfFirst`:
 ```kotlin
 val nomi = mutableListOf("Trevor", "Zac", "Glenn")
@@ -144,7 +144,7 @@ Questo codice inserisce `"Ali"` all'indice `1`, muovendo tutto ciò che è succe
 
 ---
 
-In Kotlin possiamo far scorrere un array in un ciclo in un modo molto semplice usando le parole chiave `for..in`:
+In Kotlin possiamo far scorrere una lista in un ciclo in un modo molto semplice usando le parole chiave `for..in`:
 ```kotlin
 val numeri = listOf(1, 2, 3)
 for (num in numeri) {
@@ -152,4 +152,4 @@ for (num in numeri) {
 }
 // stampa 1, 2, 3 
 ```
-Un nome di variabile segue la parola chiave `for`, ad essa verrà assegnato il valore di ogni elemento dell'array a turno.
+Un nome di variabile segue la parola chiave `for`, ad essa verrà assegnato il valore di ogni elemento della lista a turno.
