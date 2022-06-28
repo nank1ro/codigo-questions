@@ -108,6 +108,7 @@ val fetta = numeri.slice(1..2) // [2]
 println(fetta)
 // stampa [2, 3]
 ```
+
 __[1]__: per prima cosa abbiamo creato una lista in _sola-lettura_ chiamata `numeri`.
 __[2]__: successivamente, abbiamo preso un sottoinsieme usando la funzione `slice` ed abbiamo salvato il valore nella variabile `fetta`.
 In Kotlin possiamo includere l'indice finale usando `..`, mentre possiamo escluderlo usando `until`.
@@ -118,7 +119,8 @@ Gli elementi della lista possono essere di qualsiasi tipo, se specifichiamo il t
 ```kotlin
 var nomeLista: List<Any> = listOf("uno", 2, true)
 ```
-Difatti, qui sopra abbiamo appena, in ordine, una `String`, un `Integer` ed un `Boolean`.
+
+Difatti, qui sopra abbiamo, in ordine, una `String`, un `Integer` ed un `Boolean`.
 Potremmo anche avere liste di liste.
 
 ---
@@ -148,7 +150,7 @@ In Kotlin possiamo far scorrere una lista in un ciclo in un modo molto semplice 
 ```kotlin
 val numeri = listOf(1, 2, 3)
 for (num in numeri) {
-	println(num)
+    println(num)
 }
 // stampa 1, 2, 3 
 ```
