@@ -28,5 +28,8 @@
     },
     "lists": {
         "order": 10
+    },
+    "sets": {
+        "order": 11
     }
 }
