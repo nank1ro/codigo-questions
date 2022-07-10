@@ -19,14 +19,6 @@ println(addition(1, 2))
 // prints 3
 ```
 
-# --seed--
-
-```kotlin
-fun addition() {
-    
-}
-```
-
 # --before-seed--
 
 ```kotlin
@@ -45,6 +37,14 @@ fun tryCatch(assertion: Boolean) {
 };
 // DO NOT EDIT UNTIL HERE
 fun main() {
+```
+
+# --seed--
+
+```kotlin
+fun addition() {
+    
+}
 ```
 
 # --asserts--
