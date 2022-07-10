@@ -181,6 +181,11 @@
           "totalExercises": 11
         },
         {
+          "name": "sets",
+          "trainUntil": 7,
+          "totalExercises": 17
+        },
+        {
           "name": "stringTemplates",
           "trainUntil": 9,
           "totalExercises": 25
@@ -196,7 +201,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 270
+      "totalExercises": 287
     },
     {
       "name": "python",
@@ -543,6 +548,11 @@
           "totalExercises": 11
         },
         {
+          "name": "sets",
+          "trainUntil": 7,
+          "totalExercises": 17
+        },
+        {
           "name": "stringTemplates",
           "trainUntil": 9,
           "totalExercises": 25
@@ -558,7 +568,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 270
+      "totalExercises": 287
     },
     {
       "name": "python",
