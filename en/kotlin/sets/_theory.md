@@ -1,5 +1,5 @@
 `Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `Lists` is that a `Set` allows only one element of each value.
+The main difference with `List`s is that a `Set` allows only one element of each value.
 
 Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
 You can assign items to a set with an expression of the form:
