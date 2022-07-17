@@ -1,35 +1,57 @@
 {
     "output": {
-        "order": 1
+        "order": 1,
+        "title": "Output",
+        "description": "Impara a generare l'output di un valore"
     },
     "stringTemplates": {
-        "order": 2
+        "order": 2,
+        "title": "Modelli di stringa",
+        "description": "Impara ad interpolare le stringhe con diversi tipi di dati"
     },
     "variables": {
-        "order": 3
+        "order": 3,
+        "title": "Variabili",
+        "description": "Impara a memorizzare i valori in una variabile"
     },
     "booleans": {
-        "order": 4
+        "order": 4,
+        "title": "Operatori Booleani",
+        "description": "Impara a valutare qualsiasi espressione"
     },
     "arithmeticOperators": {
-        "order": 5
+        "order": 5,
+        "title": "Operatori Aritmetici",
+        "description": "Impara ad eseguire operazioni aritmetiche su variabili e valori"
     },
     "comparisonLogicalOperators": {
-        "order": 6
+        "order": 6,
+        "title": "Operatori Logici e di Comparazione",
+        "description": "Impara a comparare i valori"
     },
     "conditionalStatements": {
-        "order": 7
+        "order": 7,
+        "title": "Istruzioni Condizionali",
+        "description": "Impara a prendere decisioni"
     },
     "whileLoops": {
-        "order": 8
+        "order": 8,
+        "title": "While Loops",
+        "description": "Impara a ripetere un blocco di codice"
     },
     "forLoops": {
-        "order": 9
+        "order": 9,
+        "title": "For Loops",
+        "description": "Impara a ripetere un blocco di codice"
     },
     "lists": {
-        "order": 10
+        "order": 10,
+        "title": "Liste",
+        "description": "Imparare a memorizzare gli elementi in una collezione ordinata"
     },
     "sets": {
-        "order": 11
+        "order": 11,
+        "title": "Set",
+        "description": "Imparare a memorizzare elementi unici in una collezione non ordinata"
     }
 }

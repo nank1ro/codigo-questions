@@ -1,50 +1,77 @@
 {
-	"output": {
-		"order": 1
-	},
-	"formattedStrings": {
-		"order": 2
-	},
-	"variables": {
-		"order": 3
-	},
-	"booleans": {
-		"order": 4
-	},
-	"arithmeticOperators": {
-		"order": 5
-	},
-	"assignmentOperators": {
-		"order": 6
-	},
-	"relationBooleanOperators": {
-		"order": 7
-	},
-	"conditionalStatements": {
-		"order": 8
-	},
-	"whileLoops": {
-		"order": 9
-	},
-	"forLoops": {
-		"order": 10
-	},
-	"lists": {
-		"order": 11
-	},
-	"dictionaries": {
-		"order": 12
-	},
-	"functions": {
-		"order": 13,
-		"isPro": true
-	},
-	"modulesPackages": {
-		"order": 14,
-		"isPro": true
-	},
-	"classes": {
-		"order": 15,
-		"isPro": true
-	}
+    "output": {
+        "order": 1,
+        "title": "Output",
+        "description": "Learn how to output a value"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Formatted Strings",
+        "description": "Learn how to format strings with different data types"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Learn how to store values in a variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleans",
+        "description": "Learn how to evaluate any expression"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Arithmetic Operators",
+        "description": "Learn how to perform arithmetic operations on variables and values"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Assignment Operators",
+        "description": "Learn how to assign values to variables"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Relational and Boolean Operators",
+        "description": "Learn how to compare values"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Conditional Statements",
+        "description": "Learn how to make decisions"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While Loops",
+        "description": "Learn how to repeat a set of statements"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For Loops",
+        "description": "Learn how to repeat a set of statements"
+    },
+    "lists": {
+        "order": 11,
+        "title": "Lists",
+        "description": "Learn how to store different values into one variable"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Dictionaries",
+        "description": "Learn how to store values with keys"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Functions",
+        "description": "Learn how to divide code by specific tasks"
+    },
+    "modulesPackages": {
+        "order": 14,
+        "title": "Modules and Packages",
+        "description": "Learn how to use modules"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Classes",
+        "description": "Learn object-oriented programming"
+    }
 }
