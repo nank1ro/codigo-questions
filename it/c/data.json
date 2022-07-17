@@ -1,40 +1,62 @@
 {
-	"output": {
-		"order": 1
-	},
-	"formattedStrings": {
-		"order": 2
-	},
-	"variables": {
-		"order": 3
-	},
-	"booleans": {
-		"order": 4
-	},
-	"arithmeticOperators": {
-		"order": 5
-	},
-	"assignmentOperators": {
-		"order": 6
-	},
-	"relationBooleanOperators": {
-		"order": 7
-	},
-	"conditionalStatements": {
-		"order": 8
-	},
-	"whileLoops": {
-		"order": 9
-	},
-	"forLoops": {
-		"order": 10
-	},
-	"arrays": {
-		"order": 11,
-		"isPro": true
-	},
-	"functions": {
-		"order": 12,
-		"isPro": true
-	}
+    "output": {
+        "order": 1,
+        "title": "Output",
+        "description": "Impara a generare l'output di un valore"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Formattazione Stringhe",
+        "description": "Impara a formattare le stringhe con diversi tipi di dati"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variabili",
+        "description": "Impara a memorizzare i valori in una variabile"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Operatori Booleani",
+        "description": "Impara a valutare qualsiasi espressione"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operatori Aritmetici",
+        "description": "Impara ad eseguire operazioni aritmetiche su variabili e valori"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operatori di Assegnazione",
+        "description": "Impara ad assegnare valori alle variabili"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Operatori Relazionali e Booleani",
+        "description": "Impara a comparare i valori"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Istruzioni Condizionali",
+        "description": "Impara a prendere decisioni"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While Loops",
+        "description": "Impara a ripetere un blocco di codice"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For Loops",
+        "description": "Impara a ripetere un blocco di codice"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Array",
+        "description": "Impara come salvare diversi valori in una variabile"
+    },
+    "functions": {
+        "order": 12,
+        "title": "Funzioni",
+        "description": "Impara a dividere il codice in compiti precisi"
+    }
 }
