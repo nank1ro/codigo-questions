@@ -1,6 +1,6 @@
 ![Firebase Hosting](https://github.com/nank1ro/Codigo-Questions/workflows/Deploy%20to%20Firebase%20Storage/badge.svg)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Codigo-Questions
@@ -34,6 +34,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/cipoleon"><img src="https://avatars.githubusercontent.com/u/60713159?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aux Ciprián</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3Acipoleon" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/crishrpz"><img src="https://avatars.githubusercontent.com/u/13334796?v=4?s=100" width="100px;" alt=""/><br /><sub><b>crishrpz</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3Acrishrpz" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/lolrida"><img src="https://avatars.githubusercontent.com/u/97251836?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lolrida</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3Alolrida" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/FalconStike"><img src="https://avatars.githubusercontent.com/u/112663162?v=4?s=100" width="100px;" alt=""/><br /><sub><b>FalconStike</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3AFalconStike" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
