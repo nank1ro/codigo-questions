@@ -118,7 +118,7 @@ Un nome di variabile segue la parola chiave `for`, ad essa verrà assegnato il v
 ---
 
 Le **tuple** sono come le liste, ma sono molto piu' veloci.
-Tuttavia, i valori delle tuple non possono essere modificat.
+Tuttavia, i valori delle tuple non possono essere modificati.
 Tendiamo ad usare le tuple per i dati **di sola lettura** che rimangono costanti mentre il programma e' in esecuzione.
 Per creare una tupla usiamo le parentesi tonde `()`.
 
