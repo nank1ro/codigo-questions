@@ -84,7 +84,7 @@ jobs:
           # Defaults to all (.)
           file_pattern: curriculum.json
   build_theory:
-    needs: validate_exercises
+    needs: build_curriculum
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.head_ref }}
