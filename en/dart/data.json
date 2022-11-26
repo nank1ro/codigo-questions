@@ -1,0 +1,57 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Output",
+        "description": "Learn how to output a value"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "String interpolation",
+        "description": "Learn how to interpolate strings with different data types"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Learn how to store values in a variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleans",
+        "description": "Learn how to evaluate any expression"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Arithmetic Operators",
+        "description": "Learn how to perform arithmetic operations on variables and values"
+    },
+    "comparisonLogicalOperators": {
+        "order": 6,
+        "title": "Comparison and Logical Operators",
+        "description": "Learn how to compare values"
+    },
+    "conditionalStatements": {
+        "order": 7,
+        "title": "Conditional Statements",
+        "description": "Learn how to make decisions"
+    },
+    "whileLoops": {
+        "order": 8,
+        "title": "While Loops",
+        "description": "Learn how to repeat a set of statements"
+    },
+    "forLoops": {
+        "order": 9,
+        "title": "For Loops",
+        "description": "Learn how to repeat a set of statements"
+    },
+    "lists": {
+        "order": 10,
+        "title": "Lists",
+        "description": "Learn how to store elements into an ordered collection"
+    },
+    "sets": {
+        "order": 11,
+        "title": "Sets",
+        "description": "Learn how to store unique elements into an unordered collection"
+    }
+}

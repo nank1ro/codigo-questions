@@ -4,14 +4,46 @@ import 'package:args/args.dart';
 import 'package:colorize/colorize.dart';
 import 'package:parser/parser.dart';
 import 'package:path/path.dart' as path;
+import 'package:clippy/server.dart' as clippy;
 
 Future<void> main(List<String> arguments) async {
   exitCode = 0;
-  final argsParser = ArgParser()..addFlag('path', negatable: false, abbr: 'p');
+  final argsParser = ArgParser()
+    ..addSeparator(
+        '\nAn useful CLI to text an exercise before submitting it, it formats the exercise to the real code and you can paste it in an editor to try if it works\n')
+    ..addFlag('help',
+        abbr: 'h', negatable: false, help: "Displays this help information.")
+    ..addOption(
+      'path',
+      help: 'Specity the exercise path, like '
+          '"./en/python/variables/1.md"',
+      valueHelp: 'path',
+      abbr: 'p',
+    )
+    ..addFlag('copy',
+        negatable: true,
+        abbr: 'c',
+        defaultsTo: true,
+        help: 'Automatically copy the output of the exercise in your clipboard')
+    ..addFlag('output',
+        negatable: false,
+        abbr: 'o',
+        // defaults to true when the flag `--no-copy` is present
+        defaultsTo: arguments.contains('--no-copy'),
+        help:
+            'Print the output in the console, defaults to true when `--no-copy` is passed, otherwise defaults to false');
 
   ArgResults argResults = argsParser.parse(arguments);
-  final path = argResults.rest.first;
+  final path = argResults['path'];
+  final copy = argResults['copy'];
+  final help = argResults['help'];
+  final printOutput = argResults['output'];
 
+  // print help
+  if (help) {
+    print(argsParser.usage);
+    return;
+  }
   if (await FileSystemEntity.isDirectory(path)) {
     stderr.writeln('error: $path is a directory');
     exitCode = 2;
@@ -34,8 +66,21 @@ Future<void> main(List<String> arguments) async {
     }
 
     final fullCode = _getFullCode(model);
-    final colorizedCode = Colorize(fullCode)..lightCyan();
-    stdout.writeln(colorizedCode);
+    if (printOutput) {
+      final colorizedCode = Colorize(fullCode)..lightCyan();
+      stdout.writeln(colorizedCode);
+    }
+
+    // copy to clipboard
+    if (copy) {
+      await clippy.write(fullCode);
+
+      if (!printOutput) {
+        final coloredText =
+            Colorize('exercise code successfully copied to clipboard')..green();
+        stdout.writeln(coloredText);
+      }
+    }
   }
 }
 
