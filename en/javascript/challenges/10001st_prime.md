@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: 10001st-prime
+title: 10001st prime
 ---
 
 # --description--
