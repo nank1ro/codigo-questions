@@ -52,11 +52,11 @@
     "name": "Smallest multiple"
   },
   "sum_square_difference": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Sum square difference"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001st prime"
   },
   "largest_product_in_a_series": {

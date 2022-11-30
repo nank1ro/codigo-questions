@@ -2,20 +2,20 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Speciale tripletta pitagorica
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+Una tripletta pitagorica è un insieme di tre numeri naturali, `a` < `b` < `c`, per i quali, <latex>a^2 + b^2 = c^2</latex>.
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+Per esempio, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+Esiste esattamente una tripletta pitagorica per la quale `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+Trova il prodotto `abc` tale che `a` + `b` + `c` = `n`.
 
 # --before-seed--
 
@@ -45,19 +45,19 @@ function specialPythagoreanTriplet(n) {
 
 # --asserts--
 
-`specialPythagoreanTriplet(24)` should return 480.
+`specialPythagoreanTriplet(24)` deve restituire 480.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(24) === 480);
 ```
 
-`specialPythagoreanTriplet(120)` should return 49920, 55080 or 60000.
+`specialPythagoreanTriplet(120)` deve restituire 49920, 55080 o 60000.
 
 ```javascript
 tryCatch([49920, 55080, 60000].includes(specialPythagoreanTriplet(120)));
 ```
 
-`specialPythagoreanTriplet(1000)` should return 31875000.
+`specialPythagoreanTriplet(1000)` deve restituire 31875000.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(1000) === 31875000);
