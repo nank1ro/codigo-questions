@@ -7,7 +7,7 @@ title: Largest product in a series
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned beloew that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
 # --instructions--
 

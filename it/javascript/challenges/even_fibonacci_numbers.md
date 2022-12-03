@@ -109,7 +109,7 @@ const fibonacciEvenSum = (number) => {
     let evenSum = 0,
       prevFibNum = 1,
       fibNum = 2;
-    for (let i = 2; fibNum <= number; i++) {
+    while (fibNum <= number) {
       if (fibNum % 2 == 0) {
         evenSum += fibNum;
       }

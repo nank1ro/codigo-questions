@@ -97,14 +97,6 @@ class PrimeSeive {
     this._seive = seive;
   }
 
-  isPrime(num) {
-    return num === 2
-      ? true
-      : num % 2 === 0
-        ? false
-        : this.isOddPrime(num);
-  }
-
   isOddPrime(num) {
     return this._seive[(num - 3) / 2];
   }
