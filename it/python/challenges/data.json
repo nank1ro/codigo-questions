@@ -30,5 +30,45 @@
 	"ackermann_function": {
 		"difficulty": 1,
 		"name": "Funzione di Ackermann"
-	}
+	},
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Multipli di 3 o 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "I numeri pari di Fibonacci"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Fattore primo più grande"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Il più grande palindromo di un prodotto"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "Il multiplo più piccolo"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Differenza quadratica"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "10001° primo"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Il prodotto più grande di una serie"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Speciale tripletta pitagorica"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Somma di numeri primi"
+  }
 }
