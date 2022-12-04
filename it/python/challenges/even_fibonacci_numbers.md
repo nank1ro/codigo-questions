@@ -100,13 +100,12 @@ if __name__ == "__main__":
 def fibonacci_even_sum(number):
     if number <= 1:
         return 0
-    else:
-        even_sum = 0
-        prev_fib_num = 1
-        fib_num = 2
-        while fib_num <= number:
-            if fib_num % 2 == 0:
-                even_sum += fib_num
-            prev_fib_num, fib_num = fib_num, prev_fib_num + fib_num
-        return even_sum
+    even_sum = 0
+    prev_fib_num = 1
+    fib_num = 2
+    while fib_num <= number:
+        if fib_num % 2 == 0:
+            even_sum += fib_num
+        prev_fib_num, fib_num = fib_num, prev_fib_num + fib_num
+    return even_sum
 ```

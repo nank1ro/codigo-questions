@@ -103,19 +103,18 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 
 ```javascript
 const fibonacciEvenSum = (number) => {
-  if (number <= 1) {
-    return 0;
-  } else {
+    if (number <= 1) {
+        return 0;
+    }
     let evenSum = 0,
       prevFibNum = 1,
       fibNum = 2;
     while (fibNum <= number) {
-      if (fibNum % 2 == 0) {
-        evenSum += fibNum;
-      }
-      [prevFibNum, fibNum] = [fibNum, prevFibNum + fibNum];
+        if (fibNum % 2 == 0) {
+            evenSum += fibNum;
+        }
+        [prevFibNum, fibNum] = [fibNum, prevFibNum + fibNum];
     }
     return evenSum;
-  }
 };
 ```

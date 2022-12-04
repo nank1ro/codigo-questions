@@ -1,5 +1,5 @@
 ---
-language: javascript
+language: kotlin
 exerciseType: 1
 difficulty: 1
 title: Even Fibonacci numbers
@@ -15,17 +15,18 @@ By considering the terms in the Fibonacci sequence whose values do not exceed `n
 
 # --before-seed--
 
-```javascript
+```kotlin
 // DO NOT EDIT FROM HERE
 var _testFailedCount = 0;
 var _testCount = 0;
-var assert = require('assert')
-const tryCatch = (...args) => {
+fun tryCatch(assertion: Boolean) {
   _testCount++
-  try { assert(...args) }
-  catch (e) {
-    _testFailedCount++
-    console.log(`Test Case '--err-t${_testCount}--' failed`);
+    try { 
+        if (!assertion) throw Exception()
+    }
+    catch (e: Throwable) {
+        _testFailedCount++
+        println("Test Case '--err-t$_testCount--' failed");
   }
 };
 // DO NOT EDIT UNTIL HERE
@@ -33,88 +34,96 @@ const tryCatch = (...args) => {
 
 # --seed--
 
-```javascript
-function fibonacciEvenSum(n) {
+```kotlin
+fun fibonacciEvenSum(n) {
   
 }
+```
+
+# --before-asserts--
+
+```kotlin
+fun main() {
 ```
 
 # --asserts--
 
 Your function should return an even value
 
-```javascript
-tryCatch(fibonacciEvenSum(10) % 2 === 0);
+```kotlin
+tryCatch(fibonacciEvenSum(10) % 2 == 0)
 ```
 
 `fibonacciEvenSum(8)` should return 10
 
-```javascript
-tryCatch(fibonacciEvenSum(8) === 10);
+```kotlin
+tryCatch(fibonacciEvenSum(8) == 10)
 ```
 
 
 `fibonacciEvenSum(10)` should return 10
 
-```javascript
-tryCatch(fibonacciEvenSum(10) === 10);
+```kotlin
+tryCatch(fibonacciEvenSum(10) == 10)
 ```
 
 `fibonacciEvenSum(34)` should return 44
 
-```javascript
-tryCatch(fibonacciEvenSum(34) === 44);
+```kotlin
+tryCatch(fibonacciEvenSum(34) == 44)
 ```
 
 `fibonacciEvenSum(60)` should return 44
 
-```javascript
-tryCatch(fibonacciEvenSum(60) === 44);
+```kotlin
+tryCatch(fibonacciEvenSum(60) == 44)
 ```
 
 `fibonacciEvenSum(1000)` should return 798
 
-```javascript
-tryCatch(fibonacciEvenSum(1000) === 798);
+```kotlin
+tryCatch(fibonacciEvenSum(1000) == 798)
 ```
 
 `fibonacciEvenSum(100000)` should return 60696
 
-```javascript
-tryCatch(fibonacciEvenSum(100000) === 60696);
+```kotlin
+tryCatch(fibonacciEvenSum(100000) == 60696)
 ```
 
 `fibonacciEvenSum(4000000)` should return 4613732
 
-```javascript
-tryCatch(fibonacciEvenSum(4000000) === 4613732);
+```kotlin
+tryCatch(fibonacciEvenSum(4000000) == 4613732)
 ```
-
 
 # --after-asserts--
 
-```javascript
+```kotlin
 // DO NOT EDIT FROM HERE 
-console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
+    println("Executed $_testCount tests, with $_testFailedCount failures");
+}
 // DO NOT EDIT UNTIL HERE
 ```
 
 # --solutions--
 
-```javascript
-const fibonacciEvenSum = (number) => {
+```kotlin
+fun fibonacciEvenSum(number: Int): Int {
     if (number <= 1) {
-        return 0;
+        return 0
     }
-    let evenSum = 0,
-      prevFibNum = 1,
-      fibNum = 2;
+    var evenSum = 0
+    var prevFibNum = 1
+    var fibNum = 2
     while (fibNum <= number) {
         if (fibNum % 2 == 0) {
-            evenSum += fibNum;
+            evenSum += fibNum
         }
-        [prevFibNum, fibNum] = [fibNum, prevFibNum + fibNum];
+        var tempFibNum = fibNum
+        fibNum = prevFibNum + fibNum
+        prevFibNum = tempFibNum
     }
-    return evenSum;
-};
+    return evenSum
+}
 ```
