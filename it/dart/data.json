@@ -1,7 +1,12 @@
 {
-    "comments": {
-        "order": 1,
-        "title": "Commenti",
-        "description": "Impara a commentare il codice"
-    }
+  "comments": {
+    "order": 1,
+    "title": "Commenti",
+    "description": "Impara a commentare il codice"
+  },
+  "output": {
+    "order": 2,
+    "title": "Output",
+    "description": "Impara a generare l'output di un valore"
+  }
 }
