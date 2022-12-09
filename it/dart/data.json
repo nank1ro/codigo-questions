@@ -8,5 +8,10 @@
     "order": 2,
     "title": "Output",
     "description": "Impara a generare l'output di un valore"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "Interpolazione Stringhe",
+    "description": "Impara ad interpolare le stringhe con diversi tipi di dati"
   }
 }
