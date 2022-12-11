@@ -9,6 +9,10 @@ environment:
 dependencies:
   args: ^2.3.0
   colorize: ^3.0.0
+  clippy:
+    git:
+      url: git@github.com:nank1ro/clippy.git
+      ref: 1.0.1
   parser:
     path: ../parser
 

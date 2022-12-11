@@ -67,6 +67,27 @@
       "totalExercises": 239
     },
     {
+      "name": "dart",
+      "arguments": [
+        {
+          "name": "comments",
+          "trainUntil": 4,
+          "totalExercises": 12
+        },
+        {
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
+        },
+        {
+          "name": "stringInterpolation",
+          "trainUntil": 9,
+          "totalExercises": 25
+        }
+      ],
+      "totalExercises": 47
+    },
+    {
       "name": "javascript",
       "arguments": [
         {
@@ -432,6 +453,27 @@
         }
       ],
       "totalExercises": 239
+    },
+    {
+      "name": "dart",
+      "arguments": [
+        {
+          "name": "comments",
+          "trainUntil": 4,
+          "totalExercises": 12
+        },
+        {
+          "name": "output",
+          "trainUntil": 1,
+          "totalExercises": 10
+        },
+        {
+          "name": "stringInterpolation",
+          "trainUntil": 9,
+          "totalExercises": 25
+        }
+      ],
+      "totalExercises": 47
     },
     {
       "name": "javascript",
