@@ -2,22 +2,22 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 porte
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+Ci sono 100 porte in fila che inizialmente sono tutte chiuse.
+Fai 100 passaggi davanti alle porte.
+La prima volta che passi, visita ogni porta e "alterna" la porta (se la porta è chiusa, aprila; se è aperta, chiudila).
+La seconda volta, visita solo ogni 2a porta (cioè la porta #2, #4, #6, ...) e modificala.
+La terza volta, visita ogni 3a porta (cioè la porta #3, #6, #9, ...), etc., fino a visitare solo la 100esima porta.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Implementa una funzione per determinare lo stato delle porte dopo l'ultimo passaggio.
+Restituire il risultato finale in un array, con solo il numero delle porte aperte.
+> Il metodo deve essere in grado di funzionare con un numero variabile di porte.
 
 # --seed--
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Date 100 porte, restituire l'elenco corretto delle porte aperte
 
 ```dart
     test("test1", () {
@@ -51,7 +51,7 @@ Given 100 doors, return the correct list of open doors
     });
 ```
 
-Given 10 doors, return the correct list of open doors
+Date 10 porte, restituire l'elenco corretto delle porte aperte
 
 ```dart
     test("test2", () {
@@ -60,7 +60,7 @@ Given 10 doors, return the correct list of open doors
     });
 ```
 
-Given 950 doors, return the correct list of open doors
+Date 950 porte, restituire l'elenco corretto delle porte aperte
 
 ```dart
     test("test3", () {
