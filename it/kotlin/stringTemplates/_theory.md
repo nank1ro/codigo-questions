@@ -1,5 +1,4 @@
-Una Stringa _templata_ è 
-A String _template_ è un modo programmatico per generare una stringa.
+Una Stringa _templata_ è un modo programmatico per generare una stringa.
 In Kotlin possiamo usare il segno `+` (concatenazione) per mostrare 2 o più stringhe assieme, ad esempio:
 ```kotlin
 println("Ciao " + "Kotlin!")
@@ -42,4 +41,4 @@ println("${if (true) "Corretto" else "Errato"}")
 
 ---
 
-Le interpolazione di stringhe vengono usate al meglio nelle istruzioni di `print`, ma possiamo anche salvarla in variabili come normali stringhe
+Le stringhe template vengono usate al meglio nelle istruzioni di `print`, ma possiamo anche salvarle in variabili come normali stringhe
