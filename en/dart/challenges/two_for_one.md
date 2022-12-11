@@ -58,7 +58,7 @@ Pass "James" as name
 
 ```dart
   test('test2', () {
-    expect(twoForOne(name: "Martha"), "One for Martha, one for me.", reason: '--err-t2--');
+    expect(twoForOne(name: "James"), "One for James, one for me.", reason: '--err-t2--');
   });
 ```
 
