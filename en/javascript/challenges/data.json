@@ -1,34 +1,74 @@
 {
-	"addition": {
-		"difficulty": 1,
-		"name": "Addition"
-	},
-	"atm": {
-		"difficulty": 1,
-		"name": "ATM"
-	},
-	"hello_world": {
-		"difficulty": 1,
-		"name": "Hello World!"
-	},
-	"raindrops": {
-		"difficulty": 1,
-		"name": "Raindrops"
-	},
-	"sum_digits": {
-		"difficulty": 1,
-		"name": "Sum of digits"
-	},
-	"two_for_one": {
-		"difficulty": 1,
-		"name": "Two for one"
-	},
-	"100_doors": {
-		"difficulty": 1,
-		"name": "100 doors"
-	},
-	"ackermann_function": {
-		"difficulty": 1,
-		"name": "Ackermann function"
-	}
+  "addition": {
+    "difficulty": 1,
+    "name": "Addition"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "Hello World!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "Raindrops"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "Sum of digits"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "Two for one"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 doors"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Ackermann function"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Multiples of 3 or 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Even Fibonacci numbers"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Largest prime factor"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Largest palindrome product"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "Smallest multiple"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Sum square difference"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "10001st prime"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Largest product in a series"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Special pythagorean triplet"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Summation of primes"
+  }
 }

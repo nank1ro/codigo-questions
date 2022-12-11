@@ -11,7 +11,7 @@ La funzione Ackermann è un classico esempio di funzione ricorsiva, nota sopratt
 
 La funzione Ackermann è solitamente definita come segue:
 
-![ackermann_function](https://bit.ly/3z9u4zh)
+<latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
 La funzione termina sempre e i suoi argomenti non sono mai negativi
 

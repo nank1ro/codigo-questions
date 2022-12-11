@@ -11,7 +11,7 @@ The Ackermann function is a classic example of a recursive function, notable esp
 
 The Ackermann function is usually defined as follows:
 
-![ackermann_function](https://bit.ly/3z9u4zh)
+<latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
 Its arguments are never negative and it always terminates
 

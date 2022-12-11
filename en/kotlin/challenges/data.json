@@ -30,5 +30,13 @@
 	"ackermann_function": {
 		"difficulty": 1,
 		"name": "Ackermann function"
-	}
+	},
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Multiples of 3 or 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Even Fibonacci numbers"
+  }
 }

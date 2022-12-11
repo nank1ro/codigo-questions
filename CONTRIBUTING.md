@@ -95,7 +95,7 @@ You can copy a template, and replace all the text with your new exercise, so you
 If you're writing a __run code__ exercise (code: 1), you can also you the CLI.
 For more info read the [CLI Readme.md](./cli/README.md)
 
-## Q&A
+## Q&A
 
 <details>
   <summary>Can I add a new programming language?</summary>
