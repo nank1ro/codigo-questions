@@ -19,6 +19,7 @@ const supportedProgrammingLanguages = <String>{
   'javascript',
   'c',
   'kotlin',
+  'dart',
 };
 
 final RegExp _codeSpaceRegex = RegExp(r'\[\/\]', dotAll: true);
@@ -41,7 +42,9 @@ Future<void> main() async {
       await _validateDataJson(directory: languageDir);
 
       await _validateLanguageAssets(
-          assetsDir: argumentAssetsDir, targetDir: languageDir);
+        assetsDir: argumentAssetsDir,
+        targetDir: languageDir,
+      );
 
       final challengeDirectories = languageDir
           .listSync(followLinks: false)
@@ -50,7 +53,9 @@ Future<void> main() async {
 
       for (final dir in challengeDirectories) {
         await _validateChallengeAssets(
-            assetsDir: challengesAssetsDir, targetDir: dir);
+          assetsDir: challengesAssetsDir,
+          targetDir: dir,
+        );
       }
     }
 
@@ -629,8 +634,10 @@ void _runFillInEmptySpacesTests({
 
         final differences = getDifferences(solution);
 
-        assert(differences.length == groupedEmptySpacePositions.length,
-            'The differences found in the exercise are more than the empty spaces in $exercisePath');
+        assert(
+          differences.length == groupedEmptySpacePositions.length,
+          'The differences found in the exercise are more than the empty spaces in $exercisePath',
+        );
 
         var differenceIndex = 0;
         for (final entry in groupedEmptySpacePositions.entries) {
@@ -640,8 +647,10 @@ void _runFillInEmptySpacesTests({
           final possibleAnswers =
               availableAnswers.where(difference.contains).toList();
 
-          assert(answersCount <= possibleAnswers.length,
-              "There are more answers than possibilities in $exercisePath");
+          assert(
+            answersCount <= possibleAnswers.length,
+            'There are more answers than possibilities in $exercisePath',
+          );
 
           final indexes =
               List.generate(possibleAnswers.length, (index) => index);
@@ -839,35 +848,6 @@ The MD files must be in order, for example:
 [1.md, 2.md, 3.md]
 
 But the file `$fileName` is not in order.
-''',
-          exercisePath: relativePath,
-        ),
-      );
-    });
-  }
-
-  final entries = filesHaveDescription.entries.toList();
-  for (var i = 0; i < filesHaveDescription.length - 1; i++) {
-    final entry = entries[i];
-    final currentHasDescription = entry.value;
-
-    final nextEntry = entries[i + 1];
-    final nextHasDescription = nextEntry.value;
-
-    _testHandler('''
-Verify that the exercises with a description come before the ones without''',
-        () async {
-      expect(
-        [currentHasDescription, nextHasDescription],
-        isNot(
-          equals(
-            [false, true],
-          ),
-        ),
-        reason: _fancyLogger(
-          message: '''
-The exercises with a description must be put before the ones without.
-But `${entry.key}` doesn't have a description while ${nextEntry.key} has one.
 ''',
           exercisePath: relativePath,
         ),

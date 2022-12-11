@@ -16,37 +16,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Workflow Action
-        uses: styfle/cancel-workflow-action@0.6.0
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v1"
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
       - id: upload-en
-        uses: google-github-actions/upload-cloud-storage@main
+        uses: google-github-actions/upload-cloud-storage@v1
         with:
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: en
           destination: ${{ secrets.BUCKET_NAME }}
 
       - id: upload-it
-        uses: google-github-actions/upload-cloud-storage@main
+        uses: google-github-actions/upload-cloud-storage@v1
         with:
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: it
           destination: ${{ secrets.BUCKET_NAME }}
 
       - id: upload-curriculum
-        uses: google-github-actions/upload-cloud-storage@main
+        uses: google-github-actions/upload-cloud-storage@v1
         with:
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: curriculum.json
           destination: ${{ secrets.BUCKET_NAME }}
 
       - id: upload-assets
-        uses: google-github-actions/upload-cloud-storage@main
+        uses: google-github-actions/upload-cloud-storage@v1
         with:
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
           path: assets
           destination: ${{ secrets.BUCKET_NAME }}

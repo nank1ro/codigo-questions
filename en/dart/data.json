@@ -1,0 +1,17 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "Comments",
+    "description": "Learn how to comment the code"
+  },
+  "output": {
+    "order": 2,
+    "title": "Output",
+    "description": "Learn how to output a value"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "String interpolation",
+    "description": "Learn how to interpolate strings with different data types"
+  }
+}

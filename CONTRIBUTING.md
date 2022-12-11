@@ -61,6 +61,8 @@ Scroll down until you find errors, like in this picture:
 
 <img src="local_assets/failed-assert.png"/>
 
+Or search this emoji ❌ inside the logs to immediatly jump to the errors.
+
 Read the error and fix it following the instructions provided.
 
 The _exercise relative path_ tells you in which exercise the error happened.

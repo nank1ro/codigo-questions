@@ -8,7 +8,7 @@ import 'package:clippy/server.dart' as clippy;
 
 Future<void> main(List<String> arguments) async {
   exitCode = 0;
-final argsParser = ArgParser()
+  final argsParser = ArgParser()
     ..addSeparator(
         '\nAn useful CLI to text an exercise before submitting it, it formats the exercise to the real code and you can paste it in an editor to try if it works\n')
     ..addFlag('help',
@@ -34,7 +34,7 @@ final argsParser = ArgParser()
             'Print the output in the console, defaults to true when `--no-copy` is passed, otherwise defaults to false');
 
   ArgResults argResults = argsParser.parse(arguments);
- final path = argResults['path'];
+  final path = argResults['path'];
   final copy = argResults['copy'];
   final help = argResults['help'];
   final printOutput = argResults['output'];
@@ -44,7 +44,6 @@ final argsParser = ArgParser()
     print(argsParser.usage);
     return;
   }
-
   if (await FileSystemEntity.isDirectory(path)) {
     stderr.writeln('error: $path is a directory');
     exitCode = 2;
@@ -67,7 +66,7 @@ final argsParser = ArgParser()
     }
 
     final fullCode = _getFullCode(model);
-     if (printOutput) {
+    if (printOutput) {
       final colorizedCode = Colorize(fullCode)..lightCyan();
       stdout.writeln(colorizedCode);
     }
