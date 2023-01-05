@@ -5,7 +5,7 @@ exerciseType: 3
 
 # --instructions--
 
-Qual e' un buon uso dei valori booleani `True` e` False`?
+Qual e' un buon uso dei valori booleani `True` e `False`?
 
 # --answers--
 
