@@ -13,5 +13,10 @@
     "order": 3,
     "title": "Interpolazione Stringhe",
     "description": "Impara ad interpolare le stringhe con diversi tipi di dati"
+  },
+  "variables": {
+    "order": 4,
+    "title": "Variabili",
+    "description": "Impara a memorizzare i valori in una variabile"
   }
 }
