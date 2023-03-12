@@ -102,7 +102,7 @@ Iniziamo vedendo che cosa si intende per `const`.
 
 Le variabili il cui valore valore puoi modificare sono conosciute come __dato mutabile__. I dati mutabili vengono spesso usati smisuratamente e possono presentare dei problemi. È facile perdere traccia di tutti i punti nel codice che possono modificare il valore di una variabile.
 
-Per questa ragione, dovresti usare le constanti invece delle variabili quando possibile. Questi variabili che non possono cambiare valore vengono anche chiamate __dato immutabile__.
+Per questa ragione, dovresti usare le constanti invece delle variabili quando possibile. Queste variabili che non possono cambiare valore vengono anche chiamate __dato immutabile__.
 
 Per creare una constante in Dart usiamo la parola chiave `const`:
 
