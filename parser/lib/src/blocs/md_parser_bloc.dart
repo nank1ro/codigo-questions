@@ -83,7 +83,6 @@ class MDParserBLoC {
 
     final answers = _getAnswersFromContent(
       content: fileContent,
-      isSortItems: frontMatterModel.exerciseType == 4,
     );
 
     final solutions = _getSolutionsFromContent(fileContent);
@@ -97,7 +96,8 @@ class MDParserBLoC {
       codeBeforeAsserts: codeBeforeAsserts,
       codeAfterAsserts: codeAfterAsserts,
       output: output,
-      answers: answers,
+      answers: answers is List<String> ? answers : null,
+      answersCodeBlocks: answers is List<CodeModel> ? answers : null,
       solutions: solutions,
       beforeSeed: beforeSeed,
       afterSeed: afterSeed,
@@ -293,9 +293,8 @@ Exercise file path: $filePath
   }
 
   /// Returns all the answers retrieved from the content.
-  List<String>? _getAnswersFromContent({
+  List<dynamic>? _getAnswersFromContent({
     required String content,
-    required bool isSortItems,
   }) {
     final answersContent = _getContentBetweenTag(
       tag: kAnswersTag,
@@ -303,16 +302,18 @@ Exercise file path: $filePath
     );
     if (answersContent == null) return null;
 
-    List<String> answers;
-    if (isSortItems) {
-      answers = _getListOfContentBetweenBackticks(
+    final isCodeBlock = answersContent.trimLeft().startsWith('```');
+    if (isCodeBlock) {
+      final answers = _getListOfContentBetweenBackticks(
         content: answersContent,
         skipHeadings: true,
       );
-    } else {
-      answers = _getAllItemsInList(answersContent);
+      final languageCode = getLanguageFromCode(answersContent)!;
+      return answers
+          .map((a) => CodeModel(language: languageCode, code: a))
+          .toList(growable: false);
     }
-    return answers;
+    return _getAllItemsInList(answersContent);
   }
 
   /// Returns all the solutions retrieved from the content.

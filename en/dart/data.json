@@ -18,5 +18,10 @@
     "order": 4,
     "title": "Variables",
     "description": "Learn how to store values in a variable"
+  },
+  "types": {
+    "order": 5,
+    "title": "Types",
+    "description": "Learn the types assignable to a variable"
   }
 }
