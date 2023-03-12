@@ -85,12 +85,17 @@
           "totalExercises": 25
         },
         {
+          "name": "types",
+          "trainUntil": 10,
+          "totalExercises": 24
+        },
+        {
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
         }
       ],
-      "totalExercises": 67
+      "totalExercises": 91
     },
     {
       "name": "javascript",
@@ -478,12 +483,17 @@
           "totalExercises": 25
         },
         {
+          "name": "types",
+          "trainUntil": 10,
+          "totalExercises": 24
+        },
+        {
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
         }
       ],
-      "totalExercises": 67
+      "totalExercises": 91
     },
     {
       "name": "javascript",
