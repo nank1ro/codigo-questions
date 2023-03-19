@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,30 +12,11 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CodeModel _$CodeModelFromJson(Map<String, dynamic> json) {
   return _CodeModel.fromJson(json);
 }
-
-/// @nodoc
-class _$CodeModelTearOff {
-  const _$CodeModelTearOff();
-
-  _CodeModel call({required String language, required String code}) {
-    return _CodeModel(
-      language: language,
-      code: code,
-    );
-  }
-
-  CodeModel fromJson(Map<String, Object> json) {
-    return CodeModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CodeModel = _$CodeModelTearOff();
 
 /// @nodoc
 mixin _$CodeModel {
@@ -50,65 +32,70 @@ mixin _$CodeModel {
 /// @nodoc
 abstract class $CodeModelCopyWith<$Res> {
   factory $CodeModelCopyWith(CodeModel value, $Res Function(CodeModel) then) =
-      _$CodeModelCopyWithImpl<$Res>;
+      _$CodeModelCopyWithImpl<$Res, CodeModel>;
+  @useResult
   $Res call({String language, String code});
 }
 
 /// @nodoc
-class _$CodeModelCopyWithImpl<$Res> implements $CodeModelCopyWith<$Res> {
+class _$CodeModelCopyWithImpl<$Res, $Val extends CodeModel>
+    implements $CodeModelCopyWith<$Res> {
   _$CodeModelCopyWithImpl(this._value, this._then);
 
-  final CodeModel _value;
   // ignore: unused_field
-  final $Res Function(CodeModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? code = freezed,
+    Object? language = null,
+    Object? code = null,
   }) {
     return _then(_value.copyWith(
-      language: language == freezed
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CodeModelCopyWith<$Res> implements $CodeModelCopyWith<$Res> {
-  factory _$CodeModelCopyWith(
-          _CodeModel value, $Res Function(_CodeModel) then) =
-      __$CodeModelCopyWithImpl<$Res>;
+abstract class _$$_CodeModelCopyWith<$Res> implements $CodeModelCopyWith<$Res> {
+  factory _$$_CodeModelCopyWith(
+          _$_CodeModel value, $Res Function(_$_CodeModel) then) =
+      __$$_CodeModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String language, String code});
 }
 
 /// @nodoc
-class __$CodeModelCopyWithImpl<$Res> extends _$CodeModelCopyWithImpl<$Res>
-    implements _$CodeModelCopyWith<$Res> {
-  __$CodeModelCopyWithImpl(_CodeModel _value, $Res Function(_CodeModel) _then)
-      : super(_value, (v) => _then(v as _CodeModel));
+class __$$_CodeModelCopyWithImpl<$Res>
+    extends _$CodeModelCopyWithImpl<$Res, _$_CodeModel>
+    implements _$$_CodeModelCopyWith<$Res> {
+  __$$_CodeModelCopyWithImpl(
+      _$_CodeModel _value, $Res Function(_$_CodeModel) _then)
+      : super(_value, _then);
 
-  @override
-  _CodeModel get _value => super._value as _CodeModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? code = freezed,
+    Object? language = null,
+    Object? code = null,
   }) {
-    return _then(_CodeModel(
-      language: language == freezed
+    return _then(_$_CodeModel(
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
@@ -137,44 +124,45 @@ class _$_CodeModel implements _CodeModel {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CodeModel &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CodeModel &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)));
+                other.language == language) &&
+            (identical(other.code, code) || other.code == code));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(code);
 
   @JsonKey(ignore: true)
   @override
-  _$CodeModelCopyWith<_CodeModel> get copyWith =>
-      __$CodeModelCopyWithImpl<_CodeModel>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, language, code);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CodeModelCopyWith<_$_CodeModel> get copyWith =>
+      __$$_CodeModelCopyWithImpl<_$_CodeModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CodeModelToJson(this);
+    return _$$_CodeModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _CodeModel implements CodeModel {
-  const factory _CodeModel({required String language, required String code}) =
-      _$_CodeModel;
+  const factory _CodeModel(
+      {required final String language,
+      required final String code}) = _$_CodeModel;
 
   factory _CodeModel.fromJson(Map<String, dynamic> json) =
       _$_CodeModel.fromJson;
 
   @override
-  String get language => throw _privateConstructorUsedError;
+  String get language;
   @override
-  String get code => throw _privateConstructorUsedError;
+  String get code;
   @override
   @JsonKey(ignore: true)
-  _$CodeModelCopyWith<_CodeModel> get copyWith =>
+  _$$_CodeModelCopyWith<_$_CodeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

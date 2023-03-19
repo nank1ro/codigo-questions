@@ -539,7 +539,10 @@ void _runFillInEmptySpacesTests({
   _testHandler(
       'Verify that the exercise can be completed successfully with the answers provided',
       () {
-    final answers = model.answers!;
+    final answers = [
+      ...?model.answers,
+      ...?model.answersCodeBlocks?.map((a) => a.code)
+    ];
     final seed = model.seed!.code;
     final solutions = model.solutions!;
     final emptySpacesCount = _codeSpaceRegex.allMatches(seed).length;
@@ -744,8 +747,11 @@ void _runChooseAnAnswerTests({
   _testHandler(
       'Verify that the exercise can be completed successfully with the solutions provided',
       () {
-    final solutionsAreValid =
-        model.solutions!.every((s) => model.answers!.contains(s));
+    final answers = [
+      ...?model.answers,
+      ...?model.answersCodeBlocks?.map((a) => a.code)
+    ];
+    final solutionsAreValid = model.solutions!.every(answers.contains);
     expect(
       solutionsAreValid,
       equals(true),
@@ -763,8 +769,12 @@ void _runSortItemsTests({
   required String exercisePath,
 }) {
   _testHandler('Verify that the sort items exercise contains some answers', () {
+    final answers = [
+      ...?model.answers,
+      ...?model.answersCodeBlocks?.map((a) => a.code)
+    ];
     expect(
-      model.answers,
+      answers,
       allOf([
         isNot(equals(null)),
         isNotEmpty,
@@ -780,7 +790,10 @@ void _runSortItemsTests({
       () {
     bool checkValidity() {
       final solutions = model.solutions!;
-      final answers = model.answers!;
+      final answers = [
+        ...?model.answers,
+        ...?model.answersCodeBlocks?.map((a) => a.code)
+      ];
       var isValid = false;
 
       for (final solution in solutions) {
@@ -789,6 +802,7 @@ void _runSortItemsTests({
           // Remove all the answer from the solution
           _sol = _sol.replaceFirst(answer, '');
         }
+
         // Remove also all the new lines
         _sol = _sol.replaceAll('\n', '');
         if (_sol.isEmpty) {

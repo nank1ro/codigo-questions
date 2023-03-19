@@ -18,5 +18,10 @@
     "order": 4,
     "title": "Variabili",
     "description": "Impara a memorizzare i valori in una variabile"
+  },
+  "types": {
+    "order": 5,
+    "title": "Tipi",
+    "description": "Impara i tipi assegnabili ad una variabile"
   }
 }

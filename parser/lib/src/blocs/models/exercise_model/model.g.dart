@@ -26,6 +26,9 @@ _$_ExerciseModel _$$_ExerciseModelFromJson(Map<String, dynamic> json) =>
           .toList(),
       answers:
           (json['answers'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      answersCodeBlocks: (json['answersCodeBlocks'] as List<dynamic>?)
+          ?.map((e) => CodeModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
       solutions: (json['solutions'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -50,6 +53,7 @@ Map<String, dynamic> _$$_ExerciseModelToJson(_$_ExerciseModel instance) =>
       'afterSeed': instance.afterSeed,
       'asserts': instance.asserts,
       'answers': instance.answers,
+      'answersCodeBlocks': instance.answersCodeBlocks,
       'solutions': instance.solutions,
       'codeBeforeAsserts': instance.codeBeforeAsserts,
       'codeAfterAsserts': instance.codeAfterAsserts,

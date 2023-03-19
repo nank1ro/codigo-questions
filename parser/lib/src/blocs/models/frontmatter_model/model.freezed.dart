@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,38 +12,11 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FrontMatterModel _$FrontMatterModelFromJson(Map<String, dynamic> json) {
   return _FrontMatterModel.fromJson(json);
 }
-
-/// @nodoc
-class _$FrontMatterModelTearOff {
-  const _$FrontMatterModelTearOff();
-
-  _FrontMatterModel call(
-      {required String language,
-      required int exerciseType,
-      String? title,
-      int? difficulty,
-      String? compilerOptions}) {
-    return _FrontMatterModel(
-      language: language,
-      exerciseType: exerciseType,
-      title: title,
-      difficulty: difficulty,
-      compilerOptions: compilerOptions,
-    );
-  }
-
-  FrontMatterModel fromJson(Map<String, Object> json) {
-    return FrontMatterModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FrontMatterModel = _$FrontMatterModelTearOff();
 
 /// @nodoc
 mixin _$FrontMatterModel {
@@ -85,7 +59,8 @@ mixin _$FrontMatterModel {
 abstract class $FrontMatterModelCopyWith<$Res> {
   factory $FrontMatterModelCopyWith(
           FrontMatterModel value, $Res Function(FrontMatterModel) then) =
-      _$FrontMatterModelCopyWithImpl<$Res>;
+      _$FrontMatterModelCopyWithImpl<$Res, FrontMatterModel>;
+  @useResult
   $Res call(
       {String language,
       int exerciseType,
@@ -95,54 +70,57 @@ abstract class $FrontMatterModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FrontMatterModelCopyWithImpl<$Res>
+class _$FrontMatterModelCopyWithImpl<$Res, $Val extends FrontMatterModel>
     implements $FrontMatterModelCopyWith<$Res> {
   _$FrontMatterModelCopyWithImpl(this._value, this._then);
 
-  final FrontMatterModel _value;
   // ignore: unused_field
-  final $Res Function(FrontMatterModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? exerciseType = freezed,
+    Object? language = null,
+    Object? exerciseType = null,
     Object? title = freezed,
     Object? difficulty = freezed,
     Object? compilerOptions = freezed,
   }) {
     return _then(_value.copyWith(
-      language: language == freezed
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      exerciseType: exerciseType == freezed
+      exerciseType: null == exerciseType
           ? _value.exerciseType
           : exerciseType // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      difficulty: difficulty == freezed
+      difficulty: freezed == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
               as int?,
-      compilerOptions: compilerOptions == freezed
+      compilerOptions: freezed == compilerOptions
           ? _value.compilerOptions
           : compilerOptions // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$FrontMatterModelCopyWith<$Res>
+abstract class _$$_FrontMatterModelCopyWith<$Res>
     implements $FrontMatterModelCopyWith<$Res> {
-  factory _$FrontMatterModelCopyWith(
-          _FrontMatterModel value, $Res Function(_FrontMatterModel) then) =
-      __$FrontMatterModelCopyWithImpl<$Res>;
+  factory _$$_FrontMatterModelCopyWith(
+          _$_FrontMatterModel value, $Res Function(_$_FrontMatterModel) then) =
+      __$$_FrontMatterModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String language,
       int exerciseType,
@@ -152,42 +130,40 @@ abstract class _$FrontMatterModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FrontMatterModelCopyWithImpl<$Res>
-    extends _$FrontMatterModelCopyWithImpl<$Res>
-    implements _$FrontMatterModelCopyWith<$Res> {
-  __$FrontMatterModelCopyWithImpl(
-      _FrontMatterModel _value, $Res Function(_FrontMatterModel) _then)
-      : super(_value, (v) => _then(v as _FrontMatterModel));
+class __$$_FrontMatterModelCopyWithImpl<$Res>
+    extends _$FrontMatterModelCopyWithImpl<$Res, _$_FrontMatterModel>
+    implements _$$_FrontMatterModelCopyWith<$Res> {
+  __$$_FrontMatterModelCopyWithImpl(
+      _$_FrontMatterModel _value, $Res Function(_$_FrontMatterModel) _then)
+      : super(_value, _then);
 
-  @override
-  _FrontMatterModel get _value => super._value as _FrontMatterModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? exerciseType = freezed,
+    Object? language = null,
+    Object? exerciseType = null,
     Object? title = freezed,
     Object? difficulty = freezed,
     Object? compilerOptions = freezed,
   }) {
-    return _then(_FrontMatterModel(
-      language: language == freezed
+    return _then(_$_FrontMatterModel(
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      exerciseType: exerciseType == freezed
+      exerciseType: null == exerciseType
           ? _value.exerciseType
           : exerciseType // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      difficulty: difficulty == freezed
+      difficulty: freezed == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
               as int?,
-      compilerOptions: compilerOptions == freezed
+      compilerOptions: freezed == compilerOptions
           ? _value.compilerOptions
           : compilerOptions // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -208,11 +184,9 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   factory _$_FrontMatterModel.fromJson(Map<String, dynamic> json) =>
       _$$_FrontMatterModelFromJson(json);
 
-  @override
-
   /// The language of the exercise, e.g.: `python`
-  final String language;
   @override
+  final String language;
 
   /// The type of exercise, e.g.: `1`
   ///
@@ -221,14 +195,14 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   /// 2 => fill empty spaces
   /// 3 => choose an answer
   /// 4 => sort items
-  final int exerciseType;
   @override
+  final int exerciseType;
 
   /// An optional title, mandatory for the challenges, e.g.: `Hello, World!`
   ///
   /// This will be the name of the challenge.
-  final String? title;
   @override
+  final String? title;
 
   /// An optional difficulty value
   ///
@@ -236,11 +210,12 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   /// 1 => easy
   /// 2 => medium
   /// 3 => hard
-  final int? difficulty;
   @override
+  final int? difficulty;
 
   /// An optional string that defines all the compiler options,
   /// e.g.: `-lm` in C tells to link with the standard C libraries
+  @override
   final String? compilerOptions;
 
   @override
@@ -251,50 +226,45 @@ class _$_FrontMatterModel implements _FrontMatterModel {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FrontMatterModel &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FrontMatterModel &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.exerciseType, exerciseType) ||
-                const DeepCollectionEquality()
-                    .equals(other.exerciseType, exerciseType)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+                other.exerciseType == exerciseType) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.difficulty, difficulty) ||
-                const DeepCollectionEquality()
-                    .equals(other.difficulty, difficulty)) &&
+                other.difficulty == difficulty) &&
             (identical(other.compilerOptions, compilerOptions) ||
-                const DeepCollectionEquality()
-                    .equals(other.compilerOptions, compilerOptions)));
+                other.compilerOptions == compilerOptions));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(exerciseType) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(difficulty) ^
-      const DeepCollectionEquality().hash(compilerOptions);
 
   @JsonKey(ignore: true)
   @override
-  _$FrontMatterModelCopyWith<_FrontMatterModel> get copyWith =>
-      __$FrontMatterModelCopyWithImpl<_FrontMatterModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, language, exerciseType, title, difficulty, compilerOptions);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_FrontMatterModelCopyWith<_$_FrontMatterModel> get copyWith =>
+      __$$_FrontMatterModelCopyWithImpl<_$_FrontMatterModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FrontMatterModelToJson(this);
+    return _$$_FrontMatterModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _FrontMatterModel implements FrontMatterModel {
   const factory _FrontMatterModel(
-      {required String language,
-      required int exerciseType,
-      String? title,
-      int? difficulty,
-      String? compilerOptions}) = _$_FrontMatterModel;
+      {required final String language,
+      required final int exerciseType,
+      final String? title,
+      final int? difficulty,
+      final String? compilerOptions}) = _$_FrontMatterModel;
 
   factory _FrontMatterModel.fromJson(Map<String, dynamic> json) =
       _$_FrontMatterModel.fromJson;
@@ -302,7 +272,7 @@ abstract class _FrontMatterModel implements FrontMatterModel {
   @override
 
   /// The language of the exercise, e.g.: `python`
-  String get language => throw _privateConstructorUsedError;
+  String get language;
   @override
 
   /// The type of exercise, e.g.: `1`
@@ -312,13 +282,13 @@ abstract class _FrontMatterModel implements FrontMatterModel {
   /// 2 => fill empty spaces
   /// 3 => choose an answer
   /// 4 => sort items
-  int get exerciseType => throw _privateConstructorUsedError;
+  int get exerciseType;
   @override
 
   /// An optional title, mandatory for the challenges, e.g.: `Hello, World!`
   ///
   /// This will be the name of the challenge.
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
 
   /// An optional difficulty value
@@ -327,14 +297,14 @@ abstract class _FrontMatterModel implements FrontMatterModel {
   /// 1 => easy
   /// 2 => medium
   /// 3 => hard
-  int? get difficulty => throw _privateConstructorUsedError;
+  int? get difficulty;
   @override
 
   /// An optional string that defines all the compiler options,
   /// e.g.: `-lm` in C tells to link with the standard C libraries
-  String? get compilerOptions => throw _privateConstructorUsedError;
+  String? get compilerOptions;
   @override
   @JsonKey(ignore: true)
-  _$FrontMatterModelCopyWith<_FrontMatterModel> get copyWith =>
+  _$$_FrontMatterModelCopyWith<_$_FrontMatterModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

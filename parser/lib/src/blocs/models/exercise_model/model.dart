@@ -62,6 +62,9 @@ class ExerciseModel with _$ExerciseModel {
     /// All the possible answers that are provided to the user.
     List<String>? answers,
 
+    /// All the possible answers that are provided to the user.
+    List<CodeModel>? answersCodeBlocks,
+
     /// All the possible solutions that are used to validate if the
     /// user answer is correct
     List<String>? solutions,

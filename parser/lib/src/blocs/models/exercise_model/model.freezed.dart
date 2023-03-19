@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,52 +12,11 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ExerciseModel _$ExerciseModelFromJson(Map<String, dynamic> json) {
   return _ExerciseModel.fromJson(json);
 }
-
-/// @nodoc
-class _$ExerciseModelTearOff {
-  const _$ExerciseModelTearOff();
-
-  _ExerciseModel call(
-      {required FrontMatterModel frontMatterModel,
-      String? description,
-      String? instructions,
-      CodeModel? seed,
-      CodeModel? beforeSeed,
-      CodeModel? afterSeed,
-      List<AssertModel>? asserts,
-      List<String>? answers,
-      List<String>? solutions,
-      CodeModel? codeBeforeAsserts,
-      CodeModel? codeAfterAsserts,
-      String? output}) {
-    return _ExerciseModel(
-      frontMatterModel: frontMatterModel,
-      description: description,
-      instructions: instructions,
-      seed: seed,
-      beforeSeed: beforeSeed,
-      afterSeed: afterSeed,
-      asserts: asserts,
-      answers: answers,
-      solutions: solutions,
-      codeBeforeAsserts: codeBeforeAsserts,
-      codeAfterAsserts: codeAfterAsserts,
-      output: output,
-    );
-  }
-
-  ExerciseModel fromJson(Map<String, Object> json) {
-    return ExerciseModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ExerciseModel = _$ExerciseModelTearOff();
 
 /// @nodoc
 mixin _$ExerciseModel {
@@ -112,6 +72,9 @@ mixin _$ExerciseModel {
   /// All the possible answers that are provided to the user.
   List<String>? get answers => throw _privateConstructorUsedError;
 
+  /// All the possible answers that are provided to the user.
+  List<CodeModel>? get answersCodeBlocks => throw _privateConstructorUsedError;
+
   /// All the possible solutions that are used to validate if the
   /// user answer is correct
   List<String>? get solutions => throw _privateConstructorUsedError;
@@ -148,7 +111,8 @@ mixin _$ExerciseModel {
 abstract class $ExerciseModelCopyWith<$Res> {
   factory $ExerciseModelCopyWith(
           ExerciseModel value, $Res Function(ExerciseModel) then) =
-      _$ExerciseModelCopyWithImpl<$Res>;
+      _$ExerciseModelCopyWithImpl<$Res, ExerciseModel>;
+  @useResult
   $Res call(
       {FrontMatterModel frontMatterModel,
       String? description,
@@ -158,6 +122,7 @@ abstract class $ExerciseModelCopyWith<$Res> {
       CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
+      List<CodeModel>? answersCodeBlocks,
       List<String>? solutions,
       CodeModel? codeBeforeAsserts,
       CodeModel? codeAfterAsserts,
@@ -172,17 +137,19 @@ abstract class $ExerciseModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ExerciseModelCopyWithImpl<$Res>
+class _$ExerciseModelCopyWithImpl<$Res, $Val extends ExerciseModel>
     implements $ExerciseModelCopyWith<$Res> {
   _$ExerciseModelCopyWithImpl(this._value, this._then);
 
-  final ExerciseModel _value;
   // ignore: unused_field
-  final $Res Function(ExerciseModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? frontMatterModel = freezed,
+    Object? frontMatterModel = null,
     Object? description = freezed,
     Object? instructions = freezed,
     Object? seed = freezed,
@@ -190,133 +157,145 @@ class _$ExerciseModelCopyWithImpl<$Res>
     Object? afterSeed = freezed,
     Object? asserts = freezed,
     Object? answers = freezed,
+    Object? answersCodeBlocks = freezed,
     Object? solutions = freezed,
     Object? codeBeforeAsserts = freezed,
     Object? codeAfterAsserts = freezed,
     Object? output = freezed,
   }) {
     return _then(_value.copyWith(
-      frontMatterModel: frontMatterModel == freezed
+      frontMatterModel: null == frontMatterModel
           ? _value.frontMatterModel
           : frontMatterModel // ignore: cast_nullable_to_non_nullable
               as FrontMatterModel,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      instructions: instructions == freezed
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String?,
-      seed: seed == freezed
+      seed: freezed == seed
           ? _value.seed
           : seed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      beforeSeed: beforeSeed == freezed
+      beforeSeed: freezed == beforeSeed
           ? _value.beforeSeed
           : beforeSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      afterSeed: afterSeed == freezed
+      afterSeed: freezed == afterSeed
           ? _value.afterSeed
           : afterSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      asserts: asserts == freezed
+      asserts: freezed == asserts
           ? _value.asserts
           : asserts // ignore: cast_nullable_to_non_nullable
               as List<AssertModel>?,
-      answers: answers == freezed
+      answers: freezed == answers
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      solutions: solutions == freezed
+      answersCodeBlocks: freezed == answersCodeBlocks
+          ? _value.answersCodeBlocks
+          : answersCodeBlocks // ignore: cast_nullable_to_non_nullable
+              as List<CodeModel>?,
+      solutions: freezed == solutions
           ? _value.solutions
           : solutions // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      codeBeforeAsserts: codeBeforeAsserts == freezed
+      codeBeforeAsserts: freezed == codeBeforeAsserts
           ? _value.codeBeforeAsserts
           : codeBeforeAsserts // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      codeAfterAsserts: codeAfterAsserts == freezed
+      codeAfterAsserts: freezed == codeAfterAsserts
           ? _value.codeAfterAsserts
           : codeAfterAsserts // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      output: output == freezed
+      output: freezed == output
           ? _value.output
           : output // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FrontMatterModelCopyWith<$Res> get frontMatterModel {
     return $FrontMatterModelCopyWith<$Res>(_value.frontMatterModel, (value) {
-      return _then(_value.copyWith(frontMatterModel: value));
+      return _then(_value.copyWith(frontMatterModel: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeModelCopyWith<$Res>? get seed {
     if (_value.seed == null) {
       return null;
     }
 
     return $CodeModelCopyWith<$Res>(_value.seed!, (value) {
-      return _then(_value.copyWith(seed: value));
+      return _then(_value.copyWith(seed: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeModelCopyWith<$Res>? get beforeSeed {
     if (_value.beforeSeed == null) {
       return null;
     }
 
     return $CodeModelCopyWith<$Res>(_value.beforeSeed!, (value) {
-      return _then(_value.copyWith(beforeSeed: value));
+      return _then(_value.copyWith(beforeSeed: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeModelCopyWith<$Res>? get afterSeed {
     if (_value.afterSeed == null) {
       return null;
     }
 
     return $CodeModelCopyWith<$Res>(_value.afterSeed!, (value) {
-      return _then(_value.copyWith(afterSeed: value));
+      return _then(_value.copyWith(afterSeed: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeModelCopyWith<$Res>? get codeBeforeAsserts {
     if (_value.codeBeforeAsserts == null) {
       return null;
     }
 
     return $CodeModelCopyWith<$Res>(_value.codeBeforeAsserts!, (value) {
-      return _then(_value.copyWith(codeBeforeAsserts: value));
+      return _then(_value.copyWith(codeBeforeAsserts: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeModelCopyWith<$Res>? get codeAfterAsserts {
     if (_value.codeAfterAsserts == null) {
       return null;
     }
 
     return $CodeModelCopyWith<$Res>(_value.codeAfterAsserts!, (value) {
-      return _then(_value.copyWith(codeAfterAsserts: value));
+      return _then(_value.copyWith(codeAfterAsserts: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ExerciseModelCopyWith<$Res>
+abstract class _$$_ExerciseModelCopyWith<$Res>
     implements $ExerciseModelCopyWith<$Res> {
-  factory _$ExerciseModelCopyWith(
-          _ExerciseModel value, $Res Function(_ExerciseModel) then) =
-      __$ExerciseModelCopyWithImpl<$Res>;
+  factory _$$_ExerciseModelCopyWith(
+          _$_ExerciseModel value, $Res Function(_$_ExerciseModel) then) =
+      __$$_ExerciseModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {FrontMatterModel frontMatterModel,
       String? description,
@@ -326,6 +305,7 @@ abstract class _$ExerciseModelCopyWith<$Res>
       CodeModel? afterSeed,
       List<AssertModel>? asserts,
       List<String>? answers,
+      List<CodeModel>? answersCodeBlocks,
       List<String>? solutions,
       CodeModel? codeBeforeAsserts,
       CodeModel? codeAfterAsserts,
@@ -346,19 +326,17 @@ abstract class _$ExerciseModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ExerciseModelCopyWithImpl<$Res>
-    extends _$ExerciseModelCopyWithImpl<$Res>
-    implements _$ExerciseModelCopyWith<$Res> {
-  __$ExerciseModelCopyWithImpl(
-      _ExerciseModel _value, $Res Function(_ExerciseModel) _then)
-      : super(_value, (v) => _then(v as _ExerciseModel));
+class __$$_ExerciseModelCopyWithImpl<$Res>
+    extends _$ExerciseModelCopyWithImpl<$Res, _$_ExerciseModel>
+    implements _$$_ExerciseModelCopyWith<$Res> {
+  __$$_ExerciseModelCopyWithImpl(
+      _$_ExerciseModel _value, $Res Function(_$_ExerciseModel) _then)
+      : super(_value, _then);
 
-  @override
-  _ExerciseModel get _value => super._value as _ExerciseModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? frontMatterModel = freezed,
+    Object? frontMatterModel = null,
     Object? description = freezed,
     Object? instructions = freezed,
     Object? seed = freezed,
@@ -366,57 +344,62 @@ class __$ExerciseModelCopyWithImpl<$Res>
     Object? afterSeed = freezed,
     Object? asserts = freezed,
     Object? answers = freezed,
+    Object? answersCodeBlocks = freezed,
     Object? solutions = freezed,
     Object? codeBeforeAsserts = freezed,
     Object? codeAfterAsserts = freezed,
     Object? output = freezed,
   }) {
-    return _then(_ExerciseModel(
-      frontMatterModel: frontMatterModel == freezed
+    return _then(_$_ExerciseModel(
+      frontMatterModel: null == frontMatterModel
           ? _value.frontMatterModel
           : frontMatterModel // ignore: cast_nullable_to_non_nullable
               as FrontMatterModel,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      instructions: instructions == freezed
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String?,
-      seed: seed == freezed
+      seed: freezed == seed
           ? _value.seed
           : seed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      beforeSeed: beforeSeed == freezed
+      beforeSeed: freezed == beforeSeed
           ? _value.beforeSeed
           : beforeSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      afterSeed: afterSeed == freezed
+      afterSeed: freezed == afterSeed
           ? _value.afterSeed
           : afterSeed // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      asserts: asserts == freezed
-          ? _value.asserts
+      asserts: freezed == asserts
+          ? _value._asserts
           : asserts // ignore: cast_nullable_to_non_nullable
               as List<AssertModel>?,
-      answers: answers == freezed
-          ? _value.answers
+      answers: freezed == answers
+          ? _value._answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      solutions: solutions == freezed
-          ? _value.solutions
+      answersCodeBlocks: freezed == answersCodeBlocks
+          ? _value._answersCodeBlocks
+          : answersCodeBlocks // ignore: cast_nullable_to_non_nullable
+              as List<CodeModel>?,
+      solutions: freezed == solutions
+          ? _value._solutions
           : solutions // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      codeBeforeAsserts: codeBeforeAsserts == freezed
+      codeBeforeAsserts: freezed == codeBeforeAsserts
           ? _value.codeBeforeAsserts
           : codeBeforeAsserts // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      codeAfterAsserts: codeAfterAsserts == freezed
+      codeAfterAsserts: freezed == codeAfterAsserts
           ? _value.codeAfterAsserts
           : codeAfterAsserts // ignore: cast_nullable_to_non_nullable
               as CodeModel?,
-      output: output == freezed
+      output: freezed == output
           ? _value.output
           : output // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -434,33 +417,36 @@ class _$_ExerciseModel implements _ExerciseModel {
       this.seed,
       this.beforeSeed,
       this.afterSeed,
-      this.asserts,
-      this.answers,
-      this.solutions,
+      final List<AssertModel>? asserts,
+      final List<String>? answers,
+      final List<CodeModel>? answersCodeBlocks,
+      final List<String>? solutions,
       this.codeBeforeAsserts,
       this.codeAfterAsserts,
-      this.output});
+      this.output})
+      : _asserts = asserts,
+        _answers = answers,
+        _answersCodeBlocks = answersCodeBlocks,
+        _solutions = solutions;
 
   factory _$_ExerciseModel.fromJson(Map<String, dynamic> json) =>
       _$$_ExerciseModelFromJson(json);
 
-  @override
-
   /// The parsed front matter content
-  final FrontMatterModel frontMatterModel;
   @override
+  final FrontMatterModel frontMatterModel;
 
   /// An optional description for the exercise.
   ///
   /// This is used to explain a new topic to the user.
-  final String? description;
   @override
+  final String? description;
 
   /// An optional instructions for the exercise.
   ///
   /// This is used to explain what to do to complete the exercise.
-  final String? instructions;
   @override
+  final String? instructions;
 
   /// An optional seed.
   ///
@@ -470,8 +456,8 @@ class _$_ExerciseModel implements _ExerciseModel {
   /// def hello_world():
   ///     return "";
   /// ```
-  final CodeModel? seed;
   @override
+  final CodeModel? seed;
 
   /// An optional code placed before the seed.
   ///
@@ -483,8 +469,8 @@ class _$_ExerciseModel implements _ExerciseModel {
   ///
   /// int main() {
   /// ```
-  final CodeModel? beforeSeed;
   @override
+  final CodeModel? beforeSeed;
 
   /// An optional code placed after the seed.
   ///
@@ -495,21 +481,63 @@ class _$_ExerciseModel implements _ExerciseModel {
   ///   return 0;
   /// }
   /// ```
-  final CodeModel? afterSeed;
   @override
+  final CodeModel? afterSeed;
 
   /// The asserts used to validate the exercise.
-  final List<AssertModel>? asserts;
+  final List<AssertModel>? _asserts;
+
+  /// The asserts used to validate the exercise.
   @override
+  List<AssertModel>? get asserts {
+    final value = _asserts;
+    if (value == null) return null;
+    if (_asserts is EqualUnmodifiableListView) return _asserts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// All the possible answers that are provided to the user.
-  final List<String>? answers;
+  final List<String>? _answers;
+
+  /// All the possible answers that are provided to the user.
   @override
+  List<String>? get answers {
+    final value = _answers;
+    if (value == null) return null;
+    if (_answers is EqualUnmodifiableListView) return _answers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// All the possible answers that are provided to the user.
+  final List<CodeModel>? _answersCodeBlocks;
+
+  /// All the possible answers that are provided to the user.
+  @override
+  List<CodeModel>? get answersCodeBlocks {
+    final value = _answersCodeBlocks;
+    if (value == null) return null;
+    if (_answersCodeBlocks is EqualUnmodifiableListView)
+      return _answersCodeBlocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// All the possible solutions that are used to validate if the
   /// user answer is correct
-  final List<String>? solutions;
+  final List<String>? _solutions;
+
+  /// All the possible solutions that are used to validate if the
+  /// user answer is correct
   @override
+  List<String>? get solutions {
+    final value = _solutions;
+    if (value == null) return null;
+    if (_solutions is EqualUnmodifiableListView) return _solutions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// An optional code written before the unit tests.
   ///
@@ -517,12 +545,12 @@ class _$_ExerciseModel implements _ExerciseModel {
   /// ```c
   /// #include <stdio.h>
   /// ```
-  final CodeModel? codeBeforeAsserts;
   @override
+  final CodeModel? codeBeforeAsserts;
 
   /// An optional code written after the unit tests.
-  final CodeModel? codeAfterAsserts;
   @override
+  final CodeModel? codeAfterAsserts;
 
   /// The output of the exercise.
   /// e.g:
@@ -533,94 +561,90 @@ class _$_ExerciseModel implements _ExerciseModel {
   /// `Hello`.
   ///
   /// This is often known as the `stdout` (Stardard output).
+  @override
   final String? output;
 
   @override
   String toString() {
-    return 'ExerciseModel(frontMatterModel: $frontMatterModel, description: $description, instructions: $instructions, seed: $seed, beforeSeed: $beforeSeed, afterSeed: $afterSeed, asserts: $asserts, answers: $answers, solutions: $solutions, codeBeforeAsserts: $codeBeforeAsserts, codeAfterAsserts: $codeAfterAsserts, output: $output)';
+    return 'ExerciseModel(frontMatterModel: $frontMatterModel, description: $description, instructions: $instructions, seed: $seed, beforeSeed: $beforeSeed, afterSeed: $afterSeed, asserts: $asserts, answers: $answers, answersCodeBlocks: $answersCodeBlocks, solutions: $solutions, codeBeforeAsserts: $codeBeforeAsserts, codeAfterAsserts: $codeAfterAsserts, output: $output)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ExerciseModel &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ExerciseModel &&
             (identical(other.frontMatterModel, frontMatterModel) ||
-                const DeepCollectionEquality()
-                    .equals(other.frontMatterModel, frontMatterModel)) &&
+                other.frontMatterModel == frontMatterModel) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.instructions, instructions) ||
-                const DeepCollectionEquality()
-                    .equals(other.instructions, instructions)) &&
-            (identical(other.seed, seed) ||
-                const DeepCollectionEquality().equals(other.seed, seed)) &&
+                other.instructions == instructions) &&
+            (identical(other.seed, seed) || other.seed == seed) &&
             (identical(other.beforeSeed, beforeSeed) ||
-                const DeepCollectionEquality()
-                    .equals(other.beforeSeed, beforeSeed)) &&
+                other.beforeSeed == beforeSeed) &&
             (identical(other.afterSeed, afterSeed) ||
-                const DeepCollectionEquality()
-                    .equals(other.afterSeed, afterSeed)) &&
-            (identical(other.asserts, asserts) ||
-                const DeepCollectionEquality()
-                    .equals(other.asserts, asserts)) &&
-            (identical(other.answers, answers) ||
-                const DeepCollectionEquality()
-                    .equals(other.answers, answers)) &&
-            (identical(other.solutions, solutions) ||
-                const DeepCollectionEquality()
-                    .equals(other.solutions, solutions)) &&
+                other.afterSeed == afterSeed) &&
+            const DeepCollectionEquality().equals(other._asserts, _asserts) &&
+            const DeepCollectionEquality().equals(other._answers, _answers) &&
+            const DeepCollectionEquality()
+                .equals(other._answersCodeBlocks, _answersCodeBlocks) &&
+            const DeepCollectionEquality()
+                .equals(other._solutions, _solutions) &&
             (identical(other.codeBeforeAsserts, codeBeforeAsserts) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeBeforeAsserts, codeBeforeAsserts)) &&
+                other.codeBeforeAsserts == codeBeforeAsserts) &&
             (identical(other.codeAfterAsserts, codeAfterAsserts) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeAfterAsserts, codeAfterAsserts)) &&
-            (identical(other.output, output) ||
-                const DeepCollectionEquality().equals(other.output, output)));
+                other.codeAfterAsserts == codeAfterAsserts) &&
+            (identical(other.output, output) || other.output == output));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(frontMatterModel) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(instructions) ^
-      const DeepCollectionEquality().hash(seed) ^
-      const DeepCollectionEquality().hash(beforeSeed) ^
-      const DeepCollectionEquality().hash(afterSeed) ^
-      const DeepCollectionEquality().hash(asserts) ^
-      const DeepCollectionEquality().hash(answers) ^
-      const DeepCollectionEquality().hash(solutions) ^
-      const DeepCollectionEquality().hash(codeBeforeAsserts) ^
-      const DeepCollectionEquality().hash(codeAfterAsserts) ^
-      const DeepCollectionEquality().hash(output);
 
   @JsonKey(ignore: true)
   @override
-  _$ExerciseModelCopyWith<_ExerciseModel> get copyWith =>
-      __$ExerciseModelCopyWithImpl<_ExerciseModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      frontMatterModel,
+      description,
+      instructions,
+      seed,
+      beforeSeed,
+      afterSeed,
+      const DeepCollectionEquality().hash(_asserts),
+      const DeepCollectionEquality().hash(_answers),
+      const DeepCollectionEquality().hash(_answersCodeBlocks),
+      const DeepCollectionEquality().hash(_solutions),
+      codeBeforeAsserts,
+      codeAfterAsserts,
+      output);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ExerciseModelCopyWith<_$_ExerciseModel> get copyWith =>
+      __$$_ExerciseModelCopyWithImpl<_$_ExerciseModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExerciseModelToJson(this);
+    return _$$_ExerciseModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _ExerciseModel implements ExerciseModel {
   const factory _ExerciseModel(
-      {required FrontMatterModel frontMatterModel,
-      String? description,
-      String? instructions,
-      CodeModel? seed,
-      CodeModel? beforeSeed,
-      CodeModel? afterSeed,
-      List<AssertModel>? asserts,
-      List<String>? answers,
-      List<String>? solutions,
-      CodeModel? codeBeforeAsserts,
-      CodeModel? codeAfterAsserts,
-      String? output}) = _$_ExerciseModel;
+      {required final FrontMatterModel frontMatterModel,
+      final String? description,
+      final String? instructions,
+      final CodeModel? seed,
+      final CodeModel? beforeSeed,
+      final CodeModel? afterSeed,
+      final List<AssertModel>? asserts,
+      final List<String>? answers,
+      final List<CodeModel>? answersCodeBlocks,
+      final List<String>? solutions,
+      final CodeModel? codeBeforeAsserts,
+      final CodeModel? codeAfterAsserts,
+      final String? output}) = _$_ExerciseModel;
 
   factory _ExerciseModel.fromJson(Map<String, dynamic> json) =
       _$_ExerciseModel.fromJson;
@@ -628,19 +652,19 @@ abstract class _ExerciseModel implements ExerciseModel {
   @override
 
   /// The parsed front matter content
-  FrontMatterModel get frontMatterModel => throw _privateConstructorUsedError;
+  FrontMatterModel get frontMatterModel;
   @override
 
   /// An optional description for the exercise.
   ///
   /// This is used to explain a new topic to the user.
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
 
   /// An optional instructions for the exercise.
   ///
   /// This is used to explain what to do to complete the exercise.
-  String? get instructions => throw _privateConstructorUsedError;
+  String? get instructions;
   @override
 
   /// An optional seed.
@@ -651,7 +675,7 @@ abstract class _ExerciseModel implements ExerciseModel {
   /// def hello_world():
   ///     return "";
   /// ```
-  CodeModel? get seed => throw _privateConstructorUsedError;
+  CodeModel? get seed;
   @override
 
   /// An optional code placed before the seed.
@@ -664,7 +688,7 @@ abstract class _ExerciseModel implements ExerciseModel {
   ///
   /// int main() {
   /// ```
-  CodeModel? get beforeSeed => throw _privateConstructorUsedError;
+  CodeModel? get beforeSeed;
   @override
 
   /// An optional code placed after the seed.
@@ -676,20 +700,24 @@ abstract class _ExerciseModel implements ExerciseModel {
   ///   return 0;
   /// }
   /// ```
-  CodeModel? get afterSeed => throw _privateConstructorUsedError;
+  CodeModel? get afterSeed;
   @override
 
   /// The asserts used to validate the exercise.
-  List<AssertModel>? get asserts => throw _privateConstructorUsedError;
+  List<AssertModel>? get asserts;
   @override
 
   /// All the possible answers that are provided to the user.
-  List<String>? get answers => throw _privateConstructorUsedError;
+  List<String>? get answers;
+  @override
+
+  /// All the possible answers that are provided to the user.
+  List<CodeModel>? get answersCodeBlocks;
   @override
 
   /// All the possible solutions that are used to validate if the
   /// user answer is correct
-  List<String>? get solutions => throw _privateConstructorUsedError;
+  List<String>? get solutions;
   @override
 
   /// An optional code written before the unit tests.
@@ -698,11 +726,11 @@ abstract class _ExerciseModel implements ExerciseModel {
   /// ```c
   /// #include <stdio.h>
   /// ```
-  CodeModel? get codeBeforeAsserts => throw _privateConstructorUsedError;
+  CodeModel? get codeBeforeAsserts;
   @override
 
   /// An optional code written after the unit tests.
-  CodeModel? get codeAfterAsserts => throw _privateConstructorUsedError;
+  CodeModel? get codeAfterAsserts;
   @override
 
   /// The output of the exercise.
@@ -714,9 +742,9 @@ abstract class _ExerciseModel implements ExerciseModel {
   /// `Hello`.
   ///
   /// This is often known as the `stdout` (Stardard output).
-  String? get output => throw _privateConstructorUsedError;
+  String? get output;
   @override
   @JsonKey(ignore: true)
-  _$ExerciseModelCopyWith<_ExerciseModel> get copyWith =>
+  _$$_ExerciseModelCopyWith<_$_ExerciseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
