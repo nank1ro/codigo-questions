@@ -23,5 +23,10 @@
     "order": 5,
     "title": "Tipi",
     "description": "Impara i tipi assegnabili ad una variabile"
+  },
+  "strings": {
+    "order": 6,
+    "title": "Stringhe",
+    "description": "Impara che cosa sono e come usare le stringhe"
   }
 }
