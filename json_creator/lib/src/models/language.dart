@@ -9,7 +9,7 @@ class Language with _$Language {
   const factory Language({
     required String name,
     @Default(<Argument>[]) List<Argument> arguments,
-    @Default(0) final int totalExercises,
+    @Default(0) int totalExercises,
   }) = _Language;
 
   factory Language.fromJson(Map<String, dynamic> json) =>
