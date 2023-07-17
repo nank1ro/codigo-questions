@@ -17,8 +17,10 @@ class FrontMatterParserService {
     return _yamlMapToJson(document.data!);
   }
 
-  Future<JSON> parseFile(String path,
-      {String delimiter = _defaultDelimiter}) async {
+  Future<JSON> parseFile(
+    String path, {
+    String delimiter = _defaultDelimiter,
+  }) async {
     final document = await fm.parseFile(path, delimiter: delimiter);
     return _yamlMapToJson(document.data!);
   }

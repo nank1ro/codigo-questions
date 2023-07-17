@@ -153,9 +153,13 @@ class MDParserBLoC {
     if (assertsContent == null) return null;
 
     final descriptions = _getListOfContentBetweenBackticks(
-        content: assertsContent, skipHeadings: false);
+      content: assertsContent,
+      skipHeadings: false,
+    );
     final unitTests = _getListOfContentBetweenBackticks(
-        content: assertsContent, skipHeadings: true);
+      content: assertsContent,
+      skipHeadings: true,
+    );
 
     assert(
       descriptions.length == unitTests.length,
@@ -188,6 +192,7 @@ Exercise file path: $filePath
   /// the return List is: `[The function should return "Hello, World!".]`
   ///
   /// Otherwise, if the [skipHeadings] is set to true, the returned List is:
+  // ignore: comment_references
   /// `[def test_say_hi(self):
   ///      self.assertEqual(hello(), "Hello, World!", "--err-t1--")]`
   List<String> _getListOfContentBetweenBackticks({
@@ -199,22 +204,22 @@ Exercise file path: $filePath
 
     final result = <int, String>{};
 
-    var _skip = skipHeadings;
+    var skip = skipHeadings;
 
     var index = 0;
     for (final val in split) {
       final containsCodeOperator = val.contains('```');
       if (containsCodeOperator) {
-        _skip = !_skip;
+        skip = !skip;
       }
-      if (!_skip && !containsCodeOperator) {
+      if (!skip && !containsCodeOperator) {
         final encodedValue = _parseToUtf8(val);
         result.update(
           index,
           (prev) => '$prev\n$encodedValue',
           ifAbsent: () => encodedValue,
         );
-      } else if (_skip) {
+      } else if (skip) {
         index++;
       }
     }
@@ -338,7 +343,9 @@ Exercise file path: $filePath
     late final List<String> solutions;
     if (solutionsContent.contains('```')) {
       solutions = _getListOfContentBetweenBackticks(
-          content: solutionsContent, skipHeadings: true);
+        content: solutionsContent,
+        skipHeadings: true,
+      );
     } else {
       solutions = _getAllItemsInList(solutionsContent);
     }

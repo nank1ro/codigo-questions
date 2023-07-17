@@ -13,6 +13,7 @@ dependencies:
       url: https://github.com/nank1ro/front-matter
   json_annotation: ^4.8.0
   path: ^1.8.3
+  yaml: ^3.1.2
 
 dev_dependencies:
   build_runner: ^2.3.3

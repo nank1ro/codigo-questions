@@ -34,8 +34,7 @@ Future<void> main() async {
 
   /// e.g:
   /// `/en/c/challenges/atm.md`
-  String _getRelativePath(FileSystemEntity entity) =>
-      entity.path.split('..')[1];
+  String getRelativePath(FileSystemEntity entity) => entity.path.split('..')[1];
 
   /// Saves the result in a JSON format.
   Future<void> saveResultInJSON(List<LanguageLocale> results) async {
@@ -69,7 +68,7 @@ Future<void> main() async {
         // Skip all non .md files
         .where(isExerciseFile)
         // Skip the `challenges` folder
-        .whereNot((f) => isAChallenge(_getRelativePath(f)))
+        .whereNot((f) => isAChallenge(getRelativePath(f)))
         .toList()
       ..sort(
         // Sort by file names
@@ -77,7 +76,7 @@ Future<void> main() async {
       );
 
     for (final entity in sortedFiles) {
-      final relativePath = _getRelativePath(entity);
+      final relativePath = getRelativePath(entity);
 
       final languageName = relativePath.split('/')[2];
 

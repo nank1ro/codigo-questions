@@ -13,5 +13,4 @@ analyzer:
 
 linter:
   rules:
-    implicit-casts: false
-    implicit-dynamic: false
+    public_member_api_docs: false

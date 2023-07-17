@@ -315,23 +315,23 @@ The language provided `$language` is different from the one retrieved from the e
   });
 
   /// The list of currently supported programming languages
-  final _supportedExerciseTypes = List.generate(4, (index) => index + 1);
+  final supportedExerciseTypes = List.generate(4, (index) => index + 1);
 
   final exerciseType = frontMatterModel.exerciseType;
   _testHandler('Verify that the exerciseType is supported', () {
     expect(
-      _supportedExerciseTypes,
+      supportedExerciseTypes,
       contains(exerciseType),
       reason: _fancyLogger(
         message: '''
-The exercise provided `$exerciseType` is not supported, the currently supported exercise types are: $_supportedExerciseTypes''',
+The exercise provided `$exerciseType` is not supported, the currently supported exercise types are: $supportedExerciseTypes''',
         exercisePath: exercisePath,
       ),
     );
   });
 
   /// The list of currently supported exercise difficulties
-  final _supportedExerciseDifficulties = List.generate(3, (index) => index + 1);
+  final supportedExerciseDifficulties = List.generate(3, (index) => index + 1);
   if (isAChallenge(exercisePath)) {
     _testHandler('Verify that the challenge contains a valid difficulty', () {
       expect(
@@ -344,11 +344,11 @@ The exercise provided `$exerciseType` is not supported, the currently supported 
         ),
       );
       expect(
-        _supportedExerciseDifficulties,
+        supportedExerciseDifficulties,
         contains(frontMatterModel.difficulty),
         reason: _fancyLogger(
           message: '''
-The difficulty provided `${frontMatterModel.difficulty}` is not supported, the currently supported difficulties are: $_supportedExerciseDifficulties''',
+The difficulty provided `${frontMatterModel.difficulty}` is not supported, the currently supported difficulties are: $supportedExerciseDifficulties''',
           exercisePath: exercisePath,
         ),
       );
@@ -537,7 +537,7 @@ void _runFillInEmptySpacesTests({
   required String exercisePath,
 }) {
   _testHandler(
-      'Verify that the exercise can be completed successfully with the answers provided',
+      '''Verify that the exercise can be completed successfully with the answers provided''',
       () {
     final answers = [
       ...?model.answers,
@@ -639,7 +639,7 @@ void _runFillInEmptySpacesTests({
 
         assert(
           differences.length == groupedEmptySpacePositions.length,
-          'The differences found in the exercise are more than the empty spaces in $exercisePath',
+          '''The differences found in the exercise are more than the empty spaces in $exercisePath''',
         );
 
         var differenceIndex = 0;
@@ -733,7 +733,7 @@ void _runFillInEmptySpacesTests({
       equals(true),
       reason: _fancyLogger(
         message:
-            'The exercise cannot be completed successfully with the answers provided',
+            '''The exercise cannot be completed successfully with the answers provided''',
         exercisePath: exercisePath,
       ),
     );
@@ -745,7 +745,7 @@ void _runChooseAnAnswerTests({
   required String exercisePath,
 }) {
   _testHandler(
-      'Verify that the exercise can be completed successfully with the solutions provided',
+      '''Verify that the exercise can be completed successfully with the solutions provided''',
       () {
     final answers = [
       ...?model.answers,
@@ -757,7 +757,7 @@ void _runChooseAnAnswerTests({
       equals(true),
       reason: _fancyLogger(
         message:
-            'The exercise cannot be completed successfully with the solutions provided',
+            '''The exercise cannot be completed successfully with the solutions provided''',
         exercisePath: exercisePath,
       ),
     );
@@ -797,15 +797,15 @@ void _runSortItemsTests({
       var isValid = false;
 
       for (final solution in solutions) {
-        var _sol = solution;
+        var sol = solution;
         for (final answer in answers) {
           // Remove all the answer from the solution
-          _sol = _sol.replaceFirst(answer, '');
+          sol = sol.replaceFirst(answer, '');
         }
 
         // Remove also all the new lines
-        _sol = _sol.replaceAll('\n', '');
-        if (_sol.isEmpty) {
+        sol = sol.replaceAll('\n', '');
+        if (sol.isEmpty) {
           isValid = true;
           break;
         }
@@ -818,7 +818,7 @@ void _runSortItemsTests({
       equals(true),
       reason: _fancyLogger(
         message:
-            'The sort items exercise cannot be completed with the answers provided',
+            '''The sort items exercise cannot be completed with the answers provided''',
         exercisePath: exercisePath,
       ),
     );
