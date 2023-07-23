@@ -4,7 +4,7 @@ In programmazione, possiamo salvare una variabile booleana `bel_tempo` ed esegui
 ```python
 bel_tempo = True
 if (bel_tempo):
-	# gioca fuori
+    # gioca fuori
 ```
 
 ---
@@ -13,7 +13,7 @@ Continuiamo con l'esempio precedente.
 ```python
 bel_tempo = True
 if (bel_tempo):
-	# gioca fuori
+    # gioca fuori
 ```
 Abbiamo visto che l'istruzione `if` esegue il blocco di codice solo se la condizione e' `True`.
 Un'altra cosa importante da considerare e' rappresentata dai **due punti** `:` e dall'**indentazione**, che indicano l'inizio di un blocco di codice.
@@ -30,9 +30,9 @@ In Python possiamo usare l'istruzione `else`, come:
 ```python
 bel_tempo = True
 if (bel_tempo):
-	# gioca fuori
+    # gioca fuori
 else:
-	# resta a casa
+    # resta a casa
 ```
 
 ---
@@ -41,11 +41,11 @@ Supponiamo di avere un'altra condizione da verificare, come in questo esempio:
 ```python
 num = 3
 if (num == 2):
-	print("il numero e' 2")
+    print("il numero e' 2")
 elif (num == 3):
-	print("il numero e' 3")
+    print("il numero e' 3")
 else:
-	print("fai qualcos'altro")
+    print("fai qualcos'altro")
 ```
 e l'output di questo codice e' `il numero e' 3`.
 Prima di tutto, verifichiamo se il numero e' uguale a 2, questo e' falso.
@@ -57,15 +57,15 @@ Possiamo aggiungere tutte le istruzioni `elif` che vogliamo, non ci sono limiti
 ```python
 num = 4
 if (num == 2):
-	print("il numero e' 2")
+    print("il numero e' 2")
 elif (num == 3):
-	print("il numero e' 3")
+    print("il numero e' 3")
 elif (num == 4):
-	print("il numero e' 4")
+    print("il numero e' 4")
 elif (num == 5):
-	print("il numero e' 5")
+    print("il numero e' 5")
 elif (num == 6):
-	print("il numero e' 6")
+    print("il numero e' 6")
 ```
 e l'output del codice e' `il numero e' 4`.
 
@@ -75,13 +75,13 @@ Possiamo anche nidificare un'istruzione condizionale (`if`, `elif` o `else`) all
 ```python
 num = 4
 if (num < 3):
-	print("il numero e' minore di 3")
+    print("il numero e' minore di 3")
 else:
-	if (num == 3):
-		print("il numero e' 3")
-	elif (num == 4):
-		print("il numero e' 4")
-	else:
-		print("il numero e' maggiore di 4")
+    if (num == 3):
+        print("il numero e' 3")
+    elif (num == 4):
+        print("il numero e' 4")
+    else:
+        print("il numero e' maggiore di 4")
 ```
 e l'output del codice e' `il numero e' 4`.

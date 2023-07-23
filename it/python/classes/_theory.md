@@ -11,7 +11,7 @@ Python controlla se `mio_dizionario` ha un metodo `items()` (che tutti i diziona
 Una classe di base e' composta solo dalla parola chiave `class` e dal nome della classe, per esempio:
 ```python
 class NomeClasse:
-	pass
+    pass
 ```
 
 ---

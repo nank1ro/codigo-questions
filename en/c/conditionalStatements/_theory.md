@@ -4,7 +4,7 @@ In programming, we can save a boolean variable `nice_weather` and perform the ac
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-	// play outside
+    // play outside
 }
 ```
 
@@ -14,7 +14,7 @@ Let's continue with the previous example.
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-	// play outside
+    // play outside
 }
 ```
 We've seen that the `if` statement executes the block of code only if the condition is `true`.
@@ -28,9 +28,9 @@ In C we can use the `else` statement, like:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-	// play outside
+    // play outside
 } else {
-	// stay home
+    // stay home
 }
 ```
 
@@ -40,11 +40,11 @@ Let's assume we have another condition to check, like in this example:
 ```c
 int num = 3;
 if (num == 2) {
-	printf("the number is 2\n");
+    printf("the number is 2\n");
 } else if (num == 3) {
-	printf("the number is 3\n");
+    printf("the number is 3\n");
 } else {
-	printf("do something else\n");
+    printf("do something else\n");
 }
 ```
 and the output of this code is `the number is 3`.
@@ -57,15 +57,15 @@ We can add as many `else if` statements as we want, there are no limits
 ```c
 int num = 4;
 if (num == 2) {
-	printf("the number is 2");
+    printf("the number is 2");
 } else if (num == 3) {
-	printf("the number is 3");
+    printf("the number is 3");
 } else if (num == 4) {
-	printf("the number is 4");
+    printf("the number is 4");
 } else if (num == 5) {
-	printf("the number is 5");
+    printf("the number is 5");
 } else if (num == 6) {
-	printf("the number is 6");
+    printf("the number is 6");
 }
 ```
 and the output of this code is `the number is 4`.
@@ -76,14 +76,14 @@ We can also nest a conditional statement (`if`, `else if` or `else`) inside anot
 ```c
 int num = 4;
 if (num < 3) {
-	printf("the number is lower than 3\n");
+    printf("the number is lower than 3\n");
 } else {
-	if (num == 3) {
-		printf("the number is 3\n");
+    if (num == 3) {
+        printf("the number is 3\n");
   } else if (num == 4) {
-		printf("the number is 4\n");
+        printf("the number is 4\n");
   } else {
-		printf("the number is greather than 4\n");
+        printf("the number is greather than 4\n");
   }
 }
 ```

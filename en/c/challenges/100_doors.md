@@ -146,18 +146,18 @@ void try_catch(bool assertion) {
 
 // Returns true if two arrays are equal and in the same order
 bool arrays_match(int *arr1, int *arr2) {
-	// Check if the arrays are the same length
+    // Check if the arrays are the same length
     int size1 = sizeof arr1 / sizeof *arr1;
     int size2 = sizeof arr2 / sizeof *arr2;
     if (size1 != size2) return false;
 
-	// Check if all items exist and are in the same order
+    // Check if all items exist and are in the same order
     for (int i = 0; i < sizeof(arr1); i++) {
-		if (arr1[i] != arr2[i]) return false;
-	}
+        if (arr1[i] != arr2[i]) return false;
+    }
 
     // Otherwise, return true
-	return true;
+    return true;
 }
 // DO NOT EDIT UNTIL HERE
 ```

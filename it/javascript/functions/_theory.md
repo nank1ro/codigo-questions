@@ -3,7 +3,7 @@ Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione
 In JavaScript usiamo la parola chiave `function` seguita dal nome della funzione:
 ```javascript
 function saluta() {
-	console.log("Ciao!");
+    console.log("Ciao!");
 }
 saluta();
 // stampa "Ciao!"
@@ -39,7 +39,7 @@ console.log(saluta("Smith", true));
 Se viene definito un valore di default, si può omettere quel parametro quando si chiama la funzione
 ```javascript
 function unaFunzione(parametroSenzaDefault, parametroConDefault = 12) {
-	// esegui qui il codice della funzione
+    // esegui qui il codice della funzione
 }
 ```
 

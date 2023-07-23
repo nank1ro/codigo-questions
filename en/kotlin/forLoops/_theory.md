@@ -131,7 +131,7 @@ In Kotlin we can use the `for-in` also for iterable collections calling the give
 // this is a list, we'll see about that soon
 val numbers = listOf(2, 4, 6, 8, 10) 
 for (num in numbers) {
-	println(num)
+    println(num)
 }
 // prints (2, 4, 6, 8, 10)
 ```
@@ -145,7 +145,7 @@ It calls the given closure on each element in the sequence in the same order as 
 // this is a list, we'll see about that soon
 val numbers = listOf(1, 3, 5, 7, 9) 
 numbers.forEach {
-	println(it)
+    println(it)
 }
 ```
 

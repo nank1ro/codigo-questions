@@ -53,7 +53,7 @@ As for lists, we can loop between dictionary elements using the keywords `for..i
 To get both the key and the value in the loop we can use the `items()` method:
 ```python
 for key, value in dict_name:
-	print(key, value)
+    print(key, value)
 ```
 
 ---

@@ -4,14 +4,14 @@ Come questo programma che ripete le istruzioni per stampare `ciao`.
 int contatore = 0;
 
 while (contatore < 5) {
-	printf("Ciao\n");
-	contatore++;
+    printf("Ciao\n");
+    contatore++;
 }
 ```
 Ma possiamo fare lo stesso con i cicli `for`:
 ```c
 for (int i = 0; i < 5; i++) {
-	printf("Ciao\n");
+    printf("Ciao\n");
 }
 ```
 

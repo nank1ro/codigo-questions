@@ -61,8 +61,8 @@ Transazione rifiutata, importo non valido
 Preleva tutti i soldi con successo
 
 ```python
-	def test_withdraw_all(self):
-		self.assertEqual(saldo_conto(95, 95.50), 0.00, "--err-t4--")
+    def test_withdraw_all(self):
+        self.assertEqual(saldo_conto(95, 95.50), 0.00, "--err-t4--")
 ```
 
 # --after-asserts--
@@ -76,8 +76,8 @@ if __name__ == "__main__":
 
 ```python
 def saldo_conto(prelievo, bilancio):
-	if (prelievo % 5 == 0) and (bilancio >= (prelievo + 0.50)):
-		return bilancio - prelievo - 0.50
-	return bilancio
+    if (prelievo % 5 == 0) and (bilancio >= (prelievo + 0.50)):
+        return bilancio - prelievo - 0.50
+    return bilancio
 ```
 

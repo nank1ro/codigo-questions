@@ -61,8 +61,8 @@ Refused transaction, invalid amount
 Withdraw all money successfully
 
 ```python
-	def test_withdraw_all(self):
-		self.assertEqual(account_balance(95, 95.50), 0.00, "--err-t4--")
+    def test_withdraw_all(self):
+        self.assertEqual(account_balance(95, 95.50), 0.00, "--err-t4--")
 ```
 
 # --after-asserts--
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 
 ```python
 def account_balance(withdraw, balance):
-	if (withdraw % 5 == 0) and (balance >= (withdraw + 0.50)):
-		return balance - withdraw - 0.50
-	return balance
+    if (withdraw % 5 == 0) and (balance >= (withdraw + 0.50)):
+        return balance - withdraw - 0.50
+    return balance
 ```

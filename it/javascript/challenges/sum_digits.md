@@ -84,11 +84,11 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 
 ```javascript
 function sommaCifre(num) {
-	var risultato = 0
-	while (num > 0) {
-		risultato += num % 10
-		num = Math.floor(num / 10)
-	}
+    var risultato = 0
+    while (num > 0) {
+        risultato += num % 10
+        num = Math.floor(num / 10)
+    }
   return risultato
 }
 ```
