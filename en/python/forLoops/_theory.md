@@ -4,13 +4,13 @@ Like this program repeating statements to display `hello`
 counter = 0
 
 while counter < 5:
-	print("hello")
-	counter += 1
+    print("hello")
+    counter += 1
 ```
 But we can do the same with `for` loops:
 ```python
 for i in range(5):
-	print("hello")
+    print("hello")
 ```
 
 ---

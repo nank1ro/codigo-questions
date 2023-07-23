@@ -3,7 +3,7 @@ Instead of rewriting the whole code, it's much cleaner to define a function, whi
 In Swift we use the `func` keyword followed by the name of the function:
 ```swift
 func say_hi() {
-	print("Hello!")
+    print("Hello!")
 }
 say_hi() // prints "Hello!"
 ```
@@ -46,7 +46,7 @@ You can define a _default_ value for any parameter in a function by assigning a 
 If a default value is defined, you can omit that parameter when calling the function
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-	// do stuff here
+    // do stuff here
 }
 ```
 

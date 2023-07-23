@@ -4,14 +4,14 @@ Come questo programma che ripete le istruzioni per stampare `ciao`.
 var contatore = 0
 
 while contatore < 5 {
-	print("ciao")
-	contatore += 1
+    print("ciao")
+    contatore += 1
 }
 ```
 Ma possiamo fare lo stesso con i cicli `for`:
 ```swift
 for i in 0..<5 {
-	print("ciao")
+    print("ciao")
 }
 ```
 
@@ -55,7 +55,7 @@ In effetti, il `forEach` richiama la suddetta closure su ogni elemento della seq
 // questo è un array, lo vedremo presto
 let numeri: [Int] = [1, 3, 5, 7, 9] 
 numeri.forEach { num in 
-	print(num)
+    print(num)
 }
 ```
 Il metodo `forEach` è diverso dal ciclo `for..in` in due modi importanti:

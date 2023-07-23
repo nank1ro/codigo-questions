@@ -3,7 +3,7 @@ Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione
 In Swift usiamo la parola chiave `func` seguita dal nome della funzione:
 ```swift
 func saluta() {
-	print("Ciao!")
+    print("Ciao!")
 }
 saluta() // stampa "Ciao!"
 ```
@@ -46,7 +46,7 @@ Se non si vuole utilizzare una label per indicare un parametro, possiamo scriver
 Se viene definito un valore di default, si può omettere quel parametro quando si chiama la funzione
 ```swift
 func unaFunzione(parametroSenzaDefault: Int, parametroConDefault: Int = 12) {
-	// esegui qui il codice della funzione
+    // esegui qui il codice della funzione
 }
 ```
 

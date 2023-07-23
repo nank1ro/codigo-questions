@@ -3,13 +3,13 @@ Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione
 In C usiamo il `tipo di ritorno` seguito dal nome della funzione, per esempio:
 ```c
 void saluta() {
-	printf("Ciao!\n");
+    printf("Ciao!\n");
 }
 
 int main() {
-	saluta();
-	// prints "Ciao!"
-	return 0;
+    saluta();
+    // prints "Ciao!"
+    return 0;
 }
 ```
 

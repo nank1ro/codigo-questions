@@ -54,7 +54,7 @@ Esattamente come per le liste, possiamo fare un ciclo per gli elementi del dizio
 Per ottenere sia la chiave che il valore nel ciclo possiamo usare il metodo `items()`:
 ```python
 for chiave, valore in nome_dizionario:
-	print(chiave, valore)
+    print(chiave, valore)
 ```
 
 ---

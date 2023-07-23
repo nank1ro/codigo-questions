@@ -114,7 +114,7 @@ In Swift we can loop through an array in a very simple way using the `for..in` k
 ```swift
 var numbers = [1, 2, 3]
 for num in numbers {
-	print(num)
+    print(num)
 }
 // prints 1, 2, 3 
 ```

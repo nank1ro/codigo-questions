@@ -111,7 +111,7 @@ In JavaScript we can loop through an array in a very simple way using the `for..
 ```javascript
 var numbers = [1, 2, 3];
 for (num of numbers) {
-	console.log(num);
+    console.log(num);
 }
 // prints 1, 2, 3 
 ```

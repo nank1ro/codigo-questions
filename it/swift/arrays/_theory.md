@@ -113,7 +113,7 @@ In Swift possiamo far scorrere un array in un ciclo in un modo molto semplice us
 ```swift
 var numeri = [1, 2, 3]
 for num in numeri {
-	print(num)
+    print(num)
 }
 // stampa 1, 2, 3 
 ```

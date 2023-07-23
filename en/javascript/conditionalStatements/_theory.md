@@ -4,7 +4,7 @@ In programming, we can save a boolean variable `niceWeather` and perform the act
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-	// play outside
+    // play outside
 }
 ```
 
@@ -14,7 +14,7 @@ Let's continue with the previous example.
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-	// play outside
+    // play outside
 }
 ```
 We've seen that the `if` statement executes the block of code only if the condition is `true`.
@@ -28,9 +28,9 @@ In JavaScript we can use the `else` statement, like:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-	// play outside
+    // play outside
 } else {
-	// stay home
+    // stay home
 }
 ```
 
@@ -40,11 +40,11 @@ Let's assume we have another condition to check, like in this example:
 ```javascript
 var num = 3;
 if (num == 2) {
-	console.log("the number is 2");
+    console.log("the number is 2");
 } else if (num == 3) {
-	console.log("the number is 3");
+    console.log("the number is 3");
 } else {
-	console.log("do something else");
+    console.log("do something else");
 }
 ```
 and the output of this code is `the number is 3`.
@@ -57,15 +57,15 @@ We can add as many `else if` statements as we want, there are no limits
 ```javascript
 var num = 4;
 if (num == 2) {
-	console.log("the number is 2");
+    console.log("the number is 2");
 } else if (num == 3) {
-	console.log("the number is 3");
+    console.log("the number is 3");
 } else if (num == 4) {
-	console.log("the number is 4");
+    console.log("the number is 4");
 } else if (num == 5) {
-	console.log("the number is 5");
+    console.log("the number is 5");
 } else if (num == 6) {
-	console.log("the number is 6");
+    console.log("the number is 6");
 }
 ```
 and the output of this code is `the number is 4`.
@@ -76,15 +76,15 @@ We can also nest a conditional statement (`if`, `else if` or `else`) inside anot
 ```javascript
 var num = 4;
 if (num < 3) {
-	console.log("the number is lower than 3");
+    console.log("the number is lower than 3");
 } else {
-	if (num == 3) {
-		console.log("the number is 3");
-	} else if (num == 4) {
-		console.log("the number is 4");
-	} else {
-		console.log("the number is greather than 4");
-	}
+    if (num == 3) {
+        console.log("the number is 3");
+    } else if (num == 4) {
+        console.log("the number is 4");
+    } else {
+        console.log("the number is greather than 4");
+    }
 }
 ```
 and the output of this code is `the number is 4`.
@@ -97,9 +97,9 @@ If `question` is true, it evaluates `answer1` and returns its value; otherwise, 
 ```javascript
 let a = 10, b = 20, c = 0;
 if (a < b) {
-	c = a;
+    c = a;
 } else {
-	c = b;
+    c = b;
 }
 console.log(c);
 // prints 10

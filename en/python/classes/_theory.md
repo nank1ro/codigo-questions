@@ -11,7 +11,7 @@ Python checks to see if `my_dict` has an `items()` method (which all dictionarie
 A basic class consists only of the `class` keyword and the name of the class, for example:
 ```python
 class ClassName:
-	pass
+    pass
 ```
 
 ---

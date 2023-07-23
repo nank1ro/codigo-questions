@@ -4,13 +4,13 @@ Come questo programma che ripete le istruzioni per stampare "ciao".
 contatore = 0
 
 while contatore < 5:
-	print("ciao")
-	contatore += 1
+    print("ciao")
+    contatore += 1
 ```
 Ma possiamo fare lo stesso con i cicli `for`:
 ```python
 for i in range(5):
-	print("ciao")
+    print("ciao")
 ```
 
 ---

@@ -108,7 +108,7 @@ In Python possiamo far scorrere una lista in un ciclo in un modo molto semplice 
 ```python
 >>> numeri = [1, 2, 3]
 >>> for num in numeri:
->>> 	print(num)
+>>>     print(num)
 1
 2
 3

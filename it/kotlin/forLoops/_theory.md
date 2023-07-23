@@ -131,7 +131,7 @@ In Kotlin possiamo usare il ciclo `for-in` anche per collezioni iterabili, richi
 // questa è una lista, la vedremo presto
 val numeri = listOf(2, 4, 6, 8, 10) 
 for (num in numeri) {
-	println(num)
+    println(num)
 }
 // stampa (2, 4, 6, 8, 10)
 ```
@@ -145,7 +145,7 @@ Esso richiama la chiusura (_closure_) fornita su ogni elemento della sequenza ne
 // questa è una lista, la vedremo presto
 val numeri = listOf(1, 3, 5, 7, 9) 
 numeri.forEach {
-	println(it)
+    println(it)
 }
 ```
 

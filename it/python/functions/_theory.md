@@ -3,7 +3,7 @@ Invece di riscrivere l'intero codice, e' molto piu' pulito definire una funzione
 In Python usiamo la parola chiave `def` seguita dal nome della funzione:
 ```python
 def saluta():
-	print("Ciao!")
+    print("Ciao!")
 ```
 
 ---

@@ -4,7 +4,7 @@ In programmazione, possiamo salvare una variabile booleana `belTempo` ed eseguir
 ```javascript
 var belTempo = true;
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 }
 ```
 
@@ -14,7 +14,7 @@ Continuiamo con l'esempio precedente.
 ```javascript
 var belTempo = true;
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 }
 ```
 Abbiamo visto che l'istruzione `if` esegue il blocco di codice solo se la condizione e' `true`.
@@ -28,9 +28,9 @@ In JavaScript possiamo usare l'istruzione `else`, come:
 ```javascript
 var belTempo = true;
 if (belTempo) {
-	// gioca fuori
+    // gioca fuori
 } else {
-	// resta a casa
+    // resta a casa
 }
 ```
 
@@ -40,11 +40,11 @@ Supponiamo di avere un'altra condizione da verificare, come in questo esempio:
 ```javascript
 var num = 3;
 if (num == 2) {
-	console.log("il numero è 2");
+    console.log("il numero è 2");
 } else if (num == 3) {
-	console.log("il numero è 3");
+    console.log("il numero è 3");
 } else {
-	console.log("fai qualcos'altro");
+    console.log("fai qualcos'altro");
 }
 ```
 e l'output di questo codice e' `il numero e' 3`.
@@ -57,15 +57,15 @@ Possiamo aggiungere tutte le istruzioni `elif` che vogliamo, non ci sono limiti
 ```javascript
 var num = 4;
 if (num == 2) {
-	console.log("il numero è 2");
+    console.log("il numero è 2");
 } else if (num == 3) {
-	console.log("il numero è 3");
+    console.log("il numero è 3");
 } else if (num == 4) {
-	console.log("il numero è 4");
+    console.log("il numero è 4");
 } else if (num == 5) {
-	console.log("il numero è 5");
+    console.log("il numero è 5");
 } else if (num == 6) {
-	console.log("il numero è 6");
+    console.log("il numero è 6");
 }
 ```
 e l'output del codice e' `il numero e' 4`
@@ -76,15 +76,15 @@ Possiamo anche nidificare un'istruzione condizionale (`if`, `elif` o `else`) all
 ```javascript
 var num = 4;
 if (num < 3) {
-	console.log("il numero è minore di 3");
+    console.log("il numero è minore di 3");
 } else {
-	if (num == 3) {
-		console.log("il numero è 3");
-	} else if (num == 4) {
-		console.log("il numero è 4");
-	} else {
-		console.log("il numero è maggiore di 4");
-	}
+    if (num == 3) {
+        console.log("il numero è 3");
+    } else if (num == 4) {
+        console.log("il numero è 4");
+    } else {
+        console.log("il numero è maggiore di 4");
+    }
 }
 ```
 e l'output del codice e' `il numero e' 4`.
@@ -97,9 +97,9 @@ Se `domanda` è vera, valuta `risposta1` e ne restituisce il suo valore; altrime
 ```javascript
 let a = 10, b = 20, c = 0;
 if (a < b) {
-	c = a;
+    c = a;
 } else {
-	c = b;
+    c = b;
 }
 console.log(c);
 // stampa 10

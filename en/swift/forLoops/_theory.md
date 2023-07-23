@@ -4,14 +4,14 @@ Like this program repeating statements to display `hello`
 var counter = 0
 
 while counter < 5 {
-	print("hello")
-	counter += 1;
+    print("hello")
+    counter += 1;
 }
 ```
 But we can do the same with `for` loops:
 ```swift
 for i in 0..<5 {
-	print("hello")
+    print("hello")
 }
 ```
 
@@ -55,7 +55,7 @@ In fact, `forEach` calls the given closure on each element in the sequence in th
 // this is an array, we'll see about that soon
 let numbers: [Int] = [1, 3, 5, 7, 9] 
 numbers.forEach { num in 
-	print(num)
+    print(num)
 }
 ```
 Using the `forEach` method is distinct from a `for-in` loop in two important ways:
