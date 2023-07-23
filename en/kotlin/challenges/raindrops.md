@@ -193,7 +193,7 @@ fun raindrops(num: Int): String {
         result += "Plong"
     }
     if (result.isEmpty()) {
-        result = num.toString()	 
+        result = num.toString()     
     }
     return result
 }

@@ -84,11 +84,11 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 
 ```javascript
 function sumDigits(num) {
-	var result = 0
-	while (num > 0) {
-		result += num % 10
-		num = Math.floor(num / 10)
-	}
+    var result = 0
+    while (num > 0) {
+        result += num % 10
+        num = Math.floor(num / 10)
+    }
   return result
 }
 ```

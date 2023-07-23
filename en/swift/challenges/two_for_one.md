@@ -95,8 +95,8 @@ XCTMain([testCase(CodigoTests.allTests)])
 ```swift
 func twoForOne(name: String? = nil) -> String {
     if let validName = name {
-    	return "One for \(validName), one for me."
-	}
+        return "One for \(validName), one for me."
+    }
     return "One for you, one for me."
 }
 ```

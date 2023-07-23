@@ -233,19 +233,19 @@ XCTMain([testCase(CodigoTests.allTests)])
 
 ```swift
 func raindrops(_ num: Int) -> String {
-	var result = "";
+    var result = "";
     if (num % 3 == 0) {
         result += "Pling"
-	} 
+    } 
     if (num % 5 == 0) {
         result += "Plang"
-	}
+    }
     if (num % 7 == 0) {
         result += "Plong"
-	}
+    }
     if (result.isEmpty) {
-        result = String(num);		 
-	}
+        result = String(num);         
+    }
 
     return result
 }

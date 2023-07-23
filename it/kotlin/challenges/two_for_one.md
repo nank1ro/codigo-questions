@@ -88,8 +88,8 @@ Dividi con "Marta"
 ```kotlin
 fun duePerUno(nome: String? = null): String {
     nome?.let {
-    	return "Uno per $it, uno per me."
-	}
+        return "Uno per $it, uno per me."
+    }
     return "Uno per te, uno per me."
 }
 ```
