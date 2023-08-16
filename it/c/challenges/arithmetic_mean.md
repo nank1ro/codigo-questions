@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: Media aritmetica
 ---
 
 # --description--
