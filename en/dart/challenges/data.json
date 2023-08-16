@@ -30,5 +30,10 @@
 	"ackermann_function": {
 		"difficulty": 1,
 		"name": "Ackermann function"
+	},
+	"arithmetic_mean": {
+		"difficulty": 1,
+		"name": "Arithmetic mean",
+		"isPro": true
 	}
 }

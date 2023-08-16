@@ -8,7 +8,7 @@ void saluta() {
 
 int main() {
     saluta();
-    // prints "Ciao!"
+    // stampa "Ciao!"
     return 0;
 }
 ```

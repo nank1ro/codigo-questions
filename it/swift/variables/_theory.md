@@ -35,7 +35,7 @@ Qui, possiamo dare alla variabile `y` il valore di` x`
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // stampa 5
 ```
 
 ---
@@ -44,9 +44,9 @@ Quando aggiorniamo una variabile, essa dimentica il suo valore precedente.
 Qui stampiamo due volte la variabile `x` e vediamo come cambia il suo valore
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // stampa 5
 x = 10
-print(x) // prints 10
+print(x) // stampa 10
 ```
 
 ---

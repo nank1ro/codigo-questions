@@ -29,7 +29,7 @@ function saluta(nome, nuovoUtente) {
   }
   return saluto;
 }
-// prints "Ciao Smith! Benvenuto a bordo :)":)"
+// stampa "Ciao Smith! Benvenuto a bordo :)":)"
 console.log(saluta("Smith", true));
 ```
 

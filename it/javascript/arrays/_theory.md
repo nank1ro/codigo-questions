@@ -113,6 +113,6 @@ var numeri = [1, 2, 3];
 for (num of numeri) {
     console.log(num);
 }
-// prints 1, 2, 3 
+// stampa 1, 2, 3 
 ```
 Un nome di variabile segue la parola chiave `for`, ad essa verrà assegnato il valore di ogni elemento dell'array a turno.
