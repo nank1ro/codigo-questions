@@ -1,36 +1,36 @@
 {
-	"addition": {
-		"difficulty": 1,
-		"name": "Addition"
-	},
-	"atm": {
-		"difficulty": 1,
-		"name": "ATM"
-	},
-	"hello_world": {
-		"difficulty": 1,
-		"name": "Hello World!"
-	},
-	"raindrops": {
-		"difficulty": 1,
-		"name": "Raindrops"
-	},
-	"sum_digits": {
-		"difficulty": 1,
-		"name": "Sum of digits"
-	},
-	"two_for_one": {
-		"difficulty": 1,
-		"name": "Two for one"
-	},
-	"100_doors": {
-		"difficulty": 1,
-		"name": "100 doors"
-	},
-	"ackermann_function": {
-		"difficulty": 1,
-		"name": "Ackermann function"
-	},
+  "addition": {
+    "difficulty": 1,
+    "name": "Addition"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "Hello World!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "Raindrops"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "Sum of digits"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "Two for one"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 doors"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Ackermann function"
+  },
   "multiples_of_3_or_5": {
     "difficulty": 1,
     "name": "Multiples of 3 or 5"
@@ -70,5 +70,10 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "Summation of primes"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "Arithmetic mean",
+    "isPro": true
   }
 }
