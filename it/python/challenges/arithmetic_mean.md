@@ -1,7 +1,7 @@
 ---
 language: python
 exerciseType: 1
-title: Arithmetic mean
+title: Media aritmetica
 difficulty: 1
 ---
 
