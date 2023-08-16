@@ -18,7 +18,7 @@ Crea una funzione che prenda un numero come argomento e restituisca `"Fizz"`, `"
 - L'output deve sempre essere una stringa, anche se non è un multiplo di `3` o `5`.
 
 Esempi:
-```dart
+```c
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
 fizz_buzz(15); // ➞ "FizzBuzz"
