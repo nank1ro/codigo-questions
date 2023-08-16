@@ -38,7 +38,7 @@
 	},
 	"fizz_buzz": {
 		"difficulty": 1,
-		"name": "Fizz Buzz",
+		"name": "FizzBuzz",
 		"isPro": true
 	}
 }
