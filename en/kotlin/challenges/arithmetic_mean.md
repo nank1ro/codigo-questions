@@ -16,7 +16,7 @@ Write a function that returns the mean of a numeric vector.
 Example of function call:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
-print(mean(numbers));
+print(mean(numbers))
 // prints 2.0
 ```
 

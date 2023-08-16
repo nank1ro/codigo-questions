@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la media di un vettore numerico.
 Esempio di chiamata di funzione:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
-print(mean(numbers));
+print(mean(numbers))
 // prints 2.0
 ```
 
