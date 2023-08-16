@@ -7,7 +7,7 @@ title: Arithmetic mean
 
 # --description--
 
-Scrivi una funzione chiamata `media` per trovare la _media aritmetica_ di un vettore numerico.
+Scrivi una funzione chiamata `mean` per trovare la _media aritmetica_ di un vettore numerico.
 
 # --instructions--
 
