@@ -18,11 +18,11 @@ Create a function that takes a number as an argument and returns `"Fizz"`, `"Buz
 - The output should always be a string even if it is not a multiple of `3` or `5`.
 
 Examples:
-```dart
-fizz_buzz(3); // ➞ "Fizz"
-fizz_buzz(5); // ➞ "Buzz"
-fizz_buzz(15); // ➞ "FizzBuzz"
-fizz_buzz(4); // ➞ "4"
+```python
+fizz_buzz(3) // ➞ "Fizz"
+fizz_buzz(5) // ➞ "Buzz"
+fizz_buzz(15) // ➞ "FizzBuzz"
+fizz_buzz(4) // ➞ "4"
 ```
 
 # --seed--
