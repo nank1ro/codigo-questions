@@ -40,7 +40,7 @@ const tryCatch = (...args) => {
 # --seed--
 
 ```javascript
-function addition() {
+function mean() {
   
 }
 ```
