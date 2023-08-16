@@ -33,6 +33,7 @@
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Media aritmetica"
+    "name": "Media aritmetica",
+    "isPro": true
   }
 }
