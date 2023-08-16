@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la media di un vettore numerico.
 Esempio di chiamata di funzione:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# stampa 2
 ```
 
 # --seed--

@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la media di un vettore numerico.
 Esempio di chiamata di funzione:
 ```swift
 print(mean([1, 2, 3]))
-// prints 2.0
+// stampa 2.0
 ```
 
 # --seed--
