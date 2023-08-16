@@ -38,5 +38,9 @@
   "even_fibonacci_numbers": {
     "difficulty": 1,
     "name": "I numeri pari di Fibonacci"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "Media aritmetica"
   }
 }
