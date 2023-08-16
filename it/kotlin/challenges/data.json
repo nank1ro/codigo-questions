@@ -43,5 +43,10 @@
     "difficulty": 1,
     "name": "Media aritmetica",
     "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
   }
 }

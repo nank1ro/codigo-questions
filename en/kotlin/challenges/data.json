@@ -43,5 +43,10 @@
     "difficulty": 1,
     "name": "Arithmetic mean",
     "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
   }
 }
