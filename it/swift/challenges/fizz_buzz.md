@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Crea una funzione che prenda un numero come argomento e restituisca `"Fizz"`, `"Buzz"` o `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Se il numero è un multiplo di `3`, l'output deve essere `"Fizz"`.
+- Se il numero è un multiplo di `5`, l'output deve essere `"Buzz"`.
+- Se il numero è un multiplo sia di `3` che di `5`, l'output deve essere `"FizzBuzz"`.
+- Se il numero non è un multiplo né di `3` né di `5`, il numero deve essere stampato come stringa, come mostrato negli esempi seguenti.
+- L'output deve sempre essere una stringa, anche se non è un multiplo di `3` o `5`.
 
-Examples:
+Esempi:
 ```dart
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -44,7 +44,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Il numero `3` deve essere uguale a `"Fizz"`
 
 ```swift
     func test1() {
@@ -52,7 +52,7 @@ The number `3` must equal `"Fizz"`
     }
 ```
 
-The number `5` must equal `"Buzz"`
+Il numero `5` deve essere uguale a `"Buzz"`
 
 ```swift
     func test2() {
@@ -60,7 +60,7 @@ The number `5` must equal `"Buzz"`
     }
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Il numero `15` deve essere uguale a `"FizzBuzz"`
 
 ```swift
     func test3() {
@@ -68,7 +68,7 @@ The number `15` must equal `"FizzBuzz"`
     }
 ```
 
-The number `10` must equal `"Buzz"`
+Il numero `10` deve essere uguale a `"Buzz"`
 
 ```swift
     func test4() {
@@ -76,7 +76,7 @@ The number `10` must equal `"Buzz"`
     }
 ```
 
-The number `98` must equal `"98"`
+Il numero `98` deve essere uguale a `"98"`
 
 ```swift
     func test5() {
