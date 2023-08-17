@@ -125,7 +125,7 @@ Future<void> _validateChallengeAssets({
 }) async {
   final assetNames = _getSvgAssetNames(assetsDir);
   final challenges =
-      targetDir.listSync(followLinks: false).where(isExerciseFile);
+      targetDir.listSync(followLinks: false).where(isChallengeFile);
   final challengeNames =
       challenges.map((e) => getFileNameWithoutExtension(e.path));
 
@@ -224,7 +224,7 @@ void _runCodeTests({
           () {
         final hasContent = [
           model.beforeSeed?.code,
-          model.codeBeforeAsserts?.code
+          model.codeBeforeAsserts?.code,
         ].any((c) => c != null && c.contains(beforeSeed));
 
         expect(
@@ -541,7 +541,7 @@ void _runFillInEmptySpacesTests({
       () {
     final answers = [
       ...?model.answers,
-      ...?model.answersCodeBlocks?.map((a) => a.code)
+      ...?model.answersCodeBlocks?.map((a) => a.code),
     ];
     final seed = model.seed!.code;
     final solutions = model.solutions!;
@@ -749,7 +749,7 @@ void _runChooseAnAnswerTests({
       () {
     final answers = [
       ...?model.answers,
-      ...?model.answersCodeBlocks?.map((a) => a.code)
+      ...?model.answersCodeBlocks?.map((a) => a.code),
     ];
     final solutionsAreValid = model.solutions!.every(answers.contains);
     expect(
@@ -771,7 +771,7 @@ void _runSortItemsTests({
   _testHandler('Verify that the sort items exercise contains some answers', () {
     final answers = [
       ...?model.answers,
-      ...?model.answersCodeBlocks?.map((a) => a.code)
+      ...?model.answersCodeBlocks?.map((a) => a.code),
     ];
     expect(
       answers,
@@ -792,7 +792,7 @@ void _runSortItemsTests({
       final solutions = model.solutions!;
       final answers = [
         ...?model.answers,
-        ...?model.answersCodeBlocks?.map((a) => a.code)
+        ...?model.answersCodeBlocks?.map((a) => a.code),
       ];
       var isValid = false;
 
@@ -936,6 +936,12 @@ bool isExerciseFile(FileSystemEntity entity) {
   return entity is File &&
       path.extension(entity.path) == '.md' &&
       int.tryParse(path.basenameWithoutExtension(entity.path)) != null;
+}
+
+/// Returns if the provided [entity] is a [File] named with a number that ends
+/// with the [.md] extension.
+bool isChallengeFile(FileSystemEntity entity) {
+  return entity is File && path.extension(entity.path) == '.md';
 }
 
 /// The relative path of the exercise:
