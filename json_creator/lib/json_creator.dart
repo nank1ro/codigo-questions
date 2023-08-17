@@ -111,13 +111,16 @@ Future<void> main() async {
             totalExercises: languageBefore.totalExercises + 1,
             arguments: [
               for (final arg in languageBefore.arguments)
-                if (arg.name == argumentName) updatedArgument else arg
+                if (arg.name == argumentName) updatedArgument else arg,
             ],
           );
           results[index] = results[index].copyWith(
             languages: [
               for (final language in results[index].languages)
-                if (language.name == languageName) updatedLanguage else language
+                if (language.name == languageName)
+                  updatedLanguage
+                else
+                  language,
             ],
           );
         } else {
@@ -136,7 +139,10 @@ Future<void> main() async {
           results[index] = results[index].copyWith(
             languages: [
               for (final language in results[index].languages)
-                if (language.name == languageName) updatedLanguage else language
+                if (language.name == languageName)
+                  updatedLanguage
+                else
+                  language,
             ],
           );
         }
@@ -154,7 +160,7 @@ Future<void> main() async {
                 ),
               ],
               totalExercises: 1,
-            )
+            ),
           ],
         );
       }
