@@ -30,7 +30,27 @@ mixin _$AssertModel {
   /// def test_say_hi(self):
   ///     self.assertEqual(hello(), "Hello, World!", "--err-t1--"
   /// ```
-  String get unitTest => throw _privateConstructorUsedError;
+  String? get unitTest => throw _privateConstructorUsedError;
+
+  /// An optional regex assert, this assert will be run client side.
+  /// e.g:
+  /// ```json
+  /// {
+  ///   "regex": "if|else|switch|\\?|&&|\\|\\||DateTime",
+  ///   "modifiers": ["m"],
+  ///   "shouldMatch": false
+  /// }
+  /// ```
+  /// The supported modifiers are:
+  /// - m: multiLinex.
+  /// - i: caseInsensitive.
+  /// - u: unicode.
+  /// - s: dotAll.
+  ///
+  /// The shouldMatch flag indicates if the code should match or not.
+  /// If `shouldMatch` is true, the regex should match, otherwise it should
+  /// not.
+  RegexAssert? get regexAssert => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +64,7 @@ abstract class $AssertModelCopyWith<$Res> {
           AssertModel value, $Res Function(AssertModel) then) =
       _$AssertModelCopyWithImpl<$Res, AssertModel>;
   @useResult
-  $Res call({String description, String unitTest});
+  $Res call({String description, String? unitTest, RegexAssert? regexAssert});
 }
 
 /// @nodoc
@@ -61,17 +81,22 @@ class _$AssertModelCopyWithImpl<$Res, $Val extends AssertModel>
   @override
   $Res call({
     Object? description = null,
-    Object? unitTest = null,
+    Object? unitTest = freezed,
+    Object? regexAssert = freezed,
   }) {
     return _then(_value.copyWith(
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      unitTest: null == unitTest
+      unitTest: freezed == unitTest
           ? _value.unitTest
           : unitTest // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      regexAssert: freezed == regexAssert
+          ? _value.regexAssert
+          : regexAssert // ignore: cast_nullable_to_non_nullable
+              as RegexAssert?,
     ) as $Val);
   }
 }
@@ -84,7 +109,7 @@ abstract class _$$_AssertModelCopyWith<$Res>
       __$$_AssertModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String description, String unitTest});
+  $Res call({String description, String? unitTest, RegexAssert? regexAssert});
 }
 
 /// @nodoc
@@ -99,17 +124,22 @@ class __$$_AssertModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? description = null,
-    Object? unitTest = null,
+    Object? unitTest = freezed,
+    Object? regexAssert = freezed,
   }) {
     return _then(_$_AssertModel(
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      unitTest: null == unitTest
+      unitTest: freezed == unitTest
           ? _value.unitTest
           : unitTest // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      regexAssert: freezed == regexAssert
+          ? _value.regexAssert
+          : regexAssert // ignore: cast_nullable_to_non_nullable
+              as RegexAssert?,
     ));
   }
 }
@@ -117,7 +147,8 @@ class __$$_AssertModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AssertModel implements _AssertModel {
-  const _$_AssertModel({required this.description, required this.unitTest});
+  const _$_AssertModel(
+      {required this.description, this.unitTest, this.regexAssert});
 
   factory _$_AssertModel.fromJson(Map<String, dynamic> json) =>
       _$$_AssertModelFromJson(json);
@@ -134,11 +165,32 @@ class _$_AssertModel implements _AssertModel {
   ///     self.assertEqual(hello(), "Hello, World!", "--err-t1--"
   /// ```
   @override
-  final String unitTest;
+  final String? unitTest;
+
+  /// An optional regex assert, this assert will be run client side.
+  /// e.g:
+  /// ```json
+  /// {
+  ///   "regex": "if|else|switch|\\?|&&|\\|\\||DateTime",
+  ///   "modifiers": ["m"],
+  ///   "shouldMatch": false
+  /// }
+  /// ```
+  /// The supported modifiers are:
+  /// - m: multiLinex.
+  /// - i: caseInsensitive.
+  /// - u: unicode.
+  /// - s: dotAll.
+  ///
+  /// The shouldMatch flag indicates if the code should match or not.
+  /// If `shouldMatch` is true, the regex should match, otherwise it should
+  /// not.
+  @override
+  final RegexAssert? regexAssert;
 
   @override
   String toString() {
-    return 'AssertModel(description: $description, unitTest: $unitTest)';
+    return 'AssertModel(description: $description, unitTest: $unitTest, regexAssert: $regexAssert)';
   }
 
   @override
@@ -149,12 +201,15 @@ class _$_AssertModel implements _AssertModel {
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.unitTest, unitTest) ||
-                other.unitTest == unitTest));
+                other.unitTest == unitTest) &&
+            (identical(other.regexAssert, regexAssert) ||
+                other.regexAssert == regexAssert));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, description, unitTest);
+  int get hashCode =>
+      Object.hash(runtimeType, description, unitTest, regexAssert);
 
   @JsonKey(ignore: true)
   @override
@@ -173,7 +228,8 @@ class _$_AssertModel implements _AssertModel {
 abstract class _AssertModel implements AssertModel {
   const factory _AssertModel(
       {required final String description,
-      required final String unitTest}) = _$_AssertModel;
+      final String? unitTest,
+      final RegexAssert? regexAssert}) = _$_AssertModel;
 
   factory _AssertModel.fromJson(Map<String, dynamic> json) =
       _$_AssertModel.fromJson;
@@ -191,7 +247,28 @@ abstract class _AssertModel implements AssertModel {
   /// def test_say_hi(self):
   ///     self.assertEqual(hello(), "Hello, World!", "--err-t1--"
   /// ```
-  String get unitTest;
+  String? get unitTest;
+  @override
+
+  /// An optional regex assert, this assert will be run client side.
+  /// e.g:
+  /// ```json
+  /// {
+  ///   "regex": "if|else|switch|\\?|&&|\\|\\||DateTime",
+  ///   "modifiers": ["m"],
+  ///   "shouldMatch": false
+  /// }
+  /// ```
+  /// The supported modifiers are:
+  /// - m: multiLinex.
+  /// - i: caseInsensitive.
+  /// - u: unicode.
+  /// - s: dotAll.
+  ///
+  /// The shouldMatch flag indicates if the code should match or not.
+  /// If `shouldMatch` is true, the regex should match, otherwise it should
+  /// not.
+  RegexAssert? get regexAssert;
   @override
   @JsonKey(ignore: true)
   _$$_AssertModelCopyWith<_$_AssertModel> get copyWith =>
