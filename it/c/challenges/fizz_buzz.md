@@ -149,6 +149,8 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -208,9 +210,6 @@ Il numero `98` deve essere uguale a `"98"`
 # --solutions--
 
 ```c
-#include <stdlib.h>
-#include <string.h>
-
 char* fizz_buzz(int number) {
     if (number % 3 == 0 && number % 5 == 0) {
         return "FizzBuzz";
