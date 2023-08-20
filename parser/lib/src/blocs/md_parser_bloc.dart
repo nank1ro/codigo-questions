@@ -171,11 +171,35 @@ Exercise file path: $filePath
 
     return List.generate(
       unitTests.length,
-      (i) => AssertModel(
-        description: descriptions[i],
-        unitTest: unitTests[i],
-      ),
+      (i) {
+        final unitTest = unitTests[i];
+        return AssertModel(
+          description: descriptions[i],
+          unitTest: isRegexAssert(unitTest) ? null : unitTest,
+          regexAssert: isRegexAssert(unitTest)
+              ? RegexAssert.fromJson(
+                  jsonDecode(unitTest) as Map<String, dynamic>,
+                )
+              : null,
+        );
+      },
     );
+  }
+
+  bool isRegexAssert(String unitTest) {
+    try {
+      final json = jsonDecode(unitTest);
+      if (json is Map &&
+          json.containsKey('regex') &&
+          json.containsKey('modifiers') &&
+          json.containsKey('shouldMatch')) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (_) {
+      return false;
+    }
   }
 
   /// Returns a list of content that is divided by backticks:
