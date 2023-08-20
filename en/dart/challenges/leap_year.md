@@ -21,8 +21,6 @@ print(leapYear(2000));
 // prints true
 ```
 
-
-
 # --seed--
 
 ```dart
@@ -43,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The use of class `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 
 ```json
 {
@@ -160,6 +158,6 @@ The year `2006` is not a leap year.
 
 ```dart
 bool leapYear(int year) {
-  return (year % 400 == 0) || (( year % 100 != 0) && (year % 4 == 0));
+  return (year % 4 == 0) ^ ((year % 100 == 0) & (year % 400 != 0));
 }
 ```
