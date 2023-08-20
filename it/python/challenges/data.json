@@ -80,5 +80,10 @@
     "difficulty": 1,
     "name": "FizzBuzz",
     "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "Convertitore numerico romano",
+    "isPro": true
   }
 }
