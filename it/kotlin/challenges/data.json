@@ -53,5 +53,10 @@
     "difficulty": 3,
     "name": "Convertitore numerico romano",
     "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "Anno bisestile",
+    "isPro": true
   }
 }

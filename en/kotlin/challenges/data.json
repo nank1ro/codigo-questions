@@ -53,5 +53,10 @@
     "difficulty": 3,
     "name": "Roman numeral converter",
     "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "Leap year",
+    "isPro": true
   }
 }
