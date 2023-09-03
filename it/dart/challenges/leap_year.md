@@ -161,3 +161,12 @@ bool leapYear(int year) {
   return (year % 4 == 0) ^ ((year % 100 == 0) & (year % 400 != 0));
 }
 ```
+
+```dart
+bool leapYear(int year) {
+  while (year % 100 == 0) {
+    year = year ~/ 100;
+  }
+  return year % 4 == 0;
+}
+```
