@@ -177,12 +177,6 @@ XCTMain([testCase(CodigoTests.allTests)])
 
 ```swift
 func leapYear(_ year: Int) -> Bool {
-    return (year % 4 == 0) != ((year % 100 == 0) && (year % 400 != 0))
-}
-```
-
-```swift
-func leapYear(_ year: Int) -> Bool {
     var yr = year
     while yr % 100 == 0 {
         yr = yr / 100
