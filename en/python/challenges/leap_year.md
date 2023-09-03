@@ -143,7 +143,7 @@ if __name__ == "__main__":
 
 ```python
 def leap_year(year):
-    return (year % 4 == 0) ^ ((year % 100 == 0) and (year % 400 != 0))
+    return (year % 4 == 0) ^ ((year % 100 == 0) & (year % 400 != 0))
 ```
 
 ```python
