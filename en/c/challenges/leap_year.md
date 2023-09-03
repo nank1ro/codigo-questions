@@ -17,7 +17,7 @@ Return `true` if it's a leap year, `false` otherwise.
 
 Example of function call:
 ```c
-println(leap_year(2000));
+printf("%d\n", leap_year(2000));
 // prints true
 ```
 

@@ -17,7 +17,7 @@ Restituisci `true` se è un anno bisestile, `false` altrimenti.
 
 Esempio di chiamata di funzione:
 ```c
-println(leap_year(2000));
+printf("%d\n", leap_year(2000));
 // stampa true
 ```
 
