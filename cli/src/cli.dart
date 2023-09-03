@@ -96,7 +96,10 @@ String _getFullCode(ExerciseModel model) {
 
   final codeBeforeHints = model.codeBeforeAsserts?.code;
   final codeAfterHints = model.codeAfterAsserts?.code;
-  final allHints = model.asserts?.map((a) => a.unitTest).join("\n");
+  final allHints = model.asserts
+      ?.where((a) => a.unitTest != null)
+      .map((a) => a.unitTest)
+      .join("\n");
   String fullSourceCode = "";
   if (codeBeforeSeed != null) {
     fullSourceCode += '$codeBeforeSeed\n';
