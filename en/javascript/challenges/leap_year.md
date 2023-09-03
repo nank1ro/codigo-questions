@@ -11,7 +11,7 @@ In a calendar year there are exactly 365.25 days. But, eventually, this will lea
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `DateTime` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `Date` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
 
 Return `true` if it's a leap year, `false` otherwise.
 
