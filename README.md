@@ -5,7 +5,7 @@
 
 # Codigo-Questions
 
-All the codigo questions for the [Codigo: Learn to Code](codigo.bestofcode.dev) app.
+All the codigo questions for the [Codigo: Learn to Code](https://codigo.bestofcode.dev) app.
 
 # Contributing
 
