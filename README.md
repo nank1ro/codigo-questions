@@ -1,6 +1,6 @@
 ![Firebase Hosting](https://github.com/nank1ro/Codigo-Questions/workflows/Deploy%20to%20Firebase%20Storage/badge.svg)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Codigo-Questions
@@ -40,6 +40,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/valevolta0501"><img src="https://avatars.githubusercontent.com/u/139982948?v=4?s=100" width="100px;" alt="valevolta0501"/><br /><sub><b>valevolta0501</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3Avalevolta0501" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Kai-Roma"><img src="https://avatars.githubusercontent.com/u/104495517?v=4?s=100" width="100px;" alt="Kai-Roma"/><br /><sub><b>Kai-Roma</b></sub></a><br /><a href="https://github.com/nank1ro/codigo-questions/issues?q=author%3AKai-Roma" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
