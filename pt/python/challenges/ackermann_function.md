@@ -4,75 +4,69 @@ exerciseType: 1
 title: Ackermann function
 difficulty: 1
 ---
-
 # --description--
+A função de Ackermann é o exemplo clássico de uma função recursiva, notável especialmente porque não é uma função recursiva primitiva. Ela cresce muito rapidamente em valor, assim como o tamanho de sua árvore de chamada.
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
-
-The Ackermann function is usually defined as follows:
+A função de Ackermann é geralmente definida da seguinte forma:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
-
+Seus argumentos nunca são negativos e ela sempre termina
 # --instructions--
-
-Write a function which returns the value of the Ackermann function.
-
+Escreva uma função que retorna o valor da função de Ackermann.
 # --seed--
-
 ```python
 def ack(m, n):
     pass
 ```
 
-# --before-asserts--
 
+# --before-asserts--
 ```python
 import unittest
-
 class CodigoTests(unittest.TestCase):
 ```
 
+
+
 # --asserts--
-
-`ack(0, 0)` should return 1.
-
+`ack(0, 0)` deve retornar 1.
 ```python
     def test1(self):
         self.assertEqual(ack(0, 0), 1, "--err-t1--")
 ```
-
-`ack(1, 1)` should return 3.
-
+`ack(1, 1)` deve retornar 3.
 ```python
     def test2(self):
         self.assertEqual(ack(1, 1), 3, "--err-t2--")
 ```
-
-`ack(2, 5)` should return 13.
-
+`ack(2, 5)` deve retornar 13.
 ```python
     def test3(self):
         self.assertEqual(ack(2, 5), 13, "--err-t3--")
 ```
-
-`ack(3, 3)` should return 61.
-
+`ack(3, 3)` deve retornar 61.
 ```python
     def test4(self):
         self.assertEqual(ack(3, 3), 61, "--err-t4--")
 ```
 
-# --after-asserts--
 
+
+
+
+
+
+
+
+# --after-asserts--
 ```python
 if __name__ == "__main__":
     unittest.main()
 ```
 
-# --solutions--
 
+# --solutions--
 ```python
 def ack(m, n):
     if m == 0:
@@ -82,3 +76,4 @@ def ack(m, n):
             return ack(m - 1, 1)
         return ack(m - 1, ack(m, n - 1))
 ```
+

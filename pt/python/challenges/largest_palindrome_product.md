@@ -4,58 +4,51 @@ exerciseType: 1
 difficulty: 2
 title: Largest palindrome product
 ---
-
 # --description--
-
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-
+Um número palíndromo lê o mesmo nos dois sentidos. O maior palíndromo feito do produto de dois números de 2 dígitos é 9009 = 91 × 99.
 # --instructions--
-
-Find the largest palindrome made from the product of two `n`-digit numbers.
-
+Encontre o maior palíndromo feito do produto de dois números de `n` dígitos.
 # --seed--
-
 ```python
 def largest_palindrome_product(n):
     pass
 ```
 
-# --before-asserts--
 
+# --before-asserts--
 ```python
 import unittest
-
 class CodigoTests(unittest.TestCase):
 ```
 
+
+
 # --asserts--
-
-`largest_palindrome_product(2)` should return 9009.
-
+`largest_palindrome_product(2)` deve retornar 9009.
 ```python
     def test1(self):
         self.assertEqual(largest_palindrome_product(2), 9009, "--err-t1--")
 ```
-
-`largest_palindrome_product(3)` should return 906609.
-
+`largest_palindrome_product(3)` deve retornar 906609.
 ```python
     def test2(self):
         self.assertEqual(largest_palindrome_product(3), 906609, "--err-t2--")
 ```
 
-# --after-asserts--
 
+
+
+
+# --after-asserts--
 ```python
 if __name__ == "__main__":
     unittest.main()
 ```
 
-# --solutions--
 
+# --solutions--
 ```python
 import re
-
 def largest_palindrome_product(digit):
   start = 1
   end = int(float(f"1e{digit}")) - 1
@@ -68,3 +61,5 @@ def largest_palindrome_product(digit):
         palindrome.append(product)
   return max(palindrome)
 ```
+
+

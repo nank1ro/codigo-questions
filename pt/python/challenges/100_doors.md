@@ -4,71 +4,65 @@ exerciseType: 1
 title: 100 doors
 difficulty: 1
 ---
-
 # --description--
-
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
-
+Existem 100 portas em uma fila que estão todas inicialmente fechadas.
+Você faz 100 passagens pelas portas.
+Na primeira vez, visite cada porta e 'alterne' a porta (se a porta estiver fechada, abra-a; se estiver aberta, feche-a).
+Na segunda vez, visite apenas cada 2ª porta (ou seja, porta #2, #4, #6, ...) e alterne-a.
+Na terceira vez, visite cada 3ª porta (ou seja, porta #3, #6, #9, ...), etc., até que você visite apenas a 100ª porta.
 # --instructions--
-
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
-
+Implemente uma função para determinar o estado das portas após a última passagem.
+Retorne o resultado final em um vetor, com apenas o número da porta incluído no vetor se ela estiver aberta.
+> O método deve ser capaz de trabalhar com um número variável de portas.
 # --seed--
-
 ```python
 def get_final_opened_doors(num_doors):
     pass
 ```
 
-# --before-asserts--
 
+# --before-asserts--
 ```python
 import unittest
-
 class CodigoTests(unittest.TestCase):
 ```
 
+
+
 # --asserts--
-
-Given 100 doors, return the correct list of open doors
-
+Dado 100 portas, retorne a lista correta de portas abertas
 ```python
     def test_1(self):
         solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
         self.assertEqual(get_final_opened_doors(100), solution, "--err-t1--")
 ```
-
-Given 10 doors, return the correct list of open doors
-
+Dado 10 portas, retorne a lista correta de portas abertas
 ```python
     def test_2(self):
         solution = [1, 4, 9]
         self.assertEqual(get_final_opened_doors(10), solution, "--err-t2--")
 ```
-
-Given 950 doors, return the correct list of open doors
-
+Dado 950 portas, retorne a lista correta de portas abertas
 ```python
     def test_3(self):
         solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900]
         self.assertEqual(get_final_opened_doors(950), solution, "--err-t3--")
 ```
 
-# --after-asserts--
 
+
+
+
+
+
+# --after-asserts--
 ```python
 if __name__ == "__main__":
     unittest.main()
 ```
 
-# --solutions--
 
+# --solutions--
 ```python
 def get_final_opened_doors(num_doors):
     open_doors = []
@@ -78,3 +72,4 @@ def get_final_opened_doors(num_doors):
         i += 1
     return open_doors
 ```
+

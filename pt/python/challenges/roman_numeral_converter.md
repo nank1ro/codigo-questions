@@ -4,130 +4,134 @@ exerciseType: 1
 difficulty: 3
 title: Roman Numeral Converter
 ---
-
 # --description--
-
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
-
+Crie uma função que recebe um inteiro positivo como parâmetro e retorna uma string contendo a representação em numeral romano desse inteiro. Os numerais romanos modernos são escritos expressando cada dígito separadamente, começando com o dígito mais à esquerda e pulando qualquer dígito com valor zero.
 # --instructions--
-
-Examples:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
+Exemplos:
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+```
 
+convert_to_roman(2) ➞ "II"
+
+convert_to_roman(12) ➞ "XII"
+
+convert_to_roman(16) ➞ "XVI"
+
+```
+
+
+- Todos os numerais romanos devem ser retornados em maiúsculas.
+- O maior número que pode ser representado nesta notação é 3.999.
 # --seed--
-
 ```python
 def convert_to_roman(n):
     pass
 ```
 
-# --before-asserts--
 
+# --before-asserts--
 ```python
 import unittest
-
 class CodigoTests(unittest.TestCase):
 ```
 
+
+
 # --asserts--
-
-The number `2` must equal `II` 
-
+O número `2` deve ser igual `II`
 ```python
     def test1(self):
         self.assertEqual(convert_to_roman(2), "II", "--err-t1--")
 ```
-
-The number `12` must equal `XII`
-
+O número `12` deve ser igual `XII`
 ```python
     def test2(self):
         self.assertEqual(convert_to_roman(12), "XII", "--err-t2--")
 ```
-
-The number `16` must equal `XVI`
-
+O número `16` deve ser igual `XVI`
 ```python
     def test3(self):
         self.assertEqual(convert_to_roman(16), "XVI", "--err-t3--")
 ```
-
-The number `44` must equal `XLIV`
-
+O número `44` deve ser igual `XLIV`
 ```python
     def test4(self):
         self.assertEqual(convert_to_roman(44), "XLIV", "--err-t4--")
 ```
-
-The number `68` must equal `LXVIII`
-
+O número `68` deve ser igual `LXVIII`
 ```python
     def test5(self):
         self.assertEqual(convert_to_roman(68), "LXVIII", "--err-t5--")
 ```
-
-The number `400` must equal `CD`
-
+O número `400` deve ser igual `CD`
 ```python
     def test6(self):
         self.assertEqual(convert_to_roman(400), "CD", "--err-t6--")
 ```
-
-The number `798` must equal `DCCXCVIII`
-
+O número `798` deve ser igual `DCCXCVIII`
 ```python
     def test7(self):
         self.assertEqual(convert_to_roman(798), "DCCXCVIII", "--err-t7--")
 ```
-
-The number `1000` must equal `M`
-
+O número `1000` deve ser igual `M`
 ```python
     def test8(self):
         self.assertEqual(convert_to_roman(1000), "M", "--err-t8--")
 ```
-
-The number `3999` must equal `MMMCMXCIX`
-
+O número `3999` deve ser igual `MMMCMXCIX`
 ```python
     def test9(self):
         self.assertEqual(convert_to_roman(3999), "MMMCMXCIX", "--err-t9--")
 ```
-
-The number `649` must equal `DCXLIX`
-
+O número `649` deve ser igual `DCXLIX`
 ```python
     def test10(self):
         self.assertEqual(convert_to_roman(649), "DCXLIX", "--err-t10--")
 ```
-
-The number `1666` must equal `MDCLXVI`
-
+O número `1666` deve ser igual `MDCLXVI`
 ```python
     def test11(self):
         self.assertEqual(convert_to_roman(1666), "MDCLXVI", "--err-t11--")
 ```
 
-# --after-asserts--
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --after-asserts--
 ```python
 if __name__ == "__main__":
     unittest.main()
 ```
 
-# --solutions--
 
+# --solutions--
 ```python
 def convert_to_roman(n):
     result = ""
-
     values = [
         (1000, "M"),
         (900, "CM"),
@@ -143,11 +147,13 @@ def convert_to_roman(n):
         (4, "IV"),
         (1, "I")
     ]
-
     for value, letter in values:
         while n >= value:
             result += letter
             n -= value
-
     return result
 ```
+
+
+
+
