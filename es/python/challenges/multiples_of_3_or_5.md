@@ -1,0 +1,70 @@
+---
+language: python
+exerciseType: 1
+difficulty: 1
+title: Múltiplos de 3 o 5
+---
+
+# --description--
+
+Si listamos todos los números naturales por debajo de 10 que son múltiplos de 3 o 5, obtenemos 3, 5, 6 y 9. La suma de estos múltiplos es 23.
+
+# --instructions--
+
+Encuentra la suma de todos los múltiplos de 3 o 5 por debajo del valor del parámetro proporcionado `number`.
+
+# --seed--
+
+```python
+def multiples_of_3_and_5(number):
+    pass
+```
+
+# --before-asserts--
+
+```python
+import unittest
+
+class CodigoTests(unittest.TestCase):
+```
+
+# --asserts--
+
+`multiples_of_3_and_5(10)` debe devolver 23.
+
+```python
+    def test1(self):
+        self.assertEqual(multiples_of_3_and_5(10), 23, "--err-t1--")
+```
+
+`multiples_of_3_and_5(1000)` debe devolver 233168.
+
+```python
+    def test2(self):
+        self.assertEqual(multiples_of_3_and_5(1000), 233168, "--err-t2--")
+```
+
+`multiples_of_3_and_5(6987)` debe devolver 11390208
+
+```python
+    def test3(self):
+        self.assertEqual(multiples_of_3_and_5(6987), 11390208, "--err-t3--")
+```
+
+# --after-asserts--
+
+```python
+if __name__ == "__main__":
+    unittest.main()
+```
+
+# --solutions--
+
+```python
+def multiples_of_3_and_5(number):
+  total = 0
+  for i in range(number):
+    if i % 3 == 0 or i % 5 == 0:
+      total += i
+  return total
+```

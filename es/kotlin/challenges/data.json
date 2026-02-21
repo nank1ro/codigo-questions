@@ -1,0 +1,62 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "Suma"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "Cajero automático"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "¡Hola Mundo!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "Gotas de lluvia"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "Suma de dígitos"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "Dos por uno"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 puertas"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Función de Ackermann"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Múltiplos de 3 o 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Números pares de Fibonacci"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "Media aritmética",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "Conversor de números romanos",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "Año bisiesto",
+    "isPro": true
+  }
+}

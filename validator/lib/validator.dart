@@ -10,7 +10,7 @@ import 'package:trotter/trotter.dart';
 import 'package:validator/constants.dart';
 
 /// Returns all the available exercise languages.
-List<String> get locales => ['en', 'it'];
+List<String> get locales => ['en', 'it', 'de', 'es', 'fr', 'pl', 'pt', 'ru'];
 
 /// The list of currently supported programming languages
 const supportedProgrammingLanguages = <String>{

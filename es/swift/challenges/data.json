@@ -1,0 +1,62 @@
+{
+  "addition": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "atm": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "hello_world": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "raindrops": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "sum_digits": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "two_for_one": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "100_doors": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "ackermann_function": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "arithmetic_mean": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "fizz_buzz": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "roman_numeral_converter": {
+    "order": null,
+    "title": "",
+    "description": ""
+  },
+  "leap_year": {
+    "order": null,
+    "title": "",
+    "description": ""
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Salida",
+        "description": "Aprende cómo mostrar un valor"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Cadenas Formateadas",
+        "description": "Aprende cómo formatear cadenas con diferentes tipos de datos"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Aprende cómo almacenar valores en una variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleanos",
+        "description": "Aprende cómo evaluar cualquier expresión"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operadores Aritméticos",
+        "description": "Aprende cómo realizar operaciones aritméticas sobre variables y valores"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operadores de Asignación",
+        "description": "Aprende cómo asignar valores a variables"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Operadores Relacionales y Booleanos",
+        "description": "Aprende cómo comparar valores"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Sentencias Condicionales",
+        "description": "Aprende cómo tomar decisiones"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Bucles While",
+        "description": "Aprende cómo repetir un conjunto de sentencias"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Bucles For",
+        "description": "Aprende cómo repetir un conjunto de sentencias"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Arreglos",
+        "description": "Aprende cómo almacenar diferentes valores en una variable"
+    },
+    "functions": {
+        "order": 12,
+        "title": "Funciones",
+        "description": "Aprende cómo dividir el código en tareas específicas"
+    }
+}

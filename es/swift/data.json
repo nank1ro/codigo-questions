@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Salida",
+        "description": "Aprende como mostrar un valor"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "Interpolacion de cadenas",
+        "description": "Aprende como interpolar cadenas con diferentes tipos de datos"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Aprende como almacenar valores en una variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleanos",
+        "description": "Aprende como evaluar cualquier expresion"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operadores aritmeticos",
+        "description": "Aprende como realizar operaciones aritmeticas en variables y valores"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operadores de asignacion",
+        "description": "Aprende como asignar valores a variables"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "Operadores de comparacion y logicos",
+        "description": "Aprende como comparar valores"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Sentencias condicionales",
+        "description": "Aprende como tomar decisiones"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Bucles while",
+        "description": "Aprende como repetir un conjunto de sentencias"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Bucles for",
+        "description": "Aprende como repetir un conjunto de sentencias"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Arreglos",
+        "description": "Aprende como almacenar diferentes valores en una variable"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Diccionarios",
+        "description": "Aprende como almacenar valores con claves"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funciones",
+        "description": "Aprende como dividir el codigo en tareas especificas"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Enumeraciones",
+        "description": "Aprende como crear un tipo comun para un grupo de valores relacionados"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Clases",
+        "description": "Aprende programacion orientada a objetos"
+    }
+}

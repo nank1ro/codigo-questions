@@ -1,0 +1,94 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "Suma"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "Cajero automático"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "¡Hola, mundo!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "Gotas de lluvia"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "Suma de dígitos"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "Dos por uno"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 puertas"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Función de Ackermann"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Múltiplos de 3 o 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Números pares de Fibonacci"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Mayor factor primo"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Mayor producto palíndromo"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "Múltiplo más pequeño"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Diferencia de suma de cuadrados"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "Primo 10001"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Mayor producto en una serie"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Triplete pitagórico especial"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Suma de primos"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "Media aritmética",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "Conversor de números romanos",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "Año bisiesto",
+    "isPro": true
+  }
+}
