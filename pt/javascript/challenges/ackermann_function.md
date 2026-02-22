@@ -17,7 +17,7 @@ Its arguments are never negative and it always terminates
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Write a function which returns o valor of the Ackermann function.
 
 # --before-seed--
 
