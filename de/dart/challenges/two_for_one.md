@@ -7,15 +7,15 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Gegeben ein Name, geben Sie einen String mit der Nachricht zuruck:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Wo `X` der gegebene Name ist.
+Wenn jedoch der Name fehlt, geben Sie den String zuruck:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Schreiben Sie eine Funktion, die den korrekten String zuruckgibt, Beispiele:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -30,7 +30,7 @@ Write a function that returns the correct string, examples:
 
 ```dart
 String twoForOne() {
-  
+
 }
 ```
 
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-No name given
+Kein Name angegeben
 
 ```dart
   test('test1', () {
@@ -54,7 +54,7 @@ No name given
   });
 ```
 
-Pass "James" as name
+Geben Sie "James" als Name an
 
 ```dart
   test('test2', () {
@@ -62,7 +62,7 @@ Pass "James" as name
   });
 ```
 
-Pass "Martha" as name
+Geben Sie "Martha" als Name an
 
 ```dart
   test('test3', () {

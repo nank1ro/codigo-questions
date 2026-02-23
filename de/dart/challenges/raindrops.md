@@ -7,25 +7,25 @@ title: Raindrops
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+Ihre Aufgabe ist es, eine Zahl in einen String umzuwandeln, der Regenpfropfgerausche enthalt, die bestimmten potenziellen Faktoren entsprechen.
+Ein Faktor ist eine Zahl, die eine andere Zahl gleichmig teilt, ohne einen Rest zu hinterlassen.
+Die einfachste Methode zu testen, ob eine Zahl ein Faktor einer anderen ist, ist die Verwendung der Modulo-Operation.
+Die Regeln fur Regenpfropfe sind, dass, wenn eine gegebene Zahl:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3 als Faktor hat, fugen Sie 'Pling' zum Ergebnis hinzu.
+- 5 als Faktor hat, fugen Sie 'Plang' zum Ergebnis hinzu.
+- 7 als Faktor hat, fugen Sie 'Plong' zum Ergebnis hinzu.
+- keinen der Faktoren 3, 5 oder 7 hat, sollte das Ergebnis die Ziffern der Zahl sein.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Schreiben Sie eine Funktion, die den korrekten String zuruckgibt, Beispiele:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 hat 7 als Faktor, aber nicht 3 oder 5, also ware das Ergebnis `"Plong"`.
+- 30 hat sowohl 3 als auch 5 als Faktoren, aber nicht 7, also ware das Ergebnis `"PlingPlang"`.
+- 34 ist nicht durch 3, 5 oder 7 teilbar, also ware das Ergebnis `"34"`.
 
-Example of function call:
+Beispiel fur einen Funktionsaufruf:
 ```dart
 print(raindrops(28))
 // prints "Plong"
@@ -51,7 +51,7 @@ void main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+Das Gerausche fur 1 ist "1"
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The sound for 1 is "1"
   });
 ```
 
-The sound for 3 is "Pling"
+Das Gerausche fur 3 ist "Pling"
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The sound for 3 is "Pling"
   });
 ```
 
-The sound for 5 is "Plang"
+Das Gerausche fur 5 ist "Plang"
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The sound for 5 is "Plang"
   });
 ```
 
-The sound for 7 is "Plong"
+Das Gerausche fur 7 ist "Plong"
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The sound for 7 is "Plong"
   });
 ```
 
-The sound for 6 is "Pling"
+Das Gerausche fur 6 ist "Pling"
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The sound for 6 is "Pling"
   });
 ```
 
-The sound for 8 is "8"
+Das Gerausche fur 8 ist "8"
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The sound for 8 is "8"
   });
 ```
 
-The sound for 9 is "Pling"
+Das Gerausche fur 9 ist "Pling"
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The sound for 9 is "Pling"
   });
 ```
 
-The sound for 10 is "Plang"
+Das Gerausche fur 10 ist "Plang"
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The sound for 10 is "Plang"
   });
 ```
 
-The sound for 14 is "Plong"
+Das Gerausche fur 14 ist "Plong"
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The sound for 14 is "Plong"
   });
 ```
 
-The sound for 15 is "PlingPlang"
+Das Gerausche fur 15 ist "PlingPlang"
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The sound for 15 is "PlingPlang"
   });
 ```
 
-The sound for 21 is "PlingPlong"
+Das Gerausche fur 21 ist "PlingPlong"
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The sound for 21 is "PlingPlong"
   });
 ```
 
-The sound for 25 is "Plang"
+Das Gerausche fur 25 ist "Plang"
 
 ```dart
   test('test12', () {
@@ -147,7 +147,7 @@ The sound for 25 is "Plang"
   });
 ```
 
-The sound for 27 is "Pling"
+Das Gerausche fur 27 ist "Pling"
 
 ```dart
   test('test13', () {
@@ -155,7 +155,7 @@ The sound for 27 is "Pling"
   });
 ```
 
-The sound for 35 is "PlangPlong"
+Das Gerausche fur 35 ist "PlangPlong"
 
 ```dart
   test('test14', () {
@@ -163,7 +163,7 @@ The sound for 35 is "PlangPlong"
   });
 ```
 
-The sound for 49 is "Plong"
+Das Gerausche fur 49 ist "Plong"
 
 ```dart
   test('test15', () {
@@ -171,7 +171,7 @@ The sound for 49 is "Plong"
   });
 ```
 
-The sound for 52 is "52"
+Das Gerausche fur 52 ist "52"
 
 ```dart
   test('test16', () {
@@ -179,7 +179,7 @@ The sound for 52 is "52"
   });
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Das Gerausche fur 105 ist "PlingPlangPlong"
 
 ```dart
   test('test17', () {
@@ -187,7 +187,7 @@ The sound for 105 is "PlingPlangPlong"
   });
 ```
 
-The sound for 3125 is "Plang"
+Das Gerausche fur 3125 ist "Plang"
 
 ```dart
   test('test18', () {

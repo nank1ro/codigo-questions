@@ -7,13 +7,13 @@ title: Arithmetic mean
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Schreiben Sie eine Funktion namens `mean`, um das _arithmetische Mittel_ eines numerischen Vektors zu finden.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Schreiben Sie eine Funktion, die das Mittel eines numerischen Vektors zuruckgibt.
 
-Example of function call:
+Beispiel fur einen Funktionsaufruf:
 ```dart
 print(mean([1, 2, 3]));
 // prints 2.0
@@ -23,7 +23,7 @@ print(mean([1, 2, 3]));
 
 ```dart
 num mean() {
-  
+
 }
 ```
 
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+Das Mittel von `[1, 2, 3, 4, 5, 6, 7]` muss gleich 4.0 sein
 
 ```dart
   test('test1', () {
@@ -47,7 +47,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
   });
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+Das Mittel von `[4, 5, 6]` muss gleich 5.0 sein
 
 ```dart
   test('test2', () {
@@ -55,7 +55,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
   });
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+Das Mittel von `[12, 34, 56, 78]` muss gleich 45.0 sein
 
 ```dart
   test('test3', () {

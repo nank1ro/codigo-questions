@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Erstellen Sie eine Funktion, die eine Zahl als Argument entgegennimmt und `"Fizz"`, `"Buzz"` oder `"FizzBuzz"` zuruckgibt.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Wenn die Zahl ein Vielfaches von `3` ist, sollte die Ausgabe `"Fizz"` sein
+- Wenn die gegebene Zahl ein Vielfaches von `5` ist, sollte die Ausgabe `"Buzz"` sein.
+- Wenn die gegebene Zahl ein Vielfaches von sowohl `3` als auch `5` ist, sollte die Ausgabe `"FizzBuzz"` sein.
+- Wenn die Zahl kein Vielfaches von entweder `3` oder `5` ist, sollte die Zahl selbst ausgegeben werden, wie in den folgenden Beispielen gezeigt.
+- Die Ausgabe sollte immer ein String sein, auch wenn sie kein Vielfaches von `3` oder `5` ist.
 
-Examples:
+Beispiele:
 ```dart
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -29,7 +29,7 @@ fizz_buzz(4); // ➞ "4"
 
 ```dart
 String fizzBuzz() {
-  
+
 }
 ```
 
@@ -45,7 +45,7 @@ void main() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Die Zahl `3` muss gleich `"Fizz"` sein
 
 ```dart
   test('test1', () {
@@ -53,7 +53,7 @@ The number `3` must equal `"Fizz"`
   });
 ```
 
-The number `5` must equal `"Buzz"`
+Die Zahl `5` muss gleich `"Buzz"` sein
 
 ```dart
   test('test2', () {
@@ -61,7 +61,7 @@ The number `5` must equal `"Buzz"`
   });
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Die Zahl `15` muss gleich `"FizzBuzz"` sein
 
 ```dart
   test('test3', () {
@@ -69,7 +69,7 @@ The number `15` must equal `"FizzBuzz"`
   });
 ```
 
-The number `10` must equal `"Buzz"`
+Die Zahl `10` muss gleich `"Buzz"` sein
 
 ```dart
   test('test4', () {
@@ -77,7 +77,7 @@ The number `10` must equal `"Buzz"`
   });
 ```
 
-The number `98` must equal `"98"`
+Die Zahl `98` muss gleich `"98"` sein
 
 ```dart
   test('test5', () {

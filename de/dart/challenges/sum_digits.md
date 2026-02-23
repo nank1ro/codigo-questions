@@ -7,14 +7,14 @@ title: Sum of digits
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+Sie erhalten eine Ganzzahl `N`.
+Schreiben Sie ein Programm, um die Summe aller Ziffern von N zu berechnen
 
 # --instructions--
 
-Return the sum of digits of `N`.
+Geben Sie die Summe der Ziffern von `N` zuruck.
 
-Example of function call:
+Beispiel fur einen Funktionsaufruf:
 ```dart
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ void main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Die Summe der Ziffern von 12345 ist 15
 
 ```dart
   test('test1', () {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
   });
 ```
 
-The sum of the digits of 57253 is 22
+Die Summe der Ziffern von 57253 ist 22
 
 ```dart
   test('test2', () {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
   });
 ```
 
-The sum of the digits of 122 is 5
+Die Summe der Ziffern von 122 ist 5
 
 ```dart
   test('test3', () {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
   });
 ```
 
-The sum of the digits of 91979997 is 60
+Die Summe der Ziffern von 91979997 ist 60
 
 ```dart
   test('test4', () {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
   });
 ```
 
-The sum of the digits of 2147483647 is 46
+Die Summe der Ziffern von 2147483647 ist 46
 
 ```dart
   test('test5', () {

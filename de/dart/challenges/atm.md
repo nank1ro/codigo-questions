@@ -7,20 +7,20 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+James mochte N Dollar von einem Geldautomaten abheben.
+Der Geldautomat akzeptiert die Transaktion nur, wenn N ein Vielfaches von 5 ist und James' Konto genug Geld hat, um die Abhebetransaktion durchzufuhren (einschlieich der Bankgebuhren).
+Fur jede erfolgreiche Abhebung berechnet die Bank `0,50 $`.
+Berechnen Sie das Guthaben auf James' Konto nach einem versuchten Handel.
+Die Eingaben sind in folgender Reihenfolge:
+1. Der Betrag, den James abheben mochte, liegt im folgenden Bereich: `0 < N <= 2000`.
+2. James' Anfangsguthaben wird mit zwei Dezimalstellen angegeben und liegt im folgenden Bereich: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Geben Sie das Kontoguthaben nach dem versuchten Handel zuruck, angegeben als eine Zahl mit zwei Dezimalstellen.
+Wenn nicht genug Geld auf dem Konto vorhanden ist, um die Transaktion abzuschlieen, geben Sie das aktuelle Bankguthaben zuruck.
 
-Example of function call:
+Beispiel fur einen Funktionsaufruf:
 ```dart
 print(accountBalance(10, 20.00))
 // prints 9.5
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-Perform a successful transaction
+Fuhren Sie eine erfolgreiche Transaktion durch
 
 ```dart
     test('test1', () {
@@ -54,7 +54,7 @@ Perform a successful transaction
     });
 ```
 
-Insufficient funds
+Unzureichende Mittel
 
 ```dart
     test('test2', () {
@@ -62,7 +62,7 @@ Insufficient funds
     });
 ```
 
-Refused transaction, invalid amount
+Abgelehnte Transaktion, ungultiger Betrag
 
 ```dart
     test('test3', () {
@@ -70,7 +70,7 @@ Refused transaction, invalid amount
     });
 ```
 
-Withdraw all money successfully
+Heben Sie erfolgreich das gesamte Geld ab
 
 ```dart
     test('test4', () {

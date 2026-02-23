@@ -7,15 +7,15 @@ title: Leap Year
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+In einem Kalenderjahr gibt es genau 365,25 Tage. Das wird aber fruher oder spater zu Verwirrung fuhren, da Menschen normalerweise mit exakter Teilbarkeit durch 1 zahlen und nicht mit Dezimalstellen. Um Letzteres zu vermeiden, wurde beschlossen, alle 0,25 Tage alle vier Jahre zusammenzufassen und diesem Jahr 366 Tage zu geben (einschlieich des 29. Februar als Schalttag) und es __Schaltjahr__ zu nennen. Die anderen drei Jahre im Vierjahreszyklus wurden nur 365 Tage enthalten und __keine Schaltjahre__ sein.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `DateTime` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+In dieser Herausforderung werden wir es auf eine neue Stufe heben, bei der Sie bestimmen mussen, ob es ein Schaltjahr ist oder nicht, ohne die `DateTime`-Klasse, `switch`-Anweisungen, __if-Blocke__, __if-else-Blocke__ oder __ternaren Operation__ (`x ? a : b`) sowie die logischen Operatoren __UND__ (`&&`) und __ODER__ (`||`) mit Ausnahme des __NICHT__ (`!`) Operators zu verwenden.
 
-Return `true` if it's a leap year, `false` otherwise.
+Geben Sie `true` zuruck, wenn es ein Schaltjahr ist, andernfalls `false`.
 
-Example of function call:
+Beispiel fur einen Funktionsaufruf:
 ```dart
 print(leapYear(2000));
 // prints true
@@ -25,7 +25,7 @@ print(leapYear(2000));
 
 ```dart
 bool leapYear(int year) {
-  
+
 }
 ```
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+Die Verwendung von `DateTime`, `switch`, `if`, `else`, `&&`, `||` oder `?` ist nicht erlaubt.
 
 ```json
 {
@@ -51,7 +51,7 @@ The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+Das Jahr `2016` ist ein Schaltjahr.
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The year `2016` is a leap year.
   });
 ```
 
-The year `1996` is a leap year.
+Das Jahr `1996` ist ein Schaltjahr.
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The year `1996` is a leap year.
   });
 ```
 
-The year `1600` is a leap year.
+Das Jahr `1600` ist ein Schaltjahr.
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The year `1600` is a leap year.
   });
 ```
 
-The year `2020` is a leap year.
+Das Jahr `2020` ist ein Schaltjahr.
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The year `2020` is a leap year.
   });
 ```
 
-The year `2000` is a leap year.
+Das Jahr `2000` ist ein Schaltjahr.
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The year `2000` is a leap year.
   });
 ```
 
-The year `2008` is a leap year.
+Das Jahr `2008` ist ein Schaltjahr.
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The year `2008` is a leap year.
   });
 ```
 
-The year `1521` is not a leap year.
+Das Jahr `1521` ist kein Schaltjahr.
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The year `1521` is not a leap year.
   });
 ```
 
-The year `1800` is not a leap year.
+Das Jahr `1800` ist kein Schaltjahr.
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The year `1800` is not a leap year.
   });
 ```
 
-The year `2007` is not a leap year.
+Das Jahr `2007` ist kein Schaltjahr.
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The year `2007` is not a leap year.
   });
 ```
 
-The year `2002` is not a leap year.
+Das Jahr `2002` ist kein Schaltjahr.
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The year `2002` is not a leap year.
   });
 ```
 
-The year `1979` is not a leap year.
+Das Jahr `1979` ist kein Schaltjahr.
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The year `1979` is not a leap year.
   });
 ```
 
-The year `2006` is not a leap year.
+Das Jahr `2006` ist kein Schaltjahr.
 
 ```dart
   test('test12', () {

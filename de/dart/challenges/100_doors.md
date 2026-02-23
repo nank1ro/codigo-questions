@@ -7,17 +7,17 @@ title: 100 doors
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+Es gibt 100 Turen in einer Reihe, die alle anfangs geschlossen sind.
+Sie machen 100 Vorbeigange an den Turen.
+Beim ersten Mal besuchen Sie jede Tur und 'schalten' sie um (wenn die Tur geschlossen ist, offnen Sie sie; wenn sie offen ist, schlieen Sie sie).
+Beim zweiten Mal besuchen Sie nur jede 2. Tur (d. h. Tur #2, #4, #6, ...) und schalten sie um.
+Beim dritten Mal besuchen Sie jede 3. Tur (d. h. Tur #3, #6, #9, ...), usw., bis Sie nur die 100. Tur besuchen.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Implementieren Sie eine Funktion, um den Zustand der Turen nach dem letzten Durchgang zu bestimmen.
+Geben Sie das Endergebnis in einem Array zuruck, wobei nur die Turnummer in das Array aufgenommen wird, wenn sie offen ist.
+> Die Methode muss in der Lage sein, mit einer variablen Anzahl von Turen zu arbeiten.
 
 # --seed--
 
@@ -25,7 +25,7 @@ Return the final result in an array, with only the door number included in the a
 import 'dart:math';
 
 List<int> getFinalOpenedDoors(numDoors: Int) {
-    
+
 }
 ```
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Gegeben 100 Turen, geben Sie die korrekte Liste der offenen Turen zuruck
 
 ```dart
     test("test1", () {
@@ -51,7 +51,7 @@ Given 100 doors, return the correct list of open doors
     });
 ```
 
-Given 10 doors, return the correct list of open doors
+Gegeben 10 Turen, geben Sie die korrekte Liste der offenen Turen zuruck
 
 ```dart
     test("test2", () {
@@ -60,7 +60,7 @@ Given 10 doors, return the correct list of open doors
     });
 ```
 
-Given 950 doors, return the correct list of open doors
+Gegeben 950 Turen, geben Sie die korrekte Liste der offenen Turen zuruck
 
 ```dart
     test("test3", () {
