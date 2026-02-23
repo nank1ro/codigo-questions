@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Os operadores são usados para realizar operações em variáveis e valores.
+Vamos começar com the arithmetic operators, in particular with the **addition** `+` operator.
+É usado para somar dois números, like:
 ```
 >>> 5 + 3
 8
@@ -9,7 +9,7 @@ It is used to add two numbers, like:
 ---
 
 Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+É usado para subtract one number from another, like:
 ```
 >>> 5 - 3
 2
@@ -18,7 +18,7 @@ It is used to subtract one number from another, like:
 ---
 
 Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+É usado para multiplicar dois números together, like:
 ```
 >>> 5 * 3
 15
@@ -27,7 +27,7 @@ It is used to multiply two numbers together, like:
 ---
 
 Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+É usado para dividir dois números together, like:
 ```c
 >>> 10 / 5
 2
@@ -36,7 +36,7 @@ It is used to divide two numbers together, like:
 ---
 
 Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+É usado para find the remainder after a division between two numbers, like:
 ```
 >>> 5 % 2
 1

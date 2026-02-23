@@ -17,7 +17,7 @@ El valor de retorno se convierte a una cadena (String) y se inserta en la cadena
 
 ---
 
-Si pones un `$` antes de un nombre de identificador, la interpolación de cadenas insertará el contenido de ese identificador en la `String`
+También podemos insertar variables después del signo de dólar para mostrar su valor
 
 ---
 
@@ -25,20 +25,4 @@ Si lo que sigue al signo `$` no es reconocible como un identificador del program
 
 ---
 
-También podemos insertar variables después del signo de dólar para mostrar su valor
-
----
-
-Podemos usar llaves para insertar valores tantas veces como queramos usando la interpolación de cadenas
-
----
-
-Dentro de los `${}` también podemos poner condiciones, por ejemplo:
-```dart
-print("La respuesta es ${true ? "correcta": "incorrecta"}");
-// imprime La respuesta es correcta
-```
-
----
-
-La interpolación de cadenas se usa mejor en declaraciones de impresión, pero también podemos almacenarlas en variables como cadenas normales.
+Si lo que sigue al signo `$` no es reconocible como un identificador del programa, encontrarás un error

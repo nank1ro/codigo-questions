@@ -93,17 +93,17 @@ for (char in 'a'..'z') print(char)
 
 ---
 
-Você pode iterar sobre uma __String__.
+You can iterate over a __String__.
 ```kotlin
 for (char in 'abc') print(char + 1)
-// imprime bdc
+// prints bdc
 ```
 
-No exemplo acima imprimimos cada caractere + 1, então `'a'` torna-se `'b'`, `'b'` torna-se `'c'` e assim por diante.
+In the example above we've printed each character + 1, so `'a'` becomes `'b'`, `'b'` becomes `'c'` and so on.
 
-Isso é possível porque os caracteres são armazenados como números correspondentes aos seus [Códigos ASCII](https://en.wikipedia.org/wiki/ASCII).
+This is possibile because characters are stored as numbers corresponding to their [ASCII Codes](https://en.wikipedia.org/wiki/ASCII).
 
-Portanto, adicionar um número inteiro a um caractere produz um novo caractere correspondente ao novo valor de código.
+So adding an integer to a character produces a new character corresponding to the new code value.
 
 ---
 
@@ -126,29 +126,12 @@ repeat(3) { index ->
 
 ---
 
-Em Kotlin podemos usar o `for-in` também para coleções iteráveis chamando o fechamento dado em cada elemento:
+In Kotlin we can use the `for-in` also for iterable collections calling the given closure on each element:
 ```kotlin
-// isso é uma lista, veremos sobre isso em breve
-val numbers = listOf(2, 4, 6, 8, 10)
+// this is a list, we'll see about that soon
+val numbers = listOf(2, 4, 6, 8, 10) 
 for (num in numbers) {
     println(num)
 }
-// imprime (2, 4, 6, 8, 10)
+// prints (2, 4, 6, 8, 10)
 ```
-
----
-
-Em Kotlin também temos o loop `forEach`.
-Ele chama o fechamento dado em cada elemento na sequência na mesma ordem que um loop `for-in`:
-
-```kotlin
-// isso é uma lista, veremos sobre isso em breve
-val numbers = listOf(1, 3, 5, 7, 9)
-numbers.forEach {
-    println(it)
-}
-```
-
-Usar o método `forEach` é distinto de um loop `for-in` de duas maneiras importantes:
-1. As declarações `break` ou `continue` não podem ser usadas para sair da chamada atual do fechamento do corpo ou para pular chamadas subsequentes. (_Na verdade é possível com anotações, mas é um tópico um pouco mais complexo que não veremos agora._)
-2. Usar a declaração `return` no fechamento do corpo só sairá do fechamento e não do escopo externo, e não pulará chamadas subsequentes.

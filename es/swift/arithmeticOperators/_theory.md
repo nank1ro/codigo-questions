@@ -1,0 +1,43 @@
+Los operadores se utilizan para realizar operaciones en variables y valores.
+Comencemos con los operadores aritméticos, en particular con el **addition** `+` operador.
+Se usa para sumar dos números, por ejemplo:
+```swift
+print(5 + 3) // 8
+```
+
+---
+
+Let's continue with the **subtraction** `-` operator.
+It is used to subtract one number from another, like:
+```swift
+print(5 - 3) // 2
+```
+
+---
+
+Let's see the **multiplication** `*` operator.
+Se usa para multiplicar dos números together, like:
+```swift
+print(5 * 3) // 15
+```
+
+---
+
+Let's see the **division** `/` operator.
+Se usa para dividir dos números together, like:
+```swift
+print(10 / 5) // 2
+```
+
+---
+
+Let's see the **remainder** `%` operator.
+It is used to find the remainder after a division between two numbers, like:
+```swift
+print(5 % 2) // 1
+```
+This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+```swift
+print(9 % 3) // 0
+```
+This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0

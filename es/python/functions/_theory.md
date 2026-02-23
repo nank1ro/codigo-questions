@@ -1,4 +1,4 @@
-Es posible que hayas considerado la situación en la que te gustaría reutilizar un pedazo de código, solo con algunos valores diferentes.
+Puede que hayas considerado la situación en la que te gustaría reutilizar un pedazo de código, solo con algunos valores diferentes.
 En lugar de reescribir todo el código, es mucho más limpio definir una función, que luego puede ser usada repetidamente.
 En Python usamos la palabra clave `def` seguida del nombre de la función:
 ```python
@@ -8,13 +8,13 @@ def say_hi():
 
 ---
 
-Los paréntesis en la __definición de función__ no tienen por qué estar vacíos.
-Dentro de ellos, podemos especificar parámetros
+A veces queremos que una función __devuelva__ un valor.
+Bueno, está la palabra clave `return`
 
 ---
 
-A veces queremos que una función __devuelva__ un valor.
-Bueno, está la palabra clave `return`
+Los paréntesis en la __definición de función__ no tienen por qué estar vacíos.
+Dentro de ellos, podemos especificar parámetros
 
 ---
 

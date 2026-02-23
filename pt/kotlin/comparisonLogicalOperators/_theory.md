@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+Vamos comear com o operador de comparao **igual** `==`.
+Ele retorna um **boolean** (`true` ou `false`) indicando se duas expresses so iguais, por exemplo:
 ```kotlin
 println(2 == 2) // true
 println(2 == 3) // false

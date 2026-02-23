@@ -1,49 +1,49 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Les opérateurs sont utilisés pour effectuer des opérations sur des variables et des valeurs.
+Commençons par les opérateurs arithmétiques, en particulier par l'opérateur d'**addition** `+`.
+Il est utilisé pour additionner deux nombres, par exemple :
 ```javascript
 console.log(5 + 3);
-// prints 8
+// affiche 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Continuons avec l'opérateur de **soustraction** `-`.
+Il est utilisé pour soustraire un nombre d'un autre, par exemple :
 ```javascript
 console.log(5 - 3);
-// prints 2
+// affiche 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Voyons l'opérateur de **multiplication** `*`.
+Il est utilisé pour multiplier deux nombres ensemble, par exemple :
 ```javascript
 console.log(5 * 3);
-// prints 15
+// affiche 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Voyons l'opérateur de **division** `/`.
+Il est utilisé pour diviser deux nombres ensemble, par exemple :
 ```javascript
 console.log(10 / 5);
-// prints 2
+// affiche 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Voyons l'opérateur de **reste** `%`.
+Il est utilisé pour trouver le reste après une division entre deux nombres, par exemple :
 ```javascript
 console.log(5 % 2);
-// prints 1
+// affiche 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Cela évalue à 1 car 5 divisé par 2 a un quotient de 2 et un reste de 1
 ```javascript
 console.log(9 % 3);
-// prints 0
+// affiche 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Cela évalue à 0 car 9 divisé par 3 a un quotient de 3 et laisse un reste de 0

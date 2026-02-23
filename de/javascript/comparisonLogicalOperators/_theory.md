@@ -1,7 +1,7 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+Lassen Sie uns mit dem **Gleich** `==` Vergleichsoperator beginnen.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob zwei Ausdrucke gleich sind, zum Beispiel:
 ```javascript
-console.log(2 == 2); 
+console.log(2 == 2);
 // prints true
 console.log(2 == 3);
 // prints false
@@ -9,20 +9,20 @@ console.log(2 == 3);
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+Fahren wir mit dem **Ungleich** `!=` Vergleichsoperator fort.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob zwei Ausdrucke **NICHT** gleich sind, zum Beispiel:
 ```javascript
 console.log(2 != 2);
 // prints false
-console.log(2 != 3); 
+console.log(2 != 3);
 // prints true
 ```
-It is exactly the opposite of the *equal* operator
+Er ist genau das Gegenteil des *Gleich*-Operators
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+Fahren wir mit dem **Groer als** `>` Vergleichsoperator fort.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck groer als der andere ist, zum Beispiel:
 ```javascript
 console.log(2 > 2);
 // prints false
@@ -32,8 +32,8 @@ console.log(3 > 2);
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+Fahren wir mit dem **Kleiner als** `<` Vergleichsoperator fort.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck kleiner als der andere ist, zum Beispiel:
 ```javascript
 console.log(2 < 2);
 // prints false
@@ -43,10 +43,10 @@ console.log(2 < 3);
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+Fahren wir mit dem **Groer oder gleich** `>=` Vergleichsoperator fort.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck groer oder gleich dem anderen ist, zum Beispiel:
 ```javascript
-console.log(2 >= 2); 
+console.log(2 >= 2);
 // prints true
 console.log(3 >= 2);
 // prints true
@@ -56,10 +56,10 @@ console.log(3 >= 4);
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+Fahren wir mit dem **Kleiner oder gleich** `<=` Vergleichsoperator fort.
+Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck kleiner oder gleich dem anderen ist, zum Beispiel:
 ```javascript
-console.log(2 <= 2); 
+console.log(2 <= 2);
 // prints true
 console.log(3 <= 2);
 // prints false
@@ -69,8 +69,8 @@ console.log(3 <= 4);
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Lassen Sie uns nun die **logischen** Operatoren sehen, beginnen wir mit dem ersten namens __UND__ `&&`.
+Er gibt den ersten Operanden zuruck, der zu *false* auswertet, oder den letzten, wenn alle *true* sind.
 ```javascript
 console.log(2 == 2 && 2 == 3);
 // prints false
@@ -80,8 +80,8 @@ console.log(1 == 1 && 1 == 1.0);
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Fahren wir mit dem **oder** `||` logischen Operator fort.
+Er gibt den ersten Operanden zuruck, der zu *true* auswertet, oder den letzten, wenn alle *false* sind.
 ```javascript
 console.log(2 == 2 || 2 == 3);
 // prints true
@@ -91,8 +91,8 @@ console.log(1 == 2 || 1 == 3);
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Lassen Sie uns mit dem **nicht** `!` logischen Operator beenden.
+Er gibt einen Boolean zuruck, der das Gegenteil des logischen Zustands eines Ausdrucks ist.
 ```javascript
 console.log(!true);
 // prints false

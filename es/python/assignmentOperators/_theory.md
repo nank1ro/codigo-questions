@@ -56,6 +56,7 @@ numero /= 5
 ---
 
 Veamos el operador de **asignación de potencia** `**=`.
+
 Eleva la variable a una potencia especificada y asigna el resultado a la variable.
 Por lo tanto, los siguientes son exactamente iguales
 ```python
@@ -67,6 +68,7 @@ numero **= 5
 ---
 
 Veamos el operador de **asignación de módulo** `%=`.
+
 Calcula el módulo de la variable y un valor y asigna el resultado a esa variable.
 Por lo tanto, los siguientes son exactamente iguales
 ```python
@@ -78,6 +80,7 @@ numero %= 5
 ---
 
 Veamos el operador de **asignación de división entera** `//=`.
+
 Divide la variable por un valor usando división entera y asigna el resultado a esa variable.
 Por lo tanto, los siguientes son exactamente iguales
 ```python

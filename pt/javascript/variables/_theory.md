@@ -8,7 +8,7 @@ An example of a variable creation named `x` is:
 ```javascript
 var x = 1;
 ```
-In this way we have assigned the value `1` to the variable named `x`.
+In this way we have assigned o valor `1` to the variable named `x`.
 If we print the variable `x` we get back the number `1`:
 ```javascript
 console.log(x);
@@ -17,7 +17,7 @@ console.log(x);
 
 ---
 
-Variables are called in this way because the value they store can change.
+Variables are called in this way because o valor they store can change.
 We can update `x` by using `=` and giving it a new value.
 ```javascript
 var x = 1;
@@ -28,8 +28,8 @@ console.log(x); // prints 2
 
 ---
 
-We can also give variables the values of other variables.
-Here, we can give to the `y` variable the value of `x`
+We can also give variables o valors of other variables.
+Here, we can give to the `y` variable o valor of `x`
 ```javascript
 var x = 5;
 var y = x;

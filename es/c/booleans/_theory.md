@@ -1,5 +1,5 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+Los booleanos representan uno de dos valores: `true` o `false`.
+Puedes evaluar cualquier expresión en C y obtener una de dos respuestas, `true` o `false`.
 
 ---
 

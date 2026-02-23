@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in C is an object and like other programming languages, C has commands for declaring a variable.
-To create a variable, we need to give it a **type** and a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+Las variables son contenedores para almacenar valores de datos.
+Cada variable en C es un objeto y, como otros lenguajes de programación, C tiene comandos para declarar una variable.
+Para crear una variable, necesitamos darle un **tipo** y un **nombre** teniendo en cuenta que no debe contener espacios.
+Una variable se crea en el momento en que le asignas un valor por primera vez.
+Un ejemplo de creación de variable llamada `x` es:
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
-If we print the variable `x` we get back the number `1`:
+De esta manera hemos asignado el valor `1` a la variable _entero_ llamada `x`.
+Si imprimimos la variable `x` obtenemos el número `1`:
 ```c
 >>> printf("%i\n", x);
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Las variables se llaman así porque el valor que almacenan puede cambiar.
+Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```c
 >>> x = 1;
 >>> printf("%i\n", x);

@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Operadores so usados para realizar operaes em variveis e valores.
+Vamos comear com os operadores aritmticos, em particular com o operador de **adio** `+`.
+Ele  usado para adicionar dois nmeros, como:
 ```kotlin
 println(5 + 3) // 8
 ```

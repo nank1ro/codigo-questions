@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Sabemos cómo repetir código usando un bucle `while`.
+Como este programa repitiendo sentencias para mostrar `hello`
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+Pero podemos hacer lo mismo con bucles `for`:
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");

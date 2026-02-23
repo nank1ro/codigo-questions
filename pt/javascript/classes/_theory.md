@@ -43,4 +43,4 @@ In dot syntax, you write the property name immediately after the instance name, 
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+Using the same syntax we can also update o valor of a property

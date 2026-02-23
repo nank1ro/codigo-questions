@@ -78,7 +78,7 @@ You can define the __step__ of your `for` loop using the `step` keyword.
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// imprime 1, 3, 5, 7, 9
 ```
 
 As you can see, the code-block runs with a step of _2_ instead of _1_, changing completely our output.

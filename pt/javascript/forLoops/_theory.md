@@ -1,4 +1,4 @@
-We know how to repeat code using a `while` loop.
+We know how to repetir código using a `while` loop.
 Like this program repeating statements to display `hello`
 ```javascript
 var counter = 0;
@@ -41,4 +41,4 @@ numbers.forEach((num) => console.log(num));}
 Using the `forEach` method is distinct from a `for` loop in two important ways:
 1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
 2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns o valor (if needed)

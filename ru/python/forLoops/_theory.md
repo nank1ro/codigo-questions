@@ -1,4 +1,4 @@
-We know how to repeat code using a `while` loop.
+We know how to повторения кода using a `while` loop.
 Like this program repeating statements to display `hello`
 ```python
 counter = 0

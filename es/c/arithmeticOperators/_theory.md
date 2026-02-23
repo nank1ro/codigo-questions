@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Los operadores se utilizan para realizar operaciones sobre variables y valores.
+Empecemos con los operadores aritméticos, en particular con el operador de **suma** `+`.
+Se usa para sumar dos números, como:
 ```
 >>> 5 + 3
 8

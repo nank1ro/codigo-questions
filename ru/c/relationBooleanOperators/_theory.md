@@ -1,4 +1,4 @@
-Let's start with the **equal** `==` relational operator.
+Начнем с the **equal** `==` relational operator.
 It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
 ```c
 >>> 2 == 2

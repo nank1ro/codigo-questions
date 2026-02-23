@@ -1,12 +1,12 @@
-`Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `List`s is that a `Set` allows only one element of each value.
+`Set`s so um tipo de dado que voc pode usar para armazenar uma coleo de diferentes partes de informaes como uma sequncia sob um nico nome de varivel.
+A principal diferena com `List`s  que um `Set` permite apenas um elemento de cada valor.
 
-Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to a set with an expression of the form:
+Como `List`s, um `Set` armazena mltiplos valores de um ou mltiplos tipos e usa **ndices** para distinguir estes valores.
+Voc pode atribuir itens a um conjunto com uma expresso da forma:
 ```kotlin
 val setName = setOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the set, for example, it can be `Int`, `String`, `Any`...
+`itemsType` representa o tipo dos itens dentro do conjunto, por exemplo, pode ser `Int`, `String`, `Any`...
 
 ---
 

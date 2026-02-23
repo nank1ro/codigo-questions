@@ -3,8 +3,8 @@ Los módulos nos permiten usar código una y otra vez.
 
 ---
 
-Existen muchos __módulos integrados__ que pueden ayudarnos con todo tipo de cosas, como trabajar con fechas y horas.
-Para incluir un módulo usamos la palabra clave `import`
+Un __módulo__ es un archivo que puede contener cualquier tipo de código Python.
+Los módulos nos permiten usar código una y otra vez.
 
 ---
 

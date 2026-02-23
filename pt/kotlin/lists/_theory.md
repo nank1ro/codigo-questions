@@ -1,25 +1,25 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an list with an expression of the form:
+Listas so um tipo de dado que voc pode usar para armazenar uma coleo de diferentes partes de informaes como uma sequncia sob um nico nome de varivel.
+Uma lista armazena mltiplos valores de um ou mltiplos tipos e usa **ndices** para distinguir estes valores.
+Voc pode atribuir itens a uma lista com uma expresso da forma:
 ```kotlin
 val listName = listOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the list, for example, it can be `Int`, `String`, `Any`...
+`itemsType` representa o tipo dos itens dentro da lista, por exemplo, pode ser `Int`, `String`, `Any`...
 
 ---
 
-A list is a collection of items with a specific order. There are two types of lists in Kotlin:
+Uma lista  uma coleo de itens com uma ordem especfica. Existem dois tipos de listas em Kotlin:
 
-- `List` cannot be modified after you create it.
-- `MutableList` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `List` no pode ser modificada depois que voc a cria.
+- `MutableList` pode ser modificada depois que voc a cria, significando que voc pode adicionar, remover ou atualizar seus elementos.
 
 ```kotlin
 val numbers = listOf(1, 3, 5)
 numbers.add(7) // [1]
 ```
-__[1]__ throws an Error because `List`s are _read-only_.
+__[1]__ lana um Erro porque `List`s so _somente leitura_.
 
-To create a modifiable list use the `mutableListOf` keyword
+Para criar uma lista modificvel use a palavra-chave `mutableListOf`
 ```kotlin
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
@@ -29,15 +29,15 @@ println(numbers)
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+Voc pode acessar um item individual da lista pelo seu ndice.
+Um ndice  como um endereo que identifica o lugar do item na lista.
+O ndice aparece diretamente aps o nome da lista, entre colchetes, assim:
 ```kotlin
 listName[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item of an list like this: `listName[0]` or `listName.get(0)` or even `listName.first()`.
-The second item in an list is at index __1__: `listName[1]`.
+Os ndices da lista comeam com `0`, **no** `1`! You access the first item of an list like this: `listName[0]` or `listName.get(0)` or even `listName.first()`.
+O segundo item em uma lista est no ndice __1__: `listName[1]`.
 
 ---
 

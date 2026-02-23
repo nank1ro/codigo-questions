@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+Em Python podemos usar o sinal `+` para exibir duas ou mais strings juntas, como:
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,24 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Strings formatadas nos permitem exibir expressões como adicionar uma string a um número, sem nenhum erro.
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+Mas usar o sinal `+` para adicionar um número como '10' a uma string como `"friends"` produz um erro, pois são tipos diferentes de valores
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+Inserir variáveis como `friends` entre as chaves exibe o valor delas também
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+Toda instrução de string formatada consiste em duas partes: primeiro o caractere `f`, depois a string que queremos formatar
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+Em seguida, adicionamos o diferente tipo de valor entre chaves para que seja exibido como uma instrução de impressão. Como aqui, com `{5}`
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
-
----
-
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+Podemos usar chaves para inserir valores quantas vezes quisermos dentro da string formatada

@@ -1,4 +1,4 @@
-Operators are used to perform operations on variables and values.
+Operatory są używane to perform operations on variables and values.
 Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
 It is used to add two numbers, like:
 ```

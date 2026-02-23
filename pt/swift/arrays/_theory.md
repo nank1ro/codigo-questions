@@ -1,5 +1,5 @@
 Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
+An array stores múltiplos valores of one or multiple types and uses **indexes** to distinguish these values.
 You can assign items to an array with an expression of the form:
 ```swift
 var arrayName: [itemsType] = [item1, item2]
@@ -118,7 +118,7 @@ for num in numbers {
 }
 // prints 1, 2, 3 
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+A variable name follows the `for` keyword, it will be assigned o valor of each array item in turn.
 
 ---
 

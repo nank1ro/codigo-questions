@@ -1,5 +1,5 @@
 Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
+A list stores нескольких значений of any type and uses **indexes** to distinguish these values.
 You can assign items to a list with an expression of the form:
 ```python
 list_name = [item1, item2]
@@ -113,7 +113,7 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+A variable name follows the `for` keyword, it will be assigned значение of each list item in turn.
 
 ---
 

@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**Dicionários** são similares a listas e tuplas, mas você acessa valores procurando uma *chave* em vez de um índice.
+Uma chave pode ser qualquer string ou número.
+Dicionários são delimitados por chaves, como:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Este é um dicionário chamado `d` com três *pares chave-valor*.
+A chave `key1` aponta para o valor `1`, `key2` para `2`, e assim por diante.
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+Acessar valores de dicionário por chave é como acessar valores de lista por índice:
 ```python
 user['age']
-# gets the age value from the user dictionary
+# obtém o valor age do dicionário user
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Como Listas, Dicionários são _mutáveis_.
+Isso significa que eles podem ser alterados após serem criados.
+Uma vantagem disso é que podemos adicionar novos _pares chave/valor_ ao dicionário após sua criação, como:
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+O comprimento `len()` de um dicionário é o número de _pares chave-valor_ que ele possui.
+Cada par conta apenas uma vez, mesmo que o valor seja uma lista. (Isso mesmo: você também pode colocar listas dentro de dicionários!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+Porque dicionários são mutáveis, eles podem ser alterados de muitas maneiras. Itens podem ser removidos de um dicionário com o comando `del`:
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+irá remover a chave `key_name` e seu valor associado do dicionário.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+E se quisermos listar todas as chaves do dicionário?
+Bem, existe o método `keys()`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+E se quisermos listar todos os valores do dicionário?
+Bem, existe o método `values()`.
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+Assim como para listas, podemos iterar entre elementos do dicionário usando as palavras-chave `for..in`
+Para obter tanto a chave quanto o valor no loop, podemos usar o método `items()`:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+Também podemos usar a palavra-chave `in` que usamos com loops para determinar se um dicionário contém certa __chave__
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+Para __adicionar__ ou __alterar__ valores a um dicionário, também podemos usar o método `update()` com os _pares chave-valor_ que queremos adicionar entre chaves
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+E se quisermos __remover__ um valor de um dicionário?
+Existe o método `pop()`:
 ```python
 dict_name.pop("key_name")
 ```

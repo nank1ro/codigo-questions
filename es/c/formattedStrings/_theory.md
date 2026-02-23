@@ -1,10 +1,10 @@
-In C we use the `printf` function with an expression in order to display two or more values together, like:
+En C usamos la función `printf` con una expresión para mostrar dos o más valores juntos, como:
 ```c
 >>> char c = 'C';
 >>> printf("Hello %c!\n", c);
 Hello C!
 ```
-`%c` is used to display a single character
+`%c` se usa para mostrar un solo carácter
 
 ---
 

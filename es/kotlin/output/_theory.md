@@ -7,5 +7,5 @@ println("Hello, World!")
 
 ---
 
-`println()` moves the cursor to a new line after displaying its parameter, so subsequent output appears on the next line.
-You can use `print()` instead, which leaves the cursor on the same line.
+`println()` mueve el cursor a una nueva línea después de mostrar su parámetro, así que la salida subsequente aparece en la siguiente línea.
+Puedes usar `print()` en su lugar, que deja el cursor en la misma línea.

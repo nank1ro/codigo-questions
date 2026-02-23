@@ -4,8 +4,8 @@ Objects are enclosed in curly brackets, like so:
 ```javascript
 var objectName = {"key1": 1, "key2": 2, "key3": 3};
 ```
-This is a dictionary called `objectName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+This is a dictionary called `objectName` with three *pares chave-valor*.
+The key `key1` points to o valor `1`, `key2` to `2`, and so on.
 
 ---
 
@@ -40,7 +40,7 @@ Well, these's the `Object.keys()` method.
 
 ---
 
-What if we want to list all the values of the dictionary?
+What if we want to list all o valors of the dictionary?
 Well, these's the `Object.values()` method.
 
 ---

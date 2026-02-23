@@ -1,4 +1,4 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Wir haben bereits gelernt, dass wir einer Variable einen Wert mit dem `=` Zeichen zuweisen können, wie:
 ```c
 int a = 5;
 ```

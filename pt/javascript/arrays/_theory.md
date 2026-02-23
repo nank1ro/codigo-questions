@@ -1,5 +1,5 @@
 Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
+An array stores múltiplos valores of one or multiple types and uses **indexes** to distinguish these values.
 You can assign items to an array with an expression of the form:
 ```javascript
 var arrayName = [item1, item2];
@@ -103,7 +103,7 @@ names.splice(1, 0, "Ali");
 // prints ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1.
-The second value `0` means _deleteCount_, in this case, we don't delete any item in the array; but if we had specified `1` the value `Zac` would have been removed from the array
+The second value `0` means _deleteCount_, in this case, we don't delete any item in the array; but if we had specified `1` o valor `Zac` would have been removed from the array
 
 ---
 
@@ -115,4 +115,4 @@ for (num of numbers) {
 }
 // prints 1, 2, 3 
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+A variable name follows the `for` keyword, it will be assigned o valor of each array item in turn.

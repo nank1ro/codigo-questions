@@ -1,15 +1,15 @@
-> Computers are ideal for repetitive tasks.
+> Computadores so ideais para tarefas repetitivas.
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+A forma mais bsica de repetio usa a palavra-chave `while`.
+Isso repete um bloco enquanto a _expresso booleana_ de controle for verdadeira:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+A expresso booleana  avaliada uma vez no incio do loop e
+novamente antes de cada iterao adicional atravs do bloco.
 
 ```kotlin
 var x = 3
@@ -18,12 +18,12 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+Aqui criamos uma varivel `x`, atribuindo a ela o valor inicial de __3__.
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+Ento usamos a declarao `while` que executar o bloco de cdigo at que a condio `x > 0` seja `true`.
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+Dentro do bloco de cdigo, no devemos esquecer de adicionar a linha `x--`.
+Isso decrementa o valor de `x`, caso contrrio, nosso loop ser infinito.
 
 ---
 
@@ -74,7 +74,7 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+As you can see at __[1]__ when `i`  igual a _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
 
 ---
 
@@ -89,4 +89,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+As you can see at __[1]__ when `i`  igual a _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.

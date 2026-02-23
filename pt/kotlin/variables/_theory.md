@@ -27,31 +27,19 @@ println(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+Tambem podemos dar as variaveis os valores de outras variaveis. Aqui, podemos dar a variavel `y` o valor de `x`
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // imprime 5
 ```
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+Quando atualizamos uma variavel, ela esquece seu valor anterior. Aqui podemos exibir a variavel `x` duas vezes e ver como seu valor e atualizado.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // imprime 5
 x = 10
-println(x) // prints 10
+println(x) // imprime 10
 ```
-
----
-
-In Kotlin string variables can be declared only by using double quotes:
-```kotlin
-val x = "May"
-```
-
----
-
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter

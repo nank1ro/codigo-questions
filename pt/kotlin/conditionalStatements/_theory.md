@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+A tomada de decisão é necessária quando queremos executar código apenas se uma certa condição for satisfeita.
+Vamos supor que queremos brincar fora apenas se o tempo estiver bom.
+Na programação, podemos salvar uma variável booleana `niceWeather` e realizar a ação de brincar fora `if` esta variável for `true`, como:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+Vamos continuar com o exemplo anterior.
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+Vimos que a declaração `if` executa o bloco de código apenas se a condição for `true`.
+Outra coisa importante a considerar é representada pelas **chaves** `{}` que indicam um bloco de código.
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Kotlin we can use the `else` statement, like:
+Acabamos de ver como executar um bloco de código se uma condição ocorre, agora vamos ver como executar outro bloco de código se a primeira condição falhar.
+Vamos brincar fora se o tempo estiver bom; caso contrário, ficamos em casa.
+Em Kotlin podemos usar a declaração `else`, como:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+Vamos supor que temos outra condição para verificar, como neste exemplo:
 ```kotlin
 var num = 3
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     println("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+e a saída deste código é `the number is 3`.
+Primeiro, vamos verificar se o número é igual a 2, isso é falso.
+Então vamos passar para a segunda declaração e verificar se `num` é igual a 3, sendo verdadeiro executamos o seguinte bloco de código imprimindo `the number is 3`
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+Podemos adicionar quantas declarações `else if` quisermos, não há limites
 ```kotlin
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     println("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+Também podemos aninhar uma declaração condicional (`if`, `else if` ou `else`) dentro de outra declaração condicional, para criar uma estrutura mais complexa.
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -87,14 +87,14 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 
-The _elvis operator_ `a ?: b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `null`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The elvis operator is shorthand for the code below:
+O _operador elvis_ `a ?: b` desempacota um opcional `a` se ele contiver um valor, ou retorna um valor padrão `b` se `a` for `null`.
+A expressão `a` é sempre de um tipo opcional.
+A expressão `b` deve corresponder ao tipo que está armazenado em a.
+O operador elvis é uma abreviação para o código abaixo:
 ```kotlin
 if (a != null) a else b
 ```

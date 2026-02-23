@@ -4,8 +4,8 @@ Dictionaries are enclosed in curly braces, like so:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+This is a dictionary called `d` with three *пар ключ-значение*.
+The key `key1` points to значение `1`, `key2` to `2`, and so on.
 
 ---
 
@@ -26,8 +26,8 @@ dict_name[new_key_name] = new_value
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+The length `len()` of a dictionary is the number of _пар ключ-значение_ it has.
+Each pair counts only once, even if значение is a list. (That's right: you can also put lists inside dictionaries!)
 
 ---
 
@@ -44,13 +44,13 @@ Well, these's the `keys()` method.
 
 ---
 
-What if we want to list all the values of the dictionary?
+What if we want to list all значениеs of the dictionary?
 Well, these's the `values()` method.
 
 ---
 
 As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+To get both the key and значение in the loop we can use the `items()` method:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -62,7 +62,7 @@ We can also use the `in` keyword we used with loops to determine if a dictionary
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _пар ключ-значение_ we want to add in braces
 
 ---
 

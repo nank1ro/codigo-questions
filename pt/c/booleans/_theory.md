@@ -3,7 +3,7 @@ You can evaluate any expression in C, and get one of two answers, `true` or `fal
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+We can store o valor booleano `true` in a variable just like a number or a string.
 
 ---
 

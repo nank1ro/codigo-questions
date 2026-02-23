@@ -4,8 +4,8 @@ Dictionaries are enclosed in square brackets, like so:
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+This is a dictionary called `dictionaryName` with three *pares chave-valor*.
+The key `key1` points to o valor `1`, `key2` to `2`, and so on.
 
 ---
 
@@ -26,8 +26,8 @@ dictName[newKeyName] = newValue
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+The length `count` of a dictionary is the number of _pares chave-valor_ it has.
+Each pair counts only once, even if o valor is an array. (That's right: you can also put arrays inside dictionaries!)
 
 ---
 
@@ -46,13 +46,13 @@ Well, these's the `keys` property.
 
 ---
 
-What if we want to list all the values of the dictionary?
+What if we want to list all o valors of the dictionary?
 Well, these's the `values` property.
 
 ---
 
 As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+To get both the key and o valor in the loop we don't have to specify any property:
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -70,7 +70,7 @@ In order to __add__ or __change__ values to a dictionary, we can also use the `u
 ---
 
 Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+We can also remove an element by assigning to the key o valor `nil`
 ```swift
 dictName[keyName] = nil
 // keyName has been removed from the dictionary dictName

@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Les opérateurs sont utilisés pour effectuer des opérations sur des variables et des valeurs.
+Commençons par les opérateurs arithmétiques, en particulier par l'opérateur d'**addition** `+`.
+Il est utilisé pour additionner deux nombres, par exemple :
 ```
 >>> 5 + 3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Continuons avec l'opérateur de **soustraction** `-`.
+Il est utilisé pour soustraire un nombre d'un autre, par exemple :
 ```
 >>> 5 - 3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Voyons l'opérateur de **multiplication** `*`.
+Il est utilisé pour multiplier deux nombres ensemble, par exemple :
 ```
 >>> 5 * 3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Voyons l'opérateur de **division** `/`.
+Il est utilisé pour diviser deux nombres ensemble, par exemple :
 ```c
 >>> 10 / 5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Voyons l'opérateur de **modulo** `%`.
+Il est utilisé pour trouver le reste après une division entre deux nombres, par exemple :
 ```
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Cela évalue à 1 car 5 divisé par 2 a un quotient de 2 et un reste de 1
 ```
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Cela évalue à 0 car 9 divisé par 3 a un quotient de 3 et laisse un reste de 0
 
 ---
 
-C doesn't have an **exponentiation** operator, so we have to use the `pow()` function included in the `math.h` library.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+Le C n'a pas d'opérateur d'**exponentiation**, nous devons donc utiliser la fonction `pow()` incluse dans la bibliothèque `math.h`.
+L'exponentiation correspond à une multiplication répétée de la base : c'est-à-dire que **b** avec l'exposant *n* est le produit de la multiplication de *n* bases :
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```
 >>> pow(5, 2);
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** using the `floor()` function.
-This function returns the integral part of the quotient, for example:
+Voyons la **division entière** en utilisant la fonction `floor()`.
+Cette fonction renvoie la partie entière du quotient, par exemple :
 ```
 >>> 5.0 / 2
 2.5
 >>> floor(2.5)
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+Aussi appelée division entière. La valeur résultante est un entier, bien que le *type* du résultat ne soit pas nécessairement int.

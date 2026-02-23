@@ -8,7 +8,8 @@ In order to include a module we use the `import` keyword
 
 ---
 
-We can also just import specific functions we need from a module using the `from` and `import` keywords
+Um __módulo__ é um arquivo que pode conter qualquer tipo de código Python.
+Os módulos nos permitem usar código repetidamente.
 
 ---
 

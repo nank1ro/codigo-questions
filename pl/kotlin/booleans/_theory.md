@@ -1,5 +1,5 @@
 Kotlin has a basic Boolean type, called `Boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
+Wartości logiczne są referred to as logical, because they can only ever be true or false.
 You can evaluate any expression in Kotlin, and get one of two answers, `true` or `false`.
 
 ---

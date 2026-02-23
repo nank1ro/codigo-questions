@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3 
+// imprime 1, 2, 3 
 ```
 A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.

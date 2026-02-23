@@ -1,19 +1,19 @@
-Frequentemente na programação, precisamos repetir um bloco de código, por exemplo:
+Often in programming, we need to repeat a block of code, for example:
 ```swift
 print("2 seconds")
 print("3 seconds")
 print("4 seconds")
 print("5 seconds")
 ```
-Isso produz a seguinte saída:
+This produces the following output:
 ```swift
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviamente, para instruções longas gastaríamos muito tempo escrevendo o código, mas felizmente podemos usar loops.
-Vamos aprender o loop `while`, obtendo a mesma saída acima.
+Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
+Let's learn the `while` loop, getting the same output above.
 ```swift
 var count = 2
 while count <= 5 {
@@ -21,31 +21,31 @@ while count <= 5 {
     count += 1
 }
 ```
-Então criamos uma variável `count` atribuindo `2`, o valor inicial.
-Depois usamos a instrução `while` que executará o bloco de código até que a condição `count <= 5` seja `true`.
-Dentro do bloco de código, não devemos esquecer de adicionar a linha `count += 1`.
-Ela incrementa o valor de `count`, caso contrário, nosso loop será infinito
+So we created a variable `count` assigning `2`, the initial value.
+Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
+Inside the block of code, we should **NOT** miss to add the line `count += 1`.
+It increments the `count` value, otherwise, our loop will be infinite
 
 ---
 
-Para controlar as vezes que um loop `while` repete, começamos com uma variável definida como um número.
-Chamamos essa variável de variável contadora
+To control the times a `while` loop repeats, we start with a variable set to a number.
+We call this variable a counter variable
 
 ---
 
-Depois, usamos uma comparação na condição para comparar a variável `counter` com um número
+Then, we use a comparison in the condition to compare the `counter` variable to a number.
 
 ---
 
-Dentro do bloco de código, para parar o loop `while`, incrementamos a variável `counter`
+Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
 
 ---
 
-A ordem em que você escreve o código afeta a saída
+The order you write code affects the output.
 
 ---
 
-Em Swift também temos a variação **repeat-while** do loop `while`.
-Ela executa uma única passagem pelo bloco de loop primeiro, _antes_ de considerar a condição do loop.
-Depois continua a repetir o loop até que a condição seja `false`.
-O loop __repeat-while__ em Swift é análogo a um loop __do-while__ em outras linguagens
+In Swift we also have the **repeat-while** variation of the `while` loop.
+It performs a single pass through the loop block first, _before_ considering the loop's condition.
+It then continues to repeat the loop until the condition is `false`.
+The __repeat-while__ loop in Swift is analogous to a __do-while__ loop in other languages

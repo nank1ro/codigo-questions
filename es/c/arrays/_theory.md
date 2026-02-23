@@ -1,13 +1,13 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+Los arreglos son un tipo de dato que puedes usar para almacenar una colección de diferentes piezas de información como una secuencia bajo un solo nombre de variable.
+Un arreglo almacena múltiples valores de un solo tipo y usa **índices** para distinguir estos valores.
+Puedes asignar elementos a un arreglo con una expresión de la forma:
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type` es el tipo de dato que usarás para el arreglo, por ejemplo `int`, `double`, etc.
+`array_name` es el nombre de la variable que almacena los elementos.
+`array_size` es el tamaño máximo que el arreglo puede tener.
+Finalmente, `item1` y `item2` son los valores que queremos guardar en el arreglo
 
 ---
 

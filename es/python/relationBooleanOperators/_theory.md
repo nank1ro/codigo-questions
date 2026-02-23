@@ -22,7 +22,7 @@ Es exactamente lo opuesto al operador *igual*
 ---
 
 Continuemos con el operador relacional **mayor que** `>`.
-Devuelve un **Booleano** (`True` o `False`) indicando si una expresin es mayor que la otra, por ejemplo:
+Devuelve un **Booleano** (`True` o `False`) indicando si una expresión es mayor que la otra, por ejemplo:
 ```python
 >>> 2 > 2
 False
@@ -33,7 +33,7 @@ True
 ---
 
 Continuemos con el operador relacional **menor que** `<`.
-Devuelve un **Booleano** (`True` o `False`) indicando si una expresin es menor que la otra, por ejemplo:
+Devuelve un **Booleano** (`True` o `False`) indicando si una expresión es menor que la otra, por ejemplo:
 ```python
 >>> 2 < 2
 False
@@ -44,7 +44,7 @@ True
 ---
 
 Continuemos con el operador relacional **mayor o igual que** `>=`.
-Devuelve un **Booleano** (`True` o `False`) indicando si una expresin es mayor o igual que la otra, por ejemplo:
+Devuelve un **Booleano** (`True` o `False`) indicando si una expresión es mayor o igual que la otra, por ejemplo:
 ```python
 >>> 2 >= 2
 True
@@ -57,7 +57,7 @@ False
 ---
 
 Continuemos con el operador relacional **menor o igual que** `<=`.
-Devuelve un **Booleano** (`True` o `False`) indicando si una expresin es menor o igual que la otra, por ejemplo:
+Devuelve un **Booleano** (`True` o `False`) indicando si una expresión es menor o igual que la otra, por ejemplo:
 ```python
 >>> 2 <= 2
 True
@@ -70,7 +70,7 @@ True
 ---
 
 Ahora veamos los operadores **Booleanos**, empecemos con el primero llamado `and`.
-Devuelve el primer operando que se evala como *False* o el ltimo si todos son *True*.
+Devuelve el primer operando que evalúa a *False* o el último si todos son *True*.
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -81,7 +81,7 @@ True
 ---
 
 Continuemos con el operador booleano **or**.
-Devuelve el primer operando que se evala como *True* o el ltimo si todos son *False*.
+Devuelve el primer operando que evalúa a *True* o el último si todos son *False*.
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -92,7 +92,7 @@ False
 ---
 
 Terminemos con el operador booleano **not**.
-Devuelve un booleano que es lo opuesto del estado lgico de una expresin.
+Devuelve un booleano que es el reverso del estado lógico de una expresión.
 ```python
 >>> not True
 False

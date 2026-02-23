@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+Die Entscheidungsfindung ist erforderlich, wenn wir Code nur ausführen wollen, wenn eine bestimmte Bedingung erfüllt ist.
+Nehmen wir an, wir wollen nur bei schönem Wetter draußen spielen.
+In der Programmierung können wir eine boolesche Variable `nice_weather` speichern und die Aktion des Draußenspielens ausführen, `if` diese Variable `true` ist, wie:
 ```c
 bool nice_weather = true;
 if (nice_weather) {

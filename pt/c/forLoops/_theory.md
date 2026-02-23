@@ -1,4 +1,4 @@
-We know how to repeat code using a `while` loop.
+We know how to repetir código using a `while` loop.
 Like this program repeating statements to display `hello`
 ```c
 int counter = 0;

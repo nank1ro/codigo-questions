@@ -1,5 +1,5 @@
-Sabemos como repetir código usando um loop `while`.
-Como este programa que repete instruções para exibir `hello`
+We know how to repetir código using a `while` loop.
+Like this program repeating statements to display `hello`
 ```swift
 var counter = 0
 
@@ -8,7 +8,7 @@ while counter < 5 {
     counter += 1;
 }
 ```
-Mas podemos fazer o mesmo com loops `for`:
+But we can do the same with `for` loops:
 ```swift
 for i in 0..<5 {
     print("hello")
@@ -17,47 +17,47 @@ for i in 0..<5 {
 
 ---
 
-Em um loop `for` podemos especificar quantas vezes gostaríamos que nosso loop fosse executado
+In a `for` loop we can specify how many times we'd like our loop to run
 
 ---
 
-Podemos usar `..<` para fazer loop até o próximo número excluído, ou `...` para fazer loop até o próximo número incluído
+We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
 
 ---
 
-A variável chamada `i` é a variável contadora.
-Podemos dar a ela o nome que quisermos.
-Ela conta em qual repetição do loop estamos atualmente
+The variable called `i` is the counter variable.
+We can give it the name we want.
+It counts what repetition of the loop we're currently on
 
 ---
 
-A função `stride()` retorna uma sequência de números.
-Ela requer os parâmetros _from_, _to_ e _by_.
-Esta é a sintaxe da função:
+The `stride()` function returns a sequence of numbers.
+It requires the _from_, _to_ and _by_ parameters.
+These are the syntax of the function:
 ```swift
 stride(from:to:by:)
 ```
-Lembre-se que o valor `to` é excluído
+Keep in mind that the `to` value is excluded
 
 ---
 
-Com a função `stride()` também podemos usar intervalos fechados, usando:
+With the `stride()` function we can also use closed ranges, by using:
 ```swift
 stride(from:through:by:)
 ```
-Neste caso o valor `through` é incluído
+In this case the `through` value is included
 
 ---
 
-Em Swift também temos o loop `forEach`.
-Na verdade, `forEach` chama a closure fornecida em cada elemento da sequência na mesma ordem que um loop `for-in`:
+In Swift we have also the `forEach` loop.
+In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for-in` loop:
 ```swift
-// isto é um array, veremos sobre isso em breve
-let numbers: [Int] = [1, 3, 5, 7, 9]
-numbers.forEach { num in
+// this is an array, we'll see about that soon
+let numbers: [Int] = [1, 3, 5, 7, 9] 
+numbers.forEach { num in 
     print(num)
 }
 ```
-Usar o método `forEach` é diferente de um loop `for-in` em duas formas importantes:
-1. A instrução `break` ou `continue` não pode ser usada para sair da chamada atual do corpo da closure ou para pular chamadas subsequentes.
-2. Usar a instrução `return` no corpo da closure só sairá da closure e não do escopo externo, e não pulará chamadas subsequentes.
+Using the `forEach` method is distinct from a `for-in` loop in two important ways:
+1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls.
+2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.

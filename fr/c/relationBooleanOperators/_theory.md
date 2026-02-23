@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+Commençons par l'opérateur relationnel d'**égalité** `==`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si deux expressions sont égales, par exemple :
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+Continuons avec l'opérateur relationnel de **différence** `!=`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si deux expressions ne sont **PAS** égales, par exemple :
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+C'est exactement l'opposé de l'opérateur d'*égalité*
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+Continuons avec l'opérateur relationnel **supérieur à** `>`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si une expression est supérieure à l'autre, par exemple :
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+Continuons avec l'opérateur relationnel **inférieur à** `<`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si une expression est inférieure à l'autre, par exemple :
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+Continuons avec l'opérateur relationnel **supérieur ou égal** `>=`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si une expression est supérieure ou égale à l'autre, par exemple :
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+Continuons avec l'opérateur relationnel **inférieur ou égal** `<=`.
+Il renvoie un **booléen**, vrai `1` ou faux `0`, indiquant si une expression est inférieure ou égale à l'autre, par exemple :
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Voyons maintenant les opérateurs **booléens**, commençons par le premier appelé __et__ `&&`.
+Il renvoie le premier opérande qui évalue à *faux* ou le dernier si tous sont *vrais*.
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Continuons avec l'opérateur booléen **ou** `||`.
+Il renvoie le premier opérande qui évalue à *vrai* ou le dernier si tous sont *faux*.
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Terminons avec l'opérateur booléen **non** `!`.
+Il renvoie un booléen qui est l'inverse de l'état logique d'une expression.
 ```c
 >>> !true
 0

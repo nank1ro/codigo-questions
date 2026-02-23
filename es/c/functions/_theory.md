@@ -24,7 +24,7 @@ Well, there's the `return` keyword.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Funciones can have multiple input parameters, which are written within the function's parentheses, separated by commas.
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";

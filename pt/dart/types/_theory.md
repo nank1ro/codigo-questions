@@ -25,7 +25,7 @@ const int integerNumber = 2;
 final double decimalNumber = 3.14;
 ```
 
-> Note: Mutable data allows you to change it whenever you want in an easy way. However, many experienced programmers appreciate the benefits of immutable data. When a value is immutable, you can trust that no one will be able to change the value after you create it. Limiting your data this way prevents many hard-to-find bugs and makes the program easier to think about and test.
+> Note: Mutable data allows you to change it whenever you want in an easy way. However, many experienced programmers appreciate the benefits of immutable data. When a value is immutable, you can trust that no one will be able to change o valor after you create it. Limiting your data this way prevents many hard-to-find bugs and makes the program easier to think about and test.
 
 ---
 
@@ -91,7 +91,7 @@ var integer = decimal.toInt();
 
 The assignment tells Dart, unequivocally, that you want to convert from the original type `double` to the new type `double`.
 
-> NOTES: In this case, assigning a decimal value to an integer loses precision. The variable `integer` has the value __3__ instead of __3.14__. This is why it's important to be explicit. Dart wants to be sure of what you are doing and lets you know that you will lose information by converting.
+> NOTES: In this case, assigning a decimal value to an integer loses precision. The variable `integer` has o valor __3__ instead of __3.14__. This is why it's important to be explicit. Dart wants to be sure of what you are doing and lets you know that you will lose information by converting.
 
 ---
 

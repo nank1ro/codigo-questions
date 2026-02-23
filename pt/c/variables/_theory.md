@@ -6,7 +6,7 @@ An example of a variable creation named `x` is:
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
+In this way we have assigned o valor `1` to the _integer_ variable named `x`.
 If we print the variable `x` we get back the number `1`:
 ```c
 >>> printf("%i\n", x);
@@ -15,7 +15,7 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
+Variables are called in this way because o valor they store can change.
 We can update `x` by using `=` and giving it a new value.
 ```c
 >>> x = 1;
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+We can also give variables o valors of other variables. Here, we can give to the `y` variable o valor of `x`
 ```c
 >>> int x = 5;
 >>> int y = x;

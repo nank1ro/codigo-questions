@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Операторы используются для выполнения операций с переменными и значениями.
+Начнем с the arithmetic operators, in particular with the **addition** `+` operator.
+Он используется для сложения двух чисел, like:
 ```python
 >>> 5+3
 8
@@ -9,7 +9,7 @@ It is used to add two numbers, like:
 ---
 
 Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Он используется для subtract one number from another, like:
 ```python
 >>> 5-3
 2
@@ -18,7 +18,7 @@ It is used to subtract one number from another, like:
 ---
 
 Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Он используется для умножения двух чисел together, like:
 ```python
 >>> 5*3
 15
@@ -27,7 +27,7 @@ It is used to multiply two numbers together, like:
 ---
 
 Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Он используется для деления двух чисел together, like:
 ```python
 >>> 10/5
 2
@@ -36,7 +36,7 @@ It is used to divide two numbers together, like:
 ---
 
 Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Он используется для find the remainder after a division between two numbers, like:
 ```python
 >>> 5 % 2
 1

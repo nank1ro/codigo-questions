@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+A menudo en programación, necesitamos repetir un bloque de código, por ejemplo:
 ```c
 printf("2 seconds\n");
 printf("3 seconds\n");
 printf("4 seconds\n");
 printf("5 seconds\n");
 ```
-This produces the following output:
+Esto produce la siguiente salida:
 ```c
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+Obviamente, para sentencias largas gastaríamos mucho tiempo escribiendo el código, pero afortunadamente, podemos usar bucles.
+Aprendamos el bucle `while`, obteniendo la misma salida anterior.
 ```c
 int count = 2;
 while (count <= 5) {
@@ -21,10 +21,10 @@ while (count <= 5) {
     count++;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count++;`.
-It increments the `count` value, otherwise, our loop will be infinite
+Así creamos una variable `count` asignando `2`, el valor inicial.
+Luego hemos usado la sentencia `while` que ejecutará el bloque de código hasta que la condición `count <= 5` sea `true`.
+Dentro del bloque de código, **NO** debemos olvidar agregar la línea `count++;`.
+Incrementa el valor de `count`, de lo contrario, nuestro bucle será infinito
 
 ---
 

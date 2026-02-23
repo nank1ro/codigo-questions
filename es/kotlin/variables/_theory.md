@@ -16,8 +16,8 @@ println(x) // prints 1
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Las variables se llaman así porque el valor que almacenan puede cambiar.
+Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```kotlin
 var x = 1
 println(x) // prints 1
@@ -36,7 +36,7 @@ println(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+Cuando actualizamos una variable, olvida su valor anterior. Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```kotlin
 var x = 5
 println(x) // prints 5

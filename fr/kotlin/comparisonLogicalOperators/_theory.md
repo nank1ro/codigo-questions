@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+Commençons par l'opérateur de comparaison d'**égalité** `==`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si deux expressions sont égales, par exemple :
 ```kotlin
 println(2 == 2) // true
 println(2 == 3) // false
@@ -7,18 +7,18 @@ println(2 == 3) // false
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+Continuons avec l'opérateur de comparaison de **différence** `!=`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si deux expressions ne sont **PAS** égales, par exemple :
 ```kotlin
 println(2 != 2) // false
 println(2 != 3) // true
 ```
-It is exactly the opposite of the *equal* operator
+C'est exactement l'opposé de l'opérateur d'*égalité*
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+Continuons avec l'opérateur de comparaison **supérieur à** `>`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si une expression est supérieure à l'autre, par exemple :
 ```kotlin
 println(2 > 2) // false
 println(3 > 2) // true
@@ -26,8 +26,8 @@ println(3 > 2) // true
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+Continuons avec l'opérateur de comparaison **inférieur à** `<`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si une expression est inférieure à l'autre, par exemple :
 ```kotlin
 println(2 < 2) // false
 println(2 < 3) // true
@@ -35,8 +35,8 @@ println(2 < 3) // true
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+Continuons avec l'opérateur de comparaison **supérieur ou égal à** `>=`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si une expression est supérieure ou égale à l'autre, par exemple :
 ```kotlin
 println(2 >= 2) // true
 println(3 >= 2) // true
@@ -45,8 +45,8 @@ println(3 >= 4) // false
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+Continuons avec l'opérateur de comparaison **inférieur ou égal à** `<=`.
+Il renvoie un **booléen** (`true` ou `false`) indiquant si une expression est inférieure ou égale à l'autre, par exemple :
 ```kotlin
 println(2 <= 2) // true
 println(3 <= 2) // false
@@ -55,8 +55,8 @@ println(3 <= 4) // true
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Voyons maintenant les opérateurs **logiques**, commençons par le premier appelé __ET__ `&&`.
+Il renvoie le premier opérande qui évalue à *false* ou le dernier si tous sont *true*.
 ```kotlin
 println(2 == 2 && 2 == 3) // false
 println(1 == 1 && 1.0 == 1.0) // true
@@ -64,8 +64,8 @@ println(1 == 1 && 1.0 == 1.0) // true
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Continuons avec l'opérateur logique **ou** `||`.
+Il renvoie le premier opérande qui évalue à *true* ou le dernier si tous sont *false*.
 ```kotlin
 println(2 == 2 || 2 == 3) // true
 println(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ println(1 == 2 || 1 == 3) // false
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Terminons avec l'opérateur logique **non** `!`.
+Il renvoie un booléen qui est l'inverse de l'état logique d'une expression.
 ```kotlin
 println(!true) // false
 println(!false) // true

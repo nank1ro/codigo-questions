@@ -3,7 +3,7 @@ You can evaluate any expression in Python, and get one of two answers, `True` or
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+We can store булево значение `True` in a variable just like a number or a string.
 
 ---
 

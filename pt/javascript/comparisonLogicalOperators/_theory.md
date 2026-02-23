@@ -1,4 +1,4 @@
-Let's start with the **equal** `==` comparison operator.
+Vamos começar com the **equal** `==` comparison operator.
 It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
 ```javascript
 console.log(2 == 2); 

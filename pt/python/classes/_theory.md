@@ -1,10 +1,10 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python é uma linguagem de programação orientada a objetos, o que significa que ela manipula construtos de programação chamados objetos.
+Você pode pensar em um objeto como uma única estrutura de dados que contém dados bem como funções; as funções de um objeto são chamadas de seus métodos.
+Por exemplo, quando você chama:
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python verifica se `my_dict` tem um método `items()` (que todos os dicionários têm) e executa esse método se o encontrar.
 
 ---
 
@@ -16,26 +16,21 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+Vamos substituir `pass` por outra coisa.
+O método `__init__()` é necessário para classes, e é usado para __inicializar__ os objetos que ele cria.
+`__init__()` sempre leva pelo menos um argumento, `self`, que se refere ao objeto sendo criado.
+Você pode pensar em `__init__()` como o método que inicia cada objeto que a classe cria.
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+É claro que o método `__init__()` pode usar mais parâmetros além de `self`
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+O primeiro argumento `__init__()` é usado para se referir ao objeto de instância, e por convenção, esse argumento é chamado de `self`.
+Se você adicionar argumentos adicionais (por exemplo, `gender` e `legs` para seu animal) definindo cada um desses como `self.gender` e `self.legs` no corpo de `__init__()`, fará com que, quando você criar um objeto de instância da sua classe `Animal`, precise dar a cada instância um gender e legs, e esses serão associados à instância específica que você criar
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
-
----
-
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+Definir uma classe não cria um objeto.
+Para fazer isso, precisamos criar uma __instância__ de uma classe
