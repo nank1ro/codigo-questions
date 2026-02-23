@@ -1,5 +1,5 @@
-Lassen Sie uns mit dem **Gleich** `==` Vergleichsoperator beginnen.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob zwei Ausdrucke gleich sind, zum Beispiel:
+Let's start with the **equal** `==` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
 ```swift
 print(2 == 2) // true
 print(2 == 3) // false
@@ -7,18 +7,18 @@ print(2 == 3) // false
 
 ---
 
-Fahren wir mit dem **Ungleich** `!=` Vergleichsoperator fort.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob zwei Ausdrucke **NICHT** gleich sind, zum Beispiel:
+Let's continue with the **not equal** `!=` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
 ```swift
 print(2 != 2) // false
 print(2 != 3) // true
 ```
-Er ist genau das Gegenteil des *Gleich*-Operators
+It is exactly the opposite of the *equal* operator
 
 ---
 
-Fahren wir mit dem **Groer als** `>` Vergleichsoperator fort.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck groer als der andere ist, zum Beispiel:
+Let's continue with the **greater than** `>` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
 ```swift
 print(2 > 2) // false
 print(3 > 2) // true
@@ -26,8 +26,8 @@ print(3 > 2) // true
 
 ---
 
-Fahren wir mit dem **Kleiner als** `<` Vergleichsoperator fort.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck kleiner als der andere ist, zum Beispiel:
+Let's continue with the **less than** `<` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
 ```swift
 print(2 < 2) // false
 print(2 < 3) // true
@@ -35,8 +35,8 @@ print(2 < 3) // true
 
 ---
 
-Fahren wir mit dem **Groer oder gleich** `>=` Vergleichsoperator fort.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck groer oder gleich dem anderen ist, zum Beispiel:
+Let's continue with the **greater than or equal to** `>=` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
 ```swift
 print(2 >= 2) // true
 print(3 >= 2) // true
@@ -45,8 +45,8 @@ print(3 >= 4) // false
 
 ---
 
-Fahren wir mit dem **Kleiner oder gleich** `<=` Vergleichsoperator fort.
-Er gibt einen **boolean** (`true` oder `false`) zuruck, der angibt, ob ein Ausdruck kleiner oder gleich dem anderen ist, zum Beispiel:
+Let's continue with the **less than or equal to** `<=` comparison operator.
+It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
 ```swift
 print(2 <= 2) // true
 print(3 <= 2) // false
@@ -55,8 +55,8 @@ print(3 <= 4) // true
 
 ---
 
-Lassen Sie uns nun die **logischen** Operatoren sehen, beginnen wir mit dem ersten namens __UND__ `&&`.
-Er gibt den ersten Operanden zuruck, der zu *false* auswertet, oder den letzten, wenn alle *true* sind.
+Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
+It returns the first operand that evaluates to *false* or the last one if all are *true*.
 ```swift
 print(2 == 2 && 2 == 3) // false
 print(1 == 1 && 1 == 1.0) // true
@@ -64,8 +64,8 @@ print(1 == 1 && 1 == 1.0) // true
 
 ---
 
-Fahren wir mit dem **oder** `||` logischen Operator fort.
-Er gibt den ersten Operanden zuruck, der zu *true* auswertet, oder den letzten, wenn alle *false* sind.
+Let's continue with the **or** `||` logical operator.
+It returns the first operand that evaluates to *true* or the last one if all are *false*.
 ```swift
 print(2 == 2 || 2 == 3) // true
 print(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ print(1 == 2 || 1 == 3) // false
 
 ---
 
-Lassen Sie uns mit dem **nicht** `!` logischen Operator beenden.
-Er gibt einen Boolean zuruck, der das Gegenteil des logischen Zustands eines Ausdrucks ist.
+Let's finish with the **not** `!` logical operator.
+It returns a boolean that is the reverse of the logical state of an expression.
 ```swift
 print(!true) // false
 print(!false) // true

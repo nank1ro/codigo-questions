@@ -7,7 +7,7 @@ title: FizzBuzz
 
 # --description--
 
-Erstellen Sie function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
 
 # --instructions--
 
