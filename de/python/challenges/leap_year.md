@@ -1,21 +1,21 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 3
 title: Leap Year
+difficulty: 3
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+In einem Kalenderjahr gibt es genau 365,25 Tage. Aber das wird schließlich zu Verwirrung führen, da Menschen normalerweise durch exakte Teilbarkeit von 1 und nicht durch Dezimalstellen zählen. Um Letzteres zu vermeiden, wurde beschlossen, alle 0,25 Tage alle vier Jahre zusammenzufassen und diesem Jahr 366 Tage zu geben (einschließlich des 29. Februar als Schalttag) und es ein __Schaltjahr__ zu nennen. Die anderen drei Jahre im Vierjahreszyklus würden nur 365 Tage enthalten und __wären keine Schaltjahre__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `datetime` class, __if blocks__, __if-elif blocks__ or __conditionals__ (`a if b else c`) nor the logical operators __AND__ (`and`) and __OR__ (`or`) with the exemption of the __NOT__ (`not`) operator.
+In dieser Herausforderung werden wir es auf eine neue Stufe heben, bei der Sie bestimmen sollen, ob es ein Schaltjahr ist oder nicht, ohne die Verwendung der `datetime`-Klasse, __if-Blöcke__, __if-elif-Blöcke__ oder __Bedingungen__ (`a if b else c`) noch die logischen Operatoren __AND__ (`and`) und __OR__ (`or`) mit der Ausnahme des __NOT__ (`not`)-Operators.
 
-Return `True` if it's a leap year, `False` otherwise.
+Geben Sie `True` zurück, wenn es ein Schaltjahr ist, andernfalls `False`.
 
-Example of function call:
+Beispiel für einen Funktionsaufruf:
 ```dart
 print(leap_year(2000))
 // prints true
@@ -38,7 +38,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
+Die Verwendung von `month`, `day`, `if`, `else`, `elif`, `and`, `or` ist nicht zulässig.
 
 ```json
 {
@@ -48,84 +48,84 @@ The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+Das Jahr `2016` ist ein Schaltjahr.
 
 ```python
     def test1(self):
         self.assertEqual(leap_year(2016), True, "--err-t1--")
 ```
 
-The year `1996` is a leap year.
+Das Jahr `1996` ist ein Schaltjahr.
 
 ```python
     def test2(self):
         self.assertEqual(leap_year(1996), True, "--err-t2--")
 ```
 
-The year `1600` is a leap year.
+Das Jahr `1600` ist ein Schaltjahr.
 
 ```python
     def test3(self):
         self.assertEqual(leap_year(1600), True, "--err-t3--")
 ```
 
-The year `2020` is a leap year.
+Das Jahr `2020` ist ein Schaltjahr.
 
 ```python
     def test4(self):
         self.assertEqual(leap_year(2020), True, "--err-t4--")
 ```
 
-The year `2000` is a leap year.
+Das Jahr `2000` ist ein Schaltjahr.
 
 ```python
     def test5(self):
         self.assertEqual(leap_year(2000), True, "--err-t5--")
 ```
 
-The year `2008` is a leap year.
+Das Jahr `2008` ist ein Schaltjahr.
 
 ```python
     def test6(self):
         self.assertEqual(leap_year(2008), True, "--err-t6--")
 ```
 
-The year `1521` is not a leap year.
+Das Jahr `1521` ist kein Schaltjahr.
 
 ```python
     def test7(self):
         self.assertEqual(leap_year(1521), False, "--err-t7--")
 ```
 
-The year `1800` is not a leap year.
+Das Jahr `1800` ist kein Schaltjahr.
 
 ```python
     def test8(self):
         self.assertEqual(leap_year(1800), False, "--err-t8--")
 ```
 
-The year `2007` is not a leap year.
+Das Jahr `2007` ist kein Schaltjahr.
 
 ```python
     def test9(self):
         self.assertEqual(leap_year(2007), False, "--err-t9--")
 ```
 
-The year `2002` is a leap year.
+Das Jahr `2002` ist ein Schaltjahr.
 
 ```python
     def test10(self):
         self.assertEqual(leap_year(2002), False, "--err-t10--")
 ```
 
-The year `1979` is not a leap year.
+Das Jahr `1979` ist kein Schaltjahr.
 
 ```python
     def test11(self):
         self.assertEqual(leap_year(1979), False, "--err-t11--")
 ```
 
-The year `2006` is not a leap year.
+Das Jahr `2006` ist kein Schaltjahr.
 
 ```python
     def test12(self):

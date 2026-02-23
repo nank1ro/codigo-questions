@@ -1,21 +1,21 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 1
 title: Two for one
+difficulty: 1
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Gegeben einen Namen, geben Sie einen String mit der Nachricht zurück:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Dabei ist `X` der angegebene Name.
+Wenn jedoch der Name fehlt, geben Sie den String zurück:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Schreiben Sie eine Funktion, die den korrekten String zurückgibt, Beispiele:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -43,22 +43,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-No name given
+Kein Name angegeben
 
 ```python
     def test_no_name_given(self):
         self.assertEqual(two_for_one(), "One for you, one for me.", "--err-t1--")
 ```
 
-Pass "James" as name
+Geben Sie "James" als Namen an
 
 ```python
     def test_a_name_given(self):
         self.assertEqual(two_for_one("James"), "One for James, one for me.", "--err-t2--")
 ```
 
-
-Pass "Martha" as name
+Geben Sie "Martha" als Namen an
 
 ```python
     def test_another_name_given(self):

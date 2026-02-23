@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 1
 title: Smallest multiple
+difficulty: 1
 ---
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 ist die kleinste Zahl, die durch jede der Zahlen von 1 bis 10 ohne Rest teilbar ist.
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+Was ist die kleinste positive Zahl, die gleichmäßig durch alle Zahlen von 1 bis `n` teilbar ist?
 
 # --seed--
 
 ```python
 def smallest_multiple(n) {
-  
+
 }
 ```
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`smallest_multiple(5)` should return 60.
+`smallest_multiple(5)` sollte 60 zurückgeben.
 
 ```python
     def test1(self):
         self.assertEqual(smallest_multiple(5), 60, "--err-t1--")
 ```
 
-`smallest_multiple(7)` should return 420.
+`smallest_multiple(7)` sollte 420 zurückgeben.
 
 ```python
     def test2(self):
         self.assertEqual(smallest_multiple(7), 420, "--err-t2--")
 ```
 
-`smallest_multiple(10)` should return 2520.
+`smallest_multiple(10)` sollte 2520 zurückgeben.
 
 ```python
     def test3(self):
         self.assertEqual(smallest_multiple(10), 2520, "--err-t3--")
 ```
 
-`smallest_multiple(13)` should return 360360.
+`smallest_multiple(13)` sollte 360360 zurückgeben.
 
 ```python
     def test4(self):
         self.assertEqual(smallest_multiple(13), 360360, "--err-t4--")
 ```
 
-`smallest_multiple(20)` should return 232792560.
+`smallest_multiple(20)` sollte 232792560 zurückgeben.
 
 ```python
     def test5(self):

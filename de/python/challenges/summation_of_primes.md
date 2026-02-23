@@ -1,17 +1,17 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 2
 title: Summation of primes
+difficulty: 2
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Die Summe der Primzahlen unter 10 ist 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+Finden Sie die Summe aller Primzahlen unter `n`.
 
 # --seed--
 
@@ -30,28 +30,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`prime_summation(17)` should return 41.
+`prime_summation(17)` sollte 41 zurückgeben.
 
 ```python
     def test1(self):
         self.assertEqual(prime_summation(17), 41, "--err-t1--")
 ```
 
-`prime_summation(2001)` should return 277050.
+`prime_summation(2001)` sollte 277050 zurückgeben.
 
 ```python
     def test2(self):
         self.assertEqual(prime_summation(2001), 277050, "--err-t2--")
 ```
 
-`prime_summation(140759)` should return 873608362.
+`prime_summation(140759)` sollte 873608362 zurückgeben.
 
 ```python
     def test3(self):
         self.assertEqual(prime_summation(140759), 873608362, "--err-t2--")
 ```
 
-`prime_summation(2000000)` should return 142913828922.
+`prime_summation(2000000)` sollte 142913828922 zurückgeben.
 
 ```python
     def test4(self):

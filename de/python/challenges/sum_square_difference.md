@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 1
 title: Sum square difference
+difficulty: 1
 ---
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+Die Summe der Quadrate der ersten zehn natürlichen Zahlen ist,
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+Das Quadrat der Summe der ersten zehn natürlichen Zahlen ist,
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+Daher ist die Differenz zwischen der Summe der Quadrate der ersten zehn natürlichen Zahlen und dem Quadrat der Summe 3025 − 385 = 2640.
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+Finden Sie die Differenz zwischen der Summe der Quadrate der ersten `n` natürlichen Zahlen und dem Quadrat der Summe.
 
 # --seed--
 
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`sum_square_difference(10)` should return 2640.
+`sum_square_difference(10)` sollte 2640 zurückgeben.
 
 ```python
     def test1(self):
         self.assertEqual(sum_square_difference(10), 2640, "--err-t1--")
 ```
 
-`sum_square_difference(20)` should return 41230.
+`sum_square_difference(20)` sollte 41230 zurückgeben.
 
 ```python
     def test2(self):
         self.assertEqual(sum_square_difference(20), 41230, "--err-t2--")
 ```
 
-`sum_square_difference(100)` should return 25164150.
+`sum_square_difference(100)` sollte 25164150 zurückgeben.
 
 ```python
     def test3(self):

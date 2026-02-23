@@ -1,17 +1,17 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 1
 title: Multiples of 3 or 5
+difficulty: 1
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Wenn wir alle natürlichen Zahlen unter 10 auflisten, die Vielfache von 3 oder 5 sind, erhalten wir 3, 5, 6 und 9. Die Summe dieser Vielfachen ist 23.
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+Finden Sie die Summe aller Vielfachen von 3 oder 5 unter dem angegebenen Parameterwert `number`.
 
 # --seed--
 
@@ -30,21 +30,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`multiples_of_3_and_5(10)` should return 23.
+`multiples_of_3_and_5(10)` sollte 23 zurückgeben.
 
 ```python
     def test1(self):
         self.assertEqual(multiples_of_3_and_5(10), 23, "--err-t1--")
 ```
 
-`multiples_of_3_and_5(1000)` should return 233168.
+`multiples_of_3_and_5(1000)` sollte 233168 zurückgeben.
 
 ```python
     def test2(self):
         self.assertEqual(multiples_of_3_and_5(1000), 233168, "--err-t2--")
 ```
 
-`multiples_of_3_and_5(6987)` should return 11390208
+`multiples_of_3_and_5(6987)` sollte 11390208 zurückgeben
 
 ```python
     def test3(self):

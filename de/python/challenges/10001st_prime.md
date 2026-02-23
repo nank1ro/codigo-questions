@@ -1,17 +1,17 @@
 ---
 language: python
 exerciseType: 1
-difficulty: 1
 title: 10001st prime
+difficulty: 1
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+Durch Auflisten der ersten sechs Primzahlen: 2, 3, 5, 7, 11 und 13,可以看出 dass die 6. Primzahl 13 ist.
 
 # --instructions--
 
-What is the `n`th prime number?
+Was ist die `n`-te Primzahl?
 
 # --seed--
 
@@ -30,35 +30,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`nth_prime(6)` should return 13.
+`nth_prime(6)` sollte 13 zurückgeben.
 
 ```python
     def test1(self):
         self.assertEqual(nth_prime(6), 13, "--err-t1--")
 ```
 
-`nth_prime(10)` should return 29.
+`nth_prime(10)` sollte 29 zurückgeben.
 
 ```python
     def test2(self):
         self.assertEqual(nth_prime(10), 29, "--err-t2--")
 ```
 
-`nth_prime(100)` should return 541.
+`nth_prime(100)` sollte 541 zurückgeben.
 
 ```python
     def test3(self):
         self.assertEqual(nth_prime(100), 541, "--err-t3--")
 ```
 
-`nth_prime(1000)` should return 7919.
+`nth_prime(1000)` sollte 7919 zurückgeben.
 
 ```python
     def test4(self):
         self.assertEqual(nth_prime(1000), 7919, "--err-t4--")
 ```
 
-`nth_prime(10001)` should return 104743.
+`nth_prime(10001)` sollte 104743 zurückgeben.
 
 ```python
     def test5(self):
