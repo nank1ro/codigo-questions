@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Erstellen Sie eine Funktion, die eine Zahl als Argument nimmt und `"Fizz"`, `"Buzz"` oder `"FizzBuzz"` zurückgibt.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Wenn die Zahl ein Vielfaches von `3` ist, sollte die Ausgabe `"Fizz"` sein
+- Wenn die Zahl ein Vielfaches von `5` ist, sollte die Ausgabe `"Buzz"` sein.
+- Wenn die Zahl ein Vielfaches von sowohl `3` als auch `5` ist, sollte die Ausgabe `"FizzBuzz"` sein.
+- Wenn die Zahl kein Vielfaches von `3` oder `5` ist, sollte die Zahl selbst ausgegeben werden, wie in den folgenden Beispielen gezeigt.
+- Die Ausgabe sollte immer ein String sein, auch wenn sie kein Vielfaches von `3` oder `5` ist.
 
-Examples:
+Beispiele:
 ```c
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -157,7 +157,7 @@ void try_catch(bool assertion) {
 
 ```c
 char* fizz_buzz() {
-  
+
 }
 ```
 
@@ -169,31 +169,31 @@ int main() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Die Zahl `3` muss gleich `"Fizz"` sein
 
 ```c
     try_catch(strcmp(fizz_buzz(3), "Fizz") == 0);
 ```
 
-The number `5` must equal `"Buzz"`
+Die Zahl `5` muss gleich `"Buzz"` sein
 
 ```c
     try_catch(strcmp(fizz_buzz(5), "Buzz") == 0);
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Die Zahl `15` muss gleich `"FizzBuzz"` sein
 
 ```c
     try_catch(strcmp(fizz_buzz(15), "FizzBuzz") == 0);
 ```
 
-The number `10` must equal `"Buzz"`
+Die Zahl `10` muss gleich `"Buzz"` sein
 
 ```c
     try_catch(strcmp(fizz_buzz(10), "Buzz") == 0);
 ```
 
-The number `98` must equal `"98"`
+Die Zahl `98` muss gleich `"98"` sein
 
 ```c
     try_catch(strcmp(fizz_buzz(98), "98") == 0);

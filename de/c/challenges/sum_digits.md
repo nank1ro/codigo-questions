@@ -7,12 +7,12 @@ title: Sum of digits
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+Sie erhalten eine Ganzzahl `num`.
+Schreiben Sie ein Programm, um die Summe aller Ziffern von `num` zu berechnen
 
 # --instructions--
 
-Return the sum of digits of `num`
+Geben Sie die Summe der Ziffern von `num` zurück
 
 # --before-seed--
 
@@ -145,7 +145,7 @@ void try_catch(bool assertion) {
 
 ```c
 int sum_digits(int num) {
-    
+
 }
 ```
 
@@ -157,31 +157,31 @@ int main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Die Summe der Ziffern von 12345 ist 15
 
 ```c
     try_catch(sum_digits(12345) == 15);
 ```
 
-The sum of the digits of 57253 is 22
+Die Summe der Ziffern von 57253 ist 22
 
 ```c
     try_catch(sum_digits(57253) == 22);
 ```
 
-The sum of the digits of 122 is 5
+Die Summe der Ziffern von 122 ist 5
 
 ```c
     try_catch(sum_digits(122) == 5);
 ```
 
-The sum of the digits of 91979997 is 60
+Die Summe der Ziffern von 91979997 ist 60
 
 ```c
     try_catch(sum_digits(91979997) == 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+Die Summe der Ziffern von 2147483647 ist 46
 
 ```c
     try_catch(sum_digits(2147483647) == 46);

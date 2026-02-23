@@ -7,23 +7,23 @@ title: Raindrops
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+Ihre Aufgabe ist es, eine Zahl in einen String umzuwandeln, der Regengeräusche enthält, die bestimmten potenziellen Faktoren entsprechen.
+Ein Faktor ist eine Zahl, die eine andere Zahl gleichmäßig teilt, ohne einen Rest zu hinterlassen.
+Die einfachste Methode, um zu testen, ob eine Zahl ein Faktor einer anderen ist, ist die Verwendung der Modulo-Operation.
+Die Regeln für Raindrops sind folgende:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- hat 3 als Faktor, fügen Sie 'Pling' zum Ergebnis hinzu.
+- hat 5 als Faktor, fügen Sie 'Plang' zum Ergebnis hinzu.
+- hat 7 als Faktor, fügen Sie 'Plong' zum Ergebnis hinzu.
+- hat keinen der Faktoren 3, 5 oder 7, sollte das Ergebnis die Ziffern der Zahl sein.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Schreiben Sie eine Funktion, die den korrekten String zurückgibt, Beispiele:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 hat 7 als Faktor, aber nicht 3 oder 5, also wäre das Ergebnis `"Plong"`.
+- 30 hat sowohl 3 als auch 5 als Faktoren, aber nicht 7, also wäre das Ergebnis `"PlingPlang"`.
+- 34 ist nicht durch 3, 5 oder 7 teilbar, also wäre das Ergebnis `"34"`.
 
 # --before-seed--
 
@@ -157,7 +157,7 @@ void try_catch(bool assertion) {
 
 ```c
 char* convert(int number) {
-    
+
 }
 ```
 
@@ -169,110 +169,110 @@ int main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+Das Geräusch für 1 ist "1"
 
 ```c
     try_catch(strcmp(convert(1), "1") == 0);
 ```
 
-The sound for 3 is "Pling"
+Das Geräusch für 3 ist "Pling"
 
 ```c
     try_catch(strcmp(convert(3), "Pling") == 0);
 ```
 
-The sound for 5 is "Plang"
+Das Geräusch für 5 ist "Plang"
 
 ```c
     try_catch(strcmp(convert(5), "Plang") == 0);
 ```
 
-The sound for 7 is "Plong"
+Das Geräusch für 7 ist "Plong"
 
 ```c
     try_catch(strcmp(convert(7), "Plong") == 0);
 ```
 
-The sound for 6 is "Pling"
+Das Geräusch für 6 ist "Pling"
 
 ```c
     try_catch(strcmp(convert(6), "Pling") == 0);
 ```
 
-The sound for 8 is "8"
+Das Geräusch für 8 ist "8"
 
 ```c
     try_catch(strcmp(convert(8), "8") == 0);
 ```
 
-The sound for 9 is "Pling"
+Das Geräusch für 9 ist "Pling"
 
 ```c
     try_catch(strcmp(convert(9), "Pling") == 0);
 ```
 
-The sound for 10 is "Plang"
+Das Geräusch für 10 ist "Plang"
 
 ```c
     try_catch(strcmp(convert(10), "Plang") == 0);
 ```
 
-The sound for 14 is "Plong"
+Das Geräusch für 14 ist "Plong"
 
 ```c
     try_catch(strcmp(convert(14), "Plong") == 0);
 ```
 
-The sound for 15 is "PlingPlang"
+Das Geräusch für 15 ist "PlingPlang"
 
 ```c
     try_catch(strcmp(convert(15), "PlingPlang") == 0);
 ```
 
-The sound for 21 is "PlingPlong"
+Das Geräusch für 21 ist "PlingPlong"
 
 ```c
     try_catch(strcmp(convert(21), "PlingPlong") == 0);
 ```
 
-The sound for 25 is "Plang"
+Das Geräusch für 25 ist "Plang"
 
 ```c
     try_catch(strcmp(convert(25), "Plang") == 0);
 ```
 
-The sound for 27 is "Pling"
+Das Geräusch für 27 ist "Pling"
 
 ```c
     try_catch(strcmp(convert(27), "Pling") == 0);
 ```
 
-The sound for 35 is "PlangPlong"
+Das Geräusch für 35 ist "PlangPlong"
 
 ```c
     try_catch(strcmp(convert(35), "PlangPlong") == 0);
 ```
 
-The sound for 49 is "Plong"
+Das Geräusch für 49 ist "Plong"
 
 ```c
     try_catch(strcmp(convert(49), "Plong") == 0);
 ```
 
-The sound for 52 is "52"
+Das Geräusch für 52 ist "52"
 
 ```c
     try_catch(strcmp(convert(52), "52") == 0);
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Das Geräusch für 105 ist "PlingPlangPlong"
 
 ```c
     try_catch(strcmp(convert(105), "PlingPlangPlong") == 0);
 ```
 
 
-The sound for 3125 is "Plang"
+Das Geräusch für 3125 ist "Plang"
 
 ```c
     try_catch(strcmp(convert(3125), "Plang") == 0);

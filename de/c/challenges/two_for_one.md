@@ -7,24 +7,24 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Gegeben einen Namen, geben Sie einen String mit der Nachricht zurück:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+Dabei ist `X` der angegebene Name.
+Wenn der Name jedoch leer ist, geben Sie den String zurück:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Schreiben Sie eine Funktion, die den korrekten String zurückgibt, Beispiele:
 
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
+**Eingabe**: `"Walter"`
+**Ausgabe**: `One for Walter, one for me.`
 
-**input**: `""`
-**output**: `One for you, one for me.`
+**Eingabe**: `""`
+**Ausgabe**: `One for you, one for me.`
 
-**input**: `"David"`
-**output**: `One for David, one for me.`
+**Eingabe**: `"David"`
+**Ausgabe**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -169,19 +169,19 @@ int main() {
 
 # --asserts--
 
-No name given
+Kein Name angegeben
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+Übergeben Sie "James" als Namen
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+Übergeben Sie "Martha" als Namen
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);

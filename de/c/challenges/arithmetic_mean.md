@@ -7,17 +7,17 @@ title: Arithmetic mean
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Schreiben Sie eine Funktion namens `mean`, um den _arithmetischen Durchschnitt_ eines numerischen Vektors zu berechnen.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Schreiben Sie eine Funktion, die den Mittelwert eines numerischen Vektors zurückgibt.
 
-Example of function call:
+Beispiel für einen Funktionsaufruf:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// gibt 2.0 aus
 ```
 
 # --before-seed--
@@ -150,7 +150,7 @@ void try_catch(bool assertion) {
 
 ```c
 double mean() {
-  
+
 }
 ```
 
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+Der Mittelwert von `[1, 2, 3, 4, 5, 6, 7]` muss gleich 4.0 sein
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+Der Mittelwert von `[4, 5, 6]` muss gleich 5.0 sein
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+Der Mittelwert von `[12, 34, 56, 78]` muss gleich 45.0 sein
 
 ```c
     double arr3[] = {12, 34, 56, 78};

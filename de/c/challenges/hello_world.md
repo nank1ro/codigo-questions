@@ -5,13 +5,13 @@ difficulty: 1
 title: Hello World!
 ---
 
-# --description--
+# --description__
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ ist das traditionelle erste Programm für den Einstieg in eine neue Programmiersprache oder Umgebung.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Schreiben Sie eine Funktion, die den String "Hello, World!" zurückgibt.
 
 # --before-seed--
 
@@ -144,7 +144,7 @@ void try_catch(bool assertion) {
 
 ```c
 char* hello() {
-    
+
 }
 ```
 
@@ -156,7 +156,7 @@ int main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+Die Funktion sollte "Hello, World!" zurückgeben.
 
 ```c
     try_catch(strcmp(hello(), "Hello, World!") == 0);

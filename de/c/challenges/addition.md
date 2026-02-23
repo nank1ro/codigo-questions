@@ -7,11 +7,11 @@ title: Addition
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Gegeben zwei Ganzzahlen `num1` und `num2`, schreiben Sie ein Programm, um diese beiden Zahlen zu addieren
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+Schreiben Sie eine Funktion, die die Summe zweier Zahlen zurückgibt
 
 # --before-seed--
 
@@ -143,7 +143,7 @@ void try_catch(bool assertion) {
 
 ```c
 int addition() {
-  
+
 }
 ```
 
@@ -155,19 +155,19 @@ int main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Die Summe von 1 und 3 muss gleich 4 sein
 
 ```c
     try_catch(addition(1, 3) == 4);
 ```
 
-The sum of 200 and 210 must equal 410
+Die Summe von 200 und 210 muss gleich 410 sein
 
 ```c
     try_catch(addition(200, 210) == 410);
 ```
 
-The sum of 15 and 35 must equal 50
+Die Summe von 15 und 35 muss gleich 50 sein
 
 ```c
     try_catch(addition(15, 35) == 50);

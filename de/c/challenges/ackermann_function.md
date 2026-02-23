@@ -7,17 +7,17 @@ title: Ackermann function
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Die Ackermann-Funktion ist ein klassisches Beispiel für eine rekursive Funktion, besonders bemerkenswert, weil sie keine primitiv rekursive Funktion ist. Sie wächst sehr schnell in ihrem Wert, ebenso wie die Größe ihres Aufrufbaums.
 
-The Ackermann function is usually defined as follows:
+Die Ackermann-Funktion wird üblicherweise wie folgt definiert:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+Ihre Argumente sind niemals negativ und sie terminiert immer
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Schreiben Sie eine Funktion, die den Wert der Ackermann-Funktion zurückgibt.
 
 # --before-seed--
 
@@ -149,7 +149,7 @@ void try_catch(bool assertion) {
 
 ```c
 int ack(int m, int n) {
-    
+
 }
 ```
 
@@ -161,25 +161,25 @@ int main() {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` sollte 1 zurückgeben.
 
 ```c
     try_catch(ack(0, 0) == 1);
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` sollte 3 zurückgeben.
 
 ```c
     try_catch(ack(1, 1) == 3);
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` sollte 13 zurückgeben.
 
 ```c
     try_catch(ack(2, 5) == 13);
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` sollte 61 zurückgeben.
 
 ```c
     try_catch(ack(3, 3) == 61);

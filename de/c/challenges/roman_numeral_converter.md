@@ -7,19 +7,19 @@ title: Roman Numeral Converter
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+Erstellen Sie eine Funktion, die eine positive Ganzzahl als Parameter entgegennimmt und einen String zurückgibt, der die römische Zahlen-Darstellung dieser Ganzzahl enthält. Moderne römische Zahlen werden geschrieben, indem jede Ziffer separat ausgedrückt wird, beginnend mit der linken Ziffer und überspringt jede Ziffer mit dem Wert Null.
 
 # --instructions--
 
-Examples:
+Beispiele:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Alle römischen Zahlen sollten in Großbuchstaben zurückgegeben werden.
+- Die größte Zahl, die in dieser Notation dargestellt werden kann, ist 3.999.
 
 # --before-seed--
 
@@ -153,7 +153,7 @@ void try_catch(bool assertion) {
 
 ```c
 char* convert_to_roman(int n) {
-  
+
 }
 ```
 
@@ -165,67 +165,67 @@ int main() {
 
 # --asserts--
 
-The number `2` must equal `II` 
+Die Zahl `2` muss gleich `II` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(2), "II") == 0);
 ```
 
-The number `12` must equal `XII`
+Die Zahl `12` muss gleich `XII` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(12), "XII") == 0);
 ```
 
-The number `16` must equal `XVI`
+Die Zahl `16` muss gleich `XVI` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(16), "XVI") == 0);
 ```
 
-The number `44` must equal `XLIV`
+Die Zahl `44` muss gleich `XLIV` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(44), "XLIV") == 0);
 ```
 
-The number `68` must equal `LXVIII`
+Die Zahl `68` muss gleich `LXVIII` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(68), "LXVIII") == 0);
 ```
 
-The number `400` must equal `CD`
+Die Zahl `400` muss gleich `CD` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(400), "CD") == 0);
 ```
 
-The number `798` must equal `DCCXCVIII`
+Die Zahl `798` muss gleich `DCCXCVIII` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(798), "DCCXCVIII") == 0);
 ```
 
-The number `1000` must equal `M`
+Die Zahl `1000` muss gleich `M` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(1000), "M") == 0);
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+Die Zahl `3999` muss gleich `MMMCMXCIX` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(3999), "MMMCMXCIX") == 0);
 ```
 
-The number `649` must equal `DCXLIX`
+Die Zahl `649` muss gleich `DCXLIX` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(649), "DCXLIX") == 0);
 ```
 
-The number `1666` must equal `MDCLXVI`
+Die Zahl `1666` muss gleich `MDCLXVI` sein
 
 ```c
     try_catch(strcmp(convert_to_roman(1666), "MDCLXVI") == 0);
