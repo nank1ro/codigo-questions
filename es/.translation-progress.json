@@ -1,8 +1,0 @@
-{
-  "c": {"completed": 0, "total": 251, "current": null},
-  "dart": {"completed": 0, "total": 103, "current": null},
-  "javascript": {"completed": 0, "total": 291, "current": null},
-  "kotlin": {"completed": 0, "total": 301, "current": null},
-  "python": {"completed": 0, "total": 318, "current": null},
-  "swift": {"completed": 0, "total": 306, "current": null}
-}
