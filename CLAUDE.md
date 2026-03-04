@@ -69,14 +69,17 @@ Theory/explanation text
 What the user should do
 
 # --seed--
-Starting code provided to user (for type 2,3,4)
+Starting code provided to user (for type 2,3,4). In type 2, use [/] as placeholder tokens.
+
+# --answers--
+Available answer tokens (type 2: token pool; type 3: multiple choice; type 4: code blocks to sort)
 
 # --before-seed--
 Code prepended to solution (for type 1)
 
 # --solutions--
 ```python
-# Solution code
+# Solution code (type 4 can have multiple --solutions-- blocks for alternative orderings)
 ```
 
 # --asserts--
@@ -95,6 +98,23 @@ Code after unit tests
 # --output--
 Expected stdout output (alternative to asserts)
 ```
+
+### Section usage by type
+
+| Section | Type 1 | Type 2 | Type 3 | Type 4 |
+|---------|--------|--------|--------|--------|
+| `--description--` | optional | optional | optional | optional |
+| `--instructions--` | required | required | required | required |
+| `--seed--` | — | required (use `[/]` per token) | — | — |
+| `--answers--` | — | required (token pool) | required (choices) | required (code blocks) |
+| `--before-seed--` | optional | — | — | — |
+| `--solutions--` | required | required | required | required (multiple = alt orderings) |
+| `--asserts--` | required* | — | — | — |
+| `--before-asserts--` | optional | — | — | — |
+| `--after-asserts--` | optional | — | — | — |
+| `--output--` | required* | optional | — | optional |
+
+\* Type 1 requires either `--asserts--` or `--output--`.
 
 ## Development Commands
 
@@ -134,7 +154,23 @@ dart analyze
 2. Place exercise in `{locale}/{language}/{argument}/{number}.md`
 3. Number exercises sequentially (1.md, 2.md, 3.md...)
 4. For challenges, place in `{locale}/{language}/challenges/{name}.md`
-5. Add entry to `data.json` in the argument folder
+5. Add entry to `data.json` in the argument folder if it's a new argument
+
+### data.json format (argument folder)
+
+Each key is the argument folder name; entries must have `order`, `title`, and `description`:
+
+```json
+{
+    "variables": {
+        "order": 1,
+        "title": "Variables",
+        "description": "Learn how to store values in a variable"
+    }
+}
+```
+
+6. Add a corresponding SVG asset to `assets/arguments/{argument}.svg` (or `assets/challenges/{name}.svg`)
 
 ## Validation Rules
 
