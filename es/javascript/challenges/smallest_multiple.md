@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: Múltiplo más pequeño
 ---
 
 # --description--

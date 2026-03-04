@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Suma de dígitos
 ---
 
 # --description--

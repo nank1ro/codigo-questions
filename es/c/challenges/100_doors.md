@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 puertas
 compilerOptions: -lm
 ---
 

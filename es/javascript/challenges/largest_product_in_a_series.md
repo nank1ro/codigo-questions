@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Mayor producto de una serie
 ---
 
 # --description--

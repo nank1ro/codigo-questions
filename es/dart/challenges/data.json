@@ -5,7 +5,7 @@
   },
   "atm": {
     "difficulty": 1,
-    "name": "Cajero automático"
+    "name": "ATM"
   },
   "hello_world": {
     "difficulty": 1,

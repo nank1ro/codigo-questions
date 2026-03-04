@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Dos por uno
 ---
 
 # --description--

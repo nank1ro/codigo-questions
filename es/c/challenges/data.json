@@ -5,7 +5,7 @@
   },
   "atm": {
     "difficulty": 1,
-    "name": "Cajero Automático"
+    "name": "ATM"
   },
   "hello_world": {
     "difficulty": 1,
@@ -29,7 +29,7 @@
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Función Ackermann"
+    "name": "Función de Ackermann"
   },
   "arithmetic_mean": {
     "difficulty": 1,
@@ -43,7 +43,7 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Conversor de números romanos",
+    "name": "Convertidor de números romanos",
     "isPro": true
   },
   "leap_year": {

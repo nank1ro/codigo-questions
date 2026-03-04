@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "Adición"
   },
   "atm": {
     "difficulty": 1,
@@ -9,71 +9,71 @@
   },
   "hello_world": {
     "difficulty": 1,
-    "name": "Hello World!"
+    "name": "¡Hola Mundo!"
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "Gotas de lluvia"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "Suma de dígitos"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "Dos por uno"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100 puertas"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "Función de Ackermann"
   },
   "multiples_of_3_or_5": {
     "difficulty": 1,
-    "name": "Multiples of 3 or 5"
+    "name": "Múltiplos de 3 o 5"
   },
   "even_fibonacci_numbers": {
     "difficulty": 1,
-    "name": "Even Fibonacci numbers"
+    "name": "Números pares de Fibonacci"
   },
   "largest_prime_factor": {
     "difficulty": 2,
-    "name": "Largest prime factor"
+    "name": "Factor primo más grande"
   },
   "largest_palindrome_product": {
     "difficulty": 2,
-    "name": "Largest palindrome product"
+    "name": "Mayor producto palíndromo"
   },
   "smallest_multiple": {
     "difficulty": 1,
-    "name": "Smallest multiple"
+    "name": "Múltiplo más pequeño"
   },
   "sum_square_difference": {
     "difficulty": 1,
-    "name": "Sum square difference"
+    "name": "Diferencia de suma cuadrada"
   },
   "10001st_prime": {
     "difficulty": 1,
-    "name": "10001st prime"
+    "name": "Número primo 10001"
   },
   "largest_product_in_a_series": {
     "difficulty": 2,
-    "name": "Largest product in a series"
+    "name": "Mayor producto de una serie"
   },
   "special_pythagorean_triplet": {
     "difficulty": 2,
-    "name": "Special pythagorean triplet"
+    "name": "Tripleta pitagórica especial"
   },
   "summation_of_primes": {
     "difficulty": 2,
-    "name": "Summation of primes"
+    "name": "Suma de números primos"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "Media aritmética",
     "isPro": true
   },
   "fizz_buzz": {
@@ -83,12 +83,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "Convertidor de números romanos",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "Año bisiesto",
     "isPro": true
   }
 }

@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: Gotas de lluvia
 ---
 
 # --description--

@@ -1,7 +1,7 @@
 ---
 language: python
 exerciseType: 1
-title: Addition
+title: Adición
 difficulty: 1
 ---
 

@@ -37,7 +37,8 @@ Translate all exercises from `en/` to a new locale folder (e.g., `{locale}/`, `f
 
 ### What Stays in English
 - All code inside backticks or code blocks
-- Frontmatter (language, exerciseType, difficulty, title)
+- Frontmatter fields: `language`, `exerciseType`, `difficulty`
+- Challenge `title` frontmatter **must be translated** (e.g., `Leap Year` → `Año bisiesto`). Exception: proper names/acronyms that don't translate (`ATM`, `FizzBuzz`, `Hello World!`)
 - `--seed--` code (except comments if any)
 - `--solutions--` code
 - `--output--` values
@@ -95,7 +96,9 @@ Optionally track progress in `{locale}/.translation-progress.json`.
    - Example: ` - elif ` must stay as ` - elif ` (with leading and trailing space)
 2. Keep ALL code in backticks or code blocks untranslated
 3. Skip `_theory.md` files (auto-generated)
-4. Translate `data.json` files (`title` and `description` fields only)
+4. Translate `data.json` files (`title` and `description` fields for argument folders; `name` field for challenge folders)
+   - Challenge `name` in `data.json` MUST match the `title` frontmatter in the corresponding `.md` file exactly
+   - Use the canonical Spanish challenge names table below (see "Canonical Challenge Names")
 5. In `--asserts--` section: translate only the text description before the code block, NOT the code itself
 6. Preserve exact markdown formatting and structure
 7. **DO NOT translate programming keywords in `--answers--`** - C/Python/etc keywords like `if`, `else`, `true`, `false` must stay in English
@@ -266,3 +269,39 @@ When translating large numbers of files:
 
 **Detection**: Validator errors like "There are more answers than possibilities" or "Failed assertion: answersCount <= possibleAnswers.length" indicate translated code tokens.
 
+## Canonical Challenge Names (Spanish)
+
+The `title` in challenge `.md` frontmatter and the `name` in `challenges/data.json` **must match exactly**. Example table:
+
+| Key | English | Spanish |
+|-----|---------|---------|
+| `100_doors` | 100 doors | 100 puertas |
+| `10001st_prime` | 10001st prime | Número primo 10001 |
+| `ackermann_function` | Ackermann function | Función de Ackermann |
+| `addition` | Addition | Adición |
+| `arithmetic_mean` | Arithmetic mean | Media aritmética |
+| `atm` | ATM | ATM *(acronym, kept — known in Spanish)* |
+| `even_fibonacci_numbers` | Even Fibonacci numbers | Números pares de Fibonacci |
+| `fizz_buzz` | FizzBuzz | FizzBuzz *(proper name, kept)* |
+| `hello_world` | Hello World! | ¡Hola Mundo! |
+| `largest_palindrome_product` | Largest palindrome product | Mayor producto palíndromo |
+| `largest_prime_factor` | Largest prime factor | Factor primo más grande |
+| `largest_product_in_a_series` | Largest product in a series | Mayor producto de una serie |
+| `leap_year` | Leap Year | Año bisiesto |
+| `multiples_of_3_or_5` | Multiples of 3 or 5 | Múltiplos de 3 o 5 |
+| `raindrops` | Raindrops | Gotas de lluvia |
+| `roman_numeral_converter` | Roman Numeral Converter | Convertidor de números romanos |
+| `smallest_multiple` | Smallest multiple | Múltiplo más pequeño |
+| `special_pythagorean_triplet` | Special pythagorean triplet | Tripleta pitagórica especial |
+| `sum_digits` | Sum of digits | Suma de dígitos |
+| `sum_square_difference` | Sum square difference | Diferencia de suma cuadrada |
+| `summation_of_primes` | Summation of primes | Suma de números primos |
+| `two_for_one` | Two for one | Dos por uno |
+
+### Acronym / Proper Name Rule
+Keep untranslated if the term is **universally recognized as-is** in the target language:
+- `ATM` → keep (used in Spanish-speaking countries)
+- `FizzBuzz` → keep (programming challenge proper name)
+- `Hello World!` → translate (e.g., `¡Hola Mundo!`)
+
+When in doubt, translate.

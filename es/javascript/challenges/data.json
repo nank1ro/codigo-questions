@@ -1,11 +1,11 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Suma"
+    "name": "Adición"
   },
   "atm": {
     "difficulty": 1,
-    "name": "Cajero automático"
+    "name": "ATM"
   },
   "hello_world": {
     "difficulty": 1,
@@ -37,7 +37,7 @@
   },
   "even_fibonacci_numbers": {
     "difficulty": 1,
-    "name": "Números de Fibonacci pares"
+    "name": "Números pares de Fibonacci"
   },
   "largest_prime_factor": {
     "difficulty": 2,
@@ -45,7 +45,7 @@
   },
   "largest_palindrome_product": {
     "difficulty": 2,
-    "name": "Producto palíndromo más grande"
+    "name": "Mayor producto palíndromo"
   },
   "smallest_multiple": {
     "difficulty": 1,
@@ -53,7 +53,7 @@
   },
   "sum_square_difference": {
     "difficulty": 1,
-    "name": "Diferencia de suma de cuadrados"
+    "name": "Diferencia de suma cuadrada"
   },
   "10001st_prime": {
     "difficulty": 1,
@@ -61,11 +61,11 @@
   },
   "largest_product_in_a_series": {
     "difficulty": 2,
-    "name": "Producto más grande en una serie"
+    "name": "Mayor producto de una serie"
   },
   "special_pythagorean_triplet": {
     "difficulty": 2,
-    "name": "Triplete pitagórico especial"
+    "name": "Tripleta pitagórica especial"
   },
   "summation_of_primes": {
     "difficulty": 2,

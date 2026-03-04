@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 3
-title: Convertidor de numerales romanos
+title: Convertidor de números romanos
 ---
 
 # --description--

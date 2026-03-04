@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Tripleta pitagórica especial
 ---
 
 # --description--

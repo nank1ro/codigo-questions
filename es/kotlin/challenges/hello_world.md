@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: ¡Hola Mundo!
 ---
 
 # --description--

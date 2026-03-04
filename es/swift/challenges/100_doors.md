@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 puertas
 ---
 
 # --description--

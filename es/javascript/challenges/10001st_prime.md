@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: Número primo 10001
 ---
 
 # --description--

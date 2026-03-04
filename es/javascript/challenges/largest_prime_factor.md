@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Factor primo más grande
 ---
 
 # --description--
