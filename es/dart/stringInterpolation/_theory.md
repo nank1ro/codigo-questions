@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+Una _interpolación_ de String es una forma programática de generar una String.
+En Dart podemos usar el signo `+` (concatenación) para mostrar dos o más strings juntos, como:
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Pero usar el signo `+` para agregar un número como '10' a una cadena como ` "friends"` produce un error ya que son un tipo diferente de valores
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+La interpolación de cadenas nos permite mostrar expresiones como agregar una cadena a un número, sin ningún error.
+Colocar una expresión dentro de `${}` la evalúa.
+El valor de retorno se convierte en una String e se inserta en la String resultante
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+Si pones un `$` antes de un nombre de identificador, la interpolación de cadenas insertará el contenido de ese identificador en la `String`
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+Si lo que sigue al signo `$` no es reconocible como un identificador de programa, vas a encontrarte con un error
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+También podemos insertar variables después de los signos de dólar para mostrar su valor
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+Podemos usar llaves para insertar valores tantas veces como queramos usando la interpolación de cadenas
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Dentro de `${}` también podemos poner condiciones, por ejemplo:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+La interpolación de cadenas se usa mejor en sentencias print, pero también podemos almacenarlas en variables como cadenas normales.

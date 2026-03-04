@@ -1,65 +1,65 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Ya hemos aprendido que para asignar un valor a una variable podemos usar el signo `=`, como:
 ```javascript
 let a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+Ya tenemos una variable `total` inicializada
 ```javascript
 var total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Digamos que queremos añadir el número `2` a la variable `total`, podemos escribir
 ```javascript
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+¡Bien, funciona! Pero hay una versión más corta para hacer lo mismo:
 ```javascript
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+El signo `+=` se llama **asignación de suma**.
+Suma un valor al valor de la variable y asigna el resultado a esa variable.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Al igual que en la asignación de suma, tenemos la **asignación de decremento** `-=`.
+La funcionalidad es la misma, la única diferencia es que realiza la resta.
+Así que los siguientes son exactamente iguales
 ```javascript
 var num = num - 5;
-// is equal to
+// es igual a
 num -= 5;
 ```
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de multiplicación** `*=`.
+Multiplica la variable por un valor y asigna el resultado a esa variable.
+Así que los siguientes son exactamente iguales
 ```javascript
 var num = num * 5;
-// is equal to
+// es igual a
 num *= 5;
 ```
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de división** `/=`.
+Divide la variable por un valor y asigna el resultado a esa variable.
+Así que los siguientes son exactamente iguales
 ```javascript
 num = num / 5;
-// is equal to
+// es igual a
 num /= 5;
 ```
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de residuo** `%=`.
+Calcula el residuo de la variable y un valor y asigna el resultado a esa variable.
+Así que los siguientes son exactamente iguales
 ```javascript
 num = num % 5;
-// is equal to
+// es igual a
 num %= 5;
 ```

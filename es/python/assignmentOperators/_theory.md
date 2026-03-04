@@ -1,87 +1,87 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Ya hemos aprendido que para asignar un valor a una variable podemos usar el signo `=`, como:
 ```python
 a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+Ya tenemos una variable inicializada `total`
 ```python
 total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Digamos que queremos añadir el número `2` a la variable `total`, podemos escribir
 ```python
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+¡Bien, funciona! Pero hay una versión más corta para hacer lo mismo:
 ```python
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+El signo `+=` se llama **asignación de adición**.
+Añade un valor al valor de la variable y asigna el resultado a esa variable.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Al igual que en la asignación de adición, tenemos la **asignación de resta** `-=`.
+La funcionalidad es la misma, la única diferencia es que realiza la resta.
+Los siguientes son exactamente iguales
 ```python
 num = num - 5
-# is equal to
+# es igual a
 num -= 5
 ```
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de multiplicación** `*=`.
+Multiplica la variable por un valor y asigna el resultado a esa variable.
+Los siguientes son exactamente iguales
 ```python
 num = num * 5
-# is equal to
+# es igual a
 num *= 5
 ```
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de división** `/=`.
+Divide la variable por un valor y asigna el resultado a esa variable.
+Los siguientes son exactamente iguales
 ```python
 num = num / 5
-# is equal to
+# es igual a
 num /= 5
 ```
 
 ---
 
-Let's see the **power assignment** `**=` operator.
-It raises the variable to a specified power and assigns the result to the variable.
-So the followings are exactly the same
+Veamos el operador **asignación de potencia** `**=`.
+Eleva la variable a una potencia especificada y asigna el resultado a la variable.
+Los siguientes son exactamente iguales
 ```python
 num = num ** 5
-# is equal to
+# es igual a
 num **= 5
 ```
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de módulo** `%=`.
+Calcula el módulo de la variable y un valor y asigna el resultado a esa variable.
+Los siguientes son exactamente iguales
 ```python
 num = num % 5
-# is equal to
+# es igual a
 num %= 5
 ```
 
 ---
 
-Let's see the **floor assignment** `//=` operator.
-It floor divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Veamos el operador **asignación de división piso** `//=`.
+Realiza una división piso de la variable por un valor y asigna el resultado a esa variable.
+Los siguientes son exactamente iguales
 ```python
 num = num // 5
-# is equal to
+# es igual a
 num //= 5
 ```

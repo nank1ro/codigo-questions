@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+En JavaScript podemos usar el signo `+` para mostrar dos o más cadenas juntas, como:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+Los literales de plantilla nos permiten mostrar expresiones como agregar una cadena a un número, sin usar el signo `+`.
+Para crear un literal de plantilla válido, debes usar las comillas invertidas \`\` en lugar de comillas simples o dobles.
+Puedes insertar variables dentro de los literales de plantilla usando el signo de dólar y llaves `${expression}`
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+Cada sentencia de literal de plantilla consta de dos partes: el `${}` donde insertamos el número o la variable, y la cadena normal
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+A continuación, agregamos diferentes tipos de valores entre llaves para que se muestre como una sentencia console.log. Como aquí, con `${5}`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Insertar variables como `friends` entre las llaves también muestra su valor
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+Podemos usar `${}` para insertar valores tantas veces como queramos dentro de los literales de plantilla
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+Los literales de plantilla se usan mejor en sentencias de impresión, pero también podemos almacenarlos en variables como cadenas normales.

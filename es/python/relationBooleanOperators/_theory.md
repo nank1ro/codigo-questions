@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+Comencemos con el operador relacional **igual** `==`.
+Devuelve un **booleano** (`True` o `False`) indicando si dos expresiones son iguales, por ejemplo:
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+Continuemos con el operador relacional **no igual** `!=`.
+Devuelve un **booleano** (`True` o `False`) indicando si dos expresiones **NO** son iguales, por ejemplo:
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+Es exactamente lo opuesto al operador *igual*
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+Continuemos con el operador relacional **mayor que** `>`.
+Devuelve un **booleano** (`True` o `False`) indicando si una expresión es mayor que la otra, por ejemplo:
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+Continuemos con el operador relacional **menor que** `<`.
+Devuelve un **booleano** (`True` o `False`) indicando si una expresión es menor que la otra, por ejemplo:
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+Continuemos con el operador relacional **mayor o igual que** `>=`.
+Devuelve un **booleano** (`True` o `False`) indicando si una expresión es mayor o igual a la otra, por ejemplo:
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+Continuemos con el operador relacional **menor o igual que** `<=`.
+Devuelve un **booleano** (`True` o `False`) indicando si una expresión es menor o igual a la otra, por ejemplo:
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+Ahora veamos los operadores **booleanos**, comencemos con el primero llamado `and`.
+Devuelve el primer operando que evalúa a *False* o el último si todos son *True*.
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+Continuemos con el operador booleano **or**.
+Devuelve el primer operando que evalúa a *True* o el último si todos son *False*.
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Terminemos con el operador booleano **not**.
+Devuelve un booleano que es el opuesto del estado lógico de una expresión.
 ```python
 >>> not True
 False

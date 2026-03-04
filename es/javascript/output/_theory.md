@@ -1,6 +1,6 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `console.log()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with JavaScript we can write
+"__¡Hola, Mundo!__" es el programa tradicional primero para comenzar la programación en un nuevo lenguaje.
+Usamos la función `console.log()` para enviar datos al dispositivo de salida estándar (pantalla).
+Para imprimir `Hello, World!` en la pantalla con JavaScript podemos escribir
 ```javascript
 console.log("Hello, World!")
 ```

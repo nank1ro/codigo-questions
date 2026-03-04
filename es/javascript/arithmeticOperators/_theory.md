@@ -1,49 +1,49 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Los operadores se utilizan para realizar operaciones en variables y valores.
+Comencemos con los operadores aritméticos, en particular con el operador **suma** `+`.
+Se utiliza para sumar dos números, como:
 ```javascript
 console.log(5 + 3);
-// prints 8
+// imprime 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Continuemos con el operador **resta** `-`.
+Se utiliza para restar un número de otro, como:
 ```javascript
 console.log(5 - 3);
-// prints 2
+// imprime 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Veamos el operador **multiplicación** `*`.
+Se utiliza para multiplicar dos números juntos, como:
 ```javascript
 console.log(5 * 3);
-// prints 15
+// imprime 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Veamos el operador **división** `/`.
+Se utiliza para dividir dos números juntos, como:
 ```javascript
 console.log(10 / 5);
-// prints 2
+// imprime 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Veamos el operador **residuo** `%`.
+Se utiliza para encontrar el residuo después de una división entre dos números, como:
 ```javascript
 console.log(5 % 2);
-// prints 1
+// imprime 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Esto evalúa a 1 porque 5 dividido por 2 tiene un cociente de 2 y un residuo de 1
 ```javascript
 console.log(9 % 3);
-// prints 0
+// imprime 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Este otro evalúa a 0 porque 9 dividido por 3 tiene un cociente de 3 y deja un residuo de 0
