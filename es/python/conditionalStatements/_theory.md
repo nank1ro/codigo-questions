@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `True`, like:
+Se requiere tomar decisiones cuando queremos ejecutar código solo si se cumple cierta condición.
+Supongamos que queremos jugar afuera solo si el clima es agradable.
+En programación, podemos guardar una variable booleana `nice_weather` y realizar la acción de jugar afuera `if` esta variable es `True`, como:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -9,24 +9,24 @@ if (nice_weather):
 
 ---
 
-Let's continue with the previous example.
+Continuemos con el ejemplo anterior.
 ```python
 nice_weather = True
 if (nice_weather):
     # play outside
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `True`.
-Another important thing to consider is represented by the **colons** `:` and the **indentation**, which indicate a code block start.
-Indentation refers to the spaces at the beginning of a code line.
-Where in other programming languages the indentation in code is for readability only, the indentation in Python is essential.
-You can use your favorite number of spaces (2, 4, 6, 8), noting that the preferred is 4.
-Here in the app, we suggest using the **TAB** key to indent your line of codes
+Hemos visto que la instrucción `if` ejecuta el bloque de código solo si la condición es `True`.
+Otra cosa importante a considerar está representada por los **dos puntos** `:` y la **indentación**, que indican el inicio de un bloque de código.
+La indentación se refiere a los espacios al principio de una línea de código.
+Mientras que en otros lenguajes de programación la indentación en el código es solo para la legibilidad, en Python la indentación es esencial.
+Puedes usar tu número de espacios favorito (2, 4, 6, 8), teniendo en cuenta que el preferido es 4.
+Aquí en la aplicación, sugerimos usar la tecla **TAB** para indentar tus líneas de código
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Python we can use the `else` statement, like:
+Acabamos de ver cómo ejecutar un bloque de código si ocurre una condición, ahora veamos cómo ejecutar otro bloque de código si la primera condición falla.
+Vamos a jugar afuera si el clima es agradable; de lo contrario, nos quedamos en casa.
+En Python podemos usar la instrucción `else`, como:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -37,7 +37,7 @@ else:
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+Supongamos que tenemos otra condición que verificar, como en este ejemplo:
 ```python
 num = 3
 if (num == 2):
@@ -47,13 +47,13 @@ elif (num == 3):
 else:
     print("do something else")
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+y la salida de este código es `the number is 3`.
+Primero, comprobemos si el número es igual a 2, esto es falso.
+Así que pasemos a la segunda instrucción y comprobemos si `num` es igual a 3, siendo verdadero ejecutamos el siguiente bloque de código imprimiendo `the number is 3`
 
 ---
 
-We can add as many `elif` statements as we want, there are no limits
+Podemos agregar tantas instrucciones `elif` como queramos, no hay límites
 ```python
 num = 4
 if (num == 2):
@@ -67,11 +67,11 @@ elif (num == 5):
 elif (num == 6):
     print("the number is 6")
 ```
-and the output of this code is `the number is 4`.
+y la salida de este código es `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `elif` or `else`) inside another conditional statement, to create a more complex structure.
+También podemos anidar una instrucción condicional (`if`, `elif` o `else`) dentro de otra instrucción condicional, para crear una estructura más compleja.
 ```python
 num = 4
 if (num < 3):
@@ -84,4 +84,24 @@ else:
     else:
         print("the number is greather than 4")
 ```
-and the output of this code is `the number is 4`.
+y la salida de este código es `the number is 4`.
+
+---
+
+Ahora que comprendemos cómo funcionan las declaraciones condicionales `if`, podemos crear nuestras propias.
+Recordemos que la declaración `if` requiere una palabra clave `if` seguida de una condición entre paréntesis y luego dos puntos `:`.
+
+---
+
+Cuando queremos ejecutar código solo si una condición es verdadera, usamos la declaración `if`.
+El bloque de código dentro del `if` se ejecutará solo cuando la condición sea `True`.
+
+---
+
+Es importante recordar que el bloque de código dentro de un `if` solo se ejecuta si la condición es `True`.
+Si la condición es `False`, el bloque se omite completamente y el programa continúa con el siguiente código.
+
+---
+
+La declaración `if` es una de las herramientas más útiles en programación.
+Nos permite escribir código que responde a diferentes situaciones y condiciones.

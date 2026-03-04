@@ -1,31 +1,31 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+Las listas son un tipo de dato que puedes usar para almacenar una colección de diferentes piezas de información como una secuencia bajo un único nombre de variable.
+Una lista almacena múltiples valores de cualquier tipo y utiliza **índices** para distinguir estos valores.
+Puedes asignar elementos a una lista con una expresión de la forma:
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+Puedes acceder a un elemento individual de la lista por su índice.
+Un índice es como una dirección que identifica el lugar del elemento en la lista.
+El índice aparece directamente después del nombre de la lista, entre corchetes, así:
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+Los índices de lista comienzan con `0`, **¡no** con `1`! Accedes al primer elemento de una lista así: `list_name[0]`.
+El segundo elemento en una lista está en el índice 1: `list_name[1]`.
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+¡Un índice de lista se comporta como cualquier otro nombre de variable! Se puede usar tanto para acceder como para asignar valores.
+Viste cómo acceder a un índice de lista así:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] # Gets the value "Jeremiah"
 ```
-This is how an assignment works:
+Así es como funciona una asignación:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
@@ -34,14 +34,14 @@ names[0] # Gets the new value "Jordan"
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+Al igual que las cadenas, las listas tienen una **longitud**.
+La longitud de una lista es el número de elementos que contiene
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+Una lista no tiene que tener una longitud fija.
+¡Puedes agregar elementos al final de una lista en cualquier momento!
+Para agregar un elemento a una lista usamos la palabra clave `append`:
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+A veces, solo quieres acceder a una parte de una lista.
+Considera el siguiente código:
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+Primero, creamos una lista llamada `numbers`.
+Luego, tomamos una subsección de la lista y la almacenamos en la lista slice.
+Lo hacemos definiendo los índices que queremos incluir después del nombre de la lista: `numbers[1:3]`.
+En Python, cuando especificamos una parte de una lista de esta manera, incluimos el elemento con el primer índice, `1`, pero excluimos el elemento con el segundo índice, `3`.
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+¡Puedes dividir una cadena exactamente como una lista! De hecho, puedes pensar en las cadenas como listas de caracteres: cada carácter es un elemento secuencial en la lista, comenzando desde el índice `0`.
 ```python
 list_name[:2]
 # Grabs the first two items
 list_name[3:]
 # Grabs the fourth through last items
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+Si tu porción de lista incluye el primer o último elemento en una lista (o una cadena), el índice de ese elemento no tiene que incluirse.
 
 ---
 
-List elements could be of any type:
+Los elementos de una lista pueden ser de cualquier tipo:
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+De hecho, arriba tenemos, en orden, una cadena, un entero y un booleano.
+¡Pero también podemos tener listas con listas!
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+A veces necesitas buscar un elemento en una lista.
+En Python podemos usar el método `index()`:
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+El código anterior imprime el primer índice que contiene la cadena `"Zac"`, `1` en este caso.
+También podemos insertar elementos en una lista en un índice específico, usando el método `insert()`:
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+El código anterior inserta `"Ali"` en el índice `1`, lo que desplaza todo lo que viene después de este índice hacia abajo en 1
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+En Python podemos recorrer una lista de una manera muy simple usando las palabras clave `for..in`:
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+Un nombre de variable sigue a la palabra clave `for`, se le asignará el valor de cada elemento de la lista a su vez.
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+Las **tuplas** son como listas pero mucho más rápidas.
+Sin embargo, los valores de las tuplas no se pueden cambiar.
+Tendemos a usar tuplas para datos de **solo lectura** que permanecen constantes mientras se ejecuta el programa.
+Para crear una tupla usamos paréntesis `()`
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+Puede haber momentos en los que queramos cambiar nuestra tupla a una lista.
+Para hacer esto, podemos usar la función `list()`
 
 ---
 
-Likewise, we can convert a list into a tuple
+De manera similar, podemos convertir una lista en una tupla

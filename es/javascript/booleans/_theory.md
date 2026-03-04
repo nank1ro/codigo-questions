@@ -1,11 +1,11 @@
-JavaScript has a basic Boolean type, called `boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in JavaScript, and get one of two answers, `true` or `false`.
+JavaScript tiene un tipo booleano básico, llamado `boolean`.
+Los valores booleanos se refieren a como lógicos, porque solo pueden ser verdadero o falso.
+Puedes evaluar cualquier expresión en JavaScript, y obtener una de dos respuestas, `true` o `false`.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+Podemos almacenar el valor booleano `true` en una variable igual que un número o un string.
 
 ---
 
-The opposite value of `true` is `false`
+El valor opuesto de `true` es `false`

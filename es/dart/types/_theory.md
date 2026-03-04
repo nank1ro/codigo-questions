@@ -25,11 +25,11 @@ const int integerNumber = 2;
 final double decimalNumber = 3.14;
 ```
 
-> Nota: Los datos mutables te permiten cambiarlos cuando quieras de manera fácil. Sin embargo, muchos programadores experimentados aprecian los beneficios de los datos inmutables. Cuando un valor es inmutable, puedes confiar en que nadie podrá cambiar el valor después de que lo crees. Limitar tus datos de esta manera previene muchos bugs difíciles de encontrar y hace que el programa sea más fácil de pensar y probar.
+> Nota: Los datos mutables te permiten cambiarlos cuando quieras de una manera fácil. Sin embargo, muchos programadores experimentados aprecian los beneficios de los datos inmutables. Cuando un valor es inmutable, puedes confiar en que nadie podrá cambiar el valor después de que lo crees. Limitar tus datos de esta manera previene muchos bugs difíciles de encontrar y hace que el programa sea más fácil de pensar y probar.
 
 ---
 
-Aunque es posible anotar el tipo de una variable, esto es redundante. Sabes que `10` es de tipo `int` y `3.14` es de tipo `double`. El compilador de Dart puede inferirlo gracias a __type inference__. No todos los lenguajes de programación tienen _type inference_, y esto hace que Dart sea un lenguaje de programación muy poderoso.
+Aunque es posible anotar el tipo de una variable, esto es redundante. Sabes que `10` es de tipo `int` y `3.14` es de tipo `double`. El compilador de Dart es capaz de inferirlo gracias a __type inference__. No todos los lenguajes de programación tienen _type inference_, y esto hace que Dart sea un lenguaje de programación muy poderoso.
 
 Simplemente puedes eliminar el tipo de las variables, por ejemplo:
 ```dart
@@ -41,7 +41,7 @@ Cuando el tipo de una variable no se anota explícitamente, Dart intentará infe
 
 ---
 
-Hay una forma programática de verificar el tipo de una variable, es decir, con la palabra clave `is`:
+Hay una forma programática de verificar el tipo de una variable, a saber, con la palabra clave `is`:
 ```dart
 final number = 3.14;
 print(number is int); // false
@@ -52,7 +52,7 @@ Como puedes ver, Dart ha asignado el tipo `double` a la variable `number`.
 
 ---
 
-La palabra clave `is` te permite verificar si una variable es del tipo que defines. Pero también puedes verificar si una variable no es del tipo definido con la palabra clave `is!`
+La palabra clave `is` te permite verificar si una variable es del tipo que defines. Pero también puedes comprobar si una variable no es del tipo definido con la palabra clave `is!`
 ```dart
 final number = 3.14;
 print(number is! int); // true
@@ -68,7 +68,7 @@ print(number.runtimeType); // double
 
 ---
 
-A veces te encontrarás en la situación de tener un tipo, pero necesitando convertirlo a otro. Podrías ser tentado a hacer:
+A veces te encontrarás en la situación de tener un tipo, pero necesitar convertirlo a otro. Podrías estar tentado de hacer:
 
 ```dart
 var integer = 5;
@@ -79,22 +79,22 @@ integer = decimal;
 Pero Dart se quejará y te dará el error:
 > Error: A value of type 'double' can't be assigned to a variable of type 'int'.
 
-Algunos lenguajes de programación no son tan restrictivos y se convertirán silenciosamente. La experiencia muestra que este tipo de conversión implícita silenciosa es una fuente frecuente de bugs y problemas de rendimiento. Dart ha deshabilitado esta función para evitar estos problemas.
+Algunos lenguajes de programación no son tan restrictivos e convierten silenciosamente. La experiencia muestra que este tipo de conversión implícita silenciosa es una fuente frecuente de bugs y problemas de rendimiento. Dart ha deshabilitado esta función para evitar estos problemas.
 
-Recuerda, las computadoras dependen de los programadores para averiguar qué hacer. En Dart esto incluye ser explícito sobre el tipo de conversión.
+Recuerda, las computadoras dependen de los programadores para que averigüen qué hacer. En Dart esto incluye ser explícito sobre el tipo de conversión.
 
-En lugar de esperar una conversión implícita de Dart, necesitas decir explícitamente que quieres que Dart convierta el tipo para ti. Aquí está cómo convertir un número `double` a uno `int`:
+En lugar de esperar una conversión implícita de Dart, necesitas decir explícitamente que quieres que Dart convierta el tipo para ti. Así es cómo se convierte un número `double` a uno `int`:
 ```dart
 var integer = decimal.toInt();
 ```
 
-La asignación le dice a Dart, inequívocamente, que quieres convertir del tipo original `double` al nuevo tipo `double`.
+La asignación le dice a Dart, sin lugar a dudas, que deseas convertir del tipo original `double` al nuevo tipo `double`.
 
 > NOTAS: En este caso, asignar un valor decimal a un entero pierde precisión. La variable `integer` tiene el valor __3__ en lugar de __3.14__. Por eso es importante ser explícito. Dart quiere estar seguro de lo que estás haciendo y te hace saber que perderás información al convertir.
 
 ---
 
-Hasta ahora hemos visto los operadores utilizados independientemente en enteros o decimales. ¿Y si tienes un entero y necesitas multiplicarlo por un número decimal? Veamos un ejemplo:
+Hasta ahora hemos visto los operadores usados independientemente en números enteros o decimales. ¿Qué pasa si tienes un número entero y necesitas multiplicarlo con un número decimal? Veamos un ejemplo:
 ```dart
 const radius = 5;
 const pi = 3.14;
@@ -108,16 +108,16 @@ Si quieres un `int` como resultado, tienes que hacer la conversión explícitame
 const circumference = (2 * pi * radius).toInt();
 ```
 
-Los paréntesis le dicen a Dart que multiplique primero, y luego tome el resultado y lo convierta a un valor entero. Desafortunadamente, el analizador no le gustará este código:
+Los paréntesis le dicen a Dart que primero multiplique y luego tome el resultado y lo convierta a un valor entero. Desafortunadamente, el analizador no le gustará este código:
  > Const variables must be initialized with a constant value.
 
-El problema es que el método `toInt` es un método de solo tiempo de ejecución. Esto significa que la variable `circumference` no se puede determinar en tiempo de compilación, por lo que no es posible que la variable sea constante. Para corregir reemplaza `const` con `final`:
+El problema es que el método `toInt` es un método solo en tiempo de ejecución. Esto significa que la variable `circumference` no se puede determinar en tiempo de compilación, por lo que no es posible que la variable sea constante. Para reparar reemplaza `const` con `final`:
 
 ```dart
 final circumference = (2 * pi * radius).toInt();
 ```
 
-Ahora `circumference` es una variable de __constante de tiempo de ejecución__ de tipo `int`.
+Ahora `circumference` es una variable de constante de __tiempo de ejecución__ de tipo `int`.
 
 ---
 

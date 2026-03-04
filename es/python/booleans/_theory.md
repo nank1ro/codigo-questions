@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+Los booleanos representan uno de dos valores: `True` o `False`.
+Puedes evaluar cualquier expresión en Python y obtener una de dos respuestas, `True` o `False`.
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+Podemos almacenar el valor booleano `True` en una variable como un número o una cadena.
 
 ---
 
-The opposite value of `True` is `False`
+El valor opuesto de `True` es `False`

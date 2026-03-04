@@ -17,12 +17,12 @@ total = total + 2
 ```python
 total += 2
 ```
-El signo `+=` se llama **asignación de adición**.
+El signo `+=` se llama **addition assignment**.
 Añade un valor al valor de la variable y asigna el resultado a esa variable.
 
 ---
 
-Al igual que en la asignación de adición, tenemos la **asignación de resta** `-=`.
+Al igual que en la asignación de adición, tenemos el **decrement assignment** `-=`.
 La funcionalidad es la misma, la única diferencia es que realiza la resta.
 Los siguientes son exactamente iguales
 ```python
@@ -33,7 +33,7 @@ num -= 5
 
 ---
 
-Veamos el operador **asignación de multiplicación** `*=`.
+Veamos el operador **multiplication assignment** `*=`.
 Multiplica la variable por un valor y asigna el resultado a esa variable.
 Los siguientes son exactamente iguales
 ```python
@@ -44,7 +44,7 @@ num *= 5
 
 ---
 
-Veamos el operador **asignación de división** `/=`.
+Veamos el operador **division assignment** `/=`.
 Divide la variable por un valor y asigna el resultado a esa variable.
 Los siguientes son exactamente iguales
 ```python

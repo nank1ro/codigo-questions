@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in Python is an object and unlike other programming languages, Python has no command for declaring a variable.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+Las variables son contenedores para almacenar valores de datos.
+Cada variable en Python es un objeto y a diferencia de otros lenguajes de programación, Python no tiene un comando para declarar una variable.
+Para crear una variable, necesitamos darle un **nombre** teniendo en cuenta que no debe contener espacios.
+Una variable se crea en el momento en que le asignas un valor por primera vez.
+Un ejemplo de creación de una variable nombrada `x` es:
 ```python
 x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+De esta manera hemos asignado el valor `1` a la variable nombrada `x`.
+Si imprimimos la variable `x` obtenemos el número `1`:
 ```python
 >>> print(x)
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Las variables se llaman así porque el valor que almacenan puede cambiar.
+Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```python
 >>> x = 1
 >>> print(x)
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+También podemos darles a las variables los valores de otras variables. Aquí, podemos darle a la variable `y` el valor de `x`
 ```python
 >>> x = 5
 >>> y = x
@@ -38,7 +38,7 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+Cuando actualizamos una variable, olvida su valor anterior. Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```python
 >>> x = 5
 >>> print(x)
@@ -50,14 +50,14 @@ When we update a variable, it forgets its previous value. Here we can display th
 
 ---
 
-String variables can be declared either by using single or double quotes:
+Las variables de cadena se pueden declarar usando comillas simples o dobles:
 ```python
 >>> x = "May"
 >>> x = 'May'
 ```
-Both are the same thing.
+Ambas son lo mismo.
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+Si queremos un nombre de variable con múltiples palabras, usamos **snake case**.
+Significa usar `_` para conectar las palabras adicionales.

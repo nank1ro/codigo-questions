@@ -1,5 +1,5 @@
-A String _template_ is a programmatic way to generate a String.
-In Kotlin we can use the `+` sign (concatenation) to display two or more strings together, like:
+Una plantilla de cadena _template_ es una forma programática de generar una cadena.
+En Kotlin podemos usar el signo `+` (concatenación) para mostrar dos o más cadenas juntas, como:
 ```kotlin
 println("Hello " + "Kotlin!")
 // prints "Hello Kotlin!"
@@ -7,38 +7,38 @@ println("Hello " + "Kotlin!")
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Pero usar el signo `+` para sumar un número como '10' a una cadena como ` "friends"` produce un error, ya que son valores de diferente tipo
 
 ---
 
-String templates allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+Las plantillas de cadena nos permiten mostrar expresiones como sumar una cadena a un número, sin ningún error.
+Al colocar una expresión dentro de `${}` la evaluamos.
+El valor de retorno se convierte a una cadena y se inserta en la cadena resultante
 
 ---
 
-If you put a $ before an identifier name, the String template will insert that identifier's contents into the String
+Si pones un $ antes del nombre de un identificador, la plantilla de cadena insertará el contenido de ese identificador en la cadena
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, nothing special happens
+Si lo que sigue al signo `$` no es reconocible como un identificador de programa, no ocurre nada especial
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+También podemos insertar variables después de los signos de dólar para mostrar su valor
 
 ---
 
-We can use curly brackets to insert values as often as we like inside the string templates
+Podemos usar llaves para insertar valores tantas veces como queramos dentro de las plantillas de cadena
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Dentro de `${}` también podemos poner condiciones, por ejemplo:
 ```kotlin
-println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+println("${if (true) "Correcto" else "Incorrecto"}")
+// imprime Correcto
 ```
 
 ---
 
-String templates are best used in print statements, but we can also store them in variables like normal strings.
+Las plantillas de cadena se usan mejor en sentencias de impresión, pero también podemos almacenarlas en variables como cadenas normales.

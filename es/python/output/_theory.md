@@ -1,6 +1,6 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `print()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with Python we can write
+"__¡Hola, Mundo!__" es el programa tradicional para comenzar a programar en un nuevo lenguaje.
+Usamos la función `print()` para mostrar datos en el dispositivo de salida estándar (pantalla).
+Para imprimir `Hello, World!` en la pantalla con Python podemos escribir
 ```python
 print("Hello, World!")
 ```

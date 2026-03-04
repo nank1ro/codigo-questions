@@ -1,6 +1,6 @@
 En JavaScript podemos usar el signo `+` para mostrar dos o más cadenas juntas, como:
 ```javascript
-console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
+console.log("Hello " + "JavaScript!") // imprime "Hello JavaScript!"
 ```
 
 ---
@@ -11,7 +11,7 @@ Puedes insertar variables dentro de los literales de plantilla usando el signo d
 
 ---
 
-Cada sentencia de literal de plantilla consta de dos partes: el `${}` donde insertamos el número o la variable, y la cadena normal
+Cada sentencia de literal de plantilla consta de dos partes: `${}` donde insertamos el número o la variable, y la cadena normal
 
 ---
 

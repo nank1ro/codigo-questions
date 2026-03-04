@@ -1,15 +1,15 @@
-**Dictionaries** are similar to arrays and tuples, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Dictionaries are enclosed in square brackets, like so:
+Los **diccionarios** son similares a los arrays y tuplas, pero accedes a los valores buscando una *clave* en lugar de un índice
+Una clave puede ser cualquier cadena o número.
+Los diccionarios se encierran entre corchetes, así:
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Este es un diccionario llamado `dictionaryName` con tres *pares clave-valor*.
+La clave `key1` apunta al valor `1`, `key2` a `2`, y así sucesivamente.
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+Acceder a valores de diccionario por clave es como acceder a valores de array por índice:
 ```swift
 // gets the age value from the user dictionary
 user['age']
@@ -17,42 +17,42 @@ user['age']
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Como Arrays, los Dictionaries son _mutables_.
+Esto significa que pueden ser cambiados después de ser creados (si no están declarados como constantes).
+Una ventaja de esto es que podemos agregar nuevos _pares clave/valor_ al diccionario después de que es creado así:
 ```swift
 dictName[newKeyName] = newValue
 ```
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+La longitud `count` de un diccionario es el número de _pares clave-valor_ que tiene.
+Cada par cuenta solo una vez, incluso si el valor es un array. (¡Así es: ¡también puedes poner arrays dentro de diccionarios!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+Porque los diccionarios son mutables, pueden ser cambiados de muchas formas. Los elementos pueden ser removidos de un diccionario con el método `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
     print("The removed value is \(removedValue).") // prints the removed value, if the key exists
 }
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+eliminará la clave `keyName` y su valor asociado del diccionario.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+¿Y si queremos listar todas las claves del diccionario?
+Bueno, existe la propiedad `keys`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+¿Y si queremos listar todos los valores del diccionario?
+Bueno, existe la propiedad `values`.
 
 ---
 
-As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+Como con los arrays, podemos recorrer los elementos del diccionario usando las palabras clave `for..in`.
+Para obtener tanto la clave como el valor en el bucle no tenemos que especificar ninguna propiedad:
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -61,16 +61,16 @@ for (key, value) in dictName {
 
 ---
 
-We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+También podemos usar la propiedad `isEmpty` que usamos con arrays para determinar si un diccionario está vacío
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `updateValue(_:forKey:)` method
+Para __agregar__ o __cambiar__ valores a un diccionario, también podemos usar el método `updateValue(_:forKey:)`
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+Anteriormente vimos cómo eliminar un _par clave-valor_ del diccionario con el método `removeValue()`.
+También podemos eliminar un elemento asignando a la clave el valor `nil`
 ```swift
 dictName[keyName] = nil
 // keyName has been removed from the dictionary dictName

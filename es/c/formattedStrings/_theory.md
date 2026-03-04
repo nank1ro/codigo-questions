@@ -13,15 +13,15 @@ Para mostrar un entero usamos la expresión `%i`
 
 ---
 
-Cada declaración de cadena formateada consta de dos partes, el texto que queremos incluir y la expresión que queremos formatear dentro del texto
+Cada sentencia de cadena formateada consta de dos partes, el texto que queremos incluir y la expresión que queremos formatear dentro del texto
 
 ---
 
-Después, agregamos el tipo de valor diferente. Como aquí, con `%i`
+A continuación, añadimos el tipo de valor diferente. Como aquí, con `%i`
 
 ---
 
-Insertar variables como `friends` muestra su valor también
+Insertar variables como `friends` también muestra su valor
 
 ---
 

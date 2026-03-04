@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Sabemos cómo repetir código usando un bucle `while`.
+Como este programa que repite declaraciones para mostrar `hello`
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+Pero podemos hacer lo mismo con bucles `for`:
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");
@@ -17,14 +17,14 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+En un bucle `for` podemos especificar cuántas veces queremos que se ejecute nuestro bucle
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+Podemos usar `<` para hacer un bucle hasta el siguiente número excluido, o `<=` para hacer un bucle hasta el siguiente número incluido
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+La variable llamada `i` es la variable contadora.
+Podemos darle el nombre que queramos.
+Cuenta en qué repetición del bucle estamos actualmente

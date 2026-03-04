@@ -70,7 +70,7 @@ True
 ---
 
 Ahora veamos los operadores **booleanos**, comencemos con el primero llamado `and`.
-Devuelve el primer operando que evalúa a *False* o el último si todos son *True*.
+Devuelve el primer operando que se evalúa como *False* o el último si todos son *True*.
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -81,7 +81,7 @@ True
 ---
 
 Continuemos con el operador booleano **or**.
-Devuelve el primer operando que evalúa a *True* o el último si todos son *False*.
+Devuelve el primer operando que se evalúa como *True* o el último si todos son *False*.
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -92,7 +92,7 @@ False
 ---
 
 Terminemos con el operador booleano **not**.
-Devuelve un booleano que es el opuesto del estado lógico de una expresión.
+Devuelve un booleano que es lo opuesto del estado lógico de una expresión.
 ```python
 >>> not True
 False

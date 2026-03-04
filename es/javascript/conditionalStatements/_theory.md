@@ -122,3 +122,19 @@ El operador coalescencia nula es una abreviatura del código siguiente:
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+Ahora vamos a practicar creando sentencias condicionales. Una sentencia condicional es la estructura básica que nos permite ejecutar código solo si se cumple una condición específica.
+
+---
+
+Cuando escribimos una sentencia condicional, es importante que la condición dentro del paréntesis sea un valor booleano, es decir, `true` o `false`. Si la condición es `true`, el código se ejecuta; si es `false`, se salta.
+
+---
+
+De manera opuesta, si queremos que el bloque de código **NO** se ejecute, debemos poner `false` como condición. El código dentro de las llaves se saltará completamente.
+
+---
+
+A medida que practicamos, veremos que la estructura de una sentencia `if` es muy flexible. Podemos poner la condición directamente en el paréntesis y el bloque de código entre las llaves.

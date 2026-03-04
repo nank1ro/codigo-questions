@@ -1,16 +1,16 @@
-`Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `List`s is that a `Set` allows only one element of each value.
+Los `Set`s son un tipo de dato que puedes usar para almacenar una colección de diferentes piezas de información como una secuencia bajo un solo nombre de variable.
+La principal diferencia con las `List`s es que un `Set` permite solo un elemento de cada valor.
 
-Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to a set with an expression of the form:
+Al igual que las `List`s, un `Set` almacena múltiples valores de uno o más tipos e utiliza **índices** para distinguir estos valores.
+Puedes asignar elementos a un conjunto con una expresión de la forma:
 ```kotlin
 val setName = setOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the set, for example, it can be `Int`, `String`, `Any`...
+`itemsType` representa el tipo de los elementos dentro del conjunto, por ejemplo, puede ser `Int`, `String`, `Any`...
 
 ---
 
-A `Set` is a collection of __unique__ items without a specific order.
+Un `Set` es una colección de elementos __únicos__ sin un orden específico.
 
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
@@ -18,22 +18,22 @@ println(numbers)
 // prints [1, 2]
 ```
 
-At __[1]__ we're trying to create a set with the number __1__ present twice but as you can see each element must be unique and the second __1__ is automatically discarded.
+En __[1]__ estamos intentando crear un conjunto con el número __1__ presente dos veces pero como puedes ver cada elemento debe ser único y el segundo __1__ es automáticamente descartado.
 
 ---
 
-There are two types of `Set`s in Kotlin:
+Hay dos tipos de `Set`s en Kotlin:
 
-- `Set` cannot be modified after you create it.
-- `MutableSet` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `Set` no puede ser modificado después de crearlo.
+- `MutableSet` puede ser modificado después de crearlo, lo que significa que puedes añadir, eliminar o actualizar sus elementos.
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
 numbers.add(4) // [1]
 ```
-__[1]__ throws an Error because `Set`s are _read-only_.
+__[1]__ lanza un Error porque los `Set`s son de _solo lectura_.
 
-To create a modifiable set use the `mutableSetOf` keyword
+Para crear un conjunto modificable usa la palabra clave `mutableSetOf`
 ```kotlin
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
@@ -43,7 +43,7 @@ println(numbers)
 
 ---
 
-The most common `Set` activity is to test for membership using `in` or `contains()`
+La actividad más común de `Set` es probar la pertenencia usando `in` o `contains()`
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
@@ -51,16 +51,16 @@ println(2 in numbers) // prints true
 println(numbers.contains(5)) // prints false
 ```
 
-As you can see above the `in` and `contains` return a `Bool` telling if the element being passed is present in the set
+Como puedes ver arriba, `in` y `contains` devuelven un `Bool` diciendo si el elemento pasado está presente en el conjunto
 
 ---
 
-The order of the elements in a `Set` in not important.
-In fact if you try to compare two `Set`s with the same element but in different order you get that they are equal.
+El orden de los elementos en un `Set` no es importante.
+De hecho, si intentas comparar dos `Set`s con los mismos elementos pero en diferente orden, obtendrás que son iguales.
 
 ---
 
-On `Set`s you can perform several operations like checking for union, intersection, difference and subset.
+En los `Set`s puedes realizar varias operaciones como verificar la unión, intersección, diferencia y subconjunto.
 
 ```kotlin
 val firstNumbers = setOf(1, 2, 3)
@@ -73,4 +73,4 @@ val subset = firstNumbers.containsAll(lastNumbers) // false
 
 ---
 
-To convert a `Set` to a `List` we can use the `toList()` function
+Para convertir un `Set` a una `List` podemos usar la función `toList()`

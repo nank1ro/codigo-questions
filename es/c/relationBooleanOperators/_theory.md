@@ -43,8 +43,8 @@ Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión
 
 ---
 
-Continuemos con el operador relacional **mayor o igual que** `>=`.
-Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión es mayor o igual a la otra, por ejemplo:
+Continuemos con el operador relacional **mayor que o igual** `>=`.
+Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión es mayor o igual que la otra, por ejemplo:
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión
 
 ---
 
-Continuemos con el operador relacional **menor o igual que** `<=`.
-Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión es menor o igual a la otra, por ejemplo:
+Continuemos con el operador relacional **menor que o igual** `<=`.
+Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión es menor o igual que la otra, por ejemplo:
 ```c
 >>> 2 <= 2
 1
@@ -69,7 +69,7 @@ Devuelve un **booleano**, verdadero `1` o falso `0`, indicando si una expresión
 
 ---
 
-Ahora veamos los operadores **booleanos**, comencemos con el primero llamado __and__ `&&`.
+Ahora veamos los operadores **booleanos**, comencemos con el primero llamado __y__ `&&`.
 Devuelve el primer operando que evalúa a *falso* o el último si todos son *verdaderos*.
 ```c
 >>> 2 == 2 && 2 == 3
@@ -80,7 +80,7 @@ Devuelve el primer operando que evalúa a *falso* o el último si todos son *ver
 
 ---
 
-Continuemos con el operador booleano **or** `||`.
+Continuemos con el operador booleano **o** `||`.
 Devuelve el primer operando que evalúa a *verdadero* o el último si todos son *falsos*.
 ```c
 >>> 2 == 2 || 2 == 3
@@ -91,8 +91,8 @@ Devuelve el primer operando que evalúa a *verdadero* o el último si todos son 
 
 ---
 
-Terminemos con el operador booleano **not** `!`.
-Devuelve un booleano que es el opuesto del estado lógico de una expresión.
+Terminemos con el operador booleano **no** `!`.
+Devuelve un booleano que es el inverso del estado lógico de una expresión.
 ```c
 >>> !true
 0

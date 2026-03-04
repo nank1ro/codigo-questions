@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Sabemos cómo repetir código usando un bucle `while`.
+Como este programa repitiendo declaraciones para mostrar `hello`
 ```swift
 var counter = 0
 
@@ -8,7 +8,7 @@ while counter < 5 {
     counter += 1;
 }
 ```
-But we can do the same with `for` loops:
+Pero podemos hacer lo mismo con bucles `for`:
 ```swift
 for i in 0..<5 {
     print("hello")
@@ -17,47 +17,47 @@ for i in 0..<5 {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+En un bucle `for` podemos especificar cuántas veces queremos que se ejecute nuestro bucle
 
 ---
 
-We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
+Podemos usar `..<` para hacer un bucle hasta el siguiente número excluido, o `...` para hacer un bucle hasta el siguiente número incluido
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+La variable llamada `i` es la variable contador.
+Podemos darle el nombre que queremos.
+Cuenta en qué repetición del bucle nos encontramos actualmente
 
 ---
 
-The `stride()` function returns a sequence of numbers.
-It requires the _from_, _to_ and _by_ parameters.
-These are the syntax of the function:
+La función `stride()` devuelve una secuencia de números.
+Requiere los parámetros _from_, _to_ y _by_.
+Esta es la sintaxis de la función:
 ```swift
 stride(from:to:by:)
 ```
-Keep in mind that the `to` value is excluded
+Tenga en cuenta que el valor `to` se excluye
 
 ---
 
-With the `stride()` function we can also use closed ranges, by using:
+Con la función `stride()` también podemos usar rangos cerrados, usando:
 ```swift
 stride(from:through:by:)
 ```
-In this case the `through` value is included
+En este caso el valor `through` se incluye
 
 ---
 
-In Swift we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+En Swift también tenemos el bucle `forEach`.
+De hecho, `forEach` llama al cierre dado en cada elemento de la secuencia en el mismo orden que un bucle `for-in`:
 ```swift
 // this is an array, we'll see about that soon
-let numbers: [Int] = [1, 3, 5, 7, 9] 
-numbers.forEach { num in 
+let numbers: [Int] = [1, 3, 5, 7, 9]
+numbers.forEach { num in
     print(num)
 }
 ```
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+El uso del método `forEach` es distinto de un bucle `for-in` de dos formas importantes:
+1. La declaración `break` o `continue` no se puede usar para salir de la llamada actual del cierre del cuerpo o para omitir llamadas posteriores.
+2. El uso de la declaración `return` en el cierre del cuerpo solo saldrá del cierre y no del alcance externo, y no omitirá llamadas posteriores.

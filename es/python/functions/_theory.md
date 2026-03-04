@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+Podrías haber considerado la situación en la que deseas reutilizar un fragmento de código, solo con unos pocos valores diferentes.
+En lugar de reescribir todo el código, es mucho más limpio definir una función, que luego se puede usar repetidamente.
+En Python usamos la palabra clave `def` seguida del nombre de la función:
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+Los paréntesis en la __definición de función__ no tienen que estar vacíos.
+Dentro de ellos, podemos especificar parámetros
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+A veces queremos que una función __devuelva__ un valor.
+Bueno, existe la palabra clave `return`
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+En las funciones podemos agregar un _comentario opcional_ que explique qué hace la función:
 ```python
 """
 Prints 'Hello World' to the console.

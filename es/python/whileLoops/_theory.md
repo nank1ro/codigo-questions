@@ -1,43 +1,43 @@
-Often in programming, we need to repeat a block of code, for example:
+A menudo en la programación, necesitamos repetir un bloque de código, por ejemplo:
 ```python
 print("2 seconds")
 print("3 seconds")
 print("4 seconds")
 print("5 seconds")
 ```
-This produces the following output:
+Esto produce el siguiente resultado:
 ```python
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+Obviamente, para sentencias largas pasaríamos mucho tiempo escribiendo el código, pero afortunadamente, podemos usar bucles.
+Aprendamos el bucle `while`, obteniendo el mismo resultado anterior.
 ```python
 count = 2
 while (count <= 5):
     print(f"{count} seconds")
     count += 1
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `True`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+Entonces creamos una variable `count` asignándole `2`, el valor inicial.
+Luego usamos la sentencia `while` que ejecutará el bloque de código hasta que la condición `count <= 5` sea `True`.
+Dentro del bloque de código, **NO** debemos olvidar agregar la línea `count += 1`.
+Incrementa el valor de `count`, de lo contrario, nuestro bucle será infinito
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+Para controlar cuántas veces se repite un bucle `while`, comenzamos con una variable establecida en un número.
+Llamamos a esta variable una variable de contador
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+Luego, usamos una comparación en la condición para comparar la variable `counter` con un número.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+Dentro del bloque de código, para detener el bucle `while`, incrementamos la variable `counter`.
 
 ---
 
-The order you write code affects the output.
+El orden en que escribes el código afecta la salida.

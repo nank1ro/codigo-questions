@@ -83,8 +83,8 @@ Este enfoque está fuertemente desaconsejado porque los errores ya no son interc
 
 ---
 
-Dart soporta __type inference__ (inferencia de tipos).
-No es necesario indicar el tipo de una variable, ya que Dart puede inferirlo.
+Dart soporta __inferencia de tipos__.
+No es necesario indicar el tipo de una variable ya que Dart puede inferir su tipo.
 La palabra clave `var` le dice a Dart que use el tipo más apropiado.
 
 ```dart
@@ -101,9 +101,9 @@ Comencemos viendo qué se entiende por `const`.
 
 ## const (constantes)
 
-Las variables cuyo valor puedes cambiar se conocen como __datos mutables__. Los datos mutables a menudo se usan en exceso y pueden presentar problemas. Es fácil perder el rastro de todos los puntos en el código que pueden cambiar el valor de una variable.
+Las variables cuyo valor puedes cambiar se conocen como __datos mutables__. Los datos mutables se usan a menudo en exceso y pueden presentar problemas. Es fácil perder de vista todos los puntos en el código que pueden cambiar el valor de una variable.
 
-Por esta razón, deberías usar `const`antes en lugar de `var`iables siempre que sea posible. Estas variables que no pueden cambiar de valor también se denominan __datos inmutables__.
+Por esta razón, debes usar `const`antes en lugar de `var`iables siempre que sea posible. Estas variables que no pueden cambiar de valor también se llaman __datos inmutables__.
 
 Para crear una constante en Dart usamos la palabra clave `const`:
 
@@ -111,7 +111,7 @@ Para crear una constante en Dart usamos la palabra clave `const`:
 const number = 5;
 ```
 
-Así como `var`, Dart con la __inferencia de tipos__ determina que `number` es de tipo `int`.
+Al igual que `var`, Dart con la __inferencia de tipos__ determina que `number` es de tipo `int`.
 
 ---
 
@@ -129,14 +129,14 @@ Es decir, no es posible cambiar el valor de una variable constante.
 
 ---
 
-A menudo te encontrarás en la situación de querer usar una constante pero no saber el valor en tiempo de compilación. Solo sabrás el valor después de que el programa haya iniciado la ejecución.
-Este tipo de constante se conoce como una __constante de tiempo de ejecución__.
+A menudo te encontrarás en la situación de querer usar una constante pero sin conocer el valor en el momento de la compilación. Solo conocerás el valor después de que el programa haya comenzado a ejecutarse.
+Este tipo de constante se conoce como __constante de tiempo de ejecución__.
 
-En Dart `const` solo se usa para __constantes de tiempo de compilación__ para valores que el compilador puede determinar antes de que se ejecute el programa.
+En Dart `const` se usa solo para __constantes de tiempo de compilación__ para valores que el compilador puede determinar antes de que se ejecute el programa.
 
-Si no puedes crear una variable constante porque no sabes su valor en tiempo de compilación, entonces debes usar la palabra clave `final` para hacer que la variable sea una __constante de tiempo de ejecución__.
+Si no puedes crear una variable constante porque no conoces su valor en tiempo de compilación, entonces debes usar la palabra clave `final` para que la variable sea una __constante de tiempo de ejecución__.
 
-Hay muchas razones por las que no puedes saber el valor de una variable antes de ejecutar el programa. Por ejemplo, tendrías que obtener el valor del servidor o pedírselo al usuario.
+Hay muchas razones por las que no puedes conocer el valor de una variable antes de ejecutar el programa. Por ejemplo, tendrías que obtener el valor del servidor o pedírselo al usuario.
 
 ---
 
@@ -146,9 +146,9 @@ Aquí hay un ejemplo de un valor que solo se puede obtener en tiempo de ejecuci�
 final currentHour = DateTime.now().hour;
 ```
 
-`DateTime.now()` es una función para obtener la fecha y hora actual cuando se ejecuta el código.
+`DateTime.now()` es una función para obtener la fecha y hora actual de cuando se ejecuta el código.
 Con el campo `hour` accedemos al número de horas que han pasado desde el inicio del día.
 
-Como el valor de `hour` es diferente según cuándo se ejecute el código, esto se puede definir como el valor de _runtime_.
+Dado que el valor de `hour` es diferente dependiendo de cuándo se ejecute el código, esto se puede definir como el valor _runtime_.
 
-Si intentas cambiar el valor de una variable `final`, obtendrás un error.
+Si intentas cambiar el valor de una variable `final`, obtienes un error.

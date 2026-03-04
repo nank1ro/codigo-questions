@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Los operadores se utilizan para realizar operaciones en variables y valores.
+Comencemos con los operadores aritméticos, en particular con el operador **adición** `+`.
+Se utiliza para sumar dos números, como:
 ```python
 >>> 5+3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Continuemos con el operador **resta** `-`.
+Se utiliza para restar un número de otro, como:
 ```python
 >>> 5-3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Veamos el operador **multiplicación** `*`.
+Se utiliza para multiplicar dos números juntos, como:
 ```python
 >>> 5*3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Veamos el operador **división** `/`.
+Se utiliza para dividir dos números juntos, como:
 ```python
 >>> 10/5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Veamos el operador **módulo** `%`.
+Se utiliza para encontrar el resto después de una división entre dos números, como:
 ```python
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Esto se evalúa a 1 porque 5 dividido por 2 tiene un cociente de 2 y un resto de 1
 ```python
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Esto otro se evalúa a 0 porque 9 dividido por 3 tiene un cociente de 3 y deja un resto de 0
 
 ---
 
-Let's see the **exponentiation** `**` operator.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+Veamos el operador **exponenciación** `**`.
+La exponenciación corresponde a la multiplicación repetida de la base: es decir, **b** con exponente *n* es el producto de multiplicar *n* bases:
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```python
 >>> 5 ** 2
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** `//` operator.
-This operator returns the integral part of the quotient, for example:
+Veamos el operador **división piso** `//`.
+Este operador devuelve la parte integral del cociente, por ejemplo:
 ```python
 >>> 5.0 / 2
 2.5
 >>> 5.0 // 2
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+También se conoce como división entera. El valor resultante es un número entero, aunque el *tipo* del resultado no es necesariamente int.

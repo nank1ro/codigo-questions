@@ -1,5 +1,5 @@
-An `enumeration` defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
-We declare enumerations using the `enum` keyword:
+Una `enumeration` define un tipo común para un grupo de valores relacionados y le permite trabajar con esos valores de forma segura dentro de su código.
+Declaramos enumeraciones usando la palabra clave `enum`:
 ```swift
 enum Colors {
     case blue
@@ -7,12 +7,12 @@ enum Colors {
     case green
 }
 ```
-The values defined in an enumeration (such as `blue`, `red` and `green`) are its _enumeration cases_.
-We use the `case` keyword to introduce new enumeration cases.
+Los valores definidos en una enumeración (como `blue`, `red` y `green`) son sus _enumeration cases_.
+Usamos la palabra clave `case` para introducir nuevos enumeration cases.
 
 ---
 
-Multiple cases can appear on a single line, separated by commas:
+Múltiples casos pueden aparecer en una sola línea, separados por comas:
 ```swift
 enum Colors {
     case blue, red, green
@@ -21,7 +21,7 @@ enum Colors {
 
 ---
 
-We can match individual enumeration values with a `switch` statement:
+Podemos coincidir con valores de enumeración individuales con una declaración `switch`:
 ```swift
 let color = Colors.red
 switch color {
@@ -34,13 +34,13 @@ switch color {
 }
 // prints "Red"
 ```
-Keep in mind that if you don't need to provide a `case` for every enumeration case, you can provide a `default` case to cover any cases that aren't addressed explicitly
+Tenga en cuenta que si no necesita proporcionar un `case` para cada caso de enumeración, puede proporcionar un caso `default` para cubrir cualquier caso que no se trate explícitamente
 
 ---
 
-For some enumerations, it's useful to have a collection of all of that enumeration's cases.
-You enable this by writing `: CaseIterable` after the enumeration's name.
-Swift exposes a collection of all the cases as an `allCases` property of the enumeration type:
+Para algunas enumeraciones, es útil tener una colección de todos los casos de esa enumeración.
+Lo habilitas escribiendo `: CaseIterable` después del nombre de la enumeración.
+Swift expone una colección de todos los casos como una propiedad `allCases` del tipo de enumeración:
 ```swift
 enum Colors: CaseIterable {
     case blue, red, green
@@ -49,4 +49,19 @@ for color in Colors.allCases {
     print(color)
 }
 // prints blue, red, green
+```
+
+---
+
+Para algunas enumeraciones, es útil tener una colección de todos los casos de esa enumeración.
+Lo habilitas escribiendo `: CaseIterable` después del nombre de la enumeración.
+Swift expone una colección de todos los casos como una propiedad `allCases` del tipo de enumeración:
+```swift
+enum Colors: CaseIterable {
+    case blue, red, green
+}
+for color in Colors.allCases {
+    print(color)
+}
+// imprime blue, red, green
 ```

@@ -55,7 +55,7 @@ println(3 <= 4) // true
 
 ---
 
-Ahora veamos los operadores **lógicos**, comencemos con el primero llamado __AND__ `&&`.
+Ahora veamos los operadores **lógicos**, comencemos con el primero llamado __Y__ `&&`.
 Devuelve el primer operando que se evalúa como *false* o el último si todos son *true*.
 ```kotlin
 println(2 == 2 && 2 == 3) // false

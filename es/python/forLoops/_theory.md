@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Sabemos cómo repetir código usando un bucle `while`.
+Como este programa que repite sentencias para mostrar `hello`
 ```python
 counter = 0
 
@@ -7,7 +7,7 @@ while counter < 5:
     print("hello")
     counter += 1
 ```
-But we can do the same with `for` loops:
+Pero podemos hacer lo mismo con bucles `for`:
 ```python
 for i in range(5):
     print("hello")
@@ -15,23 +15,23 @@ for i in range(5):
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run with the `range()` function
+En un bucle `for` podemos especificar cuántas veces queremos que se ejecute nuestro bucle con la función `range()`
 
 ---
 
-Adding a number like `5`, inside the `range()` function means it will loop over the code block 5 times, from `0` until `4`
+Añadir un número como `5`, dentro de la función `range()` significa que hará un bucle sobre el bloque de código 5 veces, desde `0` hasta `4`
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+La variable llamada `i` es la variable de contador.
+Podemos darle el nombre que queramos.
+Cuenta en qué repetición del bucle nos encontramos actualmente
 
 ---
 
-The `range()` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
-This is the syntax of the function:
+La función `range()` devuelve una secuencia de números, comenzando desde 0 por defecto, e incrementa por 1 (por defecto), y se detiene antes de un número especificado.
+Esta es la sintaxis de la función:
 ```python
 range(start, stop, step)
 ```
-`start` and `step` are optional, while `stop` is required
+`start` y `step` son opcionales, mientras que `stop` es obligatorio

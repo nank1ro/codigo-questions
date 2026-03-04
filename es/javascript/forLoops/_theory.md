@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Sabemos cómo repetir código usando un bucle `while`.
+Como este programa que repite instrucciones para mostrar `hello`
 ```javascript
 var counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+Pero podemos hacer lo mismo con bucles `for`:
 ```javascript
 for (let i = 0; i < 5; i++) {
     console.log("hello");
@@ -17,28 +17,28 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+En un bucle `for` podemos especificar cuántas veces queremos que se ejecute nuestro bucle
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+Podemos usar `<` para hacer un bucle hasta el siguiente número excluido, o `<=` para hacer un bucle hasta el siguiente número incluido
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+La variable llamada `i` es la variable contadora.
+Podemos darle el nombre que queramos.
+Cuenta en qué repetición del bucle nos encontramos
 
 ---
 
-In JavaScript we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+En JavaScript también tenemos el bucle `forEach`.
+De hecho, `forEach` llama al cierre dado en cada elemento de la secuencia en el mismo orden que un bucle `for`:
 ```javascript
-// this is an array, we'll see about that soon
+// esto es un array, hablaremos de eso pronto
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```
-Using the `forEach` method is distinct from a `for` loop in two important ways:
-1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+El uso del método `forEach` es distinto de un bucle `for` en dos aspectos importantes:
+1. Las instrucciones `break` o `continue` no se pueden usar para salir de la llamada actual de la clausura del cuerpo o para omitir llamadas posteriores.
+2. El uso de la instrucción `return` en la clausura del cuerpo solo saldrá de la clausura y no del ámbito externo, y no omitirá llamadas posteriores.
+NOTA: `=>` se llama _función flecha_ y es una sintaxis de función más corta de ES6 que reemplaza llaves {} y devuelve el valor (si es necesario)

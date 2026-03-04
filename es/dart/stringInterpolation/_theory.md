@@ -17,7 +17,7 @@ El valor de retorno se convierte en una String e se inserta en la String resulta
 
 ---
 
-Si pones un `$` antes de un nombre de identificador, la interpolación de cadenas insertará el contenido de ese identificador en la `String`
+Si pones un `$` antes de un nombre de identificador, la interpolación de cadena insertará el contenido de ese identificador en la `String`
 
 ---
 
@@ -25,11 +25,11 @@ Si lo que sigue al signo `$` no es reconocible como un identificador de programa
 
 ---
 
-También podemos insertar variables después de los signos de dólar para mostrar su valor
+También podemos insertar variables después del signo de dólar para mostrar su valor
 
 ---
 
-Podemos usar llaves para insertar valores tantas veces como queramos usando la interpolación de cadenas
+Podemos usar llaves para insertar valores tan a menudo como queramos usando la interpolación de cadena
 
 ---
 
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-La interpolación de cadenas se usa mejor en sentencias print, pero también podemos almacenarlas en variables como cadenas normales.
+La interpolación de cadenas se usa mejor en declaraciones de impresión, pero también podemos almacenarlas en variables como cadenas normales.

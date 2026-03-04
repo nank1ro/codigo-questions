@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScript es un lenguaje de programación orientado a objetos, lo que significa que manipula construcciones de programación llamadas objetos.
+Puedes pensar en un objeto como una única estructura de datos que contiene datos así como funciones; las funciones de un objeto se llaman sus métodos.
+Por ejemplo, cuando llamas a:
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScript comprueba si `arrayName` tiene un método `push()` (que todos los arrays tienen) y ejecuta ese método si lo encuentra.
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+Las _clases_ son construcciones de propósito general y flexibles que se convierten en los bloques de construcción del código de tu programa.
+Una clase básica consta solo de la palabra clave `class` y su nombre, por ejemplo:
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+Pongamos algo dentro de nuestra clase `Animal`
+Para añadir algunos parámetros tenemos que usar el `constructor` por defecto
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+Definir una clase no crea un objeto.
+Para hacer eso, necesitamos crear una __instancia__ de una clase.
+En JavaScript, para crear una nueva instancia de una clase, siempre usamos la palabra clave `new` antes del nombre de la clase.
+Si quieres asignar un valor por defecto a un parámetro, hazlo en la lista de parámetros del constructor
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+Cuando una clase tiene sus propias funciones, esas funciones se llaman __métodos__.
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScript nos permite crear una clase como hijo de otra, usando la palabra clave `extends`
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+Puedes acceder a las propiedades de una instancia usando _sintaxis de punto_.
+En sintaxis de punto, escribes el nombre de la propiedad inmediatamente después del nombre de la instancia, separado por un punto `.`, sin espacios:
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+Usando la misma sintaxis también podemos actualizar el valor de una propiedad

@@ -1,10 +1,10 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+Los booleanos representan uno de dos valores: `true` o `false`.
+Puedes evaluar cualquier expresión en C, y obtener una de dos respuestas, `true` o `false`.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+Podemos almacenar el valor booleano `true` en una variable como si fuera un número o una cadena.
 
 ---
 
-The opposite value of `true` is `false`
+El valor opuesto de `true` es `false`

@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in C is an object and like other programming languages, C has commands for declaring a variable.
-To create a variable, we need to give it a **type** and a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+Las variables son contenedores para almacenar valores de datos.
+Cada variable en C es un objeto y al igual que otros lenguajes de programación, C tiene comandos para declarar una variable.
+Para crear una variable, necesitamos darle un **tipo** y un **nombre** teniendo en cuenta que no debe contener espacios.
+Una variable se crea en el momento en que le asignas un valor por primera vez.
+Un ejemplo de creación de una variable llamada `x` es:
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
-If we print the variable `x` we get back the number `1`:
+De esta manera hemos asignado el valor `1` a la variable de tipo _entero_ llamada `x`.
+Si imprimimos la variable `x` obtenemos el número `1`:
 ```c
 >>> printf("%i\n", x);
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Las variables se llaman de esta manera porque el valor que almacenan puede cambiar.
+Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```c
 >>> x = 1;
 >>> printf("%i\n", x);
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+También podemos dar a las variables los valores de otras variables. Aquí, podemos dar a la variable `y` el valor de `x`
 ```c
 >>> int x = 5;
 >>> int y = x;
@@ -38,8 +38,8 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+Cuando actualizamos una variable, olvida su valor anterior.
+Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```c
 >>> int x = 5;
 >>> printf("%i\n", x);
@@ -51,12 +51,12 @@ Here we can display the `x` variable twice and see how its value updates.
 
 ---
 
-In C string variables can be declared only by using double quotes:
+En C las variables de cadena solo se pueden declarar usando comillas dobles:
 ```c
 char x[] = "May";
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+Si queremos un nombre de variable con múltiples palabras, usamos **snake case**.
+Significa usar `_` para conectar las palabras adicionales.

@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In C we use the `return_type` followed by the `function` name, for example:
+Probablemente hayas considerado la situación en la que deseas reutilizar una parte del código, solo con algunos valores diferentes.
+En lugar de reescribir todo el código, es mucho más limpio definir una función que luego se puede usar repetidamente.
+En C usamos el `return_type` seguido del nombre de la `function`, por ejemplo:
 ```c
 void say_hello() {
     printf("Hello!\n");
@@ -15,16 +15,16 @@ int main() {
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+Los paréntesis en la __definición de función__ no tienen que estar vacíos si queremos especificar parámetros
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+A veces queremos que una función __devuelva__ un valor.
+Bueno, existe la palabra clave `return`.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Las funciones pueden tener múltiples parámetros de entrada, que se escriben dentro de los paréntesis de la función, separados por comas.
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";
@@ -44,10 +44,10 @@ int main() {
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+En las funciones podemos agregar un _comentario opcional_ que explique qué hace la función:
 ```c
 /*
- * Function:  hello_world 
+ * Function:  hello_world
  * --------------------
  * prints "Hello, World!" to the screen
  */
@@ -55,4 +55,4 @@ function hello_world() {
     printf("Hello, World!\n");
 }
 ```
-We can use `//` for a single line comment and `/* */` for a multi line comment
+Podemos usar `//` para un comentario de una sola línea y `/* */` para un comentario de varias líneas

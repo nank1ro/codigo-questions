@@ -1,11 +1,11 @@
-Swift has a basic Boolean type, called `Bool`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Swift, and get one of two answers, `true` or `false`.
+Swift tiene un tipo Booleano básico, llamado `Bool`.
+Los valores Booleanos se refieren como lógicos, porque solo pueden ser verdadero o falso.
+Puedes evaluar cualquier expresión en Swift y obtener una de dos respuestas, `true` o `false`.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+Podemos guardar el valor booleano `true` en una variable como lo hacemos con un número o una cadena.
 
 ---
 
-The opposite value of `true` is `false`
+El valor opuesto de `true` es `false`

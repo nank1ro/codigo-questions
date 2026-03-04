@@ -1,18 +1,18 @@
-Kotlin has a basic Boolean type, called `Boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Kotlin, and get one of two answers, `true` or `false`.
+Kotlin tiene un tipo booleano básico, llamado `Boolean`.
+Los valores booleanos se denominan lógicos, porque solo pueden ser verdadero o falso.
+Puedes evaluar cualquier expresión en Kotlin y obtener una de dos respuestas: `true` o `false`.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+Podemos almacenar el valor booleano `true` en una variable al igual que un número o una cadena.
 
 ---
 
-The opposite value of `true` is `false`
+El valor opuesto de `true` es `false`
 
 ---
 
-Boolean values can also negated by using the `!` before them, e.g:
+Los valores booleanos también pueden ser negados usando `!` antes de ellos, por ejemplo:
 ```kotlin
 println(!true) // prints false
 println(!false) // prints true
@@ -20,10 +20,10 @@ println(!false) // prints true
 
 ---
 
-We can also create boolean expressions using the `&&` (_and_) and `||` (_or_):
+También podemos crear expresiones booleanas usando `&&` (_y_) y `||` (_o_):
 
-- `&&` (_and_): produces true only if the Boolean expression on the left of the operator and the one on the right are both true.
-- `||` (_or_): Produces true if either the expression on the left or right of the operator is true, or if both are true.
+- `&&` (_y_): produce verdadero solo si la expresión booleana a la izquierda del operador y la de la derecha son ambas verdaderas.
+- `||` (_o_): Produce verdadero si la expresión a la izquierda o a la derecha del operador es verdadera, o si ambas son verdaderas.
 
 ```kotlin
 println(true && true) // prints true

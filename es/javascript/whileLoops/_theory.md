@@ -46,5 +46,5 @@ El orden en el que escribes el código afecta la salida.
 ---
 
 En JavaScript también tenemos la variación **do-while** del bucle `while`.
-Realiza un único paso a través del bloque de bucle primero, _antes_ de considerar la condición del bucle.
-Luego continúa repitiendo el bucle hasta que la condición sea `false`.
+Realiza un único paso a través del bloque del bucle primero, _antes_ de considerar la condición del bucle.
+Luego continúa repitiendo el bucle hasta que la condición es `false`.

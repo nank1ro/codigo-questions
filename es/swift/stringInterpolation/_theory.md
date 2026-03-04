@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+En Swift podemos usar el signo `+` para mostrar dos o más cadenas juntas, como:
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // imprime "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Pero usar el signo `+` para agregar un número como '10' a una cadena como ` "amigos"` produce un error ya que son un tipo diferente de valores
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+La interpolación de cadenas nos permite mostrar expresiones como agregar una cadena a un número, sin ningún error.
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+Cada declaración de interpolación de cadena consta de dos partes, el `\()` donde insertamos el número o variable, y la cadena normal
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+A continuación, agregamos el tipo diferente de valor entre llaves para que se muestre como una declaración de impresión. Como aquí, con `\(5)`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Insertar variables como `amigos` entre los paréntesis también muestra su valor
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+Podemos usar paréntesis para insertar valores tantas veces como queramos dentro de la interpolación de cadenas
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+Las interpolaciones de cadenas se utilizan mejor en declaraciones de impresión, pero también podemos almacenarlas en variables como cadenas normales.

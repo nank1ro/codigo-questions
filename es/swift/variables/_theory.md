@@ -1,23 +1,23 @@
-Variables are containers for storing data values.
-Every variable in Swift is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In Swift you declare constants with the `let` keyword and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+Las variables son contenedores para almacenar valores de datos.
+Cada variable en Swift es un objeto.
+Para crear una variable, necesitamos darle un **nombre** teniendo en cuenta que no debe contener espacios.
+Una variable se crea en el momento en que asignas un valor por primera vez.
+En Swift declares constantes con la palabra clave `let` y variables con la palabra clave `var`.
+El valor de una constante no se puede cambiar una vez que se establece, mientras que una variable se puede establecer en un valor diferente en el futuro.
+Un ejemplo de creación de una variable llamada `x` es:
 ```swift
 var x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+De esta manera hemos asignado el valor `1` a la variable llamada `x`.
+Si imprimimos la variable `x` obtenemos el número `1`:
 ```swift
 print(x) // prints 1
 ```
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Las variables se llaman así porque el valor que almacenan puede cambiar.
+Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```swift
 var x = 1
 print(x) // prints 1
@@ -27,7 +27,7 @@ print(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+También podemos darles a las variables los valores de otras variables. Aquí, podemos darle a la variable `y` el valor de `x`
 ```swift
 var x = 5
 var y = x
@@ -36,7 +36,7 @@ print(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+Cuando actualizamos una variable, olvida su valor anterior. Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```swift
 var x = 5
 print(x) // prints 5
@@ -46,12 +46,12 @@ print(x) // prints 10
 
 ---
 
-In Swift string variables can be declared only by using double quotes:
+En Swift las variables de cadena se pueden declarar solo usando comillas dobles:
 ```swift
 let x = "May"
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+Si queremos un nombre de variable con múltiples palabras, usamos **camelCase**.
+Es la práctica de escribir frases de modo que cada palabra en el medio de la frase comience con una letra mayúscula
