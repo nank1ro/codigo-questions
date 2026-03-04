@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Salida",
+        "description": "Aprende cómo mostrar un valor"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Cadenas Formateadas",
+        "description": "Aprende cómo formatear cadenas con diferentes tipos de datos"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Aprende cómo almacenar valores en una variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleanos",
+        "description": "Aprende cómo evaluar cualquier expresión"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operadores Aritméticos",
+        "description": "Aprende cómo realizar operaciones aritméticas en variables y valores"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operadores de Asignación",
+        "description": "Aprende cómo asignar valores a variables"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Operadores Relacionales y Booleanos",
+        "description": "Aprende cómo comparar valores"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Declaraciones Condicionales",
+        "description": "Aprende cómo tomar decisiones"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Bucles While",
+        "description": "Aprende cómo repetir un conjunto de instrucciones"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Bucles For",
+        "description": "Aprende cómo repetir un conjunto de instrucciones"
+    },
+    "lists": {
+        "order": 11,
+        "title": "Listas",
+        "description": "Aprende cómo almacenar diferentes valores en una variable"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Diccionarios",
+        "description": "Aprende cómo almacenar valores con claves"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funciones",
+        "description": "Aprende cómo dividir código por tareas específicas"
+    },
+    "modulesPackages": {
+        "order": 14,
+        "title": "Módulos y Paquetes",
+        "description": "Aprende cómo usar módulos"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Clases",
+        "description": "Aprende programación orientada a objetos"
+    }
+}
