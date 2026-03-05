@@ -141,7 +141,8 @@ cd validator && dart test lib/validator.dart --chain-stack-traces --fail-fast
 8. Run post-translation fixup scripts (see "Post-Translation Fixup" below)
 9. Run validator to verify all translations
 10. Fix any validation errors if found
-11. **Verify translation coverage**: compare changed file count against expected total (1570 .md + 12 data.json = 1582 files). Use `git diff --name-only <baseline-commit>` to list all modified files — every `.md` (except `_theory.md`) and every `data.json` under `{locale}/` must appear in this list
+11. Generate `_theory.md` files: `cd theory_creator && dart pub get && dart run lib/theory_creator.dart`
+12. **Verify translation coverage**: count total files under `{locale}/` and compare against `git diff --name-only <baseline-commit> | wc -l`. Every file must have changed — the total file count must equal the changed file count. This catches any files missed by agents or theory generation.
 
 ## Post-Translation Fixup (MANDATORY)
 
