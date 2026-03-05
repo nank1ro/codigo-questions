@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**딕셔너리**는 리스트와 튜플과 비슷하지만, 인덱스 대신 *키*를 사용하여 값에 접근합니다.
+키는 어떤 문자열이나 숫자도 될 수 있습니다.
+딕셔너리는 중괄호로 감싸며, 다음과 같이 작성합니다:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+이것은 세 개의 *키-값 쌍*을 가진 `d`라는 딕셔너리입니다.
+키 `key1`은 값 `1`을 가리키고, `key2`는 `2`를 가리키는 식입니다.
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+키를 사용하여 딕셔너리 값에 접근하는 것은 인덱스를 사용하여 리스트 값에 접근하는 것과 같습니다:
 ```python
 user['age']
-# gets the age value from the user dictionary
+# user 딕셔너리에서 age 값을 가져옵니다
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+리스트와 마찬가지로, 딕셔너리는 _변경 가능(mutable)_ 합니다.
+이는 생성된 후에도 변경할 수 있다는 뜻입니다.
+이 장점 중 하나는 딕셔너리가 생성된 후에도 새로운 _키/값 쌍_을 추가할 수 있다는 것입니다:
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+딕셔너리의 길이 `len()`는 딕셔너리가 가진 _키-값 쌍_의 개수입니다.
+각 쌍은 값이 리스트여도 한 번만 셉니다. (맞습니다: 딕셔너리 안에 리스트를 넣을 수도 있습니다!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+딕셔너리는 변경 가능하기 때문에 여러 가지 방법으로 수정할 수 있습니다. `del` 명령으로 딕셔너리에서 항목을 제거할 수 있습니다:
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+이 명령은 딕셔너리에서 키 `key_name`과 그에 연결된 값을 제거합니다.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+딕셔너리의 모든 키를 나열하고 싶다면 어떻게 해야 할까요?
+`keys()` 메서드를 사용하면 됩니다.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+딕셔너리의 모든 값을 나열하고 싶다면 어떻게 해야 할까요?
+`values()` 메서드를 사용하면 됩니다.
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+리스트와 마찬가지로, `for..in` 키워드를 사용하여 딕셔너리 요소를 반복할 수 있습니다.
+반복문에서 키와 값을 모두 가져오려면 `items()` 메서드를 사용할 수 있습니다:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+반복문에서 사용했던 `in` 키워드를 사용하여 딕셔너리에 특정 __키__가 포함되어 있는지 확인할 수도 있습니다
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+딕셔너리에 값을 __추가__하거나 __변경__하려면, 중괄호 안에 추가하려는 _키-값 쌍_을 넣어 `update()` 메서드를 사용할 수도 있습니다
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+딕셔너리에서 값을 __제거__하고 싶다면 어떻게 해야 할까요?
+`pop()` 메서드가 있습니다:
 ```python
 dict_name.pop("key_name")
 ```

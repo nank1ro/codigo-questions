@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: 둘이서 하나
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+이름이 주어지면 다음 메시지가 포함된 문자열을 반환합니다:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+여기서 `X`는 주어진 이름입니다.
+단, 이름이 없으면 다음 문자열을 반환합니다:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+올바른 문자열을 반환하는 함수를 작성하세요. 예시:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -43,14 +43,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-No name given
+이름이 주어지지 않은 경우
 
 ```python
     def test_no_name_given(self):
         self.assertEqual(two_for_one(), "One for you, one for me.", "--err-t1--")
 ```
 
-Pass "James" as name
+이름으로 "James"를 전달한 경우
 
 ```python
     def test_a_name_given(self):
@@ -58,7 +58,7 @@ Pass "James" as name
 ```
 
 
-Pass "Martha" as name
+이름으로 "Martha"를 전달한 경우
 
 ```python
     def test_another_name_given(self):

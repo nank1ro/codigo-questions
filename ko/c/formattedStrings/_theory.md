@@ -1,28 +1,28 @@
-In C we use the `printf` function with an expression in order to display two or more values together, like:
+C에서는 `printf` 함수와 표현식을 사용하여 두 개 이상의 값을 함께 표시할 수 있습니다. 예시:
 ```c
 >>> char c = 'C';
 >>> printf("Hello %c!\n", c);
 Hello C!
 ```
-`%c` is used to display a single character
+`%c`는 단일 문자를 표시하는 데 사용됩니다
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
-To display an integer we use the `%i` expression
+서식 문자열을 사용하면 오류 없이 문자열에 숫자를 추가하는 것과 같은 표현식을 표시할 수 있습니다.
+정수를 표시하려면 `%i` 표현식을 사용합니다
 
 ---
 
-Every formatted string statement consists of two parts, the text we want to include and the expression we want to format inside the text
+모든 서식 문자열 구문은 두 부분으로 구성됩니다. 포함하려는 텍스트와 텍스트 안에 서식을 지정할 표현식입니다
 
 ---
 
-Next, we add the different kind of value. Like here, with `%i`
+다음으로, `%i`를 사용하여 다른 종류의 값을 추가합니다
 
 ---
 
-Inserting variables like `friends` displays their value too
+`friends`와 같은 변수를 삽입하면 해당 값도 표시됩니다
 
 ---
 
-We can use expressions to insert values as often as we like inside the formatted string
+서식 문자열 안에 표현식을 사용하여 원하는 만큼 값을 삽입할 수 있습니다

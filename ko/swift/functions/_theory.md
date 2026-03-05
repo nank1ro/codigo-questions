@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Swift we use the `func` keyword followed by the name of the function:
+코드의 일부를 약간 다른 값으로 재사용하고 싶은 상황을 생각해 본 적이 있을 것입니다.
+전체 코드를 다시 작성하는 대신, 함수를 정의하면 반복적으로 사용할 수 있어 훨씬 깔끔합니다.
+Swift에서는 `func` 키워드 뒤에 함수 이름을 사용합니다:
 ```swift
 func say_hi() {
     print("Hello!")
@@ -10,16 +10,16 @@ say_hi() // prints "Hello!"
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+매개변수를 지정하려면 __함수 정의__의 괄호를 비워둘 필요가 없습니다
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+때로는 함수가 값을 __반환__하기를 원합니다.
+이를 위해 `return` 키워드가 있습니다.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+함수는 여러 개의 입력 매개변수를 가질 수 있으며, 함수의 괄호 안에 쉼표로 구분하여 작성합니다.
 ```swift
 func sayHello(name: String, newUser: Bool) -> String {
   var greet: String = "Hello \(name)!"
@@ -34,16 +34,16 @@ print(sayHello(name: "Smith", newUser: true))
 
 ---
 
-You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+튜플 타입을 함수의 반환 타입으로 사용하여 하나의 복합 반환 값으로 여러 값을 반환할 수 있습니다.
 
 ---
 
-If you don't want an argument label for a parameter, write an underscore `_` instead of an explicit argument label for that parameter
+매개변수에 인수 레이블을 사용하고 싶지 않다면, 해당 매개변수의 명시적 인수 레이블 대신 밑줄 `_`을 작성합니다
 
 ---
 
-You can define a _default_ value for any parameter in a function by assigning a value to the parameter after that parameter's type.
-If a default value is defined, you can omit that parameter when calling the function
+매개변수의 타입 뒤에 값을 할당하여 함수의 모든 매개변수에 _기본_ 값을 정의할 수 있습니다.
+기본 값이 정의되어 있으면 함수를 호출할 때 해당 매개변수를 생략할 수 있습니다
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
     // do stuff here
@@ -52,19 +52,19 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
 
 ---
 
-A _variadic parameter_ accepts zero or more values of a specified type.
-You use a variadic parameter to specify that the parameter can be passed a varying number of input values when the function is called.
-Write variadic parameters by inserting three period characters `...` after the parameter's type name.
-The values passed to a variadic parameter are made available within the function's body as an array of the appropriate type.
-For example, a variadic parameter with a name of `numbers` and a type of `Double...` is made available within the function's body as a constant array called numbers of type `[Double]`
+_가변 매개변수_는 지정된 타입의 값을 0개 이상 받습니다.
+가변 매개변수를 사용하면 함수를 호출할 때 다양한 수의 입력 값을 전달할 수 있습니다.
+매개변수의 타입 이름 뒤에 세 개의 마침표 `...`를 삽입하여 가변 매개변수를 작성합니다.
+가변 매개변수에 전달된 값은 함수 본문 내에서 적절한 타입의 배열로 사용할 수 있습니다.
+예를 들어, 이름이 `numbers`이고 타입이 `Double...`인 가변 매개변수는 함수 본문 내에서 `[Double]` 타입의 상수 배열 numbers로 사용할 수 있습니다
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+함수에 함수가 하는 일을 설명하는 _선택적 주석_을 추가할 수 있습니다:
 ```swift
 /// Prints 'Hello World' to the console.
 func helloWorld() {
     print("Hello, World!")
 }
 ```
-We can use `///` for a single line comment and `/** */` for a multi line comment
+한 줄 주석에는 `///`를, 여러 줄 주석에는 `/** */`를 사용할 수 있습니다

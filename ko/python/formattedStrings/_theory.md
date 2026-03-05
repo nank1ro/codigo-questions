@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+Python에서는 `+` 기호를 사용하여 두 개 이상의 문자열을 함께 표시할 수 있습니다. 예를 들면 다음과 같습니다:
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+하지만 `+` 기호를 사용하여 '10'과 같은 숫자를 `"friends"`와 같은 문자열에 더하면 서로 다른 종류의 값이기 때문에 오류가 발생합니다
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+포맷 문자열을 사용하면 문자열에 숫자를 추가하는 것과 같은 표현식을 오류 없이 표시할 수 있습니다.
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+모든 포맷 문자열 구문은 두 부분으로 구성됩니다. 먼저 문자 `f`, 그 다음에 포맷하려는 문자열입니다
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+다음으로, 중괄호 안에 다른 종류의 값을 넣으면 하나의 print 문으로 표시됩니다. 여기서는 `{5}`를 사용합니다
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+중괄호 사이에 `friends`와 같은 변수를 넣으면 해당 값도 표시됩니다
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+포맷 문자열 안에서 중괄호를 사용하여 원하는 만큼 값을 삽입할 수 있습니다
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+포맷 문자열은 print 문에서 사용하는 것이 가장 좋습니다. 일반 문자열처럼 변수에 저장할 수 없기 때문입니다.

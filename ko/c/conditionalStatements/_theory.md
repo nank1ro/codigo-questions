@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+의사 결정은 특정 조건이 충족될 때만 코드를 실행하고 싶을 때 필요합니다.
+날씨가 좋을 때만 밖에서 놀고 싶다고 가정해 봅시다.
+프로그래밍에서는 불리언 변수 `nice_weather`를 저장하고, 이 변수가 `true`일 때 `if`를 사용하여 밖에서 노는 동작을 수행할 수 있습니다:
 ```c
 bool nice_weather = true;
 if (nice_weather) {
@@ -10,21 +10,21 @@ if (nice_weather) {
 
 ---
 
-Let's continue with the previous example.
+이전 예제를 계속해 봅시다.
 ```c
 bool nice_weather = true;
 if (nice_weather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+`if` 문은 조건이 `true`일 때만 코드 블록을 실행한다는 것을 확인했습니다.
+또 하나 중요한 점은 코드 블록을 나타내는 **중괄호** `{}`입니다.
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In C we can use the `else` statement, like:
+조건이 발생할 때 코드 블록을 실행하는 방법을 방금 살펴보았습니다. 이제 첫 번째 조건이 실패했을 때 다른 코드 블록을 실행하는 방법을 알아봅시다.
+날씨가 좋으면 밖에서 놀고, 그렇지 않으면 집에 있습니다.
+C에서는 `else` 문을 사용할 수 있습니다:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
@@ -36,7 +36,7 @@ if (nice_weather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+다음 예제처럼 확인해야 할 조건이 하나 더 있다고 가정해 봅시다:
 ```c
 int num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     printf("do something else\n");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+이 코드의 출력은 `the number is 3`입니다.
+먼저 숫자가 2와 같은지 확인합니다. 이것은 거짓입니다.
+그래서 두 번째 문으로 넘어가 `num`이 3과 같은지 확인합니다. 참이므로 다음 코드 블록을 실행하여 `the number is 3`을 출력합니다
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+`else if` 문은 원하는 만큼 추가할 수 있으며, 제한이 없습니다
 ```c
 int num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     printf("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+이 코드의 출력은 `the number is 4`입니다.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+조건문(`if`, `else if` 또는 `else`)을 다른 조건문 안에 중첩하여 더 복잡한 구조를 만들 수도 있습니다.
 ```c
 int num = 4;
 if (num < 3) {
@@ -87,4 +87,4 @@ if (num < 3) {
   }
 }
 ```
-and the output of this code is `the number is 4`.
+이 코드의 출력은 `the number is 4`입니다.

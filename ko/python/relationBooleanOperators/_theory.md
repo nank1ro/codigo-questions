@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+**같음** `==` 관계 연산자부터 시작해 봅시다.
+이 연산자는 두 표현식이 같은지 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+**같지 않음** `!=` 관계 연산자를 알아봅시다.
+이 연산자는 두 표현식이 같지 **않은지** 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+이것은 *같음* 연산자의 정반대입니다
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+**큼** `>` 관계 연산자를 알아봅시다.
+이 연산자는 하나의 표현식이 다른 표현식보다 큰지 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+**작음** `<` 관계 연산자를 알아봅시다.
+이 연산자는 하나의 표현식이 다른 표현식보다 작은지 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+**크거나 같음** `>=` 관계 연산자를 알아봅시다.
+이 연산자는 하나의 표현식이 다른 표현식보다 크거나 같은지 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+**작거나 같음** `<=` 관계 연산자를 알아봅시다.
+이 연산자는 하나의 표현식이 다른 표현식보다 작거나 같은지 여부를 나타내는 **불리언** (`True` 또는 `False`) 값을 반환합니다. 예를 들어:
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+이제 **불리언** 연산자를 살펴봅시다. 먼저 `and`라는 연산자부터 시작합니다.
+이 연산자는 *False*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *True*이면 마지막 피연산자를 반환합니다.
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+**or** 불리언 연산자를 알아봅시다.
+이 연산자는 *True*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *False*이면 마지막 피연산자를 반환합니다.
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+마지막으로 **not** 불리언 연산자를 알아봅시다.
+이 연산자는 표현식의 논리적 상태를 반전시킨 불리언을 반환합니다.
 ```python
 >>> not True
 False

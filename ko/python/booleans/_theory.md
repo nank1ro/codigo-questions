@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+불리언은 `True` 또는 `False` 두 가지 값 중 하나를 나타냅니다.
+Python에서 모든 표현식을 평가하면 `True` 또는 `False` 두 가지 답 중 하나를 얻을 수 있습니다.
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+숫자나 문자열처럼 불리언 값 `True`를 변수에 저장할 수 있습니다.
 
 ---
 
-The opposite value of `True` is `False`
+`True`의 반대 값은 `False`입니다

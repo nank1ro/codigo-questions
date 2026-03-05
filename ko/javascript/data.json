@@ -1,72 +1,72 @@
 {
     "output": {
         "order": 1,
-        "title": "Output",
-        "description": "Learn how to output a value"
+        "title": "출력",
+        "description": "값을 출력하는 방법을 배웁니다"
     },
     "templateLiterals": {
         "order": 2,
-        "title": "Template literals",
-        "description": "Learn how to interpolate strings with different data types"
+        "title": "템플릿 리터럴",
+        "description": "다양한 데이터 타입으로 문자열을 보간하는 방법을 배웁니다"
     },
     "variables": {
         "order": 3,
-        "title": "Variables",
-        "description": "Learn how to store values in a variable"
+        "title": "변수",
+        "description": "변수에 값을 저장하는 방법을 배웁니다"
     },
     "booleans": {
         "order": 4,
-        "title": "Booleans",
-        "description": "Learn how to evaluate any expression"
+        "title": "불리언",
+        "description": "표현식을 평가하는 방법을 배웁니다"
     },
     "arithmeticOperators": {
         "order": 5,
-        "title": "Arithmetic Operators",
-        "description": "Learn how to perform arithmetic operations on variables and values"
+        "title": "산술 연산자",
+        "description": "변수와 값에 대해 산술 연산을 수행하는 방법을 배웁니다"
     },
     "assignmentOperators": {
         "order": 6,
-        "title": "Assignment Operators",
-        "description": "Learn how to assign values to variables"
+        "title": "대입 연산자",
+        "description": "변수에 값을 대입하는 방법을 배웁니다"
     },
     "comparisonLogicalOperators": {
         "order": 7,
-        "title": "Comparison and Logical Operators",
-        "description": "Learn how to compare values"
+        "title": "비교 및 논리 연산자",
+        "description": "값을 비교하는 방법을 배웁니다"
     },
     "conditionalStatements": {
         "order": 8,
-        "title": "Conditional Statements",
-        "description": "Learn how to make decisions"
+        "title": "조건문",
+        "description": "의사 결정을 내리는 방법을 배웁니다"
     },
     "whileLoops": {
         "order": 9,
-        "title": "While Loops",
-        "description": "Learn how to repeat a set of statements"
+        "title": "While 반복문",
+        "description": "문장 집합을 반복하는 방법을 배웁니다"
     },
     "forLoops": {
         "order": 10,
-        "title": "For Loops",
-        "description": "Learn how to repeat a set of statements"
+        "title": "For 반복문",
+        "description": "문장 집합을 반복하는 방법을 배웁니다"
     },
     "arrays": {
         "order": 11,
-        "title": "Arrays",
-        "description": "Learn how to store different values into one variable"
+        "title": "배열",
+        "description": "하나의 변수에 여러 값을 저장하는 방법을 배웁니다"
     },
     "objects": {
         "order": 12,
-        "title": "Objects",
-        "description": "Learn how to store values with keys"
+        "title": "객체",
+        "description": "키와 함께 값을 저장하는 방법을 배웁니다"
     },
     "functions": {
         "order": 13,
-        "title": "Functions",
-        "description": "Learn how to divide code by specific tasks"
+        "title": "함수",
+        "description": "특정 작업별로 코드를 나누는 방법을 배웁니다"
     },
     "classes": {
         "order": 14,
-        "title": "Classes",
-        "description": "Learn object-oriented programming"
+        "title": "클래스",
+        "description": "객체 지향 프로그래밍을 배웁니다"
     }
 }

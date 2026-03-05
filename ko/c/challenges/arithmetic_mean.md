@@ -2,18 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: 산술 평균
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+숫자 벡터의 _산술 평균_을 구하는 `mean` 함수를 작성하십시오.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+숫자 벡터의 평균을 반환하는 함수를 작성하십시오.
 
-Example of function call:
+함수 호출 예시:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]`의 평균은 4.0이어야 합니다
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]`의 평균은 5.0이어야 합니다
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]`의 평균은 45.0이어야 합니다
 
 ```c
     double arr3[] = {12, 34, 56, 78};

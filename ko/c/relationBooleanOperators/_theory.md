@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+**동등** `==` 관계 연산자부터 시작하겠습니다.
+이 연산자는 두 표현식이 같은지 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+**부등** `!=` 관계 연산자를 계속 알아보겠습니다.
+이 연산자는 두 표현식이 같지 **않은지** 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+이것은 *동등* 연산자와 정확히 반대입니다
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+**초과** `>` 관계 연산자를 계속 알아보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 큰지 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+**미만** `<` 관계 연산자를 계속 알아보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 작은지 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+**이상** `>=` 관계 연산자를 계속 알아보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 크거나 같은지 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+**이하** `<=` 관계 연산자를 계속 알아보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 작거나 같은지 여부를 나타내는 **불리언** 값, 참 `1` 또는 거짓 `0`을 반환합니다. 예를 들어:
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+이제 **불리언** 연산자를 알아보겠습니다. __and__ `&&`라고 불리는 첫 번째 연산자부터 시작하겠습니다.
+이 연산자는 *거짓*으로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *참*이면 마지막 피연산자를 반환합니다.
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+**or** `||` 불리언 연산자를 계속 알아보겠습니다.
+이 연산자는 *참*으로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *거짓*이면 마지막 피연산자를 반환합니다.
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+마지막으로 **not** `!` 불리언 연산자를 알아보겠습니다.
+이 연산자는 표현식의 논리 상태를 반전시킨 불리언 값을 반환합니다.
 ```c
 >>> !true
 0

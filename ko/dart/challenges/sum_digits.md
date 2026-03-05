@@ -2,19 +2,19 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 자릿수의 합
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+정수 `N`이 주어집니다.
+N의 모든 자릿수의 합을 계산하는 프로그램을 작성하십시오.
 
 # --instructions--
 
-Return the sum of digits of `N`.
+`N`의 자릿수의 합을 반환하십시오.
 
-Example of function call:
+함수 호출 예시:
 ```dart
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ void main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345의 자릿수의 합은 15입니다
 
 ```dart
   test('test1', () {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
   });
 ```
 
-The sum of the digits of 57253 is 22
+57253의 자릿수의 합은 22입니다
 
 ```dart
   test('test2', () {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
   });
 ```
 
-The sum of the digits of 122 is 5
+122의 자릿수의 합은 5입니다
 
 ```dart
   test('test3', () {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
   });
 ```
 
-The sum of the digits of 91979997 is 60
+91979997의 자릿수의 합은 60입니다
 
 ```dart
   test('test4', () {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
   });
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647의 자릿수의 합은 46입니다
 
 ```dart
   test('test5', () {

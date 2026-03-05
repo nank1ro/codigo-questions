@@ -1,31 +1,31 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+리스트는 여러 가지 정보를 하나의 변수 이름 아래에 순서대로 저장할 수 있는 데이터 타입입니다.
+리스트는 모든 타입의 여러 값을 저장하며, **인덱스**를 사용하여 이 값들을 구분합니다.
+다음과 같은 형식의 표현식으로 리스트에 항목을 할당할 수 있습니다:
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+리스트의 개별 항목은 인덱스를 통해 접근할 수 있습니다.
+인덱스는 리스트에서 항목의 위치를 식별하는 주소와 같습니다.
+인덱스는 리스트 이름 바로 뒤에 대괄호 안에 다음과 같이 나타납니다:
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+리스트 인덱스는 `1`이 **아니라** `0`부터 시작합니다! 리스트의 첫 번째 항목은 다음과 같이 접근합니다: `list_name[0]`.
+리스트의 두 번째 항목은 인덱스 1에 있습니다: `list_name[1]`.
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+리스트 인덱스는 다른 변수 이름과 동일하게 동작합니다! 값에 접근하거나 값을 할당하는 데 사용할 수 있습니다.
+리스트 인덱스에 접근하는 방법은 다음과 같습니다:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] # Gets the value "Jeremiah"
 ```
-This is how an assignment works:
+값을 할당하는 방법은 다음과 같습니다:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
@@ -34,14 +34,14 @@ names[0] # Gets the new value "Jordan"
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+문자열과 마찬가지로, 리스트에도 **길이**가 있습니다.
+리스트의 길이는 리스트에 포함된 항목의 수입니다
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+리스트는 고정된 길이를 가질 필요가 없습니다.
+원할 때 언제든지 리스트의 끝에 항목을 추가할 수 있습니다!
+리스트에 항목을 추가하려면 `append` 키워드를 사용합니다:
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+때때로 리스트의 일부분에만 접근하고 싶을 때가 있습니다.
+다음 코드를 살펴보세요:
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+먼저, `numbers`라는 리스트를 만듭니다.
+그런 다음, 리스트의 부분을 가져와 slice 리스트에 저장합니다.
+리스트 이름 뒤에 포함하고 싶은 인덱스를 정의하여 이 작업을 수행합니다: `numbers[1:3]`.
+Python에서 이런 방식으로 리스트의 일부를 지정하면, 첫 번째 인덱스 `1`의 요소는 포함하지만, 두 번째 인덱스 `3`의 요소는 제외합니다.
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+문자열도 리스트와 정확히 같은 방식으로 슬라이싱할 수 있습니다! 사실, 문자열을 문자의 리스트로 생각할 수 있습니다: 각 문자는 인덱스 `0`부터 시작하는 리스트의 순차적인 항목입니다.
 ```python
 list_name[:2]
 # Grabs the first two items
 list_name[3:]
 # Grabs the fourth through last items
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+리스트(또는 문자열)의 맨 처음이나 맨 마지막 항목이 슬라이스에 포함되는 경우, 해당 항목의 인덱스는 생략할 수 있습니다.
 
 ---
 
-List elements could be of any type:
+리스트 요소는 어떤 타입이든 될 수 있습니다:
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+사실, 위에는 순서대로 문자열, 정수, 불리언이 있습니다.
+하지만 리스트 안에 리스트를 넣을 수도 있습니다!
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+때때로 리스트에서 항목을 검색해야 할 때가 있습니다.
+Python에서는 `index()` 메서드를 사용할 수 있습니다:
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+위 코드는 문자열 `"Zac"`을 포함하는 첫 번째 인덱스를 출력하며, 이 경우 `1`입니다.
+`insert()` 메서드를 사용하여 리스트의 특정 인덱스에 항목을 삽입할 수도 있습니다:
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+위 코드는 인덱스 `1`에 `"Ali"`를 삽입하며, 이 인덱스 이후의 모든 항목이 1씩 뒤로 밀립니다
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+Python에서는 `for..in` 키워드를 사용하여 매우 간단하게 리스트를 반복할 수 있습니다:
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+`for` 키워드 뒤에 변수 이름이 오며, 이 변수에는 리스트의 각 항목 값이 차례로 할당됩니다.
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+**튜플**은 리스트와 비슷하지만 훨씬 빠릅니다.
+하지만 튜플의 값은 변경할 수 없습니다.
+프로그램이 실행되는 동안 변하지 않는 **읽기 전용** 데이터에 튜플을 사용하는 경향이 있습니다.
+튜플을 만들려면 소괄호 `()`를 사용합니다
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+튜플을 리스트로 변환하고 싶을 때가 있습니다.
+이를 위해 `list()` 함수를 사용할 수 있습니다
 
 ---
 
-Likewise, we can convert a list into a tuple
+마찬가지로, 리스트를 튜플로 변환할 수 있습니다

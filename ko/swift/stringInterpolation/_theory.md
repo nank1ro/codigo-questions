@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+Swift에서는 `+` 기호를 사용하여 두 개 이상의 문자열을 함께 표시할 수 있습니다. 예를 들면 다음과 같습니다:
 ```swift
 print("Hello " + "Swift!") // prints "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+하지만 `+` 기호를 사용하여 '10'과 같은 숫자를 `"friends"`와 같은 문자열에 더하면, 서로 다른 종류의 값이기 때문에 오류가 발생합니다
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+문자열 보간을 사용하면 문자열에 숫자를 추가하는 것과 같은 표현식을 오류 없이 표시할 수 있습니다.
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+모든 문자열 보간 구문은 두 부분으로 구성됩니다. 숫자나 변수를 삽입하는 `\()`와 일반 문자열입니다
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+다음으로, 다른 종류의 값을 중괄호 안에 넣어 하나의 print 문으로 표시합니다. 여기에서는 `\(5)`를 사용합니다
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+`friends`와 같은 변수를 괄호 안에 넣으면 해당 값도 표시됩니다
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+문자열 보간 안에서 괄호를 사용하여 원하는 만큼 값을 삽입할 수 있습니다
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+문자열 보간은 print 문에서 가장 많이 사용되지만, 일반 문자열처럼 변수에 저장할 수도 있습니다.

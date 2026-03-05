@@ -7,22 +7,22 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+James는 ATM에서 N달러를 인출하고 싶습니다.
+현금 인출기는 N이 5의 배수이고, James의 계좌에 인출 거래를 수행할 충분한 잔액이 있는 경우에만 거래를 수락합니다 (은행 수수료 포함).
+성공적인 인출마다 은행은 `0.50$`를 수수료로 부과합니다.
+인출 시도 후 James의 계좌 잔액을 계산하십시오.
+입력은 다음 순서로 제공됩니다:
+1. James가 인출하고자 하는 금액은 다음 범위에 있습니다: `0 < N <= 2000`.
+2. James의 초기 잔액은 소수점 두 자리로 제공되며 다음 범위에 있습니다: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+인출 시도 후 계좌 잔액을 소수점 두 자리 숫자로 반환하십시오.
+계좌에 거래를 완료할 충분한 잔액이 없으면 현재 은행 잔액을 반환하십시오.
 
-> HINT: omit the argument labels with the `_` (underscore)
+> 힌트: `_` (밑줄)로 인수 레이블을 생략하십시오
 
-Example of function call:
+함수 호출 예시:
 ```swift
 print(accountBalance(10, 20))
 // prints 9,5
@@ -47,7 +47,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-Perform a successful transaction
+성공적인 거래를 수행합니다
 
 ```swift
     func testSuccessfulTransaction() {
@@ -56,7 +56,7 @@ Perform a successful transaction
     }
 ```
 
-Insufficient funds
+잔액이 부족합니다
 
 ```swift
     func testInsufficientFunds() {
@@ -65,7 +65,7 @@ Insufficient funds
     }
 ```
 
-Refused transaction, invalid amount
+거래 거부, 유효하지 않은 금액
 
 ```swift
     func testNotMultipleOf5() {
@@ -74,7 +74,7 @@ Refused transaction, invalid amount
     }
 ```
 
-Withdraw all money successfully
+모든 금액을 성공적으로 인출합니다
 
 ```swift
     func testWithdrawAll() {

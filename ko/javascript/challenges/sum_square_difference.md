@@ -2,22 +2,22 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 제곱합 차이
 ---
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+처음 10개 자연수의 제곱의 합은 다음과 같습니다.
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+처음 10개 자연수의 합의 제곱은 다음과 같습니다.
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+따라서 처음 10개 자연수의 제곱의 합과 합의 제곱의 차이는 3025 − 385 = 2640입니다.
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+처음 `n`개 자연수의 제곱의 합과 합의 제곱의 차이를 구하세요.
 
 # --before-seed--
 
@@ -47,19 +47,19 @@ function sumSquareDifference(n) {
 
 # --asserts--
 
-`sumSquareDifference(10)` should return 2640.
+`sumSquareDifference(10)`은 2640을 반환해야 합니다.
 
 ```javascript
 tryCatch(sumSquareDifference(10) === 2640);
 ```
 
-`sumSquareDifference(20)` should return 41230.
+`sumSquareDifference(20)`은 41230을 반환해야 합니다.
 
 ```javascript
 tryCatch(sumSquareDifference(20) === 41230);
 ```
 
-`sumSquareDifference(100)` should return 25164150.
+`sumSquareDifference(100)`은 25164150을 반환해야 합니다.
 
 ```javascript
 tryCatch(sumSquareDifference(100) === 25164150);

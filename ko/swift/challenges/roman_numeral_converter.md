@@ -2,24 +2,24 @@
 language: swift
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: 로마 숫자 변환기
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+양의 정수를 매개변수로 받아 해당 정수의 로마 숫자 표현을 포함하는 문자열을 반환하는 함수를 만드십시오. 현대 로마 숫자는 가장 왼쪽 자릿수부터 시작하여 각 자릿수를 별도로 표현하며, 값이 0인 자릿수는 건너뜁니다.
 
 # --instructions--
 
-Examples:
+예시:
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- 모든 로마 숫자는 대문자로 반환해야 합니다.
+- 이 표기법으로 표현할 수 있는 가장 큰 수는 3,999입니다.
 
 # --seed--
 
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `2` must equal `II` 
+숫자 `2`는 `II`와 같아야 합니다
 
 ```swift
     func test1() {
@@ -48,7 +48,7 @@ The number `2` must equal `II`
     }
 ```
 
-The number `12` must equal `XII` 
+숫자 `12`는 `XII`와 같아야 합니다
 
 ```swift
     func test2() {
@@ -56,7 +56,7 @@ The number `12` must equal `XII`
     }
 ```
 
-The number `16` must equal `XVI` 
+숫자 `16`은 `XVI`와 같아야 합니다
 
 ```swift
     func test3() {
@@ -64,7 +64,7 @@ The number `16` must equal `XVI`
     }
 ```
 
-The number `44` must equal `XLIV` 
+숫자 `44`는 `XLIV`와 같아야 합니다
 
 ```swift
     func test4() {
@@ -72,7 +72,7 @@ The number `44` must equal `XLIV`
     }
 ```
 
-The number `68` must equal `LXVIII` 
+숫자 `68`은 `LXVIII`과 같아야 합니다
 
 ```swift
     func test5() {
@@ -80,7 +80,7 @@ The number `68` must equal `LXVIII`
     }
 ```
 
-The number `400` must equal `CD` 
+숫자 `400`은 `CD`와 같아야 합니다
 
 ```swift
     func test6() {
@@ -88,7 +88,7 @@ The number `400` must equal `CD`
     }
 ```
 
-The number `798` must equal `DCCXCVIII` 
+숫자 `798`은 `DCCXCVIII`과 같아야 합니다
 
 ```swift
     func test7() {
@@ -96,7 +96,7 @@ The number `798` must equal `DCCXCVIII`
     }
 ```
 
-The number `1000` must equal `M` 
+숫자 `1000`은 `M`과 같아야 합니다
 
 ```swift
     func test8() {
@@ -104,7 +104,7 @@ The number `1000` must equal `M`
     }
 ```
 
-The number `3999` must equal `MMMCMXCIX` 
+숫자 `3999`는 `MMMCMXCIX`와 같아야 합니다
 
 ```swift
     func test9() {
@@ -112,7 +112,7 @@ The number `3999` must equal `MMMCMXCIX`
     }
 ```
 
-The number `649` must equal `DCXLIX` 
+숫자 `649`는 `DCXLIX`와 같아야 합니다
 
 ```swift
     func test10() {
@@ -120,7 +120,7 @@ The number `649` must equal `DCXLIX`
     }
 ```
 
-The number `1666` must equal `MDCLXVI` 
+숫자 `1666`은 `MDCLXVI`와 같아야 합니다
 
 ```swift
     func test11() {

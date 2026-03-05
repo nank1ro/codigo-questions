@@ -2,30 +2,30 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 빗방울
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+주어진 숫자를 특정 인수에 해당하는 빗방울 소리가 포함된 문자열로 변환하는 것이 과제입니다.
+인수란 나머지 없이 다른 숫자를 균등하게 나누는 수입니다.
+어떤 수가 다른 수의 인수인지 확인하는 가장 간단한 방법은 나머지 연산을 사용하는 것입니다.
+빗방울의 규칙은 주어진 숫자가 다음과 같을 때입니다:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3을 인수로 가지면, 결과에 'Pling'을 추가합니다.
+- 5를 인수로 가지면, 결과에 'Plang'을 추가합니다.
+- 7을 인수로 가지면, 결과에 'Plong'을 추가합니다.
+- 3, 5, 7 중 어느 것도 인수로 가지지 않으면, 결과는 해당 숫자의 자릿수여야 합니다.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+올바른 문자열을 반환하는 함수를 작성하세요. 예시:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28은 7을 인수로 가지지만, 3이나 5는 아니므로, 결과는 `"Plong"`입니다.
+- 30은 3과 5를 모두 인수로 가지지만, 7은 아니므로, 결과는 `"PlingPlang"`입니다.
+- 34는 3, 5, 7의 인수가 아니므로, 결과는 `"34"`입니다.
 
-Example of function call:
+함수 호출 예시:
 ```kotlin
 println(raindrops(28))
 // prints "Plong"
@@ -61,109 +61,109 @@ fun main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1의 소리는 "1"입니다
 
 ```kotlin
     tryCatch(raindrops(1) == "1")
 ```
 
-The sound for 3 is "Pling"
+3의 소리는 "Pling"입니다
 
 ```kotlin
     tryCatch(raindrops(3) == "Pling")
 ```
 
-The sound for 5 is "Plang"
+5의 소리는 "Plang"입니다
 
 ```kotlin
     tryCatch(raindrops(5) == "Plang")
 ```
 
-The sound for 7 is "Plong"
+7의 소리는 "Plong"입니다
 
 ```kotlin
     tryCatch(raindrops(7) == "Plong")
 ```
 
-The sound for 6 is "Pling"
+6의 소리는 "Pling"입니다
 
 ```kotlin
     tryCatch(raindrops(6) == "Pling")
 ```
 
-The sound for 8 is "8"
+8의 소리는 "8"입니다
 
 ```kotlin
     tryCatch(raindrops(8) == "8")
 ```
 
-The sound for 9 is "Pling"
+9의 소리는 "Pling"입니다
 
 ```kotlin
     tryCatch(raindrops(9) == "Pling")
 ```
 
-The sound for 10 is "Plang"
+10의 소리는 "Plang"입니다
 
 ```kotlin
     tryCatch(raindrops(10) == "Plang")
 ```
 
-The sound for 14 is "Plong"
+14의 소리는 "Plong"입니다
 
 ```kotlin
     tryCatch(raindrops(14) == "Plong")
 ```
 
-The sound for 15 is "PlingPlang"
+15의 소리는 "PlingPlang"입니다
 
 ```kotlin
     tryCatch(raindrops(15) == "PlingPlang")
 ```
 
-The sound for 21 is "PlingPlong"
+21의 소리는 "PlingPlong"입니다
 
 ```kotlin
     tryCatch(raindrops(21) == "PlingPlong")
 ```
 
-The sound for 25 is "Plang"
+25의 소리는 "Plang"입니다
 
 ```kotlin
     tryCatch(raindrops(25) == "Plang")
 ```
 
-The sound for 27 is "Pling"
+27의 소리는 "Pling"입니다
 
 ```kotlin
     tryCatch(raindrops(27) == "Pling")
 ```
 
-The sound for 35 is "PlangPlong"
+35의 소리는 "PlangPlong"입니다
 
 ```kotlin
     tryCatch(raindrops(35) == "PlangPlong")
 ```
 
-The sound for 49 is "Plong"
+49의 소리는 "Plong"입니다
 
 ```kotlin
     tryCatch(raindrops(49) == "Plong")
 ```
 
-The sound for 52 is "52"
+52의 소리는 "52"입니다
 
 ```kotlin
     tryCatch(raindrops(52) == "52")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105의 소리는 "PlingPlangPlong"입니다
 
 ```kotlin
     tryCatch(raindrops(105) == "PlingPlangPlong")
 ```
 
-The sound for 3125 is "Plang"
+3125의 소리는 "Plang"입니다
 
 ```kotlin
     tryCatch(raindrops(3125) == "Plang")

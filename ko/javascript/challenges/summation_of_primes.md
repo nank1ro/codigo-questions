@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: 소수의 합
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+10 미만의 소수의 합은 2 + 3 + 5 + 7 = 17입니다.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+`n` 미만의 모든 소수의 합을 구하세요.
 
 # --before-seed--
 
@@ -41,25 +41,25 @@ function primeSummation(n) {
 
 # --asserts--
 
-`primeSummation(17)` should return 41.
+`primeSummation(17)`은 41을 반환해야 합니다.
 
 ```javascript
 tryCatch(primeSummation(17) === 41);
 ```
 
-`primeSummation(2001)` should return 277050.
+`primeSummation(2001)`은 277050을 반환해야 합니다.
 
 ```javascript
 tryCatch(primeSummation(2001) === 277050);
 ```
 
-`primeSummation(140759)` should return 873608362.
+`primeSummation(140759)`은 873608362를 반환해야 합니다.
 
 ```javascript
 tryCatch(primeSummation(140759) === 873608362);
 ```
 
-`primeSummation(2000000)` should return 142913828922.
+`primeSummation(2000000)`은 142913828922를 반환해야 합니다.
 
 ```javascript
 tryCatch(primeSummation(2000000) === 142913828922);

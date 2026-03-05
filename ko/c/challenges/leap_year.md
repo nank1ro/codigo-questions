@@ -2,20 +2,20 @@
 language: c
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: 윤년
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+역년에는 정확히 365.25일이 있습니다. 하지만 인간은 보통 소수점이 아닌 정수로 나누어 떨어지는 것을 기준으로 세기 때문에, 결국 이것은 혼란을 초래합니다. 이를 방지하기 위해, 4년 주기마다 0.25일을 모두 합산하여 해당 연도를 366일로 만들고 (2월 29일을 윤일로 포함) 이를 __윤년__이라고 부르기로 했습니다. 4년 주기의 나머지 3년은 365일만 포함하며 __윤년이 아닙니다__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `time.h` import, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+이 챌린지에서는 한 단계 더 나아가, `time.h` 임포트, `switch` 문, __if 블록__, __if-else 블록__ 또는 __삼항 연산__ (`x ? a : b`)을 사용하지 않고, 또한 __NOT__ (`!`) 연산자를 제외한 논리 연산자 __AND__ (`&&`)와 __OR__ (`||`)도 사용하지 않고 윤년인지 아닌지를 판별해야 합니다.
 
-Return `true` if it's a leap year, `false` otherwise.
+윤년이면 `true`를, 그렇지 않으면 `false`를 반환하십시오.
 
-Example of function call:
+함수 호출 예시:
 ```c
 printf("%d\n", leap_year(2000));
 // prints true
@@ -163,7 +163,7 @@ int main() {
 
 # --asserts--
 
-The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+`time.h`, `switch`, `if`, `else`, `&&`, `||` 또는 `?`의 사용은 허용되지 않습니다.
 
 ```json
 {
@@ -173,73 +173,73 @@ The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+`2016`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(2016) == true);
 ```
 
-The year `1996` is a leap year.
+`1996`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(1996) == true);
 ```
 
-The year `1600` is a leap year.
+`1600`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(1600) == true);
 ```
 
-The year `2020` is a leap year.
+`2020`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(2020) == true);
 ```
 
-The year `2000` is a leap year.
+`2000`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(2000) == true);
 ```
 
-The year `2008` is a leap year.
+`2008`년은 윤년입니다.
 
 ```c
     try_catch(leap_year(2008) == true);
 ```
 
-The year `1521` is not a leap year.
+`1521`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(1521) == false);
 ```
 
-The year `1800` is not a leap year.
+`1800`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(1800) == false);
 ```
 
-The year `2007` is not a leap year.
+`2007`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(2007) == false);
 ```
 
-The year `2002` is not a leap year.
+`2002`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(2002) == false);
 ```
 
-The year `1979` is not a leap year.
+`1979`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(1979) == false);
 ```
 
-The year `2006` is not a leap year.
+`2006`년은 윤년이 아닙니다.
 
 ```c
     try_catch(leap_year(2006) == false);

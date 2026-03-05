@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-title: Ackermann function
+title: 아커만 함수
 difficulty: 1
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+아커만 함수는 재귀 함수의 대표적인 예시로, 특히 원시 재귀 함수가 아니라는 점에서 주목할 만합니다. 이 함수의 값은 매우 빠르게 증가하며, 호출 트리의 크기도 마찬가지입니다.
 
-The Ackermann function is usually defined as follows:
+아커만 함수는 일반적으로 다음과 같이 정의됩니다:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+인수는 절대 음수가 아니며 항상 종료됩니다.
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+아커만 함수의 값을 반환하는 함수를 작성하세요.
 
 # --seed--
 
@@ -36,28 +36,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)`은 1을 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(ack(0, 0), 1, "--err-t1--")
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)`은 3을 반환해야 합니다.
 
 ```python
     def test2(self):
         self.assertEqual(ack(1, 1), 3, "--err-t2--")
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)`는 13을 반환해야 합니다.
 
 ```python
     def test3(self):
         self.assertEqual(ack(2, 5), 13, "--err-t3--")
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)`은 61을 반환해야 합니다.
 
 ```python
     def test4(self):

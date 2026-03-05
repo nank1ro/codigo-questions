@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+프로그래밍에서 코드 블록을 반복해야 하는 경우가 자주 있습니다. 예를 들면:
 ```javascript
 console.log("2 seconds");
 console.log("3 seconds");
 console.log("4 seconds");
 console.log("5 seconds");
 ```
-This produces the following output:
+이 코드는 다음과 같은 출력을 생성합니다:
 ```javascript
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+당연히 긴 구문에 대해서는 코드를 작성하는 데 많은 시간을 소비하게 되지만, 다행히도 반복문을 사용할 수 있습니다.
+위와 같은 출력을 얻기 위해 `while` 반복문을 배워봅시다.
 ```javascript
 var count = 2;
 while (count <= 5) {
@@ -21,30 +21,30 @@ while (count <= 5) {
     count += 1;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+변수 `count`를 만들고 초기값 `2`를 할당했습니다.
+그런 다음 `while` 문을 사용하여 조건 `count <= 5`가 `true`인 동안 코드 블록을 실행합니다.
+코드 블록 내에서 `count += 1` 줄을 **반드시** 추가해야 합니다.
+이 줄은 `count` 값을 증가시키며, 그렇지 않으면 반복문이 무한히 실행됩니다
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while` 반복문의 반복 횟수를 제어하려면 숫자로 설정된 변수부터 시작합니다.
+이 변수를 카운터 변수라고 합니다
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+그런 다음, 조건에서 비교를 사용하여 `counter` 변수를 숫자와 비교합니다.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+코드 블록 내에서 `while` 반복문을 멈추려면 `counter` 변수를 증가시켜야 합니다.
 
 ---
 
-The order you write code affects the output.
+코드를 작성하는 순서가 출력에 영향을 미칩니다.
 
 ---
 
-In JavaScript we also have the **do-while** variation of the `while` loop.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
+JavaScript에는 `while` 반복문의 **do-while** 변형도 있습니다.
+이 구문은 반복문의 조건을 확인하기 _전에_ 먼저 코드 블록을 한 번 실행합니다.
+그런 다음 조건이 `false`가 될 때까지 반복문을 계속 실행합니다.

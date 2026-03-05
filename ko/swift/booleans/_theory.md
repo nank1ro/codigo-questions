@@ -1,11 +1,11 @@
-Swift has a basic Boolean type, called `Bool`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Swift, and get one of two answers, `true` or `false`.
+Swift에는 `Bool`이라는 기본 불리언 타입이 있습니다.
+불리언 값은 참 또는 거짓만 가질 수 있기 때문에 논리값이라고 합니다.
+Swift에서 어떤 표현식이든 평가하면 `true` 또는 `false` 두 가지 결과 중 하나를 얻을 수 있습니다.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+숫자나 문자열처럼 변수에 불리언 값 `true`를 저장할 수 있습니다.
 
 ---
 
-The opposite value of `true` is `false`
+`true`의 반대 값은 `false`입니다

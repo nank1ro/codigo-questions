@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+코드의 일부를 약간 다른 값으로 재사용하고 싶은 상황을 생각해 본 적이 있을 것입니다.
+전체 코드를 다시 작성하는 대신, 함수를 정의하면 반복적으로 사용할 수 있어 훨씬 깔끔합니다.
+Python에서는 `def` 키워드 뒤에 함수 이름을 사용합니다:
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+__함수 정의__에서 괄호는 비어 있을 필요가 없습니다.
+괄호 안에 매개변수를 지정할 수 있습니다
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+때때로 함수가 값을 __반환__하기를 원합니다.
+이를 위해 `return` 키워드가 있습니다
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+함수에서 함수가 하는 일을 설명하는 _선택적 주석_을 추가할 수 있습니다:
 ```python
 """
 Prints 'Hello World' to the console.

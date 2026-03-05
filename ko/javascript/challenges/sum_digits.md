@@ -2,17 +2,17 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 자릿수의 합
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+정수 `num`이 주어집니다.
+`num`의 모든 자릿수의 합을 계산하는 프로그램을 작성하세요.
 
 # --instructions--
 
-Return the sum of digits of `num`
+`num`의 자릿수 합을 반환하세요.
 
 # --before-seed--
 
@@ -42,31 +42,31 @@ function sumDigits(num) {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345의 자릿수 합은 15입니다
 
 ```javascript
 tryCatch(sumDigits(12345) === 15);
 ```
 
-The sum of the digits of 57253 is 22
+57253의 자릿수 합은 22입니다
 
 ```javascript
 tryCatch(sumDigits(57253) === 22);
 ```
 
-The sum of the digits of 122 is 5
+122의 자릿수 합은 5입니다
 
 ```javascript
 tryCatch(sumDigits(122) === 5);
 ```
 
-The sum of the digits of 91979997 is 60
+91979997의 자릿수 합은 60입니다
 
 ```javascript
 tryCatch(sumDigits(91979997) === 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647의 자릿수 합은 46입니다
 
 ```javascript
 tryCatch(sumDigits(2147483647) === 46);

@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while` 루프를 사용하여 코드를 반복하는 방법을 알고 있습니다.
+다음 프로그램처럼 `hello`를 출력하는 명령문을 반복합니다
 ```javascript
 var counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+하지만 `for` 루프로도 같은 작업을 할 수 있습니다:
 ```javascript
 for (let i = 0; i < 5; i++) {
     console.log("hello");
@@ -17,28 +17,28 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for` 루프에서는 루프가 실행될 횟수를 지정할 수 있습니다
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+`<`를 사용하면 다음 숫자를 제외하고 반복하고, `<=`를 사용하면 다음 숫자를 포함하여 반복할 수 있습니다
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`라는 변수는 카운터 변수입니다.
+원하는 이름을 지정할 수 있습니다.
+카운터 변수는 현재 루프의 몇 번째 반복인지를 셉니다
 
 ---
 
-In JavaScript we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+JavaScript에는 `forEach` 루프도 있습니다.
+실제로 `forEach`는 `for` 루프와 같은 순서로 시퀀스의 각 요소에 대해 주어진 클로저를 호출합니다:
 ```javascript
-// this is an array, we'll see about that soon
+// 이것은 배열입니다, 곧 배울 것입니다
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```
-Using the `forEach` method is distinct from a `for` loop in two important ways:
-1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+`forEach` 메서드를 사용하는 것은 `for` 루프와 두 가지 중요한 점에서 다릅니다:
+1. `break` 또는 `continue` 문을 사용하여 현재 본문 클로저 호출을 종료하거나 후속 호출을 건너뛸 수 없습니다.
+2. 본문 클로저에서 `return` 문을 사용하면 클로저만 종료되고 외부 범위는 종료되지 않으며, 후속 호출을 건너뛰지 않습니다.
+참고: `=>` 이것은 _화살표 함수_라고 하며, 중괄호 {}를 대체하고 값을 반환하는(필요한 경우) ES6 축약 함수 구문입니다

@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+연산자는 변수와 값에 대해 연산을 수행하는 데 사용됩니다.
+산술 연산자부터 시작하겠습니다. 특히 **덧셈** `+` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 더하는 데 사용됩니다. 예를 들면:
 ```
 >>> 5 + 3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+**뺄셈** `-` 연산자를 계속 알아보겠습니다.
+이 연산자는 하나의 숫자에서 다른 숫자를 빼는 데 사용됩니다. 예를 들면:
 ```
 >>> 5 - 3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+**곱셈** `*` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 곱하는 데 사용됩니다. 예를 들면:
 ```
 >>> 5 * 3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+**나눗셈** `/` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 나누는 데 사용됩니다. 예를 들면:
 ```c
 >>> 10 / 5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+**나머지** `%` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 나눈 후 나머지를 구하는 데 사용됩니다. 예를 들면:
 ```
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5를 2로 나누면 몫이 2이고 나머지가 1이므로 결과는 1입니다
 ```
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+9를 3으로 나누면 몫이 3이고 나머지가 0이므로 결과는 0입니다
 
 ---
 
-C doesn't have an **exponentiation** operator, so we have to use the `pow()` function included in the `math.h` library.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+C에는 **거듭제곱** 연산자가 없으므로 `math.h` 라이브러리에 포함된 `pow()` 함수를 사용해야 합니다.
+거듭제곱은 밑의 반복 곱셈에 해당합니다. 즉, 밑 **b**에 지수 *n*을 적용하면 *n*개의 밑을 곱한 결과입니다:
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```
 >>> pow(5, 2);
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** using the `floor()` function.
-This function returns the integral part of the quotient, for example:
+`floor()` 함수를 사용한 **내림 나눗셈**을 알아보겠습니다.
+이 함수는 몫의 정수 부분을 반환합니다. 예를 들면:
 ```
 >>> 5.0 / 2
 2.5
 >>> floor(2.5)
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+정수 나눗셈이라고도 합니다. 결과값은 정수이지만, 결과의 *타입*이 반드시 int인 것은 아닙니다.

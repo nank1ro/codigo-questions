@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while` 루프를 사용하여 코드를 반복하는 방법을 알고 있습니다.
+다음은 `hello`를 출력하기 위해 문장을 반복하는 프로그램입니다:
 ```python
 counter = 0
 
@@ -7,7 +7,7 @@ while counter < 5:
     print("hello")
     counter += 1
 ```
-But we can do the same with `for` loops:
+하지만 `for` 루프로도 동일한 작업을 할 수 있습니다:
 ```python
 for i in range(5):
     print("hello")
@@ -15,23 +15,23 @@ for i in range(5):
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run with the `range()` function
+`for` 루프에서 `range()` 함수를 사용하여 루프를 몇 번 실행할지 지정할 수 있습니다
 
 ---
 
-Adding a number like `5`, inside the `range()` function means it will loop over the code block 5 times, from `0` until `4`
+`range()` 함수 안에 `5`와 같은 숫자를 넣으면 코드 블록을 `0`부터 `4`까지 5번 반복합니다
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`라는 변수는 카운터 변수입니다.
+원하는 이름을 지정할 수 있습니다.
+이 변수는 현재 루프가 몇 번째 반복인지를 나타냅니다
 
 ---
 
-The `range()` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
-This is the syntax of the function:
+`range()` 함수는 기본적으로 0부터 시작하여 1씩 증가하며 지정된 숫자 전에 멈추는 숫자 시퀀스를 반환합니다.
+이 함수의 구문은 다음과 같습니다:
 ```python
 range(start, stop, step)
 ```
-`start` and `step` are optional, while `stop` is required
+`start`와 `step`은 선택 사항이며, `stop`은 필수입니다

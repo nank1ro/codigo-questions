@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 최대 회문 곱
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+회문수는 앞뒤로 읽어도 같은 수입니다. 두 자리 수의 곱으로 만들 수 있는 가장 큰 회문수는 9009 = 91 x 99입니다.
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+두 `n`자리 수의 곱으로 만들 수 있는 가장 큰 회문수를 구하세요.
 
 # --seed--
 
@@ -30,14 +30,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_palindrome_product(2)` should return 9009.
+`largest_palindrome_product(2)`는 9009를 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(largest_palindrome_product(2), 9009, "--err-t1--")
 ```
 
-`largest_palindrome_product(3)` should return 906609.
+`largest_palindrome_product(3)`은 906609를 반환해야 합니다.
 
 ```python
     def test2(self):

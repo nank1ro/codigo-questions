@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: 윤년
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+달력의 한 해에는 정확히 365.25일이 있습니다. 하지만 결국 이것은 혼란을 야기하게 됩니다. 왜냐하면 인간은 보통 소수점이 아닌 1의 정확한 나눗셈으로 세기 때문입니다. 그래서 이를 피하기 위해, 4년 주기마다 0.25일을 모두 더하여 그 해에 366일을 부여하고 (2월 29일을 윤일로 포함) 이를 __윤년__이라고 부르기로 했습니다. 4년 주기의 나머지 세 해는 365일만 포함하며 __윤년이 아닙니다__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `datetime` class, __if blocks__, __if-elif blocks__ or __conditionals__ (`a if b else c`) nor the logical operators __AND__ (`and`) and __OR__ (`or`) with the exemption of the __NOT__ (`not`) operator.
+이 챌린지에서는 한 단계 더 나아가, `datetime` 클래스, __if 블록__, __if-elif 블록__, __조건식__ (`a if b else c`) 또는 논리 연산자 __AND__ (`and`)와 __OR__ (`or`)를 사용하지 않고 윤년인지 판별해야 합니다. __NOT__ (`not`) 연산자는 예외적으로 사용할 수 있습니다.
 
-Return `True` if it's a leap year, `False` otherwise.
+윤년이면 `True`를, 그렇지 않으면 `False`를 반환하세요.
 
-Example of function call:
+함수 호출 예시:
 ```dart
 print(leap_year(2000))
 // prints true
@@ -38,7 +38,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
+`month`, `day`, `if`, `else`, `elif`, `and`, `or`의 사용은 허용되지 않습니다.
 
 ```json
 {
@@ -48,84 +48,84 @@ The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+`2016`년은 윤년입니다.
 
 ```python
     def test1(self):
         self.assertEqual(leap_year(2016), True, "--err-t1--")
 ```
 
-The year `1996` is a leap year.
+`1996`년은 윤년입니다.
 
 ```python
     def test2(self):
         self.assertEqual(leap_year(1996), True, "--err-t2--")
 ```
 
-The year `1600` is a leap year.
+`1600`년은 윤년입니다.
 
 ```python
     def test3(self):
         self.assertEqual(leap_year(1600), True, "--err-t3--")
 ```
 
-The year `2020` is a leap year.
+`2020`년은 윤년입니다.
 
 ```python
     def test4(self):
         self.assertEqual(leap_year(2020), True, "--err-t4--")
 ```
 
-The year `2000` is a leap year.
+`2000`년은 윤년입니다.
 
 ```python
     def test5(self):
         self.assertEqual(leap_year(2000), True, "--err-t5--")
 ```
 
-The year `2008` is a leap year.
+`2008`년은 윤년입니다.
 
 ```python
     def test6(self):
         self.assertEqual(leap_year(2008), True, "--err-t6--")
 ```
 
-The year `1521` is not a leap year.
+`1521`년은 윤년이 아닙니다.
 
 ```python
     def test7(self):
         self.assertEqual(leap_year(1521), False, "--err-t7--")
 ```
 
-The year `1800` is not a leap year.
+`1800`년은 윤년이 아닙니다.
 
 ```python
     def test8(self):
         self.assertEqual(leap_year(1800), False, "--err-t8--")
 ```
 
-The year `2007` is not a leap year.
+`2007`년은 윤년이 아닙니다.
 
 ```python
     def test9(self):
         self.assertEqual(leap_year(2007), False, "--err-t9--")
 ```
 
-The year `2002` is a leap year.
+`2002`년은 윤년입니다.
 
 ```python
     def test10(self):
         self.assertEqual(leap_year(2002), False, "--err-t10--")
 ```
 
-The year `1979` is not a leap year.
+`1979`년은 윤년이 아닙니다.
 
 ```python
     def test11(self):
         self.assertEqual(leap_year(1979), False, "--err-t11--")
 ```
 
-The year `2006` is not a leap year.
+`2006`년은 윤년이 아닙니다.
 
 ```python
     def test12(self):

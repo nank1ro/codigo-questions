@@ -2,18 +2,18 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Aritmetic mean
+title: 산술 평균
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+숫자 벡터의 _산술 평균_을 구하는 `mean`이라는 함수를 작성하십시오.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+숫자 벡터의 평균을 반환하는 함수를 작성하십시오.
 
-Example of function call:
+함수 호출 예시:
 ```swift
 print(mean([1, 2, 3]))
 // prints 2.0
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]`의 평균은 4.0이어야 합니다
 
 ```swift
     func test1() {
@@ -46,7 +46,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     }
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]`의 평균은 5.0이어야 합니다
 
 ```swift
     func test2() {
@@ -54,7 +54,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     }
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]`의 평균은 45.0이어야 합니다
 
 ```swift
     func test3() {

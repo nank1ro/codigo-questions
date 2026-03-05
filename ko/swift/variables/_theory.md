@@ -1,23 +1,23 @@
-Variables are containers for storing data values.
-Every variable in Swift is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In Swift you declare constants with the `let` keyword and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+변수는 데이터 값을 저장하는 컨테이너입니다.
+Swift에서 모든 변수는 객체입니다.
+변수를 만들려면 공백을 포함하지 않는 **이름**을 지정해야 합니다.
+변수는 처음으로 값을 할당하는 순간 생성됩니다.
+Swift에서는 `let` 키워드로 상수를, `var` 키워드로 변수를 선언합니다.
+상수의 값은 한 번 설정하면 변경할 수 없지만, 변수는 나중에 다른 값으로 설정할 수 있습니다.
+`x`라는 이름의 변수를 만드는 예시는 다음과 같습니다:
 ```swift
 var x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+이렇게 하면 `x`라는 이름의 변수에 값 `1`을 할당한 것입니다.
+변수 `x`를 출력하면 숫자 `1`이 반환됩니다:
 ```swift
 print(x) // prints 1
 ```
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+변수는 저장하는 값이 변경될 수 있기 때문에 변수라고 불립니다.
+`=`를 사용하고 새로운 값을 지정하여 `x`를 업데이트할 수 있습니다.
 ```swift
 var x = 1
 print(x) // prints 1
@@ -27,7 +27,7 @@ print(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+다른 변수의 값을 변수에 할당할 수도 있습니다. 여기서 `y` 변수에 `x`의 값을 할당할 수 있습니다.
 ```swift
 var x = 5
 var y = x
@@ -36,7 +36,7 @@ print(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+변수를 업데이트하면 이전 값을 잊어버립니다. 여기서 `x` 변수를 두 번 출력하고 값이 어떻게 업데이트되는지 확인할 수 있습니다.
 ```swift
 var x = 5
 print(x) // prints 5
@@ -46,12 +46,12 @@ print(x) // prints 10
 
 ---
 
-In Swift string variables can be declared only by using double quotes:
+Swift에서 문자열 변수는 큰따옴표만 사용하여 선언할 수 있습니다:
 ```swift
 let x = "May"
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+여러 단어로 된 변수 이름을 사용하려면 **카멜 케이스(camelCase)**를 사용합니다.
+이는 구문 중간에 있는 각 단어의 첫 글자를 대문자로 쓰는 방식입니다.

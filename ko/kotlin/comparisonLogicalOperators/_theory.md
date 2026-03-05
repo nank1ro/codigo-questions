@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+**동등** `==` 비교 연산자부터 시작하겠습니다.
+이 연산자는 두 표현식이 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 == 2) // true
 println(2 == 3) // false
@@ -7,18 +7,18 @@ println(2 == 3) // false
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+**같지 않음** `!=` 비교 연산자를 계속 살펴보겠습니다.
+이 연산자는 두 표현식이 같지 **않은지** 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 != 2) // false
 println(2 != 3) // true
 ```
-It is exactly the opposite of the *equal* operator
+이것은 *동등* 연산자의 정확히 반대입니다
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+**크다** `>` 비교 연산자를 계속 살펴보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 큰지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 > 2) // false
 println(3 > 2) // true
@@ -26,8 +26,8 @@ println(3 > 2) // true
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+**작다** `<` 비교 연산자를 계속 살펴보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 작은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 < 2) // false
 println(2 < 3) // true
@@ -35,8 +35,8 @@ println(2 < 3) // true
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+**크거나 같다** `>=` 비교 연산자를 계속 살펴보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 크거나 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 >= 2) // true
 println(3 >= 2) // true
@@ -45,8 +45,8 @@ println(3 >= 4) // false
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+**작거나 같다** `<=` 비교 연산자를 계속 살펴보겠습니다.
+이 연산자는 한 표현식이 다른 표현식보다 작거나 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```kotlin
 println(2 <= 2) // true
 println(3 <= 2) // false
@@ -55,8 +55,8 @@ println(3 <= 4) // true
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+이제 **논리** 연산자를 살펴보겠습니다. 먼저 __AND__ `&&`부터 시작합니다.
+이 연산자는 *false*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *true*이면 마지막 피연산자를 반환합니다.
 ```kotlin
 println(2 == 2 && 2 == 3) // false
 println(1 == 1 && 1.0 == 1.0) // true
@@ -64,8 +64,8 @@ println(1 == 1 && 1.0 == 1.0) // true
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+**or** `||` 논리 연산자를 계속 살펴보겠습니다.
+이 연산자는 *true*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *false*이면 마지막 피연산자를 반환합니다.
 ```kotlin
 println(2 == 2 || 2 == 3) // true
 println(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ println(1 == 2 || 1 == 3) // false
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+마지막으로 **not** `!` 논리 연산자를 살펴보겠습니다.
+이 연산자는 표현식의 논리적 상태를 반전시킨 불리언을 반환합니다.
 ```kotlin
 println(!true) // false
 println(!false) // true

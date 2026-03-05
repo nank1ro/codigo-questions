@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+연산자는 변수와 값에 대한 연산을 수행하는 데 사용됩니다.
+산술 연산자부터 시작해 보겠습니다. 특히 **덧셈** `+` 연산자를 살펴보겠습니다.
+이 연산자는 두 수를 더하는 데 사용됩니다. 예를 들면:
 ```python
 >>> 5+3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+이번에는 **뺄셈** `-` 연산자를 살펴보겠습니다.
+이 연산자는 한 수에서 다른 수를 빼는 데 사용됩니다. 예를 들면:
 ```python
 >>> 5-3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+**곱셈** `*` 연산자를 살펴보겠습니다.
+이 연산자는 두 수를 곱하는 데 사용됩니다. 예를 들면:
 ```python
 >>> 5*3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+**나눗셈** `/` 연산자를 살펴보겠습니다.
+이 연산자는 두 수를 나누는 데 사용됩니다. 예를 들면:
 ```python
 >>> 10/5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+**나머지** `%` 연산자를 살펴보겠습니다.
+이 연산자는 두 수의 나눗셈 후 나머지를 구하는 데 사용됩니다. 예를 들면:
 ```python
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5를 2로 나누면 몫이 2이고 나머지가 1이므로 결과는 1입니다
 ```python
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+9를 3으로 나누면 몫이 3이고 나머지가 0이므로 결과는 0입니다
 
 ---
 
-Let's see the **exponentiation** `**` operator.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+**거듭제곱** `**` 연산자를 살펴보겠습니다.
+거듭제곱은 밑수의 반복 곱셈에 해당합니다. 즉, 지수 *n*을 가진 **b**는 *n*개의 밑수를 곱한 것입니다:
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```python
 >>> 5 ** 2
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** `//` operator.
-This operator returns the integral part of the quotient, for example:
+**정수 나눗셈** `//` 연산자를 살펴보겠습니다.
+이 연산자는 몫의 정수 부분을 반환합니다. 예를 들면:
 ```python
 >>> 5.0 / 2
 2.5
 >>> 5.0 // 2
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+정수 나눗셈이라고도 합니다. 결과값은 정수이지만, 결과의 *타입*이 반드시 int인 것은 아닙니다.

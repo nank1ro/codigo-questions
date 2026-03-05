@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 특수 피타고라스 삼중수
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+피타고라스 삼중수는 세 자연수의 집합으로, `a` < `b` < `c`이며, <latex>a^2 + b^2 = c^2</latex>를 만족합니다.
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+예를 들어, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+`a` + `b` + `c` = 1000인 피타고라스 삼중수는 정확히 하나 존재합니다.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+`a` + `b` + `c` = `n`인 곱 `abc`를 구하세요.
 
 # --seed--
 
@@ -34,21 +34,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`special_pythagorean_triplet(24)` should return 480.
+`special_pythagorean_triplet(24)`는 480을 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(special_pythagorean_triplet(24), 480, "--err-t1--")
 ```
 
-`special_pythagorean_triplet(120)` should return 49920, 55080 or 60000.
+`special_pythagorean_triplet(120)`은 49920, 55080 또는 60000을 반환해야 합니다.
 
 ```python
     def test2(self):
         self.assertIn(special_pythagorean_triplet(120), [49920, 55080, 60000], "--err-t2--")
 ```
 
-`special_pythagorean_triplet(1000)` should return 31875000.
+`special_pythagorean_triplet(1000)`은 31875000을 반환해야 합니다.
 
 ```python
     def test3(self):

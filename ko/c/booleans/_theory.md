@@ -1,10 +1,10 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+불리언은 `true` 또는 `false` 두 가지 값 중 하나를 나타냅니다.
+C에서 모든 표현식을 평가하면 `true` 또는 `false` 두 가지 답 중 하나를 얻을 수 있습니다.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+숫자나 문자열처럼 불리언 값 `true`를 변수에 저장할 수 있습니다.
 
 ---
 
-The opposite value of `true` is `false`
+`true`의 반대 값은 `false`입니다

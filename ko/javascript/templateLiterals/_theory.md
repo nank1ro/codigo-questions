@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+JavaScript에서는 `+` 기호를 사용하여 두 개 이상의 문자열을 함께 표시할 수 있습니다. 예를 들면 다음과 같습니다:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+템플릿 리터럴을 사용하면 `+` 기호를 사용하지 않고도 문자열에 숫자를 추가하는 것과 같은 표현식을 표시할 수 있습니다.
+유효한 템플릿 리터럴을 만들려면 큰따옴표나 작은따옴표 대신 백틱 \`\`을 사용해야 합니다.
+달러 기호와 중괄호 `${expression}`을 사용하여 템플릿 리터럴 안에 변수를 삽입할 수 있습니다
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+모든 템플릿 리터럴 문은 두 부분으로 구성됩니다. 숫자나 변수를 삽입하는 `${}` 부분과 일반 문자열 부분입니다
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+다음으로, 중괄호 안에 다른 종류의 값을 추가하여 하나의 console.log 문으로 표시합니다. 여기서는 `${5}`를 사용합니다
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+`friends`와 같은 변수를 중괄호 사이에 삽입하면 해당 값도 표시됩니다
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+템플릿 리터럴 안에 `${}`를 사용하여 원하는 만큼 값을 삽입할 수 있습니다
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+템플릿 리터럴은 출력문에서 가장 잘 사용되지만, 일반 문자열처럼 변수에 저장할 수도 있습니다.

@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001번째 소수
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+처음 여섯 개의 소수를 나열하면: 2, 3, 5, 7, 11, 13이며, 6번째 소수는 13입니다.
 
 # --instructions--
 
-What is the `n`th prime number?
+`n`번째 소수는 무엇입니까?
 
 # --seed--
 
@@ -30,35 +30,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`nth_prime(6)` should return 13.
+`nth_prime(6)`은 13을 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(nth_prime(6), 13, "--err-t1--")
 ```
 
-`nth_prime(10)` should return 29.
+`nth_prime(10)`은 29를 반환해야 합니다.
 
 ```python
     def test2(self):
         self.assertEqual(nth_prime(10), 29, "--err-t2--")
 ```
 
-`nth_prime(100)` should return 541.
+`nth_prime(100)`은 541을 반환해야 합니다.
 
 ```python
     def test3(self):
         self.assertEqual(nth_prime(100), 541, "--err-t3--")
 ```
 
-`nth_prime(1000)` should return 7919.
+`nth_prime(1000)`은 7919를 반환해야 합니다.
 
 ```python
     def test4(self):
         self.assertEqual(nth_prime(1000), 7919, "--err-t4--")
 ```
 
-`nth_prime(10001)` should return 104743.
+`nth_prime(10001)`은 104743을 반환해야 합니다.
 
 ```python
     def test5(self):

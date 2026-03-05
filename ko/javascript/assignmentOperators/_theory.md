@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+변수에 값을 할당하기 위해 `=` 기호를 사용할 수 있다는 것을 이미 배웠습니다. 예를 들면:
 ```javascript
 let a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+이미 초기화된 변수 `total`이 있습니다
 ```javascript
 var total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+변수 `total`에 숫자 `2`를 더하고 싶다면, 다음과 같이 작성할 수 있습니다
 ```javascript
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+네, 잘 동작합니다! 하지만 같은 작업을 더 짧게 작성하는 방법이 있습니다:
 ```javascript
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+`+=` 기호는 **덧셈 대입 연산자**라고 합니다.
+변수의 값에 값을 더하고 그 결과를 해당 변수에 할당합니다.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+덧셈 대입 연산자와 마찬가지로, **뺄셈 대입 연산자** `-=`가 있습니다.
+기능은 동일하며, 유일한 차이점은 뺄셈을 수행한다는 것입니다.
+따라서 다음 두 표현은 완전히 동일합니다
 ```javascript
 var num = num - 5;
 // is equal to
@@ -33,9 +33,9 @@ num -= 5;
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**곱셈 대입 연산자** `*=`를 살펴보겠습니다.
+변수에 값을 곱하고 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 표현은 완전히 동일합니다
 ```javascript
 var num = num * 5;
 // is equal to
@@ -44,9 +44,9 @@ num *= 5;
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**나눗셈 대입 연산자** `/=`를 살펴보겠습니다.
+변수를 값으로 나누고 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 표현은 완전히 동일합니다
 ```javascript
 num = num / 5;
 // is equal to
@@ -55,9 +55,9 @@ num /= 5;
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+**나머지 대입 연산자** `%=`를 살펴보겠습니다.
+변수와 값의 나머지를 계산하고 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 표현은 완전히 동일합니다
 ```javascript
 num = num % 5;
 // is equal to

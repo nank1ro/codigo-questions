@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+의사 결정은 특정 조건이 충족될 때만 코드를 실행하고자 할 때 필요합니다.
+날씨가 좋을 때만 밖에서 놀고 싶다고 가정해 봅시다.
+프로그래밍에서는 불리언 변수 `niceWeather`를 저장하고, 이 변수가 `true`인 `if` 밖에서 노는 행동을 수행할 수 있습니다:
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -10,21 +10,21 @@ if niceWeather {
 
 ---
 
-Let's continue with the previous example.
+이전 예제를 계속해 봅시다.
 ```swift
 var niceWeather = true
 if niceWeather {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+`if` 문은 조건이 `true`일 때만 코드 블록을 실행한다는 것을 보았습니다.
+또 하나 중요한 것은 코드 블록을 나타내는 **중괄호** `{}`입니다.
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Swift we can use the `else` statement, like:
+조건이 발생했을 때 코드 블록을 실행하는 방법을 방금 보았습니다. 이제 첫 번째 조건이 실패했을 때 다른 코드 블록을 실행하는 방법을 알아봅시다.
+날씨가 좋으면 밖에서 놀고, 그렇지 않으면 집에 있습니다.
+Swift에서는 `else` 문을 사용할 수 있습니다:
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -36,7 +36,7 @@ if niceWeather {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+확인할 또 다른 조건이 있다고 가정해 봅시다. 다음 예제를 살펴보겠습니다:
 ```swift
 var num = 3
 if num == 2 {
@@ -47,13 +47,13 @@ if num == 2 {
     print("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+이 코드의 출력은 `the number is 3`입니다.
+먼저 숫자가 2와 같은지 확인합니다. 이것은 거짓입니다.
+그래서 두 번째 문으로 넘어가 `num`이 3과 같은지 확인합니다. 참이므로 다음 코드 블록을 실행하여 `the number is 3`을 출력합니다
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+`else if` 문은 원하는 만큼 추가할 수 있으며, 제한이 없습니다
 ```swift
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     print("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+이 코드의 출력은 `the number is 4`입니다.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+조건문(`if`, `else if` 또는 `else`)을 다른 조건문 안에 중첩하여 더 복잡한 구조를 만들 수도 있습니다.
 ```swift
 var num = 4
 if num < 3 {
@@ -87,13 +87,13 @@ if num < 3 {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+이 코드의 출력은 `the number is 4`입니다.
 
 ---
 
-The ternary conditional operator is a special operator with three parts, which takes the form `question ? answer1 : answer2`.
-It's a shortcut for evaluating one of two expressions based on whether `question` is true or false.
-If `question` is true, it evaluates `answer1` and returns its value; otherwise, it evaluates `answer2` and returns its value.
+삼항 조건 연산자는 세 부분으로 이루어진 특별한 연산자로, `question ? answer1 : answer2` 형태를 가집니다.
+이것은 `question`이 참인지 거짓인지에 따라 두 표현식 중 하나를 평가하는 단축 방법입니다.
+`question`이 참이면 `answer1`을 평가하고 그 값을 반환합니다. 그렇지 않으면 `answer2`를 평가하고 그 값을 반환합니다.
 ```swift
 let a = 10, b = 20, c: Int
 if (a < b) {
@@ -103,20 +103,20 @@ if (a < b) {
 }
 print(c)
 ```
-The shortand code for the above code is:
+위 코드의 축약형은 다음과 같습니다:
 ```swift
 let a = 10, b = 20, c: Int
 c = a < b ? a : b
 print(c)
 ```
-`c` is set equal to `a`, because the condition `a < b` was true
+조건 `a < b`가 참이므로 `c`는 `a`와 같게 설정됩니다
 
 ---
 
-The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The nil-coalescing operator is shorthand for the code below:
+_nil 병합 연산자_ `a ?? b`는 옵셔널 `a`에 값이 있으면 언래핑하고, `a`가 `nil`이면 기본값 `b`를 반환합니다.
+표현식 `a`는 항상 옵셔널 타입입니다.
+표현식 `b`는 `a` 안에 저장된 타입과 일치해야 합니다.
+nil 병합 연산자는 아래 코드의 축약형입니다:
 ```swift
 a != nil ? a! : b
 ```

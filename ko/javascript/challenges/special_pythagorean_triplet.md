@@ -2,20 +2,20 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 특수 피타고라스 삼중수
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+피타고라스 삼중수는 세 개의 자연수 집합으로, `a` < `b` < `c`이며, <latex>a^2 + b^2 = c^2</latex>를 만족합니다.
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+예를 들어, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+`a` + `b` + `c` = 1000인 피타고라스 삼중수가 정확히 하나 존재합니다.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+`a` + `b` + `c` = `n`인 곱 `abc`를 구하세요.
 
 # --before-seed--
 
@@ -45,19 +45,19 @@ function specialPythagoreanTriplet(n) {
 
 # --asserts--
 
-`specialPythagoreanTriplet(24)` should return 480.
+`specialPythagoreanTriplet(24)`는 480을 반환해야 합니다.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(24) === 480);
 ```
 
-`specialPythagoreanTriplet(120)` should return 49920, 55080 or 60000.
+`specialPythagoreanTriplet(120)`은 49920, 55080 또는 60000을 반환해야 합니다.
 
 ```javascript
 tryCatch([49920, 55080, 60000].includes(specialPythagoreanTriplet(120)));
 ```
 
-`specialPythagoreanTriplet(1000)` should return 31875000.
+`specialPythagoreanTriplet(1000)`은 31875000을 반환해야 합니다.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(1000) === 31875000);

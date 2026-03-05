@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "덧셈"
   },
   "atm": {
     "difficulty": 1,
@@ -13,35 +13,35 @@
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "빗방울"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "자릿수의 합"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "둘이서 하나"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100개의 문"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "아커만 함수"
   },
   "multiples_of_3_or_5": {
     "difficulty": 1,
-    "name": "Multiples of 3 or 5"
+    "name": "3 또는 5의 배수"
   },
   "even_fibonacci_numbers": {
     "difficulty": 1,
-    "name": "Even Fibonacci numbers"
+    "name": "짝수 피보나치 수"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "산술 평균",
     "isPro": true
   },
   "fizz_buzz": {
@@ -51,12 +51,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "로마 숫자 변환기",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "윤년",
     "isPro": true
   }
 }

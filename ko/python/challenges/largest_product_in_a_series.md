@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: 연속된 수의 최대 곱
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+아래에 언급된 1000자리 숫자에서 가장 큰 곱을 가지는 네 개의 인접한 숫자는 9 x 9 x 8 x 9 = 5832입니다.
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+1000자리 숫자에서 가장 큰 곱을 가지는 `n`개의 인접한 숫자를 찾으세요. 이 곱의 값은 무엇입니까?
 
 # --seed--
 
@@ -31,14 +31,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_productina_series(4)` should return 5832.
+`largest_productina_series(4)`는 5832를 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(largest_productina_series(4), 5832, "--err-t1--")
 ```
 
-`largest_productina_series(13)` should return 23514624000.
+`largest_productina_series(13)`은 23514624000을 반환해야 합니다.
 
 ```python
     def test2(self):

@@ -1,15 +1,15 @@
-> Computers are ideal for repetitive tasks.
+> 컴퓨터는 반복 작업에 이상적입니다.
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+가장 기본적인 반복 형태는 `while` 키워드를 사용합니다.
+이것은 제어하는 _불리언 표현식_이 참인 동안 블록을 반복합니다:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+불리언 표현식은 루프의 시작 시 한 번 평가되고
+블록을 통한 각 추가 반복 전에 다시 평가됩니다.
 
 ```kotlin
 var x = 3
@@ -18,16 +18,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+여기서 변수 `x`를 만들고 초기값 __3__을 할당했습니다.
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+그런 다음 조건 `x > 0`이 `true`인 동안 코드 블록을 실행하는 `while` 문을 사용했습니다.
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+코드 블록 내부에서 `x--` 줄을 추가하는 것을 **절대** 빠뜨려서는 안 됩니다.
+이것은 `x` 값을 감소시키며, 그렇지 않으면 루프가 무한히 실행됩니다.
 
 ---
 
-Let's analyze this snippet of code.
+이 코드 조각을 분석해 봅시다.
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +35,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__: `counter` 변수를 __0__으로 초기화합니다.
+- __[2]__: _while_의 조건 표현식은 "counter가 _100_보다 작은 동안 본문의 명령문을 반복하라"는 의미입니다.
+- __[3]__: `+=` 연산자는 `counter`에 _10_을 더하고 그 결과를 한 번의 연산으로 `counter`에 할당합니다.
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+위 코드의 출력은 _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_입니다.
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+_while_을 사용하는 두 번째 방법이 있는데, `do` 키워드와 함께 사용합니다.
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+보시다시피 `do-while`은 `while` 루프와 매우 유사하지만, 한 가지 중요한 차이점이 있습니다:
+> 루프의 본문은 조건이 평가되기 전에 한 번 실행됩니다.
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+즉, `do-while`의 본문은 조건 표현식이 처음에 `false`를 생성하더라도 항상 최소 한 번은 실행됩니다.
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+반면에 `while` 루프의 본문은 조건이 처음에 `false`를 생성하면 절대 실행되지 않습니다.
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+_while_ 루프는 세 가지 구조적 점프 표현식을 지원합니다:
+- `break`는 가장 가까운 둘러싸는 루프를 종료합니다.
+- `continue`는 가장 가까운 둘러싸는 루프의 다음 단계로 진행합니다.
+- `return`은 기본적으로 가장 가까운 둘러싸는 함수 또는 익명 함수에서 반환합니다 (_함수에 대해 이야기할 때 나중에 살펴보겠습니다_).
 
-Here is an example of the use of `continue` within a _while_ loop:
+다음은 _while_ 루프 내에서 `continue`를 사용하는 예시입니다:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +74,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+보시다시피 __[1]__에서 `i`가 _2_와 같을 때, 다음 단계로 건너뛰고 _continue_합니다. 실제로 숫자 2는 출력되지 않습니다.
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+다음은 _while_ 루프 내에서 `break`를 사용하는 예시입니다:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +89,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+보시다시피 __[1]__에서 `i`가 _2_와 같을 때, 루프를 _break_합니다. 실제로 숫자 2와 3은 출력되지 않습니다.

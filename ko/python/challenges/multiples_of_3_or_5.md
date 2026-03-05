@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 또는 5의 배수
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+10 미만의 자연수 중 3 또는 5의 배수를 나열하면 3, 5, 6, 9입니다. 이 배수들의 합은 23입니다.
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+주어진 매개변수 값 `number` 미만의 3 또는 5의 모든 배수의 합을 구하세요.
 
 # --seed--
 
@@ -30,21 +30,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`multiples_of_3_and_5(10)` should return 23.
+`multiples_of_3_and_5(10)`은 23을 반환해야 합니다.
 
 ```python
     def test1(self):
         self.assertEqual(multiples_of_3_and_5(10), 23, "--err-t1--")
 ```
 
-`multiples_of_3_and_5(1000)` should return 233168.
+`multiples_of_3_and_5(1000)`은 233168을 반환해야 합니다.
 
 ```python
     def test2(self):
         self.assertEqual(multiples_of_3_and_5(1000), 233168, "--err-t2--")
 ```
 
-`multiples_of_3_and_5(6987)` should return 11390208
+`multiples_of_3_and_5(6987)`은 11390208을 반환해야 합니다
 
 ```python
     def test3(self):

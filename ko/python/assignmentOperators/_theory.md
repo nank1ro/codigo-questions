@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+변수에 값을 할당하기 위해 `=` 기호를 사용할 수 있다는 것을 이미 배웠습니다. 예를 들면 다음과 같습니다:
 ```python
 a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+이미 초기화된 변수 `total`이 있습니다
 ```python
 total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+변수 `total`에 숫자 `2`를 더하고 싶다면, 다음과 같이 작성할 수 있습니다
 ```python
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+네, 잘 동작합니다! 하지만 같은 작업을 수행하는 더 짧은 방법이 있습니다:
 ```python
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+`+=` 기호는 **덧셈 대입**이라고 합니다.
+변수 값에 값을 더한 후 그 결과를 해당 변수에 할당합니다.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+덧셈 대입과 마찬가지로 **뺄셈 대입** `-=`이 있습니다.
+기능은 동일하며, 유일한 차이점은 뺄셈을 수행한다는 것입니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num - 5
 # is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**곱셈 대입** `*=` 연산자를 알아봅시다.
+변수에 값을 곱한 후 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num * 5
 # is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**나눗셈 대입** `/=` 연산자를 알아봅시다.
+변수를 값으로 나눈 후 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num / 5
 # is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **power assignment** `**=` operator.
-It raises the variable to a specified power and assigns the result to the variable.
-So the followings are exactly the same
+**거듭제곱 대입** `**=` 연산자를 알아봅시다.
+변수를 지정된 거듭제곱으로 올린 후 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num ** 5
 # is equal to
@@ -66,9 +66,9 @@ num **= 5
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+**나머지 대입** `%=` 연산자를 알아봅시다.
+변수와 값의 나머지를 계산한 후 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num % 5
 # is equal to
@@ -77,9 +77,9 @@ num %= 5
 
 ---
 
-Let's see the **floor assignment** `//=` operator.
-It floor divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**버림 나눗셈 대입** `//=` 연산자를 알아봅시다.
+변수를 값으로 버림 나눗셈한 후 그 결과를 해당 변수에 할당합니다.
+따라서 다음 두 가지는 완전히 동일합니다
 ```python
 num = num // 5
 # is equal to

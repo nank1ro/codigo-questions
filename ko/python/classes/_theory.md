@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python은 객체 지향 프로그래밍 언어입니다. 이는 객체라고 불리는 프로그래밍 구조를 조작한다는 것을 의미합니다.
+객체는 데이터와 함수를 포함하는 하나의 데이터 구조로 생각할 수 있습니다. 객체의 함수를 메서드라고 합니다.
+예를 들어, 다음을 호출하면:
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python은 `my_dict`에 `items()` 메서드가 있는지 확인하고(모든 딕셔너리가 이 메서드를 가지고 있습니다), 해당 메서드를 찾으면 실행합니다.
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+기본적인 클래스는 `class` 키워드와 클래스 이름으로만 구성됩니다. 예를 들면:
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+`pass`를 다른 것으로 바꿔 봅시다.
+`__init__()` 메서드는 클래스에 필수이며, 클래스가 생성하는 객체를 __초기화__하는 데 사용됩니다.
+`__init__()`는 항상 최소한 하나의 인수 `self`를 받으며, 이는 생성되는 객체를 참조합니다.
+`__init__()`는 클래스가 생성하는 각 객체를 부팅하는 메서드라고 생각할 수 있습니다.
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+물론 `__init__()` 메서드는 `self` 외에 더 많은 매개변수를 사용할 수 있습니다
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+`__init__()`의 첫 번째 인수는 인스턴스 객체를 참조하는 데 사용되며, 관례적으로 이 인수를 `self`라고 합니다.
+추가 인수(예: 동물의 `gender`와 `legs`)를 추가하고 `__init__()`의 본문에서 각각을 `self.gender`와 `self.legs`에 할당하면, `Animal` 클래스의 인스턴스 객체를 생성할 때 각 인스턴스에 gender와 legs를 지정해야 하며, 이 값들은 생성한 특정 인스턴스와 연결됩니다
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+클래스를 정의하는 것만으로는 객체가 생성되지 않습니다.
+객체를 생성하려면 클래스의 __인스턴스__를 만들어야 합니다
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+클래스가 자체 함수를 가지고 있을 때, 이러한 함수를 __메서드__라고 합니다. 이미 이러한 메서드 중 하나인 `__init__()`를 보셨습니다.
+하지만 직접 메서드를 정의할 수도 있습니다!

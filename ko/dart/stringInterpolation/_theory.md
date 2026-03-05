@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+문자열 _보간(interpolation)_ 은 프로그래밍 방식으로 문자열을 생성하는 방법입니다.
+Dart에서는 `+` 기호(연결)를 사용하여 두 개 이상의 문자열을 함께 표시할 수 있습니다. 예를 들면:
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+하지만 `+` 기호를 사용하여 '10'과 같은 숫자를 `"friends"`와 같은 문자열에 더하면 서로 다른 종류의 값이기 때문에 오류가 발생합니다
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+문자열 보간을 사용하면 문자열에 숫자를 더하는 것과 같은 표현식을 오류 없이 표시할 수 있습니다.
+`${}` 안에 표현식을 넣으면 해당 표현식이 평가됩니다.
+반환 값은 문자열로 변환되어 결과 문자열에 삽입됩니다
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+식별자 이름 앞에 `$`를 붙이면, 문자열 보간이 해당 식별자의 내용을 `String`에 삽입합니다
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+`$` 기호 뒤에 오는 것이 프로그램 식별자로 인식되지 않으면 오류가 발생합니다
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+달러 기호 뒤에 변수를 삽입하여 해당 값을 표시할 수도 있습니다
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+문자열 보간을 사용하여 중괄호 안에 값을 원하는 만큼 삽입할 수 있습니다
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+`${}` 안에 조건식을 넣을 수도 있습니다. 예를 들면:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+문자열 보간은 print 문에서 가장 잘 사용되지만, 일반 문자열처럼 변수에 저장할 수도 있습니다.

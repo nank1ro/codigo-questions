@@ -1,35 +1,35 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+배열은 여러 개의 정보를 하나의 변수 이름 아래에 순서대로 저장할 수 있는 데이터 타입입니다.
+배열은 단일 타입의 여러 값을 저장하며, **인덱스**를 사용하여 이 값들을 구분합니다.
+다음과 같은 형식의 표현식으로 배열에 항목을 할당할 수 있습니다:
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type`은 배열에 사용할 데이터 타입입니다. 예를 들어 `int`, `double` 등이 있습니다.
+`array_name`은 항목들을 저장하는 변수의 이름입니다.
+`array_size`는 배열이 가질 수 있는 최대 크기입니다.
+마지막으로, `item1`과 `item2`는 배열에 저장하려는 값입니다
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+배열의 개별 항목은 인덱스를 사용하여 접근할 수 있습니다.
+인덱스는 배열에서 항목의 위치를 식별하는 주소와 같습니다.
+인덱스는 배열 이름 바로 뒤에 대괄호 안에 위치합니다:
 ```
 list_name[index];
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item in a array like this: `list_name[0]`.
-The second item in a array is at index 1: `list_name[1]`.
+배열 인덱스는 `1`이 **아니라** `0`부터 시작합니다! 배열의 첫 번째 항목에는 다음과 같이 접근합니다: `list_name[0]`.
+배열의 두 번째 항목은 인덱스 1에 있습니다: `list_name[1]`.
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+배열 인덱스는 다른 변수 이름과 동일하게 동작합니다! 값을 접근하거나 할당하는 데 사용할 수 있습니다.
+배열 인덱스에 접근하는 방법은 다음과 같습니다:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0]; // Gets the value 5
 ```
-This is how an assignment works:
+할당은 다음과 같이 합니다:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
@@ -38,19 +38,19 @@ printf("%d\n", numbers[0]); // prints the new value 1
 
 ---
 
-You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
-It works because every item in the array has the same type, and as such the same size.
-The resulting *length* is the number of items it contains
+배열의 `sizeof`를 구한 다음 하나의 요소 크기로 나누면 배열의 바이트 단위 길이를 계산할 수 있습니다.
+이것이 가능한 이유는 배열의 모든 항목이 동일한 타입이므로 동일한 크기를 가지기 때문입니다.
+결과로 나오는 *길이*는 배열에 포함된 항목의 수입니다
 
 ---
 
-An array in C must have a fixed length.
-You can't add items to the end of an array, after declaring its size.
+C에서 배열은 고정된 길이를 가져야 합니다.
+크기를 선언한 후에는 배열의 끝에 항목을 추가할 수 없습니다.
 
 ---
 
-In C programming, you can create an array of arrays.
-These arrays are known as multidimensional arrays, for example:
+C 프로그래밍에서는 배열의 배열을 생성할 수 있습니다.
+이러한 배열을 다차원 배열이라고 합니다. 예를 들어:
 ```c
 int numbers[2][3] = {{1, 2, 3}, {4, 5, 6}};
 ```

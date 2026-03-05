@@ -2,18 +2,18 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: 산술 평균
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+숫자 벡터의 _산술 평균_을 구하는 `mean`이라는 함수를 작성하세요.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+숫자 벡터의 평균을 반환하는 함수를 작성하세요.
 
-Example of function call:
+함수 호출 예시:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
@@ -50,19 +50,19 @@ fun main() {
 
 # --asserts--
 
-The mean of `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` must be equal to 4.0
+`[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]`의 평균은 4.0이어야 합니다
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)) == 4.0)
 ```
 
-The mean of `[4.0, 5.0, 6.0]` must be equal to 5.0
+`[4.0, 5.0, 6.0]`의 평균은 5.0이어야 합니다
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(4.0, 5.0, 6.0)) == 5.0)
 ```
 
-The mean of `[12.0, 34.0, 56.0, 78.0]` must be equal to 45.0
+`[12.0, 34.0, 56.0, 78.0]`의 평균은 45.0이어야 합니다
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(12.0, 34.0, 56.0, 78.0)) == 45.0)

@@ -2,23 +2,23 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100개의 문
 compilerOptions: -lm
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+일렬로 놓인 100개의 문이 모두 닫혀 있습니다.
+문 앞을 100번 지나갑니다.
+첫 번째에는 모든 문을 방문하여 '토글'합니다 (문이 닫혀 있으면 열고, 열려 있으면 닫습니다).
+두 번째에는 2번째 문마다 (즉, 문 #2, #4, #6, ...) 방문하여 토글합니다.
+세 번째에는 3번째 문마다 (즉, 문 #3, #6, #9, ...) 방문하며, 100번째 문만 방문할 때까지 계속합니다.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+마지막 통과 후 문의 상태를 결정하는 함수를 구현하십시오.
+최종 결과를 배열로 반환하되, 열려 있는 문의 번호만 배열에 포함하십시오.
+> 이 메서드는 가변적인 수의 문에서도 작동할 수 있어야 합니다.
 
 # --before-seed--
 
@@ -181,21 +181,21 @@ int main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+100개의 문이 주어지면, 열린 문의 올바른 목록을 반환합니다
 
 ```c
     int sol1[50] = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100};
     try_catch(arrays_match(get_final_opened_doors(100), sol1));
 ```
 
-Given 10 doors, return the correct list of open doors
+10개의 문이 주어지면, 열린 문의 올바른 목록을 반환합니다
 
 ```c
     int sol2[50] = {1, 4, 9};
     try_catch(arrays_match(get_final_opened_doors(10), sol2));
 ```
 
-Given 950 doors, return the correct list of open doors
+950개의 문이 주어지면, 열린 문의 올바른 목록을 반환합니다
 
 ```c
     int sol3[50] = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900};

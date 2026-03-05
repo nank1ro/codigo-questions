@@ -1,31 +1,31 @@
-Variables are containers for storing values.
-Every variable in Dart is an object (`Object`).
-To create a variable, we have to give it a __name__ taking into account the fact that it must not contain spaces.
-Take a look at the following:
+변수는 값을 저장하는 컨테이너입니다.
+Dart에서 모든 변수는 객체(`Object`)입니다.
+변수를 만들려면 공백을 포함하지 않아야 한다는 점을 고려하여 __이름__을 지정해야 합니다.
+다음을 살펴보세요:
 
 ```dart
 int number = 1;
 ```
 
-This statement declares a variable called `number` of type `int`.
-It then sets the value of the variable to number `1`.
-The `int` part of the declaration is known as __type annotation__, and tells Dart explicitly the type of the variable.
+이 문장은 `int` 타입의 `number`라는 변수를 선언합니다.
+그런 다음 변수의 값을 숫자 `1`로 설정합니다.
+선언의 `int` 부분은 __타입 어노테이션__이라고 하며, Dart에 변수의 타입을 명시적으로 알려줍니다.
 
 ---
 
-In the previous example, we saw the creation of a variable:
+이전 예제에서 변수를 생성하는 것을 보았습니다:
 
 ```dart
 int number = 1;
 ```
 
-Do not be fooled by the symbol `=`.
-It is not the equality symbol as in mathematics, but is known as the __assignment operator__ because it assigns a value to the variable.
-The equality sign, on the other hand, is `==`.
+`=` 기호에 속지 마세요.
+이것은 수학에서의 등호가 아니라 변수에 값을 할당하기 때문에 __할당 연산자__라고 합니다.
+반면에 등호는 `==`입니다.
 
 ---
 
-If you want to change the value of a variable, simply assign it a different value of the same type:
+변수의 값을 변경하려면 같은 타입의 다른 값을 할당하면 됩니다:
 
 ```dart
 int number = 1;
@@ -34,28 +34,28 @@ number = 2;
 
 ---
 
-The `int` type allows whole numbers to be stored.
-To save decimal numbers instead, we can use the `double` type:
+`int` 타입은 정수를 저장할 수 있습니다.
+소수를 저장하려면 `double` 타입을 사용할 수 있습니다:
 
 ```dart
 double pi = 3.14159;
 ```
 
-This example is similar to the previous one. This time, however, the variable is of type `double`, a type which allows decimal numbers to be stored with high precision.
+이 예제는 이전 것과 비슷합니다. 하지만 이번에는 변수의 타입이 `double`이며, 이 타입은 높은 정밀도로 소수를 저장할 수 있습니다.
 
 ---
 
-Dart is a __type-safe__ language.
-This means that when you assign a type to a variable, you cannot change it afterwards. Here is an example:
+Dart는 __타입 안전__ 언어입니다.
+이는 변수에 타입을 할당하면 이후에 변경할 수 없다는 것을 의미합니다. 다음은 예시입니다:
 
 ```dart
 int integerNumber = 1;
 integerNumber = 3.14159; // Error
 ```
 
-3.14159` is of type `double`, but you've already defined `integerNumber` with type `int`.
+`3.14159`는 `double` 타입이지만, `integerNumber`는 이미 `int` 타입으로 정의되어 있습니다.
 
-Of course, occasionally it might be useful to assign related types to the same variable. For example you might want a variable `integerNumber` which accepts both `int` and `double` numbers, like here:
+물론 같은 변수에 관련된 타입을 할당하는 것이 유용할 때가 있습니다. 예를 들어 `int`와 `double` 숫자를 모두 허용하는 변수 `integerNumber`를 원할 수 있습니다:
 
 ```dart
 num number;
@@ -64,13 +64,13 @@ number = 3.14159; // OK
 number = '10'; // Error
 ```
 
-Both `int` and `double` extend `num`, so both types are accepted.
-However, if we try to assign a `String` the compiler returns an error.
+`int`와 `double` 모두 `num`을 상속하므로 두 타입 모두 허용됩니다.
+그러나 `String`을 할당하려고 하면 컴파일러가 오류를 반환합니다.
 
 ---
 
-If you like to live by risk, we can completely ignore the __type-safety__ of the language by using the `dynamic` type.
-This allows you to assign any type of value to the variable.
+위험을 감수하고 싶다면, `dynamic` 타입을 사용하여 언어의 __타입 안전성__을 완전히 무시할 수 있습니다.
+이를 통해 변수에 어떤 타입의 값이든 할당할 수 있습니다.
 
 ```dart
 dynamic number;
@@ -79,76 +79,76 @@ number = 3.14159; // OK
 number = '10'; // OK
 ```
 
-This approach is strongly discouraged as errors are no longer intercepted by the code's _analyzer_, but only _runtime_ (when the programme is running).
+이 접근 방식은 오류가 코드의 _분석기_에서 포착되지 않고 _런타임_(프로그램이 실행될 때)에서만 포착되기 때문에 강력히 권장하지 않습니다.
 
 ---
 
-Dart supports __type inference__.
-It is not necessary to indicate the type of a variable as Dart can infer its type.
-The `var` keyword tells Dart to use the most appropriate type.
+Dart는 __타입 추론__을 지원합니다.
+변수의 타입을 명시할 필요가 없으며, Dart가 타입을 추론할 수 있습니다.
+`var` 키워드는 Dart에게 가장 적절한 타입을 사용하도록 지시합니다.
 
 ```dart
 var number = 5;
 ```
 
-It is not necessary to tell Dart that the number `5` is of type `int`.
-Dart infers the type and makes `number` of type `int`.
+숫자 `5`가 `int` 타입이라고 Dart에 알려줄 필요가 없습니다.
+Dart가 타입을 추론하여 `number`를 `int` 타입으로 만듭니다.
 
 ---
 
-Dart supports two different types of "_variables_" whose value never changes. They are declared with the keywords `const` and `final`.
-Let's start by seeing what is meant by `const`.
+Dart는 값이 절대 변하지 않는 두 가지 종류의 "_변수_"를 지원합니다. 이들은 `const`와 `final` 키워드로 선언됩니다.
+먼저 `const`가 무엇을 의미하는지 살펴보겠습니다.
 
-## const (constants)
+## const (상수)
 
-Variables whose value you can change are known as __mutable_data__. Mutable data is often overused and can present problems. It is easy to lose track of all the points in the code that can change the value of a variable.
+값을 변경할 수 있는 변수를 __가변 데이터__라고 합니다. 가변 데이터는 종종 과도하게 사용되며 문제를 일으킬 수 있습니다. 코드에서 변수의 값을 변경할 수 있는 모든 지점을 추적하기 어렵습니다.
 
-For this reason, you should use `const`ants instead of `var`iables whenever possible. These variables that cannot change value are also called __immutable data__.
+이러한 이유로 가능하면 `var`(변수) 대신 `const`(상수)를 사용해야 합니다. 값을 변경할 수 없는 이러한 변수를 __불변 데이터__라고도 합니다.
 
-To create a constant in Dart we use the `const` keyword:
+Dart에서 상수를 만들려면 `const` 키워드를 사용합니다:
 
 ```dart
 const number = 5;
 ```
 
-Just like `var`, Dart with the __type inference__ determines that `number` is of type `int`.
+`var`와 마찬가지로, Dart는 __타입 추론__을 통해 `number`가 `int` 타입임을 결정합니다.
 
 ---
 
-When you have declared a constant variable, you can no longer change its value. For example:
+상수 변수를 선언한 후에는 더 이상 값을 변경할 수 없습니다. 예를 들어:
 
 ```dart
 const number = 2;
 number = 3; // Error
 ```
 
-This code produces the error:
+이 코드는 다음과 같은 오류를 발생시킵니다:
 > Constant variables can't be assigned a value.
 
-That is, it is not possible to change the value of a constant variable.
+즉, 상수 변수의 값을 변경하는 것은 불가능합니다.
 
 ---
 
-You will often find yourself in the situation of wanting to use a constant but not knowing the value at compile time. You will only know the value after the program has started execution.
-This type of constant is known as a __runtime constant__.
+컴파일 시점에 값을 알 수 없지만 상수를 사용하고 싶은 상황이 자주 있습니다. 프로그램이 실행을 시작한 후에야 값을 알 수 있습니다.
+이러한 종류의 상수를 __런타임 상수__라고 합니다.
 
-In Dart `const` is only used for __compile-time constants__ for values that can be determined by the compiler before the programme is executed.
+Dart에서 `const`는 프로그램이 실행되기 전에 컴파일러가 결정할 수 있는 값인 __컴파일 타임 상수__에만 사용됩니다.
 
-If you cannot create a constant variable because you do not know its compile-time value, then you must use the `final` keyword to make the variable a __runtime constant__.
+컴파일 타임 값을 알 수 없어 상수 변수를 만들 수 없는 경우, `final` 키워드를 사용하여 변수를 __런타임 상수__로 만들어야 합니다.
 
-There are many reasons why you cannot know the value of a variable before running the program. For example, you would have to get the value from the server, or ask the user for it.
+프로그램을 실행하기 전에 변수의 값을 알 수 없는 이유는 많습니다. 예를 들어 서버에서 값을 가져오거나 사용자에게 값을 요청해야 할 수 있습니다.
 
 ---
 
-Here is an example of a value that can only be obtained at runtime:
+다음은 런타임에만 얻을 수 있는 값의 예시입니다:
 
 ```dart
 final currentHour = DateTime.now().hour;
 ```
 
-`DateTime.now()` is a function to get the current date and time of when the code is executed.
-With the `hour` field we access the number of hours that have passed since the start of the day.
+`DateTime.now()`는 코드가 실행되는 시점의 현재 날짜와 시간을 가져오는 함수입니다.
+`hour` 필드를 통해 하루가 시작된 이후 경과한 시간 수에 접근합니다.
 
-Since the value of `hour` is different depending on when the code is executed, this can be defined as the _runtime_ value.
+`hour`의 값은 코드가 실행되는 시점에 따라 다르므로, 이를 _런타임_ 값이라고 정의할 수 있습니다.
 
-If you try to change the value of a `final` variable, you get an error.
+`final` 변수의 값을 변경하려고 하면 오류가 발생합니다.

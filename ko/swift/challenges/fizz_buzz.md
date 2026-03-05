@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+숫자를 인수로 받아 `"Fizz"`, `"Buzz"` 또는 `"FizzBuzz"`를 반환하는 함수를 만드십시오.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- 숫자가 `3`의 배수이면 출력은 `"Fizz"`여야 합니다
+- 주어진 숫자가 `5`의 배수이면 출력은 `"Buzz"`여야 합니다.
+- 주어진 숫자가 `3`과 `5`의 배수이면 출력은 `"FizzBuzz"`여야 합니다.
+- 숫자가 `3`이나 `5`의 배수가 아니면 아래 예시와 같이 숫자 자체를 출력해야 합니다.
+- 출력은 `3`이나 `5`의 배수가 아니더라도 항상 문자열이어야 합니다.
 
-Examples:
+예시:
 ```swift
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -44,7 +44,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+숫자 `3`은 `"Fizz"`와 같아야 합니다
 
 ```swift
     func test1() {
@@ -52,7 +52,7 @@ The number `3` must equal `"Fizz"`
     }
 ```
 
-The number `5` must equal `"Buzz"`
+숫자 `5`는 `"Buzz"`와 같아야 합니다
 
 ```swift
     func test2() {
@@ -60,7 +60,7 @@ The number `5` must equal `"Buzz"`
     }
 ```
 
-The number `15` must equal `"FizzBuzz"`
+숫자 `15`는 `"FizzBuzz"`와 같아야 합니다
 
 ```swift
     func test3() {
@@ -68,7 +68,7 @@ The number `15` must equal `"FizzBuzz"`
     }
 ```
 
-The number `10` must equal `"Buzz"`
+숫자 `10`은 `"Buzz"`와 같아야 합니다
 
 ```swift
     func test4() {
@@ -76,7 +76,7 @@ The number `10` must equal `"Buzz"`
     }
 ```
 
-The number `98` must equal `"98"`
+숫자 `98`은 `"98"`과 같아야 합니다
 
 ```swift
     func test5() {

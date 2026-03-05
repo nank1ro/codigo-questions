@@ -2,24 +2,24 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: 로마 숫자 변환기
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+양의 정수를 매개변수로 받아 해당 정수의 로마 숫자 표현을 문자열로 반환하는 함수를 만드세요. 현대 로마 숫자는 각 자릿수를 따로 표현하며, 가장 왼쪽 자릿수부터 시작하고 값이 0인 자릿수는 건너뜁니다.
 
 # --instructions--
 
-Examples:
+예시:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- 모든 로마 숫자는 대문자로 반환해야 합니다.
+- 이 표기법으로 표현할 수 있는 가장 큰 수는 3,999입니다.
 
 # --seed--
 
@@ -38,77 +38,77 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `2` must equal `II` 
+숫자 `2`는 `II`와 같아야 합니다
 
 ```python
     def test1(self):
         self.assertEqual(convert_to_roman(2), "II", "--err-t1--")
 ```
 
-The number `12` must equal `XII`
+숫자 `12`는 `XII`와 같아야 합니다
 
 ```python
     def test2(self):
         self.assertEqual(convert_to_roman(12), "XII", "--err-t2--")
 ```
 
-The number `16` must equal `XVI`
+숫자 `16`은 `XVI`와 같아야 합니다
 
 ```python
     def test3(self):
         self.assertEqual(convert_to_roman(16), "XVI", "--err-t3--")
 ```
 
-The number `44` must equal `XLIV`
+숫자 `44`는 `XLIV`와 같아야 합니다
 
 ```python
     def test4(self):
         self.assertEqual(convert_to_roman(44), "XLIV", "--err-t4--")
 ```
 
-The number `68` must equal `LXVIII`
+숫자 `68`은 `LXVIII`과 같아야 합니다
 
 ```python
     def test5(self):
         self.assertEqual(convert_to_roman(68), "LXVIII", "--err-t5--")
 ```
 
-The number `400` must equal `CD`
+숫자 `400`은 `CD`와 같아야 합니다
 
 ```python
     def test6(self):
         self.assertEqual(convert_to_roman(400), "CD", "--err-t6--")
 ```
 
-The number `798` must equal `DCCXCVIII`
+숫자 `798`은 `DCCXCVIII`과 같아야 합니다
 
 ```python
     def test7(self):
         self.assertEqual(convert_to_roman(798), "DCCXCVIII", "--err-t7--")
 ```
 
-The number `1000` must equal `M`
+숫자 `1000`은 `M`과 같아야 합니다
 
 ```python
     def test8(self):
         self.assertEqual(convert_to_roman(1000), "M", "--err-t8--")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+숫자 `3999`는 `MMMCMXCIX`와 같아야 합니다
 
 ```python
     def test9(self):
         self.assertEqual(convert_to_roman(3999), "MMMCMXCIX", "--err-t9--")
 ```
 
-The number `649` must equal `DCXLIX`
+숫자 `649`는 `DCXLIX`와 같아야 합니다
 
 ```python
     def test10(self):
         self.assertEqual(convert_to_roman(649), "DCXLIX", "--err-t10--")
 ```
 
-The number `1666` must equal `MDCLXVI`
+숫자 `1666`은 `MDCLXVI`와 같아야 합니다
 
 ```python
     def test11(self):

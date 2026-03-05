@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+연산자는 변수와 값에 대한 연산을 수행하는 데 사용됩니다.
+산술 연산자부터 시작하겠습니다. 특히 **덧셈** `+` 연산자입니다.
+이 연산자는 두 숫자를 더하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 + 3);
 // prints 8
@@ -8,8 +8,8 @@ console.log(5 + 3);
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+이번에는 **뺄셈** `-` 연산자를 알아보겠습니다.
+이 연산자는 한 숫자에서 다른 숫자를 빼는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 - 3);
 // prints 2
@@ -17,8 +17,8 @@ console.log(5 - 3);
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+이번에는 **곱셈** `*` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 곱하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 * 3);
 // prints 15
@@ -26,8 +26,8 @@ console.log(5 * 3);
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+이번에는 **나눗셈** `/` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 나누는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(10 / 5);
 // prints 2
@@ -35,15 +35,15 @@ console.log(10 / 5);
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+이번에는 **나머지** `%` 연산자를 알아보겠습니다.
+이 연산자는 두 숫자를 나눈 후 나머지를 구하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 % 2);
 // prints 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5를 2로 나누면 몫이 2이고 나머지가 1이므로 결과는 1입니다
 ```javascript
 console.log(9 % 3);
 // prints 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+9를 3으로 나누면 몫이 3이고 나머지가 0이므로 결과는 0입니다

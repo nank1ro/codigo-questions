@@ -1,23 +1,23 @@
-Variables are containers for storing data values.
-Every variable in Kotlin is an object.
-To create a variable, we need to give it a __name__ keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In Kotlin you declare constants with the `val` (short for _value_) keyword and variables with the `var` (short for _variable_) keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+변수는 데이터 값을 저장하는 컨테이너입니다.
+Kotlin에서 모든 변수는 객체입니다.
+변수를 만들려면 공백이 포함되지 않도록 __이름__을 지정해야 합니다.
+변수는 처음 값을 할당하는 순간에 생성됩니다.
+Kotlin에서는 `val` (_value_의 줄임말) 키워드로 상수를 선언하고, `var` (_variable_의 줄임말) 키워드로 변수를 선언합니다.
+상수의 값은 한 번 설정되면 변경할 수 없지만, 변수는 나중에 다른 값으로 설정할 수 있습니다.
+`x`라는 이름의 변수를 만드는 예시는 다음과 같습니다:
 ```kotlin
 var x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+이렇게 하면 `x`라는 이름의 변수에 값 `1`을 할당하게 됩니다.
+변수 `x`를 출력하면 숫자 `1`이 반환됩니다:
 ```kotlin
 println(x) // prints 1
 ```
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+변수는 저장하는 값이 변경될 수 있기 때문에 변수라고 불립니다.
+`=`를 사용하여 `x`에 새로운 값을 할당함으로써 업데이트할 수 있습니다.
 ```kotlin
 var x = 1
 println(x) // prints 1
@@ -27,7 +27,7 @@ println(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+다른 변수의 값을 변수에 할당할 수도 있습니다. 여기서 `y` 변수에 `x`의 값을 할당할 수 있습니다.
 ```kotlin
 var x = 5
 var y = x
@@ -36,7 +36,7 @@ println(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+변수를 업데이트하면 이전 값을 잃게 됩니다. 여기서 `x` 변수를 두 번 출력하여 값이 어떻게 업데이트되는지 확인할 수 있습니다.
 ```kotlin
 var x = 5
 println(x) // prints 5
@@ -46,12 +46,12 @@ println(x) // prints 10
 
 ---
 
-In Kotlin string variables can be declared only by using double quotes:
+Kotlin에서 문자열 변수는 큰따옴표를 사용해서만 선언할 수 있습니다:
 ```kotlin
 val x = "May"
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+여러 단어로 된 변수 이름을 사용하려면 **카멜 케이스(camelCase)**를 사용합니다.
+이는 구문의 중간에 있는 각 단어가 대문자로 시작하는 방식으로 작성하는 관행입니다.

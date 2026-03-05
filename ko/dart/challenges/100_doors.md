@@ -2,22 +2,22 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100개의 문
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+일렬로 100개의 문이 있으며, 모두 처음에는 닫혀 있습니다.
+100번의 통과를 합니다.
+첫 번째 통과에서는 모든 문을 방문하여 '토글'합니다 (문이 닫혀 있으면 열고, 열려 있으면 닫습니다).
+두 번째 통과에서는 2번째 문마다 (즉, 2번, 4번, 6번, ...) 방문하여 토글합니다.
+세 번째 통과에서는 3번째 문마다 (즉, 3번, 6번, 9번, ...) 방문하며, 이를 100번째 문만 방문할 때까지 계속합니다.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+마지막 통과 후 문의 상태를 결정하는 함수를 구현하십시오.
+열려 있는 문의 번호만 배열에 포함하여 최종 결과를 반환하십시오.
+> 이 메서드는 가변적인 수의 문에 대해 동작할 수 있어야 합니다.
 
 # --seed--
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+100개의 문이 주어졌을 때, 열린 문의 올바른 목록을 반환합니다
 
 ```dart
     test("test1", () {
@@ -51,7 +51,7 @@ Given 100 doors, return the correct list of open doors
     });
 ```
 
-Given 10 doors, return the correct list of open doors
+10개의 문이 주어졌을 때, 열린 문의 올바른 목록을 반환합니다
 
 ```dart
     test("test2", () {
@@ -60,7 +60,7 @@ Given 10 doors, return the correct list of open doors
     });
 ```
 
-Given 950 doors, return the correct list of open doors
+950개의 문이 주어졌을 때, 열린 문의 올바른 목록을 반환합니다
 
 ```dart
     test("test3", () {

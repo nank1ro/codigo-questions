@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while` 반복문을 사용하여 코드를 반복하는 방법을 알고 있습니다.
+다음은 `hello`를 출력하는 문장을 반복하는 프로그램입니다.
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+하지만 `for` 반복문으로도 동일한 작업을 할 수 있습니다:
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");
@@ -17,14 +17,14 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for` 반복문에서는 반복문이 실행될 횟수를 지정할 수 있습니다
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+`<`를 사용하면 다음 숫자를 제외하고 반복하고, `<=`를 사용하면 다음 숫자를 포함하여 반복할 수 있습니다
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`라는 변수는 카운터 변수입니다.
+원하는 이름을 지정할 수 있습니다.
+현재 반복문의 몇 번째 반복인지를 세는 역할을 합니다

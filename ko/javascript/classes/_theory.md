@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScript는 객체 지향 프로그래밍 언어로, 객체라고 불리는 프로그래밍 구조를 다룹니다.
+객체는 데이터와 함수를 포함하는 하나의 데이터 구조로 생각할 수 있습니다. 객체의 함수는 메서드라고 합니다.
+예를 들어, 다음을 호출하면:
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScript는 `arrayName`에 `push()` 메서드가 있는지 확인하고(모든 배열에는 이 메서드가 있습니다), 찾으면 해당 메서드를 실행합니다.
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+_클래스_는 프로그램 코드의 기본 구성 요소가 되는 범용적이고 유연한 구조입니다.
+기본적인 클래스는 `class` 키워드와 이름만으로 구성됩니다. 예를 들어:
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+`Animal` 클래스 안에 무언가를 넣어봅시다.
+매개변수를 추가하려면 기본 `constructor`를 사용해야 합니다.
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+클래스를 정의하는 것만으로는 객체가 생성되지 않습니다.
+객체를 생성하려면 클래스의 __인스턴스__를 만들어야 합니다.
+JavaScript에서 클래스의 새 인스턴스를 만들 때는 항상 클래스 이름 앞에 `new` 키워드를 사용합니다.
+매개변수에 기본값을 할당하려면 생성자의 매개변수 이름 목록에서 지정하면 됩니다.
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+클래스가 자체 함수를 가지면, 그 함수를 __메서드__라고 합니다.
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScript에서는 `extends` 키워드를 사용하여 다른 클래스의 자식으로 클래스를 만들 수 있습니다.
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+_점 표기법_을 사용하여 인스턴스의 속성에 접근할 수 있습니다.
+점 표기법에서는 인스턴스 이름 바로 뒤에 마침표 `.`로 구분하여 속성 이름을 작성하며, 공백 없이 사용합니다:
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+같은 문법을 사용하여 속성의 값을 업데이트할 수도 있습니다.

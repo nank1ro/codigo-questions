@@ -1,15 +1,15 @@
-A __module__ is a file that can contain any kind of Python code.
-Modules allow us to use code again and again.
+__모듈__은 모든 종류의 Python 코드를 포함할 수 있는 파일입니다.
+모듈을 사용하면 코드를 반복적으로 재사용할 수 있습니다.
 
 ---
 
-There are a lot of __built-in modules__ that can help us with all sorts of things, like working with dates and times.
-In order to include a module we use the `import` keyword
+날짜와 시간 작업 등 다양한 작업에 도움을 줄 수 있는 __내장 모듈__이 많이 있습니다.
+모듈을 포함하려면 `import` 키워드를 사용합니다.
 
 ---
 
-We can also just import specific functions we need from a module using the `from` and `import` keywords
+`from`과 `import` 키워드를 사용하여 모듈에서 필요한 특정 함수만 가져올 수도 있습니다.
 
 ---
 
-We can also rename a function by importing it with the `as` keyword
+`as` 키워드를 사용하여 함수를 가져올 때 이름을 변경할 수도 있습니다.

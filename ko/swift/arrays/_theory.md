@@ -1,129 +1,129 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+배열은 여러 개의 서로 다른 정보를 하나의 변수 이름 아래에 순서가 있는 컬렉션으로 저장할 수 있는 데이터 타입입니다.
+배열은 하나 또는 여러 타입의 값을 저장하며, **인덱스**를 사용하여 이러한 값을 구별합니다.
+다음과 같은 형식의 표현식으로 배열에 항목을 할당할 수 있습니다:
 ```swift
 var arrayName: [itemsType] = [item1, item2]
 ```
-`itemsType` stands for the type of the items inside the array, for example, it can be `Int`, `String`, `Any`...
+`itemsType`은 배열 내부 항목의 타입을 나타내며, 예를 들어 `Int`, `String`, `Any` 등이 될 수 있습니다.
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+배열의 개별 항목에 인덱스를 사용하여 접근할 수 있습니다.
+인덱스는 배열에서 항목의 위치를 식별하는 주소와 같습니다.
+인덱스는 배열 이름 바로 뒤에 대괄호 안에 다음과 같이 나타납니다:
 ```swift
 arrayName[index]
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+배열 인덱스는 `1`이 아니라 `0`부터 시작합니다! 배열의 첫 번째 항목에 다음과 같이 접근합니다: `arrayName[0]`.
+배열의 두 번째 항목은 인덱스 1에 있습니다: `arrayName[1]`.
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+배열 인덱스는 다른 변수 이름과 같은 역할을 합니다.
+값을 접근하거나 할당하는 데 사용할 수 있습니다.
+다음과 같이 배열 인덱스에 접근하는 방법을 살펴보았습니다:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// "Jeremiah" 값을 출력합니다
 print(names[0])
 ```
-This is how an assignment works:
+값을 할당하는 방법은 다음과 같습니다:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// 새로운 값 "Jordan"을 할당합니다
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// "Jordan" 값을 출력합니다
 print(names[0])
 ```
 
 ---
 
-Just like strings, arrays have a **length** `count`.
-An arrays's length is the number of items it contains
+문자열과 마찬가지로, 배열에도 **길이** `count`가 있습니다.
+배열의 길이는 배열에 포함된 항목의 수입니다
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `append` function:
+배열은 고정된 길이를 가질 필요가 없습니다.
+언제든지 배열의 끝에 항목을 추가할 수 있습니다!
+배열에 항목을 추가하려면 `append` 함수를 사용합니다:
 ```swift
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"]를 출력합니다
 ```
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+때때로 배열의 일부분만 접근하고 싶을 수 있습니다.
+다음 코드를 살펴보세요:
 ```swift
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// [2, 3]을 출력합니다
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers[1...2]`.
-In Swift we can include the last index using `...`, but we can also exclude the last index using `..<`
+먼저 `numbers`라는 배열을 생성합니다.
+그런 다음 배열의 일부분을 가져와 slice 배열에 저장합니다.
+배열 이름 뒤에 포함할 인덱스를 정의하여 이를 수행합니다: `numbers[1...2]`.
+Swift에서는 `...`를 사용하여 마지막 인덱스를 포함할 수 있지만, `..<`를 사용하여 마지막 인덱스를 제외할 수도 있습니다
 
 ---
 
-In Swift we can slice an array as we want!
+Swift에서는 원하는 대로 배열을 슬라이스할 수 있습니다!
 ```swift
-// Grabs the first two items
+// 처음 두 항목을 가져옵니다
 listName[..<2]
-// Grabs the fourth through last items
+// 네 번째부터 마지막 항목까지 가져옵니다
 listName[3...]
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+배열 슬라이스에 맨 처음 또는 맨 마지막 항목이 포함되는 경우, 해당 항목의 인덱스를 포함할 필요가 없습니다
 
 ---
 
-Array elements could be of any type, if we specify the `Any` type:
+`Any` 타입을 지정하면 배열 요소는 어떤 타입이든 될 수 있습니다:
 ```swift
 var arrayName: [Any] = ["one", 2, true]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+실제로 위에는 순서대로 문자열, 정수, 불리언이 있습니다.
+또한 배열 안에 배열을 넣을 수도 있습니다!
 
 ---
 
-Sometimes you need to search for an item in an array.
-In Swift we can use the `firstIndex()` method:
+때때로 배열에서 항목을 검색해야 할 때가 있습니다.
+Swift에서는 `firstIndex()` 메서드를 사용할 수 있습니다:
 ```swift
 var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// 1을 출력합니다
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `insert()` method:
+위 코드는 `"Zac"` 문자열이 포함된 첫 번째 인덱스, 이 경우 `1`을 출력합니다.
+`insert()` 메서드를 사용하여 배열의 특정 인덱스에 항목을 삽입할 수도 있습니다:
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"]을 출력합니다
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+위 코드는 인덱스 `1`에 `"Ali"`를 삽입하며, 이 인덱스 이후의 모든 항목이 1칸씩 뒤로 이동합니다
 
 ---
 
-In Swift we can loop through an array in a very simple way using the `for..in` keywords:
+Swift에서는 `for..in` 키워드를 사용하여 매우 간단하게 배열을 반복할 수 있습니다:
 ```swift
 var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3 
+// 1, 2, 3을 출력합니다
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+`for` 키워드 뒤에 변수 이름이 오며, 이 변수에 각 배열 항목의 값이 차례로 할당됩니다.
 
 ---
 
-**Tuples** are like arrays but you can name the elements and use those names to refer to them
-To create a tuple we use the round brackets `()` 
+**튜플**은 배열과 비슷하지만 요소에 이름을 지정하고 그 이름으로 참조할 수 있습니다.
+튜플을 생성하려면 소괄호 `()`를 사용합니다
 ```swift
 var person = (firstName: "John", lastName: "Smith")
 var firstName = person.firstName // John
