@@ -54,9 +54,11 @@ Translate all exercises from `en/` to a new locale folder (e.g., `{locale}/`, `f
 ### Step 1: Setup
 ```bash
 cp -r en/ {locale}/
+git add {locale}/ && git commit -m "chore: copy en/ to {locale}/ (translation baseline)"
 ```
+**Why commit here?** This baseline commit lets you run `git diff --name-only <baseline-commit>` after translation to verify every file was modified. The expected count is 1570 `.md` files + 12 `data.json` = 1582 files. Any file NOT in the diff was missed by agents.
 
-### Step 2: Batch Translation with Haiku Agents (Per Folder)
+### Step 2: Batch Translation with Agents (Per Folder)
 
 **IMPORTANT: Token Limit Lesson Learned**
 - Haiku agents have limited context (~30k tokens)
@@ -131,12 +133,114 @@ cd validator && dart test lib/validator.dart --chain-stack-traces --fail-fast
 
 1. Add `'{locale}'` to `locales` in `validator/lib/validator.dart`, `json_creator/lib/json_creator.dart`, `theory_creator/lib/theory_creator.dart`
 2. Copy `en/` folder to `{locale}/`
-3. Spawn Haiku agents per folder (not per language) - run 10-15 in parallel
-4. Check progress after batch completes
-5. Spawn new agents for any remaining untranslated folders
-6. Repeat steps 4-5 until 100% translated
-7. Run validator to verify all translations
-8. Fix any validation errors if found
+3. **Commit the raw copy** (`git add {locale}/ && git commit`) — this creates a baseline so you can later diff to verify every file was actually modified by translation
+4. Spawn agents per folder (not per language) - run 10-15 in parallel. **Agents must NOT commit.**
+5. Check progress after batch completes
+6. Spawn new agents for any remaining untranslated folders
+7. Repeat steps 5-6 until 100% translated
+8. Run post-translation fixup scripts (see "Post-Translation Fixup" below)
+9. Run validator to verify all translations
+10. Fix any validation errors if found
+11. **Verify translation coverage**: compare changed file count against expected total (1570 .md + 12 data.json = 1582 files). Use `git diff --name-only <baseline-commit>` to list all modified files — every `.md` (except `_theory.md`) and every `data.json` under `{locale}/` must appear in this list
+
+## Post-Translation Fixup (MANDATORY)
+
+Agents frequently strip trailing whitespace from code sections and answer tokens. Run these fixup scripts **after all agents finish** and **before the validator**.
+
+### Fix 1: Restore Type 2 answers from English (binary-safe)
+Agents often strip trailing spaces from answer tokens like `- if ` or `-  == `. This copies the exact `--answers--` section from the English file.
+
+```python
+import re, os
+for root, dirs, files in os.walk('{locale}'):
+    for fname in sorted(files):
+        if not fname.endswith('.md') or fname == '_theory.md': continue
+        pt_path = os.path.join(root, fname)
+        en_path = pt_path.replace('{locale}/', 'en/', 1)
+        if not os.path.exists(en_path): continue
+        with open(en_path, 'rb') as f: en = f.read()
+        if b'exerciseType: 2' not in en: continue
+        with open(pt_path, 'rb') as f: pt = f.read()
+        en_match = re.search(rb'(# --answers--\n\n.*?)(\n\n# --solutions--)', en, re.DOTALL)
+        pt_match = re.search(rb'(# --answers--\n\n.*?)(\n\n# --solutions--)', pt, re.DOTALL)
+        if en_match and pt_match and en_match.group(1) != pt_match.group(1):
+            pt = pt[:pt_match.start()] + en_match.group(1) + pt_match.group(2) + pt[pt_match.end():]
+            with open(pt_path, 'wb') as f: f.write(pt)
+```
+
+### Fix 2: Restore all code sections from English
+Agents sometimes strip trailing spaces inside code blocks (e.g., `try { ` → `try {`). This copies `--before-seed--`, `--before-asserts--`, `--after-asserts--`, `--seed--`, `--solutions--`, and `--output--` sections from English.
+
+```python
+import re, os
+sections_to_copy = ['before-seed', 'before-asserts', 'after-asserts', 'seed', 'solutions', 'output']
+for root, dirs, files in os.walk('{locale}'):
+    for fname in sorted(files):
+        if not fname.endswith('.md') or fname == '_theory.md': continue
+        pt_path = os.path.join(root, fname)
+        en_path = pt_path.replace('{locale}/', 'en/', 1)
+        if not os.path.exists(en_path): continue
+        with open(en_path, 'rb') as f: en = f.read()
+        with open(pt_path, 'rb') as f: pt = f.read()
+        changed = False
+        for section in sections_to_copy:
+            tag = f'# --{section}--'.encode()
+            en_idx, pt_idx = en.find(tag), pt.find(tag)
+            if en_idx == -1 or pt_idx == -1: continue
+            next_tags = [f'# --{s}--'.encode() for s in
+                ['description','instructions','seed','answers','before-seed',
+                 'solutions','asserts','before-asserts','after-asserts','output']]
+            def find_next(content, start):
+                positions = [content.find(t, start + len(tag) + 1) for t in next_tags]
+                positions = [p for p in positions if p != -1]
+                return min(positions) if positions else len(content)
+            en_section = en[en_idx:find_next(en, en_idx)]
+            pt_section = pt[pt_idx:find_next(pt, pt_idx)]
+            if en_section != pt_section:
+                pt = pt[:pt_idx] + en_section + pt[find_next(pt, pt_idx):]
+                changed = True
+        if changed:
+            with open(pt_path, 'wb') as f: f.write(pt)
+```
+
+### Fix 3: Fix Type 3 solutions to match translated answers
+After Fix 2 copies English solutions back, Type 3 exercises will have English solutions but translated answers. This maps each solution back to the correct translated answer by index position.
+
+```python
+import re, os
+for root, dirs, files in os.walk('{locale}'):
+    for fname in sorted(files):
+        if not fname.endswith('.md') or fname == '_theory.md': continue
+        pt_path = os.path.join(root, fname)
+        en_path = pt_path.replace('{locale}/', 'en/', 1)
+        if not os.path.exists(en_path): continue
+        with open(pt_path, 'r') as f: pt = f.read()
+        if 'exerciseType: 3' not in pt: continue
+        with open(en_path, 'r') as f: en = f.read()
+        pt_ans = re.search(r'# --answers--\n\n(.*?)\n\n# --solutions--', pt, re.DOTALL)
+        pt_sol = re.search(r'# --solutions--\n\n(.*?)(\n\n#|\n*$)', pt, re.DOTALL)
+        en_ans = re.search(r'# --answers--\n\n(.*?)\n\n# --solutions--', en, re.DOTALL)
+        en_sol = re.search(r'# --solutions--\n\n(.*?)(\n\n#|\n*$)', en, re.DOTALL)
+        if not all([pt_ans, pt_sol, en_ans, en_sol]): continue
+        pt_answers = [l.strip() for l in pt_ans.group(1).strip().split('\n') if l.strip().startswith('- ')]
+        en_answers = [l.strip() for l in en_ans.group(1).strip().split('\n') if l.strip().startswith('- ')]
+        en_sols = [l.strip() for l in en_sol.group(1).strip().split('\n') if l.strip().startswith('- ')]
+        pt_sols = [l.strip() for l in pt_sol.group(1).strip().split('\n') if l.strip().startswith('- ')]
+        if all(s in pt_answers for s in pt_sols): continue  # already OK
+        new_sols = []
+        for es in en_sols:
+            if es in en_answers:
+                idx = en_answers.index(es)
+                new_sols.append(pt_answers[idx] if idx < len(pt_answers) else es)
+            else: new_sols.append(es)
+        new_sol_text = '\n'.join(new_sols)
+        old_sol_text = pt_sol.group(1).strip()
+        if new_sol_text != old_sol_text:
+            pt = pt[:pt_sol.start(1)] + new_sol_text + '\n' + pt[pt_sol.end(1):]
+            with open(pt_path, 'w') as f: f.write(pt)
+```
+
+**Run order: Fix 1 → Fix 2 → Fix 3 → Validator**
 
 ## Lessons Learned
 
@@ -232,6 +336,16 @@ When translating large numbers of files:
 - <15 files: Single agent can handle
 - 15-30 files: May need 2 passes
 - >30 files: Split into multiple agents or expect multiple passes
+
+### Code Section Trailing Space Stripping
+
+**Problem**: Agents strip trailing whitespace from code blocks when rewriting files (e.g., `try { ` becomes `try {`, `// DO NOT EDIT FROM HERE ` loses its trailing space). This breaks the validator because the composed code no longer matches expected output.
+
+**Scope**: Affected ~360 files in the `pt` translation across `--before-seed--`, `--after-asserts--`, `--solutions--`, and `--seed--` sections.
+
+**Solution**: After all agents complete, run Fix 2 from the "Post-Translation Fixup" section to copy all code sections byte-for-byte from the English originals. This is safe because code sections should never be translated.
+
+**Prevention**: This cannot be prevented at the agent level — the Write tool strips trailing whitespace. Always run the fixup scripts.
 
 ### Solution/Answer Matching Issues (Type 3 Exercises)
 

@@ -1,0 +1,57 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Saída",
+        "description": "Aprenda como exibir um valor"
+    },
+    "stringTemplates": {
+        "order": 2,
+        "title": "Templates de string",
+        "description": "Aprenda como interpolar strings com diferentes tipos de dados"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variáveis",
+        "description": "Aprenda como armazenar valores em uma variável"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleanos",
+        "description": "Aprenda como avaliar qualquer expressão"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operadores Aritméticos",
+        "description": "Aprenda como realizar operações aritméticas em variáveis e valores"
+    },
+    "comparisonLogicalOperators": {
+        "order": 6,
+        "title": "Operadores de Comparação e Lógicos",
+        "description": "Aprenda como comparar valores"
+    },
+    "conditionalStatements": {
+        "order": 7,
+        "title": "Instruções Condicionais",
+        "description": "Aprenda como tomar decisões"
+    },
+    "whileLoops": {
+        "order": 8,
+        "title": "Loops While",
+        "description": "Aprenda como repetir um conjunto de instruções"
+    },
+    "forLoops": {
+        "order": 9,
+        "title": "Loops For",
+        "description": "Aprenda como repetir um conjunto de instruções"
+    },
+    "lists": {
+        "order": 10,
+        "title": "Listas",
+        "description": "Aprenda como armazenar elementos em uma coleção ordenada"
+    },
+    "sets": {
+        "order": 11,
+        "title": "Conjuntos",
+        "description": "Aprenda como armazenar elementos únicos em uma coleção não ordenada"
+    }
+}

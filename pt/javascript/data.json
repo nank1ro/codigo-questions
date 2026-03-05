@@ -1,0 +1,72 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Saída",
+        "description": "Aprenda como exibir um valor"
+    },
+    "templateLiterals": {
+        "order": 2,
+        "title": "Template literals",
+        "description": "Aprenda como interpolar strings com diferentes tipos de dados"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variáveis",
+        "description": "Aprenda como armazenar valores em uma variável"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleanos",
+        "description": "Aprenda como avaliar qualquer expressão"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operadores Aritméticos",
+        "description": "Aprenda como realizar operações aritméticas em variáveis e valores"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operadores de Atribuição",
+        "description": "Aprenda como atribuir valores a variáveis"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "Operadores de Comparação e Lógicos",
+        "description": "Aprenda como comparar valores"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Instruções Condicionais",
+        "description": "Aprenda como tomar decisões"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Loops While",
+        "description": "Aprenda como repetir um conjunto de instruções"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Loops For",
+        "description": "Aprenda como repetir um conjunto de instruções"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Arrays",
+        "description": "Aprenda como armazenar diferentes valores em uma variável"
+    },
+    "objects": {
+        "order": 12,
+        "title": "Objetos",
+        "description": "Aprenda como armazenar valores com chaves"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funções",
+        "description": "Aprenda como dividir o código por tarefas específicas"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Classes",
+        "description": "Aprenda programação orientada a objetos"
+    }
+}
