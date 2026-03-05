@@ -9,7 +9,7 @@ import 'package:parser/parser.dart';
 import 'package:path/path.dart';
 
 /// Returns all the available exercise languages.
-List<String> get locales => ['en', 'it', 'es', 'de'];
+List<String> get locales => ['en', 'it', 'es', 'de', 'fr'];
 
 Future<void> main() async {
   /// Returns if the provided [entity] is a [File] named with a number that ends

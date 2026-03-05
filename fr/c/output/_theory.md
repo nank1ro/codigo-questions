@@ -1,0 +1,9 @@
+« __Hello, World!__ » est le programme traditionnel du premier pour débuter la programmation dans un nouveau langage.
+Nous utilisons la fonction `printf()` pour afficher des données sur le périphérique de sortie standard (écran).
+Chaque programme C utilise des bibliothèques, qui donnent la capacité d'exécuter les fonctions nécessaires, par exemple la fonction d'impression à l'écran est définie dans le fichier d'en-tête `stdio.h`.
+Le premier code qui s'exécutera résidera toujours dans la fonction main.
+Pour imprimer `Hello, World!` à l'écran avec C, nous pouvons écrire
+```c
+printf("Hello, World!");
+```
+Enfin, nous retournons `0` pour indiquer que notre programme a réussi
