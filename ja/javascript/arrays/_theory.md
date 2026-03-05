@@ -1,32 +1,32 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+配列は、1つの変数名の下に、異なる情報の集まりを順序付きで格納するために使用できるデータ型です。
+配列は1つまたは複数の型の値を格納し、**インデックス**を使用してこれらの値を区別します。
+次のような式で配列に要素を代入できます:
 ```javascript
 var arrayName = [item1, item2];
 ```
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+配列の個々の要素にはインデックスを使ってアクセスできます。
+インデックスは、配列内の要素の位置を特定するアドレスのようなものです。
+インデックスは配列名の直後に、角括弧の中に記述します:
 ```javascript
 arrayName[index];
 ```
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+配列のインデックスは`0`から始まります。`1`では**ありません**！配列の最初の要素には次のようにアクセスします: `arrayName[0]`。
+配列の2番目の要素はインデックス1にあります: `arrayName[1]`。
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+配列のインデックスは他の変数名と同じように動作します。
+値のアクセスだけでなく、値の代入にも使用できます。
+配列のインデックスにアクセスする方法は次のとおりです:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
 // Prints the value "Jeremiah"
 console.log(names[0]);
 ```
-This is how an assignment works:
+代入は次のように行います:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
 // Assign the new value "Jordan"
@@ -37,14 +37,14 @@ console.log(names[0]);
 
 ---
 
-Just like strings, arrays have a **length**.
-An arrays's length is the number of items it contains
+文字列と同様に、配列にも**長さ**があります。
+配列の長さは、配列に含まれる要素の数です
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `push` function:
+配列は固定長である必要はありません。
+いつでも配列の末尾に要素を追加できます！
+配列に要素を追加するには`push`関数を使用します:
 ```javascript
 var letters = ["a", "b"];
 letters.push("c");
@@ -54,65 +54,65 @@ console.log(letters);
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+配列の一部分だけにアクセスしたい場合があります。
+次のコードを見てください:
 ```javascript
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
 // prints [2, 3]
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers.slice(1, 3)`.
-Keep in mind that the right index is excluded
+まず、`numbers`という配列を作成します。
+次に、配列の一部を取り出して`slice`配列に格納します。
+これは配列名の後にインデックスを指定することで行います: `numbers.slice(1, 3)`。
+右側のインデックスは含まれないことに注意してください
 
 ---
 
-In JavaScript we can slice an array as we want!
+JavaScriptでは配列を自由にスライスできます！
 ```javascript
 // Grabs the first two items
 listName.slice(0, 2);
 // Grabs the fourth through last items
 listName.slice(3);
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+配列のスライスに最初の要素や最後の要素が含まれる場合、その要素のインデックスを含める必要はありません
 
 ---
 
-Array elements could be of any type.
+配列の要素は任意の型にすることができます。
 ```javascript
 var arrayName = ["one", 2, true];
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+実際、上記には順に文字列、整数、ブール値が含まれています。
+さらに、配列の中に配列を含めることもできます！
 
 ---
 
-Sometimes you need to search for an item in an array.
-In JavaScript we can use the `indexOf()` method:
+配列内の要素を検索する必要がある場合があります。
+JavaScriptでは`indexOf()`メソッドを使用できます:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
 // prints 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `splice()` method:
+上記のコードは、文字列`"Zac"`を含む最初のインデックス（この場合は`1`）を出力します。
+また、`splice()`メソッドを使用して、特定のインデックスに要素を挿入することもできます:
 ```javascript
 names.splice(1, 0, "Ali");
 // prints ["Trevor", "Ali", "Zac", "Glenn"]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1.
-The second value `0` means _deleteCount_, in this case, we don't delete any item in the array; but if we had specified `1` the value `Zac` would have been removed from the array
+上記のコードは`"Ali"`をインデックス`1`に挿入し、このインデックス以降のすべての要素を1つ後ろにずらします。
+2番目の値`0`は_deleteCount_（削除数）を意味します。この場合、配列からどの要素も削除しません。しかし`1`を指定した場合、`Zac`が配列から削除されます
 
 ---
 
-In JavaScript we can loop through an array in a very simple way using the `for..of` keywords:
+JavaScriptでは`for..of`キーワードを使用して、配列を非常に簡単にループ処理できます:
 ```javascript
 var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3 
+// prints 1, 2, 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+`for`キーワードの後に変数名を指定すると、その変数に配列の各要素の値が順番に代入されます。

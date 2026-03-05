@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+演算子は、変数や値に対して演算を行うために使用されます。
+まず算術演算子から始めましょう。特に**加算** `+` 演算子についてです。
+これは2つの数を足すために使用されます。例えば：
 ```python
 >>> 5+3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+次に**減算** `-` 演算子を見てみましょう。
+これはある数から別の数を引くために使用されます。例えば：
 ```python
 >>> 5-3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+**乗算** `*` 演算子を見てみましょう。
+これは2つの数を掛け合わせるために使用されます。例えば：
 ```python
 >>> 5*3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+**除算** `/` 演算子を見てみましょう。
+これは2つの数を割るために使用されます。例えば：
 ```python
 >>> 10/5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+**剰余** `%` 演算子を見てみましょう。
+これは2つの数の除算の余りを求めるために使用されます。例えば：
 ```python
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5を2で割ると商が2で余りが1なので、結果は1になります
 ```python
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+こちらは9を3で割ると商が3で余りが0なので、結果は0になります
 
 ---
 
-Let's see the **exponentiation** `**` operator.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+**累乗** `**` 演算子を見てみましょう。
+累乗は底の繰り返しの掛け算に相当します。つまり、指数 *n* の **b** は、*n* 個の底を掛け合わせた積です：
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```python
 >>> 5 ** 2
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** `//` operator.
-This operator returns the integral part of the quotient, for example:
+**切り捨て除算** `//` 演算子を見てみましょう。
+この演算子は商の整数部分を返します。例えば：
 ```python
 >>> 5.0 / 2
 2.5
 >>> 5.0 // 2
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+整数除算とも呼ばれます。結果の値は整数ですが、結果の*型*は必ずしもintとは限りません。

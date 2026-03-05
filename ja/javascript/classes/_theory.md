@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScriptはオブジェクト指向プログラミング言語であり、オブジェクトと呼ばれるプログラミング構造を操作します。
+オブジェクトは、データと関数を含む単一のデータ構造と考えることができます。オブジェクトの関数はメソッドと呼ばれます。
+例えば、次のように呼び出すとき：
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScriptは`arrayName`に`push()`メソッドがあるかどうかを確認し（すべての配列にこのメソッドがあります）、見つかった場合はそのメソッドを実行します。
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+_クラス_は汎用的で柔軟な構造であり、プログラムコードの構成要素となります。
+基本的なクラスは`class`キーワードとその名前だけで構成されます。例えば：
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+`Animal`クラスの中に何かを入れましょう。
+パラメータを追加するには、デフォルトの`constructor`を使用する必要があります。
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+クラスを定義しただけではオブジェクトは作成されません。
+オブジェクトを作成するには、クラスの__インスタンス__を作成する必要があります。
+JavaScriptでクラスの新しいインスタンスを作成するには、常にクラス名の前に`new`キーワードを使用します。
+パラメータにデフォルト値を割り当てたい場合は、コンストラクタのパラメータ名のリストで行います。
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+クラスが独自の関数を持つ場合、それらの関数は__メソッド__と呼ばれます。
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScriptでは、`extends`キーワードを使用して、別のクラスの子クラスを作成することができます。
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+_ドット構文_を使用してインスタンスのプロパティにアクセスできます。
+ドット構文では、インスタンス名の直後にプロパティ名をピリオド`.`で区切って、スペースなしで記述します：
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+同じ構文を使用して、プロパティの値を更新することもできます。

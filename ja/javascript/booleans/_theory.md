@@ -1,11 +1,11 @@
-JavaScript has a basic Boolean type, called `boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in JavaScript, and get one of two answers, `true` or `false`.
+JavaScriptには`boolean`と呼ばれる基本的なブーリアン型があります。
+ブーリアン値は論理値とも呼ばれ、trueまたはfalseの2つの値しか取ることができません。
+JavaScriptでは任意の式を評価でき、`true`または`false`のいずれかの結果を得ることができます。
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+数値や文字列と同様に、ブーリアン値`true`を変数に格納することができます。
 
 ---
 
-The opposite value of `true` is `false`
+`true`の反対の値は`false`です

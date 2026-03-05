@@ -1,13 +1,13 @@
-> Before I begin, I wanted to tell you that I am very happy to teach you Dart.
-With this message I take the opportunity to let you know that the app you are using was written right in Dart, using the Flutter framework. So it is an honor for me to be able to share my expertise in the language.
+> 始める前に、Dartを教えることができてとても嬉しいということをお伝えしたいと思います。
+このメッセージを通じて、あなたが使っているこのアプリはまさにDartで、Flutterフレームワークを使って書かれたものであることをお知らせします。ですので、この言語の専門知識を共有できることを光栄に思います。
 
-Dart, like many other programming languages, allows you to document your code.
-This allows you to write any text next to the code.
-Comments are ignored by the compiler.
+Dartは他の多くのプログラミング言語と同様に、コードにドキュメントを記述することができます。
+これにより、コードの横に任意のテキストを書くことができます。
+コメントはコンパイラによって無視されます。
 
-Dart supports _single-line_ comments, _multi-line_ comments, and _documentation_ comments.
+Dartは_単一行_コメント、_複数行_コメント、_ドキュメント_コメントをサポートしています。
 
-Here is how to write a _single-line_ comment:
+_単一行_コメントの書き方は以下の通りです：
 ```dart
 // This is a comment. It is not executed.
 ```

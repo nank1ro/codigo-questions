@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+プログラミングでは、コードブロックを繰り返す必要がよくあります。例えば：
 ```c
 printf("2 seconds\n");
 printf("3 seconds\n");
 printf("4 seconds\n");
 printf("5 seconds\n");
 ```
-This produces the following output:
+これは次の出力を生成します：
 ```c
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+長い文では、コードを書くのに多くの時間がかかりますが、幸いなことにループを使うことができます。
+上記と同じ出力を得る`while`ループを学びましょう。
 ```c
 int count = 2;
 while (count <= 5) {
@@ -21,24 +21,24 @@ while (count <= 5) {
     count++;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count++;`.
-It increments the `count` value, otherwise, our loop will be infinite
+まず変数`count`を作成し、初期値として`2`を代入しました。
+次に`while`文を使用し、条件`count <= 5`が`true`である間、コードブロックを実行します。
+コードブロックの中で、`count++;`の行を追加することを**忘れてはいけません**。
+これは`count`の値をインクリメントします。そうしないと、ループが無限になってしまいます
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while`ループの繰り返し回数を制御するには、数値に設定した変数から始めます。
+この変数をカウンター変数と呼びます
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+次に、条件の中で比較演算子を使って`counter`変数を数値と比較します。
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+`while`ループを停止するために、コードブロックの中で`counter`変数をインクリメントします。
 
 ---
 
-The order you write code affects the output.
+コードを書く順序が出力に影響します。

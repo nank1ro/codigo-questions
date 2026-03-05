@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Pythonはオブジェクト指向プログラミング言語であり、オブジェクトと呼ばれるプログラミング構造を操作します。
+オブジェクトは、データと関数を含む単一のデータ構造と考えることができます。オブジェクトの関数はメソッドと呼ばれます。
+例えば、次のように呼び出すとき：
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Pythonは`my_dict`に`items()`メソッドがあるかどうかを確認し（すべての辞書がこのメソッドを持っています）、見つかった場合はそのメソッドを実行します。
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+基本的なクラスは`class`キーワードとクラス名だけで構成されます。例えば：
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+`pass`を別のものに置き換えましょう。
+`__init__()`メソッドはクラスに必須であり、作成するオブジェクトを__初期化__するために使用されます。
+`__init__()`は常に少なくとも1つの引数`self`を取り、これは作成されるオブジェクトを参照します。
+`__init__()`は、クラスが作成する各オブジェクトを起動するメソッドと考えることができます。
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+もちろん、`__init__()`メソッドは`self`以外のパラメータも使用できます
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+`__init__()`の最初の引数はインスタンスオブジェクトを参照するために使用され、慣例としてその引数は`self`と呼ばれます。
+追加の引数（例えば、動物の`gender`や`legs`）を追加し、`__init__()`の本体でそれぞれを`self.gender`や`self.legs`に等しく設定すると、`Animal`クラスのインスタンスオブジェクトを作成する際に、各インスタンスにgenderとlegsを指定する必要があり、それらは作成した特定のインスタンスに関連付けられます
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+クラスを定義してもオブジェクトは作成されません。
+そのためには、クラスの__インスタンス__を作成する必要があります
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+クラスが独自の関数を持つとき、それらの関数は__メソッド__と呼ばれます。すでに1つのメソッドを見ています：`__init__()`です。
+しかし、独自のメソッドを定義することもできます！

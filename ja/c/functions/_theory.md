@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In C we use the `return_type` followed by the `function` name, for example:
+コードの一部を、少し異なる値で再利用したい場面を考えたことがあるかもしれません。
+コード全体を書き直す代わりに、関数を定義して繰り返し使用する方がはるかにすっきりします。
+Cでは`return_type`の後に`function`名を記述します。例えば：
 ```c
 void say_hello() {
     printf("Hello!\n");
@@ -15,16 +15,16 @@ int main() {
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+パラメータを指定したい場合、__関数定義__の括弧は空でなくても構いません
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+関数から値を__返したい__場合があります。
+そのためには`return`キーワードを使います。
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+関数は複数の入力パラメータを持つことができ、関数の括弧内にカンマで区切って記述します。
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";
@@ -44,10 +44,10 @@ int main() {
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+関数には、その関数が何をするかを説明する_オプションのコメント_を追加できます：
 ```c
 /*
- * Function:  hello_world 
+ * Function:  hello_world
  * --------------------
  * prints "Hello, World!" to the screen
  */
@@ -55,4 +55,4 @@ function hello_world() {
     printf("Hello, World!\n");
 }
 ```
-We can use `//` for a single line comment and `/* */` for a multi line comment
+`//`を使って1行コメントを、`/* */`を使って複数行コメントを書くことができます

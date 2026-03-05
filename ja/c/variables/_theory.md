@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in C is an object and like other programming languages, C has commands for declaring a variable.
-To create a variable, we need to give it a **type** and a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+変数はデータ値を格納するための入れ物です。
+C言語のすべての変数はオブジェクトであり、他のプログラミング言語と同様に、C言語には変数を宣言するためのコマンドがあります。
+変数を作成するには、スペースを含まないように注意しながら、**型**と**名前**を指定する必要があります。
+変数は、最初に値を代入した時点で作成されます。
+`x`という名前の変数を作成する例は次の通りです：
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
-If we print the variable `x` we get back the number `1`:
+このようにして、`x`という名前の_整数_変数に値`1`を代入しました。
+変数`x`を出力すると、数値`1`が返されます：
 ```c
 >>> printf("%i\n", x);
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+変数がこのように呼ばれるのは、格納する値を変更できるからです。
+`=`を使って`x`に新しい値を設定することで、更新できます。
 ```c
 >>> x = 1;
 >>> printf("%i\n", x);
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+他の変数の値を変数に代入することもできます。ここでは、変数`y`に`x`の値を代入できます。
 ```c
 >>> int x = 5;
 >>> int y = x;
@@ -38,8 +38,8 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+変数を更新すると、以前の値は失われます。
+ここでは、変数`x`を2回表示して、値がどのように更新されるかを確認できます。
 ```c
 >>> int x = 5;
 >>> printf("%i\n", x);
@@ -51,12 +51,12 @@ Here we can display the `x` variable twice and see how its value updates.
 
 ---
 
-In C string variables can be declared only by using double quotes:
+C言語では、文字列変数はダブルクォーテーションのみを使って宣言できます：
 ```c
 char x[] = "May";
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+複数の単語からなる変数名を使いたい場合は、**スネークケース**を使います。
+これは、追加の単語を`_`で接続することを意味します。

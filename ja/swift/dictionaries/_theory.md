@@ -1,15 +1,15 @@
-**Dictionaries** are similar to arrays and tuples, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Dictionaries are enclosed in square brackets, like so:
+**辞書（Dictionary）**は配列やタプルに似ていますが、インデックスの代わりに*キー*を使って値にアクセスします。
+キーには任意の文字列や数値を使用できます。
+辞書は角括弧で囲んで、次のように宣言します:
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+これは3つの*キーと値のペア*を持つ`dictionaryName`という辞書です。
+キー`key1`は値`1`を、`key2`は`2`を指し示します。
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+キーを使って辞書の値にアクセスする方法は、インデックスを使って配列の値にアクセスする方法と同じです:
 ```swift
 // gets the age value from the user dictionary
 user['age']
@@ -17,42 +17,42 @@ user['age']
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+配列と同様に、辞書は_変更可能（mutable）_です。
+つまり、作成後に変更できます（定数として宣言されていない場合）。
+この利点の一つとして、作成後に新しい_キーと値のペア_を次のように追加できます:
 ```swift
 dictName[newKeyName] = newValue
 ```
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+辞書の`count`は、辞書が持つ_キーと値のペア_の数です。
+値が配列であっても、各ペアは1回だけカウントされます。（そうです、辞書の中に配列を入れることもできます！）
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+辞書は変更可能なので、様々な方法で変更できます。`removeValue(forKey:)`メソッドを使って辞書から要素を削除できます:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
     print("The removed value is \(removedValue).") // prints the removed value, if the key exists
 }
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+これにより、辞書からキー`keyName`とそれに関連付けられた値が削除されます。
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+辞書のすべてのキーを一覧表示するにはどうすればよいでしょうか？
+`keys`プロパティを使います。
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+辞書のすべての値を一覧表示するにはどうすればよいでしょうか？
+`values`プロパティを使います。
 
 ---
 
-As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+配列と同様に、`for..in`キーワードを使って辞書の要素をループ処理できます。
+ループでキーと値の両方を取得するには、プロパティを指定する必要はありません:
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -61,17 +61,17 @@ for (key, value) in dictName {
 
 ---
 
-We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+配列で使った`isEmpty`プロパティを使って、辞書が空かどうかを判定することもできます
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `updateValue(_:forKey:)` method
+辞書に値を__追加__または__変更__するには、`updateValue(_:forKey:)`メソッドも使用できます
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+以前、`removeValue()`メソッドを使って辞書から_キーと値のペア_を削除する方法を見ました。
+キーに`nil`値を代入することで要素を削除することもできます
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyNameが辞書dictNameから削除されます
 ```

@@ -2,18 +2,18 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: 算術平均
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+数値ベクトルの_算術平均_を求める`mean`という関数を書いてください。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+数値ベクトルの平均を返す関数を書いてください。
 
-Example of function call:
+関数呼び出しの例：
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
@@ -50,19 +50,19 @@ fun main() {
 
 # --asserts--
 
-The mean of `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` must be equal to 4.0
+`[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]`の平均は4.0に等しくなければなりません
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)) == 4.0)
 ```
 
-The mean of `[4.0, 5.0, 6.0]` must be equal to 5.0
+`[4.0, 5.0, 6.0]`の平均は5.0に等しくなければなりません
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(4.0, 5.0, 6.0)) == 5.0)
 ```
 
-The mean of `[12.0, 34.0, 56.0, 78.0]` must be equal to 45.0
+`[12.0, 34.0, 56.0, 78.0]`の平均は45.0に等しくなければなりません
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(12.0, 34.0, 56.0, 78.0)) == 45.0)

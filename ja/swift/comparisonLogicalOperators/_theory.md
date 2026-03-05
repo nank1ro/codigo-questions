@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+**等値**比較演算子 `==` から始めましょう。
+2つの式が等しいかどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 == 2) // true
 print(2 == 3) // false
@@ -7,18 +7,18 @@ print(2 == 3) // false
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+次に**不等値**比較演算子 `!=` を見てみましょう。
+2つの式が等しく**ない**かどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 != 2) // false
 print(2 != 3) // true
 ```
-It is exactly the opposite of the *equal* operator
+これは*等値*演算子の正反対です
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+次に**より大きい**比較演算子 `>` を見てみましょう。
+一方の式がもう一方より大きいかどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 > 2) // false
 print(3 > 2) // true
@@ -26,8 +26,8 @@ print(3 > 2) // true
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+次に**より小さい**比較演算子 `<` を見てみましょう。
+一方の式がもう一方より小さいかどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 < 2) // false
 print(2 < 3) // true
@@ -35,8 +35,8 @@ print(2 < 3) // true
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+次に**以上**比較演算子 `>=` を見てみましょう。
+一方の式がもう一方以上であるかどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 >= 2) // true
 print(3 >= 2) // true
@@ -45,8 +45,8 @@ print(3 >= 4) // false
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+次に**以下**比較演算子 `<=` を見てみましょう。
+一方の式がもう一方以下であるかどうかを**ブール値**（`true` または `false`）で返します。例えば：
 ```swift
 print(2 <= 2) // true
 print(3 <= 2) // false
@@ -55,8 +55,8 @@ print(3 <= 4) // true
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+次に**論理**演算子を見てみましょう。まず __AND__ `&&` から始めます。
+*false* と評価される最初のオペランドを返すか、すべてが *true* の場合は最後のオペランドを返します。
 ```swift
 print(2 == 2 && 2 == 3) // false
 print(1 == 1 && 1 == 1.0) // true
@@ -64,8 +64,8 @@ print(1 == 1 && 1 == 1.0) // true
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+次に**or** `||` 論理演算子を見てみましょう。
+*true* と評価される最初のオペランドを返すか、すべてが *false* の場合は最後のオペランドを返します。
 ```swift
 print(2 == 2 || 2 == 3) // true
 print(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ print(1 == 2 || 1 == 3) // false
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最後に**not** `!` 論理演算子を見てみましょう。
+式の論理状態を反転させたブール値を返します。
 ```swift
 print(!true) // false
 print(!false) // true

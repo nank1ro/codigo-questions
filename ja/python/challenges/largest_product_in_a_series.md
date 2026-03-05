@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: 数列の最大積
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+下記の1000桁の数の中で、最大の積を持つ4つの隣接する数字は9 × 9 × 8 × 9 = 5832です。
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+1000桁の数の中で、最大の積を持つ`n`個の隣接する数字を見つけてください。この積の値はいくつですか？
 
 # --seed--
 
@@ -31,14 +31,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_productina_series(4)` should return 5832.
+`largest_productina_series(4)`は5832を返すべきです。
 
 ```python
     def test1(self):
         self.assertEqual(largest_productina_series(4), 5832, "--err-t1--")
 ```
 
-`largest_productina_series(13)` should return 23514624000.
+`largest_productina_series(13)`は23514624000を返すべきです。
 
 ```python
     def test2(self):

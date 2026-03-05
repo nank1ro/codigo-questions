@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**辞書（Dictionaries）**はリストやタプルに似ていますが、インデックスの代わりに*キー*を使って値にアクセスします。
+キーには任意の文字列や数値を使用できます。
+辞書は波括弧で囲みます。以下のようになります：
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+これは3つの*キーと値のペア*を持つ`d`という辞書です。
+キー`key1`は値`1`を、`key2`は`2`を指し、以下同様です。
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+キーで辞書の値にアクセスする方法は、インデックスでリストの値にアクセスする方法と同じです：
 ```python
 user['age']
-# gets the age value from the user dictionary
+# user辞書からageの値を取得します
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+リストと同様に、辞書は_ミュータブル（変更可能）_です。
+つまり、作成後に変更することができます。
+この利点の一つは、作成後に辞書に新しい_キーと値のペア_を追加できることです：
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+辞書の長さ`len()`は、辞書が持つ_キーと値のペア_の数です。
+値がリストであっても、各ペアは1回だけカウントされます。（そうです、辞書の中にリストを入れることもできます！）
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+辞書はミュータブルなので、さまざまな方法で変更できます。`del`コマンドを使って辞書から項目を削除できます：
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+これにより、キー`key_name`とそれに関連する値が辞書から削除されます。
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+辞書のすべてのキーを一覧表示したい場合はどうすればよいでしょうか？
+`keys()`メソッドがあります。
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+辞書のすべての値を一覧表示したい場合はどうすればよいでしょうか？
+`values()`メソッドがあります。
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+リストと同様に、`for..in`キーワードを使って辞書の要素をループ処理できます。
+ループでキーと値の両方を取得するには、`items()`メソッドを使用します：
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+ループで使用した`in`キーワードを使って、辞書に特定の__キー__が含まれているかどうかを確認することもできます
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+辞書に値を__追加__または__変更__するには、`update()`メソッドを使い、追加したい_キーと値のペア_を波括弧で囲んで指定することもできます
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+辞書から値を__削除__したい場合はどうすればよいでしょうか？
+`pop()`メソッドがあります：
 ```python
 dict_name.pop("key_name")
 ```

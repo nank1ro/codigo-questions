@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `True`, like:
+特定の条件が満たされた場合にのみコードを実行したいとき、意思決定が必要になります。
+天気が良いときだけ外で遊びたいとしましょう。
+プログラミングでは、ブール変数 `nice_weather` を保存し、この変数が `True` の場合に外で遊ぶというアクションを `if` で実行できます。例えば：
 ```python
 nice_weather = True
 if (nice_weather):
@@ -9,24 +9,24 @@ if (nice_weather):
 
 ---
 
-Let's continue with the previous example.
+前の例の続きを見てみましょう。
 ```python
 nice_weather = True
 if (nice_weather):
     # play outside
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `True`.
-Another important thing to consider is represented by the **colons** `:` and the **indentation**, which indicate a code block start.
-Indentation refers to the spaces at the beginning of a code line.
-Where in other programming languages the indentation in code is for readability only, the indentation in Python is essential.
-You can use your favorite number of spaces (2, 4, 6, 8), noting that the preferred is 4.
-Here in the app, we suggest using the **TAB** key to indent your line of codes
+`if` 文は条件が `True` の場合にのみコードブロックを実行することがわかりました。
+もう一つ重要なことは、**コロン** `:` と**インデント**です。これらはコードブロックの開始を示します。
+インデントとは、コード行の先頭にあるスペースのことです。
+他のプログラミング言語ではインデントは読みやすさのためだけですが、Pythonではインデントは不可欠です。
+お好みのスペース数（2、4、6、8）を使用できますが、4が推奨されています。
+このアプリでは、コード行をインデントするために**TAB**キーを使用することをお勧めします
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Python we can use the `else` statement, like:
+条件が成立した場合にコードブロックを実行する方法を見ました。次に、最初の条件が偽の場合に別のコードブロックを実行する方法を見てみましょう。
+天気が良ければ外で遊びます。そうでなければ、家にいます。
+Pythonでは、`else` 文を使用できます。例えば：
 ```python
 nice_weather = True
 if (nice_weather):
@@ -37,7 +37,7 @@ else:
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+もう一つの条件をチェックしたい場合を考えてみましょう。次の例のように：
 ```python
 num = 3
 if (num == 2):
@@ -47,13 +47,13 @@ elif (num == 3):
 else:
     print("do something else")
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+このコードの出力は `the number is 3` です。
+まず、数値が2に等しいかチェックします。これは偽です。
+次に、2番目の文に進み、`num` が3に等しいかチェックします。これは真なので、`the number is 3` を出力するコードブロックを実行します
 
 ---
 
-We can add as many `elif` statements as we want, there are no limits
+`elif` 文はいくつでも追加できます。制限はありません
 ```python
 num = 4
 if (num == 2):
@@ -67,11 +67,11 @@ elif (num == 5):
 elif (num == 6):
     print("the number is 6")
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。
 
 ---
 
-We can also nest a conditional statement (`if`, `elif` or `else`) inside another conditional statement, to create a more complex structure.
+条件文（`if`、`elif`、`else`）を別の条件文の中にネストして、より複雑な構造を作ることもできます。
 ```python
 num = 4
 if (num < 3):
@@ -84,4 +84,4 @@ else:
     else:
         print("the number is greather than 4")
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。

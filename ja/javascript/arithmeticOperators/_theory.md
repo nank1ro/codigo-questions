@@ -1,49 +1,49 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+演算子は、変数や値に対して操作を行うために使用されます。
+まずは算術演算子から始めましょう。特に**加算**演算子 `+` について見ていきます。
+これは2つの数値を足すために使用されます。例えば：
 ```javascript
 console.log(5 + 3);
-// prints 8
+// 8 と表示される
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+次に**減算**演算子 `-` を見ていきましょう。
+これはある数値から別の数値を引くために使用されます。例えば：
 ```javascript
 console.log(5 - 3);
-// prints 2
+// 2 と表示される
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+次に**乗算**演算子 `*` を見ていきましょう。
+これは2つの数値を掛け合わせるために使用されます。例えば：
 ```javascript
 console.log(5 * 3);
-// prints 15
+// 15 と表示される
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+次に**除算**演算子 `/` を見ていきましょう。
+これは2つの数値を割るために使用されます。例えば：
 ```javascript
 console.log(10 / 5);
-// prints 2
+// 2 と表示される
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+次に**剰余**演算子 `%` を見ていきましょう。
+これは2つの数値の除算後の余りを求めるために使用されます。例えば：
 ```javascript
 console.log(5 % 2);
-// prints 1
+// 1 と表示される
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5を2で割ると商は2、余りは1なので、結果は1になります
 ```javascript
 console.log(9 % 3);
-// prints 0
+// 0 と表示される
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+9を3で割ると商は3、余りは0なので、結果は0になります

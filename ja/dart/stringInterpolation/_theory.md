@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+文字列_補間_（interpolation）は、プログラム的に文字列を生成する方法です。
+Dartでは`+`記号（連結）を使って、2つ以上の文字列を一緒に表示できます。例えば：
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+しかし、`+`記号を使って`10`のような数値と`"friends"`のような文字列を足し合わせると、異なる種類の値であるためエラーが発生します
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+文字列補間を使うと、文字列と数値を足し合わせるような式をエラーなく表示できます。
+`${}`の中に式を入れると、その式が評価されます。
+戻り値は文字列に変換され、結果の文字列に挿入されます
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+識別子名の前に`$`を置くと、文字列補間がその識別子の内容を文字列に挿入します
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+`$`記号の後に続くものがプログラムの識別子として認識できない場合、エラーが発生します
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+ドル記号の後に変数を挿入して、その値を表示することもできます
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+文字列補間を使って、波括弧で好きなだけ値を挿入できます
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+`${}`の中に条件を入れることもできます。例えば：
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+文字列補間はprint文で最もよく使われますが、通常の文字列と同様に変数に格納することもできます。

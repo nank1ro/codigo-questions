@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+特定の条件が満たされた場合にのみコードを実行したいとき、意思決定が必要になります。
+天気が良いときだけ外で遊びたいとしましょう。
+プログラミングでは、ブール変数`nice_weather`を保存し、この変数が`true`の場合に外で遊ぶというアクションを`if`で実行できます：
 ```c
 bool nice_weather = true;
 if (nice_weather) {
@@ -10,21 +10,21 @@ if (nice_weather) {
 
 ---
 
-Let's continue with the previous example.
+前の例の続きを見てみましょう。
 ```c
 bool nice_weather = true;
 if (nice_weather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+`if`文は条件が`true`の場合にのみコードブロックを実行することを見てきました。
+もう一つ重要なことは、コードブロックを示す**波括弧**`{}`です。
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In C we can use the `else` statement, like:
+条件が成立した場合にコードブロックを実行する方法を見てきました。次に、最初の条件が成立しなかった場合に別のコードブロックを実行する方法を見てみましょう。
+天気が良ければ外で遊び、そうでなければ家にいます。
+C言語では`else`文を使うことができます：
 ```c
 bool nice_weather = false;
 if (nice_weather) {
@@ -36,7 +36,7 @@ if (nice_weather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+もう一つチェックする条件があるとしましょう。この例のように：
 ```c
 int num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     printf("do something else\n");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+このコードの出力は`the number is 3`です。
+まず、数値が2に等しいかチェックします。これはfalseです。
+次の文に進み、`num`が3に等しいかチェックします。trueなので、次のコードブロックを実行し、`the number is 3`と出力します。
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+`else if`文はいくつでも追加でき、制限はありません
 ```c
 int num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     printf("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は`the number is 4`です。
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+条件文（`if`、`else if`、`else`）を別の条件文の中にネストして、より複雑な構造を作ることもできます。
 ```c
 int num = 4;
 if (num < 3) {
@@ -87,4 +87,4 @@ if (num < 3) {
   }
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は`the number is 4`です。

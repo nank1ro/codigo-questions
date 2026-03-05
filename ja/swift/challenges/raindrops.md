@@ -2,32 +2,32 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨粒
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+あなたのタスクは、数値を特定の因数に対応する雨音を含む文字列に変換することです。
+因数とは、別の数を余りなく割り切れる数のことです。
+ある数が別の数の因数であるかどうかをテストする最も簡単な方法は、剰余演算を使用することです。
+雨粒のルールは、与えられた数が:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3を因数に持つ場合、結果に 'Pling' を追加します。
+- 5を因数に持つ場合、結果に 'Plang' を追加します。
+- 7を因数に持つ場合、結果に 'Plong' を追加します。
+- 3、5、7のいずれも因数に持たない場合、結果はその数の数字になります。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28は7を因数に持ちますが、3や5は持たないので、結果は `"Plong"` になります。
+- 30は3と5の両方を因数に持ちますが、7は持たないので、結果は `"PlingPlang"` になります。
+- 34は3、5、7のいずれの因数も持たないので、結果は `"34"` になります。
 
-> HINT: omit the argument label with the `_` (underscore)
+> ヒント: `_`（アンダースコア）で引数ラベルを省略してください
 
-Example of function call:
+関数呼び出しの例:
 ```swift
 print(raindrops(28))
 // prints "Plong"
@@ -52,7 +52,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sound for 1 is "1"
+1の音は "1"
 
 ```swift
     func test1() {
@@ -60,7 +60,7 @@ The sound for 1 is "1"
     }
 ```
 
-The sound for 3 is "Pling"
+3の音は "Pling"
 
 ```swift
     func test3() {
@@ -68,7 +68,7 @@ The sound for 3 is "Pling"
     }
 ```
 
-The sound for 5 is "Plang"
+5の音は "Plang"
 
 ```swift
     func test5() {
@@ -76,7 +76,7 @@ The sound for 5 is "Plang"
     }
 ```
 
-The sound for 7 is "Plong"
+7の音は "Plong"
 
 ```swift
     func test7() {
@@ -84,7 +84,7 @@ The sound for 7 is "Plong"
     }
 ```
 
-The sound for 6 is "Pling"
+6の音は "Pling"
 
 ```swift
     func test6() {
@@ -92,7 +92,7 @@ The sound for 6 is "Pling"
     }
 ```
 
-The sound for 8 is "8"
+8の音は "8"
 
 ```swift
     func test8() {
@@ -100,7 +100,7 @@ The sound for 8 is "8"
     }
 ```
 
-The sound for 9 is "Pling"
+9の音は "Pling"
 
 ```swift
     func test9() {
@@ -108,7 +108,7 @@ The sound for 9 is "Pling"
     }
 ```
 
-The sound for 10 is "Plang"
+10の音は "Plang"
 
 ```swift
     func test10() {
@@ -116,7 +116,7 @@ The sound for 10 is "Plang"
     }
 ```
 
-The sound for 14 is "Plong"
+14の音は "Plong"
 
 ```swift
     func test14() {
@@ -124,7 +124,7 @@ The sound for 14 is "Plong"
     }
 ```
 
-The sound for 15 is "PlingPlang"
+15の音は "PlingPlang"
 
 ```swift
     func test15() {
@@ -132,7 +132,7 @@ The sound for 15 is "PlingPlang"
     }
 ```
 
-The sound for 21 is "PlingPlong"
+21の音は "PlingPlong"
 
 ```swift
     func test21() {
@@ -140,7 +140,7 @@ The sound for 21 is "PlingPlong"
     }
 ```
 
-The sound for 25 is "Plang"
+25の音は "Plang"
 
 ```swift
     func test25() {
@@ -148,7 +148,7 @@ The sound for 25 is "Plang"
     }
 ```
 
-The sound for 27 is "Pling"
+27の音は "Pling"
 
 ```swift
     func test27() {
@@ -156,7 +156,7 @@ The sound for 27 is "Pling"
     }
 ```
 
-The sound for 35 is "PlangPlong"
+35の音は "PlangPlong"
 
 ```swift
     func test35() {
@@ -164,7 +164,7 @@ The sound for 35 is "PlangPlong"
     }
 ```
 
-The sound for 49 is "Plong"
+49の音は "Plong"
 
 ```swift
     func test49() {
@@ -172,7 +172,7 @@ The sound for 49 is "Plong"
     }
 ```
 
-The sound for 52 is "52"
+52の音は "52"
 
 ```swift
     func test52() {
@@ -180,7 +180,7 @@ The sound for 52 is "52"
     }
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105の音は "PlingPlangPlong"
 
 ```swift
     func test105() {
@@ -188,7 +188,7 @@ The sound for 105 is "PlingPlangPlong"
     }
 ```
 
-The sound for 3125 is "Plang"
+3125の音は "Plang"
 
 ```swift
     func test3125() {

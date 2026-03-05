@@ -2,19 +2,19 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字の合計
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+整数`N`が与えられます。
+Nのすべての桁の合計を計算するプログラムを書いてください
 
 # --instructions--
 
-Return the sum of digits of `N`.
+`N`の桁の合計を返してください。
 
-Example of function call:
+関数呼び出しの例：
 ```kotlin
 println(sumDigits(28))
 // prints 10
@@ -50,31 +50,31 @@ fun main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345の桁の合計は15です
 
 ```kotlin
     tryCatch(sumDigits(12345) == 15)
 ```
 
-The sum of the digits of 57253 is 22
+57253の桁の合計は22です
 
 ```kotlin
     tryCatch(sumDigits(57253) == 22)
 ```
 
-The sum of the digits of 122 is 5
+122の桁の合計は5です
 
 ```kotlin
     tryCatch(sumDigits(122) == 5)
 ```
 
-The sum of the digits of 91979997 is 60
+91979997の桁の合計は60です
 
 ```kotlin
     tryCatch(sumDigits(91979997) == 60)
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647の桁の合計は46です
 
 ```kotlin
     tryCatch(sumDigits(2147483647) == 46)

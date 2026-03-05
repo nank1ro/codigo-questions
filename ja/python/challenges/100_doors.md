@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-title: 100 doors
+title: 100のドア
 difficulty: 1
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+一列に並んだ100枚のドアがあり、最初はすべて閉まっています。
+100回ドアの前を通ります。
+1回目は、すべてのドアを訪れてドアを「切り替え」ます（ドアが閉まっていれば開け、開いていれば閉めます）。
+2回目は、2番目ごとのドアだけを訪れ（つまり、ドア#2、#4、#6、...）、切り替えます。
+3回目は、3番目ごとのドアを訪れ（つまり、ドア#3、#6、#9、...）、以降同様に100番目のドアだけを訪れるまで続けます。
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+最後の通過後のドアの状態を判定する関数を実装してください。
+開いているドアの番号のみを含む配列で最終結果を返してください。
+> このメソッドは、可変数のドアに対応できなければなりません。
 
 # --seed--
 
@@ -36,7 +36,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+100枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```python
     def test_1(self):
@@ -44,7 +44,7 @@ Given 100 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(100), solution, "--err-t1--")
 ```
 
-Given 10 doors, return the correct list of open doors
+10枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```python
     def test_2(self):
@@ -52,7 +52,7 @@ Given 10 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(10), solution, "--err-t2--")
 ```
 
-Given 950 doors, return the correct list of open doors
+950枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```python
     def test_3(self):

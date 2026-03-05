@@ -2,30 +2,30 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨粒
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+あなたのタスクは、数値を特定の約数に対応する雨粒の音を含む文字列に変換することです。
+約数とは、別の数を余りなく均等に割り切れる数のことです。
+ある数が別の数の約数であるかどうかをテストする最も簡単な方法は、剰余演算を使用することです。
+雨粒のルールは、与えられた数が：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3を約数に持つ場合、結果に'Pling'を追加します。
+- 5を約数に持つ場合、結果に'Plang'を追加します。
+- 7を約数に持つ場合、結果に'Plong'を追加します。
+- 3、5、7のいずれも約数に持たない場合、結果はその数の数字そのものになります。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28は7を約数に持ちますが、3や5は持たないため、結果は`"Plong"`になります。
+- 30は3と5の両方を約数に持ちますが、7は持たないため、結果は`"PlingPlang"`になります。
+- 34は3、5、7のいずれも約数に持たないため、結果は`"34"`になります。
 
-Example of function call:
+関数呼び出しの例：
 ```dart
 print(raindrops(28))
 // prints "Plong"
@@ -51,7 +51,7 @@ void main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1の音は"1"
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The sound for 1 is "1"
   });
 ```
 
-The sound for 3 is "Pling"
+3の音は"Pling"
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The sound for 3 is "Pling"
   });
 ```
 
-The sound for 5 is "Plang"
+5の音は"Plang"
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The sound for 5 is "Plang"
   });
 ```
 
-The sound for 7 is "Plong"
+7の音は"Plong"
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The sound for 7 is "Plong"
   });
 ```
 
-The sound for 6 is "Pling"
+6の音は"Pling"
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The sound for 6 is "Pling"
   });
 ```
 
-The sound for 8 is "8"
+8の音は"8"
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The sound for 8 is "8"
   });
 ```
 
-The sound for 9 is "Pling"
+9の音は"Pling"
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The sound for 9 is "Pling"
   });
 ```
 
-The sound for 10 is "Plang"
+10の音は"Plang"
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The sound for 10 is "Plang"
   });
 ```
 
-The sound for 14 is "Plong"
+14の音は"Plong"
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The sound for 14 is "Plong"
   });
 ```
 
-The sound for 15 is "PlingPlang"
+15の音は"PlingPlang"
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The sound for 15 is "PlingPlang"
   });
 ```
 
-The sound for 21 is "PlingPlong"
+21の音は"PlingPlong"
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The sound for 21 is "PlingPlong"
   });
 ```
 
-The sound for 25 is "Plang"
+25の音は"Plang"
 
 ```dart
   test('test12', () {
@@ -147,7 +147,7 @@ The sound for 25 is "Plang"
   });
 ```
 
-The sound for 27 is "Pling"
+27の音は"Pling"
 
 ```dart
   test('test13', () {
@@ -155,7 +155,7 @@ The sound for 27 is "Pling"
   });
 ```
 
-The sound for 35 is "PlangPlong"
+35の音は"PlangPlong"
 
 ```dart
   test('test14', () {
@@ -163,7 +163,7 @@ The sound for 35 is "PlangPlong"
   });
 ```
 
-The sound for 49 is "Plong"
+49の音は"Plong"
 
 ```dart
   test('test15', () {
@@ -171,7 +171,7 @@ The sound for 49 is "Plong"
   });
 ```
 
-The sound for 52 is "52"
+52の音は"52"
 
 ```dart
   test('test16', () {
@@ -179,7 +179,7 @@ The sound for 52 is "52"
   });
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105の音は"PlingPlangPlong"
 
 ```dart
   test('test17', () {
@@ -187,7 +187,7 @@ The sound for 105 is "PlingPlangPlong"
   });
 ```
 
-The sound for 3125 is "Plang"
+3125の音は"Plang"
 
 ```dart
   test('test18', () {

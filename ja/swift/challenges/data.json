@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "足し算"
   },
   "atm": {
     "difficulty": 1,
@@ -13,27 +13,27 @@
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "雨粒"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "数字の合計"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "2対1"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100のドア"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "アッカーマン関数"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "算術平均",
     "isPro": true
   },
   "fizz_buzz": {
@@ -43,12 +43,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "ローマ数字変換器",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "うるう年",
     "isPro": true
   }
 }

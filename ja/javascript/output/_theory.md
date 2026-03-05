@@ -1,6 +1,6 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `console.log()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with JavaScript we can write
+「__Hello, World!__」は、新しいプログラミング言語を学ぶ際の伝統的な最初のプログラムです。
+`console.log()`関数を使って、標準出力デバイス（画面）にデータを出力します。
+JavaScriptで画面に`Hello, World!`と表示するには、次のように書きます
 ```javascript
 console.log("Hello, World!")
 ```

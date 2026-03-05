@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while`ループを使ってコードを繰り返す方法を学びました。
+例えば、このプログラムは`hello`を表示する文を繰り返します
 ```swift
 var counter = 0
 
@@ -8,7 +8,7 @@ while counter < 5 {
     counter += 1;
 }
 ```
-But we can do the same with `for` loops:
+しかし、`for`ループでも同じことができます：
 ```swift
 for i in 0..<5 {
     print("hello")
@@ -17,47 +17,47 @@ for i in 0..<5 {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for`ループでは、ループを何回実行するかを指定できます
 
 ---
 
-We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
+`..<`を使うと次の数値を含まずにループし、`...`を使うと次の数値を含めてループできます
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`という変数はカウンタ変数です。
+好きな名前をつけることができます。
+ループの何回目の繰り返しにいるかをカウントします
 
 ---
 
-The `stride()` function returns a sequence of numbers.
-It requires the _from_, _to_ and _by_ parameters.
-These are the syntax of the function:
+`stride()`関数は数値のシーケンスを返します。
+_from_、_to_、_by_ のパラメータが必要です。
+関数の構文は次の通りです：
 ```swift
 stride(from:to:by:)
 ```
-Keep in mind that the `to` value is excluded
+`to`の値は含まれないことに注意してください
 
 ---
 
-With the `stride()` function we can also use closed ranges, by using:
+`stride()`関数では、次のように閉じた範囲も使用できます：
 ```swift
 stride(from:through:by:)
 ```
-In this case the `through` value is included
+この場合、`through`の値は含まれます
 
 ---
 
-In Swift we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+Swiftには`forEach`ループもあります。
+`forEach`はシーケンスの各要素に対して、`for-in`ループと同じ順序で指定されたクロージャを呼び出します：
 ```swift
-// this is an array, we'll see about that soon
-let numbers: [Int] = [1, 3, 5, 7, 9] 
-numbers.forEach { num in 
+// これは配列です。すぐに学びます
+let numbers: [Int] = [1, 3, 5, 7, 9]
+numbers.forEach { num in
     print(num)
 }
 ```
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+`forEach`メソッドの使用は、`for-in`ループとは2つの重要な点で異なります：
+1. `break`や`continue`文を使用して、現在のクロージャの呼び出しを終了したり、後続の呼び出しをスキップしたりすることはできません。
+2. クロージャ内で`return`文を使用しても、クロージャのみが終了し、外側のスコープは終了しません。また、後続の呼び出しもスキップされません。

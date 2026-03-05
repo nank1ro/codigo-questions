@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+**等価** `==` 関係演算子から始めましょう。
+2つの式が等しいかどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+**不等価** `!=` 関係演算子に進みましょう。
+2つの式が等しく**ない**かどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+これは*等価*演算子の正反対です
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+**より大きい** `>` 関係演算子に進みましょう。
+一方の式がもう一方より大きいかどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+**より小さい** `<` 関係演算子に進みましょう。
+一方の式がもう一方より小さいかどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+**以上** `>=` 関係演算子に進みましょう。
+一方の式がもう一方以上かどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+**以下** `<=` 関係演算子に進みましょう。
+一方の式がもう一方以下かどうかを示す**ブール値**（`True` または `False`）を返します。例：
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+次に**ブール**演算子を見てみましょう。まずは `and` から始めます。
+*False* と評価される最初のオペランドを返すか、すべてが *True* の場合は最後のオペランドを返します。
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+次は **or** ブール演算子です。
+*True* と評価される最初のオペランドを返すか、すべてが *False* の場合は最後のオペランドを返します。
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最後に **not** ブール演算子です。
+式の論理状態を反転させたブール値を返します。
 ```python
 >>> not True
 False

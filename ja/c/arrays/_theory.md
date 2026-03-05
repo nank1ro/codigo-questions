@@ -1,35 +1,35 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+配列は、異なる情報の集まりを1つの変数名の下にシーケンスとして格納するために使用できるデータ型です。
+配列は単一の型の複数の値を格納し、**インデックス**を使用してこれらの値を区別します。
+次の形式の式で配列に要素を割り当てることができます:
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type`は配列に使用するデータの型で、例えば`int`、`double`などです。
+`array_name`は要素を格納する変数の名前です。
+`array_size`は配列が持つことができる最大サイズです。
+最後に、`item1`と`item2`は配列に保存したい値です
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+配列の個々の要素にはインデックスを使ってアクセスできます。
+インデックスは、配列内の要素の位置を識別するアドレスのようなものです。
+インデックスは配列名の直後に、括弧の間に表示されます:
 ```
 list_name[index];
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item in a array like this: `list_name[0]`.
-The second item in a array is at index 1: `list_name[1]`.
+配列のインデックスは`0`から始まり、`1`からでは**ありません**! 配列の最初の要素にはこのようにアクセスします: `list_name[0]`。
+配列の2番目の要素はインデックス1にあります: `list_name[1]`。
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+配列のインデックスは他の変数名と同じように動作します! アクセスだけでなく、値の代入にも使用できます。
+配列のインデックスにアクセスする方法は次の通りです:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0]; // Gets the value 5
 ```
-This is how an assignment works:
+代入は次のように行います:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
@@ -38,19 +38,19 @@ printf("%d\n", numbers[0]); // prints the new value 1
 
 ---
 
-You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
-It works because every item in the array has the same type, and as such the same size.
-The resulting *length* is the number of items it contains
+配列のバイト単位の長さを計算するには、配列の`sizeof`を取得し、それを1つの要素のサイズで割る必要があります。
+これは、配列のすべての要素が同じ型であり、したがって同じサイズであるために機能します。
+結果の*長さ*は、配列に含まれる要素の数です
 
 ---
 
-An array in C must have a fixed length.
-You can't add items to the end of an array, after declaring its size.
+Cの配列は固定長でなければなりません。
+サイズを宣言した後に、配列の末尾に要素を追加することはできません。
 
 ---
 
-In C programming, you can create an array of arrays.
-These arrays are known as multidimensional arrays, for example:
+Cプログラミングでは、配列の配列を作成できます。
+これらの配列は多次元配列として知られています。例えば:
 ```c
 int numbers[2][3] = {{1, 2, 3}, {4, 5, 6}};
 ```

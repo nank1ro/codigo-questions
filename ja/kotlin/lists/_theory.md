@@ -1,25 +1,25 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an list with an expression of the form:
+リストは、1つの変数名の下にさまざまな情報をシーケンスとして格納するために使用できるデータ型です。
+リストは1つまたは複数の型の複数の値を格納し、**インデックス**を使用してこれらの値を区別します。
+次の形式の式でリストに要素を割り当てることができます：
 ```kotlin
 val listName = listOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the list, for example, it can be `Int`, `String`, `Any`...
+`itemsType`はリスト内の要素の型を表します。例えば、`Int`、`String`、`Any`などが使用できます...
 
 ---
 
-A list is a collection of items with a specific order. There are two types of lists in Kotlin:
+リストは特定の順序を持つ要素のコレクションです。Kotlinには2種類のリストがあります：
 
-- `List` cannot be modified after you create it.
-- `MutableList` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `List`は作成後に変更できません。
+- `MutableList`は作成後に変更でき、要素の追加、削除、更新ができます。
 
 ```kotlin
 val numbers = listOf(1, 3, 5)
 numbers.add(7) // [1]
 ```
-__[1]__ throws an Error because `List`s are _read-only_.
+__[1]__ `List`は_読み取り専用_なので、エラーがスローされます。
 
-To create a modifiable list use the `mutableListOf` keyword
+変更可能なリストを作成するには`mutableListOf`キーワードを使用します
 ```kotlin
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
@@ -29,28 +29,28 @@ println(numbers)
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+リストの個々の要素にはインデックスでアクセスできます。
+インデックスはリスト内の要素の位置を識別するアドレスのようなものです。
+インデックスはリスト名の直後に角括弧の中に記述します：
 ```kotlin
 listName[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item of an list like this: `listName[0]` or `listName.get(0)` or even `listName.first()`.
-The second item in an list is at index __1__: `listName[1]`.
+リストのインデックスは`0`から始まり、`1`からでは**ありません**！リストの最初の要素には次のようにアクセスします：`listName[0]`または`listName.get(0)`、あるいは`listName.first()`。
+リストの2番目の要素はインデックス__1__にあります：`listName[1]`。
 
 ---
 
-The index is actually an offset from the first element. For example, when you say `list[2]` you are not asking for the second element of the list, but for the element that is 2 positions offset from the first element. Hence `list[0]` is the first element (zero offset), `list[1]` is the second element (offset of 1), `list[2]` is the third element (offset of 2), and so on.
+インデックスは実際には最初の要素からのオフセットです。例えば、`list[2]`と書いた場合、リストの2番目の要素を要求しているのではなく、最初の要素から2つ分オフセットされた要素を要求しています。したがって、`list[0]`は最初の要素（オフセット0）、`list[1]`は2番目の要素（オフセット1）、`list[2]`は3番目の要素（オフセット2）、というようになります。
 
-A list index can be used to access as well as assign values.
-You saw how to access a list index like this:
+リストのインデックスはアクセスだけでなく、値の代入にも使用できます。
+リストのインデックスへのアクセス方法は次のとおりです：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
 // Prints the value "Jeremiah"
 println(names[0])
 ```
-This is how an assignment works:
+代入は次のように行います：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
 // Assign the new value "Jordan"
@@ -61,13 +61,13 @@ println(names[0])
 
 ---
 
-Just like strings, lists have a **length** retrieved with the `size` getter.
-A list length is the number of items it contains
+文字列と同様に、リストには`size`ゲッターで取得できる**長さ**があります。
+リストの長さは、そのリストが含む要素の数です。
 
 ---
 
-Another useful list operation is the `contains` method to find out if a given element is in the list.
-For example, if you have a list of names, you can use the `contains` method to find out if a given name is present in the list.
+もう一つの便利なリスト操作は、指定された要素がリストに含まれているかどうかを調べる`contains`メソッドです。
+例えば、名前のリストがある場合、`contains`メソッドを使って指定された名前がリストに存在するかどうかを確認できます。
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
@@ -76,9 +76,9 @@ println(names.contains("Scarlett"))
 
 ---
 
-A mutable list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a mutable list we use the `add` function or the `+=` shortcut:
+変更可能なリストは固定長である必要はありません。
+いつでもリストの末尾に要素を追加できます！
+変更可能なリストに要素を追加するには、`add`関数または`+=`ショートカットを使用します：
 ```kotlin
 val letters = mutableListOf("a", "b")
 letters.add("c")
@@ -88,11 +88,11 @@ println(letters)
 
 ---
 
-As we've seen in the previous example, we can add items ony by one using the `add` function.
-But if we've to add all the elements of another list at once we can simply use the `addAll` function, or the `+=` shortcut:
+前の例で見たように、`add`関数を使って要素を1つずつ追加できます。
+しかし、別のリストのすべての要素を一度に追加する場合は、`addAll`関数または`+=`ショートカットを使用できます：
 ```kotlin
 val letters = mutableListOf("a", "b")
-val newLetters = listOf("c", "d", "e") 
+val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
 // prints [a, b, c, d, e]
@@ -100,57 +100,57 @@ println(letters)
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+リストの一部分だけにアクセスしたい場合があります。
+次のコードを考えてみましょう：
 ```kotlin
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
 // prints [2, 3]
 ```
-__[1]__: first, we create a _read-only_ list called `numbers`.
-__[2]__: then, we take a subsection of the list using the `slice` function and store it in the slice list.
-We do this by defining the indices we want to include inside the `slide` function.
+__[1]__：まず、`numbers`という_読み取り専用_リストを作成します。
+__[2]__：次に、`slice`関数を使用してリストの一部を取得し、sliceリストに格納します。
+`slice`関数の中に含めたいインデックスを定義してこれを行います。
 
-In Kotlin we can include the last index using `..`, but we can also exclude the last index using `until`
+Kotlinでは、`..`を使用して最後のインデックスを含めることができますが、`until`を使用して最後のインデックスを除外することもできます。
 
 ---
 
-Lists elements could be of any type, if we specify the `Any` type:
+`Any`型を指定すると、リストの要素はどんな型でも持てます：
 ```kotlin
 var listName: List<Any> = listOf("one", 2, true)
 ```
-In fact, above we have, in order, a `String`, an `Integer` and a `Boolean`.
-But we can also have lists with lists as well!
+実際、上記では`String`、`Integer`、`Boolean`が順番に含まれています。
+しかし、リストの中にリストを含めることもできます！
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Kotlin we can use the `indexOfFirst` method:
+リスト内のアイテムを検索する必要がある場合があります。
+Kotlinでは`indexOfFirst`メソッドを使用できます：
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
 // prints 1
 ```
 
-The `indexOfFirst` method takes a __predicate__ function that will be evaluated for each item in the list until it's true, returning the _index_ of the element.
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
+`indexOfFirst`メソッドは__述語__関数を受け取り、リスト内の各アイテムに対してtrueになるまで評価され、その要素の_インデックス_を返します。
+上記のコードは文字列`"Zac"`を含む最初のインデックスを出力します。この場合は`1`です。
 
-We can also insert items into a modifiable list in a specific index, using the `add(index, element)` method:
+また、`add(index, element)`メソッドを使用して、変更可能なリストの特定のインデックスにアイテムを挿入することもできます：
 ```kotlin
 names.add(1, "Ali")
 // prints [Trevor, Ali, Zac, Glenn]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+上記のコードはインデックス`1`に`"Ali"`を挿入し、このインデックス以降のすべての要素を1つ下にずらします
 
 ---
 
-In Kotlin we can loop through a list in a very simple way using the `for..in` keywords:
+Kotlinでは`for..in`キーワードを使用して、非常にシンプルな方法でリストをループすることができます：
 ```kotlin
 val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3 
+// prints 1, 2, 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+`for`キーワードの後に変数名が続き、リストの各アイテムの値が順番に割り当てられます。

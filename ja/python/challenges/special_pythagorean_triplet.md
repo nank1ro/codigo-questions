@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特別なピタゴラス数
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+ピタゴラスの三つ組は、3つの自然数の組`a` < `b` < `c`で、<latex>a^2 + b^2 = c^2</latex>を満たすものです。
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+例えば、<latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+`a` + `b` + `c` = 1000となるピタゴラスの三つ組がちょうど1つ存在します。
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+`a` + `b` + `c` = `n`となる積`abc`を求めてください。
 
 # --seed--
 
@@ -34,21 +34,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`special_pythagorean_triplet(24)` should return 480.
+`special_pythagorean_triplet(24)`は480を返すべきです。
 
 ```python
     def test1(self):
         self.assertEqual(special_pythagorean_triplet(24), 480, "--err-t1--")
 ```
 
-`special_pythagorean_triplet(120)` should return 49920, 55080 or 60000.
+`special_pythagorean_triplet(120)`は49920、55080、または60000を返すべきです。
 
 ```python
     def test2(self):
         self.assertIn(special_pythagorean_triplet(120), [49920, 55080, 60000], "--err-t2--")
 ```
 
-`special_pythagorean_triplet(1000)` should return 31875000.
+`special_pythagorean_triplet(1000)`は31875000を返すべきです。
 
 ```python
     def test3(self):

@@ -2,19 +2,19 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 足し算
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+2つの整数 `num1` と `num2` が与えられた場合、これら2つの数を足すプログラムを書いてください
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
-> HINT: omit the argument labels with the `_` (underscore)
+2つの数の合計を返す関数を書いてください。
+> ヒント: `_`（アンダースコア）で引数ラベルを省略してください
 
-Example of function call:
+関数呼び出しの例:
 ```swift
 print(addition(1, 2))
 // prints 3
@@ -39,7 +39,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1と3の合計は4でなければなりません
 
 ```swift
     func testAddition1() {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
     }
 ```
 
-The sum of 200 and 210 must equal 410
+200と210の合計は410でなければなりません
 
 ```swift
     func testAddition2() {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
     }
 ```
 
-The sum of 15 and 35 must equal 50
+15と35の合計は50でなければなりません
 
 ```swift
     func testAddition3() {

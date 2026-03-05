@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+コードの一部を、いくつかの異なる値で再利用したい状況を考えたことがあるかもしれません。
+コード全体を書き直す代わりに、関数を定義する方がはるかにすっきりしており、繰り返し使用できます。
+Pythonでは、`def`キーワードの後に関数名を記述します：
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+__関数定義__の括弧は空である必要はありません。
+括弧の中にパラメータを指定できます
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+関数に値を__返させたい__場合があります。
+そのためには`return`キーワードがあります
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+関数には、その関数が何をするかを説明する_オプションのコメント_を追加できます：
 ```python
 """
 Prints 'Hello World' to the console.

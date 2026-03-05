@@ -1,10 +1,10 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+ブール値は、`true`または`false`の2つの値のうち1つを表します。
+C言語では、任意の式を評価して、`true`または`false`の2つの答えのうち1つを得ることができます。
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+数値や文字列と同じように、ブール値`true`を変数に格納することができます。
 
 ---
 
-The opposite value of `true` is `false`
+`true`の反対の値は`false`です

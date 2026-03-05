@@ -2,22 +2,22 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 平方和の差
 ---
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+最初の10個の自然数の二乗の和は、
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+最初の10個の自然数の和の二乗は、
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+したがって、最初の10個の自然数の二乗の和と和の二乗の差は3025 − 385 = 2640です。
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+最初の`n`個の自然数の二乗の和と和の二乗の差を求めてください。
 
 # --seed--
 
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`sum_square_difference(10)` should return 2640.
+`sum_square_difference(10)`は2640を返すべきです。
 
 ```python
     def test1(self):
         self.assertEqual(sum_square_difference(10), 2640, "--err-t1--")
 ```
 
-`sum_square_difference(20)` should return 41230.
+`sum_square_difference(20)`は41230を返すべきです。
 
 ```python
     def test2(self):
         self.assertEqual(sum_square_difference(20), 41230, "--err-t2--")
 ```
 
-`sum_square_difference(100)` should return 25164150.
+`sum_square_difference(100)`は25164150を返すべきです。
 
 ```python
     def test3(self):

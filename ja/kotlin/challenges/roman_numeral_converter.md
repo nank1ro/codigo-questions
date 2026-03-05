@@ -2,24 +2,24 @@
 language: kotlin
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: ローマ数字変換器
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+正の整数をパラメータとして受け取り、そのローマ数字表現の文字列を返す関数を作成してください。現代のローマ数字は、各桁を左端の桁から順に個別に表現し、値がゼロの桁はスキップして書きます。
 
 # --instructions--
 
-Examples:
+例：
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- すべてのローマ数字は大文字で返してください。
+- この表記法で表現できる最大の数は3,999です。
 
 # --seed--
 
@@ -51,67 +51,67 @@ fun main() {
 
 # --asserts--
 
-The number `2` must equal `II`
+数値`2`は`II`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(2) == "II")
 ```
 
-The number `12` must equal `XII`
+数値`12`は`XII`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(12) == "XII")
 ```
 
-The number `16` must equal `XVI`
+数値`16`は`XVI`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(16) == "XVI")
 ```
 
-The number `44` must equal `XLIV`
+数値`44`は`XLIV`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(44) == "XLIV")
 ```
 
-The number `68` must equal `LXVIII`
+数値`68`は`LXVIII`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(68) == "LXVIII")
 ```
 
-The number `400` must equal `CD`
+数値`400`は`CD`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(400) == "CD")
 ```
 
-The number `798` must equal `DCCXCVIII`
+数値`798`は`DCCXCVIII`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(798) == "DCCXCVIII")
 ```
 
-The number `1000` must equal `M`
+数値`1000`は`M`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(1000) == "M")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+数値`3999`は`MMMCMXCIX`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(3999) == "MMMCMXCIX")
 ```
 
-The number `649` must equal `DCXLIX`
+数値`649`は`DCXLIX`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(649) == "DCXLIX")
 ```
 
-The number `1666` must equal `MDCLXVI`
+数値`1666`は`MDCLXVI`に等しくなければなりません
 
 ```kotlin
     tryCatch(convertToRoman(1666) == "MDCLXVI")

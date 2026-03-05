@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in Python is an object and unlike other programming languages, Python has no command for declaring a variable.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+変数はデータの値を格納するためのコンテナです。
+Pythonのすべての変数はオブジェクトであり、他のプログラミング言語とは異なり、Pythonには変数を宣言するためのコマンドがありません。
+変数を作成するには、スペースを含まない**名前**を付ける必要があります。
+変数は、最初に値を代入した瞬間に作成されます。
+`x`という名前の変数を作成する例は次のとおりです：
 ```python
 x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+このようにして、`x`という名前の変数に値`1`を代入しました。
+変数`x`を表示すると、数値`1`が返されます：
 ```python
 >>> print(x)
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+変数は、格納する値を変更できるため、このように呼ばれています。
+`=`を使って新しい値を与えることで、`x`を更新できます。
 ```python
 >>> x = 1
 >>> print(x)
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+他の変数の値を変数に代入することもできます。ここでは、`y`変数に`x`の値を代入できます。
 ```python
 >>> x = 5
 >>> y = x
@@ -38,7 +38,7 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+変数を更新すると、以前の値は忘れられます。ここでは、`x`変数を2回表示して、値がどのように更新されるかを確認できます。
 ```python
 >>> x = 5
 >>> print(x)
@@ -50,14 +50,14 @@ When we update a variable, it forgets its previous value. Here we can display th
 
 ---
 
-String variables can be declared either by using single or double quotes:
+文字列変数は、シングルクォートまたはダブルクォートのどちらを使っても宣言できます：
 ```python
 >>> x = "May"
 >>> x = 'May'
 ```
-Both are the same thing.
+どちらも同じ意味です。
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+複数の単語で変数名を付けたい場合は、**スネークケース**を使用します。
+これは、追加の単語を`_`でつなぐことを意味します。

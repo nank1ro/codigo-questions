@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+ジェームズはATMからNドルを引き出したいと思っています。
+ATMは、Nが5の倍数であり、ジェームズの口座に引き出し取引を行うのに十分な現金がある場合（銀行手数料を含む）にのみ取引を受け付けます。
+引き出しが成功するたびに、銀行は`0.50$`の手数料を請求します。
+引き出し試行後のジェームズの口座残高を計算してください。
+入力は以下の順序です：
+1. ジェームズが引き出したい金額は以下の範囲です：`0 < N <= 2000`。
+2. ジェームズの初期残高は小数点以下2桁で与えられ、以下の範囲です：`0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+引き出し試行後の口座残高を小数点以下2桁の数値として返してください。
+口座に取引を完了するのに十分なお金がない場合は、現在の銀行残高を返してください。
 
 # --before-seed--
 
@@ -48,25 +48,25 @@ function accountBalance() {
 
 # --asserts--
 
-Perform a successful transaction
+取引が成功する場合
 
 ```javascript
 tryCatch(accountBalance(50, 120.00) === 69.50);
 ```
 
-Insufficient funds
+残高不足
 
 ```javascript
 tryCatch(accountBalance(200, 120.00) === 120.00);
 ```
 
-Refused transaction, invalid amount
+取引拒否、無効な金額
 
 ```javascript
 tryCatch(accountBalance(22, 120.00) === 120.00);
 ```
 
-Withdraw all money successfully
+全額の引き出しに成功
 
 ```javascript
 tryCatch(accountBalance(95, 95.50) === 0.00);

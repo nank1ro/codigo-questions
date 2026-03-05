@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+ブール値は2つの値のうちの1つを表します：`True` または `False`。
+Pythonでは任意の式を評価し、`True` または `False` の2つの答えのうちの1つを得ることができます。
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+数値や文字列と同じように、ブール値 `True` を変数に格納することができます。
 
 ---
 
-The opposite value of `True` is `False`
+`True` の反対の値は `False` です

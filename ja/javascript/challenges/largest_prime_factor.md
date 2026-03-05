@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: 最大素因数
 ---
 
 # --description--
 
-The prime factors of 13195 are 5, 7, 13 and 29.
+13195の素因数は5、7、13、29です。
 
 # --instructions--
 
-What is the largest prime factor of the given `number`?
+与えられた`number`の最大の素因数は何ですか？
 
 # --before-seed--
 
@@ -41,43 +41,43 @@ function largestPrimeFactor(number) {
 
 # --asserts--
 
-`largestPrimeFactor(2)` should return 2.
+`largestPrimeFactor(2)`は2を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(2) === 2);
 ```
 
-`largestPrimeFactor(3)` should return 3.
+`largestPrimeFactor(3)`は3を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(3) === 3);
 ```
 
-`largestPrimeFactor(5)` should return 5.
+`largestPrimeFactor(5)`は5を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(5) === 5);
 ```
 
-`largestPrimeFactor(7)` should return 7.
+`largestPrimeFactor(7)`は7を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(7) === 7);
 ```
 
-`largestPrimeFactor(8)` should return 2.
+`largestPrimeFactor(8)`は2を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(8) === 2);
 ```
 
-`largestPrimeFactor(13195)` should return 29.
+`largestPrimeFactor(13195)`は29を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(13195) === 29);
 ```
 
-`largestPrimeFactor(600851475143)` should return 6857.
+`largestPrimeFactor(600851475143)`は6857を返すべきです。
 
 ```javascript
 tryCatch(largestPrimeFactor(600851475143) === 6857);

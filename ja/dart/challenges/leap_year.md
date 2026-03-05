@@ -2,20 +2,20 @@
 language: dart
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: うるう年
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+暦年にはちょうど365.25日あります。しかし、最終的にはこれが混乱を招くことになります。なぜなら、人間は通常、小数点ではなく1の正確な整除性で数えるからです。そこで、後者を避けるために、4年周期ごとに0.25日をすべて足し合わせ、その年を366日（閏日として2月29日を含む）とし、__うるう年__と呼ぶことが決められました。4年周期の他の3年は365日のみで、__うるう年ではありません__。
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `DateTime` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+このチャレンジでは、`DateTime`クラス、`switch`文、__ifブロック__、__if-elseブロック__、__三項演算子__（`x ? a : b`）、論理演算子__AND__（`&&`）と__OR__（`||`）を使用せずに、うるう年かどうかを判定してください。ただし、__NOT__（`!`）演算子は使用できます。
 
-Return `true` if it's a leap year, `false` otherwise.
+うるう年の場合は`true`を、そうでない場合は`false`を返してください。
 
-Example of function call:
+関数呼び出しの例：
 ```dart
 print(leapYear(2000));
 // prints true
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+`DateTime`、`switch`、`if`、`else`、`&&`、`||`、`?`の使用は許可されていません。
 
 ```json
 {
@@ -51,7 +51,7 @@ The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+`2016`年はうるう年です。
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The year `2016` is a leap year.
   });
 ```
 
-The year `1996` is a leap year.
+`1996`年はうるう年です。
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The year `1996` is a leap year.
   });
 ```
 
-The year `1600` is a leap year.
+`1600`年はうるう年です。
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The year `1600` is a leap year.
   });
 ```
 
-The year `2020` is a leap year.
+`2020`年はうるう年です。
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The year `2020` is a leap year.
   });
 ```
 
-The year `2000` is a leap year.
+`2000`年はうるう年です。
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The year `2000` is a leap year.
   });
 ```
 
-The year `2008` is a leap year.
+`2008`年はうるう年です。
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The year `2008` is a leap year.
   });
 ```
 
-The year `1521` is not a leap year.
+`1521`年はうるう年ではありません。
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The year `1521` is not a leap year.
   });
 ```
 
-The year `1800` is not a leap year.
+`1800`年はうるう年ではありません。
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The year `1800` is not a leap year.
   });
 ```
 
-The year `2007` is not a leap year.
+`2007`年はうるう年ではありません。
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The year `2007` is not a leap year.
   });
 ```
 
-The year `2002` is not a leap year.
+`2002`年はうるう年ではありません。
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The year `2002` is not a leap year.
   });
 ```
 
-The year `1979` is not a leap year.
+`1979`年はうるう年ではありません。
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The year `1979` is not a leap year.
   });
 ```
 
-The year `2006` is not a leap year.
+`2006`年はうるう年ではありません。
 
 ```dart
   test('test12', () {

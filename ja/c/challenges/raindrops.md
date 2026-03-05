@@ -2,28 +2,28 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨粒
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+あなたのタスクは、数値を特定の因数に対応する雨粒の音を含む文字列に変換することです。
+因数とは、別の数値を余りなく割り切れる数値のことです。
+ある数値が別の数値の因数かどうかをテストする最も簡単な方法は、剰余演算を使用することです。
+雨粒のルールは以下の通りです:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3を因数に持つ場合、結果に 'Pling' を追加します。
+- 5を因数に持つ場合、結果に 'Plang' を追加します。
+- 7を因数に持つ場合、結果に 'Plong' を追加します。
+- 3、5、7のいずれも因数に持たない場合、結果はその数値の桁になります。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28は7を因数に持ちますが、3や5は持たないので、結果は `"Plong"` になります。
+- 30は3と5の両方を因数に持ちますが、7は持たないので、結果は `"PlingPlang"` になります。
+- 34は3、5、7のいずれの因数も持たないので、結果は `"34"` になります。
 
 # --before-seed--
 
@@ -169,110 +169,110 @@ int main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1の音は "1"
 
 ```c
     try_catch(strcmp(convert(1), "1") == 0);
 ```
 
-The sound for 3 is "Pling"
+3の音は "Pling"
 
 ```c
     try_catch(strcmp(convert(3), "Pling") == 0);
 ```
 
-The sound for 5 is "Plang"
+5の音は "Plang"
 
 ```c
     try_catch(strcmp(convert(5), "Plang") == 0);
 ```
 
-The sound for 7 is "Plong"
+7の音は "Plong"
 
 ```c
     try_catch(strcmp(convert(7), "Plong") == 0);
 ```
 
-The sound for 6 is "Pling"
+6の音は "Pling"
 
 ```c
     try_catch(strcmp(convert(6), "Pling") == 0);
 ```
 
-The sound for 8 is "8"
+8の音は "8"
 
 ```c
     try_catch(strcmp(convert(8), "8") == 0);
 ```
 
-The sound for 9 is "Pling"
+9の音は "Pling"
 
 ```c
     try_catch(strcmp(convert(9), "Pling") == 0);
 ```
 
-The sound for 10 is "Plang"
+10の音は "Plang"
 
 ```c
     try_catch(strcmp(convert(10), "Plang") == 0);
 ```
 
-The sound for 14 is "Plong"
+14の音は "Plong"
 
 ```c
     try_catch(strcmp(convert(14), "Plong") == 0);
 ```
 
-The sound for 15 is "PlingPlang"
+15の音は "PlingPlang"
 
 ```c
     try_catch(strcmp(convert(15), "PlingPlang") == 0);
 ```
 
-The sound for 21 is "PlingPlong"
+21の音は "PlingPlong"
 
 ```c
     try_catch(strcmp(convert(21), "PlingPlong") == 0);
 ```
 
-The sound for 25 is "Plang"
+25の音は "Plang"
 
 ```c
     try_catch(strcmp(convert(25), "Plang") == 0);
 ```
 
-The sound for 27 is "Pling"
+27の音は "Pling"
 
 ```c
     try_catch(strcmp(convert(27), "Pling") == 0);
 ```
 
-The sound for 35 is "PlangPlong"
+35の音は "PlangPlong"
 
 ```c
     try_catch(strcmp(convert(35), "PlangPlong") == 0);
 ```
 
-The sound for 49 is "Plong"
+49の音は "Plong"
 
 ```c
     try_catch(strcmp(convert(49), "Plong") == 0);
 ```
 
-The sound for 52 is "52"
+52の音は "52"
 
 ```c
     try_catch(strcmp(convert(52), "52") == 0);
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105の音は "PlingPlangPlong"
 
 ```c
     try_catch(strcmp(convert(105), "PlingPlangPlong") == 0);
 ```
 
 
-The sound for 3125 is "Plang"
+3125の音は "Plang"
 
 ```c
     try_catch(strcmp(convert(3125), "Plang") == 0);

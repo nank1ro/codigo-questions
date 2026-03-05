@@ -2,20 +2,20 @@
 language: c
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: うるう年
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+暦年にはちょうど365.25日あります。しかし、最終的にこれは混乱を招きます。なぜなら、人間は通常、小数点ではなく1の正確な割り切りで数えるからです。そこで、後者を避けるために、4年周期ごとに0.25日をすべて足し合わせ、その年を366日（2月29日を閏日として含む）とし、__うるう年__と呼ぶことが決定されました。4年周期の残りの3年は365日のみを含み、__うるう年ではありません__。
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `time.h` import, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+このチャレンジでは、`time.h` のインポート、`switch` 文、__ifブロック__、__if-elseブロック__、__三項演算子__（`x ? a : b`）、論理演算子 __AND__（`&&`）および __OR__（`||`）を使用せずにうるう年かどうかを判定します。ただし、__NOT__（`!`）演算子は例外として使用できます。
 
-Return `true` if it's a leap year, `false` otherwise.
+うるう年なら `true` を、そうでなければ `false` を返してください。
 
-Example of function call:
+関数呼び出しの例:
 ```c
 printf("%d\n", leap_year(2000));
 // prints true
@@ -163,7 +163,7 @@ int main() {
 
 # --asserts--
 
-The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+`time.h`、`switch`、`if`、`else`、`&&`、`||`、`?` の使用は許可されていません。
 
 ```json
 {
@@ -173,73 +173,73 @@ The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+`2016` 年はうるう年です。
 
 ```c
     try_catch(leap_year(2016) == true);
 ```
 
-The year `1996` is a leap year.
+`1996` 年はうるう年です。
 
 ```c
     try_catch(leap_year(1996) == true);
 ```
 
-The year `1600` is a leap year.
+`1600` 年はうるう年です。
 
 ```c
     try_catch(leap_year(1600) == true);
 ```
 
-The year `2020` is a leap year.
+`2020` 年はうるう年です。
 
 ```c
     try_catch(leap_year(2020) == true);
 ```
 
-The year `2000` is a leap year.
+`2000` 年はうるう年です。
 
 ```c
     try_catch(leap_year(2000) == true);
 ```
 
-The year `2008` is a leap year.
+`2008` 年はうるう年です。
 
 ```c
     try_catch(leap_year(2008) == true);
 ```
 
-The year `1521` is not a leap year.
+`1521` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(1521) == false);
 ```
 
-The year `1800` is not a leap year.
+`1800` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(1800) == false);
 ```
 
-The year `2007` is not a leap year.
+`2007` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(2007) == false);
 ```
 
-The year `2002` is not a leap year.
+`2002` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(2002) == false);
 ```
 
-The year `1979` is not a leap year.
+`1979` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(1979) == false);
 ```
 
-The year `2006` is not a leap year.
+`2006` 年はうるう年ではありません。
 
 ```c
     try_catch(leap_year(2006) == false);

@@ -1,27 +1,27 @@
 {
   "comments": {
     "order": 1,
-    "title": "Comments",
-    "description": "Learn how to comment the code"
+    "title": "コメント",
+    "description": "コードにコメントを書く方法を学ぶ"
   },
   "output": {
     "order": 2,
-    "title": "Output",
-    "description": "Learn how to output a value"
+    "title": "出力",
+    "description": "値を出力する方法を学ぶ"
   },
   "stringInterpolation": {
     "order": 3,
-    "title": "String interpolation",
-    "description": "Learn how to interpolate strings with different data types"
+    "title": "文字列補間",
+    "description": "異なるデータ型で文字列を補間する方法を学ぶ"
   },
   "variables": {
     "order": 4,
-    "title": "Variables",
-    "description": "Learn how to store values in a variable"
+    "title": "変数",
+    "description": "変数に値を格納する方法を学ぶ"
   },
   "types": {
     "order": 5,
-    "title": "Types",
-    "description": "Learn the types assignable to a variable"
+    "title": "型",
+    "description": "変数に割り当て可能な型を学ぶ"
   }
 }

@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001番目の素数
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+最初の6つの素数をリストすると、2、3、5、7、11、13であり、6番目の素数は13であることがわかります。
 
 # --instructions--
 
-What is the `n`th prime number?
+`n`番目の素数は何ですか？
 
 # --seed--
 
@@ -30,35 +30,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`nth_prime(6)` should return 13.
+`nth_prime(6)`は13を返すべきです。
 
 ```python
     def test1(self):
         self.assertEqual(nth_prime(6), 13, "--err-t1--")
 ```
 
-`nth_prime(10)` should return 29.
+`nth_prime(10)`は29を返すべきです。
 
 ```python
     def test2(self):
         self.assertEqual(nth_prime(10), 29, "--err-t2--")
 ```
 
-`nth_prime(100)` should return 541.
+`nth_prime(100)`は541を返すべきです。
 
 ```python
     def test3(self):
         self.assertEqual(nth_prime(100), 541, "--err-t3--")
 ```
 
-`nth_prime(1000)` should return 7919.
+`nth_prime(1000)`は7919を返すべきです。
 
 ```python
     def test4(self):
         self.assertEqual(nth_prime(1000), 7919, "--err-t4--")
 ```
 
-`nth_prime(10001)` should return 104743.
+`nth_prime(10001)`は104743を返すべきです。
 
 ```python
     def test5(self):

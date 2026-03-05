@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+プログラミングでは、コードのブロックを繰り返す必要がよくあります。例えば：
 ```swift
 print("2 seconds")
 print("3 seconds")
 print("4 seconds")
 print("5 seconds")
 ```
-This produces the following output:
+これは次の出力を生成します：
 ```swift
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+明らかに、長い文の場合、コードを書くのに多くの時間がかかりますが、幸いなことにループを使うことができます。
+上記と同じ出力を得る`while`ループを学びましょう。
 ```swift
 var count = 2
 while count <= 5 {
@@ -21,31 +21,31 @@ while count <= 5 {
     count += 1
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+まず、変数`count`を作成し、初期値として`2`を代入しました。
+次に、条件`count <= 5`が`true`である間コードブロックを実行する`while`文を使いました。
+コードブロック内で、`count += 1`の行を追加することを**忘れてはいけません**。
+これは`count`の値をインクリメントします。そうしないと、ループが無限になります
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while`ループの繰り返し回数を制御するには、数値に設定された変数から始めます。
+この変数をカウンター変数と呼びます
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+次に、条件で`counter`変数を数値と比較するために比較を使います。
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+`while`ループを停止するために、コードブロック内で`counter`変数をインクリメントします。
 
 ---
 
-The order you write code affects the output.
+コードを書く順序は出力に影響します。
 
 ---
 
-In Swift we also have the **repeat-while** variation of the `while` loop.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
-The __repeat-while__ loop in Swift is analogous to a __do-while__ loop in other languages
+Swiftには`while`ループの**repeat-while**バリエーションもあります。
+ループの条件を確認する_前に_、まずループブロックを1回実行します。
+その後、条件が`false`になるまでループを繰り返し続けます。
+Swiftの__repeat-while__ループは、他の言語の__do-while__ループに相当します

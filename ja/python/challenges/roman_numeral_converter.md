@@ -2,24 +2,24 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: ローマ数字変換器
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+正の整数をパラメータとして受け取り、その整数のローマ数字表現を含む文字列を返す関数を作成してください。現代のローマ数字は、各桁を左端の桁から個別に表現し、値がゼロの桁はスキップして書きます。
 
 # --instructions--
 
-Examples:
+例：
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- すべてのローマ数字は大文字で返してください。
+- この表記法で表現できる最大の数は3,999です。
 
 # --seed--
 
@@ -38,77 +38,77 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `2` must equal `II` 
+数`2`は`II`に等しくなければなりません
 
 ```python
     def test1(self):
         self.assertEqual(convert_to_roman(2), "II", "--err-t1--")
 ```
 
-The number `12` must equal `XII`
+数`12`は`XII`に等しくなければなりません
 
 ```python
     def test2(self):
         self.assertEqual(convert_to_roman(12), "XII", "--err-t2--")
 ```
 
-The number `16` must equal `XVI`
+数`16`は`XVI`に等しくなければなりません
 
 ```python
     def test3(self):
         self.assertEqual(convert_to_roman(16), "XVI", "--err-t3--")
 ```
 
-The number `44` must equal `XLIV`
+数`44`は`XLIV`に等しくなければなりません
 
 ```python
     def test4(self):
         self.assertEqual(convert_to_roman(44), "XLIV", "--err-t4--")
 ```
 
-The number `68` must equal `LXVIII`
+数`68`は`LXVIII`に等しくなければなりません
 
 ```python
     def test5(self):
         self.assertEqual(convert_to_roman(68), "LXVIII", "--err-t5--")
 ```
 
-The number `400` must equal `CD`
+数`400`は`CD`に等しくなければなりません
 
 ```python
     def test6(self):
         self.assertEqual(convert_to_roman(400), "CD", "--err-t6--")
 ```
 
-The number `798` must equal `DCCXCVIII`
+数`798`は`DCCXCVIII`に等しくなければなりません
 
 ```python
     def test7(self):
         self.assertEqual(convert_to_roman(798), "DCCXCVIII", "--err-t7--")
 ```
 
-The number `1000` must equal `M`
+数`1000`は`M`に等しくなければなりません
 
 ```python
     def test8(self):
         self.assertEqual(convert_to_roman(1000), "M", "--err-t8--")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+数`3999`は`MMMCMXCIX`に等しくなければなりません
 
 ```python
     def test9(self):
         self.assertEqual(convert_to_roman(3999), "MMMCMXCIX", "--err-t9--")
 ```
 
-The number `649` must equal `DCXLIX`
+数`649`は`DCXLIX`に等しくなければなりません
 
 ```python
     def test10(self):
         self.assertEqual(convert_to_roman(649), "DCXLIX", "--err-t10--")
 ```
 
-The number `1666` must equal `MDCLXVI`
+数`1666`は`MDCLXVI`に等しくなければなりません
 
 ```python
     def test11(self):

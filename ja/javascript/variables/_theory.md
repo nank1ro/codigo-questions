@@ -1,15 +1,15 @@
-Variables are containers for storing data values.
-Every variable in JavaScript is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In JavaScript you declare constants with the `let` or `const` keywords and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+変数はデータ値を格納するためのコンテナです。
+JavaScriptのすべての変数はオブジェクトです。
+変数を作成するには、スペースを含まない**名前**を付ける必要があります。
+変数は、最初に値を代入した時点で作成されます。
+JavaScriptでは、`let`や`const`キーワードで定数を宣言し、`var`キーワードで変数を宣言します。
+定数の値は一度設定すると変更できませんが、変数は将来別の値に設定できます。
+`x`という名前の変数を作成する例は次のとおりです:
 ```javascript
 var x = 1;
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+このようにして、`x`という名前の変数に値`1`を代入しました。
+変数`x`を表示すると、数値`1`が返されます:
 ```javascript
 console.log(x);
 // prints 1
@@ -17,8 +17,8 @@ console.log(x);
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+変数は、格納している値が変更できるため、このように呼ばれています。
+`=`を使って`x`に新しい値を与えることで更新できます。
 ```javascript
 var x = 1;
 console.log(x); // prints 1
@@ -28,8 +28,8 @@ console.log(x); // prints 2
 
 ---
 
-We can also give variables the values of other variables.
-Here, we can give to the `y` variable the value of `x`
+他の変数の値を変数に代入することもできます。
+ここでは、変数`y`に`x`の値を代入できます。
 ```javascript
 var x = 5;
 var y = x;
@@ -38,8 +38,8 @@ console.log(y); // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+変数を更新すると、以前の値は忘れられます。
+ここでは、変数`x`を2回表示して、値がどのように更新されるかを確認できます。
 ```javascript
 var x = 5;
 console.log(x); // prints 5
@@ -49,7 +49,7 @@ console.log(x); // prints 10
 
 ---
 
-In JavaScript string variables can be declared using both double quotes and single quotes:
+JavaScriptでは、文字列変数はダブルクォートとシングルクォートの両方を使って宣言できます:
 ```javascript
 let x = "May";
 // both are the same string
@@ -60,5 +60,5 @@ console.log(x === y);
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+複数の単語からなる変数名を付けたい場合は、**キャメルケース**を使います。
+フレーズの途中にある各単語の先頭を大文字にする書き方です。

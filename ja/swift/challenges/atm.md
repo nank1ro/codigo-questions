@@ -7,22 +7,22 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+ジェームズはATMからNドルを引き出したいと考えています。
+ATMは、Nが5の倍数であり、ジェームズの口座に引き出し取引を行うのに十分な残高がある場合（銀行手数料を含む）にのみ取引を受け付けます。
+引き出しが成功するたびに、銀行は`0.50$`の手数料を請求します。
+取引を試みた後のジェームズの口座残高を計算してください。
+入力は以下の順序です:
+1. ジェームズが引き出したい金額は次の範囲です: `0 < N <= 2000`。
+2. ジェームズの初期残高は小数点以下2桁で与えられ、次の範囲です: `0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+取引を試みた後の口座残高を小数点以下2桁の数値として返してください。
+口座に取引を完了するのに十分なお金がない場合は、現在の銀行残高を返してください。
 
-> HINT: omit the argument labels with the `_` (underscore)
+> ヒント: `_`（アンダースコア）で引数ラベルを省略してください
 
-Example of function call:
+関数呼び出しの例:
 ```swift
 print(accountBalance(10, 20))
 // prints 9,5
@@ -47,7 +47,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-Perform a successful transaction
+取引が成功する場合
 
 ```swift
     func testSuccessfulTransaction() {
@@ -56,7 +56,7 @@ Perform a successful transaction
     }
 ```
 
-Insufficient funds
+残高不足の場合
 
 ```swift
     func testInsufficientFunds() {
@@ -65,7 +65,7 @@ Insufficient funds
     }
 ```
 
-Refused transaction, invalid amount
+取引拒否、無効な金額
 
 ```swift
     func testNotMultipleOf5() {
@@ -74,7 +74,7 @@ Refused transaction, invalid amount
     }
 ```
 
-Withdraw all money successfully
+全額を正常に引き出す
 
 ```swift
     func testWithdrawAll() {

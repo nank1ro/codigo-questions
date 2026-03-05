@@ -2,29 +2,29 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: 2対1
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+名前が与えられた場合、次のメッセージを含む文字列を返します：
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+ここで`X`は与えられた名前です。
+ただし、名前がない場合は、次の文字列を返します：
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例：
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**入力**: `Walter`
+**出力**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**入力**: `James`
+**出力**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**入力**: `Martha`
+**出力**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -56,19 +56,19 @@ fun main() {
 
 # --asserts--
 
-No name given
+名前なし
 
 ```kotlin
     tryCatch(twoForOne() == "One for you, one for me.")
 ```
 
-Pass "James" as name
+名前に"James"を渡す
 
 ```kotlin
     tryCatch(twoForOne(name = "James") == "One for James, one for me.")
 ```
 
-Pass "Martha" as name
+名前に"Martha"を渡す
 
 ```kotlin
     tryCatch(twoForOne(name = "Martha") == "One for Martha, one for me.")

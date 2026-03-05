@@ -1,31 +1,31 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+リストは、さまざまな情報を1つの変数名の下にまとめて格納するために使えるデータ型です。
+リストは任意の型の複数の値を格納し、**インデックス**を使ってそれらの値を区別します。
+次の形式の式でリストに要素を代入できます：
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+リストの個々の要素にはインデックスを使ってアクセスできます。
+インデックスとは、リスト内の要素の位置を識別するアドレスのようなものです。
+インデックスはリスト名の直後に角括弧で囲んで記述します：
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+リストのインデックスは`0`から始まり、`1`からでは**ありません**！リストの最初の要素にはこのようにアクセスします：`list_name[0]`。
+リストの2番目の要素はインデックス1にあります：`list_name[1]`。
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+リストのインデックスは他の変数名と同じように動作します！値のアクセスにも代入にも使えます。
+リストのインデックスにアクセスする方法は次のとおりです：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] # Gets the value "Jeremiah"
 ```
-This is how an assignment works:
+代入はこのように行います：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
@@ -34,14 +34,14 @@ names[0] # Gets the new value "Jordan"
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+文字列と同様に、リストには**長さ**があります。
+リストの長さは、含まれる要素の数です
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+リストは固定長である必要はありません。
+いつでもリストの末尾に要素を追加できます！
+リストに要素を追加するには`append`キーワードを使います：
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+リストの一部分だけにアクセスしたい場合があります。
+次のコードを見てください：
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+まず、`numbers`というリストを作成します。
+次に、リストの一部分を取り出してsliceリストに格納します。
+これは、リスト名の後にアクセスしたいインデックスを指定することで行います：`numbers[1:3]`。
+Pythonでは、このようにリストの一部分を指定する場合、最初のインデックス`1`の要素は含まれますが、2番目のインデックス`3`の要素は含まれません。
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+文字列もリストとまったく同じようにスライスできます！実際、文字列は文字のリストと考えることができます：各文字はインデックス`0`から始まるリスト内の連続した要素です。
 ```python
 list_name[:2]
 # Grabs the first two items
 list_name[3:]
 # Grabs the fourth through last items
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+リストスライスにリスト（または文字列）の最初または最後の要素が含まれる場合、その要素のインデックスを省略できます。
 
 ---
 
-List elements could be of any type:
+リストの要素はどんな型でも構いません：
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+上の例では、順に文字列、整数、ブール値があります。
+しかし、リストの中にリストを含めることもできます！
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+リスト内の要素を検索する必要がある場合があります。
+Pythonでは`index()`メソッドを使用できます：
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+上のコードは、文字列`"Zac"`を含む最初のインデックス（この場合は`1`）を出力します。
+また、`insert()`メソッドを使って、特定のインデックスに要素を挿入することもできます：
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+上のコードはインデックス`1`に`"Ali"`を挿入し、このインデックス以降のすべての要素を1つ後ろにずらします
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+Pythonでは`for..in`キーワードを使って非常に簡単にリストをループ処理できます：
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+`for`キーワードの後に変数名が続き、リストの各要素の値が順番に代入されます。
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+**タプル**はリストに似ていますが、はるかに高速です。
+ただし、タプルの値は変更できません。
+タプルは、プログラムの実行中に変わらない**読み取り専用**のデータに使う傾向があります。
+タプルを作成するには丸括弧`()`を使います
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+タプルをリストに変換したい場合があります。
+そのためには`list()`関数を使用できます
 
 ---
 
-Likewise, we can convert a list into a tuple
+同様に、リストをタプルに変換することもできます

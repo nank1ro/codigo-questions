@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "足し算"
   },
   "atm": {
     "difficulty": 1,
@@ -13,67 +13,67 @@
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "雨粒"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "数字の合計"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "2対1"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100のドア"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "アッカーマン関数"
   },
   "multiples_of_3_or_5": {
     "difficulty": 1,
-    "name": "Multiples of 3 or 5"
+    "name": "3または5の倍数"
   },
   "even_fibonacci_numbers": {
     "difficulty": 1,
-    "name": "Even Fibonacci numbers"
+    "name": "フィボナッチ偶数"
   },
   "largest_prime_factor": {
     "difficulty": 2,
-    "name": "Largest prime factor"
+    "name": "最大素因数"
   },
   "largest_palindrome_product": {
     "difficulty": 2,
-    "name": "Largest palindrome product"
+    "name": "最大回文積"
   },
   "smallest_multiple": {
     "difficulty": 1,
-    "name": "Smallest multiple"
+    "name": "最小公倍数"
   },
   "sum_square_difference": {
     "difficulty": 1,
-    "name": "Sum square difference"
+    "name": "平方和の差"
   },
   "10001st_prime": {
     "difficulty": 1,
-    "name": "10001st prime"
+    "name": "10001番目の素数"
   },
   "largest_product_in_a_series": {
     "difficulty": 2,
-    "name": "Largest product in a series"
+    "name": "数列の最大積"
   },
   "special_pythagorean_triplet": {
     "difficulty": 2,
-    "name": "Special pythagorean triplet"
+    "name": "特別なピタゴラス数"
   },
   "summation_of_primes": {
     "difficulty": 2,
-    "name": "Summation of primes"
+    "name": "素数の合計"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "算術平均",
     "isPro": true
   },
   "fizz_buzz": {
@@ -83,12 +83,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "ローマ数字変換器",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "うるう年",
     "isPro": true
   }
 }

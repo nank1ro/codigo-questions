@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+**等価** `==` 関係演算子から始めましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、2つの式が等しいかどうかを示します。例えば：
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+**不等価** `!=` 関係演算子を見てみましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、2つの式が等しく**ない**かどうかを示します。例えば：
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+これは*等価*演算子の正反対です
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+**より大きい** `>` 関係演算子を見てみましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、一方の式がもう一方より大きいかどうかを示します。例えば：
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+**より小さい** `<` 関係演算子を見てみましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、一方の式がもう一方より小さいかどうかを示します。例えば：
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+**以上** `>=` 関係演算子を見てみましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、一方の式がもう一方以上かどうかを示します。例えば：
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+**以下** `<=` 関係演算子を見てみましょう。
+これは**ブール値**、真 `1` または偽 `0` を返し、一方の式がもう一方以下かどうかを示します。例えば：
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+次に**ブール**演算子を見てみましょう。最初は __and__ `&&` です。
+これは*偽*と評価される最初のオペランドを返すか、すべてが*真*の場合は最後のオペランドを返します。
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+**or** `||` ブール演算子を見てみましょう。
+これは*真*と評価される最初のオペランドを返すか、すべてが*偽*の場合は最後のオペランドを返します。
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最後に **not** `!` ブール演算子を見てみましょう。
+これは式の論理状態を反転させたブール値を返します。
 ```c
 >>> !true
 0

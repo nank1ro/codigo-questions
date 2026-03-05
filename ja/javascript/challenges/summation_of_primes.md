@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: 素数の合計
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+10未満の素数の合計は2 + 3 + 5 + 7 = 17です。
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+`n`未満のすべての素数の合計を求めてください。
 
 # --before-seed--
 
@@ -41,25 +41,25 @@ function primeSummation(n) {
 
 # --asserts--
 
-`primeSummation(17)` should return 41.
+`primeSummation(17)`は41を返すべきです。
 
 ```javascript
 tryCatch(primeSummation(17) === 41);
 ```
 
-`primeSummation(2001)` should return 277050.
+`primeSummation(2001)`は277050を返すべきです。
 
 ```javascript
 tryCatch(primeSummation(2001) === 277050);
 ```
 
-`primeSummation(140759)` should return 873608362.
+`primeSummation(140759)`は873608362を返すべきです。
 
 ```javascript
 tryCatch(primeSummation(140759) === 873608362);
 ```
 
-`primeSummation(2000000)` should return 142913828922.
+`primeSummation(2000000)`は142913828922を返すべきです。
 
 ```javascript
 tryCatch(primeSummation(2000000) === 142913828922);

@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+Pythonでは、`+`記号を使って2つ以上の文字列を結合して表示できます。例えば：
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+しかし、`+`記号を使って`10`のような数値と` "friends"`のような文字列を結合しようとすると、異なる種類の値であるためエラーが発生します
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+フォーマット文字列を使うと、文字列と数値を結合するような式を、エラーなしで表示できます。
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+フォーマット文字列は2つの部分で構成されます。まず文字`f`、次にフォーマットしたい文字列です
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+次に、異なる種類の値を波括弧の中に入れることで、1つのprint文として表示します。ここでは`{5}`のようにします
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+`friends`のような変数を波括弧の間に入れると、その値も表示されます
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+フォーマット文字列の中では、波括弧を使って何度でも値を挿入できます
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+フォーマット文字列はprint文での使用に最適です。通常の文字列のように変数に格納することはできません。

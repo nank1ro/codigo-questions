@@ -1,103 +1,103 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+**等価** `==` 比較演算子から始めましょう。
+この演算子は、2つの式が等しいかどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
-console.log(2 == 2); 
-// prints true
+console.log(2 == 2);
+// true を出力
 console.log(2 == 3);
-// prints false
+// false を出力
 ```
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+**不等価** `!=` 比較演算子に進みましょう。
+この演算子は、2つの式が等しく**ない**かどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
 console.log(2 != 2);
-// prints false
-console.log(2 != 3); 
-// prints true
+// false を出力
+console.log(2 != 3);
+// true を出力
 ```
-It is exactly the opposite of the *equal* operator
+これは*等価*演算子の正反対です
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+**より大きい** `>` 比較演算子に進みましょう。
+この演算子は、一方の式がもう一方より大きいかどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
 console.log(2 > 2);
-// prints false
+// false を出力
 console.log(3 > 2);
-// prints true
+// true を出力
 ```
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+**より小さい** `<` 比較演算子に進みましょう。
+この演算子は、一方の式がもう一方より小さいかどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
 console.log(2 < 2);
-// prints false
+// false を出力
 console.log(2 < 3);
-// prints true
+// true を出力
 ```
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+**以上** `>=` 比較演算子に進みましょう。
+この演算子は、一方の式がもう一方以上かどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
-console.log(2 >= 2); 
-// prints true
+console.log(2 >= 2);
+// true を出力
 console.log(3 >= 2);
-// prints true
+// true を出力
 console.log(3 >= 4);
-// prints false
+// false を出力
 ```
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+**以下** `<=` 比較演算子に進みましょう。
+この演算子は、一方の式がもう一方以下かどうかを示す**ブール値**（`true` または `false`）を返します。例えば：
 ```javascript
-console.log(2 <= 2); 
-// prints true
+console.log(2 <= 2);
+// true を出力
 console.log(3 <= 2);
-// prints false
+// false を出力
 console.log(3 <= 4);
-// prints true
+// true を出力
 ```
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+次に**論理**演算子を見てみましょう。まず__AND__ `&&`から始めます。
+この演算子は、*false*と評価される最初のオペランドを返し、すべてが*true*の場合は最後のオペランドを返します。
 ```javascript
 console.log(2 == 2 && 2 == 3);
-// prints false
+// false を出力
 console.log(1 == 1 && 1 == 1.0);
-// prints true
+// true を出力
 ```
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+**or** `||` 論理演算子に進みましょう。
+この演算子は、*true*と評価される最初のオペランドを返し、すべてが*false*の場合は最後のオペランドを返します。
 ```javascript
 console.log(2 == 2 || 2 == 3);
-// prints true
+// true を出力
 console.log(1 == 2 || 1 == 3);
-// prints false
+// false を出力
 ```
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最後に**not** `!` 論理演算子を見てみましょう。
+この演算子は、式の論理状態を反転したブール値を返します。
 ```javascript
 console.log(!true);
-// prints false
+// false を出力
 console.log(!false);
-// prints true
+// true を出力
 console.log(!(2 == 2));
-// prints false
+// false を出力
 ```

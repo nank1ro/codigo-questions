@@ -1,51 +1,51 @@
-**Objects** are similar to arrays, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Objects are enclosed in curly brackets, like so:
+**オブジェクト**は配列に似ていますが、インデックスの代わりに*キー*を使って値にアクセスします。
+キーには任意の文字列や数値を使うことができます。
+オブジェクトは波括弧で囲みます。以下のように記述します:
 ```javascript
 var objectName = {"key1": 1, "key2": 2, "key3": 3};
 ```
-This is a dictionary called `objectName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+これは`objectName`という名前の辞書で、3つの*キーと値のペア*を持っています。
+キー`key1`は値`1`を、`key2`は`2`を指し、以下同様です。
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+辞書の値にキーでアクセスする方法は、配列の値にインデックスでアクセスするのと同じです:
 ```javascript
-// gets the age value from the user dictionary
+// user辞書からageの値を取得する
 user['age'];
 ```
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+配列と同様に、辞書は_ミュータブル（変更可能）_です。
+つまり、作成後に変更することができます（定数として宣言されていない場合）。
+この利点の1つは、作成後に辞書に新しい_キーと値のペア_を追加できることです。以下のように記述します:
 ```javascript
 dictName[newKeyName] = newValue;
 ```
 
 ---
 
-Because dictionaries variables are mutable, they can be changed in many ways.
-Items can be removed from a dictionary with the 'delete' keyword:
+辞書変数はミュータブル（変更可能）なので、さまざまな方法で変更できます。
+'delete'キーワードを使って辞書から要素を削除できます:
 ```javascript
 delete dictName[keyName];
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+これにより、辞書からキー`keyName`とそれに関連付けられた値が削除されます。
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `Object.keys()` method.
+辞書のすべてのキーを一覧表示したい場合はどうすればよいでしょうか？
+そのためには`Object.keys()`メソッドがあります。
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `Object.values()` method.
+辞書のすべての値を一覧表示したい場合はどうすればよいでしょうか？
+そのためには`Object.values()`メソッドがあります。
 
 ---
 
-As for arrays, we can loop between dictionary elements using the `Object.entries()` method.
+配列と同様に、`Object.entries()`メソッドを使って辞書の要素をループすることができます。
 ```javascript
 var user = {"first_name": "John", "last_name": "Hood", "age": 30};
 for (const [key, value] of Object.entries(user)) {

@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while`ループを使ってコードを繰り返す方法を知っています。
+例えば、次のプログラムは`hello`を表示する文を繰り返します
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+しかし、`for`ループでも同じことができます:
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");
@@ -17,14 +17,14 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for`ループでは、ループを何回実行するかを指定できます
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+`<`を使うと次の数値を含まずにループし、`<=`を使うと次の数値を含んでループできます
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`という変数はカウンター変数です。
+好きな名前を付けることができます。
+ループの現在の繰り返し回数を数えます

@@ -2,16 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3または5の倍数
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+10未満の自然数で3または5の倍数をすべてリストアップすると、3、5、6、9が得られます。これらの倍数の合計は23です。
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+指定されたパラメータ値`number`未満の3または5のすべての倍数の合計を求めてください。
 
 # --before-seed--
 
@@ -48,19 +48,19 @@ fun main() {
 
 # --asserts--
 
-`multiplesOf3and5(10)` should return 23.
+`multiplesOf3and5(10)`は23を返すべきです。
 
 ```kotlin
 tryCatch(multiplesOf3and5(10) == 23)
 ```
 
-`multiplesOf3and5(1000)` should return 233168.
+`multiplesOf3and5(1000)`は233168を返すべきです。
 
 ```kotlin
 tryCatch(multiplesOf3and5(1000) == 233168)
 ```
 
-`multiplesOf3and5(6987)` should return 11390208
+`multiplesOf3and5(6987)`は11390208を返すべきです
 
 ```kotlin
 tryCatch(multiplesOf3and5(6987) == 11390208)

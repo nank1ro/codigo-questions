@@ -1,15 +1,15 @@
-> Computers are ideal for repetitive tasks.
+> コンピュータは繰り返し作業に最適です。
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+最も基本的な繰り返しの形式は `while` キーワードを使います。
+これは制御する_ブール式_が真である限り、ブロックを繰り返します:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+ブール式はループの最初に一度評価され、
+ブロックを通る各反復の前に再度評価されます。
 
 ```kotlin
 var x = 3
@@ -18,16 +18,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+ここでは変数 `x` を作成し、初期値として __3__ を代入しています。
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+次に、条件 `x > 0` が `true` である限りコードブロックを実行する `while` 文を使用しています。
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+コードブロックの中で、`x--` の行を追加することを**忘れてはいけません**。
+これは `x` の値を減少させます。そうしないと、ループは無限になります。
 
 ---
 
-Let's analyze this snippet of code.
+このコードスニペットを分析しましょう。
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +35,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__: `counter` 変数を __0__ で初期化します。
+- __[2]__: _while_ の条件式は「counter が _100_ より小さい限り、本体の文を繰り返す」ことを意味します。
+- __[3]__: `+=` 演算子は `counter` に _10_ を加え、その結果を一つの操作で `counter` に代入します。
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+上記のコードの出力は _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_ です。
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+_while_ を使う2つ目の方法があります。`do` キーワードと組み合わせて使います。
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+ご覧の通り、`do-while` は `while` ループにとても似ていますが、1つの重要な違いがあります:
+> ループの本体は条件が評価される前に一度実行されます。
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+言い換えれば、`do-while` の本体は、条件式が最初に `false` を返しても、少なくとも一度は必ず実行されます。
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+対照的に、`while` ループの本体は、条件が最初に `false` を返した場合、一度も実行されません。
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+_while_ ループは3つの構造的ジャンプ式をサポートしています:
+- `break` は最も近い囲みループを終了します。
+- `continue` は最も近い囲みループの次のステップに進みます。
+- `return` はデフォルトで最も近い囲み関数または無名関数から戻ります（_関数について話すときに後で見ます_）。
 
-Here is an example of the use of `continue` within a _while_ loop:
+_while_ ループ内での `continue` の使用例を示します:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +74,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+__[1]__ でご覧の通り、`i` が _2_ に等しいとき、スキップして次のステップに _continue_ します。実際に数字の2は表示されません。
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+_while_ ループ内での `break` の使用例を示します:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +89,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+__[1]__ でご覧の通り、`i` が _2_ に等しいとき、ループを _break_ します。実際に数字の2と3は表示されません。

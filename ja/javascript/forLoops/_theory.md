@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+`while`ループを使ってコードを繰り返す方法は知っています。
+このプログラムのように、`hello`を表示する文を繰り返します
 ```javascript
 var counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+しかし、`for`ループでも同じことができます：
 ```javascript
 for (let i = 0; i < 5; i++) {
     console.log("hello");
@@ -17,28 +17,28 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for`ループでは、ループを何回実行するかを指定できます
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+`<`を使うと次の数値を含まずにループし、`<=`を使うと次の数値を含めてループできます
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i`という変数はカウンター変数です。
+好きな名前をつけることができます。
+ループの現在の繰り返し回数を数えます
 
 ---
 
-In JavaScript we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+JavaScriptには`forEach`ループもあります。
+`forEach`は、`for`ループと同じ順序でシーケンス内の各要素に対して指定されたクロージャを呼び出します：
 ```javascript
-// this is an array, we'll see about that soon
+// これは配列です。詳しくはすぐに学びます
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```
-Using the `forEach` method is distinct from a `for` loop in two important ways:
-1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+`forEach`メソッドの使用は、`for`ループとは2つの重要な点で異なります：
+1. `break`や`continue`文を使って、本体クロージャの現在の呼び出しを終了したり、後続の呼び出しをスキップしたりすることはできません。
+2. 本体クロージャ内で`return`文を使用すると、クロージャのみが終了し、外側のスコープは終了しません。また、後続の呼び出しもスキップされません。
+注意：`=>`は_アロー関数_と呼ばれ、波括弧{}を置き換えて（必要に応じて）値を返すES6の省略関数構文です

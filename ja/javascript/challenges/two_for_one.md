@@ -2,29 +2,29 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: 2対1
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+名前が与えられた場合、次のメッセージを含む文字列を返します：
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+ここで`X`は与えられた名前です。
+ただし、名前が指定されていない場合は、次の文字列を返します：
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例：
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**入力**: `Walter`
+**出力**: `One for Walter, one for me.`
 
-**input**:
-**output**: `One for you, one for me.`
+**入力**:
+**出力**: `One for you, one for me.`
 
-**input**: `David`
-**output**: `One for David, one for me.`
+**入力**: `David`
+**出力**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -54,19 +54,19 @@ function twoForOne() {
 
 # --asserts--
 
-No name given
+名前が指定されていない場合
 
 ```javascript
 tryCatch(twoForOne() === "One for you, one for me.");
 ```
 
-Pass "James" as name
+名前として"James"を渡す
 
 ```javascript
 tryCatch(twoForOne("James") === "One for James, one for me.");
 ```
 
-Pass "Martha" as name
+名前として"Martha"を渡す
 
 ```javascript
 tryCatch(twoForOne("Martha") === "One for Martha, one for me.");

@@ -1,43 +1,43 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+演算子は変数や値に対して演算を行うために使用されます。
+まず算術演算子から始めましょう。特に**加算**演算子 `+` についてです。
+2つの数値を足すために使用されます。例えば：
 ```swift
 print(5 + 3) // 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+次は**減算**演算子 `-` を見てみましょう。
+ある数値から別の数値を引くために使用されます。例えば：
 ```swift
 print(5 - 3) // 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+次は**乗算**演算子 `*` を見てみましょう。
+2つの数値を掛け合わせるために使用されます。例えば：
 ```swift
 print(5 * 3) // 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+次は**除算**演算子 `/` を見てみましょう。
+2つの数値を割るために使用されます。例えば：
 ```swift
 print(10 / 5) // 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+次は**剰余**演算子 `%` を見てみましょう。
+2つの数値の除算後の余りを求めるために使用されます。例えば：
 ```swift
 print(5 % 2) // 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+5を2で割ると商が2で余りが1なので、結果は1になります
 ```swift
 print(9 % 3) // 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+9を3で割ると商が3で余りが0なので、結果は0になります

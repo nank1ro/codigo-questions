@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+JamesはATMからNドルを引き出したいと考えています。
+ATMは、Nが5の倍数であり、Jamesの口座に引き出し取引を行うのに十分な残高がある場合（銀行手数料を含む）にのみ取引を受け付けます。
+引き出しが成功するたびに、銀行は `0.50$` の手数料を請求します。
+取引試行後のJamesの口座残高を計算してください。
+入力は以下の順序です:
+1. Jamesが引き出したい金額は次の範囲内です: `0 < N <= 2000`。
+2. Jamesの初期残高は小数点以下2桁の精度で与えられ、次の範囲内です: `0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+取引試行後の口座残高を小数点以下2桁の精度の数値として返してください。
+取引を完了するのに十分な残高がない場合は、現在の口座残高を返してください。
 
 # --before-seed--
 
@@ -162,25 +162,25 @@ int main() {
 
 # --asserts--
 
-Perform a successful transaction
+取引が成功する場合
 
 ```c
     try_catch(account_balance(50, 120.00) == 69.50);
 ```
 
-Insufficient funds
+残高不足
 
 ```c
     try_catch(account_balance(200, 120.00) == 120.00);
 ```
 
-Refused transaction, invalid amount
+取引拒否、無効な金額
 
 ```c
     try_catch(account_balance(22, 120.00) == 120.00);
 ```
 
-Withdraw all money successfully
+全額引き出しに成功
 
 ```c
     try_catch(account_balance(95, 95.50) == 0.00);

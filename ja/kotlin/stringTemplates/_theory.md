@@ -1,5 +1,5 @@
-A String _template_ is a programmatic way to generate a String.
-In Kotlin we can use the `+` sign (concatenation) to display two or more strings together, like:
+文字列_テンプレート_は、プログラム的に文字列を生成する方法です。
+Kotlinでは、`+`記号（連結）を使用して、2つ以上の文字列を一緒に表示できます。例えば：
 ```kotlin
 println("Hello " + "Kotlin!")
 // prints "Hello Kotlin!"
@@ -7,33 +7,33 @@ println("Hello " + "Kotlin!")
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+しかし、`+`記号を使って'10'のような数値と` "friends"`のような文字列を結合しようとすると、異なる種類の値であるためエラーが発生します
 
 ---
 
-String templates allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+文字列テンプレートを使うと、文字列に数値を加えるような式をエラーなく表示できます。
+`${}`の中に式を入れると、それが評価されます。
+戻り値は文字列に変換され、結果の文字列に挿入されます
 
 ---
 
-If you put a $ before an identifier name, the String template will insert that identifier's contents into the String
+識別子名の前に$を置くと、文字列テンプレートはその識別子の内容を文字列に挿入します
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, nothing special happens
+`$`記号の後にプログラムの識別子として認識されないものが続く場合、特に何も起こりません
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+ドル記号の後に変数を挿入して、その値を表示することもできます
 
 ---
 
-We can use curly brackets to insert values as often as we like inside the string templates
+波括弧を使って、文字列テンプレート内に何度でも値を挿入できます
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+`${}`の中には条件式も入れることができます。例えば：
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
 // prints Correct
@@ -41,4 +41,4 @@ println("${if (true) "Correct" else "Wrong"}")
 
 ---
 
-String templates are best used in print statements, but we can also store them in variables like normal strings.
+文字列テンプレートはprint文で最もよく使われますが、通常の文字列と同様に変数に格納することもできます。

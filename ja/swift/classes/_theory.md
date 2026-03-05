@@ -1,15 +1,15 @@
-Swift is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Swiftはオブジェクト指向プログラミング言語であり、オブジェクトと呼ばれるプログラミング構造を操作します。
+オブジェクトは、データと関数を含む単一のデータ構造と考えることができます。オブジェクトの関数はメソッドと呼ばれます。
+例えば、以下を呼び出すとき:
 ```swift
 dictName.removeValue(forKey: "keyName")
 ```
-Swift checks to see if `dictName` has a `removeValue()` method (which all dictionaries have) and executes that method if it finds it.
+Swiftは`dictName`に`removeValue()`メソッドがあるかどうかを確認し（すべての辞書にこのメソッドがあります）、見つかった場合はそのメソッドを実行します。
 
 ---
 
-_Structures_ and _classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class|struct consists only of the `class` or `struct` keyword and its name, for example:
+_構造体_と_クラス_は、プログラムコードの構成要素となる汎用的で柔軟な構造です。
+基本的なクラスや構造体は、`class`または`struct`キーワードとその名前だけで構成されます。例えば:
 ```swift
 class ClassName {
     // class definition
@@ -21,43 +21,43 @@ struct ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
+`Animal`クラスの中に何かを入れてみましょう
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+クラスを定義しただけではオブジェクトは作成されません。
+そのためには、クラスの__インスタンス__を作成する必要があります
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+クラスが独自の関数を持つ場合、それらの関数は__メソッド__と呼ばれます。
 
 ---
 
-Structures and classes in Swift have many things in common. Both can:
-- Define properties to store values
-- Define methods to provide functionality
-- Define subscripts to provide access to their values using subscript syntax
-- Define initializers to set up their initial state
-- Be extended to expand their functionality beyond a default implementation
-- Conform to protocols to provide standard functionality of a certain kind
+Swiftの構造体とクラスには多くの共通点があります。両方とも以下のことができます:
+- 値を格納するプロパティを定義する
+- 機能を提供するメソッドを定義する
+- サブスクリプト構文を使って値にアクセスするサブスクリプトを定義する
+- 初期状態を設定するイニシャライザを定義する
+- デフォルトの実装を超えて機能を拡張する
+- 特定の種類の標準機能を提供するプロトコルに準拠する
 
-But classes have additional capabilities that structures don't have:
-- Inheritance enables one class to inherit the characteristics of another
-- Type casting enables you to check and interpret the type of a class instance at runtime
-- Deinitializers enable an instance of a class to free up any resources it has assigned
-- Reference counting allows more than one reference to a class instance
+ただし、クラスには構造体にはない追加の機能があります:
+- 継承により、あるクラスが別のクラスの特性を引き継ぐことができる
+- 型キャストにより、実行時にクラスインスタンスの型を確認・解釈できる
+- デイニシャライザにより、クラスのインスタンスが割り当てたリソースを解放できる
+- 参照カウントにより、クラスインスタンスへの複数の参照が可能になる
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+_ドット構文_を使ってインスタンスのプロパティにアクセスできます。
+ドット構文では、インスタンス名の直後にピリオド`.`で区切って、スペースなしでプロパティ名を記述します:
 ```swift
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+同じ構文を使ってプロパティの値を更新することもできます
 
 ---
 
-One advantage of structures is that have an automatically generated memberwise initializer, which you can use to initialize the member properties of new structure instances.
-Initial values for the properties of the new instance can be passed to the memberwise initializer by name
+構造体の利点の1つは、自動生成されるメンバーワイズイニシャライザがあることです。これを使って、新しい構造体インスタンスのメンバープロパティを初期化できます。
+新しいインスタンスのプロパティの初期値は、名前でメンバーワイズイニシャライザに渡すことができます

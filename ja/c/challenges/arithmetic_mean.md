@@ -2,18 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: 算術平均
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+数値ベクトルの_算術平均_を求める `mean` という関数を書いてください。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+数値ベクトルの平均を返す関数を書いてください。
 
-Example of function call:
+関数呼び出しの例:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]` の平均は4.0でなければならない
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]` の平均は5.0でなければならない
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]` の平均は45.0でなければならない
 
 ```c
     double arr3[] = {12, 34, 56, 78};

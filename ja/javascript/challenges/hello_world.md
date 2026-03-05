@@ -7,11 +7,11 @@ title: Hello World!
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__は、新しい言語や環境でプログラミングを始める際の伝統的な最初のプログラムです。
 
 # --instructions--
 
-Write a function that returns the string `"Hello, World!"`.
+文字列`"Hello, World!"`を返す関数を書いてください。
 
 # --before-seed--
 
@@ -41,7 +41,7 @@ function hello() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+関数は"Hello, World!"を返すべきです。
 
 ```javascript
 tryCatch(hello() === "Hello, World!");

@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+変数に値を代入するには `=` 記号を使うことを既に学びました。例えば：
 ```swift
 let a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+初期化済みの変数 `total` があるとします
 ```swift
 var total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+変数 `total` に数値 `2` を加えたい場合、次のように書くことができます
 ```swift
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+これで動きます！しかし、同じことをより短く書く方法があります：
 ```swift
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+`+=` 記号は**加算代入**と呼ばれます。
+変数の値に値を加算し、その結果をその変数に代入します。
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+加算代入と同様に、**減算代入** `-=` があります。
+機能は同じで、唯一の違いは減算を行うことです。
+つまり、以下は全く同じです
 ```swift
 var num = num - 5
 // is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**乗算代入** `*=` 演算子を見てみましょう。
+変数に値を掛けて、その結果をその変数に代入します。
+つまり、以下は全く同じです
 ```swift
 var num = num * 5
 // is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+**除算代入** `/=` 演算子を見てみましょう。
+変数を値で割って、その結果をその変数に代入します。
+つまり、以下は全く同じです
 ```swift
 num = num / 5
 // is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+**剰余代入** `%=` 演算子を見てみましょう。
+変数と値の剰余を計算し、その結果をその変数に代入します。
+つまり、以下は全く同じです
 ```swift
 num = num % 5
 // is equal to

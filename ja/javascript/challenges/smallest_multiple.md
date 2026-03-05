@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: 最小公倍数
 ---
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520は1から10までのすべての数で余りなく割り切れる最小の数です。
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+1から`n`までのすべての数で均等に割り切れる最小の正の数は何ですか？
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function smallestMultiple(n) {
 
 # --asserts--
 
-`smallestMultiple(5)` should return 60.
+`smallestMultiple(5)`は60を返すべきです。
 
 ```javascript
 tryCatch(smallestMultiple(5) === 60);
 ```
 
-`smallestMultiple(7)` should return 420.
+`smallestMultiple(7)`は420を返すべきです。
 
 ```javascript
 tryCatch(smallestMultiple(7) === 420);
 ```
 
-`smallestMultiple(10)` should return 2520.
+`smallestMultiple(10)`は2520を返すべきです。
 
 ```javascript
 tryCatch(smallestMultiple(10) === 2520);
 ```
 
-`smallestMultiple(13)` should return 360360.
+`smallestMultiple(13)`は360360を返すべきです。
 
 ```javascript
 tryCatch(smallestMultiple(13) === 360360);
 ```
 
-`smallestMultiple(20)` should return 232792560.
+`smallestMultiple(20)`は232792560を返すべきです。
 
 ```javascript
 tryCatch(smallestMultiple(20) === 232792560);

@@ -1,22 +1,22 @@
-> The `for` keyword executes a block of code for each value in a sequence.
+> `for`キーワードは、シーケンス内の各値に対してコードブロックを実行します。
 
-The `for` loop iterates through anything that provides an iterator.
+`for`ループは、イテレータを提供するものを反復処理します。
 
-The syntax of `for` is the following:
+`for`の構文は以下の通りです：
 ```kotlin
 for (item in collection) print(item)
 ```
 
-The body of `for` can also be a block
+`for`の本体はブロックにすることもできます
 ```kotlin
 for (item in collection) {
     print(item)
 }
 ```
 
-Each time through the loop, `item` is given the next element in values.
+ループを通過するたびに、`item`に値の次の要素が代入されます。
 
-Here's a `for` loop repeating an action a fixed number of times:
+以下は、固定回数のアクションを繰り返す`for`ループです：
 
 ```kotlin
 for (i in 1..3) {
@@ -25,12 +25,12 @@ for (i in 1..3) {
 // prints 1, 2, 3
 ```
 
-The output shows the index `i` receiving each value in the range from _1_ to _3_.
+出力は、インデックス`i`が_1_から_3_までの範囲の各値を受け取ることを示しています。
 
 ---
 
-A _range_ is an interval of values defined by a pair of endpoints.
-There are two basic ways to define ranges:
+_範囲_は、一対の端点で定義される値の区間です。
+範囲を定義する基本的な方法は2つあります：
 
 ```kotlin
 var firstRange = 1..3           // [1]
@@ -44,35 +44,35 @@ println(secondRange)
 */
 ```
 
-- __[1]__ using the `..` syntax includes both bounds in the resulting range.
-- __[2]__ `until` excludes the end. The output shows that _3_ is not part of the range.
+- __[1]__ `..`構文を使用すると、結果の範囲に両方の境界が含まれます。
+- __[2]__ `until`は終端を除外します。出力は、_3_が範囲に含まれないことを示しています。
 
 ---
 
-You can iterate over a range in reverse order.
+範囲を逆順で反復処理することができます。
 
-You will probably expect `3..1` to work, unfortunately, the Kotlin team has decided to import this functionality in a different way.
+`3..1`が動作すると思うかもしれませんが、残念ながら、Kotlinチームはこの機能を別の方法でインポートすることを決定しました。
 
-In fact if you try to run this snippet of code:
+実際に、このコードスニペットを実行してみると：
 ```kotlin
 for (i in 3..1) println(i)
 ```
 
-You'll see that nothing is printed.
-To make it working we've to use the `downTo` keyword:
+何も出力されないことがわかります。
+これを動作させるには、`downTo`キーワードを使用する必要があります：
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
 // prints 3, 2, 1
 ```
 
-`downTo` produces a decreasing range.
+`downTo`は減少する範囲を生成します。
 
 ---
 
-The default _step_ of a range is __1__, but you can explicitly set another value.
+範囲のデフォルトの_ステップ_は__1__ですが、別の値を明示的に設定することができます。
 
-You can define the __step__ of your `for` loop using the `step` keyword.
+`step`キーワードを使用して、`for`ループの__ステップ__を定義できます。
 
 ```kotlin
 for (i in 1..10 step 2) {
@@ -81,11 +81,11 @@ for (i in 1..10 step 2) {
 // prints 1, 3, 5, 7, 9
 ```
 
-As you can see, the code-block runs with a step of _2_ instead of _1_, changing completely our output.
+ご覧の通り、コードブロックは_1_ではなく_2_のステップで実行され、出力が完全に変わります。
 
 ---
 
-You can also produce a range of _characters_.
+_文字_の範囲を生成することもできます。
 ```kotlin
 for (char in 'a'..'z') print(char)
 // prints abcdefghijklmnopqrstuvwxyz
@@ -93,21 +93,21 @@ for (char in 'a'..'z') print(char)
 
 ---
 
-You can iterate over a __String__.
+__文字列__を反復処理することができます。
 ```kotlin
 for (char in 'abc') print(char + 1)
 // prints bdc
 ```
 
-In the example above we've printed each character + 1, so `'a'` becomes `'b'`, `'b'` becomes `'c'` and so on.
+上の例では、各文字に1を加えて出力しているので、`'a'`は`'b'`になり、`'b'`は`'c'`になります。
 
-This is possibile because characters are stored as numbers corresponding to their [ASCII Codes](https://en.wikipedia.org/wiki/ASCII).
+これは、文字が[ASCIIコード](https://en.wikipedia.org/wiki/ASCII)に対応する数値として保存されているため可能です。
 
-So adding an integer to a character produces a new character corresponding to the new code value.
+したがって、文字に整数を加えると、新しいコード値に対応する新しい文字が生成されます。
 
 ---
 
-In case you simply need to repeat a block of code `n` times, you can use the `repeat(times: Int)` function.
+コードブロックを単に`n`回繰り返す必要がある場合は、`repeat(times: Int)`関数を使用できます。
 
 ```kotlin
 repeat(3) {
@@ -116,7 +116,7 @@ repeat(3) {
 // prints repeat 3 times
 ```
 
-You can even access the index with
+インデックスにアクセスすることもできます
 ```kotlin
 repeat(3) { index ->
     println(index)
@@ -126,10 +126,10 @@ repeat(3) { index ->
 
 ---
 
-In Kotlin we can use the `for-in` also for iterable collections calling the given closure on each element:
+Kotlinでは、反復可能なコレクションに対して`for-in`を使用し、各要素に対して指定されたクロージャを呼び出すこともできます：
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(2, 4, 6, 8, 10) 
+val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
@@ -138,17 +138,17 @@ for (num in numbers) {
 
 ---
 
-In Kotlin we have also the `forEach` loop.
-It calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+Kotlinには`forEach`ループもあります。
+`for-in`ループと同じ順序で、シーケンスの各要素に対して指定されたクロージャを呼び出します：
 
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(1, 3, 5, 7, 9) 
+val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)
 }
 ```
 
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls. (_Actually it is possible with annotations, but it's a bit more complex topic that we won't see now._)
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+`forEach`メソッドの使用は、`for-in`ループとは2つの重要な点で異なります：
+1. 本体のクロージャの現在の呼び出しを終了したり、後続の呼び出しをスキップしたりするために、`break`や`continue`文を使用できません。（_実際にはアノテーションを使えば可能ですが、ここでは扱わないやや複雑なトピックです。_）
+2. 本体のクロージャで`return`文を使用すると、クロージャからのみ終了し、外側のスコープからは終了せず、後続の呼び出しもスキップされません。

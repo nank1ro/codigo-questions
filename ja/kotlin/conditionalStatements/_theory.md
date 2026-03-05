@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+特定の条件が満たされた場合にのみコードを実行したいとき、意思決定が必要になります。
+天気が良い場合にのみ外で遊びたいとしましょう。
+プログラミングでは、ブール変数 `niceWeather` を保存し、この変数が `true` の場合に外で遊ぶという動作を `if` で実行できます：
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+前の例を続けましょう。
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+`if` 文は条件が `true` の場合にのみコードブロックを実行することを見てきました。
+もう一つ重要なことは、コードブロックを示す**波括弧** `{}` です。
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Kotlin we can use the `else` statement, like:
+条件が成立した場合にコードブロックを実行する方法を見てきましたが、次に最初の条件が成立しなかった場合に別のコードブロックを実行する方法を見てみましょう。
+天気が良ければ外で遊びます。そうでなければ、家にいます。
+Kotlinでは `else` 文を使用できます：
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+もう一つチェックする条件があるとしましょう。この例のように：
 ```kotlin
 var num = 3
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     println("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+このコードの出力は `the number is 3` です。
+まず、数値が2に等しいかチェックします。これはfalseです。
+次に2番目の文に移り、`num` が3に等しいかチェックします。trueなので、続くコードブロックを実行し `the number is 3` を出力します。
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+`else if` 文はいくつでも追加できます。制限はありません。
 ```kotlin
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     println("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+条件文（`if`、`else if`、`else`）を別の条件文の中にネスト（入れ子に）して、より複雑な構造を作ることもできます。
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -87,14 +87,14 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。
 
 ---
 
-The _elvis operator_ `a ?: b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `null`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The elvis operator is shorthand for the code below:
+_エルビス演算子_ `a ?: b` は、オプショナル `a` に値が含まれている場合はそれをアンラップし、`a` が `null` の場合はデフォルト値 `b` を返します。
+式 `a` は常にオプショナル型です。
+式 `b` は `a` に格納されている型と一致する必要があります。
+エルビス演算子は以下のコードの省略形です：
 ```kotlin
 if (a != null) a else b
 ```

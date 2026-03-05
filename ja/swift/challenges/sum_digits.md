@@ -2,20 +2,20 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字の合計
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+整数 `N` が与えられます。
+Nのすべての桁の合計を計算するプログラムを書いてください
 
 # --instructions--
 
-Return the sum of digits of `N`.
-> HINT: omit the argument label with the `_` (underscore)
+`N` の桁の合計を返してください。
+> ヒント: `_`（アンダースコア）で引数ラベルを省略してください
 
-Example of function call:
+関数呼び出しの例:
 ```swift
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345の桁の合計は15です
 
 ```swift
     func testSumOfDigits1() {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
     }
 ```
 
-The sum of the digits of 57253 is 22
+57253の桁の合計は22です
 
 ```swift
     func testSumOfDigits2() {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
     }
 ```
 
-The sum of the digits of 122 is 5
+122の桁の合計は5です
 
 ```swift
     func testSumOfDigits3() {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
     }
 ```
 
-The sum of the digits of 91979997 is 60
+91979997の桁の合計は60です
 
 ```swift
     func testSumOfDigits4() {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
     }
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647の桁の合計は46です
 
 ```swift
     func testSumOfDigits5() {

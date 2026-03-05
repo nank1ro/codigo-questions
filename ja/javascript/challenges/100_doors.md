@@ -2,22 +2,22 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100のドア
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+100枚のドアが一列に並んでおり、すべて最初は閉じています。
+100回ドアの前を通ります。
+1回目は、すべてのドアを訪れてドアを「切り替え」ます（ドアが閉じていれば開け、開いていれば閉じます）。
+2回目は、2番目ごとのドア（つまり、ドア #2、#4、#6、...）だけを訪れて切り替えます。
+3回目は、3番目ごとのドア（つまり、ドア #3、#6、#9、...）を訪れます。100番目のドアだけを訪れるまで続けます。
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+最後の通過後のドアの状態を判定する関数を実装してください。
+最終結果を配列で返し、開いているドアの番号のみを配列に含めてください。
+> このメソッドは可変数のドアに対応できる必要があります。
 
 # --before-seed--
 
@@ -61,21 +61,21 @@ function getFinalOpenedDoors(numDoors) {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+100枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```javascript
 const sol1 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
 tryCatch(arraysMatch(getFinalOpenedDoors(100), sol1));
 ```
 
-Given 10 doors, return the correct list of open doors
+10枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```javascript
 const sol2 = [1, 4, 9];
 tryCatch(arraysMatch(getFinalOpenedDoors(10), sol2));
 ```
 
-Given 950 doors, return the correct list of open doors
+950枚のドアが与えられた場合、開いているドアの正しいリストを返す
 
 ```javascript
 const sol3 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900];

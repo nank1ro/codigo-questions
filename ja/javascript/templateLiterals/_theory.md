@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+JavaScriptでは、`+`記号を使って2つ以上の文字列を一緒に表示できます。例えば:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+テンプレートリテラルを使うと、`+`記号を使わずに、文字列と数値を組み合わせるなどの式を表示できます。
+有効なテンプレートリテラルを作成するには、ダブルクォートやシングルクォートの代わりにバッククォート\`\`を使用する必要があります。
+ドル記号と波括弧`${expression}`を使って、テンプレートリテラルの中に変数を挿入できます
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+すべてのテンプレートリテラル文は、数値や変数を挿入する`${}`の部分と、通常の文字列の2つの部分で構成されています
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+次に、波括弧の中に異なる種類の値を追加して、1つのconsole.log文として表示します。ここでは`${5}`のようにします
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+`friends`のような変数を丸括弧の間に挿入すると、その値も表示されます
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+テンプレートリテラルの中で`${}`を使って、好きなだけ値を挿入できます
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+テンプレートリテラルはprint文で最もよく使われますが、通常の文字列と同様に変数に格納することもできます。

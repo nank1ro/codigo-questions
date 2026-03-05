@@ -1,15 +1,15 @@
-A __module__ is a file that can contain any kind of Python code.
-Modules allow us to use code again and again.
+__モジュール__は、あらゆる種類のPythonコードを含むことができるファイルです。
+モジュールを使うことで、コードを何度も再利用できます。
 
 ---
 
-There are a lot of __built-in modules__ that can help us with all sorts of things, like working with dates and times.
-In order to include a module we use the `import` keyword
+日付や時刻の操作など、さまざまなことに役立つ__組み込みモジュール__がたくさんあります。
+モジュールを含めるには`import`キーワードを使用します
 
 ---
 
-We can also just import specific functions we need from a module using the `from` and `import` keywords
+`from`と`import`キーワードを使って、モジュールから必要な特定の関数だけをインポートすることもできます
 
 ---
 
-We can also rename a function by importing it with the `as` keyword
+`as`キーワードを使って、インポートした関数の名前を変更することもできます

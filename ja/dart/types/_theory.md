@@ -1,17 +1,17 @@
-Types allow you to categorize all the different data types you use in your code.
-In Dart, a __type__ is a way of telling the compiler how you are going to use a given piece of data.
-Here's an example of types that Dart supports:
+型を使うと、コードで使用するさまざまなデータの種類を分類することができます。
+Dartでは、__型__はコンパイラに対して、あるデータをどのように使用するかを伝える方法です。
+Dartがサポートする型の例を以下に示します：
 - int
 - String
 - double
 - dynamic
 - num
 
-Dart supports many other types. These listed are the main ones you will use.
+Dartは他にも多くの型をサポートしています。ここに挙げたものは、主に使用するものです。
 
 ---
 
-It's okay if you explicitly define the type of a variable, for example:
+変数の型を明示的に定義しても問題ありません。例えば：
 ```dart
 int integerNumber = 2;
 double decimalNumber = 3.14;
@@ -19,41 +19,41 @@ double decimalNumber = 3.14;
 
 ---
 
-Variables with explicit type can also be constants, just add the `const` or `final` keyword before the type:
+明示的な型を持つ変数も定数にすることができます。型の前に`const`または`final`キーワードを追加するだけです：
 ```dart
 const int integerNumber = 2;
 final double decimalNumber = 3.14;
 ```
 
-> Note: Mutable data allows you to change it whenever you want in an easy way. However, many experienced programmers appreciate the benefits of immutable data. When a value is immutable, you can trust that no one will be able to change the value after you create it. Limiting your data this way prevents many hard-to-find bugs and makes the program easier to think about and test.
+> 注意：ミュータブルなデータは、いつでも簡単に変更することができます。しかし、多くの経験豊富なプログラマーは、イミュータブルなデータの利点を高く評価しています。値がイミュータブルであれば、作成後に誰も値を変更できないと信頼できます。このようにデータを制限することで、発見しにくいバグを防ぎ、プログラムについて考えたりテストしたりすることが容易になります。
 
 ---
 
-While it is possible to note the type of a variable, this is redundant. You know that `10` is of type `int` and `3.14` is of type `double`. The Dart compiler is able to infer it thanks to __type inference__. Not all programming languages have _type inference_, and this makes Dart a very powerful programming language.
+変数の型を記述することは可能ですが、冗長です。`10`が`int`型で、`3.14`が`double`型であることはわかります。Dartコンパイラは__型推論__のおかげでそれを推測することができます。すべてのプログラミング言語に_型推論_があるわけではなく、これがDartを非常に強力なプログラミング言語にしています。
 
-You can simply remove the type from the variables, for example:
+変数から型を単純に削除することができます。例えば：
 ```dart
 const integerNumber = 2;
 final decimalNumber = 3.14;
 ```
 
-When the type of a variable is not explicitly noted, Dart will try to infer its type.
+変数の型が明示的に記述されていない場合、Dartはその型を推論しようとします。
 
 ---
 
-There is a programmatic way to check the type of a variable, namely with the `is` keyword:
+変数の型をプログラムで確認する方法があります。それは`is`キーワードを使うことです：
 ```dart
 final number = 3.14;
 print(number is int); // false
 print(number is double); // true
 ```
 
-As you can see Dart has assigned the type `double` to the variable `number`.
+ご覧の通り、Dartは変数`number`に`double`型を割り当てています。
 
 ---
 
-The `is` keyword allows you to check if a variable is of the type you define. But you can 
- also check if a variable is not of the type defined with the `is!` keyword
+`is`キーワードを使うと、変数が指定した型かどうかを確認できます。しかし、`is!`キーワードを使って、
+変数が指定した型でないかどうかも確認できます。
 ```dart
 final number = 3.14;
 print(number is! int); // true
@@ -61,7 +61,7 @@ print(number is! int); // true
 
 ---
 
-Another option you have for seeing the type of a _runtime_ variable is to use the `runtimeType` property which is available to all types.
+_ランタイム_変数の型を確認するもう一つの方法は、すべての型で利用可能な`runtimeType`プロパティを使用することです。
 ```dart
 final number = 3.14;
 print(number.runtimeType); // double
@@ -69,7 +69,7 @@ print(number.runtimeType); // double
 
 ---
 
-Sometimes you will find yourself in the situation of having one type, but needing to convert it to another. You might be tempted to do:
+ある型を持っているが、別の型に変換する必要がある場合があります。次のようにしたくなるかもしれません：
 
 ```dart
 var integer = 5;
@@ -77,83 +77,82 @@ var decimal = 3.14;
 integer = decimal;
 ```
 
-But Dart will complain and give you the error:
+しかし、Dartはエラーを出します：
 > Error: A value of type 'double' can't be assigned to a variable of type 'int'.
 
-Some programming languages are not that restrictive and will silently convert. Experience shows that this type of silent implicit conversion is a frequent source of bugs and performance problems. Dart has disabled this feature to avoid these problems.
+一部のプログラミング言語はそれほど厳しくなく、暗黙的に変換します。経験上、このような暗黙的な変換はバグやパフォーマンスの問題の原因になりがちです。Dartはこれらの問題を避けるために、この機能を無効にしています。
 
-Remember, computers rely on programmers to figure out what to do. In Dart this includes being explicit about the type of conversion.
+コンピュータはプログラマーに何をすべきか教えてもらう必要があることを覚えておいてください。Dartでは、型変換について明示的であることも含まれます。
 
-Instead of expecting an implicit conversion from Dart, you need to explicitly say that you want Dart to convert the type to you. Here's how to convert a `double` number to an `int` one:
+Dartに暗黙的な変換を期待する代わりに、Dartに型を変換してほしいことを明示的に伝える必要があります。`double`の数値を`int`に変換する方法は次の通りです：
 ```dart
 var integer = decimal.toInt();
 ```
 
-The assignment tells Dart, unequivocally, that you want to convert from the original type `double` to the new type `double`.
+この代入はDartに対して、元の型`double`から新しい型`double`に変換したいことを明確に伝えます。
 
-> NOTES: In this case, assigning a decimal value to an integer loses precision. The variable `integer` has the value __3__ instead of __3.14__. This is why it's important to be explicit. Dart wants to be sure of what you are doing and lets you know that you will lose information by converting.
+> 注意：この場合、小数値を整数に代入すると精度が失われます。変数`integer`の値は__3.14__ではなく__3__になります。だからこそ明示的であることが重要です。Dartは、あなたが何をしているかを確認し、変換によって情報が失われることを知らせてくれます。
 
 ---
 
-So far we have seen the operators used independently on integers or decimals. What if you have 
-an integer and need to multiply it with a decimal number? Let's see an example:
+これまで、整数や小数に対して個別に演算子を使う方法を見てきました。整数を小数と掛け算する必要がある場合はどうでしょうか？例を見てみましょう：
 ```dart
 const radius = 5;
 const pi = 3.14;
 const circumference = 2 * pi * radius;
 ```
 
-`radius` is of type `int` while `pi` is of type `double`. What will be the type of `circumference`? Dart will assign the type `double` to the variable `circumference`. This is the safer choice as if I had made it of type `int` it could have caused a loss of precision.
+`radius`は`int`型で、`pi`は`double`型です。`circumference`の型は何になるでしょうか？Dartは変数`circumference`に`double`型を割り当てます。これはより安全な選択です。`int`型にすると精度が失われる可能性があるからです。
 
-If you want an `int` as a result, you have to do the conversion explicitly:
+結果を`int`にしたい場合は、明示的に変換する必要があります：
 ```dart
 const circumference = (2 * pi * radius).toInt();
 ```
 
-The parentheses tell Dart to multiply first, and then take the result and convert it to an integer value. Unfortunately the analyzer will not like this code:
+括弧はDartにまず掛け算を行い、その結果を整数値に変換するよう指示します。残念ながら、アナライザーはこのコードを好みません：
  > Const variables must be initialized with a constant value.
 
-The problem is that the `toInt` method is a runtime-only method. This means that the `circumference` variable cannot be determined at compile time, so it is not possible for the variable to be constant. To fix replace `const` with `final`:
+問題は、`toInt`メソッドがランタイム専用のメソッドであることです。つまり、`circumference`変数はコンパイル時に決定できないため、定数にすることができません。修正するには`const`を`final`に置き換えます：
 
 ```dart
 final circumference = (2 * pi * radius).toInt();
 ```
 
-Now `circumference` is a __runtime constant__ variable of type `int`.
+これで`circumference`は`int`型の__ランタイム定数__変数になります。
 
 ---
 
-Sometimes you might have a variable with a generic type, but you need functionality that only exists in a subtype. If you are sure that the type of the variable is the subtype you need, then you can use the `as` keyword to change its type. This prodecure is also known as __type casting__, here is an example:
+汎用的な型の変数を持っているが、サブタイプにしか存在しない機能が必要な場合があります。変数の型が必要なサブタイプであると確信している場合は、`as`キーワードを使って型を変更できます。この手順は__型キャスト__とも呼ばれます。以下に例を示します：
 
 ```dart
 num number = 3;
 ```
 
-Let's say we want to check if the number is even, and the functionality in question is present only on the `int` subtype.
+数値が偶数かどうかを確認したいとしましょう。この機能は`int`サブタイプにのみ存在します。
 ```dart
 print(number.isEven);
 ```
 
-The code above should return you a type error:
+上記のコードは型エラーを返すはずです：
 > The getter `isEven` isn't defined for the type 'num'.
 
-The `num` type is a too general type to know if a number is even or odd. Only integers can be even or odd.
-The problem occurs if `num` contains a `double` value, since `num` includes both `double` and `int` types. In this case, we are sure that __3__ is an integer, so we can cast to `int`
+`num`型は、数値が偶数か奇数かを判断するには一般的すぎる型です。整数のみが偶数または奇数になり得ます。
+`num`に`double`値が含まれている場合に問題が発生します。`num`は`double`と`int`の両方の型を含むためです。この場合、__3__は整数であると確信しているので、`int`にキャストできます。
 
 ```dart
 final integer = number as int;
 print(integer.isEven); // false
 ```
 
-The `as` keyword causes the compiler to recognize the variable `integer` as having the type `int`. This allows you to use the `isEven` property which is present on integers. Since the number __3__ is not an integer, the result is false.
+`as`キーワードにより、コンパイラは変数`integer`を`int`型として認識します。これにより、整数に存在する`isEven`プロパティを使用できます。数値__3__は偶数ではないため、結果はfalseです。
 
-You have to wait when casting. If you incorrectly cast the type you will get a runtime error:
+キャストする際は注意が必要です。型を誤ってキャストすると、ランタイムエラーが発生します：
 ```dart
 num numero = 3;
 final decimale = numero as double;
 ```
 
-This will crash the program with the following error:
+これにより、プログラムは次のエラーでクラッシュします：
 > CastError (type 'int' is not a subtype of type 'double' in type cast)
 
-The runtime type of `number` is `int` and not `double`. In Dart, you cannot cast with same-level types, such as `int` and `double`. You can only cast sub-types.
+`number`のランタイム型は`int`であり、`double`ではありません。Dartでは、`int`と`double`のような同レベルの型でキャストすることはできません。サブタイプのみキャストできます。

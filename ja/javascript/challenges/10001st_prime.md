@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001番目の素数
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+最初の6つの素数（2、3、5、7、11、13）を列挙すると、6番目の素数は13であることがわかります。
 
 # --instructions--
 
-What is the `n`th prime number?
+`n`番目の素数は何ですか？
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function nthPrime(n) {
 
 # --asserts--
 
-`nthPrime(6)` should return 13.
+`nthPrime(6)`は13を返すべきです。
 
 ```javascript
 tryCatch(nthPrime(6) === 13);
 ```
 
-`nthPrime(10)` should return 29.
+`nthPrime(10)`は29を返すべきです。
 
 ```javascript
 tryCatch(nthPrime(10) === 29);
 ```
 
-`nthPrime(100)` should return 541.
+`nthPrime(100)`は541を返すべきです。
 
 ```javascript
 tryCatch(nthPrime(100) === 541);
 ```
 
-`nthPrime(1000)` should return 7919.
+`nthPrime(1000)`は7919を返すべきです。
 
 ```javascript
 tryCatch(nthPrime(1000) === 7919);
 ```
 
-`nthPrime(10001)` should return 104743.
+`nthPrime(10001)`は104743を返すべきです。
 
 ```javascript
 tryCatch(nthPrime(10001) === 104743);

@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 最大回文積
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+回文数は前から読んでも後ろから読んでも同じです。2桁の数の積で作られる最大の回文数は9009 = 91 × 99です。
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+`n`桁の数の積で作られる最大の回文数を見つけてください。
 
 # --before-seed--
 
@@ -41,13 +41,13 @@ function largestPalindromeProduct(n) {
 
 # --asserts--
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)`は9009を返すべきです。
 
 ```javascript
 tryCatch(largestPalindromeProduct(2) === 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)`は906609を返すべきです。
 
 ```javascript
 tryCatch(largestPalindromeProduct(3) === 906609);

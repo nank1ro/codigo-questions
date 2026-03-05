@@ -2,16 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 足し算
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+2つの整数 `num1` と `num2` が与えられたとき、これら2つの数値を足すプログラムを書いてください
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+2つの数値の合計を返す関数を書いてください
 
 # --before-seed--
 
@@ -155,19 +155,19 @@ int main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1と3の合計は4でなければならない
 
 ```c
     try_catch(addition(1, 3) == 4);
 ```
 
-The sum of 200 and 210 must equal 410
+200と210の合計は410でなければならない
 
 ```c
     try_catch(addition(200, 210) == 410);
 ```
 
-The sum of 15 and 35 must equal 50
+15と35の合計は50でなければならない
 
 ```c
     try_catch(addition(15, 35) == 50);

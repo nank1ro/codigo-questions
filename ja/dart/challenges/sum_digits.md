@@ -2,19 +2,19 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字の合計
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+整数`N`が与えられます。
+Nのすべての桁の合計を計算するプログラムを書いてください。
 
 # --instructions--
 
-Return the sum of digits of `N`.
+`N`の各桁の合計を返してください。
 
-Example of function call:
+関数呼び出しの例：
 ```dart
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ void main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345の各桁の合計は15
 
 ```dart
   test('test1', () {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
   });
 ```
 
-The sum of the digits of 57253 is 22
+57253の各桁の合計は22
 
 ```dart
   test('test2', () {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
   });
 ```
 
-The sum of the digits of 122 is 5
+122の各桁の合計は5
 
 ```dart
   test('test3', () {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
   });
 ```
 
-The sum of the digits of 91979997 is 60
+91979997の各桁の合計は60
 
 ```dart
   test('test4', () {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
   });
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647の各桁の合計は46
 
 ```dart
   test('test5', () {

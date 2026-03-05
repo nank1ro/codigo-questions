@@ -2,24 +2,24 @@
 language: c
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: ローマ数字変換器
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+正の整数をパラメータとして受け取り、その整数のローマ数字表現を含む文字列を返す関数を作成してください。現代のローマ数字は、各桁を左端の桁から個別に表現し、値がゼロの桁はスキップして書かれます。
 
 # --instructions--
 
-Examples:
+例:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- すべてのローマ数字は大文字で返す必要があります。
+- この表記法で表現できる最大の数は3,999です。
 
 # --before-seed--
 
@@ -165,67 +165,67 @@ int main() {
 
 # --asserts--
 
-The number `2` must equal `II` 
+数値 `2` は `II` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(2), "II") == 0);
 ```
 
-The number `12` must equal `XII`
+数値 `12` は `XII` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(12), "XII") == 0);
 ```
 
-The number `16` must equal `XVI`
+数値 `16` は `XVI` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(16), "XVI") == 0);
 ```
 
-The number `44` must equal `XLIV`
+数値 `44` は `XLIV` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(44), "XLIV") == 0);
 ```
 
-The number `68` must equal `LXVIII`
+数値 `68` は `LXVIII` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(68), "LXVIII") == 0);
 ```
 
-The number `400` must equal `CD`
+数値 `400` は `CD` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(400), "CD") == 0);
 ```
 
-The number `798` must equal `DCCXCVIII`
+数値 `798` は `DCCXCVIII` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(798), "DCCXCVIII") == 0);
 ```
 
-The number `1000` must equal `M`
+数値 `1000` は `M` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(1000), "M") == 0);
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+数値 `3999` は `MMMCMXCIX` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(3999), "MMMCMXCIX") == 0);
 ```
 
-The number `649` must equal `DCXLIX`
+数値 `649` は `DCXLIX` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(649), "DCXLIX") == 0);
 ```
 
-The number `1666` must equal `MDCLXVI`
+数値 `1666` は `MDCLXVI` でなければならない
 
 ```c
     try_catch(strcmp(convert_to_roman(1666), "MDCLXVI") == 0);

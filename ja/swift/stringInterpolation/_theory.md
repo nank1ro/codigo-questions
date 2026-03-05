@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+Swiftでは、`+`記号を使って2つ以上の文字列を一緒に表示できます。例えば：
 ```swift
 print("Hello " + "Swift!") // prints "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+しかし、`+`記号を使って「10」のような数値を`"friends"`のような文字列に追加すると、異なる種類の値であるためエラーが発生します
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+文字列補間を使うと、文字列に数値を追加するような式をエラーなしで表示できます。
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+すべての文字列補間文は2つの部分で構成されています。数値や変数を挿入する`\()`と、通常の文字列です
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+次に、異なる種類の値を波括弧の中に追加して、1つのprint文として表示します。ここでは`\(5)`を使います
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+`friends`のような変数を丸括弧の間に挿入すると、その値も表示されます
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+文字列補間の中で、丸括弧を使って何度でも値を挿入できます
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+文字列補間はprint文で使うのが最適ですが、通常の文字列と同様に変数に保存することもできます。

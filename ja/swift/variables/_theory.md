@@ -1,23 +1,23 @@
-Variables are containers for storing data values.
-Every variable in Swift is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In Swift you declare constants with the `let` keyword and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+変数はデータ値を格納するための入れ物です。
+Swiftのすべての変数はオブジェクトです。
+変数を作成するには、スペースを含まない**名前**を付ける必要があります。
+変数は、最初に値を代入した時点で作成されます。
+Swiftでは、`let`キーワードで定数を宣言し、`var`キーワードで変数を宣言します。
+定数の値は一度設定すると変更できませんが、変数は後で別の値に変更することができます。
+`x`という名前の変数を作成する例は次のとおりです：
 ```swift
 var x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+このようにして、`x`という名前の変数に値`1`を代入しました。
+変数`x`を出力すると、数値`1`が返されます：
 ```swift
 print(x) // prints 1
 ```
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+変数は、格納する値を変更できるため、このように呼ばれています。
+`=`を使用して新しい値を与えることで、`x`を更新できます。
 ```swift
 var x = 1
 print(x) // prints 1
@@ -27,7 +27,7 @@ print(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+他の変数の値を変数に代入することもできます。ここでは、`y`変数に`x`の値を与えることができます。
 ```swift
 var x = 5
 var y = x
@@ -36,7 +36,7 @@ print(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+変数を更新すると、以前の値は失われます。ここでは、`x`変数を2回表示して、値がどのように更新されるかを確認できます。
 ```swift
 var x = 5
 print(x) // prints 5
@@ -46,12 +46,12 @@ print(x) // prints 10
 
 ---
 
-In Swift string variables can be declared only by using double quotes:
+Swiftでは、文字列変数はダブルクォートのみを使用して宣言できます：
 ```swift
 let x = "May"
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+複数の単語で変数名を付けたい場合は、**キャメルケース**を使用します。
+これは、フレーズの途中の各単語を大文字で始める書き方の慣習です。

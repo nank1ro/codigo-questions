@@ -2,28 +2,28 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨粒
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+あなたの課題は、数値を特定の潜在的な因数に対応する雨粒の音を含む文字列に変換することです。
+因数とは、別の数を割り切れる数で、余りが残りません。
+ある数が別の数の因数かどうかをテストする最も簡単な方法は、剰余演算を使用することです。
+雨粒のルールは次のとおりです：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3を因数に持つ場合、結果に'Pling'を追加します。
+- 5を因数に持つ場合、結果に'Plang'を追加します。
+- 7を因数に持つ場合、結果に'Plong'を追加します。
+- 3、5、7のいずれも因数に持たない場合、結果はその数の数字になります。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28は7を因数に持ちますが、3や5は持たないので、結果は`"Plong"`になります。
+- 30は3と5の両方を因数に持ちますが、7は持たないので、結果は`"PlingPlang"`になります。
+- 34は3、5、7のいずれの因数も持たないので、結果は`"34"`になります。
 
 # --seed--
 
@@ -42,126 +42,126 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sound for 1 is "1"
+1の音は"1"
 
 ```python
     def test_the_sound_for_1_is_1(self):
         self.assertEqual(convert(1), "1", "--err-t1--")
 ```
 
-The sound for 3 is "Pling"
+3の音は"Pling"
 
 ```python
     def test_the_sound_for_3_is_pling(self):
         self.assertEqual(convert(3), "Pling", "--err-t2--")
 ```
 
-The sound for 5 is "Plang"
+5の音は"Plang"
 
 ```python
     def test_the_sound_for_5_is_plang(self):
         self.assertEqual(convert(5), "Plang", "--err-t3--")
 ```
 
-The sound for 7 is "Plong"
+7の音は"Plong"
 
 ```python
     def test_the_sound_for_7_is_plong(self):
         self.assertEqual(convert(7), "Plong", "--err-t4--")
 ```
 
-The sound for 6 is "Pling"
+6の音は"Pling"
 
 ```python
     def test_the_sound_for_6_is_pling(self):
         self.assertEqual(convert(6), "Pling", "--err-t5--")
 ```
 
-The sound for 8 is "8"
+8の音は"8"
 
 ```python
     def test_the_sound_for_8_is_8(self):
         self.assertEqual(convert(8), "8", "--err-t6--")
 ```
 
-The sound for 9 is "Pling"
+9の音は"Pling"
 
 ```python
     def test_the_sound_for_9_is_pling(self):
         self.assertEqual(convert(9), "Pling", "--err-t7--")
 ```
 
-The sound for 10 is "Plang"
+10の音は"Plang"
 
 ```python
     def test_the_sound_for_10_is_plang(self):
         self.assertEqual(convert(10), "Plang", "--err-t8--")
 ```
 
-The sound for 14 is "Plong"
+14の音は"Plong"
 
 ```python
     def test_the_sound_for_14_is_plong(self):
         self.assertEqual(convert(14), "Plong", "--err-t9--")
 ```
 
-The sound for 15 is "PlingPlang"
+15の音は"PlingPlang"
 
 ```python
     def test_the_sound_for_15_is_pling_plang(self):
         self.assertEqual(convert(15), "PlingPlang", "--err-t10--")
 ```
 
-The sound for 21 is "PlingPlong"
+21の音は"PlingPlong"
 
 ```python
     def test_the_sound_for_21_is_pling_plong(self):
         self.assertEqual(convert(21), "PlingPlong", "--err-t11--")
 ```
 
-The sound for 25 is "Plang"
+25の音は"Plang"
 
 ```python
     def test_the_sound_for_25_is_plang(self):
         self.assertEqual(convert(25), "Plang", "--err-t12--")
 ```
 
-The sound for 27 is "Pling"
+27の音は"Pling"
 
 ```python
     def test_the_sound_for_27_is_pling(self):
         self.assertEqual(convert(27), "Pling", "--err-t13--")
 ```
 
-The sound for 35 is "PlangPlong"
+35の音は"PlangPlong"
 
 ```python
     def test_the_sound_for_35_is_plang_plong(self):
         self.assertEqual(convert(35), "PlangPlong", "--err-t14--")
 ```
 
-The sound for 49 is "Plong"
+49の音は"Plong"
 
 ```python
     def test_the_sound_for_49_is_plong(self):
         self.assertEqual(convert(49), "Plong", "--err-t15--")
 ```
 
-The sound for 52 is "52"
+52の音は"52"
 
 ```python
     def test_the_sound_for_52_is_52(self):
         self.assertEqual(convert(52), "52", "--err-t16--")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105の音は"PlingPlangPlong"
 
 ```python
     def test_the_sound_for_105_is_pling_plang_plong(self):
         self.assertEqual(convert(105), "PlingPlangPlong", "--err-t17--")
 ```
 
-The sound for 3125 is "Plang"
+3125の音は"Plang"
 
 ```python
     def test_the_sound_for_3125(self):

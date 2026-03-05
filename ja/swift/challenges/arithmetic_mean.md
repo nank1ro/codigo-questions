@@ -2,18 +2,18 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Aritmetic mean
+title: 算術平均
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+数値ベクトルの_算術平均_を求める `mean` という関数を書いてください。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+数値ベクトルの平均を返す関数を書いてください。
 
-Example of function call:
+関数呼び出しの例:
 ```swift
 print(mean([1, 2, 3]))
 // prints 2.0
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]` の平均は4.0でなければなりません
 
 ```swift
     func test1() {
@@ -46,7 +46,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     }
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]` の平均は5.0でなければなりません
 
 ```swift
     func test2() {
@@ -54,7 +54,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     }
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]` の平均は45.0でなければなりません
 
 ```swift
     func test3() {

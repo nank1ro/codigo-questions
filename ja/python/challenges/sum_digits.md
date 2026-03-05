@@ -2,17 +2,17 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字の合計
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+整数`num`が与えられます。
+`num`のすべての桁の合計を計算するプログラムを書いてください。
 
 # --instructions--
 
-Return the sum of digits of `num`
+`num`の桁の合計を返してください。
 
 # --seed--
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345の桁の合計は15です
 
 ```python
     def test_sum_of_digits_1(self):
         self.assertEqual(sum_digits(12345), 15, "--err-t1--")
 ```
 
-The sum of the digits of 57253 is 22
+57253の桁の合計は22です
 
 ```python
     def test_sum_of_digits_2(self):
         self.assertEqual(sum_digits(57253), 22, "--err-t2--")
 ```
 
-The sum of the digits of 122 is 5
+122の桁の合計は5です
 
 ```python
     def test_sum_of_digits_3(self):
         self.assertEqual(sum_digits(122), 5, "--err-t3--")
 ```
 
-The sum of the digits of 91979997 is 60
+91979997の桁の合計は60です
 
 ```python
     def test_sum_of_digits_4(self):
         self.assertEqual(sum_digits(91979997), 60, "--err-t4--")
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647の桁の合計は46です
 
 ```python
     def test_sum_of_digits_5(self):

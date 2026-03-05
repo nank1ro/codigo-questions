@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+特定の条件が満たされた場合にのみコードを実行したいとき、意思決定が必要になります。
+天気が良い場合にのみ外で遊びたいとしましょう。
+プログラミングでは、ブール変数 `niceWeather` を保存し、この変数が `true` の場合に外で遊ぶというアクションを `if` で実行できます：
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -10,21 +10,21 @@ if niceWeather {
 
 ---
 
-Let's continue with the previous example.
+前の例の続きを見てみましょう。
 ```swift
 var niceWeather = true
 if niceWeather {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+`if` 文は条件が `true` の場合にのみコードブロックを実行することがわかりました。
+もう一つ重要なことは、コードブロックを示す**波括弧** `{}` です。
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Swift we can use the `else` statement, like:
+条件が成立した場合にコードブロックを実行する方法を見ましたが、次に最初の条件が成立しなかった場合に別のコードブロックを実行する方法を見てみましょう。
+天気が良ければ外で遊び、そうでなければ家にいます。
+Swiftでは `else` 文を次のように使用できます：
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -36,7 +36,7 @@ if niceWeather {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+別の条件を確認したい場合を考えてみましょう。次の例のようになります：
 ```swift
 var num = 3
 if num == 2 {
@@ -47,13 +47,13 @@ if num == 2 {
     print("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+このコードの出力は `the number is 3` です。
+まず、数値が2に等しいかどうかを確認しますが、これは偽です。
+次に2番目の文に進み、`num` が3に等しいかどうかを確認します。これは真なので、次のコードブロックを実行して `the number is 3` を出力します
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+`else if` 文はいくつでも追加でき、制限はありません
 ```swift
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     print("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+条件文（`if`、`else if`、`else`）を別の条件文の中にネストして、より複雑な構造を作ることもできます。
 ```swift
 var num = 4
 if num < 3 {
@@ -87,13 +87,13 @@ if num < 3 {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+このコードの出力は `the number is 4` です。
 
 ---
 
-The ternary conditional operator is a special operator with three parts, which takes the form `question ? answer1 : answer2`.
-It's a shortcut for evaluating one of two expressions based on whether `question` is true or false.
-If `question` is true, it evaluates `answer1` and returns its value; otherwise, it evaluates `answer2` and returns its value.
+三項条件演算子は3つの部分からなる特別な演算子で、`question ? answer1 : answer2` の形式をとります。
+`question` が真か偽かに基づいて、2つの式のうち1つを評価するためのショートカットです。
+`question` が真の場合、`answer1` を評価してその値を返します。そうでなければ、`answer2` を評価してその値を返します。
 ```swift
 let a = 10, b = 20, c: Int
 if (a < b) {
@@ -103,20 +103,20 @@ if (a < b) {
 }
 print(c)
 ```
-The shortand code for the above code is:
+上記のコードの省略形は次のとおりです：
 ```swift
 let a = 10, b = 20, c: Int
 c = a < b ? a : b
 print(c)
 ```
-`c` is set equal to `a`, because the condition `a < b` was true
+条件 `a < b` が真だったので、`c` は `a` に等しく設定されます
 
 ---
 
-The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The nil-coalescing operator is shorthand for the code below:
+_nil合体演算子_ `a ?? b` は、オプショナル `a` に値が含まれている場合はアンラップし、`a` が `nil` の場合はデフォルト値 `b` を返します。
+式 `a` は常にオプショナル型です。
+式 `b` は `a` の中に格納されている型と一致する必要があります。
+nil合体演算子は以下のコードの省略形です：
 ```swift
 a != nil ? a! : b
 ```

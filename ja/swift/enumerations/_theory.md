@@ -1,5 +1,5 @@
-An `enumeration` defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
-We declare enumerations using the `enum` keyword:
+`enumeration`（列挙型）は、関連する値のグループに共通の型を定義し、コード内でそれらの値を型安全な方法で扱えるようにします。
+列挙型は`enum`キーワードを使って宣言します:
 ```swift
 enum Colors {
     case blue
@@ -7,12 +7,12 @@ enum Colors {
     case green
 }
 ```
-The values defined in an enumeration (such as `blue`, `red` and `green`) are its _enumeration cases_.
-We use the `case` keyword to introduce new enumeration cases.
+列挙型で定義された値（`blue`、`red`、`green`など）は、その_列挙ケース_です。
+`case`キーワードを使って新しい列挙ケースを導入します。
 
 ---
 
-Multiple cases can appear on a single line, separated by commas:
+複数のケースをカンマで区切って1行に記述できます:
 ```swift
 enum Colors {
     case blue, red, green
@@ -21,7 +21,7 @@ enum Colors {
 
 ---
 
-We can match individual enumeration values with a `switch` statement:
+個々の列挙値を`switch`文でマッチさせることができます:
 ```swift
 let color = Colors.red
 switch color {
@@ -34,13 +34,13 @@ switch color {
 }
 // prints "Red"
 ```
-Keep in mind that if you don't need to provide a `case` for every enumeration case, you can provide a `default` case to cover any cases that aren't addressed explicitly
+すべての列挙ケースに対して`case`を用意する必要がない場合は、明示的に対処されていないケースをカバーするために`default`ケースを使用できることを覚えておいてください
 
 ---
 
-For some enumerations, it's useful to have a collection of all of that enumeration's cases.
-You enable this by writing `: CaseIterable` after the enumeration's name.
-Swift exposes a collection of all the cases as an `allCases` property of the enumeration type:
+一部の列挙型では、その列挙型のすべてのケースのコレクションがあると便利です。
+列挙型の名前の後に`: CaseIterable`と記述することで、これを有効にできます。
+Swiftは列挙型のすべてのケースのコレクションを、その列挙型の`allCases`プロパティとして公開します:
 ```swift
 enum Colors: CaseIterable {
     case blue, red, green

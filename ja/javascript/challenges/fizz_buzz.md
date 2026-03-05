@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+数値を引数として受け取り、`"Fizz"`、`"Buzz"`、または`"FizzBuzz"`を返す関数を作成してください。
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- 数値が`3`の倍数の場合、出力は`"Fizz"`になります
+- 与えられた数値が`5`の倍数の場合、出力は`"Buzz"`になります。
+- 与えられた数値が`3`と`5`の両方の倍数の場合、出力は`"FizzBuzz"`になります。
+- 数値が`3`または`5`のどちらの倍数でもない場合、以下の例のように数値そのものを出力する必要があります。
+- 出力は`3`または`5`の倍数でなくても常に文字列でなければなりません。
 
-Examples:
+例：
 ```javascript
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -53,31 +53,31 @@ function fizzBuzz() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+数値`3`は`"Fizz"`でなければならない
 
 ```javascript
 tryCatch(fizzBuzz(3) === 'Fizz');
 ```
 
-The number `5` must equal `"Buzz"`
+数値`5`は`"Buzz"`でなければならない
 
 ```javascript
 tryCatch(fizzBuzz(5) === 'Buzz');
 ```
 
-The number `15` must equal `"FizzBuzz"`
+数値`15`は`"FizzBuzz"`でなければならない
 
 ```javascript
 tryCatch(fizzBuzz(15) === 'FizzBuzz');
 ```
 
-The number `10` must equal `"Buzz"`
+数値`10`は`"Buzz"`でなければならない
 
 ```javascript
 tryCatch(fizzBuzz(10) === 'Buzz');
 ```
 
-The number `98` must equal `"98"`
+数値`98`は`"98"`でなければならない
 
 ```javascript
 tryCatch(fizzBuzz(98) === '98');

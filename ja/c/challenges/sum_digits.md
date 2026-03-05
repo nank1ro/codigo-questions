@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 桁の合計
 ---
 
 # --description--

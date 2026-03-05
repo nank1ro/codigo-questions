@@ -1,19 +1,19 @@
 ---
 language: python
 exerciseType: 1
-title: Arithmetic mean
+title: 算術平均
 difficulty: 1
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+数値ベクトルの_算術平均_を求める`mean`という関数を書いてください。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+数値ベクトルの平均を返す関数を書いてください。
 
-Example of function call:
+関数呼び出しの例：
 ```python
 print(mean([1, 2, 3]))
 # prints 2
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4
+`[1, 2, 3, 4, 5, 6, 7]`の平均は4でなければなりません
 
 ```python
     def test1(self):
         self.assertEqual(mean([1, 2, 3, 4, 5, 6, 7]), 4, "--err-t1--")
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5
+`[4, 5, 6]`の平均は5でなければなりません
 
 ```python
     def test2(self):
         self.assertEqual(mean([4, 5, 6]), 5, "--err-t2--")
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45
+`[12, 34, 56, 78]`の平均は45でなければなりません
 
 ```python
     def test3(self):

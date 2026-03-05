@@ -1,16 +1,16 @@
-`Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `List`s is that a `Set` allows only one element of each value.
+`Set`は、異なる情報の集まりを1つの変数名のもとにシーケンスとして格納できるデータ型です。
+`List`との主な違いは、`Set`では各値の要素を1つしか持てないことです。
 
-Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to a set with an expression of the form:
+`List`と同様に、`Set`は1つまたは複数の型の値を格納し、**インデックス**を使ってこれらの値を区別します。
+以下の形式の式でセットに要素を代入できます：
 ```kotlin
 val setName = setOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the set, for example, it can be `Int`, `String`, `Any`...
+`itemsType`はセット内の要素の型を表します。例えば、`Int`、`String`、`Any`などです。
 
 ---
 
-A `Set` is a collection of __unique__ items without a specific order.
+`Set`は、特定の順序を持たない__一意な__要素のコレクションです。
 
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
@@ -18,22 +18,22 @@ println(numbers)
 // prints [1, 2]
 ```
 
-At __[1]__ we're trying to create a set with the number __1__ present twice but as you can see each element must be unique and the second __1__ is automatically discarded.
+__[1]__では数値__1__を2回含むセットを作成しようとしていますが、各要素は一意でなければならないため、2番目の__1__は自動的に破棄されます。
 
 ---
 
-There are two types of `Set`s in Kotlin:
+Kotlinには2種類の`Set`があります：
 
-- `Set` cannot be modified after you create it.
-- `MutableSet` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `Set`は作成後に変更できません。
+- `MutableSet`は作成後に変更でき、要素の追加、削除、更新が可能です。
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
 numbers.add(4) // [1]
 ```
-__[1]__ throws an Error because `Set`s are _read-only_.
+__[1]__は`Set`が_読み取り専用_であるため、エラーをスローします。
 
-To create a modifiable set use the `mutableSetOf` keyword
+変更可能なセットを作成するには`mutableSetOf`キーワードを使用します
 ```kotlin
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
@@ -43,7 +43,7 @@ println(numbers)
 
 ---
 
-The most common `Set` activity is to test for membership using `in` or `contains()`
+`Set`の最も一般的な操作は、`in`または`contains()`を使ったメンバーシップのテストです。
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
@@ -51,16 +51,16 @@ println(2 in numbers) // prints true
 println(numbers.contains(5)) // prints false
 ```
 
-As you can see above the `in` and `contains` return a `Bool` telling if the element being passed is present in the set
+上記のように、`in`と`contains`は渡された要素がセットに存在するかどうかを示す`Bool`を返します。
 
 ---
 
-The order of the elements in a `Set` in not important.
-In fact if you try to compare two `Set`s with the same element but in different order you get that they are equal.
+`Set`の要素の順序は重要ではありません。
+実際、同じ要素を異なる順序で持つ2つの`Set`を比較すると、等しいという結果が得られます。
 
 ---
 
-On `Set`s you can perform several operations like checking for union, intersection, difference and subset.
+`Set`では、和集合、積集合、差集合、部分集合の確認など、いくつかの操作を実行できます。
 
 ```kotlin
 val firstNumbers = setOf(1, 2, 3)
@@ -73,4 +73,4 @@ val subset = firstNumbers.containsAll(lastNumbers) // false
 
 ---
 
-To convert a `Set` to a `List` we can use the `toList()` function
+`Set`を`List`に変換するには、`toList()`関数を使用できます。
