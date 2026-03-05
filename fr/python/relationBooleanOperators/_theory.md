@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+Continuons avec l'opérateur relationnel **supérieur ou égal** `>=`.
+Il retourne un **Booléen** (`True` ou `False`) indiquant si une expression est supérieure ou égale à l'autre, par exemple :
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+Continuons avec l'opérateur relationnel **inférieur ou égal** `<=`.
+Il retourne un **Booléen** (`True` ou `False`) indiquant si une expression est inférieure ou égale à l'autre, par exemple :
 ```python
 >>> 2 <= 2
 True

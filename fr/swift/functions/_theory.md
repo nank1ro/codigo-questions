@@ -10,12 +10,12 @@ say_hi() // prints "Hello!"
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+Les parenthèses dans la __définition de fonction__ n'ont pas besoin d'être vides si nous voulons spécifier des paramètres
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+Parfois, nous voulons qu'une fonction __retourne__ une valeur.
+Eh bien, il y a le mot-clé `return`.
 
 ---
 
@@ -34,7 +34,7 @@ print(sayHello(name: "Smith", newUser: true))
 
 ---
 
-You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+Vous pouvez utiliser un type tuple comme type de retour pour une fonction afin de retourner plusieurs valeurs dans une seule valeur de retour composée.
 
 ---
 

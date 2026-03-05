@@ -11,15 +11,15 @@ Créez une fonction prenant un entier positif comme paramètre et retournant une
 
 # --instructions--
 
-Examples:
+Exemples :
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Tous les chiffres romains doivent être retournés en majuscules.
+- Le plus grand nombre pouvant être représenté dans cette notation est 3 999.
 
 # --seed--
 

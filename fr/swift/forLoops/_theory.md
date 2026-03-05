@@ -21,31 +21,31 @@ Dans une boucle `for`, nous pouvons spécifier combien de fois nous aimerions qu
 
 ---
 
-We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
+Nous pouvons utiliser `..<` pour boucler jusqu'au nombre suivant exclu, ou `...` pour boucler jusqu'au nombre suivant inclus
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+La variable appelée `i` est la variable compteur.
+Nous pouvons lui donner le nom que nous voulons.
+Elle compte à quelle répétition de la boucle nous en sommes actuellement
 
 ---
 
-The `stride()` function returns a sequence of numbers.
-It requires the _from_, _to_ and _by_ parameters.
-These are the syntax of the function:
+La fonction `stride()` retourne une séquence de nombres.
+Elle nécessite les paramètres _from_, _to_ et _by_.
+Voici la syntaxe de la fonction :
 ```swift
 stride(from:to:by:)
 ```
-Keep in mind that the `to` value is excluded
+Gardez à l'esprit que la valeur `to` est exclue
 
 ---
 
-With the `stride()` function we can also use closed ranges, by using:
+Avec la fonction `stride()`, nous pouvons également utiliser des plages fermées, en utilisant :
 ```swift
 stride(from:through:by:)
 ```
-In this case the `through` value is included
+Dans ce cas, la valeur `through` est incluse
 
 ---
 

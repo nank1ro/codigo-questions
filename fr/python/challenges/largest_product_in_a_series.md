@@ -7,11 +7,11 @@ title: Plus grand produit dans une série
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+Les quatre chiffres adjacents dans le nombre à 1000 chiffres mentionné ci-dessous qui ont le plus grand produit sont 9 × 9 × 8 × 9 = 5832.
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Trouvez les `n` chiffres adjacents dans le nombre à 1000 chiffres qui ont le plus grand produit. Quelle est la valeur de ce produit ?
 
 # --seed--
 

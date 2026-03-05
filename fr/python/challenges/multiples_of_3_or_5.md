@@ -11,7 +11,7 @@ Si nous énumérons tous les nombres naturels inférieurs à 10 qui sont des mul
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+Trouvez la somme de tous les multiples de 3 ou 5 en dessous de la valeur du paramètre fourni `number`.
 
 # --seed--
 

@@ -41,18 +41,18 @@ will remove the key `keyName` and its associated value from the dictionary.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+Et si nous voulions lister toutes les clés du dictionnaire ?
+Eh bien, il y a la propriété `keys`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+Et si nous voulions lister toutes les valeurs du dictionnaire ?
+Eh bien, il y a la propriété `values`.
 
 ---
 
 Comme pour les tableaux, nous pouvons boucler entre les éléments du dictionnaire en utilisant les mots-clés `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+Pour obtenir à la fois la clé et la valeur dans la boucle, nous n'avons pas besoin de spécifier de propriété :
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -69,7 +69,7 @@ Afin d'__ajouter__ ou de __modifier__ des valeurs dans un dictionnaire, nous pou
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
+Précédemment, nous avons vu comment supprimer une _paire clé-valeur_ du dictionnaire avec la méthode `removeValue()`.
 Nous pouvons également supprimer un élément en assignant à la clé la valeur `nil`
 ```swift
 dictName[keyName] = nil

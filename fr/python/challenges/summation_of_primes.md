@@ -11,7 +11,7 @@ La somme des nombres premiers en dessous de 10 est 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+Trouvez la somme de tous les nombres premiers en dessous de `n`.
 
 # --seed--
 

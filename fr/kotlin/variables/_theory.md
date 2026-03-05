@@ -17,7 +17,7 @@ println(x) // affiche 1
 ---
 
 Les variables sont appelées de cette manière car la valeur qu'elles stockent peut changer.
-We can update `x` by using `=` and giving it a new value.
+Nous pouvons mettre à jour `x` en utilisant `=` et en lui donnant une nouvelle valeur.
 ```kotlin
 var x = 1
 println(x) // prints 1

@@ -11,7 +11,7 @@ Les facteurs premiers de 13195 sont 5, 7, 13 et 29.
 
 # --instructions--
 
-What is the largest prime factor of the given `number`?
+Quel est le plus grand facteur premier du `number` donné ?
 
 # --seed--
 

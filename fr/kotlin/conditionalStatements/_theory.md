@@ -72,7 +72,7 @@ et la sortie de ce code est `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+On peut aussi imbriquer une instruction conditionnelle (`if`, `else if` ou `else`) à l'intérieur d'une autre instruction conditionnelle, pour créer une structure plus complexe.
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -91,10 +91,10 @@ et la sortie de ce code est `the number is 4`.
 
 ---
 
-The _elvis operator_ `a ?: b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `null`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The elvis operator is shorthand for the code below:
+L'_opérateur elvis_ `a ?: b` déballe un optionnel `a` s'il contient une valeur, ou renvoie une valeur par défaut `b` si `a` est `null`.
+L'expression `a` est toujours d'un type optionnel.
+L'expression `b` doit correspondre au type stocké dans a.
+L'opérateur elvis est un raccourci pour le code ci-dessous :
 ```kotlin
 if (a != null) a else b
 ```

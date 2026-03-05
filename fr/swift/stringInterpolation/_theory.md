@@ -17,15 +17,15 @@ Chaque instruction d'interpolation de chaîne se compose de deux parties : le `\
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+Ensuite, nous ajoutons un type de valeur différent entre accolades pour qu'il s'affiche comme une seule instruction print. Comme ici, avec `\(5)`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Insérer des variables comme `friends` entre les parenthèses affiche aussi leur valeur
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+Nous pouvons utiliser les parenthèses pour insérer des valeurs autant de fois que nous le souhaitons dans l'interpolation de chaîne
 
 ---
 

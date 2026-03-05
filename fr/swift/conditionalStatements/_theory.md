@@ -114,7 +114,7 @@ print(c)
 ---
 
 L'opérateur _nil-coalescing_ `a ?? b` déverrouille un optionnel `a` s'il contient une valeur, ou retourne une valeur par défaut `b` si `a` est `nil`.
-The expression `a` is always of an optional type.
+L'expression `a` est toujours de type optionnel.
 L'expression `b` doit correspondre au type qui est stocké à l'intérieur de a.
 L'opérateur nil-coalescing est une notation abrégée pour le code ci-dessous :
 ```swift

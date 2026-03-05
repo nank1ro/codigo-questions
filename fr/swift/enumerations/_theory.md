@@ -12,7 +12,7 @@ Nous utilisons le mot-clé `case` pour introduire de nouveaux cas d'énumératio
 
 ---
 
-Multiple cases can appear on a single line, separated by commas:
+Plusieurs cas peuvent apparaître sur une seule ligne, séparés par des virgules :
 ```swift
 enum Colors {
     case blue, red, green
@@ -39,8 +39,8 @@ Gardez à l'esprit que si vous n'avez pas besoin de fournir un `case` pour chaqu
 ---
 
 Pour certaines énumérations, il est utile d'avoir une collection de tous les cas de cette énumération.
-You enable this by writing `: CaseIterable` after the enumeration's name.
-Swift exposes a collection of all the cases as an `allCases` property of the enumeration type:
+Vous activez cela en écrivant `: CaseIterable` après le nom de l'énumération.
+Swift expose une collection de tous les cas en tant que propriété `allCases` du type d'énumération :
 ```swift
 enum Colors: CaseIterable {
     case blue, red, green

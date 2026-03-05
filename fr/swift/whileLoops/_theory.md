@@ -28,24 +28,24 @@ Il incrémente la valeur `count`, sinon, notre boucle sera infinie
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+Pour contrôler le nombre de fois qu'une boucle `while` se répète, nous commençons avec une variable définie sur un nombre.
+Nous appelons cette variable une variable compteur
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+Ensuite, nous utilisons une comparaison dans la condition pour comparer la variable `counter` à un nombre.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+À l'intérieur du bloc de code, afin d'arrêter la boucle `while`, nous incrémentons la variable `counter`.
 
 ---
 
-The order you write code affects the output.
+L'ordre dans lequel vous écrivez le code affecte la sortie.
 
 ---
 
 En Swift, nous avons aussi la variation **repeat-while** de la boucle `while`.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
-The __repeat-while__ loop in Swift is analogous to a __do-while__ loop in other languages
+Elle effectue un premier passage dans le bloc de la boucle, _avant_ de considérer la condition de la boucle.
+Elle continue ensuite à répéter la boucle jusqu'à ce que la condition soit `false`.
+La boucle __repeat-while__ en Swift est analogue à une boucle __do-while__ dans d'autres langages

@@ -11,7 +11,7 @@ title: Plus petit multiple
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+Quel est le plus petit nombre positif qui est divisible sans reste par tous les nombres de 1 à `n` ?
 
 # --seed--
 

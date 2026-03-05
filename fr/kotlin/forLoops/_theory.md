@@ -93,21 +93,21 @@ for (char in 'a'..'z') print(char)
 
 ---
 
-You can iterate over a __String__.
+Vous pouvez itérer sur une __String__.
 ```kotlin
 for (char in 'abc') print(char + 1)
 // prints bdc
 ```
 
-In the example above we've printed each character + 1, so `'a'` becomes `'b'`, `'b'` becomes `'c'` and so on.
+Dans l'exemple ci-dessus, nous avons affiché chaque caractère + 1, donc `'a'` devient `'b'`, `'b'` devient `'c'` et ainsi de suite.
 
-This is possibile because characters are stored as numbers corresponding to their [ASCII Codes](https://en.wikipedia.org/wiki/ASCII).
+Cela est possible car les caractères sont stockés sous forme de nombres correspondant à leurs [codes ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange).
 
-So adding an integer to a character produces a new character corresponding to the new code value.
+Ainsi, ajouter un entier à un caractère produit un nouveau caractère correspondant à la nouvelle valeur de code.
 
 ---
 
-In case you simply need to repeat a block of code `n` times, you can use the `repeat(times: Int)` function.
+Si vous avez simplement besoin de répéter un bloc de code `n` fois, vous pouvez utiliser la fonction `repeat(times: Int)`.
 
 ```kotlin
 repeat(3) {
@@ -116,7 +116,7 @@ repeat(3) {
 // prints repeat 3 times
 ```
 
-You can even access the index with
+Vous pouvez même accéder à l'index avec
 ```kotlin
 repeat(3) { index ->
     println(index)
@@ -126,10 +126,10 @@ repeat(3) { index ->
 
 ---
 
-In Kotlin we can use the `for-in` also for iterable collections calling the given closure on each element:
+En Kotlin, nous pouvons utiliser le `for-in` également pour les collections itérables en appelant la closure donnée sur chaque élément :
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(2, 4, 6, 8, 10) 
+val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
@@ -138,17 +138,17 @@ for (num in numbers) {
 
 ---
 
-In Kotlin we have also the `forEach` loop.
-It calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+En Kotlin, nous avons aussi la boucle `forEach`.
+Elle appelle la closure donnée sur chaque élément de la séquence dans le même ordre qu'une boucle `for-in` :
 
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(1, 3, 5, 7, 9) 
+val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)
 }
 ```
 
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls. (_Actually it is possible with annotations, but it's a bit more complex topic that we won't see now._)
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+L'utilisation de la méthode `forEach` se distingue d'une boucle `for-in` de deux manières importantes :
+1. L'instruction `break` ou `continue` ne peut pas être utilisée pour sortir de l'appel en cours de la closure du corps ou pour ignorer les appels suivants. (_En fait, c'est possible avec des annotations, mais c'est un sujet un peu plus complexe que nous ne verrons pas maintenant._)
+2. L'utilisation de l'instruction `return` dans la closure du corps ne sortira que de la closure et non de la portée extérieure, et elle n'ignorera pas les appels suivants.

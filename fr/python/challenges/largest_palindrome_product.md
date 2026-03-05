@@ -11,7 +11,7 @@ Un nombre palindrome se lit de la même manière dans les deux sens. Le plus gra
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+Trouvez le plus grand palindrome obtenu à partir du produit de deux nombres à `n` chiffres.
 
 # --seed--
 

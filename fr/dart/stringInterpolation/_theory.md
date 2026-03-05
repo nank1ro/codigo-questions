@@ -25,15 +25,15 @@ Si ce qui suit le signe `$` n'est pas reconnaissable comme un identificateur de 
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+Nous pouvons également insérer des variables après les signes dollar pour afficher leur valeur
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+Nous pouvons utiliser des accolades pour insérer des valeurs autant de fois que nous le souhaitons en utilisant l'interpolation de chaînes
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+À l'intérieur de `${}`, nous pouvons également mettre des conditions, par exemple :
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-Interpolation de chaînes is best used in print statements, but we can also store them in variables like normal strings.
+L'interpolation de chaînes est idéalement utilisée dans les instructions print, mais nous pouvons également les stocker dans des variables comme des chaînes normales.

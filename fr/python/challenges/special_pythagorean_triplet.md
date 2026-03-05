@@ -7,15 +7,15 @@ title: Triplet pythagoricien spécial
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+Un triplet pythagoricien est un ensemble de trois nombres naturels, `a` < `b` < `c`, pour lequel, <latex>a^2 + b^2 = c^2</latex>
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+Par exemple, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+Il existe exactement un triplet pythagoricien pour lequel `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+Trouvez le produit `abc` tel que `a` + `b` + `c` = `n`.
 
 # --seed--
 

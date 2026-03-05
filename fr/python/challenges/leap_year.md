@@ -7,15 +7,15 @@ title: Année bissextile
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+Dans une année civile, il y a exactement 365,25 jours. Mais, à terme, cela peut prêter à confusion car les humains comptent normalement par divisibilité exacte de 1 et non avec des décimales. Ainsi, pour éviter cela, il a été décidé d'additionner tous les 0,25 jours sur un cycle de quatre ans et de donner à cette année 366 jours (incluant le 29 février comme jour intercalaire) et de l'appeler une __année bissextile__. Les trois autres années du cycle de quatre ans ne contiendraient que 365 jours et __ne seraient pas des années bissextiles__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `datetime` class, __if blocks__, __if-elif blocks__ or __conditionals__ (`a if b else c`) nor the logical operators __AND__ (`and`) and __OR__ (`or`) with the exemption of the __NOT__ (`not`) operator.
+Dans ce défi, nous passons à un niveau supérieur, où vous devez déterminer si c'est une année bissextile ou non sans utiliser la classe `datetime`, les __blocs if__, les __blocs if-elif__ ou les __conditionnelles__ (`a if b else c`) ni les opérateurs logiques __ET__ (`and`) et __OU__ (`or`) à l'exception de l'opérateur __NON__ (`not`).
 
-Return `True` if it's a leap year, `False` otherwise.
+Retournez `True` si c'est une année bissextile, `False` sinon.
 
-Example of function call:
+Exemple d'appel de fonction :
 ```dart
 print(leap_year(2000))
 // prints true

@@ -11,13 +11,13 @@ Créez une fonction qui prend un nombre en argument et retourne `"Fizz"`, `"Buzz
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Si le nombre est un multiple de `3`, la sortie doit être `"Fizz"`
+- Si le nombre donné est un multiple de `5`, la sortie doit être `"Buzz"`.
+- Si le nombre donné est un multiple à la fois de `3` et de `5`, la sortie doit être `"FizzBuzz"`.
+- Si le nombre n'est un multiple ni de `3` ni de `5`, le nombre doit être affiché tel quel comme montré dans les exemples ci-dessous.
+- La sortie doit toujours être une chaîne de caractères même si ce n'est pas un multiple de `3` ou `5`.
 
-Examples:
+Exemples :
 ```dart
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
