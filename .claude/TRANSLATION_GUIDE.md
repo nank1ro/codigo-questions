@@ -7,8 +7,13 @@ This guide documents the process and lessons learned for translating exercises t
 Translate all exercises from `en/` to a new locale folder (e.g., `{locale}/`, `fr/`).
 
 ## Setup
-1. Copy `en/` to `{locale}/` (e.g., `cp -r en/ fr/`)
-2. Use parallel Haiku agents (one per folder) for translation
+1. Add `'{locale}'` to the `locales` list in these 3 files:
+   - `validator/lib/validator.dart`
+   - `json_creator/lib/json_creator.dart`
+   - `theory_creator/lib/theory_creator.dart`
+   - e.g., change `['en', 'it', 'es']` → `['en', 'it', 'es', 'de']`
+2. Copy `en/` to `{locale}/` (e.g., `cp -r en/ fr/`)
+3. Use parallel Haiku agents (one per folder) for translation
 
 ## Scope
 
@@ -124,13 +129,14 @@ cd validator && dart test lib/validator.dart --chain-stack-traces --fail-fast
 
 ## Execution Order
 
-1. Copy `en/` folder to `{locale}/`
-2. Spawn Haiku agents per folder (not per language) - run 10-15 in parallel
-3. Check progress after batch completes
-4. Spawn new agents for any remaining untranslated folders
-5. Repeat steps 3-4 until 100% translated
-6. Run validator to verify all translations
-7. Fix any validation errors if found
+1. Add `'{locale}'` to `locales` in `validator/lib/validator.dart`, `json_creator/lib/json_creator.dart`, `theory_creator/lib/theory_creator.dart`
+2. Copy `en/` folder to `{locale}/`
+3. Spawn Haiku agents per folder (not per language) - run 10-15 in parallel
+4. Check progress after batch completes
+5. Spawn new agents for any remaining untranslated folders
+6. Repeat steps 4-5 until 100% translated
+7. Run validator to verify all translations
+8. Fix any validation errors if found
 
 ## Lessons Learned
 
