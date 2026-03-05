@@ -1,0 +1,62 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Sortie",
+        "description": "Apprenez comment afficher une valeur"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Chaînes formatées",
+        "description": "Apprenez comment formater les chaînes avec différents types de données"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variables",
+        "description": "Apprenez comment stocker les valeurs dans une variable"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booléens",
+        "description": "Apprenez comment évaluer n'importe quelle expression"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Opérateurs arithmétiques",
+        "description": "Apprenez comment effectuer des opérations arithmétiques sur les variables et les valeurs"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Opérateurs d'affectation",
+        "description": "Apprenez comment assigner des valeurs aux variables"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Opérateurs relationnels et booléens",
+        "description": "Apprenez comment comparer les valeurs"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Déclarations conditionnelles",
+        "description": "Apprenez comment prendre des décisions"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Boucles While",
+        "description": "Apprenez comment répéter un ensemble d'instructions"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Boucles For",
+        "description": "Apprenez comment répéter un ensemble d'instructions"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Tableaux",
+        "description": "Apprenez comment stocker différentes valeurs dans une variable"
+    },
+    "functions": {
+        "order": 12,
+        "title": "Fonctions",
+        "description": "Apprenez comment diviser le code par tâches spécifiques"
+    }
+}
