@@ -1,0 +1,27 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "Comentários",
+    "description": "Aprenda como comentar o código"
+  },
+  "output": {
+    "order": 2,
+    "title": "Saída",
+    "description": "Aprenda como exibir um valor"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "Interpolação de strings",
+    "description": "Aprenda como interpolar strings com diferentes tipos de dados"
+  },
+  "variables": {
+    "order": 4,
+    "title": "Variáveis",
+    "description": "Aprenda como armazenar valores em uma variável"
+  },
+  "types": {
+    "order": 5,
+    "title": "Tipos",
+    "description": "Aprenda os tipos que podem ser atribuídos a uma variável"
+  }
+}

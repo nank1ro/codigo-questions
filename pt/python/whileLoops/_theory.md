@@ -1,0 +1,43 @@
+Frequentemente na programacao, precisamos repetir um bloco de codigo, por exemplo:
+```python
+print("2 seconds")
+print("3 seconds")
+print("4 seconds")
+print("5 seconds")
+```
+Isso produz a seguinte saida:
+```python
+2 seconds
+3 seconds
+4 seconds
+5 seconds
+```
+Obviamente, para instrucoes longas gastariamos muito tempo escrevendo o codigo, mas felizmente, podemos usar lacos de repeticao.
+Vamos aprender o laco `while`, obtendo a mesma saida acima.
+```python
+count = 2
+while (count <= 5):
+    print(f"{count} seconds")
+    count += 1
+```
+Entao criamos uma variavel `count` atribuindo `2`, o valor inicial.
+Depois usamos a instrucao `while` que executara o bloco de codigo enquanto a condicao `count <= 5` for `True`.
+Dentro do bloco de codigo, **NAO** devemos esquecer de adicionar a linha `count += 1`.
+Ela incrementa o valor de `count`, caso contrario, nosso laco sera infinito
+
+---
+
+Para controlar quantas vezes um laco `while` se repete, comecamos com uma variavel definida como um numero.
+Chamamos essa variavel de variavel contadora
+
+---
+
+Depois, usamos uma comparacao na condicao para comparar a variavel `counter` com um numero.
+
+---
+
+Dentro do bloco de codigo, para parar o laco `while`, incrementamos a variavel `counter`.
+
+---
+
+A ordem em que voce escreve o codigo afeta a saida.
