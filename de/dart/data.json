@@ -1,0 +1,27 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "Kommentare",
+    "description": "Lerne, wie man den Code kommentiert"
+  },
+  "output": {
+    "order": 2,
+    "title": "Ausgabe",
+    "description": "Lerne, wie man einen Wert ausgibt"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "Zeichenketteninterpolation",
+    "description": "Lerne, wie man Zeichenketten mit verschiedenen Datentypen interpoliert"
+  },
+  "variables": {
+    "order": 4,
+    "title": "Variablen",
+    "description": "Lerne, wie man Werte in einer Variable speichert"
+  },
+  "types": {
+    "order": 5,
+    "title": "Typen",
+    "description": "Lerne die Typen, die einer Variable zugewiesen werden können"
+  }
+}

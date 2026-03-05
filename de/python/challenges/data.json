@@ -1,0 +1,94 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "Addition"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "Hallo Welt!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "Regentropfen"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "Summe der Ziffern"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "Zwei für eins"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 Türen"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Ackermann-Funktion"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Vielfache von 3 oder 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Gerade Fibonacci-Zahlen"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Größter Primfaktor"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Größtes Palindromprodukt"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "Kleinstes Vielfaches"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Summenquadrat-Differenz"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "10001. Primzahl"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Größtes Produkt in einer Serie"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Besonderes pythagoräisches Tripel"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Summation der Primzahlen"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "Arithmetisches Mittel",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "Römischer Zahlwandler",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "Schaltjahr",
+    "isPro": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Ausgabe",
+        "description": "Lerne, wie man einen Wert ausgibt"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "Zeichenketteninterpolation",
+        "description": "Lerne, wie man Zeichenketten mit verschiedenen Datentypen interpoliert"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variablen",
+        "description": "Lerne, wie man Werte in einer Variable speichert"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Booleans",
+        "description": "Lerne, wie man einen beliebigen Ausdruck auswertet"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Arithmetische Operatoren",
+        "description": "Lerne, wie man arithmetische Operationen mit Variablen und Werten durchführt"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Zuweisungsoperatoren",
+        "description": "Lerne, wie man Werte Variablen zuweist"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "Vergleichs- und logische Operatoren",
+        "description": "Lerne, wie man Werte vergleicht"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Bedingte Anweisungen",
+        "description": "Lerne, wie man Entscheidungen trifft"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While-Schleifen",
+        "description": "Lerne, wie man eine Reihe von Anweisungen wiederholt"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For-Schleifen",
+        "description": "Lerne, wie man eine Reihe von Anweisungen wiederholt"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Arrays",
+        "description": "Lerne, wie man verschiedene Werte in einer Variable speichert"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Wörterbücher",
+        "description": "Lerne, wie man Werte mit Schlüsseln speichert"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funktionen",
+        "description": "Lerne, wie man Code in spezifische Aufgaben aufteilt"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Aufzählungen",
+        "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Klassen",
+        "description": "Lerne objektorientierte Programmierung"
+    }
+}

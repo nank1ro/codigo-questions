@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Ausgabe",
+        "description": "Lerne, wie man einen Wert ausgibt"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "Formatierte Zeichenketten",
+        "description": "Lerne, wie man Zeichenketten mit verschiedenen Datentypen formatiert"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Variablen",
+        "description": "Lerne, wie man Werte in einer Variablen speichert"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Boolesche Werte",
+        "description": "Lerne, wie man jeden Ausdruck auswertet"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Arithmetische Operatoren",
+        "description": "Lerne, wie man arithmetische Operationen auf Variablen und Werte durchführt"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Zuweisungsoperatoren",
+        "description": "Lerne, wie man Werte Variablen zuweist"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "Relational- und Boolesche Operatoren",
+        "description": "Lerne, wie man Werte vergleicht"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Bedingte Anweisungen",
+        "description": "Lerne, wie man Entscheidungen trifft"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While-Schleifen",
+        "description": "Lerne, wie man eine Reihe von Anweisungen wiederholt"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For-Schleifen",
+        "description": "Lerne, wie man eine Reihe von Anweisungen wiederholt"
+    },
+    "lists": {
+        "order": 11,
+        "title": "Listen",
+        "description": "Lerne, wie man verschiedene Werte in einer Variablen speichert"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Wörterbücher",
+        "description": "Lerne, wie man Werte mit Schlüsseln speichert"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funktionen",
+        "description": "Lerne, wie man Code in spezifische Aufgaben aufteilt"
+    },
+    "modulesPackages": {
+        "order": 14,
+        "title": "Module und Pakete",
+        "description": "Lerne, wie man Module verwendet"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Klassen",
+        "description": "Lerne objektorientierte Programmierung"
+    }
+}

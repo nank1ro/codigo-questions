@@ -1,0 +1,82 @@
+---
+language: python
+exerciseType: 1
+difficulty: 1
+title: ATM
+---
+
+# --description--
+
+James möchte N Dollar von einem Geldautomaten abheben.
+Die Geldmaschine akzeptiert die Transaktion nur, wenn N ein Vielfaches von 5 ist und James' Konto genug Geld hat, um die Abhebungstransaktion durchzuführen (einschließlich Bankgebühren).
+Für jede erfolgreiche Abhebung berechnet die Bank `0,50$`.
+Berechnen Sie James' Kontostand nach einem Abhebungsversuch.
+Die Eingaben sind in der folgenden Reihenfolge:
+1. Der Betrag in bar, den James abheben möchte, liegt im folgenden Bereich: `0 < N <= 2000`.
+2. James' Anfangssaldo wird mit zwei Dezimalstellen angegeben und liegt im folgenden Bereich: `0 < B <= 2000`.
+
+# --instructions--
+
+Geben Sie den Kontostand nach der Transaktion zurück, angegeben als Zahl mit zwei Dezimalstellen.
+Wenn nicht genug Geld auf dem Konto vorhanden ist, um die Transaktion abzuschließen, geben Sie den aktuellen Kontostand zurück.
+
+# --seed--
+
+```python
+def account_balance():
+    pass
+```
+
+# --before-asserts--
+
+```python
+import unittest
+
+class CodigoTests(unittest.TestCase):
+```
+
+# --asserts--
+
+Führen Sie eine erfolgreiche Transaktion durch
+
+```python
+    def test_successful_transaction(self):
+        self.assertEqual(account_balance(50, 120.00), 69.50, "--err-t1--")
+```
+
+Unzureichende Deckung
+
+```python
+    def test_insufficient_funds(self):
+        self.assertEqual(account_balance(200, 120.00), 120.00, "--err-t2--")
+```
+
+Transaktion abgelehnt, ungültiger Betrag
+
+```python
+    def test_not_multiple_of_5(self):
+        self.assertEqual(account_balance(22, 120.00), 120.00, "--err-t3--")
+```
+
+Heben Sie das ganze Geld erfolgreich ab
+
+```python
+    def test_withdraw_all(self):
+        self.assertEqual(account_balance(95, 95.50), 0.00, "--err-t4--")
+```
+
+# --after-asserts--
+
+```python
+if __name__ == "__main__":
+    unittest.main()
+```
+
+# --solutions--
+
+```python
+def account_balance(withdraw, balance):
+    if (withdraw % 5 == 0) and (balance >= (withdraw + 0.50)):
+        return balance - withdraw - 0.50
+    return balance
+```
