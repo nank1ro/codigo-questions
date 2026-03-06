@@ -1,0 +1,72 @@
+{
+    "output": {
+        "order": 1,
+        "title": "输出",
+        "description": "学习如何输出值"
+    },
+    "templateLiterals": {
+        "order": 2,
+        "title": "模板字面量",
+        "description": "学习如何使用不同数据类型进行字符串插值"
+    },
+    "variables": {
+        "order": 3,
+        "title": "变量",
+        "description": "学习如何在变量中存储值"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "布尔值",
+        "description": "学习如何求值表达式"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "算术运算符",
+        "description": "学习如何对变量和值执行算术运算"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "赋值运算符",
+        "description": "学习如何为变量赋值"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "比较和逻辑运算符",
+        "description": "学习如何比较值"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "条件语句",
+        "description": "学习如何进行条件判断"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While 循环",
+        "description": "学习如何重复执行一组语句"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For 循环",
+        "description": "学习如何重复执行一组语句"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "数组",
+        "description": "学习如何在一个变量中存储不同的值"
+    },
+    "objects": {
+        "order": 12,
+        "title": "对象",
+        "description": "学习如何使用键存储值"
+    },
+    "functions": {
+        "order": 13,
+        "title": "函数",
+        "description": "学习如何按特定任务划分代码"
+    },
+    "classes": {
+        "order": 14,
+        "title": "类",
+        "description": "学习面向对象编程"
+    }
+}

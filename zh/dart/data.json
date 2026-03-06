@@ -1,0 +1,27 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "注释",
+    "description": "学习如何编写注释"
+  },
+  "output": {
+    "order": 2,
+    "title": "输出",
+    "description": "学习如何输出值"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "字符串插值",
+    "description": "学习如何使用不同数据类型进行字符串插值"
+  },
+  "variables": {
+    "order": 4,
+    "title": "变量",
+    "description": "学习如何在变量中存储值"
+  },
+  "types": {
+    "order": 5,
+    "title": "类型",
+    "description": "学习可赋值给变量的类型"
+  }
+}

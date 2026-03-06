@@ -1,0 +1,54 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "加法"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "你好世界！"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "雨滴"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "数字之和"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "二换一"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100扇门"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "阿克曼函数"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "算术平均值",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "罗马数字转换器",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "闰年",
+    "isPro": true
+  }
+}
