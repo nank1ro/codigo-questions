@@ -1,0 +1,94 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "足し算"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "Hello World!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "雨粒"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "数字の合計"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "2対1"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100のドア"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "アッカーマン関数"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3または5の倍数"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "フィボナッチ偶数"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "最大素因数"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "最大回文積"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "最小公倍数"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "平方和の差"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "10001番目の素数"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "数列の最大積"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "特別なピタゴラス数"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "素数の合計"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "算術平均",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "ローマ数字変換器",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "うるう年",
+    "isPro": true
+  }
+}
