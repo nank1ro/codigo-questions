@@ -1,35 +1,35 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+ऐरे एक डेटा प्रकार है जिसका उपयोग आप विभिन्न जानकारी के संग्रह को एक क्रम में एक ही वेरिएबल नाम के तहत संग्रहीत करने के लिए कर सकते हैं।
+एक ऐरे एक ही प्रकार के कई मान संग्रहीत करता है और इन मानों को अलग करने के लिए **इंडेक्स** का उपयोग करता है।
+आप इस प्रारूप की अभिव्यक्ति के साथ ऐरे में आइटम असाइन कर सकते हैं:
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type` वह डेटा प्रकार है जो आप ऐरे के लिए उपयोग करेंगे, उदाहरण के लिए `int`, `double`, आदि।
+`array_name` उस वेरिएबल का नाम है जो आइटम संग्रहीत करता है।
+`array_size` ऐरे का अधिकतम आकार है।
+अंत में, `item1` और `item2` वे मान हैं जिन्हें हम ऐरे में सहेजना चाहते हैं
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+आप ऐरे के किसी व्यक्तिगत आइटम को उसके इंडेक्स द्वारा एक्सेस कर सकते हैं।
+एक इंडेक्स एक पते की तरह है जो ऐरे में आइटम के स्थान की पहचान करता है।
+इंडेक्स ऐरे के नाम के ठीक बाद, कोष्ठकों के बीच दिखाई देता है, इस तरह:
 ```
 list_name[index];
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item in a array like this: `list_name[0]`.
-The second item in a array is at index 1: `list_name[1]`.
+ऐरे इंडेक्स `0` से शुरू होते हैं, `1` से **नहीं**! आप ऐरे में पहले आइटम को इस तरह एक्सेस करते हैं: `list_name[0]`।
+ऐरे में दूसरा आइटम इंडेक्स 1 पर है: `list_name[1]`।
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+एक लिस्ट इंडेक्स किसी अन्य वेरिएबल नाम की तरह व्यवहार करता है! इसका उपयोग मान एक्सेस करने के साथ-साथ असाइन करने के लिए भी किया जा सकता है।
+आपने देखा कि लिस्ट इंडेक्स को इस तरह कैसे एक्सेस करें:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0]; // Gets the value 5
 ```
-This is how an assignment works:
+असाइनमेंट इस तरह काम करता है:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
@@ -38,19 +38,19 @@ printf("%d\n", numbers[0]); // prints the new value 1
 
 ---
 
-You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
-It works because every item in the array has the same type, and as such the same size.
-The resulting *length* is the number of items it contains
+आप ऐरे का `sizeof` प्राप्त करके बाइट्स में ऐरे की लंबाई की गणना कर सकते हैं, फिर आपको इसे एक तत्व के आकार से विभाजित करना होगा।
+यह इसलिए काम करता है क्योंकि ऐरे में प्रत्येक आइटम का एक ही प्रकार होता है, और इसलिए एक ही आकार होता है।
+परिणामी *लंबाई* इसमें शामिल आइटम की संख्या है
 
 ---
 
-An array in C must have a fixed length.
-You can't add items to the end of an array, after declaring its size.
+C में एक ऐरे की एक निश्चित लंबाई होनी चाहिए।
+आप ऐरे का आकार घोषित करने के बाद उसके अंत में आइटम नहीं जोड़ सकते।
 
 ---
 
-In C programming, you can create an array of arrays.
-These arrays are known as multidimensional arrays, for example:
+C प्रोग्रामिंग में, आप ऐरे का ऐरे बना सकते हैं।
+इन ऐरे को बहुआयामी ऐरे के रूप में जाना जाता है, उदाहरण के लिए:
 ```c
 int numbers[2][3] = {{1, 2, 3}, {4, 5, 6}};
 ```

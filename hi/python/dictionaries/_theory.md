@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**Dictionaries** (शब्दकोश) लिस्ट और ट्यूपल के समान होते हैं, लेकिन आप इंडेक्स के बजाय *key* (कुंजी) द्वारा मान प्राप्त करते हैं।
+एक key कोई भी स्ट्रिंग या संख्या हो सकती है।
+Dictionaries को curly braces में लिखा जाता है, इस प्रकार:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+यह `d` नाम का एक dictionary है जिसमें तीन *key-value pairs* (कुंजी-मान जोड़े) हैं।
+Key `key1` मान `1` की ओर इशारा करती है, `key2` मान `2` की ओर, इत्यादि।
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+Key द्वारा dictionary के मानों को एक्सेस करना बिल्कुल वैसा ही है जैसे इंडेक्स द्वारा लिस्ट के मानों को एक्सेस करना:
 ```python
 user['age']
-# gets the age value from the user dictionary
+# user dictionary से age का मान प्राप्त करता है
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+लिस्ट की तरह, Dictionaries _mutable_ (परिवर्तनीय) होते हैं।
+इसका मतलब है कि उन्हें बनाने के बाद बदला जा सकता है।
+इसका एक फायदा यह है कि हम dictionary बनाने के बाद उसमें नए _key/value pairs_ जोड़ सकते हैं, इस प्रकार:
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+Dictionary की लंबाई `len()` उसमें मौजूद _key-value pairs_ की संख्या होती है।
+प्रत्येक जोड़ा केवल एक बार गिना जाता है, भले ही मान एक लिस्ट हो। (हाँ, आप dictionaries के अंदर लिस्ट भी रख सकते हैं!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+चूँकि dictionaries mutable (परिवर्तनीय) हैं, उन्हें कई तरीकों से बदला जा सकता है। `del` कमांड से dictionary से आइटम हटाए जा सकते हैं:
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+यह dictionary से key `key_name` और उसके संबंधित मान को हटा देगा।
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+अगर हम dictionary की सभी keys को सूचीबद्ध करना चाहें तो?
+इसके लिए `keys()` मेथड है।
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+अगर हम dictionary के सभी मानों को सूचीबद्ध करना चाहें तो?
+इसके लिए `values()` मेथड है।
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+लिस्ट की तरह, हम `for..in` कीवर्ड का उपयोग करके dictionary के तत्वों पर लूप कर सकते हैं।
+लूप में key और value दोनों प्राप्त करने के लिए हम `items()` मेथड का उपयोग कर सकते हैं:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+हम लूप्स में उपयोग किए गए `in` कीवर्ड का उपयोग यह निर्धारित करने के लिए भी कर सकते हैं कि dictionary में कोई विशेष __key__ मौजूद है या नहीं
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+Dictionary में मान __जोड़ने__ या __बदलने__ के लिए, हम `update()` मेथड का उपयोग भी कर सकते हैं, जिसमें हम जोड़ने वाले _key-value pairs_ को braces में लिखते हैं
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+लेकिन अगर हम dictionary से कोई मान __हटाना__ चाहें तो?
+इसके लिए `pop()` मेथड है:
 ```python
 dict_name.pop("key_name")
 ```

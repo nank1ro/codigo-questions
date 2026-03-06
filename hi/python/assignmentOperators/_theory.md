@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+हमने पहले ही सीख लिया है कि किसी वेरिएबल को वैल्यू असाइन करने के लिए हम `=` चिह्न का उपयोग कर सकते हैं, जैसे:
 ```python
 a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+हमारे पास पहले से एक इनिशियलाइज़्ड वेरिएबल `total` है
 ```python
 total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+मान लीजिए कि हम वेरिएबल `total` में संख्या `2` जोड़ना चाहते हैं, तो हम लिख सकते हैं
 ```python
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+ठीक है, यह काम करता है! लेकिन यही काम करने का एक छोटा तरीका भी है:
 ```python
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+चिह्न `+=` को **एडिशन असाइनमेंट** कहा जाता है।
+यह एक वैल्यू को वेरिएबल की वैल्यू में जोड़ता है और परिणाम को उस वेरिएबल में असाइन करता है।
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+एडिशन असाइनमेंट की तरह ही, हमारे पास **डिक्रीमेंट असाइनमेंट** `-=` है।
+कार्यप्रणाली वही है, बस अंतर यह है कि यह घटाव करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num - 5
 # is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **मल्टीप्लिकेशन असाइनमेंट** `*=` ऑपरेटर देखें।
+यह वेरिएबल को एक वैल्यू से गुणा करता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num * 5
 # is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **डिवीज़न असाइनमेंट** `/=` ऑपरेटर देखें।
+यह वेरिएबल को एक वैल्यू से भाग करता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num / 5
 # is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **power assignment** `**=` operator.
-It raises the variable to a specified power and assigns the result to the variable.
-So the followings are exactly the same
+आइए **पावर असाइनमेंट** `**=` ऑपरेटर देखें।
+यह वेरिएबल को एक निर्दिष्ट घातांक तक बढ़ाता है और परिणाम को वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num ** 5
 # is equal to
@@ -66,9 +66,9 @@ num **= 5
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **मॉड्यूलस असाइनमेंट** `%=` ऑपरेटर देखें।
+यह वेरिएबल और एक वैल्यू का मॉड्यूलस निकालता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num % 5
 # is equal to
@@ -77,9 +77,9 @@ num %= 5
 
 ---
 
-Let's see the **floor assignment** `//=` operator.
-It floor divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **फ्लोर असाइनमेंट** `//=` ऑपरेटर देखें।
+यह वेरिएबल को एक वैल्यू से फ्लोर डिवीज़न करता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```python
 num = num // 5
 # is equal to

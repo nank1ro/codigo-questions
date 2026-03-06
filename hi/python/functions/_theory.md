@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+आपने ऐसी स्थिति के बारे में सोचा होगा जहाँ आप कोड के एक टुकड़े को फिर से उपयोग करना चाहते हैं, बस कुछ अलग मानों के साथ।
+पूरा कोड दोबारा लिखने के बजाय, एक फ़ंक्शन परिभाषित करना ज़्यादा बेहतर है, जिसे बार-बार उपयोग किया जा सकता है।
+Python में हम `def` कीवर्ड का उपयोग करते हैं जिसके बाद फ़ंक्शन का नाम आता है:
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+__फ़ंक्शन परिभाषा__ में कोष्ठकों का खाली होना ज़रूरी नहीं है।
+उनके अंदर, हम पैरामीटर निर्दिष्ट कर सकते हैं
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+कभी-कभी हम चाहते हैं कि फ़ंक्शन एक मान __लौटाए__।
+इसके लिए `return` कीवर्ड है
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+फ़ंक्शन में हम एक _वैकल्पिक टिप्पणी_ जोड़ सकते हैं जो बताती है कि फ़ंक्शन क्या करता है:
 ```python
 """
 Prints 'Hello World' to the console.

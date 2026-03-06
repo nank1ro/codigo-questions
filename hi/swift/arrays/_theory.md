@@ -1,34 +1,34 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+Arrays एक डेटा टाइप है जिसका उपयोग आप विभिन्न जानकारियों के संग्रह को एक क्रम में एक ही वेरिएबल नाम के अंतर्गत संग्रहीत करने के लिए कर सकते हैं।
+एक array एक या एकाधिक प्रकार के कई मान संग्रहीत करता है और इन मानों को अलग करने के लिए **indexes** का उपयोग करता है।
+आप निम्नलिखित अभिव्यक्ति के रूप में एक array में आइटम असाइन कर सकते हैं:
 ```swift
 var arrayName: [itemsType] = [item1, item2]
 ```
-`itemsType` stands for the type of the items inside the array, for example, it can be `Int`, `String`, `Any`...
+`itemsType` array के अंदर आइटम्स के प्रकार को दर्शाता है, उदाहरण के लिए, यह `Int`, `String`, `Any` हो सकता है...
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+आप array के किसी व्यक्तिगत आइटम को उसके index से एक्सेस कर सकते हैं।
+एक index एक पते की तरह है जो array में आइटम की स्थिति को पहचानता है।
+index array के नाम के ठीक बाद, कोष्ठकों के बीच इस प्रकार दिखाई देता है:
 ```swift
 arrayName[index]
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+Array indices `0` से शुरू होते हैं, `1` से **नहीं**! आप array के पहले आइटम को इस प्रकार एक्सेस करते हैं: `arrayName[0]`।
+Array में दूसरा आइटम index 1 पर होता है: `arrayName[1]`।
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+एक array index किसी अन्य वेरिएबल नाम की तरह व्यवहार करता है।
+इसका उपयोग मान एक्सेस करने के साथ-साथ असाइन करने के लिए भी किया जा सकता है।
+आपने देखा कि array index को इस प्रकार एक्सेस किया जाता है:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 // Prints the value "Jeremiah"
 print(names[0])
 ```
-This is how an assignment works:
+इस प्रकार असाइनमेंट काम करता है:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 // Assign the new value "Jordan"
@@ -39,14 +39,14 @@ print(names[0])
 
 ---
 
-Just like strings, arrays have a **length** `count`.
-An arrays's length is the number of items it contains
+स्ट्रिंग्स की तरह, arrays की एक **लंबाई** `count` होती है।
+एक array की लंबाई उसमें मौजूद आइटम्स की संख्या होती है
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `append` function:
+एक array की लंबाई निश्चित होना जरूरी नहीं है।
+आप जब चाहें array के अंत में आइटम जोड़ सकते हैं!
+Array में आइटम जोड़ने के लिए हम `append` फंक्शन का उपयोग करते हैं:
 ```swift
 var letters = ["a", "b"]
 letters.append("c")
@@ -56,43 +56,43 @@ print(letters)
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+कभी-कभी, आप array का केवल एक हिस्सा एक्सेस करना चाहते हैं।
+निम्नलिखित कोड पर विचार करें:
 ```swift
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
 // prints [2, 3]
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers[1...2]`.
-In Swift we can include the last index using `...`, but we can also exclude the last index using `..<`
+पहले, हम `numbers` नामक एक array बनाते हैं।
+फिर, हम array का एक उपखंड लेते हैं और इसे slice array में संग्रहीत करते हैं।
+हम array के नाम के बाद शामिल करने वाले indices को परिभाषित करके ऐसा करते हैं: `numbers[1...2]`।
+Swift में हम `...` का उपयोग करके अंतिम index को शामिल कर सकते हैं, लेकिन हम `..<` का उपयोग करके अंतिम index को बाहर भी कर सकते हैं
 
 ---
 
-In Swift we can slice an array as we want!
+Swift में हम array को जैसे चाहें स्लाइस कर सकते हैं!
 ```swift
 // Grabs the first two items
 listName[..<2]
 // Grabs the fourth through last items
 listName[3...]
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+यदि आपके array स्लाइस में array का पहला या अंतिम आइटम शामिल है, तो उस आइटम के लिए index शामिल करने की आवश्यकता नहीं है
 
 ---
 
-Array elements could be of any type, if we specify the `Any` type:
+यदि हम `Any` प्रकार निर्दिष्ट करें तो array के तत्व किसी भी प्रकार के हो सकते हैं:
 ```swift
 var arrayName: [Any] = ["one", 2, true]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+वास्तव में, ऊपर हमारे पास क्रम में एक स्ट्रिंग, एक पूर्णांक और एक बूलियन है।
+लेकिन हमारे पास arrays के अंदर arrays भी हो सकते हैं!
 
 ---
 
-Sometimes you need to search for an item in an array.
-In Swift we can use the `firstIndex()` method:
+कभी-कभी आपको array में किसी आइटम को खोजने की आवश्यकता होती है।
+Swift में हम `firstIndex()` मेथड का उपयोग कर सकते हैं:
 ```swift
 var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
@@ -100,30 +100,30 @@ if let index = names.firstIndex(of: "Zac") {
 }
 // prints 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `insert()` method:
+ऊपर का कोड पहले index को प्रिंट करता है जिसमें स्ट्रिंग `"Zac"` है, इस मामले में `1`।
+हम `insert()` मेथड का उपयोग करके किसी विशिष्ट index पर array में आइटम भी डाल सकते हैं:
 ```swift
 names.insert("Ali", at: 1)
 // prints ["Trevor", "Ali", "Zac", "Glenn"]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+ऊपर का कोड index `1` पर `"Ali"` डालता है, जो इस index के बाद सब कुछ 1 से नीचे खिसका देता है
 
 ---
 
-In Swift we can loop through an array in a very simple way using the `for..in` keywords:
+Swift में हम `for..in` कीवर्ड्स का उपयोग करके बहुत सरल तरीके से array में लूप कर सकते हैं:
 ```swift
 var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3 
+// prints 1, 2, 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+`for` कीवर्ड के बाद एक वेरिएबल नाम आता है, इसे बारी-बारी से प्रत्येक array आइटम का मान असाइन किया जाएगा।
 
 ---
 
-**Tuples** are like arrays but you can name the elements and use those names to refer to them
-To create a tuple we use the round brackets `()` 
+**Tuples** arrays की तरह हैं लेकिन आप तत्वों को नाम दे सकते हैं और उन नामों का उपयोग उन्हें संदर्भित करने के लिए कर सकते हैं
+Tuple बनाने के लिए हम गोल कोष्ठक `()` का उपयोग करते हैं
 ```swift
 var person = (firstName: "John", lastName: "Smith")
 var firstName = person.firstName // John

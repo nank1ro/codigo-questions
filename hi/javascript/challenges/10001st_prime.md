@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001वाँ अभाज्य
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+पहली छह अभाज्य संख्याओं को सूचीबद्ध करने पर: 2, 3, 5, 7, 11, और 13, हम देख सकते हैं कि 6वीं अभाज्य संख्या 13 है।
 
 # --instructions--
 
-What is the `n`th prime number?
+`n`वीं अभाज्य संख्या क्या है?
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function nthPrime(n) {
 
 # --asserts--
 
-`nthPrime(6)` should return 13.
+`nthPrime(6)` को 13 लौटाना चाहिए।
 
 ```javascript
 tryCatch(nthPrime(6) === 13);
 ```
 
-`nthPrime(10)` should return 29.
+`nthPrime(10)` को 29 लौटाना चाहिए।
 
 ```javascript
 tryCatch(nthPrime(10) === 29);
 ```
 
-`nthPrime(100)` should return 541.
+`nthPrime(100)` को 541 लौटाना चाहिए।
 
 ```javascript
 tryCatch(nthPrime(100) === 541);
 ```
 
-`nthPrime(1000)` should return 7919.
+`nthPrime(1000)` को 7919 लौटाना चाहिए।
 
 ```javascript
 tryCatch(nthPrime(1000) === 7919);
 ```
 
-`nthPrime(10001)` should return 104743.
+`nthPrime(10001)` को 104743 लौटाना चाहिए।
 
 ```javascript
 tryCatch(nthPrime(10001) === 104743);

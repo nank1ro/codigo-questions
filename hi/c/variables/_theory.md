@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in C is an object and like other programming languages, C has commands for declaring a variable.
-To create a variable, we need to give it a **type** and a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+वेरिएबल डेटा मानों को संग्रहीत करने के कंटेनर हैं।
+C में हर वेरिएबल एक ऑब्जेक्ट है और अन्य प्रोग्रामिंग भाषाओं की तरह, C में वेरिएबल घोषित करने के लिए कमांड हैं।
+एक वेरिएबल बनाने के लिए, हमें इसे एक **टाइप** और एक **नाम** देना होगा, यह ध्यान रखते हुए कि इसमें स्पेस नहीं होने चाहिए।
+एक वेरिएबल तब बनता है जब आप पहली बार इसे कोई मान असाइन करते हैं।
+`x` नामक वेरिएबल बनाने का एक उदाहरण है:
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
-If we print the variable `x` we get back the number `1`:
+इस तरह हमने `x` नामक _integer_ वेरिएबल को मान `1` असाइन किया है।
+यदि हम वेरिएबल `x` को प्रिंट करते हैं तो हमें संख्या `1` वापस मिलती है:
 ```c
 >>> printf("%i\n", x);
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+वेरिएबल को इस तरह इसलिए कहा जाता है क्योंकि उनमें संग्रहीत मान बदल सकता है।
+हम `=` का उपयोग करके और एक नया मान देकर `x` को अपडेट कर सकते हैं।
 ```c
 >>> x = 1;
 >>> printf("%i\n", x);
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+हम वेरिएबल्स को अन्य वेरिएबल्स के मान भी दे सकते हैं। यहाँ, हम `y` वेरिएबल को `x` का मान दे सकते हैं
 ```c
 >>> int x = 5;
 >>> int y = x;
@@ -38,8 +38,8 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+जब हम एक वेरिएबल को अपडेट करते हैं, तो यह अपना पिछला मान भूल जाता है।
+यहाँ हम `x` वेरिएबल को दो बार प्रदर्शित कर सकते हैं और देख सकते हैं कि इसका मान कैसे अपडेट होता है।
 ```c
 >>> int x = 5;
 >>> printf("%i\n", x);
@@ -51,12 +51,12 @@ Here we can display the `x` variable twice and see how its value updates.
 
 ---
 
-In C string variables can be declared only by using double quotes:
+C में स्ट्रिंग वेरिएबल केवल डबल कोट्स का उपयोग करके घोषित किए जा सकते हैं:
 ```c
 char x[] = "May";
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+यदि हम कई शब्दों वाला वेरिएबल नाम चाहते हैं, तो हम **स्नेक केस** का उपयोग करते हैं।
+इसका अर्थ है अतिरिक्त शब्दों को जोड़ने के लिए `_` का उपयोग करना।

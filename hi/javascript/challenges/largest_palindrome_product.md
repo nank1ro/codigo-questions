@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: सबसे बड़ा पैलिंड्रोम गुणनफल
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+एक पैलिंड्रोमिक संख्या दोनों तरफ से समान पढ़ी जाती है। दो 2-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम 9009 = 91 × 99 है।
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+दो `n`-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम ज्ञात करें।
 
 # --before-seed--
 
@@ -41,13 +41,13 @@ function largestPalindromeProduct(n) {
 
 # --asserts--
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)` को 9009 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPalindromeProduct(2) === 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)` को 906609 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPalindromeProduct(3) === 906609);

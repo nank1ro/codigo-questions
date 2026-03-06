@@ -2,22 +2,22 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Ackermann function
+title: एकरमन फलन
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+एकरमन फलन एक पुनरावर्ती फलन (recursive function) का एक उत्कृष्ट उदाहरण है, जो विशेष रूप से इसलिए उल्लेखनीय है क्योंकि यह एक आदिम पुनरावर्ती फलन (primitive recursive function) नहीं है। इसका मान बहुत तेज़ी से बढ़ता है, और इसके कॉल ट्री का आकार भी।
 
-The Ackermann function is usually defined as follows:
+एकरमन फलन को आमतौर पर इस प्रकार परिभाषित किया जाता है:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+इसके आर्गुमेंट कभी ऋणात्मक नहीं होते और यह हमेशा समाप्त होता है
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+एक फ़ंक्शन लिखें जो एकरमन फलन का मान लौटाए।
 
 # --seed--
 
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` को 1 लौटाना चाहिए।
 
 ```swift
     func test1() {
@@ -46,7 +46,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` को 3 लौटाना चाहिए।
 
 ```swift
     func test2() {
@@ -54,7 +54,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` को 13 लौटाना चाहिए।
 
 ```swift
     func test3() {
@@ -62,7 +62,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` को 61 लौटाना चाहिए।
 
 ```swift
     func test4() {

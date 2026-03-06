@@ -2,20 +2,20 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: अंकों का योग
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+आपको एक पूर्णांक `N` दिया गया है।
+N के सभी अंकों का योग ज्ञात करने के लिए एक प्रोग्राम लिखें
 
 # --instructions--
 
-Return the sum of digits of `N`.
-> HINT: omit the argument label with the `_` (underscore)
+`N` के अंकों का योग लौटाएं।
+> संकेत: `_` (अंडरस्कोर) से आर्गुमेंट लेबल को छोड़ें
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 के अंकों का योग 15 है
 
 ```swift
     func testSumOfDigits1() {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
     }
 ```
 
-The sum of the digits of 57253 is 22
+57253 के अंकों का योग 22 है
 
 ```swift
     func testSumOfDigits2() {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
     }
 ```
 
-The sum of the digits of 122 is 5
+122 के अंकों का योग 5 है
 
 ```swift
     func testSumOfDigits3() {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
     }
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 के अंकों का योग 60 है
 
 ```swift
     func testSumOfDigits4() {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
     }
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 के अंकों का योग 46 है
 
 ```swift
     func testSumOfDigits5() {

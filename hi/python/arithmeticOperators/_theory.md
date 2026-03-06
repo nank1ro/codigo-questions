@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+ऑपरेटर्स का उपयोग वेरिएबल्स और वैल्यूज़ पर ऑपरेशन करने के लिए किया जाता है।
+आइए अंकगणितीय ऑपरेटर्स से शुरू करें, विशेष रूप से **जोड़** `+` ऑपरेटर से।
+इसका उपयोग दो संख्याओं को जोड़ने के लिए किया जाता है, जैसे:
 ```python
 >>> 5+3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+आइए **घटाव** `-` ऑपरेटर के साथ आगे बढ़ें।
+इसका उपयोग एक संख्या को दूसरी से घटाने के लिए किया जाता है, जैसे:
 ```python
 >>> 5-3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+आइए **गुणा** `*` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं को आपस में गुणा करने के लिए किया जाता है, जैसे:
 ```python
 >>> 5*3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+आइए **भाग** `/` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं को विभाजित करने के लिए किया जाता है, जैसे:
 ```python
 >>> 10/5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+आइए **मॉड्यूलस** `%` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं के भाग के बाद शेषफल ज्ञात करने के लिए किया जाता है, जैसे:
 ```python
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+यह 1 का मान देता है क्योंकि 5 को 2 से भाग देने पर भागफल 2 और शेषफल 1 आता है
 ```python
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+यह दूसरा 0 का मान देता है क्योंकि 9 को 3 से भाग देने पर भागफल 3 और शेषफल 0 आता है
 
 ---
 
-Let's see the **exponentiation** `**` operator.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+आइए **घातांक** `**` ऑपरेटर देखें।
+घातांक आधार के बार-बार गुणा करने के बराबर होता है: अर्थात, **b** का घातांक *n* होने पर *n* आधारों का गुणनफल होता है:
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```python
 >>> 5 ** 2
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** `//` operator.
-This operator returns the integral part of the quotient, for example:
+आइए **फ्लोर डिवीज़न** `//` ऑपरेटर देखें।
+यह ऑपरेटर भागफल का पूर्णांक भाग लौटाता है, उदाहरण के लिए:
 ```python
 >>> 5.0 / 2
 2.5
 >>> 5.0 // 2
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+इसे पूर्णांक भाग भी कहा जाता है। परिणामी मान एक पूर्ण पूर्णांक होता है, हालांकि परिणाम का *टाइप* आवश्यक रूप से int नहीं होता।

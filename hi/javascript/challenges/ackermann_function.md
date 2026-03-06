@@ -2,22 +2,22 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Ackermann function
+title: Ackermann फ़ंक्शन
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Ackermann फ़ंक्शन एक रिकर्सिव फ़ंक्शन का एक उत्कृष्ट उदाहरण है, जो विशेष रूप से इसलिए उल्लेखनीय है क्योंकि यह एक प्रिमिटिव रिकर्सिव फ़ंक्शन नहीं है। इसका मान बहुत तेज़ी से बढ़ता है, जैसा कि इसके कॉल ट्री का आकार भी बढ़ता है।
 
-The Ackermann function is usually defined as follows:
+Ackermann फ़ंक्शन को आमतौर पर इस प्रकार परिभाषित किया जाता है:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+इसके आर्गुमेंट कभी ऋणात्मक नहीं होते और यह हमेशा समाप्त होता है
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+एक फ़ंक्शन लिखें जो Ackermann फ़ंक्शन का मान लौटाए।
 
 # --before-seed--
 
@@ -47,25 +47,25 @@ function ack(m, n) {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` को 1 लौटाना चाहिए।
 
 ```javascript
 tryCatch(ack(0, 0) === 1);
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` को 3 लौटाना चाहिए।
 
 ```javascript
 tryCatch(ack(1, 1) === 3);
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` को 13 लौटाना चाहिए।
 
 ```javascript
 tryCatch(ack(2, 5) === 13);
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` को 61 लौटाना चाहिए।
 
 ```javascript
 tryCatch(ack(3, 3) === 61);

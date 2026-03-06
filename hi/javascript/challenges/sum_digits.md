@@ -2,17 +2,17 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: अंकों का योग
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+आपको एक पूर्णांक `num` दिया गया है।
+`num` के सभी अंकों का योग गणना करने के लिए एक प्रोग्राम लिखें
 
 # --instructions--
 
-Return the sum of digits of `num`
+`num` के अंकों का योग लौटाएं
 
 # --before-seed--
 
@@ -42,31 +42,31 @@ function sumDigits(num) {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 के अंकों का योग 15 है
 
 ```javascript
 tryCatch(sumDigits(12345) === 15);
 ```
 
-The sum of the digits of 57253 is 22
+57253 के अंकों का योग 22 है
 
 ```javascript
 tryCatch(sumDigits(57253) === 22);
 ```
 
-The sum of the digits of 122 is 5
+122 के अंकों का योग 5 है
 
 ```javascript
 tryCatch(sumDigits(122) === 5);
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 के अंकों का योग 60 है
 
 ```javascript
 tryCatch(sumDigits(91979997) === 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 के अंकों का योग 46 है
 
 ```javascript
 tryCatch(sumDigits(2147483647) === 46);

@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+हम जानते हैं कि `while` लूप का उपयोग करके कोड को कैसे दोहराया जाता है।
+जैसे यह प्रोग्राम `hello` प्रदर्शित करने के लिए स्टेटमेंट दोहराता है
 ```swift
 var counter = 0
 
@@ -8,7 +8,7 @@ while counter < 5 {
     counter += 1;
 }
 ```
-But we can do the same with `for` loops:
+लेकिन हम `for` लूप से भी यही कर सकते हैं:
 ```swift
 for i in 0..<5 {
     print("hello")
@@ -17,47 +17,47 @@ for i in 0..<5 {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for` लूप में हम निर्दिष्ट कर सकते हैं कि हम अपने लूप को कितनी बार चलाना चाहते हैं
 
 ---
 
-We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
+हम `..<` का उपयोग अगली संख्या को छोड़कर लूप करने के लिए कर सकते हैं, या `...` का उपयोग अगली संख्या को शामिल करके लूप करने के लिए कर सकते हैं
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i` नामक वेरिएबल काउंटर वेरिएबल है।
+हम इसे जो नाम चाहें दे सकते हैं।
+यह गिनता है कि हम वर्तमान में लूप के किस दोहराव पर हैं
 
 ---
 
-The `stride()` function returns a sequence of numbers.
-It requires the _from_, _to_ and _by_ parameters.
-These are the syntax of the function:
+`stride()` फ़ंक्शन संख्याओं का एक अनुक्रम लौटाता है।
+इसमें _from_, _to_ और _by_ पैरामीटर आवश्यक हैं।
+फ़ंक्शन का सिंटैक्स यह है:
 ```swift
 stride(from:to:by:)
 ```
-Keep in mind that the `to` value is excluded
+ध्यान रखें कि `to` मान को शामिल नहीं किया जाता है
 
 ---
 
-With the `stride()` function we can also use closed ranges, by using:
+`stride()` फ़ंक्शन के साथ हम बंद श्रेणियों का भी उपयोग कर सकते हैं, इसका उपयोग करके:
 ```swift
 stride(from:through:by:)
 ```
-In this case the `through` value is included
+इस स्थिति में `through` मान को शामिल किया जाता है
 
 ---
 
-In Swift we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+Swift में हमारे पास `forEach` लूप भी है।
+वास्तव में, `forEach` दिए गए क्लोज़र को अनुक्रम के प्रत्येक तत्व पर उसी क्रम में कॉल करता है जैसे `for-in` लूप:
 ```swift
 // this is an array, we'll see about that soon
-let numbers: [Int] = [1, 3, 5, 7, 9] 
-numbers.forEach { num in 
+let numbers: [Int] = [1, 3, 5, 7, 9]
+numbers.forEach { num in
     print(num)
 }
 ```
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+`forEach` मेथड का उपयोग `for-in` लूप से दो महत्वपूर्ण तरीकों से अलग है:
+1. `break` या `continue` स्टेटमेंट का उपयोग बॉडी क्लोज़र के वर्तमान कॉल से बाहर निकलने या बाद के कॉल को छोड़ने के लिए नहीं किया जा सकता।
+2. बॉडी क्लोज़र में `return` स्टेटमेंट का उपयोग केवल क्लोज़र से बाहर निकलेगा, बाहरी स्कोप से नहीं, और यह बाद के कॉल को नहीं छोड़ेगा।

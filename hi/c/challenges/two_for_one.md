@@ -2,29 +2,29 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: दो में से एक
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+एक नाम दिया गया है, इस संदेश के साथ एक स्ट्रिंग लौटाएं:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+जहां `X` दिया गया नाम है।
+हालांकि, यदि नाम खाली है, तो यह स्ट्रिंग लौटाएं:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+एक फ़ंक्शन लिखें जो सही स्ट्रिंग लौटाए, उदाहरण:
 
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
+**इनपुट**: `"Walter"`
+**आउटपुट**: `One for Walter, one for me.`
 
-**input**: `""`
-**output**: `One for you, one for me.`
+**इनपुट**: `""`
+**आउटपुट**: `One for you, one for me.`
 
-**input**: `"David"`
-**output**: `One for David, one for me.`
+**इनपुट**: `"David"`
+**आउटपुट**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -169,19 +169,19 @@ int main() {
 
 # --asserts--
 
-No name given
+कोई नाम नहीं दिया गया
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+नाम के रूप में "James" पास करें
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+नाम के रूप में "Martha" पास करें
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);

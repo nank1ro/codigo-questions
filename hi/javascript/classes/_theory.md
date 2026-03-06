@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScript एक ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग भाषा है, जिसका अर्थ है कि यह ऑब्जेक्ट्स नामक प्रोग्रामिंग संरचनाओं को संचालित करती है।
+आप एक ऑब्जेक्ट को एक ऐसी डेटा संरचना के रूप में सोच सकते हैं जिसमें डेटा के साथ-साथ फ़ंक्शन भी होते हैं; किसी ऑब्जेक्ट के फ़ंक्शन को उसके मेथड कहा जाता है।
+उदाहरण के लिए, जब आप कॉल करते हैं:
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScript जाँचता है कि क्या `arrayName` में `push()` मेथड है (जो सभी arrays में होता है) और अगर मिलता है तो उस मेथड को निष्पादित करता है।
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+_Classes_ सामान्य-उद्देश्य वाली, लचीली संरचनाएँ हैं जो आपके प्रोग्राम के कोड की निर्माण इकाइयाँ बनती हैं।
+एक बुनियादी class में केवल `class` कीवर्ड और उसका नाम होता है, उदाहरण के लिए:
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+आइए अपनी `Animal` class के अंदर कुछ डालें
+कुछ पैरामीटर जोड़ने के लिए हमें डिफ़ॉल्ट `constructor` का उपयोग करना होगा
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+एक class को परिभाषित करने से कोई ऑब्जेक्ट नहीं बनता।
+ऐसा करने के लिए, हमें एक class का __instance__ बनाना होगा।
+JavaScript में किसी class का नया instance बनाने के लिए, हम हमेशा class नाम से पहले `new` कीवर्ड का उपयोग करते हैं।
+यदि आप किसी पैरामीटर को डिफ़ॉल्ट मान देना चाहते हैं, तो इसे constructor की पैरामीटर नामों की सूची में करें
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+जब किसी class के अपने फ़ंक्शन होते हैं, तो उन फ़ंक्शन को __methods__ कहा जाता है।
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScript हमें `extends` कीवर्ड का उपयोग करके एक class को दूसरी class के child के रूप में बनाने की अनुमति देता है
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+आप _dot syntax_ का उपयोग करके किसी instance के गुणों तक पहुँच सकते हैं।
+dot syntax में, आप property का नाम instance के नाम के तुरंत बाद, बिना किसी स्पेस के, एक पीरियड `.` से अलग करके लिखते हैं:
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+इसी syntax का उपयोग करके हम किसी property के मान को भी अपडेट कर सकते हैं

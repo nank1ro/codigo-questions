@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+निर्णय लेना तब आवश्यक होता है जब हम केवल एक निश्चित शर्त पूरी होने पर ही कोड निष्पादित करना चाहते हैं।
+मान लीजिए कि हम बाहर खेलना चाहते हैं केवल तभी जब मौसम अच्छा हो।
+प्रोग्रामिंग में, हम एक बूलियन वेरिएबल `niceWeather` सेव कर सकते हैं और `if` यह वेरिएबल `true` है तो बाहर खेलने की क्रिया कर सकते हैं, जैसे:
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -10,21 +10,21 @@ if niceWeather {
 
 ---
 
-Let's continue with the previous example.
+चलिए पिछले उदाहरण को जारी रखते हैं।
 ```swift
 var niceWeather = true
 if niceWeather {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
+एक और महत्वपूर्ण बात **कर्ली ब्रैकेट्स** `{}` हैं जो एक कोड ब्लॉक को दर्शाते हैं।
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Swift we can use the `else` statement, like:
+हमने अभी देखा कि किसी शर्त के पूरा होने पर कोड ब्लॉक कैसे निष्पादित करें, अब देखते हैं कि पहली शर्त विफल होने पर दूसरा कोड ब्लॉक कैसे निष्पादित करें।
+हम बाहर खेलने जाते हैं अगर मौसम अच्छा है; अन्यथा, हम घर पर रहते हैं।
+Swift में हम `else` स्टेटमेंट का उपयोग कर सकते हैं, जैसे:
 ```swift
 var niceWeather = true
 if niceWeather {
@@ -36,7 +36,7 @@ if niceWeather {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+मान लीजिए हमें एक और शर्त जांचनी है, जैसे इस उदाहरण में:
 ```swift
 var num = 3
 if num == 2 {
@@ -47,13 +47,13 @@ if num == 2 {
     print("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+और इस कोड का आउटपुट `the number is 3` है।
+सबसे पहले, जांचते हैं कि संख्या 2 के बराबर है या नहीं, यह गलत है।
+तो दूसरे स्टेटमेंट पर चलते हैं और जांचते हैं कि `num` 3 के बराबर है या नहीं, यह सही होने पर हम `the number is 3` प्रिंट करके अगले कोड ब्लॉक को निष्पादित करते हैं
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+हम जितने चाहें उतने `else if` स्टेटमेंट जोड़ सकते हैं, कोई सीमा नहीं है
 ```swift
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     print("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+हम एक कंडीशनल स्टेटमेंट (`if`, `else if` या `else`) को दूसरे कंडीशनल स्टेटमेंट के अंदर नेस्ट भी कर सकते हैं, एक अधिक जटिल संरचना बनाने के लिए।
 ```swift
 var num = 4
 if num < 3 {
@@ -87,13 +87,13 @@ if num < 3 {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-The ternary conditional operator is a special operator with three parts, which takes the form `question ? answer1 : answer2`.
-It's a shortcut for evaluating one of two expressions based on whether `question` is true or false.
-If `question` is true, it evaluates `answer1` and returns its value; otherwise, it evaluates `answer2` and returns its value.
+टर्नरी कंडीशनल ऑपरेटर तीन भागों वाला एक विशेष ऑपरेटर है, जो `question ? answer1 : answer2` के रूप में होता है।
+यह `question` के सही या गलत होने के आधार पर दो अभिव्यक्तियों में से एक का मूल्यांकन करने का शॉर्टकट है।
+यदि `question` सही है, तो यह `answer1` का मूल्यांकन करता है और उसका मान लौटाता है; अन्यथा, यह `answer2` का मूल्यांकन करता है और उसका मान लौटाता है।
 ```swift
 let a = 10, b = 20, c: Int
 if (a < b) {
@@ -103,20 +103,20 @@ if (a < b) {
 }
 print(c)
 ```
-The shortand code for the above code is:
+उपरोक्त कोड का संक्षिप्त कोड है:
 ```swift
 let a = 10, b = 20, c: Int
 c = a < b ? a : b
 print(c)
 ```
-`c` is set equal to `a`, because the condition `a < b` was true
+`c` `a` के बराबर सेट है, क्योंकि शर्त `a < b` सही थी
 
 ---
 
-The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The nil-coalescing operator is shorthand for the code below:
+_nil-coalescing ऑपरेटर_ `a ?? b` एक ऑप्शनल `a` को अनरैप करता है यदि उसमें कोई मान है, या `a` `nil` होने पर डिफ़ॉल्ट मान `b` लौटाता है।
+अभिव्यक्ति `a` हमेशा एक ऑप्शनल टाइप की होती है।
+अभिव्यक्ति `b` को a के अंदर संग्रहीत टाइप से मेल खाना चाहिए।
+nil-coalescing ऑपरेटर नीचे दिए गए कोड का संक्षिप्त रूप है:
 ```swift
 a != nil ? a! : b
 ```

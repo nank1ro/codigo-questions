@@ -1,22 +1,22 @@
-> The `for` keyword executes a block of code for each value in a sequence.
+> `for` कीवर्ड एक अनुक्रम में प्रत्येक मान के लिए कोड का एक ब्लॉक निष्पादित करता है।
 
-The `for` loop iterates through anything that provides an iterator.
+`for` लूप किसी भी चीज़ के माध्यम से पुनरावृत्ति करता है जो एक iterator प्रदान करती है।
 
-The syntax of `for` is the following:
+`for` का सिंटैक्स निम्नलिखित है:
 ```kotlin
 for (item in collection) print(item)
 ```
 
-The body of `for` can also be a block
+`for` का बॉडी एक ब्लॉक भी हो सकता है
 ```kotlin
 for (item in collection) {
     print(item)
 }
 ```
 
-Each time through the loop, `item` is given the next element in values.
+लूप के प्रत्येक चक्र में, `item` को values में अगला तत्व दिया जाता है।
 
-Here's a `for` loop repeating an action a fixed number of times:
+यहाँ एक `for` लूप है जो एक निश्चित संख्या में एक क्रिया दोहराता है:
 
 ```kotlin
 for (i in 1..3) {
@@ -25,12 +25,12 @@ for (i in 1..3) {
 // prints 1, 2, 3
 ```
 
-The output shows the index `i` receiving each value in the range from _1_ to _3_.
+आउटपुट दिखाता है कि इंडेक्स `i` _1_ से _3_ तक की रेंज में प्रत्येक मान प्राप्त करता है।
 
 ---
 
-A _range_ is an interval of values defined by a pair of endpoints.
-There are two basic ways to define ranges:
+एक _range_ दो सीमा बिंदुओं द्वारा परिभाषित मानों का एक अंतराल है।
+रेंज को परिभाषित करने के दो बुनियादी तरीके हैं:
 
 ```kotlin
 var firstRange = 1..3           // [1]
@@ -44,35 +44,35 @@ println(secondRange)
 */
 ```
 
-- __[1]__ using the `..` syntax includes both bounds in the resulting range.
-- __[2]__ `until` excludes the end. The output shows that _3_ is not part of the range.
+- __[1]__ `..` सिंटैक्स का उपयोग करने से परिणामी रेंज में दोनों सीमाएँ शामिल होती हैं।
+- __[2]__ `until` अंत को बाहर करता है। आउटपुट दिखाता है कि _3_ रेंज का हिस्सा नहीं है।
 
 ---
 
-You can iterate over a range in reverse order.
+आप एक रेंज पर उल्टे क्रम में पुनरावृत्ति कर सकते हैं।
 
-You will probably expect `3..1` to work, unfortunately, the Kotlin team has decided to import this functionality in a different way.
+आप शायद उम्मीद करेंगे कि `3..1` काम करेगा, दुर्भाग्य से, Kotlin टीम ने इस कार्यक्षमता को एक अलग तरीके से शामिल करने का निर्णय लिया है।
 
-In fact if you try to run this snippet of code:
+वास्तव में यदि आप कोड के इस स्निपेट को चलाने का प्रयास करते हैं:
 ```kotlin
 for (i in 3..1) println(i)
 ```
 
-You'll see that nothing is printed.
-To make it working we've to use the `downTo` keyword:
+आप देखेंगे कि कुछ भी प्रिंट नहीं होता।
+इसे काम कराने के लिए हमें `downTo` कीवर्ड का उपयोग करना होगा:
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
 // prints 3, 2, 1
 ```
 
-`downTo` produces a decreasing range.
+`downTo` एक घटती हुई रेंज बनाता है।
 
 ---
 
-The default _step_ of a range is __1__, but you can explicitly set another value.
+एक रेंज का डिफ़ॉल्ट _step_ __1__ होता है, लेकिन आप स्पष्ट रूप से दूसरा मान सेट कर सकते हैं।
 
-You can define the __step__ of your `for` loop using the `step` keyword.
+आप `step` कीवर्ड का उपयोग करके अपने `for` लूप का __step__ परिभाषित कर सकते हैं।
 
 ```kotlin
 for (i in 1..10 step 2) {
@@ -81,11 +81,11 @@ for (i in 1..10 step 2) {
 // prints 1, 3, 5, 7, 9
 ```
 
-As you can see, the code-block runs with a step of _2_ instead of _1_, changing completely our output.
+जैसा कि आप देख सकते हैं, कोड-ब्लॉक _1_ के बजाय _2_ के step के साथ चलता है, जो हमारे आउटपुट को पूरी तरह से बदल देता है।
 
 ---
 
-You can also produce a range of _characters_.
+आप _characters_ की एक रेंज भी बना सकते हैं।
 ```kotlin
 for (char in 'a'..'z') print(char)
 // prints abcdefghijklmnopqrstuvwxyz
@@ -93,21 +93,21 @@ for (char in 'a'..'z') print(char)
 
 ---
 
-You can iterate over a __String__.
+आप एक __String__ पर पुनरावृत्ति कर सकते हैं।
 ```kotlin
 for (char in 'abc') print(char + 1)
 // prints bdc
 ```
 
-In the example above we've printed each character + 1, so `'a'` becomes `'b'`, `'b'` becomes `'c'` and so on.
+ऊपर के उदाहरण में हमने प्रत्येक character + 1 प्रिंट किया है, इसलिए `'a'` `'b'` बन जाता है, `'b'` `'c'` बन जाता है और इसी तरह आगे।
 
-This is possibile because characters are stored as numbers corresponding to their [ASCII Codes](https://en.wikipedia.org/wiki/ASCII).
+यह संभव है क्योंकि characters को उनके [ASCII कोड](https://en.wikipedia.org/wiki/ASCII) के अनुरूप संख्याओं के रूप में संग्रहीत किया जाता है।
 
-So adding an integer to a character produces a new character corresponding to the new code value.
+इसलिए एक character में एक integer जोड़ने से नए कोड मान के अनुरूप एक नया character बनता है।
 
 ---
 
-In case you simply need to repeat a block of code `n` times, you can use the `repeat(times: Int)` function.
+यदि आपको बस एक कोड ब्लॉक को `n` बार दोहराना है, तो आप `repeat(times: Int)` फ़ंक्शन का उपयोग कर सकते हैं।
 
 ```kotlin
 repeat(3) {
@@ -116,7 +116,7 @@ repeat(3) {
 // prints repeat 3 times
 ```
 
-You can even access the index with
+आप index को भी एक्सेस कर सकते हैं
 ```kotlin
 repeat(3) { index ->
     println(index)
@@ -126,10 +126,10 @@ repeat(3) { index ->
 
 ---
 
-In Kotlin we can use the `for-in` also for iterable collections calling the given closure on each element:
+Kotlin में हम `for-in` का उपयोग iterable collections के लिए भी कर सकते हैं, जो प्रत्येक तत्व पर दिए गए closure को कॉल करता है:
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(2, 4, 6, 8, 10) 
+val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
@@ -138,17 +138,17 @@ for (num in numbers) {
 
 ---
 
-In Kotlin we have also the `forEach` loop.
-It calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+Kotlin में हमारे पास `forEach` लूप भी है।
+यह अनुक्रम में प्रत्येक तत्व पर दिए गए closure को `for-in` लूप के समान क्रम में कॉल करता है:
 
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(1, 3, 5, 7, 9) 
+val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)
 }
 ```
 
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls. (_Actually it is possible with annotations, but it's a bit more complex topic that we won't see now._)
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+`forEach` मेथड का उपयोग `for-in` लूप से दो महत्वपूर्ण तरीकों से भिन्न है:
+1. बॉडी closure के वर्तमान कॉल से बाहर निकलने या बाद के कॉल को छोड़ने के लिए `break` या `continue` स्टेटमेंट का उपयोग नहीं किया जा सकता। (_वास्तव में यह annotations के साथ संभव है, लेकिन यह एक थोड़ा जटिल विषय है जो हम अभी नहीं देखेंगे।_)
+2. बॉडी closure में `return` स्टेटमेंट का उपयोग केवल closure से बाहर निकलेगा, बाहरी scope से नहीं, और यह बाद के कॉल को नहीं छोड़ेगा।

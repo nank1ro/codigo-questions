@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: सबसे छोटा गुणज
 ---
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 वह सबसे छोटी संख्या है जिसे 1 से 10 तक की प्रत्येक संख्या से बिना किसी शेषफल के विभाजित किया जा सकता है।
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+वह सबसे छोटी धनात्मक संख्या कौन सी है जो 1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य हो?
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function smallestMultiple(n) {
 
 # --asserts--
 
-`smallestMultiple(5)` should return 60.
+`smallestMultiple(5)` को 60 लौटाना चाहिए।
 
 ```javascript
 tryCatch(smallestMultiple(5) === 60);
 ```
 
-`smallestMultiple(7)` should return 420.
+`smallestMultiple(7)` को 420 लौटाना चाहिए।
 
 ```javascript
 tryCatch(smallestMultiple(7) === 420);
 ```
 
-`smallestMultiple(10)` should return 2520.
+`smallestMultiple(10)` को 2520 लौटाना चाहिए।
 
 ```javascript
 tryCatch(smallestMultiple(10) === 2520);
 ```
 
-`smallestMultiple(13)` should return 360360.
+`smallestMultiple(13)` को 360360 लौटाना चाहिए।
 
 ```javascript
 tryCatch(smallestMultiple(13) === 360360);
 ```
 
-`smallestMultiple(20)` should return 232792560.
+`smallestMultiple(20)` को 232792560 लौटाना चाहिए।
 
 ```javascript
 tryCatch(smallestMultiple(20) === 232792560);

@@ -1,15 +1,14 @@
-> Computers are ideal for repetitive tasks.
+> कंप्यूटर दोहराए जाने वाले कार्यों के लिए आदर्श हैं।
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+दोहराव का सबसे बुनियादी रूप `while` कीवर्ड का उपयोग करता है।
+यह एक ब्लॉक को तब तक दोहराता है जब तक नियंत्रित करने वाला _Boolean expression_ true है:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+Boolean expression को लूप की शुरुआत में एक बार और ब्लॉक के माध्यम से प्रत्येक आगे के iteration से पहले फिर से evaluate किया जाता है।
 
 ```kotlin
 var x = 3
@@ -18,16 +17,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+यहाँ हमने एक variable `x` बनाया है, जिसे __3__ का प्रारंभिक मान दिया है।
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+फिर हमने `while` स्टेटमेंट का उपयोग किया है जो कोड के ब्लॉक को तब तक चलाएगा जब तक शर्त `x > 0` `true` है।
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+कोड के ब्लॉक के अंदर, हमें `x--` लाइन जोड़ना **नहीं** भूलना चाहिए।
+यह `x` के मान को घटाता है, अन्यथा, हमारा लूप अनंत होगा।
 
 ---
 
-Let's analyze this snippet of code.
+आइए इस कोड स्निपेट का विश्लेषण करें।
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +34,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__: हम `counter` variable को __0__ से initialize करते हैं।
+- __[2]__: _while_ के लिए conditional expression कहता है: "body में स्टेटमेंट्स को तब तक दोहराएं जब तक counter _100_ से कम है"।
+- __[3]__: `+=` ऑपरेटर एक ही ऑपरेशन में `counter` में _10_ जोड़ता है और परिणाम को `counter` में assign करता है।
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+ऊपर दिए गए कोड का आउटपुट है _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+_while_ का उपयोग करने का एक दूसरा तरीका है, `do` कीवर्ड के साथ।
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+जैसा कि आप देख सकते हैं `do-while` `while` लूप के समान है, एक महत्वपूर्ण अंतर को छोड़कर:
+> लूप का body शर्त evaluate होने से पहले एक बार execute होता है।
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+दूसरे शब्दों में, `do-while` का body हमेशा कम से कम एक बार execute होता है, भले ही condition expression शुरू में `false` produce करे।
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+इसके विपरीत, `while` लूप का body कभी नहीं चलेगा अगर शर्त पहली बार `false` produce करती है।
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+_while_ लूप तीन structural jump expression को सपोर्ट करता है:
+- `break` निकटतम enclosing लूप को समाप्त करता है।
+- `continue` निकटतम enclosing लूप के अगले चरण पर जाता है।
+- `return` डिफ़ॉल्ट रूप से निकटतम enclosing function या anonymous function से वापस आता है (_हम इसे बाद में देखेंगे जब हम functions के बारे में बात करेंगे_)।
 
-Here is an example of the use of `continue` within a _while_ loop:
+यहाँ _while_ लूप के अंदर `continue` के उपयोग का एक उदाहरण है:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +73,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+जैसा कि आप __[1]__ पर देख सकते हैं जब `i` _2_ के बराबर है, हम छोड़ देते हैं और अगले चरण पर _continue_ करते हैं। वास्तव में संख्या 2 कभी प्रिंट नहीं होती।
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+यहाँ _while_ लूप के अंदर `break` के उपयोग का एक उदाहरण है:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +88,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+जैसा कि आप __[1]__ पर देख सकते हैं जब `i` _2_ के बराबर है, हम लूप को _break_ करते हैं। वास्तव में संख्या 2 और 3 कभी प्रिंट नहीं होती।

@@ -1,15 +1,15 @@
-**Dictionaries** are similar to arrays and tuples, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Dictionaries are enclosed in square brackets, like so:
+**Dictionaries** arrays और tuples के समान हैं, लेकिन आप index के बजाय *key* का उपयोग करके values तक पहुँचते हैं।
+एक key कोई भी string या number हो सकती है।
+Dictionaries को square brackets में लिखा जाता है, इस प्रकार:
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+यह `dictionaryName` नामक एक dictionary है जिसमें तीन *key-value pairs* हैं।
+key `key1` value `1` की ओर इंगित करती है, `key2` `2` की ओर, और इसी तरह।
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+key द्वारा dictionary values तक पहुँचना बिल्कुल वैसा ही है जैसे index द्वारा array values तक पहुँचना:
 ```swift
 // gets the age value from the user dictionary
 user['age']
@@ -17,42 +17,42 @@ user['age']
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Arrays की तरह, Dictionaries _mutable_ होती हैं।
+इसका मतलब है कि उन्हें बनाने के बाद बदला जा सकता है (यदि उन्हें constant घोषित नहीं किया गया है)।
+इसका एक फायदा यह है कि हम dictionary बनाने के बाद उसमें नए _key/value pairs_ जोड़ सकते हैं, इस प्रकार:
 ```swift
 dictName[newKeyName] = newValue
 ```
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+एक dictionary की लंबाई `count` उसमें मौजूद _key-value pairs_ की संख्या होती है।
+प्रत्येक pair केवल एक बार गिना जाता है, भले ही value एक array हो। (हाँ, सही सुना: आप dictionaries के अंदर arrays भी रख सकते हैं!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+चूँकि dictionaries mutable हैं, उन्हें कई तरीकों से बदला जा सकता है। `removeValue(forKey:)` method से dictionary से items हटाए जा सकते हैं:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
     print("The removed value is \(removedValue).") // prints the removed value, if the key exists
 }
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+यह dictionary से key `keyName` और उससे जुड़ी value को हटा देगा।
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+क्या होगा अगर हम dictionary की सभी keys की सूची बनाना चाहें?
+इसके लिए `keys` property है।
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+क्या होगा अगर हम dictionary की सभी values की सूची बनाना चाहें?
+इसके लिए `values` property है।
 
 ---
 
-As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+Arrays की तरह, हम `for..in` keywords का उपयोग करके dictionary elements के बीच loop कर सकते हैं।
+loop में key और value दोनों प्राप्त करने के लिए हमें कोई property निर्दिष्ट करने की आवश्यकता नहीं है:
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -61,16 +61,16 @@ for (key, value) in dictName {
 
 ---
 
-We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+हम arrays के साथ उपयोग की गई `isEmpty` property का उपयोग यह निर्धारित करने के लिए भी कर सकते हैं कि dictionary खाली है या नहीं
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `updateValue(_:forKey:)` method
+dictionary में values __जोड़ने__ या __बदलने__ के लिए, हम `updateValue(_:forKey:)` method का भी उपयोग कर सकते हैं
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+पहले हमने देखा कि `removeValue()` method से dictionary से _key-value pair_ कैसे हटाया जाता है।
+हम key को `nil` value assign करके भी एक element हटा सकते हैं
 ```swift
 dictName[keyName] = nil
 // keyName has been removed from the dictionary dictName

@@ -1,43 +1,43 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+ऑपरेटर का उपयोग वेरिएबल और मानों पर संक्रियाएँ करने के लिए किया जाता है।
+आइए अंकगणितीय ऑपरेटरों से शुरू करें, विशेष रूप से **जोड़** `+` ऑपरेटर से।
+इसका उपयोग दो संख्याओं को जोड़ने के लिए किया जाता है, जैसे:
 ```kotlin
 println(5 + 3) // 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+आइए **घटाव** `-` ऑपरेटर के साथ आगे बढ़ें।
+इसका उपयोग एक संख्या को दूसरी संख्या से घटाने के लिए किया जाता है, जैसे:
 ```kotlin
 println(5 - 3) // 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+आइए **गुणा** `*` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं को आपस में गुणा करने के लिए किया जाता है, जैसे:
 ```kotlin
 println(5 * 3) // 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+आइए **भाग** `/` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं को विभाजित करने के लिए किया जाता है, जैसे:
 ```kotlin
 println(10 / 5) // 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+आइए **शेषफल** `%` ऑपरेटर देखें।
+इसका उपयोग दो संख्याओं के भाग के बाद शेषफल ज्ञात करने के लिए किया जाता है, जैसे:
 ```kotlin
 println(5 % 2) // 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+यह 1 का मूल्यांकन करता है क्योंकि 5 को 2 से भाग करने पर भागफल 2 और शेषफल 1 आता है
 ```kotlin
 println(9 % 3) // 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+यह दूसरा 0 का मूल्यांकन करता है क्योंकि 9 को 3 से भाग करने पर भागफल 3 आता है और शेषफल 0 बचता है

@@ -1,43 +1,43 @@
-Often in programming, we need to repeat a block of code, for example:
+प्रोग्रामिंग में अक्सर हमें कोड के एक ब्लॉक को दोहराने की आवश्यकता होती है, उदाहरण के लिए:
 ```python
 print("2 seconds")
 print("3 seconds")
 print("4 seconds")
 print("5 seconds")
 ```
-This produces the following output:
+यह निम्नलिखित आउटपुट देता है:
 ```python
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+स्पष्ट रूप से, लंबे स्टेटमेंट्स के लिए हमें कोड लिखने में बहुत समय लगेगा, लेकिन सौभाग्य से, हम लूप्स का उपयोग कर सकते हैं।
+आइए `while` लूप सीखते हैं, ऊपर वाला ही आउटपुट प्राप्त करते हैं।
 ```python
 count = 2
 while (count <= 5):
     print(f"{count} seconds")
     count += 1
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `True`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+तो हमने एक वेरिएबल `count` बनाया और `2` असाइन किया, जो प्रारंभिक मान है।
+फिर हमने `while` स्टेटमेंट का उपयोग किया जो कोड ब्लॉक को तब तक चलाएगा जब तक शर्त `count <= 5` `True` है।
+कोड ब्लॉक के अंदर, हमें `count += 1` लाइन जोड़ना **नहीं भूलना** चाहिए।
+यह `count` के मान को बढ़ाता है, अन्यथा हमारा लूप अनंत होगा
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while` लूप कितनी बार दोहराया जाए यह नियंत्रित करने के लिए, हम एक वेरिएबल से शुरू करते हैं जिसमें एक संख्या सेट होती है।
+हम इस वेरिएबल को काउंटर वेरिएबल कहते हैं
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+फिर, हम शर्त में एक तुलना का उपयोग करते हैं ताकि `counter` वेरिएबल की एक संख्या से तुलना कर सकें।
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+`while` लूप को रोकने के लिए, कोड ब्लॉक के अंदर हम `counter` वेरिएबल को बढ़ाते हैं।
 
 ---
 
-The order you write code affects the output.
+आप जिस क्रम में कोड लिखते हैं वह आउटपुट को प्रभावित करता है।

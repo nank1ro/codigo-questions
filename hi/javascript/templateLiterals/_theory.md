@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+JavaScript में हम दो या अधिक स्ट्रिंग्स को एक साथ प्रदर्शित करने के लिए `+` चिह्न का उपयोग कर सकते हैं, जैसे:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+टेम्पलेट लिटरल्स हमें `+` चिह्न का उपयोग किए बिना, एक स्ट्रिंग में संख्या जोड़ने जैसे एक्सप्रेशन प्रदर्शित करने की अनुमति देते हैं।
+एक वैध टेम्पलेट लिटरल बनाने के लिए आपको डबल या सिंगल कोट्स के बजाय बैकटिक्स \`\` का उपयोग करना होगा।
+आप डॉलर चिह्न और कर्ली ब्रेसेस `${expression}` का उपयोग करके टेम्पलेट लिटरल्स के अंदर वेरिएबल्स डाल सकते हैं
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+हर टेम्पलेट लिटरल्स स्टेटमेंट दो भागों से मिलकर बना होता है, `${}` जहाँ हम संख्या या वेरिएबल डालते हैं, और सामान्य स्ट्रिंग
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+इसके बाद, हम कर्ली ब्रेसेस में अलग प्रकार का मान जोड़ते हैं ताकि यह एक console.log स्टेटमेंट के रूप में प्रदर्शित हो। जैसे यहाँ, `${5}` के साथ
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+गोल कोष्ठकों के बीच `friends` जैसे वेरिएबल्स डालने से उनका मान भी प्रदर्शित होता है
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+हम टेम्पलेट लिटरल्स के अंदर जितनी बार चाहें `${}` का उपयोग करके मान डाल सकते हैं
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+टेम्पलेट लिटरल्स का सबसे अच्छा उपयोग प्रिंट स्टेटमेंट्स में होता है, लेकिन हम उन्हें सामान्य स्ट्रिंग्स की तरह वेरिएबल्स में भी स्टोर कर सकते हैं।

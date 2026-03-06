@@ -7,17 +7,17 @@ difficulty: 1
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+एक फ़ंक्शन बनाएं जो एक संख्या को आर्गुमेंट के रूप में लेता है और `"Fizz"`, `"Buzz"` या `"FizzBuzz"` लौटाता है।
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- यदि संख्या `3` का गुणज है तो आउटपुट `"Fizz"` होना चाहिए
+- यदि दी गई संख्या `5` का गुणज है, तो आउटपुट `"Buzz"` होना चाहिए।
+- यदि दी गई संख्या `3` और `5` दोनों का गुणज है, तो आउटपुट `"FizzBuzz"` होना चाहिए।
+- यदि संख्या `3` या `5` में से किसी का भी गुणज नहीं है, तो संख्या को नीचे दिए गए उदाहरणों में दिखाए अनुसार अपने आप आउटपुट किया जाना चाहिए।
+- आउटपुट हमेशा एक स्ट्रिंग होना चाहिए भले ही यह `3` या `5` का गुणज न हो।
 
-Examples:
+उदाहरण:
 ```python
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -42,35 +42,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+संख्या `3` का परिणाम `"Fizz"` होना चाहिए
 
 ```python
     def test1(self):
         self.assertEqual(fizz_buzz(3), "Fizz", "--err-t1--")
 ```
 
-The number `5` must equal `"Buzz"`
+संख्या `5` का परिणाम `"Buzz"` होना चाहिए
 
 ```python
     def test2(self):
         self.assertEqual(fizz_buzz(5), "Buzz", "--err-t2--")
 ```
 
-The number `15` must equal `"FizzBuzz"`
+संख्या `15` का परिणाम `"FizzBuzz"` होना चाहिए
 
 ```python
     def test3(self):
         self.assertEqual(fizz_buzz(15), "FizzBuzz", "--err-t3--")
 ```
 
-The number `10` must equal `"Buzz"`
+संख्या `10` का परिणाम `"Buzz"` होना चाहिए
 
 ```python
     def test4(self):
         self.assertEqual(fizz_buzz(10), "Buzz", "--err-t4--")
 ```
 
-The number `98` must equal `"98"`
+संख्या `98` का परिणाम `"98"` होना चाहिए
 
 ```python
     def test5(self):

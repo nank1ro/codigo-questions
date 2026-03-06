@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+आइए **बराबर** `==` तुलना ऑपरेटर से शुरू करें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि दो अभिव्यक्तियाँ बराबर हैं या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 == 2); 
 // prints true
@@ -9,20 +9,20 @@ console.log(2 == 3);
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+आइए **बराबर नहीं** `!=` तुलना ऑपरेटर के साथ आगे बढ़ें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि दो अभिव्यक्तियाँ **बराबर नहीं** हैं, उदाहरण के लिए:
 ```javascript
 console.log(2 != 2);
 // prints false
 console.log(2 != 3); 
 // prints true
 ```
-It is exactly the opposite of the *equal* operator
+यह *बराबर* ऑपरेटर का बिल्कुल विपरीत है
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+आइए **से बड़ा** `>` तुलना ऑपरेटर के साथ आगे बढ़ें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से बड़ी है या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 > 2);
 // prints false
@@ -32,8 +32,8 @@ console.log(3 > 2);
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+आइए **से छोटा** `<` तुलना ऑपरेटर के साथ आगे बढ़ें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से छोटी है या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 < 2);
 // prints false
@@ -43,8 +43,8 @@ console.log(2 < 3);
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+आइए **से बड़ा या बराबर** `>=` तुलना ऑपरेटर के साथ आगे बढ़ें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से बड़ी या बराबर है, उदाहरण के लिए:
 ```javascript
 console.log(2 >= 2); 
 // prints true
@@ -56,8 +56,8 @@ console.log(3 >= 4);
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+आइए **से छोटा या बराबर** `<=` तुलना ऑपरेटर के साथ आगे बढ़ें।
+यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से छोटी या बराबर है, उदाहरण के लिए:
 ```javascript
 console.log(2 <= 2); 
 // prints true
@@ -69,8 +69,8 @@ console.log(3 <= 4);
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+अब आइए **लॉजिकल** ऑपरेटर देखें, पहले __AND__ `&&` से शुरू करते हैं।
+यह पहला ऑपरेंड लौटाता है जो *false* का मूल्यांकन करता है या अंतिम ऑपरेंड अगर सभी *true* हैं।
 ```javascript
 console.log(2 == 2 && 2 == 3);
 // prints false
@@ -80,8 +80,8 @@ console.log(1 == 1 && 1 == 1.0);
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+आइए **or** `||` लॉजिकल ऑपरेटर के साथ आगे बढ़ें।
+यह पहला ऑपरेंड लौटाता है जो *true* का मूल्यांकन करता है या अंतिम ऑपरेंड अगर सभी *false* हैं।
 ```javascript
 console.log(2 == 2 || 2 == 3);
 // prints true
@@ -91,8 +91,8 @@ console.log(1 == 2 || 1 == 3);
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+आइए **not** `!` लॉजिकल ऑपरेटर के साथ समाप्त करें।
+यह एक boolean लौटाता है जो किसी अभिव्यक्ति की लॉजिकल स्थिति का उल्टा होता है।
 ```javascript
 console.log(!true);
 // prints false

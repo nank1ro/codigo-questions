@@ -1,51 +1,51 @@
-**Objects** are similar to arrays, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Objects are enclosed in curly brackets, like so:
+**Objects** arrays के समान होते हैं, लेकिन आप index के बजाय *key* का उपयोग करके values तक पहुँचते हैं।
+key कोई भी string या number हो सकती है।
+Objects को curly brackets में रखा जाता है, इस प्रकार:
 ```javascript
 var objectName = {"key1": 1, "key2": 2, "key3": 3};
 ```
-This is a dictionary called `objectName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+यह `objectName` नामक एक dictionary है जिसमें तीन *key-value pairs* हैं।
+key `key1` value `1` की ओर इंगित करती है, `key2` `2` की ओर, और इसी तरह आगे।
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+key द्वारा dictionary values तक पहुँचना बिल्कुल वैसा ही है जैसे index द्वारा array values तक पहुँचना:
 ```javascript
-// gets the age value from the user dictionary
+// user dictionary से age value प्राप्त करता है
 user['age'];
 ```
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Arrays की तरह, Dictionaries _mutable_ होती हैं।
+इसका मतलब है कि उन्हें बनाने के बाद बदला जा सकता है (यदि उन्हें constant घोषित नहीं किया गया है)।
+इसका एक फायदा यह है कि हम dictionary बनने के बाद उसमें नए _key/value pairs_ जोड़ सकते हैं, इस प्रकार:
 ```javascript
 dictName[newKeyName] = newValue;
 ```
 
 ---
 
-Because dictionaries variables are mutable, they can be changed in many ways.
-Items can be removed from a dictionary with the 'delete' keyword:
+चूंकि dictionaries variables mutable होते हैं, उन्हें कई तरीकों से बदला जा सकता है।
+'delete' keyword के साथ dictionary से items हटाए जा सकते हैं:
 ```javascript
 delete dictName[keyName];
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+यह dictionary से key `keyName` और उसकी संबंधित value को हटा देगा।
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `Object.keys()` method.
+क्या होगा अगर हम dictionary की सभी keys की सूची बनाना चाहते हैं?
+तो, इसके लिए `Object.keys()` method है।
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `Object.values()` method.
+क्या होगा अगर हम dictionary की सभी values की सूची बनाना चाहते हैं?
+तो, इसके लिए `Object.values()` method है।
 
 ---
 
-As for arrays, we can loop between dictionary elements using the `Object.entries()` method.
+Arrays की तरह, हम `Object.entries()` method का उपयोग करके dictionary elements के बीच loop कर सकते हैं।
 ```javascript
 var user = {"first_name": "John", "last_name": "Hood", "age": 30};
 for (const [key, value] of Object.entries(user)) {

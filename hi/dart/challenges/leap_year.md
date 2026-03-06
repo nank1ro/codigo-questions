@@ -2,20 +2,20 @@
 language: dart
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: लीप वर्ष
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+एक कैलेंडर वर्ष में ठीक 365.25 दिन होते हैं। लेकिन, अंततः, यह भ्रम पैदा करेगा क्योंकि मनुष्य सामान्यतः 1 की सटीक विभाज्यता से गिनते हैं न कि दशमलव बिंदुओं से। इसलिए, इससे बचने के लिए, हर चार साल के चक्र में सभी 0.25 दिनों को जोड़ने और उस वर्ष को 366 दिन (29 फरवरी को अधिवर्ष दिवस के रूप में शामिल करते हुए) देने और इसे __लीप वर्ष__ कहने का निर्णय लिया गया। चार साल के चक्र में अन्य तीन वर्षों में केवल 365 दिन होंगे और __लीप वर्ष नहीं होंगे__।
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `DateTime` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+इस चुनौती में हम इसे एक नए स्तर पर ले जाएंगे, जहां आपको `DateTime` क्लास, `switch` स्टेटमेंट, __if ब्लॉक__, __if-else ब्लॉक__ या __टर्नरी ऑपरेशन__ (`x ? a : b`) और न ही लॉजिकल ऑपरेटर __AND__ (`&&`) और __OR__ (`||`) के उपयोग के बिना यह निर्धारित करना है कि यह लीप वर्ष है या नहीं, __NOT__ (`!`) ऑपरेटर को छोड़कर।
 
-Return `true` if it's a leap year, `false` otherwise.
+यदि यह लीप वर्ष है तो `true` लौटाएं, अन्यथा `false`।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(leapYear(2000));
 // prints true
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+`DateTime`, `switch`, `if`, `else`, `&&`, `||` या `?` का उपयोग अनुमत नहीं है।
 
 ```json
 {
@@ -51,7 +51,7 @@ The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+वर्ष `2016` एक लीप वर्ष है।
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The year `2016` is a leap year.
   });
 ```
 
-The year `1996` is a leap year.
+वर्ष `1996` एक लीप वर्ष है।
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The year `1996` is a leap year.
   });
 ```
 
-The year `1600` is a leap year.
+वर्ष `1600` एक लीप वर्ष है।
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The year `1600` is a leap year.
   });
 ```
 
-The year `2020` is a leap year.
+वर्ष `2020` एक लीप वर्ष है।
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The year `2020` is a leap year.
   });
 ```
 
-The year `2000` is a leap year.
+वर्ष `2000` एक लीप वर्ष है।
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The year `2000` is a leap year.
   });
 ```
 
-The year `2008` is a leap year.
+वर्ष `2008` एक लीप वर्ष है।
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The year `2008` is a leap year.
   });
 ```
 
-The year `1521` is not a leap year.
+वर्ष `1521` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The year `1521` is not a leap year.
   });
 ```
 
-The year `1800` is not a leap year.
+वर्ष `1800` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The year `1800` is not a leap year.
   });
 ```
 
-The year `2007` is not a leap year.
+वर्ष `2007` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The year `2007` is not a leap year.
   });
 ```
 
-The year `2002` is not a leap year.
+वर्ष `2002` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The year `2002` is not a leap year.
   });
 ```
 
-The year `1979` is not a leap year.
+वर्ष `1979` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The year `1979` is not a leap year.
   });
 ```
 
-The year `2006` is not a leap year.
+वर्ष `2006` एक लीप वर्ष नहीं है।
 
 ```dart
   test('test12', () {

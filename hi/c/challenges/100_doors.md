@@ -2,23 +2,23 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 दरवाज़े
 compilerOptions: -lm
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+एक पंक्ति में 100 दरवाज़े हैं जो सभी शुरू में बंद हैं।
+आप दरवाज़ों के पास से 100 बार गुज़रते हैं।
+पहली बार, हर दरवाज़े पर जाएं और दरवाज़े को 'टॉगल' करें (यदि दरवाज़ा बंद है, तो इसे खोलें; यदि यह खुला है, तो इसे बंद करें)।
+दूसरी बार, केवल हर दूसरे दरवाज़े पर जाएं (यानी, दरवाज़ा #2, #4, #6, ...) और इसे टॉगल करें।
+तीसरी बार, हर तीसरे दरवाज़े पर जाएं (यानी, दरवाज़ा #3, #6, #9, ...), आदि, जब तक आप केवल 100वें दरवाज़े पर न जाएं।
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+अंतिम पास के बाद दरवाज़ों की स्थिति निर्धारित करने के लिए एक फ़ंक्शन लागू करें।
+अंतिम परिणाम एक ऐरे में लौटाएं, जिसमें केवल उस दरवाज़े का नंबर शामिल हो जो खुला है।
+> विधि को दरवाज़ों की परिवर्तनशील संख्या के साथ काम करने में सक्षम होना चाहिए।
 
 # --before-seed--
 
@@ -181,21 +181,21 @@ int main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+100 दरवाज़े दिए गए हैं, खुले दरवाज़ों की सही सूची लौटाएं
 
 ```c
     int sol1[50] = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100};
     try_catch(arrays_match(get_final_opened_doors(100), sol1));
 ```
 
-Given 10 doors, return the correct list of open doors
+10 दरवाज़े दिए गए हैं, खुले दरवाज़ों की सही सूची लौटाएं
 
 ```c
     int sol2[50] = {1, 4, 9};
     try_catch(arrays_match(get_final_opened_doors(10), sol2));
 ```
 
-Given 950 doors, return the correct list of open doors
+950 दरवाज़े दिए गए हैं, खुले दरवाज़ों की सही सूची लौटाएं
 
 ```c
     int sol3[50] = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900};

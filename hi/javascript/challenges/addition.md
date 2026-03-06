@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: जोड़
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+दो पूर्णांक `num1` और `num2` दिए गए हैं, इन दो संख्याओं को जोड़ने के लिए एक प्रोग्राम लिखें
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+एक फ़ंक्शन लिखें जो दो संख्याओं का योग लौटाए
 
 # --before-seed--
 
@@ -41,19 +41,19 @@ function addition() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1 और 3 का योग 4 होना चाहिए
 
 ```javascript
 tryCatch(addition(1, 3) === 4);
 ```
 
-The sum of 200 and 210 must equal 410
+200 और 210 का योग 410 होना चाहिए
 
 ```javascript
 tryCatch(addition(200, 210) === 410);
 ```
 
-The sum of 15 and 35 must equal 50
+15 और 35 का योग 50 होना चाहिए
 
 ```javascript
 tryCatch(addition(15, 35) === 50);

@@ -2,29 +2,29 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: दो में से एक
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+एक नाम दिया गया है, इस संदेश के साथ एक स्ट्रिंग लौटाएँ:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+जहाँ `X` दिया गया नाम है।
+हालाँकि, यदि नाम नहीं दिया गया है, तो यह स्ट्रिंग लौटाएँ:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+एक फ़ंक्शन लिखें जो सही स्ट्रिंग लौटाए, उदाहरण:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**इनपुट**: `Walter`
+**आउटपुट**: `One for Walter, one for me.`
 
-**input**:
-**output**: `One for you, one for me.`
+**इनपुट**:
+**आउटपुट**: `One for you, one for me.`
 
-**input**: `David`
-**output**: `One for David, one for me.`
+**इनपुट**: `David`
+**आउटपुट**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -54,19 +54,19 @@ function twoForOne() {
 
 # --asserts--
 
-No name given
+कोई नाम नहीं दिया गया
 
 ```javascript
 tryCatch(twoForOne() === "One for you, one for me.");
 ```
 
-Pass "James" as name
+नाम के रूप में "James" पास करें
 
 ```javascript
 tryCatch(twoForOne("James") === "One for James, one for me.");
 ```
 
-Pass "Martha" as name
+नाम के रूप में "Martha" पास करें
 
 ```javascript
 tryCatch(twoForOne("Martha") === "One for Martha, one for me.");

@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: अभाज्य संख्याओं का योग
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है।
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+`n` से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
 
 # --seed--
 
@@ -30,28 +30,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`prime_summation(17)` should return 41.
+`prime_summation(17)` को 41 लौटाना चाहिए।
 
 ```python
     def test1(self):
         self.assertEqual(prime_summation(17), 41, "--err-t1--")
 ```
 
-`prime_summation(2001)` should return 277050.
+`prime_summation(2001)` को 277050 लौटाना चाहिए।
 
 ```python
     def test2(self):
         self.assertEqual(prime_summation(2001), 277050, "--err-t2--")
 ```
 
-`prime_summation(140759)` should return 873608362.
+`prime_summation(140759)` को 873608362 लौटाना चाहिए।
 
 ```python
     def test3(self):
         self.assertEqual(prime_summation(140759), 873608362, "--err-t2--")
 ```
 
-`prime_summation(2000000)` should return 142913828922.
+`prime_summation(2000000)` को 142913828922 लौटाना चाहिए।
 
 ```python
     def test4(self):

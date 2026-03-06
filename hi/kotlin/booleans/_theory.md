@@ -1,18 +1,18 @@
-Kotlin has a basic Boolean type, called `Boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Kotlin, and get one of two answers, `true` or `false`.
+Kotlin में एक बुनियादी Boolean टाइप है, जिसे `Boolean` कहा जाता है।
+Boolean मानों को तार्किक कहा जाता है, क्योंकि वे केवल true या false हो सकते हैं।
+आप Kotlin में किसी भी व्यंजक का मूल्यांकन कर सकते हैं, और दो उत्तरों में से एक प्राप्त कर सकते हैं, `true` या `false`।
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+हम boolean मान `true` को एक वेरिएबल में ठीक उसी तरह स्टोर कर सकते हैं जैसे एक संख्या या एक स्ट्रिंग।
 
 ---
 
-The opposite value of `true` is `false`
+`true` का विपरीत मान `false` है
 
 ---
 
-Boolean values can also negated by using the `!` before them, e.g:
+Boolean मानों को उनके पहले `!` का उपयोग करके नकारा भी जा सकता है, उदाहरण:
 ```kotlin
 println(!true) // prints false
 println(!false) // prints true
@@ -20,10 +20,10 @@ println(!false) // prints true
 
 ---
 
-We can also create boolean expressions using the `&&` (_and_) and `||` (_or_):
+हम `&&` (_and_) और `||` (_or_) का उपयोग करके boolean व्यंजक भी बना सकते हैं:
 
-- `&&` (_and_): produces true only if the Boolean expression on the left of the operator and the one on the right are both true.
-- `||` (_or_): Produces true if either the expression on the left or right of the operator is true, or if both are true.
+- `&&` (_and_): केवल तभी true उत्पन्न करता है जब ऑपरेटर के बाईं ओर का Boolean व्यंजक और दाईं ओर का दोनों true हों।
+- `||` (_or_): true उत्पन्न करता है यदि ऑपरेटर के बाईं या दाईं ओर का व्यंजक true है, या यदि दोनों true हैं।
 
 ```kotlin
 println(true && true) // prints true

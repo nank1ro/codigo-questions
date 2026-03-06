@@ -2,30 +2,30 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: बारिश की बूँदें
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+आपका कार्य एक संख्या को एक ऐसी स्ट्रिंग में बदलना है जिसमें कुछ संभावित गुणनखंडों के अनुरूप बारिश की बूँदों की आवाज़ें हों।
+एक गुणनखंड वह संख्या है जो किसी अन्य संख्या को पूर्ण रूप से विभाजित करती है, कोई शेष नहीं छोड़ती।
+यह जाँचने का सबसे सरल तरीका कि कोई संख्या दूसरी का गुणनखंड है या नहीं, मॉड्यूलो ऑपरेशन का उपयोग करना है।
+बारिश की बूँदों के नियम यह हैं कि यदि दी गई संख्या:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- का गुणनखंड 3 है, तो परिणाम में 'Pling' जोड़ें।
+- का गुणनखंड 5 है, तो परिणाम में 'Plang' जोड़ें।
+- का गुणनखंड 7 है, तो परिणाम में 'Plong' जोड़ें।
+- का गुणनखंड 3, 5, या 7 में से कोई नहीं है, तो परिणाम संख्या के अंक होने चाहिए।
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+एक फ़ंक्शन लिखें जो सही स्ट्रिंग लौटाए, उदाहरण:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 का गुणनखंड 7 है, लेकिन 3 या 5 नहीं, इसलिए परिणाम `"Plong"` होगा।
+- 30 के गुणनखंड 3 और 5 दोनों हैं, लेकिन 7 नहीं, इसलिए परिणाम `"PlingPlang"` होगा।
+- 34 का गुणनखंड 3, 5, या 7 नहीं है, इसलिए परिणाम `"34"` होगा।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(raindrops(28))
 // prints "Plong"
@@ -61,109 +61,109 @@ fun main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1 के लिए ध्वनि "1" है
 
 ```kotlin
     tryCatch(raindrops(1) == "1")
 ```
 
-The sound for 3 is "Pling"
+3 के लिए ध्वनि "Pling" है
 
 ```kotlin
     tryCatch(raindrops(3) == "Pling")
 ```
 
-The sound for 5 is "Plang"
+5 के लिए ध्वनि "Plang" है
 
 ```kotlin
     tryCatch(raindrops(5) == "Plang")
 ```
 
-The sound for 7 is "Plong"
+7 के लिए ध्वनि "Plong" है
 
 ```kotlin
     tryCatch(raindrops(7) == "Plong")
 ```
 
-The sound for 6 is "Pling"
+6 के लिए ध्वनि "Pling" है
 
 ```kotlin
     tryCatch(raindrops(6) == "Pling")
 ```
 
-The sound for 8 is "8"
+8 के लिए ध्वनि "8" है
 
 ```kotlin
     tryCatch(raindrops(8) == "8")
 ```
 
-The sound for 9 is "Pling"
+9 के लिए ध्वनि "Pling" है
 
 ```kotlin
     tryCatch(raindrops(9) == "Pling")
 ```
 
-The sound for 10 is "Plang"
+10 के लिए ध्वनि "Plang" है
 
 ```kotlin
     tryCatch(raindrops(10) == "Plang")
 ```
 
-The sound for 14 is "Plong"
+14 के लिए ध्वनि "Plong" है
 
 ```kotlin
     tryCatch(raindrops(14) == "Plong")
 ```
 
-The sound for 15 is "PlingPlang"
+15 के लिए ध्वनि "PlingPlang" है
 
 ```kotlin
     tryCatch(raindrops(15) == "PlingPlang")
 ```
 
-The sound for 21 is "PlingPlong"
+21 के लिए ध्वनि "PlingPlong" है
 
 ```kotlin
     tryCatch(raindrops(21) == "PlingPlong")
 ```
 
-The sound for 25 is "Plang"
+25 के लिए ध्वनि "Plang" है
 
 ```kotlin
     tryCatch(raindrops(25) == "Plang")
 ```
 
-The sound for 27 is "Pling"
+27 के लिए ध्वनि "Pling" है
 
 ```kotlin
     tryCatch(raindrops(27) == "Pling")
 ```
 
-The sound for 35 is "PlangPlong"
+35 के लिए ध्वनि "PlangPlong" है
 
 ```kotlin
     tryCatch(raindrops(35) == "PlangPlong")
 ```
 
-The sound for 49 is "Plong"
+49 के लिए ध्वनि "Plong" है
 
 ```kotlin
     tryCatch(raindrops(49) == "Plong")
 ```
 
-The sound for 52 is "52"
+52 के लिए ध्वनि "52" है
 
 ```kotlin
     tryCatch(raindrops(52) == "52")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105 के लिए ध्वनि "PlingPlangPlong" है
 
 ```kotlin
     tryCatch(raindrops(105) == "PlingPlangPlong")
 ```
 
-The sound for 3125 is "Plang"
+3125 के लिए ध्वनि "Plang" है
 
 ```kotlin
     tryCatch(raindrops(3125) == "Plang")

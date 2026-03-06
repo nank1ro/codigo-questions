@@ -7,11 +7,11 @@ title: Hello World!
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ नई भाषा या वातावरण में प्रोग्रामिंग शुरू करने के लिए पारंपरिक पहला प्रोग्राम है।
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+एक फ़ंक्शन लिखें जो स्ट्रिंग "Hello, World!" लौटाए।
 
 # --seed--
 
@@ -30,7 +30,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The function should return "Hello, World!".
+फ़ंक्शन को "Hello, World!" लौटाना चाहिए।
 
 ```python
     def test_say_hi(self):

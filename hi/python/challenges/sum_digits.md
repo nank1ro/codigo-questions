@@ -2,17 +2,17 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: अंकों का योग
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+आपको एक पूर्णांक `num` दिया गया है।
+`num` के सभी अंकों का योग गणना करने के लिए एक प्रोग्राम लिखें
 
 # --instructions--
 
-Return the sum of digits of `num`
+`num` के अंकों का योग लौटाएं
 
 # --seed--
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 के अंकों का योग 15 है
 
 ```python
     def test_sum_of_digits_1(self):
         self.assertEqual(sum_digits(12345), 15, "--err-t1--")
 ```
 
-The sum of the digits of 57253 is 22
+57253 के अंकों का योग 22 है
 
 ```python
     def test_sum_of_digits_2(self):
         self.assertEqual(sum_digits(57253), 22, "--err-t2--")
 ```
 
-The sum of the digits of 122 is 5
+122 के अंकों का योग 5 है
 
 ```python
     def test_sum_of_digits_3(self):
         self.assertEqual(sum_digits(122), 5, "--err-t3--")
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 के अंकों का योग 60 है
 
 ```python
     def test_sum_of_digits_4(self):
         self.assertEqual(sum_digits(91979997), 60, "--err-t4--")
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 के अंकों का योग 46 है
 
 ```python
     def test_sum_of_digits_5(self):

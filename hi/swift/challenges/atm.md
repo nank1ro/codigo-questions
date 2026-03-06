@@ -7,22 +7,22 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+जेम्स ATM से N डॉलर निकालना चाहता है।
+कैश मशीन लेनदेन तभी स्वीकार करेगी जब N 5 का गुणज हो, और जेम्स के खाते में निकासी लेनदेन करने के लिए पर्याप्त नकदी हो (बैंक शुल्क सहित)।
+प्रत्येक सफल निकासी के लिए बैंक `0.50$` शुल्क लेता है।
+एक प्रयास किए गए लेनदेन के बाद जेम्स के खाते की शेष राशि की गणना करें।
+इनपुट निम्नलिखित क्रम में हैं:
+1. जेम्स जितनी नकदी निकालना चाहता है वह निम्नलिखित सीमा में है: `0 < N <= 2000`।
+2. जेम्स की प्रारंभिक शेष राशि दो अंकों की सटीकता के साथ दी गई है और निम्नलिखित सीमा में है: `0 < B <= 2000`।
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+प्रयास किए गए लेनदेन के बाद खाते की शेष राशि लौटाएं, जो दो अंकों की सटीकता वाली संख्या के रूप में दी गई हो।
+यदि खाते में लेनदेन पूरा करने के लिए पर्याप्त धन नहीं है, तो वर्तमान बैंक शेष राशि लौटाएं।
 
-> HINT: omit the argument labels with the `_` (underscore)
+> संकेत: `_` (अंडरस्कोर) के साथ आर्गुमेंट लेबल हटाएं
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(accountBalance(10, 20))
 // prints 9,5
@@ -47,7 +47,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-Perform a successful transaction
+एक सफल लेनदेन करें
 
 ```swift
     func testSuccessfulTransaction() {
@@ -56,7 +56,7 @@ Perform a successful transaction
     }
 ```
 
-Insufficient funds
+अपर्याप्त धनराशि
 
 ```swift
     func testInsufficientFunds() {
@@ -65,7 +65,7 @@ Insufficient funds
     }
 ```
 
-Refused transaction, invalid amount
+अस्वीकृत लेनदेन, अमान्य राशि
 
 ```swift
     func testNotMultipleOf5() {
@@ -74,7 +74,7 @@ Refused transaction, invalid amount
     }
 ```
 
-Withdraw all money successfully
+सारा पैसा सफलतापूर्वक निकालें
 
 ```swift
     func testWithdrawAll() {

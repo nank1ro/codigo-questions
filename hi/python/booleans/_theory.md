@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+बूलियन दो मानों में से एक को दर्शाते हैं: `True` या `False`।
+आप Python में किसी भी एक्सप्रेशन का मूल्यांकन कर सकते हैं, और दो उत्तरों में से एक प्राप्त कर सकते हैं, `True` या `False`।
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+हम किसी संख्या या स्ट्रिंग की तरह ही बूलियन मान `True` को एक वेरिएबल में स्टोर कर सकते हैं।
 
 ---
 
-The opposite value of `True` is `False`
+`True` का विपरीत मान `False` है

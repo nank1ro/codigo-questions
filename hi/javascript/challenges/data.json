@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "जोड़"
   },
   "atm": {
     "difficulty": 1,
@@ -9,71 +9,71 @@
   },
   "hello_world": {
     "difficulty": 1,
-    "name": "Hello World!"
+    "name": "हैलो वर्ल्ड!"
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "बारिश की बूँदें"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "अंकों का योग"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "दो में से एक"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100 दरवाज़े"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "Ackermann फ़ंक्शन"
   },
   "multiples_of_3_or_5": {
     "difficulty": 1,
-    "name": "Multiples of 3 or 5"
+    "name": "3 या 5 के गुणज"
   },
   "even_fibonacci_numbers": {
     "difficulty": 1,
-    "name": "Even Fibonacci numbers"
+    "name": "सम फिबोनाची संख्याएँ"
   },
   "largest_prime_factor": {
     "difficulty": 2,
-    "name": "Largest prime factor"
+    "name": "सबसे बड़ा अभाज्य गुणनखंड"
   },
   "largest_palindrome_product": {
     "difficulty": 2,
-    "name": "Largest palindrome product"
+    "name": "सबसे बड़ा पैलिंड्रोम गुणनफल"
   },
   "smallest_multiple": {
     "difficulty": 1,
-    "name": "Smallest multiple"
+    "name": "सबसे छोटा गुणज"
   },
   "sum_square_difference": {
     "difficulty": 1,
-    "name": "Sum square difference"
+    "name": "वर्ग योग अंतर"
   },
   "10001st_prime": {
     "difficulty": 1,
-    "name": "10001st prime"
+    "name": "10001वाँ अभाज्य"
   },
   "largest_product_in_a_series": {
     "difficulty": 2,
-    "name": "Largest product in a series"
+    "name": "एक श्रृंखला में सबसे बड़ा गुणनफल"
   },
   "special_pythagorean_triplet": {
     "difficulty": 2,
-    "name": "Special pythagorean triplet"
+    "name": "विशेष पाइथागोरियन त्रिक"
   },
   "summation_of_primes": {
     "difficulty": 2,
-    "name": "Summation of primes"
+    "name": "अभाज्य संख्याओं का योग"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "अंकगणितीय माध्य",
     "isPro": true
   },
   "fizz_buzz": {
@@ -83,12 +83,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "रोमन अंक परिवर्तक",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "लीप वर्ष",
     "isPro": true
   }
 }

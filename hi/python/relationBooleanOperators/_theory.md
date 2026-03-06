@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+आइए **बराबर** `==` संबंधपरक ऑपरेटर से शुरू करते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि दो व्यंजक बराबर हैं या नहीं, उदाहरण के लिए:
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+आइए **बराबर नहीं** `!=` संबंधपरक ऑपरेटर के साथ आगे बढ़ते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि दो व्यंजक **बराबर नहीं** हैं, उदाहरण के लिए:
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+यह *बराबर* ऑपरेटर का बिल्कुल विपरीत है
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+आइए **से बड़ा** `>` संबंधपरक ऑपरेटर के साथ आगे बढ़ते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि एक व्यंजक दूसरे से बड़ा है या नहीं, उदाहरण के लिए:
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+आइए **से छोटा** `<` संबंधपरक ऑपरेटर के साथ आगे बढ़ते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि एक व्यंजक दूसरे से छोटा है या नहीं, उदाहरण के लिए:
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+आइए **से बड़ा या बराबर** `>=` संबंधपरक ऑपरेटर के साथ आगे बढ़ते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि एक व्यंजक दूसरे से बड़ा या बराबर है या नहीं, उदाहरण के लिए:
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+आइए **से छोटा या बराबर** `<=` संबंधपरक ऑपरेटर के साथ आगे बढ़ते हैं।
+यह एक **बूलियन** (`True` या `False`) लौटाता है जो बताता है कि एक व्यंजक दूसरे से छोटा या बराबर है या नहीं, उदाहरण के लिए:
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+अब आइए **बूलियन** ऑपरेटर देखें, पहले `and` नामक ऑपरेटर से शुरू करते हैं।
+यह पहला ऑपरेंड लौटाता है जो *False* का मूल्यांकन करता है या यदि सभी *True* हैं तो अंतिम ऑपरेंड लौटाता है।
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+आइए **or** बूलियन ऑपरेटर के साथ आगे बढ़ते हैं।
+यह पहला ऑपरेंड लौटाता है जो *True* का मूल्यांकन करता है या यदि सभी *False* हैं तो अंतिम ऑपरेंड लौटाता है।
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+आइए **not** बूलियन ऑपरेटर के साथ समाप्त करते हैं।
+यह एक बूलियन लौटाता है जो किसी व्यंजक की तार्किक स्थिति का उल्टा होता है।
 ```python
 >>> not True
 False

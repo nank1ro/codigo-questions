@@ -1,15 +1,15 @@
-Variables are containers for storing data values.
-Every variable in JavaScript is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In JavaScript you declare constants with the `let` or `const` keywords and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+वेरिएबल्स डेटा मानों को संग्रहीत करने के लिए कंटेनर हैं।
+JavaScript में हर वेरिएबल एक ऑब्जेक्ट है।
+एक वेरिएबल बनाने के लिए, हमें इसे एक **नाम** देना होगा, यह ध्यान रखते हुए कि इसमें स्पेस नहीं होने चाहिए।
+एक वेरिएबल उस समय बनता है जब आप पहली बार इसे कोई मान असाइन करते हैं।
+JavaScript में आप `let` या `const` कीवर्ड से कॉन्स्टेंट और `var` कीवर्ड से वेरिएबल घोषित करते हैं।
+एक कॉन्स्टेंट का मान एक बार सेट होने के बाद बदला नहीं जा सकता, जबकि एक वेरिएबल को भविष्य में एक अलग मान दिया जा सकता है।
+`x` नाम का वेरिएबल बनाने का एक उदाहरण है:
 ```javascript
 var x = 1;
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+इस तरह हमने `x` नाम के वेरिएबल को मान `1` असाइन किया है।
+यदि हम वेरिएबल `x` को प्रिंट करते हैं तो हमें संख्या `1` मिलती है:
 ```javascript
 console.log(x);
 // prints 1
@@ -17,8 +17,8 @@ console.log(x);
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+वेरिएबल्स को इस नाम से इसलिए पुकारा जाता है क्योंकि उनमें संग्रहीत मान बदल सकता है।
+हम `=` का उपयोग करके और एक नया मान देकर `x` को अपडेट कर सकते हैं।
 ```javascript
 var x = 1;
 console.log(x); // prints 1
@@ -28,8 +28,8 @@ console.log(x); // prints 2
 
 ---
 
-We can also give variables the values of other variables.
-Here, we can give to the `y` variable the value of `x`
+हम वेरिएबल्स को अन्य वेरिएबल्स के मान भी दे सकते हैं।
+यहाँ, हम `y` वेरिएबल को `x` का मान दे सकते हैं
 ```javascript
 var x = 5;
 var y = x;
@@ -38,8 +38,8 @@ console.log(y); // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+जब हम एक वेरिएबल को अपडेट करते हैं, तो यह अपना पिछला मान भूल जाता है।
+यहाँ हम `x` वेरिएबल को दो बार प्रदर्शित कर सकते हैं और देख सकते हैं कि इसका मान कैसे अपडेट होता है।
 ```javascript
 var x = 5;
 console.log(x); // prints 5
@@ -49,7 +49,7 @@ console.log(x); // prints 10
 
 ---
 
-In JavaScript string variables can be declared using both double quotes and single quotes:
+JavaScript में स्ट्रिंग वेरिएबल्स को डबल कोट्स और सिंगल कोट्स दोनों का उपयोग करके घोषित किया जा सकता है:
 ```javascript
 let x = "May";
 // both are the same string
@@ -60,5 +60,5 @@ console.log(x === y);
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+यदि हम एक वेरिएबल नाम में कई शब्द चाहते हैं, तो हम **camelCase** का उपयोग करते हैं।
+यह वाक्यांशों को इस प्रकार लिखने की प्रथा है कि वाक्यांश के बीच का प्रत्येक शब्द बड़े अक्षर से शुरू होता है

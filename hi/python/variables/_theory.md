@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in Python is an object and unlike other programming languages, Python has no command for declaring a variable.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+वेरिएबल डेटा मान संग्रहीत करने के कंटेनर हैं।
+Python में हर वेरिएबल एक ऑब्जेक्ट है और अन्य प्रोग्रामिंग भाषाओं के विपरीत, Python में वेरिएबल घोषित करने का कोई कमांड नहीं है।
+वेरिएबल बनाने के लिए, हमें इसे एक **नाम** देना होगा यह ध्यान रखते हुए कि इसमें स्पेस नहीं होने चाहिए।
+जब आप पहली बार किसी वेरिएबल को मान असाइन करते हैं तब वेरिएबल बनता है।
+`x` नाम के वेरिएबल बनाने का एक उदाहरण है:
 ```python
 x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+इस तरह हमने `x` नाम के वेरिएबल को मान `1` असाइन किया है।
+यदि हम वेरिएबल `x` को प्रिंट करें तो हमें संख्या `1` वापस मिलती है:
 ```python
 >>> print(x)
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+वेरिएबल को इसलिए ऐसा कहा जाता है क्योंकि उनमें संग्रहीत मान बदल सकता है।
+हम `=` का उपयोग करके और एक नया मान देकर `x` को अपडेट कर सकते हैं।
 ```python
 >>> x = 1
 >>> print(x)
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+हम वेरिएबल को अन्य वेरिएबल के मान भी दे सकते हैं। यहाँ, हम `y` वेरिएबल को `x` का मान दे सकते हैं
 ```python
 >>> x = 5
 >>> y = x
@@ -38,7 +38,7 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+जब हम किसी वेरिएबल को अपडेट करते हैं, तो यह अपना पिछला मान भूल जाता है। यहाँ हम `x` वेरिएबल को दो बार प्रदर्शित कर सकते हैं और देख सकते हैं कि इसका मान कैसे अपडेट होता है।
 ```python
 >>> x = 5
 >>> print(x)
@@ -50,14 +50,14 @@ When we update a variable, it forgets its previous value. Here we can display th
 
 ---
 
-String variables can be declared either by using single or double quotes:
+स्ट्रिंग वेरिएबल को सिंगल या डबल कोट्स का उपयोग करके घोषित किया जा सकता है:
 ```python
 >>> x = "May"
 >>> x = 'May'
 ```
-Both are the same thing.
+दोनों एक ही चीज़ हैं।
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+यदि हम कई शब्दों वाला वेरिएबल नाम चाहते हैं, तो हम **स्नेक केस** का उपयोग करते हैं।
+इसका मतलब है अतिरिक्त शब्दों को जोड़ने के लिए `_` का उपयोग करना।

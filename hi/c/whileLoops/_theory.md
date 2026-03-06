@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+प्रोग्रामिंग में अक्सर, हमें कोड के एक ब्लॉक को दोहराने की आवश्यकता होती है, उदाहरण के लिए:
 ```c
 printf("2 seconds\n");
 printf("3 seconds\n");
 printf("4 seconds\n");
 printf("5 seconds\n");
 ```
-This produces the following output:
+यह निम्नलिखित आउटपुट देता है:
 ```c
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+स्पष्ट रूप से, लंबे स्टेटमेंट्स के लिए हम कोड लिखने में बहुत समय लगाएंगे, लेकिन सौभाग्य से, हम लूप्स का उपयोग कर सकते हैं।
+आइए `while` लूप सीखें, ऊपर वही आउटपुट प्राप्त करते हुए।
 ```c
 int count = 2;
 while (count <= 5) {
@@ -21,24 +21,24 @@ while (count <= 5) {
     count++;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count++;`.
-It increments the `count` value, otherwise, our loop will be infinite
+तो हमने एक वेरिएबल `count` बनाया और `2` असाइन किया, जो प्रारंभिक मान है।
+फिर हमने `while` स्टेटमेंट का उपयोग किया जो कोड के ब्लॉक को तब तक चलाएगा जब तक शर्त `count <= 5` `true` है।
+कोड के ब्लॉक के अंदर, हमें `count++;` लाइन जोड़ना **नहीं भूलना** चाहिए।
+यह `count` के मान को बढ़ाता है, अन्यथा, हमारा लूप अनंत होगा
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while` लूप कितनी बार दोहराता है इसे नियंत्रित करने के लिए, हम एक संख्या पर सेट वेरिएबल से शुरू करते हैं।
+हम इस वेरिएबल को काउंटर वेरिएबल कहते हैं
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+फिर, हम शर्त में `counter` वेरिएबल की एक संख्या से तुलना करने के लिए एक तुलना का उपयोग करते हैं।
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+कोड के ब्लॉक के अंदर, `while` लूप को रोकने के लिए, हम `counter` वेरिएबल को बढ़ाते हैं।
 
 ---
 
-The order you write code affects the output.
+आप जिस क्रम में कोड लिखते हैं वह आउटपुट को प्रभावित करता है।

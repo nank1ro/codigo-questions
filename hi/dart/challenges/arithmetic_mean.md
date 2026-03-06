@@ -2,18 +2,18 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: अंकगणितीय माध्य
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+एक संख्यात्मक वेक्टर का _अंकगणितीय औसत_ ज्ञात करने के लिए `mean` नामक एक फ़ंक्शन लिखें।
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+एक फ़ंक्शन लिखें जो एक संख्यात्मक वेक्टर का माध्य लौटाए।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(mean([1, 2, 3]));
 // prints 2.0
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]` का माध्य 4.0 के बराबर होना चाहिए
 
 ```dart
   test('test1', () {
@@ -47,7 +47,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
   });
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]` का माध्य 5.0 के बराबर होना चाहिए
 
 ```dart
   test('test2', () {
@@ -55,7 +55,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
   });
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]` का माध्य 45.0 के बराबर होना चाहिए
 
 ```dart
   test('test3', () {

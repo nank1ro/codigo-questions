@@ -2,19 +2,19 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: अंकों का योग
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+आपको एक पूर्णांक `N` दिया गया है।
+N के सभी अंकों का योग गणना करने के लिए एक प्रोग्राम लिखें
 
 # --instructions--
 
-Return the sum of digits of `N`.
+`N` के अंकों का योग लौटाएं।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(sumDigits(28))
 // prints 10
@@ -50,31 +50,31 @@ fun main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 के अंकों का योग 15 है
 
 ```kotlin
     tryCatch(sumDigits(12345) == 15)
 ```
 
-The sum of the digits of 57253 is 22
+57253 के अंकों का योग 22 है
 
 ```kotlin
     tryCatch(sumDigits(57253) == 22)
 ```
 
-The sum of the digits of 122 is 5
+122 के अंकों का योग 5 है
 
 ```kotlin
     tryCatch(sumDigits(122) == 5)
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 के अंकों का योग 60 है
 
 ```kotlin
     tryCatch(sumDigits(91979997) == 60)
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 के अंकों का योग 46 है
 
 ```kotlin
     tryCatch(sumDigits(2147483647) == 46)

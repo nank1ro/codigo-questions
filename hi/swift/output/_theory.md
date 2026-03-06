@@ -1,6 +1,6 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `print()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with Swift we can write
+"__Hello, World!__" किसी नई भाषा में प्रोग्रामिंग शुरू करने के लिए पारंपरिक पहला प्रोग्राम है।
+हम स्टैंडर्ड आउटपुट डिवाइस (स्क्रीन) पर डेटा आउटपुट करने के लिए `print()` फ़ंक्शन का उपयोग करते हैं।
+Swift के साथ स्क्रीन पर `Hello, World!` प्रिंट करने के लिए हम लिख सकते हैं
 ```swift
 print("Hello, World!")
 ```

@@ -2,29 +2,29 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: दो में से एक
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+एक नाम दिया गया है, इस संदेश के साथ एक स्ट्रिंग लौटाएं:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+जहां `X` दिया गया नाम है।
+हालांकि, यदि नाम नहीं दिया गया है, तो यह स्ट्रिंग लौटाएं:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+एक फ़ंक्शन लिखें जो सही स्ट्रिंग लौटाए, उदाहरण:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**इनपुट**: `Walter`
+**आउटपुट**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**इनपुट**: `James`
+**आउटपुट**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**इनपुट**: `Martha`
+**आउटपुट**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -45,7 +45,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-No name given
+कोई नाम नहीं दिया गया
 
 ```swift
     func testNoNameGiven() {
@@ -54,7 +54,7 @@ No name given
     }
 ```
 
-Pass "James" as name
+नाम के रूप में "James" पास करें
 
 ```swift
     func testANameGiven() {
@@ -63,7 +63,7 @@ Pass "James" as name
     }
 ```
 
-Pass "Martha" as name
+नाम के रूप में "Martha" पास करें
 
 ```swift
     func testAnotherNameGiven() {

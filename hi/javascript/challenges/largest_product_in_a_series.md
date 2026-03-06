@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: एक श्रृंखला में सबसे बड़ा गुणनफल
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+नीचे उल्लिखित 1000-अंकीय संख्या में चार आसन्न अंक जिनका गुणनफल सबसे बड़ा है, 9 × 9 × 8 × 9 = 5832 हैं।
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+1000-अंकीय संख्या में `n` आसन्न अंक ज्ञात करें जिनका गुणनफल सबसे बड़ा है। इस गुणनफल का मान क्या है?
 
 # --before-seed--
 
@@ -42,13 +42,13 @@ function largestProductinaSeries(n) {
 
 # --asserts--
 
-`largestProductinaSeries(4)` should return 5832.
+`largestProductinaSeries(4)` को 5832 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestProductinaSeries(4) === 5832);
 ```
 
-`largestProductinaSeries(13)` should return 23514624000.
+`largestProductinaSeries(13)` को 23514624000 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestProductinaSeries(13) === 23514624000);

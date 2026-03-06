@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python एक ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग भाषा है, जिसका मतलब है कि यह ऑब्जेक्ट्स नामक प्रोग्रामिंग संरचनाओं को संचालित करती है।
+आप एक ऑब्जेक्ट को एक ऐसी डेटा संरचना के रूप में सोच सकते हैं जिसमें डेटा और फ़ंक्शन दोनों होते हैं; किसी ऑब्जेक्ट के फ़ंक्शन को उसके मेथड कहा जाता है।
+उदाहरण के लिए, जब आप कॉल करते हैं:
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python जाँचता है कि `my_dict` में `items()` मेथड है या नहीं (जो सभी डिक्शनरी में होता है) और अगर मिलता है तो उस मेथड को निष्पादित करता है।
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+एक बुनियादी class केवल `class` कीवर्ड और class के नाम से बनी होती है, उदाहरण के लिए:
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+आइए `pass` को किसी और चीज़ से बदलें।
+`__init__()` मेथड classes के लिए आवश्यक है, और इसका उपयोग उन ऑब्जेक्ट्स को __इनिशियलाइज़__ करने के लिए किया जाता है जो यह बनाता है।
+`__init__()` हमेशा कम से कम एक आर्गुमेंट लेता है, `self`, जो बनाए जा रहे ऑब्जेक्ट को संदर्भित करता है।
+आप `__init__()` को उस मेथड के रूप में सोच सकते हैं जो class द्वारा बनाए गए प्रत्येक ऑब्जेक्ट को शुरू करता है।
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+बेशक, `__init__()` मेथड `self` से अधिक पैरामीटर का उपयोग कर सकता है
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+`__init__()` का पहला आर्गुमेंट इंस्टेंस ऑब्जेक्ट को संदर्भित करने के लिए उपयोग किया जाता है, और परंपरा के अनुसार, उस आर्गुमेंट को `self` कहा जाता है।
+यदि आप अतिरिक्त आर्गुमेंट जोड़ते हैं (उदाहरण के लिए, आपके जानवर के लिए `gender` और `legs`) तो `__init__()` के बॉडी में उनमें से प्रत्येक को `self.gender` और `self.legs` के बराबर सेट करने से, जब आप अपनी `Animal` class का एक इंस्टेंस ऑब्जेक्ट बनाएँगे, तो आपको प्रत्येक इंस्टेंस को gender और legs देने होंगे, और वे उस विशेष इंस्टेंस से जुड़े होंगे जो आप बनाते हैं
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+एक class को परिभाषित करने से कोई ऑब्जेक्ट नहीं बनता।
+ऐसा करने के लिए, हमें एक class का __इंस्टेंस__ बनाना होगा
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+जब एक class के अपने फ़ंक्शन होते हैं, तो उन फ़ंक्शन को __मेथड__ कहा जाता है। आपने पहले से ही एक ऐसा मेथड देखा है: `__init__()`।
+लेकिन आप अपने खुद के मेथड भी परिभाषित कर सकते हैं!

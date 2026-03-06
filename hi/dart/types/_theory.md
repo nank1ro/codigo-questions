@@ -1,17 +1,17 @@
-Types allow you to categorize all the different data types you use in your code.
-In Dart, a __type__ is a way of telling the compiler how you are going to use a given piece of data.
-Here's an example of types that Dart supports:
+टाइप्स आपको अपने कोड में उपयोग किए जाने वाले सभी विभिन्न डेटा प्रकारों को वर्गीकृत करने की अनुमति देते हैं।
+Dart में, __type__ कंपाइलर को यह बताने का एक तरीका है कि आप डेटा के किसी दिए गए हिस्से का उपयोग कैसे करने जा रहे हैं।
+यहाँ Dart द्वारा समर्थित टाइप्स के उदाहरण हैं:
 - int
 - String
 - double
 - dynamic
 - num
 
-Dart supports many other types. These listed are the main ones you will use.
+Dart कई अन्य टाइप्स को सपोर्ट करता है। यहाँ सूचीबद्ध टाइप्स मुख्य हैं जिनका आप उपयोग करेंगे।
 
 ---
 
-It's okay if you explicitly define the type of a variable, for example:
+यदि आप किसी वेरिएबल के टाइप को स्पष्ट रूप से परिभाषित करते हैं तो यह ठीक है, उदाहरण के लिए:
 ```dart
 int integerNumber = 2;
 double decimalNumber = 3.14;
@@ -19,41 +19,40 @@ double decimalNumber = 3.14;
 
 ---
 
-Variables with explicit type can also be constants, just add the `const` or `final` keyword before the type:
+स्पष्ट टाइप वाले वेरिएबल्स भी कॉन्स्टेंट हो सकते हैं, बस टाइप से पहले `const` या `final` कीवर्ड जोड़ें:
 ```dart
 const int integerNumber = 2;
 final double decimalNumber = 3.14;
 ```
 
-> Note: Mutable data allows you to change it whenever you want in an easy way. However, many experienced programmers appreciate the benefits of immutable data. When a value is immutable, you can trust that no one will be able to change the value after you create it. Limiting your data this way prevents many hard-to-find bugs and makes the program easier to think about and test.
+> नोट: म्यूटेबल डेटा आपको जब चाहें इसे आसानी से बदलने की अनुमति देता है। हालाँकि, कई अनुभवी प्रोग्रामर इम्यूटेबल डेटा के लाभों की सराहना करते हैं। जब कोई मान इम्यूटेबल होता है, तो आप भरोसा कर सकते हैं कि इसे बनाने के बाद कोई भी मान को बदल नहीं पाएगा। अपने डेटा को इस तरह सीमित करने से कई कठिन-से-खोजे-जाने-वाले बग रुक जाते हैं और प्रोग्राम के बारे में सोचना और परीक्षण करना आसान हो जाता है।
 
 ---
 
-While it is possible to note the type of a variable, this is redundant. You know that `10` is of type `int` and `3.14` is of type `double`. The Dart compiler is able to infer it thanks to __type inference__. Not all programming languages have _type inference_, and this makes Dart a very powerful programming language.
+हालांकि किसी वेरिएबल के टाइप को नोट करना संभव है, यह अनावश्यक है। आप जानते हैं कि `10` का टाइप `int` है और `3.14` का टाइप `double` है। Dart कंपाइलर __टाइप इन्फरेंस__ की बदौलत इसका अनुमान लगा सकता है। सभी प्रोग्रामिंग भाषाओं में _टाइप इन्फरेंस_ नहीं होती, और यह Dart को एक बहुत शक्तिशाली प्रोग्रामिंग भाषा बनाता है।
 
-You can simply remove the type from the variables, for example:
+आप बस वेरिएबल्स से टाइप हटा सकते हैं, उदाहरण के लिए:
 ```dart
 const integerNumber = 2;
 final decimalNumber = 3.14;
 ```
 
-When the type of a variable is not explicitly noted, Dart will try to infer its type.
+जब किसी वेरिएबल का टाइप स्पष्ट रूप से नोट नहीं किया जाता, तो Dart उसके टाइप का अनुमान लगाने की कोशिश करेगा।
 
 ---
 
-There is a programmatic way to check the type of a variable, namely with the `is` keyword:
+किसी वेरिएबल के टाइप की जांच करने का एक प्रोग्रामेटिक तरीका है, यानी `is` कीवर्ड के साथ:
 ```dart
 final number = 3.14;
 print(number is int); // false
 print(number is double); // true
 ```
 
-As you can see Dart has assigned the type `double` to the variable `number`.
+जैसा कि आप देख सकते हैं, Dart ने वेरिएबल `number` को `double` टाइप असाइन किया है।
 
 ---
 
-The `is` keyword allows you to check if a variable is of the type you define. But you can 
- also check if a variable is not of the type defined with the `is!` keyword
+`is` कीवर्ड आपको यह जांचने की अनुमति देता है कि कोई वेरिएबल आपके द्वारा परिभाषित टाइप का है या नहीं। लेकिन आप `is!` कीवर्ड के साथ यह भी जांच सकते हैं कि कोई वेरिएबल परिभाषित टाइप का नहीं है
 ```dart
 final number = 3.14;
 print(number is! int); // true
@@ -61,7 +60,7 @@ print(number is! int); // true
 
 ---
 
-Another option you have for seeing the type of a _runtime_ variable is to use the `runtimeType` property which is available to all types.
+_रनटाइम_ वेरिएबल के टाइप को देखने का एक और विकल्प `runtimeType` प्रॉपर्टी का उपयोग करना है जो सभी टाइप्स के लिए उपलब्ध है।
 ```dart
 final number = 3.14;
 print(number.runtimeType); // double
@@ -69,7 +68,7 @@ print(number.runtimeType); // double
 
 ---
 
-Sometimes you will find yourself in the situation of having one type, but needing to convert it to another. You might be tempted to do:
+कभी-कभी आप खुद को ऐसी स्थिति में पाएंगे जहां आपके पास एक टाइप है, लेकिन आपको इसे दूसरे में बदलने की जरूरत है। आप ऐसा करने के लिए प्रलोभित हो सकते हैं:
 
 ```dart
 var integer = 5;
@@ -77,83 +76,82 @@ var decimal = 3.14;
 integer = decimal;
 ```
 
-But Dart will complain and give you the error:
+लेकिन Dart शिकायत करेगा और आपको यह एरर देगा:
 > Error: A value of type 'double' can't be assigned to a variable of type 'int'.
 
-Some programming languages are not that restrictive and will silently convert. Experience shows that this type of silent implicit conversion is a frequent source of bugs and performance problems. Dart has disabled this feature to avoid these problems.
+कुछ प्रोग्रामिंग भाषाएं इतनी प्रतिबंधात्मक नहीं हैं और चुपचाप कन्वर्ट कर देंगी। अनुभव बताता है कि इस प्रकार का मौन अंतर्निहित रूपांतरण बग और प्रदर्शन समस्याओं का एक लगातार स्रोत है। Dart ने इन समस्याओं से बचने के लिए इस सुविधा को अक्षम कर दिया है।
 
-Remember, computers rely on programmers to figure out what to do. In Dart this includes being explicit about the type of conversion.
+याद रखें, कंप्यूटर प्रोग्रामर पर निर्भर करते हैं कि क्या करना है। Dart में इसमें रूपांतरण के टाइप के बारे में स्पष्ट होना शामिल है।
 
-Instead of expecting an implicit conversion from Dart, you need to explicitly say that you want Dart to convert the type to you. Here's how to convert a `double` number to an `int` one:
+Dart से अंतर्निहित रूपांतरण की अपेक्षा करने के बजाय, आपको स्पष्ट रूप से कहना होगा कि आप चाहते हैं कि Dart आपके लिए टाइप कन्वर्ट करे। यहां बताया गया है कि `double` संख्या को `int` में कैसे बदलें:
 ```dart
 var integer = decimal.toInt();
 ```
 
-The assignment tells Dart, unequivocally, that you want to convert from the original type `double` to the new type `double`.
+असाइनमेंट Dart को स्पष्ट रूप से बताता है कि आप मूल टाइप `double` से नए टाइप `int` में बदलना चाहते हैं।
 
-> NOTES: In this case, assigning a decimal value to an integer loses precision. The variable `integer` has the value __3__ instead of __3.14__. This is why it's important to be explicit. Dart wants to be sure of what you are doing and lets you know that you will lose information by converting.
+> नोट: इस मामले में, दशमलव मान को पूर्णांक में असाइन करने से सटीकता खो जाती है। वेरिएबल `integer` का मान __3.14__ के बजाय __3__ होता है। इसलिए स्पष्ट होना महत्वपूर्ण है। Dart यह सुनिश्चित करना चाहता है कि आप क्या कर रहे हैं और आपको बताता है कि रूपांतरण से जानकारी खो जाएगी।
 
 ---
 
-So far we have seen the operators used independently on integers or decimals. What if you have 
-an integer and need to multiply it with a decimal number? Let's see an example:
+अब तक हमने ऑपरेटरों को पूर्णांकों या दशमलवों पर स्वतंत्र रूप से उपयोग होते देखा है। क्या होगा यदि आपके पास एक पूर्णांक है और आपको इसे दशमलव संख्या से गुणा करना है? आइए एक उदाहरण देखें:
 ```dart
 const radius = 5;
 const pi = 3.14;
 const circumference = 2 * pi * radius;
 ```
 
-`radius` is of type `int` while `pi` is of type `double`. What will be the type of `circumference`? Dart will assign the type `double` to the variable `circumference`. This is the safer choice as if I had made it of type `int` it could have caused a loss of precision.
+`radius` का टाइप `int` है जबकि `pi` का टाइप `double` है। `circumference` का टाइप क्या होगा? Dart वेरिएबल `circumference` को `double` टाइप असाइन करेगा। यह सुरक्षित विकल्प है क्योंकि अगर इसे `int` टाइप बनाया जाता तो सटीकता का नुकसान हो सकता था।
 
-If you want an `int` as a result, you have to do the conversion explicitly:
+यदि आप परिणाम के रूप में `int` चाहते हैं, तो आपको रूपांतरण स्पष्ट रूप से करना होगा:
 ```dart
 const circumference = (2 * pi * radius).toInt();
 ```
 
-The parentheses tell Dart to multiply first, and then take the result and convert it to an integer value. Unfortunately the analyzer will not like this code:
+कोष्ठक Dart को पहले गुणा करने और फिर परिणाम लेकर इसे पूर्णांक मान में बदलने के लिए कहते हैं। दुर्भाग्य से, एनालाइज़र इस कोड को पसंद नहीं करेगा:
  > Const variables must be initialized with a constant value.
 
-The problem is that the `toInt` method is a runtime-only method. This means that the `circumference` variable cannot be determined at compile time, so it is not possible for the variable to be constant. To fix replace `const` with `final`:
+समस्या यह है कि `toInt` मेथड केवल रनटाइम मेथड है। इसका मतलब है कि `circumference` वेरिएबल कंपाइल टाइम पर निर्धारित नहीं किया जा सकता, इसलिए वेरिएबल का कॉन्स्टेंट होना संभव नहीं है। इसे ठीक करने के लिए `const` को `final` से बदलें:
 
 ```dart
 final circumference = (2 * pi * radius).toInt();
 ```
 
-Now `circumference` is a __runtime constant__ variable of type `int`.
+अब `circumference` `int` टाइप का एक __रनटाइम कॉन्स्टेंट__ वेरिएबल है।
 
 ---
 
-Sometimes you might have a variable with a generic type, but you need functionality that only exists in a subtype. If you are sure that the type of the variable is the subtype you need, then you can use the `as` keyword to change its type. This prodecure is also known as __type casting__, here is an example:
+कभी-कभी आपके पास एक जेनेरिक टाइप वाला वेरिएबल हो सकता है, लेकिन आपको ऐसी कार्यक्षमता चाहिए जो केवल एक सबटाइप में मौजूद है। यदि आप सुनिश्चित हैं कि वेरिएबल का टाइप वह सबटाइप है जिसकी आपको आवश्यकता है, तो आप इसके टाइप को बदलने के लिए `as` कीवर्ड का उपयोग कर सकते हैं। इस प्रक्रिया को __टाइप कास्टिंग__ के रूप में भी जाना जाता है, यहां एक उदाहरण है:
 
 ```dart
 num number = 3;
 ```
 
-Let's say we want to check if the number is even, and the functionality in question is present only on the `int` subtype.
+मान लें कि हम जांचना चाहते हैं कि संख्या सम है या नहीं, और प्रश्नगत कार्यक्षमता केवल `int` सबटाइप पर मौजूद है।
 ```dart
 print(number.isEven);
 ```
 
-The code above should return you a type error:
+उपरोक्त कोड आपको एक टाइप एरर देगा:
 > The getter `isEven` isn't defined for the type 'num'.
 
-The `num` type is a too general type to know if a number is even or odd. Only integers can be even or odd.
-The problem occurs if `num` contains a `double` value, since `num` includes both `double` and `int` types. In this case, we are sure that __3__ is an integer, so we can cast to `int`
+`num` टाइप यह जानने के लिए बहुत सामान्य टाइप है कि कोई संख्या सम है या विषम। केवल पूर्णांक सम या विषम हो सकते हैं।
+समस्या तब होती है जब `num` में `double` मान होता है, क्योंकि `num` में `double` और `int` दोनों टाइप शामिल हैं। इस मामले में, हम सुनिश्चित हैं कि __3__ एक पूर्णांक है, इसलिए हम `int` में कास्ट कर सकते हैं
 
 ```dart
 final integer = number as int;
 print(integer.isEven); // false
 ```
 
-The `as` keyword causes the compiler to recognize the variable `integer` as having the type `int`. This allows you to use the `isEven` property which is present on integers. Since the number __3__ is not an integer, the result is false.
+`as` कीवर्ड कंपाइलर को वेरिएबल `integer` को `int` टाइप के रूप में पहचानने का कारण बनता है। यह आपको `isEven` प्रॉपर्टी का उपयोग करने की अनुमति देता है जो पूर्णांकों पर मौजूद है। चूंकि संख्या __3__ सम नहीं है, परिणाम false है।
 
-You have to wait when casting. If you incorrectly cast the type you will get a runtime error:
+कास्टिंग करते समय आपको सावधान रहना होगा। यदि आप गलत तरीके से टाइप कास्ट करते हैं तो आपको रनटाइम एरर मिलेगा:
 ```dart
 num numero = 3;
 final decimale = numero as double;
 ```
 
-This will crash the program with the following error:
+यह प्रोग्राम को निम्न एरर के साथ क्रैश करेगा:
 > CastError (type 'int' is not a subtype of type 'double' in type cast)
 
-The runtime type of `number` is `int` and not `double`. In Dart, you cannot cast with same-level types, such as `int` and `double`. You can only cast sub-types.
+`number` का रनटाइम टाइप `int` है न कि `double`। Dart में, आप समान-स्तर के टाइप्स के साथ कास्ट नहीं कर सकते, जैसे `int` और `double`। आप केवल सब-टाइप्स को कास्ट कर सकते हैं।

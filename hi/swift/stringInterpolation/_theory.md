@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+Swift में हम दो या अधिक स्ट्रिंग्स को एक साथ प्रदर्शित करने के लिए `+` चिह्न का उपयोग कर सकते हैं, जैसे:
 ```swift
 print("Hello " + "Swift!") // prints "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+लेकिन `+` चिह्न का उपयोग करके '10' जैसी संख्या को ` "friends"` जैसी स्ट्रिंग में जोड़ने पर एक त्रुटि उत्पन्न होती है क्योंकि वे भिन्न प्रकार के मान हैं
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+स्ट्रिंग इंटरपोलेशन हमें बिना किसी त्रुटि के, स्ट्रिंग को संख्या में जोड़ने जैसे एक्सप्रेशन प्रदर्शित करने की अनुमति देता है।
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+प्रत्येक स्ट्रिंग इंटरपोलेशन स्टेटमेंट दो भागों से मिलकर बनता है, `\()` जहाँ हम संख्या या वेरिएबल डालते हैं, और सामान्य स्ट्रिंग
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+इसके बाद, हम विभिन्न प्रकार के मान को गोल कोष्ठकों में जोड़ते हैं ताकि यह एक print स्टेटमेंट के रूप में प्रदर्शित हो। जैसे यहाँ, `\(5)` के साथ
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+गोल कोष्ठकों के बीच `friends` जैसे वेरिएबल डालने से उनका मान भी प्रदर्शित होता है
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+हम स्ट्रिंग इंटरपोलेशन के अंदर जितनी बार चाहें गोल कोष्ठकों का उपयोग करके मान डाल सकते हैं
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+स्ट्रिंग इंटरपोलेशन का सबसे अच्छा उपयोग print स्टेटमेंट में होता है, लेकिन हम उन्हें सामान्य स्ट्रिंग्स की तरह वेरिएबल्स में भी स्टोर कर सकते हैं।

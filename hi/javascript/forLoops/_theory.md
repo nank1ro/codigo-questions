@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+हम जानते हैं कि `while` लूप का उपयोग करके कोड को कैसे दोहराया जाता है।
+जैसे यह प्रोग्राम `hello` प्रदर्शित करने के लिए स्टेटमेंट्स को दोहराता है
 ```javascript
 var counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+लेकिन हम `for` लूप के साथ भी ऐसा कर सकते हैं:
 ```javascript
 for (let i = 0; i < 5; i++) {
     console.log("hello");
@@ -17,28 +17,28 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for` लूप में हम निर्दिष्ट कर सकते हैं कि हम अपने लूप को कितनी बार चलाना चाहते हैं
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+हम अगली संख्या को बाहर रखते हुए लूप करने के लिए `<` का उपयोग कर सकते हैं, या अगली संख्या को शामिल करते हुए लूप करने के लिए `<=` का उपयोग कर सकते हैं
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i` नामक वेरिएबल काउंटर वेरिएबल है।
+हम इसे जो भी नाम चाहें दे सकते हैं।
+यह गिनता है कि हम वर्तमान में लूप की किस पुनरावृत्ति पर हैं
 
 ---
 
-In JavaScript we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+JavaScript में हमारे पास `forEach` लूप भी है।
+वास्तव में, `forEach` दिए गए क्लोजर को अनुक्रम में प्रत्येक तत्व पर `for` लूप के समान क्रम में कॉल करता है:
 ```javascript
 // this is an array, we'll see about that soon
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```
-Using the `forEach` method is distinct from a `for` loop in two important ways:
-1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+`forEach` विधि का उपयोग `for` लूप से दो महत्वपूर्ण तरीकों से भिन्न है:
+1. `break` या `continue` स्टेटमेंट्स का उपयोग बॉडी क्लोजर की वर्तमान कॉल से बाहर निकलने या बाद की कॉल को छोड़ने के लिए नहीं किया जा सकता।
+2. बॉडी क्लोजर में `return` स्टेटमेंट का उपयोग केवल क्लोजर से बाहर निकलेगा, बाहरी स्कोप से नहीं, और यह बाद की कॉल को नहीं छोड़ेगा।
+नोट: `=>` इसे _arrow function_ कहा जाता है और यह ES6 का छोटा फंक्शन सिंटैक्स है जो कर्ली ब्रैकेट्स {} की जगह लेता है और (यदि आवश्यक हो) मान लौटाता है

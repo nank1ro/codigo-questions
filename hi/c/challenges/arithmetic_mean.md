@@ -2,18 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: अंकगणितीय माध्य
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+एक संख्यात्मक वेक्टर का _अंकगणितीय औसत_ निकालने के लिए `mean` नामक फ़ंक्शन लिखें।
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+एक फ़ंक्शन लिखें जो एक संख्यात्मक वेक्टर का माध्य लौटाए।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]` का माध्य 4.0 के बराबर होना चाहिए
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]` का माध्य 5.0 के बराबर होना चाहिए
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]` का माध्य 45.0 के बराबर होना चाहिए
 
 ```c
     double arr3[] = {12, 34, 56, 78};

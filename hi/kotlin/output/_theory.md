@@ -1,11 +1,11 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `println()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with Kotlin we can write
+"__Hello, World!__" किसी नई भाषा में प्रोग्रामिंग शुरू करने का पारंपरिक पहला प्रोग्राम है।
+हम स्टैंडर्ड आउटपुट डिवाइस (स्क्रीन) पर डेटा प्रदर्शित करने के लिए `println()` फ़ंक्शन का उपयोग करते हैं।
+Kotlin के साथ स्क्रीन पर `Hello, World!` प्रिंट करने के लिए हम लिख सकते हैं
 ```kotlin
 println("Hello, World!")
 ```
 
 ---
 
-`println()` moves the cursor to a new line after displaying its parameter, so subsequent output appears on the next line.
-You can use `print()` instead, which leaves the cursor on the same line.
+`println()` अपने पैरामीटर को प्रदर्शित करने के बाद कर्सर को नई लाइन पर ले जाता है, ताकि अगला आउटपुट अगली लाइन पर दिखाई दे।
+आप इसके बजाय `print()` का उपयोग कर सकते हैं, जो कर्सर को उसी लाइन पर रखता है।

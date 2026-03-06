@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+एक फ़ंक्शन बनाएं जो एक संख्या को तर्क के रूप में लेता है और `"Fizz"`, `"Buzz"` या `"FizzBuzz"` लौटाता है।
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- यदि संख्या `3` का गुणज है तो आउटपुट `"Fizz"` होना चाहिए
+- यदि दी गई संख्या `5` का गुणज है, तो आउटपुट `"Buzz"` होना चाहिए।
+- यदि दी गई संख्या `3` और `5` दोनों का गुणज है, तो आउटपुट `"FizzBuzz"` होना चाहिए।
+- यदि संख्या `3` या `5` में से किसी का भी गुणज नहीं है, तो संख्या को नीचे दिए गए उदाहरणों में दिखाए अनुसार स्वयं आउटपुट किया जाना चाहिए।
+- आउटपुट हमेशा एक स्ट्रिंग होना चाहिए भले ही यह `3` या `5` का गुणज न हो।
 
-Examples:
+उदाहरण:
 ```dart
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -45,7 +45,7 @@ void main() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+संख्या `3` `"Fizz"` के बराबर होनी चाहिए
 
 ```dart
   test('test1', () {
@@ -53,7 +53,7 @@ The number `3` must equal `"Fizz"`
   });
 ```
 
-The number `5` must equal `"Buzz"`
+संख्या `5` `"Buzz"` के बराबर होनी चाहिए
 
 ```dart
   test('test2', () {
@@ -61,7 +61,7 @@ The number `5` must equal `"Buzz"`
   });
 ```
 
-The number `15` must equal `"FizzBuzz"`
+संख्या `15` `"FizzBuzz"` के बराबर होनी चाहिए
 
 ```dart
   test('test3', () {
@@ -69,7 +69,7 @@ The number `15` must equal `"FizzBuzz"`
   });
 ```
 
-The number `10` must equal `"Buzz"`
+संख्या `10` `"Buzz"` के बराबर होनी चाहिए
 
 ```dart
   test('test4', () {
@@ -77,7 +77,7 @@ The number `10` must equal `"Buzz"`
   });
 ```
 
-The number `98` must equal `"98"`
+संख्या `98` `"98"` के बराबर होनी चाहिए
 
 ```dart
   test('test5', () {

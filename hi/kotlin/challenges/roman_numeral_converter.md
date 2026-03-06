@@ -2,24 +2,24 @@
 language: kotlin
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: रोमन अंक परिवर्तक
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+एक फ़ंक्शन बनाएं जो एक धनात्मक पूर्णांक को अपने पैरामीटर के रूप में लेता है और उस पूर्णांक के रोमन अंक प्रतिनिधित्व वाली एक स्ट्रिंग लौटाता है। आधुनिक रोमन अंक प्रत्येक अंक को अलग-अलग व्यक्त करके लिखे जाते हैं, बाएं सबसे अंक से शुरू करते हुए और शून्य मान वाले किसी भी अंक को छोड़ते हुए।
 
 # --instructions--
 
-Examples:
+उदाहरण:
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- सभी रोमन अंक अपरकेस में लौटाए जाने चाहिए।
+- इस संकेतन में प्रदर्शित की जा सकने वाली सबसे बड़ी संख्या 3,999 है।
 
 # --seed--
 
@@ -51,67 +51,67 @@ fun main() {
 
 # --asserts--
 
-The number `2` must equal `II`
+संख्या `2` का मान `II` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(2) == "II")
 ```
 
-The number `12` must equal `XII`
+संख्या `12` का मान `XII` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(12) == "XII")
 ```
 
-The number `16` must equal `XVI`
+संख्या `16` का मान `XVI` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(16) == "XVI")
 ```
 
-The number `44` must equal `XLIV`
+संख्या `44` का मान `XLIV` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(44) == "XLIV")
 ```
 
-The number `68` must equal `LXVIII`
+संख्या `68` का मान `LXVIII` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(68) == "LXVIII")
 ```
 
-The number `400` must equal `CD`
+संख्या `400` का मान `CD` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(400) == "CD")
 ```
 
-The number `798` must equal `DCCXCVIII`
+संख्या `798` का मान `DCCXCVIII` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(798) == "DCCXCVIII")
 ```
 
-The number `1000` must equal `M`
+संख्या `1000` का मान `M` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(1000) == "M")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+संख्या `3999` का मान `MMMCMXCIX` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(3999) == "MMMCMXCIX")
 ```
 
-The number `649` must equal `DCXLIX`
+संख्या `649` का मान `DCXLIX` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(649) == "DCXLIX")
 ```
 
-The number `1666` must equal `MDCLXVI`
+संख्या `1666` का मान `MDCLXVI` होना चाहिए
 
 ```kotlin
     tryCatch(convertToRoman(1666) == "MDCLXVI")

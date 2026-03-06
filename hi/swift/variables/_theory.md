@@ -1,23 +1,23 @@
-Variables are containers for storing data values.
-Every variable in Swift is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In Swift you declare constants with the `let` keyword and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+वेरिएबल डेटा मान संग्रहीत करने के कंटेनर हैं।
+Swift में प्रत्येक वेरिएबल एक ऑब्जेक्ट है।
+वेरिएबल बनाने के लिए, हमें इसे एक **नाम** देना होगा, ध्यान रखें कि इसमें स्पेस नहीं होने चाहिए।
+जब आप पहली बार किसी वेरिएबल को मान असाइन करते हैं, तभी वह बनता है।
+Swift में आप `let` कीवर्ड से कॉन्स्टेंट और `var` कीवर्ड से वेरिएबल घोषित करते हैं।
+एक बार सेट होने के बाद कॉन्स्टेंट का मान बदला नहीं जा सकता, जबकि वेरिएबल को भविष्य में एक अलग मान दिया जा सकता है।
+`x` नामक वेरिएबल बनाने का एक उदाहरण है:
 ```swift
 var x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+इस तरह हमने `x` नामक वेरिएबल को मान `1` असाइन किया है।
+यदि हम वेरिएबल `x` को प्रिंट करें तो हमें संख्या `1` मिलती है:
 ```swift
 print(x) // prints 1
 ```
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+वेरिएबल को इस नाम से इसलिए जाना जाता है क्योंकि उनमें संग्रहीत मान बदल सकता है।
+हम `=` का उपयोग करके और एक नया मान देकर `x` को अपडेट कर सकते हैं।
 ```swift
 var x = 1
 print(x) // prints 1
@@ -27,7 +27,7 @@ print(x) // prints 2
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+हम वेरिएबल को अन्य वेरिएबल के मान भी दे सकते हैं। यहाँ, हम `y` वेरिएबल को `x` का मान दे सकते हैं
 ```swift
 var x = 5
 var y = x
@@ -36,7 +36,7 @@ print(y) // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+जब हम किसी वेरिएबल को अपडेट करते हैं, तो वह अपना पिछला मान भूल जाता है। यहाँ हम `x` वेरिएबल को दो बार प्रदर्शित कर सकते हैं और देख सकते हैं कि इसका मान कैसे अपडेट होता है।
 ```swift
 var x = 5
 print(x) // prints 5
@@ -46,12 +46,12 @@ print(x) // prints 10
 
 ---
 
-In Swift string variables can be declared only by using double quotes:
+Swift में स्ट्रिंग वेरिएबल केवल डबल कोट्स का उपयोग करके घोषित किए जा सकते हैं:
 ```swift
 let x = "May"
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+यदि हम कई शब्दों वाला वेरिएबल नाम चाहते हैं, तो हम **camelCase** का उपयोग करते हैं।
+यह वाक्यांशों को इस तरह लिखने की प्रथा है कि वाक्यांश के बीच में प्रत्येक शब्द बड़े अक्षर से शुरू होता है

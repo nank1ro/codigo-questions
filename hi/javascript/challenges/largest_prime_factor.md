@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: सबसे बड़ा अभाज्य गुणनखंड
 ---
 
 # --description--
 
-The prime factors of 13195 are 5, 7, 13 and 29.
+13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं।
 
 # --instructions--
 
-What is the largest prime factor of the given `number`?
+दी गई `number` का सबसे बड़ा अभाज्य गुणनखंड क्या है?
 
 # --before-seed--
 
@@ -41,43 +41,43 @@ function largestPrimeFactor(number) {
 
 # --asserts--
 
-`largestPrimeFactor(2)` should return 2.
+`largestPrimeFactor(2)` को 2 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(2) === 2);
 ```
 
-`largestPrimeFactor(3)` should return 3.
+`largestPrimeFactor(3)` को 3 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(3) === 3);
 ```
 
-`largestPrimeFactor(5)` should return 5.
+`largestPrimeFactor(5)` को 5 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(5) === 5);
 ```
 
-`largestPrimeFactor(7)` should return 7.
+`largestPrimeFactor(7)` को 7 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(7) === 7);
 ```
 
-`largestPrimeFactor(8)` should return 2.
+`largestPrimeFactor(8)` को 2 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(8) === 2);
 ```
 
-`largestPrimeFactor(13195)` should return 29.
+`largestPrimeFactor(13195)` को 29 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(13195) === 29);
 ```
 
-`largestPrimeFactor(600851475143)` should return 6857.
+`largestPrimeFactor(600851475143)` को 6857 लौटाना चाहिए।
 
 ```javascript
 tryCatch(largestPrimeFactor(600851475143) === 6857);

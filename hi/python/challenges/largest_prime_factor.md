@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: सबसे बड़ा अभाज्य गुणनखंड
 ---
 
 # --description--
 
-The prime factors of 13195 are 5, 7, 13 and 29.
+13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं।
 
 # --instructions--
 
-What is the largest prime factor of the given `number`?
+दिए गए `number` का सबसे बड़ा अभाज्य गुणनखंड क्या है?
 
 # --seed--
 
@@ -30,49 +30,49 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_prime_factor(2)` should return 2.
+`largest_prime_factor(2)` को 2 लौटाना चाहिए।
 
 ```python
     def test1(self):
         self.assertEqual(largest_prime_factor(2), 2, "--err-t1--")
 ```
 
-`largest_prime_factor(3)` should return 3.
+`largest_prime_factor(3)` को 3 लौटाना चाहिए।
 
 ```python
     def test2(self):
         self.assertEqual(largest_prime_factor(3), 3, "--err-t2--")
 ```
 
-`largest_prime_factor(5)` should return 5.
+`largest_prime_factor(5)` को 5 लौटाना चाहिए।
 
 ```python
     def test3(self):
         self.assertEqual(largest_prime_factor(5), 5, "--err-t3--")
 ```
 
-`largest_prime_factor(7)` should return 7.
+`largest_prime_factor(7)` को 7 लौटाना चाहिए।
 
 ```python
     def test4(self):
         self.assertEqual(largest_prime_factor(7), 7, "--err-t4--")
 ```
 
-`largest_prime_factor(8)` should return 2.
+`largest_prime_factor(8)` को 2 लौटाना चाहिए।
 
 ```python
     def test5(self):
         self.assertEqual(largest_prime_factor(8), 2, "--err-t5--")
 ```
 
-`largest_prime_factor(13195)` should return 29.
+`largest_prime_factor(13195)` को 29 लौटाना चाहिए।
 
 ```python
     def test6(self):
         self.assertEqual(largest_prime_factor(13195), 29, "--err-t6--")
 ```
 
-`largest_prime_factor(600851475143)` should return 6857.
+`largest_prime_factor(600851475143)` को 6857 लौटाना चाहिए।
 
 ```python
     def test7(self):

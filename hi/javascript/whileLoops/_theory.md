@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+प्रोग्रामिंग में अक्सर, हमें कोड के एक ब्लॉक को दोहराने की आवश्यकता होती है, उदाहरण के लिए:
 ```javascript
 console.log("2 seconds");
 console.log("3 seconds");
 console.log("4 seconds");
 console.log("5 seconds");
 ```
-This produces the following output:
+यह निम्नलिखित आउटपुट देता है:
 ```javascript
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+स्पष्ट रूप से, लंबे स्टेटमेंट्स के लिए हमें कोड लिखने में बहुत समय लगेगा, लेकिन सौभाग्य से, हम लूप्स का उपयोग कर सकते हैं।
+आइए `while` लूप सीखें, ऊपर वाला वही आउटपुट प्राप्त करते हुए।
 ```javascript
 var count = 2;
 while (count <= 5) {
@@ -21,30 +21,30 @@ while (count <= 5) {
     count += 1;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+तो हमने एक वेरिएबल `count` बनाया और उसे `2`, प्रारंभिक मान, असाइन किया।
+फिर हमने `while` स्टेटमेंट का उपयोग किया जो कोड ब्लॉक को तब तक चलाएगा जब तक कंडीशन `count <= 5` `true` है।
+कोड ब्लॉक के अंदर, हमें `count += 1` लाइन जोड़ना **नहीं** भूलना चाहिए।
+यह `count` के मान को बढ़ाता है, अन्यथा, हमारा लूप अनंत होगा
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+`while` लूप कितनी बार दोहराता है इसे नियंत्रित करने के लिए, हम एक संख्या पर सेट वेरिएबल से शुरू करते हैं।
+हम इस वेरिएबल को काउंटर वेरिएबल कहते हैं
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+फिर, हम कंडीशन में `counter` वेरिएबल की तुलना एक संख्या से करने के लिए एक तुलना का उपयोग करते हैं।
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+कोड ब्लॉक के अंदर, `while` लूप को रोकने के लिए, हम `counter` वेरिएबल को बढ़ाते हैं।
 
 ---
 
-The order you write code affects the output.
+आप जिस क्रम में कोड लिखते हैं वह आउटपुट को प्रभावित करता है।
 
 ---
 
-In JavaScript we also have the **do-while** variation of the `while` loop.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
+JavaScript में हमारे पास `while` लूप का **do-while** वेरिएशन भी है।
+यह लूप की कंडीशन पर विचार करने _से पहले_ पहले लूप ब्लॉक से एक बार गुजरता है।
+फिर यह लूप को तब तक दोहराता रहता है जब तक कंडीशन `false` न हो जाए।

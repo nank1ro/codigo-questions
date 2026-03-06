@@ -1,31 +1,31 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+लिस्ट एक डेटा टाइप है जिसका उपयोग आप विभिन्न जानकारियों के संग्रह को एक क्रम में एक ही वेरिएबल नाम के अंतर्गत संग्रहीत करने के लिए कर सकते हैं।
+एक लिस्ट किसी भी प्रकार के कई मानों को संग्रहीत करती है और इन मानों को अलग करने के लिए **indexes** का उपयोग करती है।
+आप निम्नलिखित तरीके से लिस्ट में आइटम असाइन कर सकते हैं:
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+आप लिस्ट के किसी व्यक्तिगत आइटम को उसके इंडेक्स द्वारा एक्सेस कर सकते हैं।
+इंडेक्स एक पते की तरह है जो लिस्ट में आइटम की स्थिति की पहचान करता है।
+इंडेक्स लिस्ट के नाम के ठीक बाद, ब्रैकेट्स के बीच में दिखाई देता है, इस प्रकार:
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+लिस्ट के इंडेक्स `0` से शुरू होते हैं, `1` से **नहीं**! आप लिस्ट के पहले आइटम को इस प्रकार एक्सेस करते हैं: `list_name[0]`।
+लिस्ट का दूसरा आइटम इंडेक्स 1 पर होता है: `list_name[1]`।
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+लिस्ट इंडेक्स किसी अन्य वेरिएबल नाम की तरह काम करता है! इसका उपयोग मान एक्सेस करने के साथ-साथ असाइन करने के लिए भी किया जा सकता है।
+आपने देखा कि लिस्ट इंडेक्स को इस प्रकार एक्सेस किया जाता है:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] # Gets the value "Jeremiah"
 ```
-This is how an assignment works:
+असाइनमेंट इस प्रकार काम करता है:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
@@ -34,14 +34,14 @@ names[0] # Gets the new value "Jordan"
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+स्ट्रिंग्स की तरह, लिस्ट की भी एक **लंबाई** होती है।
+लिस्ट की लंबाई उसमें मौजूद आइटमों की संख्या होती है
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+लिस्ट की लंबाई निश्चित होना जरूरी नहीं है।
+आप जब चाहें लिस्ट के अंत में आइटम जोड़ सकते हैं!
+लिस्ट में आइटम जोड़ने के लिए हम `append` कीवर्ड का उपयोग करते हैं:
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+कभी-कभी, आप लिस्ट के केवल एक हिस्से को एक्सेस करना चाहते हैं।
+निम्नलिखित कोड पर विचार करें:
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+पहले, हम `numbers` नामक एक लिस्ट बनाते हैं।
+फिर, हम लिस्ट का एक उपखंड लेते हैं और उसे slice लिस्ट में संग्रहीत करते हैं।
+हम लिस्ट के नाम के बाद उन इंडेक्स को परिभाषित करके ऐसा करते हैं जिन्हें हम शामिल करना चाहते हैं: `numbers[1:3]`।
+Python में, जब हम इस तरीके से लिस्ट का एक हिस्सा निर्दिष्ट करते हैं, तो हम पहले इंडेक्स, `1`, वाले तत्व को शामिल करते हैं, लेकिन दूसरे इंडेक्स, `3`, वाले तत्व को बाहर रखते हैं।
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+आप एक स्ट्रिंग को ठीक लिस्ट की तरह स्लाइस कर सकते हैं! वास्तव में, आप स्ट्रिंग्स को अक्षरों की लिस्ट के रूप में सोच सकते हैं: प्रत्येक अक्षर लिस्ट में एक क्रमिक आइटम है, जो इंडेक्स `0` से शुरू होता है।
 ```python
 list_name[:2]
-# Grabs the first two items
+# पहले दो आइटम लेता है
 list_name[3:]
-# Grabs the fourth through last items
+# चौथे से अंतिम आइटम तक लेता है
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+यदि आपके लिस्ट स्लाइस में लिस्ट (या स्ट्रिंग) का पहला या अंतिम आइटम शामिल है, तो उस आइटम के लिए इंडेक्स शामिल करना आवश्यक नहीं है।
 
 ---
 
-List elements could be of any type:
+लिस्ट के तत्व किसी भी प्रकार के हो सकते हैं:
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+वास्तव में, ऊपर हमारे पास क्रम में एक स्ट्रिंग, एक इंटीजर और एक बूलियन है।
+लेकिन हमारे पास लिस्ट के अंदर लिस्ट भी हो सकती हैं!
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+कभी-कभी आपको लिस्ट में किसी आइटम को खोजने की आवश्यकता होती है।
+Python में हम `index()` मेथड का उपयोग कर सकते हैं:
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+ऊपर दिया गया कोड पहला इंडेक्स प्रिंट करता है जिसमें स्ट्रिंग `"Zac"` है, इस मामले में `1`।
+हम `insert()` मेथड का उपयोग करके किसी विशिष्ट इंडेक्स पर लिस्ट में आइटम भी डाल सकते हैं:
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+ऊपर दिया गया कोड इंडेक्स `1` पर `"Ali"` डालता है, जो इस इंडेक्स के बाद सब कुछ 1 स्थान नीचे खिसका देता है
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+Python में हम `for..in` कीवर्ड का उपयोग करके बहुत सरल तरीके से लिस्ट में लूप कर सकते हैं:
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+`for` कीवर्ड के बाद एक वेरिएबल नाम आता है, इसे बारी-बारी से प्रत्येक लिस्ट आइटम का मान असाइन किया जाएगा।
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+**Tuples** लिस्ट की तरह होते हैं लेकिन बहुत तेज़ होते हैं।
+हालांकि, tuple के मानों को बदला नहीं जा सकता।
+हम tuples का उपयोग **read-only** डेटा के लिए करते हैं जो प्रोग्राम चलने के दौरान स्थिर रहता है।
+एक tuple बनाने के लिए हम गोल ब्रैकेट `()` का उपयोग करते हैं
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+कभी-कभी हम अपने tuple को लिस्ट में बदलना चाह सकते हैं।
+ऐसा करने के लिए, हम `list()` फ़ंक्शन का उपयोग कर सकते हैं
 
 ---
 
-Likewise, we can convert a list into a tuple
+इसी तरह, हम एक लिस्ट को tuple में बदल सकते हैं

@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001वाँ अभाज्य
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+पहली छह अभाज्य संख्याओं को सूचीबद्ध करने पर: 2, 3, 5, 7, 11, और 13, हम देख सकते हैं कि 6वीं अभाज्य संख्या 13 है।
 
 # --instructions--
 
-What is the `n`th prime number?
+`n`वीं अभाज्य संख्या क्या है?
 
 # --seed--
 
@@ -30,35 +30,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`nth_prime(6)` should return 13.
+`nth_prime(6)` को 13 लौटाना चाहिए।
 
 ```python
     def test1(self):
         self.assertEqual(nth_prime(6), 13, "--err-t1--")
 ```
 
-`nth_prime(10)` should return 29.
+`nth_prime(10)` को 29 लौटाना चाहिए।
 
 ```python
     def test2(self):
         self.assertEqual(nth_prime(10), 29, "--err-t2--")
 ```
 
-`nth_prime(100)` should return 541.
+`nth_prime(100)` को 541 लौटाना चाहिए।
 
 ```python
     def test3(self):
         self.assertEqual(nth_prime(100), 541, "--err-t3--")
 ```
 
-`nth_prime(1000)` should return 7919.
+`nth_prime(1000)` को 7919 लौटाना चाहिए।
 
 ```python
     def test4(self):
         self.assertEqual(nth_prime(1000), 7919, "--err-t4--")
 ```
 
-`nth_prime(10001)` should return 104743.
+`nth_prime(10001)` को 104743 लौटाना चाहिए।
 
 ```python
     def test5(self):

@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+निर्णय लेना तब आवश्यक होता है जब हम केवल एक निश्चित शर्त पूरी होने पर ही कोड निष्पादित करना चाहते हैं।
+मान लीजिए कि हम बाहर खेलना चाहते हैं केवल तभी जब मौसम अच्छा हो।
+प्रोग्रामिंग में, हम एक boolean वेरिएबल `niceWeather` सेव कर सकते हैं और `if` यह वेरिएबल `true` है तो बाहर खेलने की क्रिया कर सकते हैं, जैसे:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+आइए पिछले उदाहरण को जारी रखें।
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
+एक और महत्वपूर्ण बात **कर्ली ब्रैकेट्स** `{}` हैं जो एक कोड ब्लॉक को दर्शाते हैं।
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Kotlin we can use the `else` statement, like:
+हमने अभी देखा कि किसी शर्त के पूरा होने पर कोड ब्लॉक कैसे निष्पादित करें, अब देखते हैं कि पहली शर्त विफल होने पर दूसरा कोड ब्लॉक कैसे निष्पादित करें।
+अगर मौसम अच्छा है तो हम बाहर खेलने जाते हैं; अन्यथा, हम घर पर रहते हैं।
+Kotlin में हम `else` स्टेटमेंट का उपयोग कर सकते हैं, जैसे:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+मान लीजिए कि हमें एक और शर्त की जांच करनी है, जैसे इस उदाहरण में:
 ```kotlin
 var num = 3
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     println("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+और इस कोड का आउटपुट `the number is 3` है।
+सबसे पहले, जांचते हैं कि क्या संख्या 2 के बराबर है, यह false है।
+तो दूसरे स्टेटमेंट पर चलते हैं और जांचते हैं कि क्या `num` 3 के बराबर है, यह true होने पर हम `the number is 3` प्रिंट करके कोड ब्लॉक निष्पादित करते हैं
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+हम जितने चाहें उतने `else if` स्टेटमेंट जोड़ सकते हैं, कोई सीमा नहीं है
 ```kotlin
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     println("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+हम एक कंडीशनल स्टेटमेंट (`if`, `else if` या `else`) को दूसरे कंडीशनल स्टेटमेंट के अंदर नेस्ट भी कर सकते हैं, एक अधिक जटिल संरचना बनाने के लिए।
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -87,14 +87,14 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-The _elvis operator_ `a ?: b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `null`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The elvis operator is shorthand for the code below:
+_एल्विस ऑपरेटर_ `a ?: b` एक ऑप्शनल `a` को अनरैप करता है यदि उसमें कोई मान है, या `a` `null` होने पर डिफ़ॉल्ट मान `b` लौटाता है।
+एक्सप्रेशन `a` हमेशा ऑप्शनल टाइप का होता है।
+एक्सप्रेशन `b` को a के अंदर संग्रहीत टाइप से मेल खाना चाहिए।
+एल्विस ऑपरेटर नीचे दिए गए कोड का संक्षिप्त रूप है:
 ```kotlin
 if (a != null) a else b
 ```

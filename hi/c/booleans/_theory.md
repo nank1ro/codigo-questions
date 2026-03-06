@@ -1,10 +1,10 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+बूलियन दो में से एक मान को दर्शाते हैं: `true` या `false`।
+आप C में किसी भी एक्सप्रेशन का मूल्यांकन कर सकते हैं, और दो उत्तरों में से एक प्राप्त कर सकते हैं, `true` या `false`।
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+हम बूलियन मान `true` को एक वेरिएबल में ठीक उसी तरह स्टोर कर सकते हैं जैसे एक नंबर या स्ट्रिंग।
 
 ---
 
-The opposite value of `true` is `false`
+`true` का विपरीत मान `false` है

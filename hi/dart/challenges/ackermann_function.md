@@ -2,22 +2,22 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Ackermann function
+title: एकरमैन फ़ंक्शन
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+एकरमैन फ़ंक्शन एक रिकर्सिव फ़ंक्शन का एक उत्कृष्ट उदाहरण है, जो विशेष रूप से इसलिए उल्लेखनीय है क्योंकि यह एक प्रिमिटिव रिकर्सिव फ़ंक्शन नहीं है। इसका मान बहुत तेज़ी से बढ़ता है, जैसा कि इसके कॉल ट्री का आकार भी बढ़ता है।
 
-The Ackermann function is usually defined as follows:
+एकरमैन फ़ंक्शन को आमतौर पर इस प्रकार परिभाषित किया जाता है:
 
 ![ackermann_function](https://bit.ly/3z9u4zh)
 
-Its arguments are never negative and it always terminates
+इसके तर्क कभी ऋणात्मक नहीं होते और यह हमेशा समाप्त होता है
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+एक फ़ंक्शन लिखें जो एकरमैन फ़ंक्शन का मान लौटाए।
 
 # --seed--
 
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` को 1 लौटाना चाहिए।
 
 ```dart
     test('test1', () {
@@ -47,7 +47,7 @@ void main() {
     });
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` को 3 लौटाना चाहिए।
 
 ```dart
     test('test2', () {
@@ -55,7 +55,7 @@ void main() {
     });
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` को 13 लौटाना चाहिए।
 
 ```dart
     test('test3', () {
@@ -63,7 +63,7 @@ void main() {
     });
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` को 61 लौटाना चाहिए।
 
 ```dart
     test('test4', () {

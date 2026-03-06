@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+निर्णय लेना तब आवश्यक होता है जब हम किसी कोड को केवल तभी निष्पादित करना चाहते हैं जब कोई विशेष शर्त पूरी हो।
+मान लीजिए कि हम बाहर खेलना चाहते हैं केवल तभी जब मौसम अच्छा हो।
+प्रोग्रामिंग में, हम एक boolean वेरिएबल `nice_weather` सेव कर सकते हैं और बाहर खेलने की क्रिया `if` इस वेरिएबल के `true` होने पर कर सकते हैं, जैसे:
 ```c
 bool nice_weather = true;
 if (nice_weather) {
@@ -10,21 +10,21 @@ if (nice_weather) {
 
 ---
 
-Let's continue with the previous example.
+आइए पिछले उदाहरण को जारी रखें।
 ```c
 bool nice_weather = true;
 if (nice_weather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
+एक और महत्वपूर्ण बात **कर्ली ब्रैकेट** `{}` हैं जो एक कोड ब्लॉक को दर्शाती हैं।
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In C we can use the `else` statement, like:
+हमने अभी देखा कि किसी शर्त पूरी होने पर कोड ब्लॉक कैसे निष्पादित करें, अब देखते हैं कि पहली शर्त विफल होने पर दूसरा कोड ब्लॉक कैसे निष्पादित करें।
+हम बाहर खेलने जाते हैं अगर मौसम अच्छा है; अन्यथा, हम घर पर रहते हैं।
+C में हम `else` स्टेटमेंट का उपयोग कर सकते हैं, जैसे:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
@@ -36,7 +36,7 @@ if (nice_weather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+मान लीजिए कि हमारे पास जाँचने के लिए एक और शर्त है, जैसे इस उदाहरण में:
 ```c
 int num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     printf("do something else\n");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+और इस कोड का आउटपुट `the number is 3` है।
+सबसे पहले, जाँचें कि संख्या 2 के बराबर है या नहीं, यह false है।
+तो दूसरे स्टेटमेंट पर चलते हैं और जाँचते हैं कि `num` 3 के बराबर है या नहीं, true होने पर हम `the number is 3` प्रिंट करके निम्नलिखित कोड ब्लॉक निष्पादित करते हैं
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+हम जितने चाहें उतने `else if` स्टेटमेंट जोड़ सकते हैं, कोई सीमा नहीं है
 ```c
 int num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     printf("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+हम एक सशर्त स्टेटमेंट (`if`, `else if` या `else`) को दूसरे सशर्त स्टेटमेंट के अंदर नेस्ट भी कर सकते हैं, ताकि एक अधिक जटिल संरचना बनाई जा सके।
 ```c
 int num = 4;
 if (num < 3) {
@@ -87,4 +87,4 @@ if (num < 3) {
   }
 }
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।

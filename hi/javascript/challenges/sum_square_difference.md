@@ -2,22 +2,22 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: वर्ग योग अंतर
 ---
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+पहली दस प्राकृतिक संख्याओं के वर्गों का योग है,
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+पहली दस प्राकृतिक संख्याओं के योग का वर्ग है,
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+अतः पहली दस प्राकृतिक संख्याओं के वर्गों के योग और योग के वर्ग के बीच का अंतर 3025 − 385 = 2640 है।
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+पहली `n` प्राकृतिक संख्याओं के वर्गों के योग और योग के वर्ग के बीच का अंतर ज्ञात करें।
 
 # --before-seed--
 
@@ -47,19 +47,19 @@ function sumSquareDifference(n) {
 
 # --asserts--
 
-`sumSquareDifference(10)` should return 2640.
+`sumSquareDifference(10)` को 2640 लौटाना चाहिए।
 
 ```javascript
 tryCatch(sumSquareDifference(10) === 2640);
 ```
 
-`sumSquareDifference(20)` should return 41230.
+`sumSquareDifference(20)` को 41230 लौटाना चाहिए।
 
 ```javascript
 tryCatch(sumSquareDifference(20) === 41230);
 ```
 
-`sumSquareDifference(100)` should return 25164150.
+`sumSquareDifference(100)` को 25164150 लौटाना चाहिए।
 
 ```javascript
 tryCatch(sumSquareDifference(100) === 25164150);

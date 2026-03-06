@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: अभाज्य संख्याओं का योग
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है।
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+`n` से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
 
 # --before-seed--
 
@@ -41,25 +41,25 @@ function primeSummation(n) {
 
 # --asserts--
 
-`primeSummation(17)` should return 41.
+`primeSummation(17)` को 41 लौटाना चाहिए।
 
 ```javascript
 tryCatch(primeSummation(17) === 41);
 ```
 
-`primeSummation(2001)` should return 277050.
+`primeSummation(2001)` को 277050 लौटाना चाहिए।
 
 ```javascript
 tryCatch(primeSummation(2001) === 277050);
 ```
 
-`primeSummation(140759)` should return 873608362.
+`primeSummation(140759)` को 873608362 लौटाना चाहिए।
 
 ```javascript
 tryCatch(primeSummation(140759) === 873608362);
 ```
 
-`primeSummation(2000000)` should return 142913828922.
+`primeSummation(2000000)` को 142913828922 लौटाना चाहिए।
 
 ```javascript
 tryCatch(primeSummation(2000000) === 142913828922);

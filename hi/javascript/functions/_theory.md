@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In JavaScript we use the `function` keyword followed by the name of the function:
+आपने ऐसी स्थिति पर विचार किया होगा जहाँ आप कोड के एक टुकड़े को दोबारा उपयोग करना चाहते हैं, बस कुछ अलग मानों के साथ।
+पूरा कोड दोबारा लिखने के बजाय, एक function परिभाषित करना बहुत बेहतर है, जिसे बार-बार उपयोग किया जा सकता है।
+JavaScript में हम `function` कीवर्ड का उपयोग करते हैं जिसके बाद function का नाम आता है:
 ```javascript
 function sayHi() {
     console.log("Hello!");
@@ -11,16 +11,16 @@ sayHi();
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+__function definition__ में कोष्ठक खाली नहीं होने चाहिए अगर हम parameters निर्दिष्ट करना चाहते हैं
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+कभी-कभी हम चाहते हैं कि function एक मान __return__ करे।
+इसके लिए `return` कीवर्ड है।
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Functions में कई input parameters हो सकते हैं, जो function के कोष्ठकों के अंदर अल्पविराम से अलग करके लिखे जाते हैं।
 ```javascript
 function sayHello(name, newUser) {
   var greet = `Hello ${name}!`;
@@ -35,8 +35,8 @@ console.log(sayHello("Smith", true));
 
 ---
 
-You can define a _default_ value for any parameter in a function by assigning a value to the parameter after that parameter's type.
-If a default value is defined, you can omit that parameter when calling the function
+आप किसी function में किसी भी parameter के लिए _default_ मान परिभाषित कर सकते हैं, parameter के प्रकार के बाद उसे एक मान assign करके।
+अगर default मान परिभाषित है, तो आप function को कॉल करते समय उस parameter को छोड़ सकते हैं
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
     // do stuff here
@@ -45,18 +45,18 @@ function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
 
 ---
 
-The __rest parameter__ syntax allows us to represent an indefinite number of arguments as an array.
-Write rest parameters by inserting three period characters `...` before the parameter's name.
-The values passed to a rest parameter are made available within the function's body as an array.
-For example, a rest parameter with a name of `numbers` is made available within the function's body as a constant array called numbers
+__rest parameter__ सिंटैक्स हमें अनिश्चित संख्या में arguments को एक array के रूप में दर्शाने की अनुमति देता है।
+parameter के नाम से पहले तीन बिंदु अक्षर `...` डालकर rest parameters लिखें।
+rest parameter को पास किए गए मान function के body के अंदर एक array के रूप में उपलब्ध होते हैं।
+उदाहरण के लिए, `numbers` नाम वाला rest parameter, function के body के अंदर numbers नामक एक constant array के रूप में उपलब्ध होता है
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+Functions में हम एक _वैकल्पिक टिप्पणी_ जोड़ सकते हैं जो बताती है कि function क्या करता है:
 ```javascript
 // Prints 'Hello World' to the console.
 function helloWorld() {
     console.log("Hello, World!");
 }
 ```
-We can use `//` for a single line comment and `/** */` for a multi line comment
+हम एक पंक्ति की टिप्पणी के लिए `//` और बहु-पंक्ति टिप्पणी के लिए `/** */` का उपयोग कर सकते हैं

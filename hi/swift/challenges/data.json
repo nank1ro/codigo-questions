@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "जोड़"
   },
   "atm": {
     "difficulty": 1,
@@ -9,31 +9,31 @@
   },
   "hello_world": {
     "difficulty": 1,
-    "name": "Hello World!"
+    "name": "हैलो वर्ल्ड!"
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "बारिश की बूंदें"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "अंकों का योग"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "दो में से एक"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100 दरवाज़े"
   },
   "ackermann_function": {
     "difficulty": 1,
-    "name": "Ackermann function"
+    "name": "एकरमन फलन"
   },
   "arithmetic_mean": {
     "difficulty": 1,
-    "name": "Arithmetic mean",
+    "name": "अंकगणितीय माध्य",
     "isPro": true
   },
   "fizz_buzz": {
@@ -43,12 +43,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "रोमन अंक परिवर्तक",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "लीप वर्ष",
     "isPro": true
   }
 }

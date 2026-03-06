@@ -1,15 +1,15 @@
-Swift is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Swift एक ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग भाषा है, जिसका अर्थ है कि यह ऑब्जेक्ट्स नामक प्रोग्रामिंग संरचनाओं को संचालित करती है।
+आप एक ऑब्जेक्ट को एक ऐसी डेटा संरचना के रूप में समझ सकते हैं जिसमें डेटा और फंक्शन दोनों होते हैं; एक ऑब्जेक्ट के फंक्शन को उसके मेथड कहा जाता है।
+उदाहरण के लिए, जब आप यह कॉल करते हैं:
 ```swift
 dictName.removeValue(forKey: "keyName")
 ```
-Swift checks to see if `dictName` has a `removeValue()` method (which all dictionaries have) and executes that method if it finds it.
+Swift जाँचता है कि क्या `dictName` में `removeValue()` मेथड है (जो सभी डिक्शनरी में होता है) और यदि उसे मिलता है तो उस मेथड को निष्पादित करता है।
 
 ---
 
-_Structures_ and _classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class|struct consists only of the `class` or `struct` keyword and its name, for example:
+_स्ट्रक्चर_ और _क्लासेस_ सामान्य-उद्देश्य, लचीली संरचनाएँ हैं जो आपके प्रोग्राम के कोड की बिल्डिंग ब्लॉक्स बनती हैं।
+एक बेसिक class|struct में केवल `class` या `struct` कीवर्ड और उसका नाम होता है, उदाहरण के लिए:
 ```swift
 class ClassName {
     // class definition
@@ -21,43 +21,43 @@ struct ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
+आइए हमारी `Animal` क्लास के अंदर कुछ डालें
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+क्लास को परिभाषित करने से ऑब्जेक्ट नहीं बनता।
+ऐसा करने के लिए, हमें क्लास का एक __इंस्टेंस__ बनाना होगा
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+जब किसी क्लास के अपने फंक्शन होते हैं, तो उन फंक्शन को __मेथड__ कहा जाता है।
 
 ---
 
-Structures and classes in Swift have many things in common. Both can:
-- Define properties to store values
-- Define methods to provide functionality
-- Define subscripts to provide access to their values using subscript syntax
-- Define initializers to set up their initial state
-- Be extended to expand their functionality beyond a default implementation
-- Conform to protocols to provide standard functionality of a certain kind
+Swift में स्ट्रक्चर और क्लासेस में बहुत कुछ समान है। दोनों कर सकते हैं:
+- मान संग्रहीत करने के लिए प्रॉपर्टीज़ परिभाषित करना
+- कार्यक्षमता प्रदान करने के लिए मेथड परिभाषित करना
+- सबस्क्रिप्ट सिंटैक्स का उपयोग करके अपने मानों तक पहुँच प्रदान करने के लिए सबस्क्रिप्ट परिभाषित करना
+- अपनी प्रारंभिक स्थिति सेट करने के लिए इनिशियलाइज़र परिभाषित करना
+- डिफ़ॉल्ट कार्यान्वयन से परे अपनी कार्यक्षमता का विस्तार करने के लिए एक्सटेंड किया जाना
+- एक निश्चित प्रकार की मानक कार्यक्षमता प्रदान करने के लिए प्रोटोकॉल का पालन करना
 
-But classes have additional capabilities that structures don't have:
-- Inheritance enables one class to inherit the characteristics of another
-- Type casting enables you to check and interpret the type of a class instance at runtime
-- Deinitializers enable an instance of a class to free up any resources it has assigned
-- Reference counting allows more than one reference to a class instance
+लेकिन क्लासेस में अतिरिक्त क्षमताएँ हैं जो स्ट्रक्चर में नहीं हैं:
+- इनहेरिटेंस एक क्लास को दूसरी की विशेषताओं को इनहेरिट करने में सक्षम बनाता है
+- टाइप कास्टिंग आपको रनटाइम पर क्लास इंस्टेंस के प्रकार की जाँच और व्याख्या करने में सक्षम बनाता है
+- डीइनिशियलाइज़र क्लास के इंस्टेंस को उसके द्वारा आवंटित किसी भी संसाधन को मुक्त करने में सक्षम बनाते हैं
+- रेफरेंस काउंटिंग एक क्लास इंस्टेंस के एक से अधिक रेफरेंस की अनुमति देता है
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+आप _डॉट सिंटैक्स_ का उपयोग करके किसी इंस्टेंस की प्रॉपर्टीज़ तक पहुँच सकते हैं।
+डॉट सिंटैक्स में, आप प्रॉपर्टी का नाम इंस्टेंस के नाम के तुरंत बाद, बिना किसी स्पेस के, पीरियड `.` द्वारा अलग करके लिखते हैं:
 ```swift
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+उसी सिंटैक्स का उपयोग करके हम किसी प्रॉपर्टी के मान को भी अपडेट कर सकते हैं
 
 ---
 
-One advantage of structures is that have an automatically generated memberwise initializer, which you can use to initialize the member properties of new structure instances.
-Initial values for the properties of the new instance can be passed to the memberwise initializer by name
+स्ट्रक्चर का एक फायदा यह है कि उनके पास स्वचालित रूप से जनरेट किया गया मेम्बरवाइज़ इनिशियलाइज़र होता है, जिसका उपयोग आप नए स्ट्रक्चर इंस्टेंस की मेम्बर प्रॉपर्टीज़ को इनिशियलाइज़ करने के लिए कर सकते हैं।
+नए इंस्टेंस की प्रॉपर्टीज़ के प्रारंभिक मान नाम के द्वारा मेम्बरवाइज़ इनिशियलाइज़र को पास किए जा सकते हैं

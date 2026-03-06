@@ -2,18 +2,18 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: अंकगणितीय माध्य
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+एक संख्यात्मक वेक्टर का _अंकगणितीय औसत_ ज्ञात करने के लिए `mean` नामक एक फ़ंक्शन लिखें।
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+एक फ़ंक्शन लिखें जो एक संख्यात्मक वेक्टर का माध्य लौटाए।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
@@ -50,19 +50,19 @@ fun main() {
 
 # --asserts--
 
-The mean of `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` must be equal to 4.0
+`[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` का माध्य 4.0 के बराबर होना चाहिए
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)) == 4.0)
 ```
 
-The mean of `[4.0, 5.0, 6.0]` must be equal to 5.0
+`[4.0, 5.0, 6.0]` का माध्य 5.0 के बराबर होना चाहिए
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(4.0, 5.0, 6.0)) == 5.0)
 ```
 
-The mean of `[12.0, 34.0, 56.0, 78.0]` must be equal to 45.0
+`[12.0, 34.0, 56.0, 78.0]` का माध्य 45.0 के बराबर होना चाहिए
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(12.0, 34.0, 56.0, 78.0)) == 45.0)

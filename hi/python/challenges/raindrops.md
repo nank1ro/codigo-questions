@@ -2,28 +2,28 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: बारिश की बूंदें
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+आपका कार्य एक संख्या को एक स्ट्रिंग में बदलना है जिसमें कुछ संभावित गुणकों से संबंधित बारिश की बूंदों की आवाज़ें हों।
+एक गुणक वह संख्या है जो किसी अन्य संख्या को समान रूप से विभाजित करती है, बिना किसी शेष के।
+यह जांचने का सबसे सरल तरीका कि कोई संख्या किसी अन्य का गुणक है या नहीं, मॉड्यूलो ऑपरेशन का उपयोग करना है।
+बारिश की बूंदों के नियम निम्नलिखित हैं:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 3 गुणक के रूप में है, तो परिणाम में 'Pling' जोड़ें।
+- 5 गुणक के रूप में है, तो परिणाम में 'Plang' जोड़ें।
+- 7 गुणक के रूप में है, तो परिणाम में 'Plong' जोड़ें।
+- 3, 5, या 7 में से कोई भी गुणक नहीं है, तो परिणाम संख्या के अंक होने चाहिए।
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+एक फ़ंक्शन लिखें जो सही स्ट्रिंग लौटाए, उदाहरण:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 में 7 गुणक है, लेकिन 3 या 5 नहीं, इसलिए परिणाम `"Plong"` होगा।
+- 30 में 3 और 5 दोनों गुणक हैं, लेकिन 7 नहीं, इसलिए परिणाम `"PlingPlang"` होगा।
+- 34, 3, 5, या 7 से विभाजित नहीं है, इसलिए परिणाम `"34"` होगा।
 
 # --seed--
 
@@ -42,126 +42,126 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sound for 1 is "1"
+1 के लिए ध्वनि "1" है
 
 ```python
     def test_the_sound_for_1_is_1(self):
         self.assertEqual(convert(1), "1", "--err-t1--")
 ```
 
-The sound for 3 is "Pling"
+3 के लिए ध्वनि "Pling" है
 
 ```python
     def test_the_sound_for_3_is_pling(self):
         self.assertEqual(convert(3), "Pling", "--err-t2--")
 ```
 
-The sound for 5 is "Plang"
+5 के लिए ध्वनि "Plang" है
 
 ```python
     def test_the_sound_for_5_is_plang(self):
         self.assertEqual(convert(5), "Plang", "--err-t3--")
 ```
 
-The sound for 7 is "Plong"
+7 के लिए ध्वनि "Plong" है
 
 ```python
     def test_the_sound_for_7_is_plong(self):
         self.assertEqual(convert(7), "Plong", "--err-t4--")
 ```
 
-The sound for 6 is "Pling"
+6 के लिए ध्वनि "Pling" है
 
 ```python
     def test_the_sound_for_6_is_pling(self):
         self.assertEqual(convert(6), "Pling", "--err-t5--")
 ```
 
-The sound for 8 is "8"
+8 के लिए ध्वनि "8" है
 
 ```python
     def test_the_sound_for_8_is_8(self):
         self.assertEqual(convert(8), "8", "--err-t6--")
 ```
 
-The sound for 9 is "Pling"
+9 के लिए ध्वनि "Pling" है
 
 ```python
     def test_the_sound_for_9_is_pling(self):
         self.assertEqual(convert(9), "Pling", "--err-t7--")
 ```
 
-The sound for 10 is "Plang"
+10 के लिए ध्वनि "Plang" है
 
 ```python
     def test_the_sound_for_10_is_plang(self):
         self.assertEqual(convert(10), "Plang", "--err-t8--")
 ```
 
-The sound for 14 is "Plong"
+14 के लिए ध्वनि "Plong" है
 
 ```python
     def test_the_sound_for_14_is_plong(self):
         self.assertEqual(convert(14), "Plong", "--err-t9--")
 ```
 
-The sound for 15 is "PlingPlang"
+15 के लिए ध्वनि "PlingPlang" है
 
 ```python
     def test_the_sound_for_15_is_pling_plang(self):
         self.assertEqual(convert(15), "PlingPlang", "--err-t10--")
 ```
 
-The sound for 21 is "PlingPlong"
+21 के लिए ध्वनि "PlingPlong" है
 
 ```python
     def test_the_sound_for_21_is_pling_plong(self):
         self.assertEqual(convert(21), "PlingPlong", "--err-t11--")
 ```
 
-The sound for 25 is "Plang"
+25 के लिए ध्वनि "Plang" है
 
 ```python
     def test_the_sound_for_25_is_plang(self):
         self.assertEqual(convert(25), "Plang", "--err-t12--")
 ```
 
-The sound for 27 is "Pling"
+27 के लिए ध्वनि "Pling" है
 
 ```python
     def test_the_sound_for_27_is_pling(self):
         self.assertEqual(convert(27), "Pling", "--err-t13--")
 ```
 
-The sound for 35 is "PlangPlong"
+35 के लिए ध्वनि "PlangPlong" है
 
 ```python
     def test_the_sound_for_35_is_plang_plong(self):
         self.assertEqual(convert(35), "PlangPlong", "--err-t14--")
 ```
 
-The sound for 49 is "Plong"
+49 के लिए ध्वनि "Plong" है
 
 ```python
     def test_the_sound_for_49_is_plong(self):
         self.assertEqual(convert(49), "Plong", "--err-t15--")
 ```
 
-The sound for 52 is "52"
+52 के लिए ध्वनि "52" है
 
 ```python
     def test_the_sound_for_52_is_52(self):
         self.assertEqual(convert(52), "52", "--err-t16--")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105 के लिए ध्वनि "PlingPlangPlong" है
 
 ```python
     def test_the_sound_for_105_is_pling_plang_plong(self):
         self.assertEqual(convert(105), "PlingPlangPlong", "--err-t17--")
 ```
 
-The sound for 3125 is "Plang"
+3125 के लिए ध्वनि "Plang" है
 
 ```python
     def test_the_sound_for_3125(self):

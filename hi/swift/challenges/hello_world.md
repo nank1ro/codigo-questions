@@ -2,16 +2,16 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: हैलो वर्ल्ड!
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ किसी नई भाषा या वातावरण में प्रोग्रामिंग शुरू करने के लिए पारंपरिक पहला प्रोग्राम है।
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+एक फ़ंक्शन लिखें जो स्ट्रिंग "Hello, World!" लौटाए।
 
 # --seed--
 
@@ -32,7 +32,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The function should return "Hello, World!".
+फ़ंक्शन को "Hello, World!" लौटाना चाहिए।
 
 ```swift
     func testHi() {

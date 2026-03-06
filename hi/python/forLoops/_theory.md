@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+हम जानते हैं कि `while` लूप का उपयोग करके कोड को कैसे दोहराया जाता है।
+जैसे यह प्रोग्राम `hello` प्रदर्शित करने के लिए स्टेटमेंट दोहराता है
 ```python
 counter = 0
 
@@ -7,7 +7,7 @@ while counter < 5:
     print("hello")
     counter += 1
 ```
-But we can do the same with `for` loops:
+लेकिन हम `for` लूप से भी यही कर सकते हैं:
 ```python
 for i in range(5):
     print("hello")
@@ -15,23 +15,23 @@ for i in range(5):
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run with the `range()` function
+`for` लूप में हम `range()` फ़ंक्शन के साथ निर्दिष्ट कर सकते हैं कि हम अपने लूप को कितनी बार चलाना चाहते हैं
 
 ---
 
-Adding a number like `5`, inside the `range()` function means it will loop over the code block 5 times, from `0` until `4`
+`range()` फ़ंक्शन के अंदर `5` जैसी संख्या डालने का मतलब है कि यह कोड ब्लॉक को 5 बार दोहराएगा, `0` से `4` तक
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i` नामक वेरिएबल काउंटर वेरिएबल है।
+हम इसे जो नाम चाहें दे सकते हैं।
+यह गिनता है कि हम वर्तमान में लूप की किस पुनरावृत्ति पर हैं
 
 ---
 
-The `range()` function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
-This is the syntax of the function:
+`range()` फ़ंक्शन संख्याओं का एक अनुक्रम लौटाता है, डिफ़ॉल्ट रूप से 0 से शुरू होता है, और 1 से बढ़ता है (डिफ़ॉल्ट रूप से), और एक निर्दिष्ट संख्या से पहले रुक जाता है।
+यह फ़ंक्शन का सिंटैक्स है:
 ```python
 range(start, stop, step)
 ```
-`start` and `step` are optional, while `stop` is required
+`start` और `step` वैकल्पिक हैं, जबकि `stop` आवश्यक है

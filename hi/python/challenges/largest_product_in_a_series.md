@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: एक श्रृंखला में सबसे बड़ा गुणनफल
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+नीचे दी गई 1000-अंकीय संख्या में चार सन्निकट अंक जिनका गुणनफल सबसे बड़ा है, वे हैं 9 × 9 × 8 × 9 = 5832।
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+1000-अंकीय संख्या में `n` सन्निकट अंक ज्ञात करें जिनका गुणनफल सबसे बड़ा है। इस गुणनफल का मान क्या है?
 
 # --seed--
 
@@ -31,14 +31,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_productina_series(4)` should return 5832.
+`largest_productina_series(4)` को 5832 लौटाना चाहिए।
 
 ```python
     def test1(self):
         self.assertEqual(largest_productina_series(4), 5832, "--err-t1--")
 ```
 
-`largest_productina_series(13)` should return 23514624000.
+`largest_productina_series(13)` को 23514624000 लौटाना चाहिए।
 
 ```python
     def test2(self):

@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+Python में हम `+` चिन्ह का उपयोग दो या अधिक स्ट्रिंग्स को एक साथ प्रदर्शित करने के लिए कर सकते हैं, जैसे:
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+लेकिन `+` चिन्ह का उपयोग करके '10' जैसी संख्या को ` "friends"` जैसी स्ट्रिंग से जोड़ने पर एक त्रुटि आती है क्योंकि ये अलग-अलग प्रकार के मान हैं
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+फॉर्मेटेड स्ट्रिंग्स हमें बिना किसी त्रुटि के, स्ट्रिंग में संख्या जोड़ने जैसे एक्सप्रेशन प्रदर्शित करने की अनुमति देती हैं।
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+हर फॉर्मेटेड स्ट्रिंग स्टेटमेंट दो भागों से बनी होती है, पहले कैरेक्टर `f`, फिर वह स्ट्रिंग जिसे हम फॉर्मेट करना चाहते हैं
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+इसके बाद, हम अलग प्रकार के मान को कर्ली ब्रेसेज़ में जोड़ते हैं ताकि यह एक print स्टेटमेंट के रूप में प्रदर्शित हो। जैसे यहाँ, `{5}` के साथ
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+कर्ली ब्रेसेज़ के बीच `friends` जैसे वेरिएबल डालने से उनका मान भी प्रदर्शित होता है
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+हम फॉर्मेटेड स्ट्रिंग के अंदर जितनी बार चाहें कर्ली ब्रेसेज़ का उपयोग करके मान डाल सकते हैं
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+फॉर्मेटेड स्ट्रिंग्स का उपयोग print स्टेटमेंट में सबसे अच्छा होता है, क्योंकि हम उन्हें सामान्य स्ट्रिंग्स की तरह वेरिएबल में स्टोर नहीं कर सकते।

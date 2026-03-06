@@ -1,27 +1,27 @@
 {
   "comments": {
     "order": 1,
-    "title": "Comments",
-    "description": "Learn how to comment the code"
+    "title": "टिप्पणियाँ",
+    "description": "कोड में टिप्पणी करना सीखें"
   },
   "output": {
     "order": 2,
-    "title": "Output",
-    "description": "Learn how to output a value"
+    "title": "आउटपुट",
+    "description": "मान को आउटपुट करना सीखें"
   },
   "stringInterpolation": {
     "order": 3,
-    "title": "String interpolation",
-    "description": "Learn how to interpolate strings with different data types"
+    "title": "स्ट्रिंग इंटरपोलेशन",
+    "description": "विभिन्न डेटा प्रकारों के साथ स्ट्रिंग्स को इंटरपोलेट करना सीखें"
   },
   "variables": {
     "order": 4,
-    "title": "Variables",
-    "description": "Learn how to store values in a variable"
+    "title": "वेरिएबल",
+    "description": "वेरिएबल में मान संग्रहीत करना सीखें"
   },
   "types": {
     "order": 5,
-    "title": "Types",
-    "description": "Learn the types assignable to a variable"
+    "title": "टाइप्स",
+    "description": "वेरिएबल को असाइन किए जा सकने वाले प्रकार सीखें"
   }
 }

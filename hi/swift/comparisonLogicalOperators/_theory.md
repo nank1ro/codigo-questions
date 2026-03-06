@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+आइए **बराबर** `==` तुलना ऑपरेटर से शुरू करें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि दो एक्सप्रेशन बराबर हैं या नहीं, उदाहरण के लिए:
 ```swift
 print(2 == 2) // true
 print(2 == 3) // false
@@ -7,18 +7,18 @@ print(2 == 3) // false
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+आइए **बराबर नहीं** `!=` तुलना ऑपरेटर के साथ जारी रखें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि दो एक्सप्रेशन **बराबर नहीं** हैं, उदाहरण के लिए:
 ```swift
 print(2 != 2) // false
 print(2 != 3) // true
 ```
-It is exactly the opposite of the *equal* operator
+यह *बराबर* ऑपरेटर के बिल्कुल विपरीत है
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+आइए **से बड़ा** `>` तुलना ऑपरेटर के साथ जारी रखें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि एक एक्सप्रेशन दूसरे से बड़ा है या नहीं, उदाहरण के लिए:
 ```swift
 print(2 > 2) // false
 print(3 > 2) // true
@@ -26,8 +26,8 @@ print(3 > 2) // true
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+आइए **से छोटा** `<` तुलना ऑपरेटर के साथ जारी रखें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि एक एक्सप्रेशन दूसरे से छोटा है या नहीं, उदाहरण के लिए:
 ```swift
 print(2 < 2) // false
 print(2 < 3) // true
@@ -35,8 +35,8 @@ print(2 < 3) // true
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+आइए **से बड़ा या बराबर** `>=` तुलना ऑपरेटर के साथ जारी रखें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि एक एक्सप्रेशन दूसरे से बड़ा या बराबर है या नहीं, उदाहरण के लिए:
 ```swift
 print(2 >= 2) // true
 print(3 >= 2) // true
@@ -45,8 +45,8 @@ print(3 >= 4) // false
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+आइए **से छोटा या बराबर** `<=` तुलना ऑपरेटर के साथ जारी रखें।
+यह एक **बूलियन** (`true` या `false`) लौटाता है जो बताता है कि एक एक्सप्रेशन दूसरे से छोटा या बराबर है या नहीं, उदाहरण के लिए:
 ```swift
 print(2 <= 2) // true
 print(3 <= 2) // false
@@ -55,8 +55,8 @@ print(3 <= 4) // true
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+अब आइए **लॉजिकल** ऑपरेटर देखें, पहले __AND__ `&&` से शुरू करते हैं।
+यह पहला ऑपरेंड लौटाता है जो *false* का मूल्यांकन करता है या अंतिम यदि सभी *true* हैं।
 ```swift
 print(2 == 2 && 2 == 3) // false
 print(1 == 1 && 1 == 1.0) // true
@@ -64,8 +64,8 @@ print(1 == 1 && 1 == 1.0) // true
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+आइए **or** `||` लॉजिकल ऑपरेटर के साथ जारी रखें।
+यह पहला ऑपरेंड लौटाता है जो *true* का मूल्यांकन करता है या अंतिम यदि सभी *false* हैं।
 ```swift
 print(2 == 2 || 2 == 3) // true
 print(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ print(1 == 2 || 1 == 3) // false
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+अंत में **not** `!` लॉजिकल ऑपरेटर देखें।
+यह एक बूलियन लौटाता है जो किसी एक्सप्रेशन की लॉजिकल स्थिति के विपरीत होता है।
 ```swift
 print(!true) // false
 print(!false) // true

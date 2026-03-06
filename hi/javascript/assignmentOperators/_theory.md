@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+हम पहले ही सीख चुके हैं कि एक वेरिएबल को मान असाइन करने के लिए हम `=` चिह्न का उपयोग कर सकते हैं, जैसे:
 ```javascript
 let a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+हमारे पास पहले से एक इनिशियलाइज़्ड वेरिएबल `total` है
 ```javascript
 var total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+मान लीजिए कि हम वेरिएबल `total` में संख्या `2` जोड़ना चाहते हैं, तो हम लिख सकते हैं
 ```javascript
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+ठीक है, यह काम करता है! लेकिन वही काम करने का एक छोटा तरीका भी है:
 ```javascript
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+चिह्न `+=` को **एडिशन असाइनमेंट** कहा जाता है।
+यह वेरिएबल के मान में एक मान जोड़ता है और परिणाम को उस वेरिएबल में असाइन करता है।
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+एडिशन असाइनमेंट की तरह ही, हमारे पास **डिक्रीमेंट असाइनमेंट** `-=` है।
+कार्यप्रणाली समान है, केवल अंतर यह है कि यह घटाव करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```javascript
 var num = num - 5;
 // is equal to
@@ -33,9 +33,9 @@ num -= 5;
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **मल्टीप्लिकेशन असाइनमेंट** `*=` ऑपरेटर देखें।
+यह वेरिएबल को एक मान से गुणा करता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```javascript
 var num = num * 5;
 // is equal to
@@ -44,9 +44,9 @@ num *= 5;
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **डिवीज़न असाइनमेंट** `/=` ऑपरेटर देखें।
+यह वेरिएबल को एक मान से विभाजित करता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```javascript
 num = num / 5;
 // is equal to
@@ -55,9 +55,9 @@ num /= 5;
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+आइए **रिमेंडर असाइनमेंट** `%=` ऑपरेटर देखें।
+यह वेरिएबल और एक मान का शेषफल निकालता है और परिणाम को उस वेरिएबल में असाइन करता है।
+तो निम्नलिखित बिल्कुल समान हैं
 ```javascript
 num = num % 5;
 // is equal to

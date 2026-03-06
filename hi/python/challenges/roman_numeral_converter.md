@@ -2,24 +2,24 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: रोमन अंक परिवर्तक
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+एक फ़ंक्शन बनाएं जो एक धनात्मक पूर्णांक को अपने पैरामीटर के रूप में लेता है और उस पूर्णांक के रोमन अंक प्रतिनिधित्व वाली एक स्ट्रिंग लौटाता है। आधुनिक रोमन अंक प्रत्येक अंक को अलग-अलग व्यक्त करके लिखे जाते हैं, सबसे बाएं अंक से शुरू करते हुए और शून्य मान वाले किसी भी अंक को छोड़ते हुए।
 
 # --instructions--
 
-Examples:
+उदाहरण:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- सभी रोमन अंक अपरकेस में लौटाए जाने चाहिए।
+- इस अंकन में दर्शाई जा सकने वाली सबसे बड़ी संख्या 3,999 है।
 
 # --seed--
 
@@ -38,77 +38,77 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `2` must equal `II` 
+संख्या `2` का परिणाम `II` होना चाहिए
 
 ```python
     def test1(self):
         self.assertEqual(convert_to_roman(2), "II", "--err-t1--")
 ```
 
-The number `12` must equal `XII`
+संख्या `12` का परिणाम `XII` होना चाहिए
 
 ```python
     def test2(self):
         self.assertEqual(convert_to_roman(12), "XII", "--err-t2--")
 ```
 
-The number `16` must equal `XVI`
+संख्या `16` का परिणाम `XVI` होना चाहिए
 
 ```python
     def test3(self):
         self.assertEqual(convert_to_roman(16), "XVI", "--err-t3--")
 ```
 
-The number `44` must equal `XLIV`
+संख्या `44` का परिणाम `XLIV` होना चाहिए
 
 ```python
     def test4(self):
         self.assertEqual(convert_to_roman(44), "XLIV", "--err-t4--")
 ```
 
-The number `68` must equal `LXVIII`
+संख्या `68` का परिणाम `LXVIII` होना चाहिए
 
 ```python
     def test5(self):
         self.assertEqual(convert_to_roman(68), "LXVIII", "--err-t5--")
 ```
 
-The number `400` must equal `CD`
+संख्या `400` का परिणाम `CD` होना चाहिए
 
 ```python
     def test6(self):
         self.assertEqual(convert_to_roman(400), "CD", "--err-t6--")
 ```
 
-The number `798` must equal `DCCXCVIII`
+संख्या `798` का परिणाम `DCCXCVIII` होना चाहिए
 
 ```python
     def test7(self):
         self.assertEqual(convert_to_roman(798), "DCCXCVIII", "--err-t7--")
 ```
 
-The number `1000` must equal `M`
+संख्या `1000` का परिणाम `M` होना चाहिए
 
 ```python
     def test8(self):
         self.assertEqual(convert_to_roman(1000), "M", "--err-t8--")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+संख्या `3999` का परिणाम `MMMCMXCIX` होना चाहिए
 
 ```python
     def test9(self):
         self.assertEqual(convert_to_roman(3999), "MMMCMXCIX", "--err-t9--")
 ```
 
-The number `649` must equal `DCXLIX`
+संख्या `649` का परिणाम `DCXLIX` होना चाहिए
 
 ```python
     def test10(self):
         self.assertEqual(convert_to_roman(649), "DCXLIX", "--err-t10--")
 ```
 
-The number `1666` must equal `MDCLXVI`
+संख्या `1666` का परिणाम `MDCLXVI` होना चाहिए
 
 ```python
     def test11(self):

@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `True`, like:
+निर्णय लेना तब आवश्यक होता है जब हम किसी कोड को केवल तभी निष्पादित करना चाहते हैं जब कोई विशेष शर्त पूरी हो।
+मान लें कि हम बाहर खेलना चाहते हैं केवल तभी जब मौसम अच्छा हो।
+प्रोग्रामिंग में, हम एक बूलियन वेरिएबल `nice_weather` सेव कर सकते हैं और `if` यह वेरिएबल `True` हो तो बाहर खेलने की क्रिया कर सकते हैं, जैसे:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -9,24 +9,24 @@ if (nice_weather):
 
 ---
 
-Let's continue with the previous example.
+आइए पिछले उदाहरण को जारी रखें।
 ```python
 nice_weather = True
 if (nice_weather):
     # play outside
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `True`.
-Another important thing to consider is represented by the **colons** `:` and the **indentation**, which indicate a code block start.
-Indentation refers to the spaces at the beginning of a code line.
-Where in other programming languages the indentation in code is for readability only, the indentation in Python is essential.
-You can use your favorite number of spaces (2, 4, 6, 8), noting that the preferred is 4.
-Here in the app, we suggest using the **TAB** key to indent your line of codes
+हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `True` हो।
+एक और महत्वपूर्ण बात **कोलन** `:` और **इंडेंटेशन** है, जो कोड ब्लॉक की शुरुआत को दर्शाते हैं।
+इंडेंटेशन कोड लाइन की शुरुआत में स्पेस को कहते हैं।
+जहां अन्य प्रोग्रामिंग भाषाओं में इंडेंटेशन केवल पठनीयता के लिए होता है, Python में इंडेंटेशन आवश्यक है।
+आप अपनी पसंद की संख्या में स्पेस (2, 4, 6, 8) उपयोग कर सकते हैं, ध्यान दें कि 4 को प्राथमिकता दी जाती है।
+यहां ऐप में, हम आपकी कोड लाइनों को इंडेंट करने के लिए **TAB** कुंजी का उपयोग करने का सुझाव देते हैं
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Python we can use the `else` statement, like:
+हमने अभी देखा कि किसी शर्त के पूरा होने पर कोड ब्लॉक कैसे निष्पादित करें, अब देखते हैं कि पहली शर्त विफल होने पर दूसरा कोड ब्लॉक कैसे निष्पादित करें।
+अगर मौसम अच्छा हो तो हम बाहर खेलने जाते हैं; अन्यथा, हम घर पर रहते हैं।
+Python में हम `else` स्टेटमेंट का उपयोग कर सकते हैं, जैसे:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -37,7 +37,7 @@ else:
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+मान लें कि हमारे पास जांचने के लिए एक और शर्त है, जैसे इस उदाहरण में:
 ```python
 num = 3
 if (num == 2):
@@ -47,13 +47,13 @@ elif (num == 3):
 else:
     print("do something else")
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+और इस कोड का आउटपुट `the number is 3` है।
+सबसे पहले, जांचते हैं कि क्या नंबर 2 के बराबर है, यह गलत है।
+तो चलिए दूसरे स्टेटमेंट पर जाते हैं और जांचते हैं कि क्या `num` 3 के बराबर है, यह सही होने पर हम `the number is 3` प्रिंट करके अगला कोड ब्लॉक निष्पादित करते हैं
 
 ---
 
-We can add as many `elif` statements as we want, there are no limits
+हम जितने चाहें उतने `elif` स्टेटमेंट जोड़ सकते हैं, कोई सीमा नहीं है
 ```python
 num = 4
 if (num == 2):
@@ -67,11 +67,11 @@ elif (num == 5):
 elif (num == 6):
     print("the number is 6")
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।
 
 ---
 
-We can also nest a conditional statement (`if`, `elif` or `else`) inside another conditional statement, to create a more complex structure.
+हम एक सशर्त स्टेटमेंट (`if`, `elif` या `else`) को दूसरे सशर्त स्टेटमेंट के अंदर भी नेस्ट कर सकते हैं, एक अधिक जटिल संरचना बनाने के लिए।
 ```python
 num = 4
 if (num < 3):
@@ -84,4 +84,4 @@ else:
     else:
         print("the number is greather than 4")
 ```
-and the output of this code is `the number is 4`.
+और इस कोड का आउटपुट `the number is 4` है।

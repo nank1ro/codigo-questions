@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+हम जानते हैं कि `while` लूप का उपयोग करके कोड को कैसे दोहराया जाता है।
+जैसे यह प्रोग्राम `hello` प्रदर्शित करने के लिए स्टेटमेंट दोहराता है
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+लेकिन हम `for` लूप से भी यही कर सकते हैं:
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");
@@ -17,14 +17,14 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+`for` लूप में हम निर्दिष्ट कर सकते हैं कि हम अपने लूप को कितनी बार चलाना चाहते हैं
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+हम `<` का उपयोग अगली संख्या को छोड़कर तक लूप करने के लिए, या `<=` का उपयोग अगली संख्या को शामिल करके तक लूप करने के लिए कर सकते हैं
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+`i` नामक वेरिएबल काउंटर वेरिएबल है।
+हम इसे जो नाम चाहें दे सकते हैं।
+यह गिनता है कि हम लूप की किस पुनरावृत्ति पर हैं

@@ -1,32 +1,32 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+ऐरे एक डेटा टाइप है जिसका उपयोग आप विभिन्न जानकारी के संग्रह को एक अनुक्रम के रूप में एक ही वेरिएबल नाम के तहत संग्रहीत करने के लिए कर सकते हैं।
+एक ऐरे एक या कई प्रकार के कई मान संग्रहीत करता है और इन मानों को अलग करने के लिए **इंडेक्स** का उपयोग करता है।
+आप इस प्रकार के एक्सप्रेशन से ऐरे में आइटम असाइन कर सकते हैं:
 ```javascript
 var arrayName = [item1, item2];
 ```
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+आप ऐरे के किसी व्यक्तिगत आइटम को उसके इंडेक्स द्वारा एक्सेस कर सकते हैं।
+एक इंडेक्स एक पते की तरह है जो ऐरे में आइटम की स्थिति को पहचानता है।
+इंडेक्स ऐरे के नाम के ठीक बाद, ब्रैकेट के बीच, इस प्रकार दिखाई देता है:
 ```javascript
 arrayName[index];
 ```
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+ऐरे इंडेक्स `0` से शुरू होते हैं, `1` से **नहीं**! आप ऐरे के पहले आइटम को इस प्रकार एक्सेस करते हैं: `arrayName[0]`।
+ऐरे में दूसरा आइटम इंडेक्स 1 पर होता है: `arrayName[1]`।
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+एक ऐरे इंडेक्स किसी भी अन्य वेरिएबल नाम की तरह व्यवहार करता है।
+इसका उपयोग मान एक्सेस करने के साथ-साथ मान असाइन करने के लिए भी किया जा सकता है।
+आपने देखा कि ऐरे इंडेक्स को इस प्रकार कैसे एक्सेस करते हैं:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
 // Prints the value "Jeremiah"
 console.log(names[0]);
 ```
-This is how an assignment works:
+असाइनमेंट इस प्रकार काम करता है:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
 // Assign the new value "Jordan"
@@ -37,14 +37,14 @@ console.log(names[0]);
 
 ---
 
-Just like strings, arrays have a **length**.
-An arrays's length is the number of items it contains
+स्ट्रिंग्स की तरह, ऐरे की भी एक **लंबाई** होती है।
+एक ऐरे की लंबाई उसमें मौजूद आइटमों की संख्या होती है
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `push` function:
+एक ऐरे की लंबाई निश्चित नहीं होती।
+आप जब चाहें ऐरे के अंत में आइटम जोड़ सकते हैं!
+ऐरे में आइटम जोड़ने के लिए हम `push` फंक्शन का उपयोग करते हैं:
 ```javascript
 var letters = ["a", "b"];
 letters.push("c");
@@ -54,65 +54,65 @@ console.log(letters);
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+कभी-कभी, आप ऐरे के केवल एक हिस्से को एक्सेस करना चाहते हैं।
+निम्नलिखित कोड पर विचार करें:
 ```javascript
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
 // prints [2, 3]
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers.slice(1, 3)`.
-Keep in mind that the right index is excluded
+पहले, हम `numbers` नामक एक ऐरे बनाते हैं।
+फिर, हम ऐरे का एक उपभाग लेते हैं और इसे slice ऐरे में संग्रहीत करते हैं।
+हम यह ऐरे के नाम के बाद इंडेक्स को परिभाषित करके करते हैं: `numbers.slice(1, 3)`।
+ध्यान रखें कि दायां इंडेक्स शामिल नहीं होता
 
 ---
 
-In JavaScript we can slice an array as we want!
+JavaScript में हम ऐरे को जैसे चाहें स्लाइस कर सकते हैं!
 ```javascript
 // Grabs the first two items
 listName.slice(0, 2);
 // Grabs the fourth through last items
 listName.slice(3);
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+यदि आपके ऐरे स्लाइस में ऐरे का पहला या आखिरी आइटम शामिल है, तो उस आइटम के लिए इंडेक्स शामिल करने की आवश्यकता नहीं है
 
 ---
 
-Array elements could be of any type.
+ऐरे के तत्व किसी भी प्रकार के हो सकते हैं।
 ```javascript
 var arrayName = ["one", 2, true];
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+वास्तव में, ऊपर हमारे पास क्रम में एक स्ट्रिंग, एक इंटीजर और एक बूलियन है।
+लेकिन हमारे पास ऐरे के अंदर ऐरे भी हो सकते हैं!
 
 ---
 
-Sometimes you need to search for an item in an array.
-In JavaScript we can use the `indexOf()` method:
+कभी-कभी आपको ऐरे में किसी आइटम को खोजने की आवश्यकता होती है।
+JavaScript में हम `indexOf()` मेथड का उपयोग कर सकते हैं:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
 // prints 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `splice()` method:
+ऊपर दिया गया कोड पहला इंडेक्स प्रिंट करता है जिसमें स्ट्रिंग `"Zac"` है, इस मामले में `1`।
+हम `splice()` मेथड का उपयोग करके किसी विशिष्ट इंडेक्स पर ऐरे में आइटम भी डाल सकते हैं:
 ```javascript
 names.splice(1, 0, "Ali");
 // prints ["Trevor", "Ali", "Zac", "Glenn"]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1.
-The second value `0` means _deleteCount_, in this case, we don't delete any item in the array; but if we had specified `1` the value `Zac` would have been removed from the array
+ऊपर दिया गया कोड `"Ali"` को इंडेक्स `1` पर डालता है, जो इस इंडेक्स के बाद सब कुछ 1 से नीचे खिसका देता है।
+दूसरा मान `0` का अर्थ है _deleteCount_, इस मामले में, हम ऐरे में कोई आइटम नहीं हटाते; लेकिन अगर हमने `1` निर्दिष्ट किया होता तो `Zac` मान ऐरे से हटा दिया जाता
 
 ---
 
-In JavaScript we can loop through an array in a very simple way using the `for..of` keywords:
+JavaScript में हम `for..of` कीवर्ड का उपयोग करके बहुत ही सरल तरीके से ऐरे के माध्यम से लूप कर सकते हैं:
 ```javascript
 var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3 
+// prints 1, 2, 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+`for` कीवर्ड के बाद एक वेरिएबल नाम आता है, इसे बारी-बारी से प्रत्येक ऐरे आइटम का मान असाइन किया जाएगा।

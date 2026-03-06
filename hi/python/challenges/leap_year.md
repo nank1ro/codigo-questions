@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: लीप वर्ष
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+एक कैलेंडर वर्ष में ठीक 365.25 दिन होते हैं। लेकिन, अंततः, यह भ्रम पैदा करेगा क्योंकि मनुष्य सामान्यतः 1 की सटीक विभाज्यता से गिनते हैं न कि दशमलव बिंदुओं से। इसलिए, इससे बचने के लिए, यह निर्णय लिया गया कि हर चार साल के चक्र में सभी 0.25 दिनों को जोड़ दिया जाए और उस वर्ष को 366 दिन दिए जाएं (29 फरवरी को एक अधिवर्ष दिवस के रूप में शामिल करते हुए) और इसे __लीप वर्ष__ कहा जाए। चार साल के चक्र में अन्य तीन वर्षों में केवल 365 दिन होंगे और वे __लीप वर्ष नहीं होंगे__।
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `datetime` class, __if blocks__, __if-elif blocks__ or __conditionals__ (`a if b else c`) nor the logical operators __AND__ (`and`) and __OR__ (`or`) with the exemption of the __NOT__ (`not`) operator.
+इस चुनौती में हम इसे एक नए स्तर पर ले जाएंगे, जहां आपको `datetime` क्लास, __if ब्लॉक__, __if-elif ब्लॉक__ या __कंडीशनल__ (`a if b else c`) और लॉजिकल ऑपरेटर __AND__ (`and`) और __OR__ (`or`) का उपयोग किए बिना यह निर्धारित करना है कि यह लीप वर्ष है या नहीं, __NOT__ (`not`) ऑपरेटर को छोड़कर।
 
-Return `True` if it's a leap year, `False` otherwise.
+यदि यह लीप वर्ष है तो `True` लौटाएं, अन्यथा `False`।
 
-Example of function call:
+फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(leap_year(2000))
 // prints true
@@ -38,7 +38,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
+`month`, `day`, `if`, `else`, `elif`, `and`, `or` का उपयोग अनुमत नहीं है।
 
 ```json
 {
@@ -48,84 +48,84 @@ The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+वर्ष `2016` एक लीप वर्ष है।
 
 ```python
     def test1(self):
         self.assertEqual(leap_year(2016), True, "--err-t1--")
 ```
 
-The year `1996` is a leap year.
+वर्ष `1996` एक लीप वर्ष है।
 
 ```python
     def test2(self):
         self.assertEqual(leap_year(1996), True, "--err-t2--")
 ```
 
-The year `1600` is a leap year.
+वर्ष `1600` एक लीप वर्ष है।
 
 ```python
     def test3(self):
         self.assertEqual(leap_year(1600), True, "--err-t3--")
 ```
 
-The year `2020` is a leap year.
+वर्ष `2020` एक लीप वर्ष है।
 
 ```python
     def test4(self):
         self.assertEqual(leap_year(2020), True, "--err-t4--")
 ```
 
-The year `2000` is a leap year.
+वर्ष `2000` एक लीप वर्ष है।
 
 ```python
     def test5(self):
         self.assertEqual(leap_year(2000), True, "--err-t5--")
 ```
 
-The year `2008` is a leap year.
+वर्ष `2008` एक लीप वर्ष है।
 
 ```python
     def test6(self):
         self.assertEqual(leap_year(2008), True, "--err-t6--")
 ```
 
-The year `1521` is not a leap year.
+वर्ष `1521` लीप वर्ष नहीं है।
 
 ```python
     def test7(self):
         self.assertEqual(leap_year(1521), False, "--err-t7--")
 ```
 
-The year `1800` is not a leap year.
+वर्ष `1800` लीप वर्ष नहीं है।
 
 ```python
     def test8(self):
         self.assertEqual(leap_year(1800), False, "--err-t8--")
 ```
 
-The year `2007` is not a leap year.
+वर्ष `2007` लीप वर्ष नहीं है।
 
 ```python
     def test9(self):
         self.assertEqual(leap_year(2007), False, "--err-t9--")
 ```
 
-The year `2002` is a leap year.
+वर्ष `2002` लीप वर्ष है।
 
 ```python
     def test10(self):
         self.assertEqual(leap_year(2002), False, "--err-t10--")
 ```
 
-The year `1979` is not a leap year.
+वर्ष `1979` लीप वर्ष नहीं है।
 
 ```python
     def test11(self):
         self.assertEqual(leap_year(1979), False, "--err-t11--")
 ```
 
-The year `2006` is not a leap year.
+वर्ष `2006` लीप वर्ष नहीं है।
 
 ```python
     def test12(self):

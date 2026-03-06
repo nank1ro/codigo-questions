@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Swift we use the `func` keyword followed by the name of the function:
+आपने ऐसी स्थिति पर विचार किया होगा जहाँ आप कोड के एक टुकड़े को दोबारा उपयोग करना चाहते हैं, बस कुछ अलग मानों के साथ।
+पूरा कोड दोबारा लिखने के बजाय, एक फ़ंक्शन को परिभाषित करना बहुत बेहतर है, जिसे फिर बार-बार उपयोग किया जा सकता है।
+Swift में हम फ़ंक्शन के नाम के बाद `func` कीवर्ड का उपयोग करते हैं:
 ```swift
 func say_hi() {
     print("Hello!")
@@ -10,16 +10,16 @@ say_hi() // prints "Hello!"
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+__फ़ंक्शन परिभाषा__ में कोष्ठक खाली नहीं होने चाहिए यदि हम पैरामीटर निर्दिष्ट करना चाहते हैं
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+कभी-कभी हम चाहते हैं कि एक फ़ंक्शन एक मान __वापस करे__।
+इसके लिए `return` कीवर्ड है।
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+फ़ंक्शन में कई इनपुट पैरामीटर हो सकते हैं, जो फ़ंक्शन के कोष्ठकों के अंदर अल्पविराम से अलग करके लिखे जाते हैं।
 ```swift
 func sayHello(name: String, newUser: Bool) -> String {
   var greet: String = "Hello \(name)!"
@@ -34,16 +34,16 @@ print(sayHello(name: "Smith", newUser: true))
 
 ---
 
-You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+आप एक संयुक्त रिटर्न मान के हिस्से के रूप में कई मान वापस करने के लिए फ़ंक्शन के रिटर्न प्रकार के रूप में टपल प्रकार का उपयोग कर सकते हैं।
 
 ---
 
-If you don't want an argument label for a parameter, write an underscore `_` instead of an explicit argument label for that parameter
+यदि आप किसी पैरामीटर के लिए आर्गुमेंट लेबल नहीं चाहते हैं, तो उस पैरामीटर के लिए स्पष्ट आर्गुमेंट लेबल के बजाय अंडरस्कोर `_` लिखें
 
 ---
 
-You can define a _default_ value for any parameter in a function by assigning a value to the parameter after that parameter's type.
-If a default value is defined, you can omit that parameter when calling the function
+आप पैरामीटर के प्रकार के बाद पैरामीटर को मान निर्दिष्ट करके किसी भी फ़ंक्शन पैरामीटर के लिए _डिफ़ॉल्ट_ मान परिभाषित कर सकते हैं।
+यदि डिफ़ॉल्ट मान परिभाषित है, तो आप फ़ंक्शन को कॉल करते समय उस पैरामीटर को छोड़ सकते हैं
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
     // do stuff here
@@ -52,19 +52,19 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
 
 ---
 
-A _variadic parameter_ accepts zero or more values of a specified type.
-You use a variadic parameter to specify that the parameter can be passed a varying number of input values when the function is called.
-Write variadic parameters by inserting three period characters `...` after the parameter's type name.
-The values passed to a variadic parameter are made available within the function's body as an array of the appropriate type.
-For example, a variadic parameter with a name of `numbers` and a type of `Double...` is made available within the function's body as a constant array called numbers of type `[Double]`
+एक _वैरिएडिक पैरामीटर_ निर्दिष्ट प्रकार के शून्य या अधिक मान स्वीकार करता है।
+आप वैरिएडिक पैरामीटर का उपयोग यह निर्दिष्ट करने के लिए करते हैं कि फ़ंक्शन को कॉल करते समय पैरामीटर को अलग-अलग संख्या में इनपुट मान पास किए जा सकते हैं।
+पैरामीटर के प्रकार नाम के बाद तीन पीरियड अक्षर `...` डालकर वैरिएडिक पैरामीटर लिखें।
+वैरिएडिक पैरामीटर को पास किए गए मान फ़ंक्शन के बॉडी के अंदर उपयुक्त प्रकार की सरणी के रूप में उपलब्ध होते हैं।
+उदाहरण के लिए, `numbers` नाम और `Double...` प्रकार वाला वैरिएडिक पैरामीटर फ़ंक्शन के बॉडी के अंदर `[Double]` प्रकार की numbers नामक स्थिर सरणी के रूप में उपलब्ध होता है
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+फ़ंक्शन में हम एक _वैकल्पिक टिप्पणी_ जोड़ सकते हैं जो बताती है कि फ़ंक्शन क्या करता है:
 ```swift
 /// Prints 'Hello World' to the console.
 func helloWorld() {
     print("Hello, World!")
 }
 ```
-We can use `///` for a single line comment and `/** */` for a multi line comment
+हम एकल पंक्ति टिप्पणी के लिए `///` और बहु पंक्ति टिप्पणी के लिए `/** */` का उपयोग कर सकते हैं
