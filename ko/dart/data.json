@@ -1,0 +1,27 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "주석",
+    "description": "코드에 주석을 다는 방법을 배웁니다"
+  },
+  "output": {
+    "order": 2,
+    "title": "출력",
+    "description": "값을 출력하는 방법을 배웁니다"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "문자열 보간",
+    "description": "다양한 데이터 타입으로 문자열을 보간하는 방법을 배웁니다"
+  },
+  "variables": {
+    "order": 4,
+    "title": "변수",
+    "description": "변수에 값을 저장하는 방법을 배웁니다"
+  },
+  "types": {
+    "order": 5,
+    "title": "타입",
+    "description": "변수에 할당할 수 있는 타입을 배웁니다"
+  }
+}

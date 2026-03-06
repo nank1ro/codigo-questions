@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "출력",
+        "description": "값을 출력하는 방법을 배웁니다"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "문자열 보간",
+        "description": "다양한 데이터 타입으로 문자열을 보간하는 방법을 배웁니다"
+    },
+    "variables": {
+        "order": 3,
+        "title": "변수",
+        "description": "변수에 값을 저장하는 방법을 배웁니다"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "불리언",
+        "description": "표현식을 평가하는 방법을 배웁니다"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "산술 연산자",
+        "description": "변수와 값에 대해 산술 연산을 수행하는 방법을 배웁니다"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "대입 연산자",
+        "description": "변수에 값을 대입하는 방법을 배웁니다"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "비교 및 논리 연산자",
+        "description": "값을 비교하는 방법을 배웁니다"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "조건문",
+        "description": "의사 결정을 하는 방법을 배웁니다"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "While 반복문",
+        "description": "일련의 명령문을 반복하는 방법을 배웁니다"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "For 반복문",
+        "description": "일련의 명령문을 반복하는 방법을 배웁니다"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "배열",
+        "description": "하나의 변수에 여러 값을 저장하는 방법을 배웁니다"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "딕셔너리",
+        "description": "키와 함께 값을 저장하는 방법을 배웁니다"
+    },
+    "functions": {
+        "order": 13,
+        "title": "함수",
+        "description": "특정 작업별로 코드를 나누는 방법을 배웁니다"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "열거형",
+        "description": "관련된 값의 그룹에 대한 공통 타입을 만드는 방법을 배웁니다"
+    },
+    "classes": {
+        "order": 15,
+        "title": "클래스",
+        "description": "객체 지향 프로그래밍을 배웁니다"
+    }
+}

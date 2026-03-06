@@ -11,7 +11,7 @@ extension on Object {
 }
 
 /// Returns all the available exercise languages.
-List<String> get locales => ['en', 'it', 'es', 'de', 'fr', 'pt', 'ja'];
+List<String> get locales => ['en', 'it', 'es', 'de', 'fr', 'pt', 'ja', 'ko'];
 
 Future<void> main() async {
   /// Returns true if the provided [entity] is a [File]
