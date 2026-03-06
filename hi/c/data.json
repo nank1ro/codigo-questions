@@ -1,0 +1,62 @@
+{
+    "output": {
+        "order": 1,
+        "title": "आउटपुट",
+        "description": "मान को आउटपुट करना सीखें"
+    },
+    "formattedStrings": {
+        "order": 2,
+        "title": "फॉर्मेटेड स्ट्रिंग्स",
+        "description": "विभिन्न डेटा प्रकारों के साथ स्ट्रिंग्स को फॉर्मेट करना सीखें"
+    },
+    "variables": {
+        "order": 3,
+        "title": "वेरिएबल",
+        "description": "वेरिएबल में मान संग्रहीत करना सीखें"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "बूलियन",
+        "description": "किसी भी अभिव्यक्ति का मूल्यांकन करना सीखें"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "अंकगणितीय ऑपरेटर",
+        "description": "वेरिएबल और मानों पर अंकगणितीय संक्रियाएँ करना सीखें"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "असाइनमेंट ऑपरेटर",
+        "description": "वेरिएबल को मान असाइन करना सीखें"
+    },
+    "relationBooleanOperators": {
+        "order": 7,
+        "title": "संबंधात्मक और बूलियन ऑपरेटर",
+        "description": "मानों की तुलना करना सीखें"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "सशर्त कथन",
+        "description": "निर्णय लेना सीखें"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "व्हाइल लूप",
+        "description": "कथनों के एक समूह को दोहराना सीखें"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "फॉर लूप",
+        "description": "कथनों के एक समूह को दोहराना सीखें"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "ऐरे",
+        "description": "एक वेरिएबल में विभिन्न मान संग्रहीत करना सीखें"
+    },
+    "functions": {
+        "order": 12,
+        "title": "फंक्शन",
+        "description": "कोड को विशिष्ट कार्यों में विभाजित करना सीखें"
+    }
+}

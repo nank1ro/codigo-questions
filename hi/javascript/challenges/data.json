@@ -1,0 +1,94 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "जोड़"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "ATM"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "हैलो वर्ल्ड!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "बारिश की बूँदें"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "अंकों का योग"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "दो में से एक"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 दरवाज़े"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "Ackermann फ़ंक्शन"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3 या 5 के गुणज"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "सम फिबोनाची संख्याएँ"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "सबसे बड़ा अभाज्य गुणनखंड"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "सबसे बड़ा पैलिंड्रोम गुणनफल"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "सबसे छोटा गुणज"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "वर्ग योग अंतर"
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "10001वाँ अभाज्य"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "एक श्रृंखला में सबसे बड़ा गुणनफल"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "विशेष पाइथागोरियन त्रिक"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "अभाज्य संख्याओं का योग"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "अंकगणितीय माध्य",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "FizzBuzz",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "रोमन अंक परिवर्तक",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "लीप वर्ष",
+    "isPro": true
+  }
+}

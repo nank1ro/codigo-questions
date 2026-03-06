@@ -1,0 +1,62 @@
+{
+  "addition": {
+    "difficulty": 1,
+    "name": "जोड़"
+  },
+  "atm": {
+    "difficulty": 1,
+    "name": "एटीएम"
+  },
+  "hello_world": {
+    "difficulty": 1,
+    "name": "हैलो वर्ल्ड!"
+  },
+  "raindrops": {
+    "difficulty": 1,
+    "name": "रेनड्रॉप्स"
+  },
+  "sum_digits": {
+    "difficulty": 1,
+    "name": "अंकों का योग"
+  },
+  "two_for_one": {
+    "difficulty": 1,
+    "name": "एक के बदले दो"
+  },
+  "100_doors": {
+    "difficulty": 1,
+    "name": "100 दरवाज़े"
+  },
+  "ackermann_function": {
+    "difficulty": 1,
+    "name": "एकरमन फंक्शन"
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3 या 5 के गुणज"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "सम फिबोनाची संख्याएँ"
+  },
+  "arithmetic_mean": {
+    "difficulty": 1,
+    "name": "अंकगणितीय माध्य",
+    "isPro": true
+  },
+  "fizz_buzz": {
+    "difficulty": 1,
+    "name": "फिज़बज़",
+    "isPro": true
+  },
+  "roman_numeral_converter": {
+    "difficulty": 3,
+    "name": "रोमन अंक परिवर्तक",
+    "isPro": true
+  },
+  "leap_year": {
+    "difficulty": 3,
+    "name": "लीप वर्ष",
+    "isPro": true
+  }
+}
