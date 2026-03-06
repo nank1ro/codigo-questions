@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "出力",
+        "description": "値を出力する方法を学ぶ"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "文字列補間",
+        "description": "異なるデータ型で文字列を補間する方法を学ぶ"
+    },
+    "variables": {
+        "order": 3,
+        "title": "変数",
+        "description": "変数に値を格納する方法を学ぶ"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "ブーリアン",
+        "description": "任意の式を評価する方法を学ぶ"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "算術演算子",
+        "description": "変数と値に対して算術演算を行う方法を学ぶ"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "代入演算子",
+        "description": "変数に値を代入する方法を学ぶ"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "比較演算子と論理演算子",
+        "description": "値を比較する方法を学ぶ"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "条件文",
+        "description": "判断を行う方法を学ぶ"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "whileループ",
+        "description": "一連の文を繰り返す方法を学ぶ"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "forループ",
+        "description": "一連の文を繰り返す方法を学ぶ"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "配列",
+        "description": "1つの変数に異なる値を格納する方法を学ぶ"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "辞書",
+        "description": "キーで値を格納する方法を学ぶ"
+    },
+    "functions": {
+        "order": 13,
+        "title": "関数",
+        "description": "特定のタスクごとにコードを分割する方法を学ぶ"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "列挙型",
+        "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
+    },
+    "classes": {
+        "order": 15,
+        "title": "クラス",
+        "description": "オブジェクト指向プログラミングを学ぶ"
+    }
+}
