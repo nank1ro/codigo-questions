@@ -1,28 +1,28 @@
-In C we use the `printf` function with an expression in order to display two or more values together, like:
+在 C 语言中，我们使用 `printf` 函数配合表达式来将两个或多个值组合在一起显示，例如：
 ```c
 >>> char c = 'C';
 >>> printf("Hello %c!\n", c);
 Hello C!
 ```
-`%c` is used to display a single character
+`%c` 用于显示单个字符
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
-To display an integer we use the `%i` expression
+格式化字符串允许我们显示表达式，例如将字符串与数字组合在一起，而不会出现任何错误。
+要显示整数，我们使用 `%i` 表达式
 
 ---
 
-Every formatted string statement consists of two parts, the text we want to include and the expression we want to format inside the text
+每个格式化字符串语句由两部分组成：我们要包含的文本和我们要在文本中格式化的表达式
 
 ---
 
-Next, we add the different kind of value. Like here, with `%i`
+接下来，我们添加不同类型的值。就像这里，使用 `%i`
 
 ---
 
-Inserting variables like `friends` displays their value too
+插入像 `friends` 这样的变量也会显示它们的值
 
 ---
 
-We can use expressions to insert values as often as we like inside the formatted string
+我们可以在格式化字符串中使用表达式，随意插入任意数量的值

@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+布尔值表示两个值之一：`True` 或 `False`。
+你可以在 Python 中计算任何表达式，得到两个结果之一：`True` 或 `False`。
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+我们可以像存储数字或字符串一样，将布尔值 `True` 存储在变量中。
 
 ---
 
-The opposite value of `True` is `False`
+`True` 的相反值是 `False`

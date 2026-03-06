@@ -1,15 +1,15 @@
-Variables are containers for storing data values.
-Every variable in JavaScript is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In JavaScript you declare constants with the `let` or `const` keywords and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+变量是用于存储数据值的容器。
+JavaScript 中的每个变量都是一个对象。
+要创建一个变量，我们需要给它一个**名称**，并且要记住名称中不能包含空格。
+变量在你第一次给它赋值时就被创建了。
+在 JavaScript 中，你可以使用 `let` 或 `const` 关键字声明常量，使用 `var` 关键字声明变量。
+常量的值一旦设定就不能更改，而变量的值可以在之后被修改。
+下面是创建一个名为 `x` 的变量的示例：
 ```javascript
 var x = 1;
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+这样我们就将值 `1` 赋给了名为 `x` 的变量。
+如果我们打印变量 `x`，我们会得到数字 `1`：
 ```javascript
 console.log(x);
 // prints 1
@@ -17,8 +17,8 @@ console.log(x);
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+变量之所以被称为变量，是因为它们存储的值是可以改变的。
+我们可以使用 `=` 来更新 `x` 并给它一个新的值。
 ```javascript
 var x = 1;
 console.log(x); // prints 1
@@ -28,8 +28,8 @@ console.log(x); // prints 2
 
 ---
 
-We can also give variables the values of other variables.
-Here, we can give to the `y` variable the value of `x`
+我们也可以将其他变量的值赋给变量。
+在这里，我们可以将 `x` 的值赋给变量 `y`
 ```javascript
 var x = 5;
 var y = x;
@@ -38,8 +38,8 @@ console.log(y); // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+当我们更新一个变量时，它会忘记之前的值。
+在这里，我们可以打印两次变量 `x`，看看它的值是如何更新的。
 ```javascript
 var x = 5;
 console.log(x); // prints 5
@@ -49,7 +49,7 @@ console.log(x); // prints 10
 
 ---
 
-In JavaScript string variables can be declared using both double quotes and single quotes:
+在 JavaScript 中，字符串变量可以使用双引号和单引号来声明：
 ```javascript
 let x = "May";
 // both are the same string
@@ -60,5 +60,5 @@ console.log(x === y);
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+如果我们想要一个包含多个单词的变量名，我们使用**驼峰命名法（camelCase）**。
+它是一种书写方式，短语中间的每个单词的首字母大写

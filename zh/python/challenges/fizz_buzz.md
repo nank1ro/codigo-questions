@@ -7,17 +7,17 @@ difficulty: 1
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+创建一个函数，接收一个数字作为参数，并返回 `"Fizz"`、`"Buzz"` 或 `"FizzBuzz"`。
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- 如果数字是 `3` 的倍数，输出应为 `"Fizz"`
+- 如果给定的数字是 `5` 的倍数，输出应为 `"Buzz"`。
+- 如果给定的数字同时是 `3` 和 `5` 的倍数，输出应为 `"FizzBuzz"`。
+- 如果数字既不是 `3` 也不是 `5` 的倍数，则按如下示例输出数字本身。
+- 即使数字不是 `3` 或 `5` 的倍数，输出也应始终为字符串。
 
-Examples:
+示例：
 ```python
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -42,35 +42,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+数字 `3` 必须等于 `"Fizz"`
 
 ```python
     def test1(self):
         self.assertEqual(fizz_buzz(3), "Fizz", "--err-t1--")
 ```
 
-The number `5` must equal `"Buzz"`
+数字 `5` 必须等于 `"Buzz"`
 
 ```python
     def test2(self):
         self.assertEqual(fizz_buzz(5), "Buzz", "--err-t2--")
 ```
 
-The number `15` must equal `"FizzBuzz"`
+数字 `15` 必须等于 `"FizzBuzz"`
 
 ```python
     def test3(self):
         self.assertEqual(fizz_buzz(15), "FizzBuzz", "--err-t3--")
 ```
 
-The number `10` must equal `"Buzz"`
+数字 `10` 必须等于 `"Buzz"`
 
 ```python
     def test4(self):
         self.assertEqual(fizz_buzz(10), "Buzz", "--err-t4--")
 ```
 
-The number `98` must equal `"98"`
+数字 `98` 必须等于 `"98"`
 
 ```python
     def test5(self):

@@ -1,31 +1,31 @@
-Variables are containers for storing values.
-Every variable in Dart is an object (`Object`).
-To create a variable, we have to give it a __name__ taking into account the fact that it must not contain spaces.
-Take a look at the following:
+变量是用于存储值的容器。
+Dart 中的每个变量都是一个对象（`Object`）。
+要创建一个变量，我们需要给它一个__名称__，并且名称不能包含空格。
+请看以下示例：
 
 ```dart
 int number = 1;
 ```
 
-This statement declares a variable called `number` of type `int`.
-It then sets the value of the variable to number `1`.
-The `int` part of the declaration is known as __type annotation__, and tells Dart explicitly the type of the variable.
+这条语句声明了一个名为 `number` 的 `int` 类型变量。
+然后将变量的值设置为数字 `1`。
+声明中的 `int` 部分被称为__类型注解__，它明确告诉 Dart 变量的类型。
 
 ---
 
-In the previous example, we saw the creation of a variable:
+在前面的示例中，我们看到了如何创建一个变量：
 
 ```dart
 int number = 1;
 ```
 
-Do not be fooled by the symbol `=`.
-It is not the equality symbol as in mathematics, but is known as the __assignment operator__ because it assigns a value to the variable.
-The equality sign, on the other hand, is `==`.
+不要被 `=` 符号所迷惑。
+它不是数学中的等号，而是被称为__赋值运算符__，因为它将一个值赋给变量。
+而等号实际上是 `==`。
 
 ---
 
-If you want to change the value of a variable, simply assign it a different value of the same type:
+如果你想更改变量的值，只需给它赋一个相同类型的不同值即可：
 
 ```dart
 int number = 1;
@@ -34,28 +34,28 @@ number = 2;
 
 ---
 
-The `int` type allows whole numbers to be stored.
-To save decimal numbers instead, we can use the `double` type:
+`int` 类型允许存储整数。
+要存储小数，我们可以使用 `double` 类型：
 
 ```dart
 double pi = 3.14159;
 ```
 
-This example is similar to the previous one. This time, however, the variable is of type `double`, a type which allows decimal numbers to be stored with high precision.
+这个示例与前一个类似。但是这次，变量的类型是 `double`，这种类型允许以高精度存储小数。
 
 ---
 
-Dart is a __type-safe__ language.
-This means that when you assign a type to a variable, you cannot change it afterwards. Here is an example:
+Dart 是一种__类型安全__的语言。
+这意味着当你给变量赋予一个类型后，就不能再更改它。以下是一个示例：
 
 ```dart
 int integerNumber = 1;
 integerNumber = 3.14159; // Error
 ```
 
-3.14159` is of type `double`, but you've already defined `integerNumber` with type `int`.
+`3.14159` 是 `double` 类型，但你已经将 `integerNumber` 定义为 `int` 类型。
 
-Of course, occasionally it might be useful to assign related types to the same variable. For example you might want a variable `integerNumber` which accepts both `int` and `double` numbers, like here:
+当然，有时将相关类型赋给同一个变量可能很有用。例如，你可能希望一个变量 `integerNumber` 同时接受 `int` 和 `double` 类型的数字，如下所示：
 
 ```dart
 num number;
@@ -64,13 +64,13 @@ number = 3.14159; // OK
 number = '10'; // Error
 ```
 
-Both `int` and `double` extend `num`, so both types are accepted.
-However, if we try to assign a `String` the compiler returns an error.
+`int` 和 `double` 都继承自 `num`，因此两种类型都被接受。
+但是，如果我们尝试赋一个 `String`，编译器会返回错误。
 
 ---
 
-If you like to live by risk, we can completely ignore the __type-safety__ of the language by using the `dynamic` type.
-This allows you to assign any type of value to the variable.
+如果你喜欢冒险，我们可以通过使用 `dynamic` 类型完全忽略语言的__类型安全__。
+这允许你将任何类型的值赋给变量。
 
 ```dart
 dynamic number;
@@ -79,76 +79,76 @@ number = 3.14159; // OK
 number = '10'; // OK
 ```
 
-This approach is strongly discouraged as errors are no longer intercepted by the code's _analyzer_, but only _runtime_ (when the programme is running).
+这种方式是极不推荐的，因为错误不再被代码的_分析器_拦截，而只会在_运行时_（程序运行时）才被发现。
 
 ---
 
-Dart supports __type inference__.
-It is not necessary to indicate the type of a variable as Dart can infer its type.
-The `var` keyword tells Dart to use the most appropriate type.
+Dart 支持__类型推断__。
+不需要指明变量的类型，因为 Dart 可以推断其类型。
+`var` 关键字告诉 Dart 使用最合适的类型。
 
 ```dart
 var number = 5;
 ```
 
-It is not necessary to tell Dart that the number `5` is of type `int`.
-Dart infers the type and makes `number` of type `int`.
+不需要告诉 Dart 数字 `5` 是 `int` 类型。
+Dart 会推断类型并将 `number` 设为 `int` 类型。
 
 ---
 
-Dart supports two different types of "_variables_" whose value never changes. They are declared with the keywords `const` and `final`.
-Let's start by seeing what is meant by `const`.
+Dart 支持两种不同类型的值永远不会改变的"_变量_"。它们使用关键字 `const` 和 `final` 声明。
+让我们先来看看 `const` 是什么意思。
 
-## const (constants)
+## const（常量）
 
-Variables whose value you can change are known as __mutable_data__. Mutable data is often overused and can present problems. It is easy to lose track of all the points in the code that can change the value of a variable.
+值可以更改的变量被称为__可变数据__。可变数据经常被过度使用，并且可能带来问题。很容易忽略代码中所有可以更改变量值的地方。
 
-For this reason, you should use `const`ants instead of `var`iables whenever possible. These variables that cannot change value are also called __immutable data__.
+因此，你应该尽可能使用 `const` 常量而不是 `var` 变量。这些不能改变值的变量也被称为__不可变数据__。
 
-To create a constant in Dart we use the `const` keyword:
+在 Dart 中创建常量，我们使用 `const` 关键字：
 
 ```dart
 const number = 5;
 ```
 
-Just like `var`, Dart with the __type inference__ determines that `number` is of type `int`.
+就像 `var` 一样，Dart 通过__类型推断__确定 `number` 是 `int` 类型。
 
 ---
 
-When you have declared a constant variable, you can no longer change its value. For example:
+当你声明了一个常量变量后，就不能再更改它的值了。例如：
 
 ```dart
 const number = 2;
 number = 3; // Error
 ```
 
-This code produces the error:
+这段代码会产生错误：
 > Constant variables can't be assigned a value.
 
-That is, it is not possible to change the value of a constant variable.
+也就是说，不能更改常量变量的值。
 
 ---
 
-You will often find yourself in the situation of wanting to use a constant but not knowing the value at compile time. You will only know the value after the program has started execution.
-This type of constant is known as a __runtime constant__.
+你经常会遇到这样的情况：想使用常量但在编译时不知道其值。只有在程序开始执行后才能知道这个值。
+这种类型的常量被称为__运行时常量__。
 
-In Dart `const` is only used for __compile-time constants__ for values that can be determined by the compiler before the programme is executed.
+在 Dart 中，`const` 仅用于__编译时常量__，即编译器在程序执行前就能确定的值。
 
-If you cannot create a constant variable because you do not know its compile-time value, then you must use the `final` keyword to make the variable a __runtime constant__.
+如果你无法创建常量变量，因为你不知道它的编译时值，那么你必须使用 `final` 关键字使变量成为__运行时常量__。
 
-There are many reasons why you cannot know the value of a variable before running the program. For example, you would have to get the value from the server, or ask the user for it.
+有很多原因导致你无法在运行程序之前知道变量的值。例如，你可能需要从服务器获取值，或者向用户询问。
 
 ---
 
-Here is an example of a value that can only be obtained at runtime:
+以下是一个只能在运行时获取的值的示例：
 
 ```dart
 final currentHour = DateTime.now().hour;
 ```
 
-`DateTime.now()` is a function to get the current date and time of when the code is executed.
-With the `hour` field we access the number of hours that have passed since the start of the day.
+`DateTime.now()` 是一个获取代码执行时当前日期和时间的函数。
+通过 `hour` 字段，我们可以访问从当天开始已经过去的小时数。
 
-Since the value of `hour` is different depending on when the code is executed, this can be defined as the _runtime_ value.
+由于 `hour` 的值根据代码执行的时间不同而不同，这可以被定义为_运行时_值。
 
-If you try to change the value of a `final` variable, you get an error.
+如果你尝试更改 `final` 变量的值，会得到一个错误。

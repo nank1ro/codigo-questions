@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+James 想从 ATM 取 N 美元。
+ATM 只有在 N 是 5 的倍数且 James 的账户有足够的资金来执行取款交易（包括银行手续费）时才会接受交易。
+每次成功取款，银行收取 `0.50$` 的手续费。
+计算尝试交易后 James 的账户余额。
+输入按以下顺序排列：
+1. James 希望取款的金额在以下范围内：`0 < N <= 2000`。
+2. James 的初始余额精确到两位小数，在以下范围内：`0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+返回尝试交易后的账户余额，精确到两位小数。
+如果账户中没有足够的资金来完成交易，返回当前银行余额。
 
 # --before-seed--
 
@@ -162,25 +162,25 @@ int main() {
 
 # --asserts--
 
-Perform a successful transaction
+执行一次成功的交易
 
 ```c
     try_catch(account_balance(50, 120.00) == 69.50);
 ```
 
-Insufficient funds
+资金不足
 
 ```c
     try_catch(account_balance(200, 120.00) == 120.00);
 ```
 
-Refused transaction, invalid amount
+交易被拒绝，金额无效
 
 ```c
     try_catch(account_balance(22, 120.00) == 120.00);
 ```
 
-Withdraw all money successfully
+成功取出所有资金
 
 ```c
     try_catch(account_balance(95, 95.50) == 0.00);

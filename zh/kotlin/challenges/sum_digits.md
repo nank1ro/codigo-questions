@@ -2,19 +2,19 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字之和
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+给定一个整数 `N`。
+编写一个程序计算N的所有数字之和
 
 # --instructions--
 
-Return the sum of digits of `N`.
+返回 `N` 的数字之和。
 
-Example of function call:
+函数调用示例：
 ```kotlin
 println(sumDigits(28))
 // prints 10
@@ -50,31 +50,31 @@ fun main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345的数字之和为15
 
 ```kotlin
     tryCatch(sumDigits(12345) == 15)
 ```
 
-The sum of the digits of 57253 is 22
+57253的数字之和为22
 
 ```kotlin
     tryCatch(sumDigits(57253) == 22)
 ```
 
-The sum of the digits of 122 is 5
+122的数字之和为5
 
 ```kotlin
     tryCatch(sumDigits(122) == 5)
 ```
 
-The sum of the digits of 91979997 is 60
+91979997的数字之和为60
 
 ```kotlin
     tryCatch(sumDigits(91979997) == 60)
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647的数字之和为46
 
 ```kotlin
     tryCatch(sumDigits(2147483647) == 46)

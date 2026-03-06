@@ -2,19 +2,19 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 加法
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+给定两个整数 `num1` 和 `num2`，编写一个程序将这两个数相加
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
-> HINT: omit the argument labels with the `_` (underscore)
+编写一个返回两个数之和的函数。
+> 提示：使用 `_`（下划线）省略参数标签
 
-Example of function call:
+函数调用示例：
 ```swift
 print(addition(1, 2))
 // prints 3
@@ -39,7 +39,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1 和 3 的和必须等于 4
 
 ```swift
     func testAddition1() {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
     }
 ```
 
-The sum of 200 and 210 must equal 410
+200 和 210 的和必须等于 410
 
 ```swift
     func testAddition2() {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
     }
 ```
 
-The sum of 15 and 35 must equal 50
+15 和 35 的和必须等于 50
 
 ```swift
     func testAddition3() {

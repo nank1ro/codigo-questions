@@ -1,11 +1,11 @@
-JavaScript has a basic Boolean type, called `boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in JavaScript, and get one of two answers, `true` or `false`.
+JavaScript 有一种基本的布尔类型，叫做 `boolean`。
+布尔值被称为逻辑值，因为它们只能是 true 或 false。
+你可以对 JavaScript 中的任何表达式求值，得到两个答案之一：`true` 或 `false`。
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+我们可以像存储数字或字符串一样，将布尔值 `true` 存储在变量中。
 
 ---
 
-The opposite value of `true` is `false`
+`true` 的相反值是 `false`

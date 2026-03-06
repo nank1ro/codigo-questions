@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-title: 100 doors
+title: 100扇门
 difficulty: 1
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+一排有100扇门，初始状态全部关闭。
+你经过这些门100次。
+第一次经过时，访问每扇门并"切换"门的状态（如果门是关闭的，就打开它；如果是打开的，就关闭它）。
+第二次，只访问每第2扇门（即第2、4、6...扇门）并切换状态。
+第三次，访问每第3扇门（即第3、6、9...扇门），以此类推，直到你只访问第100扇门。
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+实现一个函数来确定最后一次经过后门的状态。
+将最终结果以数组形式返回，只有打开的门的编号才包含在数组中。
+> 该方法必须能够处理可变数量的门。
 
 # --seed--
 
@@ -36,7 +36,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+给定100扇门，返回正确的打开门列表
 
 ```python
     def test_1(self):
@@ -44,7 +44,7 @@ Given 100 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(100), solution, "--err-t1--")
 ```
 
-Given 10 doors, return the correct list of open doors
+给定10扇门，返回正确的打开门列表
 
 ```python
     def test_2(self):
@@ -52,7 +52,7 @@ Given 10 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(10), solution, "--err-t2--")
 ```
 
-Given 950 doors, return the correct list of open doors
+给定950扇门，返回正确的打开门列表
 
 ```python
     def test_3(self):

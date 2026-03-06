@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 最大回文乘积
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+回文数从两个方向读都一样。由两个2位数的乘积组成的最大回文数是 9009 = 91 × 99。
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+找出由两个 `n` 位数的乘积组成的最大回文数。
 
 # --before-seed--
 
@@ -41,13 +41,13 @@ function largestPalindromeProduct(n) {
 
 # --asserts--
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)` 应返回 9009。
 
 ```javascript
 tryCatch(largestPalindromeProduct(2) === 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)` 应返回 906609。
 
 ```javascript
 tryCatch(largestPalindromeProduct(3) === 906609);

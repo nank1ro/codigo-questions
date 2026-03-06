@@ -1,31 +1,31 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+列表是一种数据类型，你可以用它在一个变量名下按顺序存储一组不同的信息。
+列表可以存储任何类型的多个值，并使用**索引**来区分这些值。
+你可以用以下形式的表达式为列表赋值：
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+你可以通过索引访问列表中的单个元素。
+索引就像一个地址，标识了元素在列表中的位置。
+索引直接出现在列表名之后的方括号中，如下所示：
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+列表索引从 `0` 开始，**不是** `1`！你可以这样访问列表中的第一个元素：`list_name[0]`。
+列表中的第二个元素位于索引 1：`list_name[1]`。
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+列表索引的行为与其他变量名一样！它既可以用于访问值，也可以用于赋值。
+你已经看过如何这样访问列表索引：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] # Gets the value "Jeremiah"
 ```
-This is how an assignment works:
+以下是赋值的方式：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
@@ -34,14 +34,14 @@ names[0] # Gets the new value "Jordan"
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+与字符串一样，列表也有**长度**。
+列表的长度就是它所包含的元素数量
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+列表不必有固定的长度。
+你可以随时向列表末尾添加元素！
+要向列表添加元素，我们使用 `append` 方法：
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+有时，你只想访问列表的一部分。
+请看以下代码：
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+首先，我们创建一个名为 `numbers` 的列表。
+然后，我们取列表的一个子部分并将其存储在 slice 列表中。
+我们通过在列表名之后定义想要包含的索引来实现：`numbers[1:3]`。
+在 Python 中，当我们以这种方式指定列表的一部分时，会包含第一个索引 `1` 处的元素，但不包含第二个索引 `3` 处的元素。
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+你可以像切片列表一样切片字符串！实际上，你可以把字符串看作字符的列表：每个字符是列表中从索引 `0` 开始的连续元素。
 ```python
 list_name[:2]
 # Grabs the first two items
 list_name[3:]
 # Grabs the fourth through last items
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+如果你的列表切片包含列表（或字符串）中的第一个或最后一个元素，则不需要包含该元素的索引。
 
 ---
 
-List elements could be of any type:
+列表元素可以是任何类型：
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+事实上，上面我们依次有一个字符串、一个整数和一个布尔值。
+我们还可以在列表中嵌套列表！
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+有时你需要在列表中搜索某个元素。
+在 Python 中，我们可以使用 `index()` 方法：
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+上面的代码打印了包含字符串 `"Zac"` 的第一个索引，在本例中为 `1`。
+我们还可以使用 `insert()` 方法在指定索引处插入元素：
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+上面的代码在索引 `1` 处插入了 `"Ali"`，这使得该索引之后的所有元素向后移动一位
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+在 Python 中，我们可以使用 `for..in` 关键字非常简单地遍历列表：
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+`for` 关键字后面跟一个变量名，它将依次被赋值为列表中每个元素的值。
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+**元组**与列表类似，但速度更快。
+然而，元组的值不能被修改。
+我们通常将元组用于在程序运行期间保持不变的**只读**数据。
+要创建元组，我们使用圆括号 `()`
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+有时我们可能想将元组转换为列表。
+为此，我们可以使用 `list()` 函数
 
 ---
 
-Likewise, we can convert a list into a tuple
+同样，我们可以将列表转换为元组

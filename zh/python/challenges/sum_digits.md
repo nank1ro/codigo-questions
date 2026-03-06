@@ -2,17 +2,17 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字之和
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+给你一个整数 `num`。
+编写一个程序来计算 `num` 所有数字之和
 
 # --instructions--
 
-Return the sum of digits of `num`
+返回 `num` 的各位数字之和
 
 # --seed--
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345的各位数字之和是15
 
 ```python
     def test_sum_of_digits_1(self):
         self.assertEqual(sum_digits(12345), 15, "--err-t1--")
 ```
 
-The sum of the digits of 57253 is 22
+57253的各位数字之和是22
 
 ```python
     def test_sum_of_digits_2(self):
         self.assertEqual(sum_digits(57253), 22, "--err-t2--")
 ```
 
-The sum of the digits of 122 is 5
+122的各位数字之和是5
 
 ```python
     def test_sum_of_digits_3(self):
         self.assertEqual(sum_digits(122), 5, "--err-t3--")
 ```
 
-The sum of the digits of 91979997 is 60
+91979997的各位数字之和是60
 
 ```python
     def test_sum_of_digits_4(self):
         self.assertEqual(sum_digits(91979997), 60, "--err-t4--")
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647的各位数字之和是46
 
 ```python
     def test_sum_of_digits_5(self):

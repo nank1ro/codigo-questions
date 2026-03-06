@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScript 是一种面向对象的编程语言，这意味着它操作的是称为对象的编程结构。
+你可以将对象看作是一个包含数据和函数的单一数据结构；对象的函数被称为它的方法。
+例如，当你调用：
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScript 会检查 `arrayName` 是否有 `push()` 方法（所有数组都有该方法），如果找到则执行该方法。
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+_类_ 是通用的、灵活的结构，它们构成了你程序代码的基本构建块。
+一个基本的类只由 `class` 关键字和它的名称组成，例如：
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+让我们在 `Animal` 类中添加一些内容
+要添加一些参数，我们需要使用默认的 `constructor`
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+定义一个类并不会创建一个对象。
+为此，我们需要创建一个类的__实例__。
+在 JavaScript 中，要创建一个类的新实例，我们总是在类名前使用 `new` 关键字。
+如果你想给参数赋一个默认值，可以在构造函数的参数名列表中进行
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+当一个类拥有自己的函数时，这些函数被称为__方法__。
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScript 允许我们使用 `extends` 关键字创建一个类作为另一个类的子类
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+你可以使用_点语法_来访问实例的属性。
+在点语法中，你在实例名后面紧跟属性名，用句点 `.` 分隔，中间没有空格：
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+使用相同的语法，我们还可以更新属性的值

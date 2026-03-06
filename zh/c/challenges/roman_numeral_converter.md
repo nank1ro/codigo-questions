@@ -2,24 +2,24 @@
 language: c
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: 罗马数字转换器
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+创建一个函数，接受一个正整数作为参数，并返回该整数的罗马数字表示的字符串。现代罗马数字通过分别表示每一位数字来书写，从最左边的数字开始，跳过值为零的任何数字。
 
 # --instructions--
 
-Examples:
+示例：
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- 所有罗马数字应以大写形式返回。
+- 此表示法能表示的最大数字为 3,999。
 
 # --before-seed--
 
@@ -165,67 +165,67 @@ int main() {
 
 # --asserts--
 
-The number `2` must equal `II` 
+数字 `2` 必须等于 `II`
 
 ```c
     try_catch(strcmp(convert_to_roman(2), "II") == 0);
 ```
 
-The number `12` must equal `XII`
+数字 `12` 必须等于 `XII`
 
 ```c
     try_catch(strcmp(convert_to_roman(12), "XII") == 0);
 ```
 
-The number `16` must equal `XVI`
+数字 `16` 必须等于 `XVI`
 
 ```c
     try_catch(strcmp(convert_to_roman(16), "XVI") == 0);
 ```
 
-The number `44` must equal `XLIV`
+数字 `44` 必须等于 `XLIV`
 
 ```c
     try_catch(strcmp(convert_to_roman(44), "XLIV") == 0);
 ```
 
-The number `68` must equal `LXVIII`
+数字 `68` 必须等于 `LXVIII`
 
 ```c
     try_catch(strcmp(convert_to_roman(68), "LXVIII") == 0);
 ```
 
-The number `400` must equal `CD`
+数字 `400` 必须等于 `CD`
 
 ```c
     try_catch(strcmp(convert_to_roman(400), "CD") == 0);
 ```
 
-The number `798` must equal `DCCXCVIII`
+数字 `798` 必须等于 `DCCXCVIII`
 
 ```c
     try_catch(strcmp(convert_to_roman(798), "DCCXCVIII") == 0);
 ```
 
-The number `1000` must equal `M`
+数字 `1000` 必须等于 `M`
 
 ```c
     try_catch(strcmp(convert_to_roman(1000), "M") == 0);
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+数字 `3999` 必须等于 `MMMCMXCIX`
 
 ```c
     try_catch(strcmp(convert_to_roman(3999), "MMMCMXCIX") == 0);
 ```
 
-The number `649` must equal `DCXLIX`
+数字 `649` 必须等于 `DCXLIX`
 
 ```c
     try_catch(strcmp(convert_to_roman(649), "DCXLIX") == 0);
 ```
 
-The number `1666` must equal `MDCLXVI`
+数字 `1666` 必须等于 `MDCLXVI`
 
 ```c
     try_catch(strcmp(convert_to_roman(1666), "MDCLXVI") == 0);

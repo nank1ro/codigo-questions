@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+我们知道如何使用 `while` 循环来重复执行代码。
+就像这个程序重复语句来显示 `hello`
 ```c
 int counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+但我们也可以使用 `for` 循环来实现同样的效果：
 ```c
 for (int i = 0; i < 5; i++) {
     printf("Hello\n");
@@ -17,14 +17,14 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+在 `for` 循环中，我们可以指定循环运行的次数
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+我们可以使用 `<` 循环到下一个数字（不包含），或者使用 `<=` 循环到下一个数字（包含）
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+名为 `i` 的变量是计数器变量。
+我们可以给它任意名称。
+它记录当前循环执行到第几次

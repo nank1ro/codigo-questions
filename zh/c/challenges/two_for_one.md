@@ -2,29 +2,29 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: 二换一
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+给定一个名字，返回包含以下消息的字符串：
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+其中 `X` 是给定的名字。
+但是，如果名字为空，则返回字符串：
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个返回正确字符串的函数，示例：
 
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
+**输入**: `"Walter"`
+**输出**: `One for Walter, one for me.`
 
-**input**: `""`
-**output**: `One for you, one for me.`
+**输入**: `""`
+**输出**: `One for you, one for me.`
 
-**input**: `"David"`
-**output**: `One for David, one for me.`
+**输入**: `"David"`
+**输出**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -169,19 +169,19 @@ int main() {
 
 # --asserts--
 
-No name given
+未提供名字
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+传入 "James" 作为名字
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+传入 "Martha" 作为名字
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);

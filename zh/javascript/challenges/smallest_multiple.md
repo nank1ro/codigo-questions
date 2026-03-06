@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: 最小公倍数
 ---
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520是能被1到10的每个数字整除且没有余数的最小数字。
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+能被1到 `n` 的所有数字整除的最小正数是多少？
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function smallestMultiple(n) {
 
 # --asserts--
 
-`smallestMultiple(5)` should return 60.
+`smallestMultiple(5)` 应返回 60。
 
 ```javascript
 tryCatch(smallestMultiple(5) === 60);
 ```
 
-`smallestMultiple(7)` should return 420.
+`smallestMultiple(7)` 应返回 420。
 
 ```javascript
 tryCatch(smallestMultiple(7) === 420);
 ```
 
-`smallestMultiple(10)` should return 2520.
+`smallestMultiple(10)` 应返回 2520。
 
 ```javascript
 tryCatch(smallestMultiple(10) === 2520);
 ```
 
-`smallestMultiple(13)` should return 360360.
+`smallestMultiple(13)` 应返回 360360。
 
 ```javascript
 tryCatch(smallestMultiple(13) === 360360);
 ```
 
-`smallestMultiple(20)` should return 232792560.
+`smallestMultiple(20)` 应返回 232792560。
 
 ```javascript
 tryCatch(smallestMultiple(20) === 232792560);

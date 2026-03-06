@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+让我们从**等于** `==` 关系运算符开始。
+它返回一个**布尔值**，true `1` 或 false `0`，表示两个表达式是否相等，例如：
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+让我们继续学习**不等于** `!=` 关系运算符。
+它返回一个**布尔值**，true `1` 或 false `0`，表示两个表达式是否**不**相等，例如：
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+它与*等于*运算符的结果完全相反
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+让我们继续学习**大于** `>` 关系运算符。
+它返回一个**布尔值**，true `1` 或 false `0`，表示一个表达式是否大于另一个，例如：
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+让我们继续学习**小于** `<` 关系运算符。
+它返回一个**布尔值**，true `1` 或 false `0`，表示一个表达式是否小于另一个，例如：
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+让我们继续学习**大于或等于** `>=` 关系运算符。
+它返回一个**布尔值**，true `1` 或 false `0`，表示一个表达式是否大于或等于另一个，例如：
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+让我们继续学习**小于或等于** `<=` 关系运算符。
+它返回一个**布尔值**，true `1` 或 false `0`，表示一个表达式是否小于或等于另一个，例如：
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+现在让我们来看**布尔**运算符，从第一个叫做 __and__ `&&` 的开始。
+它返回第一个求值为 *false* 的操作数，如果所有操作数都为 *true*，则返回最后一个。
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+让我们继续学习**or** `||` 布尔运算符。
+它返回第一个求值为 *true* 的操作数，如果所有操作数都为 *false*，则返回最后一个。
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最后让我们学习**not** `!` 布尔运算符。
+它返回一个布尔值，该值是表达式逻辑状态的相反值。
 ```c
 >>> !true
 0

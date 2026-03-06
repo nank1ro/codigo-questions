@@ -2,16 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 加法
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+给定两个整数 `num1` 和 `num2`，编写一个程序将这两个数字相加
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+编写一个返回两个数字之和的函数
 
 # --before-seed--
 
@@ -155,19 +155,19 @@ int main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1 和 3 的和必须等于 4
 
 ```c
     try_catch(addition(1, 3) == 4);
 ```
 
-The sum of 200 and 210 must equal 410
+200 和 210 的和必须等于 410
 
 ```c
     try_catch(addition(200, 210) == 410);
 ```
 
-The sum of 15 and 35 must equal 50
+15 和 35 的和必须等于 50
 
 ```c
     try_catch(addition(15, 35) == 50);

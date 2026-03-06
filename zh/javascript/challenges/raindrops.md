@@ -2,28 +2,28 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨滴
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+你的任务是将一个数字转换为包含与某些潜在因数对应的雨滴声的字符串。
+因数是能够整除另一个数字且没有余数的数字。
+测试一个数字是否是另一个数字的因数，最简单的方法是使用取模运算。
+雨滴的规则如下：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 如果3是因数，将 'Pling' 添加到结果中。
+- 如果5是因数，将 'Plang' 添加到结果中。
+- 如果7是因数，将 'Plong' 添加到结果中。
+- 如果3、5或7都不是因数，结果应为该数字的数位。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个函数返回正确的字符串，示例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28的因数有7，但没有3或5，所以结果是 `"Plong"`。
+- 30的因数有3和5，但没有7，所以结果是 `"PlingPlang"`。
+- 34不能被3、5或7整除，所以结果是 `"34"`。
 
 # --before-seed--
 
@@ -53,109 +53,109 @@ function convert(number) {
 
 # --asserts--
 
-The sound for 1 is "1"
+1的声音是 "1"
 
 ```javascript
 tryCatch(convert(1) === "1");
 ```
 
-The sound for 3 is "Pling"
+3的声音是 "Pling"
 
 ```javascript
 tryCatch(convert(3) === "Pling");
 ```
 
-The sound for 5 is "Plang"
+5的声音是 "Plang"
 
 ```javascript
 tryCatch(convert(5) === "Plang");
 ```
 
-The sound for 7 is "Plong"
+7的声音是 "Plong"
 
 ```javascript
 tryCatch(convert(7) === "Plong");
 ```
 
-The sound for 6 is "Pling"
+6的声音是 "Pling"
 
 ```javascript
 tryCatch(convert(6) === "Pling");
 ```
 
-The sound for 8 is "8"
+8的声音是 "8"
 
 ```javascript
 tryCatch(convert(8) === "8");
 ```
 
-The sound for 9 is "Pling"
+9的声音是 "Pling"
 
 ```javascript
 tryCatch(convert(9) === "Pling");
 ```
 
-The sound for 10 is "Plang"
+10的声音是 "Plang"
 
 ```javascript
 tryCatch(convert(10) === "Plang");
 ```
 
-The sound for 14 is "Plong"
+14的声音是 "Plong"
 
 ```javascript
 tryCatch(convert(14) === "Plong");
 ```
 
-The sound for 15 is "PlingPlang"
+15的声音是 "PlingPlang"
 
 ```javascript
 tryCatch(convert(15) === "PlingPlang");
 ```
 
-The sound for 21 is "PlingPlong"
+21的声音是 "PlingPlong"
 
 ```javascript
 tryCatch(convert(21) === "PlingPlong");
 ```
 
-The sound for 25 is "Plang"
+25的声音是 "Plang"
 
 ```javascript
 tryCatch(convert(25) === "Plang");
 ```
 
-The sound for 27 is "Pling"
+27的声音是 "Pling"
 
 ```javascript
 tryCatch(convert(27) === "Pling");
 ```
 
-The sound for 35 is "PlangPlong"
+35的声音是 "PlangPlong"
 
 ```javascript
 tryCatch(convert(35) === "PlangPlong");
 ```
 
-The sound for 49 is "Plong"
+49的声音是 "Plong"
 
 ```javascript
 tryCatch(convert(49) === "Plong");
 ```
 
-The sound for 52 is "52"
+52的声音是 "52"
 
 ```javascript
 tryCatch(convert(52) === "52");
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105的声音是 "PlingPlangPlong"
 
 ```javascript
 tryCatch(convert(105) === "PlingPlangPlong");
 ```
 
-The sound for 3125 is "Plang"
+3125的声音是 "Plang"
 
 ```javascript
 tryCatch(convert(3125) === "Plang");

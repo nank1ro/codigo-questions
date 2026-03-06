@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+在 Swift 中，我们可以使用 `+` 号将两个或多个字符串连接在一起显示，例如：
 ```swift
 print("Hello " + "Swift!") // prints "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+但是使用 `+` 号将数字（如 '10'）与字符串（如 `"friends"`）相加会产生错误，因为它们是不同类型的值
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+字符串插值允许我们显示表达式，例如将字符串与数字组合在一起，而不会产生任何错误。
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+每个字符串插值语句由两部分组成：用于插入数字或变量的 `\()`，以及普通字符串
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+接下来，我们将不同类型的值放在花括号中，这样它就会作为一条 print 语句显示。例如，使用 `\(5)`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+在圆括号中插入变量（如 `friends`）也会显示它们的值
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+我们可以在字符串插值中随意多次使用圆括号来插入值
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+字符串插值最常用于 print 语句中，但我们也可以像普通字符串一样将它们存储在变量中。

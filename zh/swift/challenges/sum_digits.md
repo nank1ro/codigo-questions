@@ -2,20 +2,20 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字之和
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+给定一个整数 `N`。
+编写一个程序来计算 N 的所有数字之和
 
 # --instructions--
 
-Return the sum of digits of `N`.
-> HINT: omit the argument label with the `_` (underscore)
+返回 `N` 的各位数字之和。
+> 提示：使用 `_`（下划线）省略参数标签
 
-Example of function call:
+函数调用示例：
 ```swift
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 的各位数字之和是 15
 
 ```swift
     func testSumOfDigits1() {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
     }
 ```
 
-The sum of the digits of 57253 is 22
+57253 的各位数字之和是 22
 
 ```swift
     func testSumOfDigits2() {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
     }
 ```
 
-The sum of the digits of 122 is 5
+122 的各位数字之和是 5
 
 ```swift
     func testSumOfDigits3() {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
     }
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 的各位数字之和是 60
 
 ```swift
     func testSumOfDigits4() {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
     }
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 的各位数字之和是 46
 
 ```swift
     func testSumOfDigits5() {

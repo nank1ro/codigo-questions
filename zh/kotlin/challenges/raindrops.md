@@ -2,30 +2,30 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨滴
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+你的任务是将一个数字转换为包含与特定潜在因数对应的雨滴声的字符串。
+因数是能整除另一个数字且没有余数的数。
+测试一个数字是否是另一个数字的因数，最简单的方法是使用取模运算。
+雨滴的规则如下：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 如果给定数字有因数3，将 'Pling' 添加到结果中。
+- 如果给定数字有因数5，将 'Plang' 添加到结果中。
+- 如果给定数字有因数7，将 'Plong' 添加到结果中。
+- 如果给定数字没有3、5或7作为因数，结果应为该数字本身。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个返回正确字符串的函数，示例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28有因数7，但没有3或5，所以结果为 `"Plong"`。
+- 30同时有因数3和5，但没有7，所以结果为 `"PlingPlang"`。
+- 34不能被3、5或7整除，所以结果为 `"34"`。
 
-Example of function call:
+函数调用示例：
 ```kotlin
 println(raindrops(28))
 // prints "Plong"
@@ -61,109 +61,109 @@ fun main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1的声音是 "1"
 
 ```kotlin
     tryCatch(raindrops(1) == "1")
 ```
 
-The sound for 3 is "Pling"
+3的声音是 "Pling"
 
 ```kotlin
     tryCatch(raindrops(3) == "Pling")
 ```
 
-The sound for 5 is "Plang"
+5的声音是 "Plang"
 
 ```kotlin
     tryCatch(raindrops(5) == "Plang")
 ```
 
-The sound for 7 is "Plong"
+7的声音是 "Plong"
 
 ```kotlin
     tryCatch(raindrops(7) == "Plong")
 ```
 
-The sound for 6 is "Pling"
+6的声音是 "Pling"
 
 ```kotlin
     tryCatch(raindrops(6) == "Pling")
 ```
 
-The sound for 8 is "8"
+8的声音是 "8"
 
 ```kotlin
     tryCatch(raindrops(8) == "8")
 ```
 
-The sound for 9 is "Pling"
+9的声音是 "Pling"
 
 ```kotlin
     tryCatch(raindrops(9) == "Pling")
 ```
 
-The sound for 10 is "Plang"
+10的声音是 "Plang"
 
 ```kotlin
     tryCatch(raindrops(10) == "Plang")
 ```
 
-The sound for 14 is "Plong"
+14的声音是 "Plong"
 
 ```kotlin
     tryCatch(raindrops(14) == "Plong")
 ```
 
-The sound for 15 is "PlingPlang"
+15的声音是 "PlingPlang"
 
 ```kotlin
     tryCatch(raindrops(15) == "PlingPlang")
 ```
 
-The sound for 21 is "PlingPlong"
+21的声音是 "PlingPlong"
 
 ```kotlin
     tryCatch(raindrops(21) == "PlingPlong")
 ```
 
-The sound for 25 is "Plang"
+25的声音是 "Plang"
 
 ```kotlin
     tryCatch(raindrops(25) == "Plang")
 ```
 
-The sound for 27 is "Pling"
+27的声音是 "Pling"
 
 ```kotlin
     tryCatch(raindrops(27) == "Pling")
 ```
 
-The sound for 35 is "PlangPlong"
+35的声音是 "PlangPlong"
 
 ```kotlin
     tryCatch(raindrops(35) == "PlangPlong")
 ```
 
-The sound for 49 is "Plong"
+49的声音是 "Plong"
 
 ```kotlin
     tryCatch(raindrops(49) == "Plong")
 ```
 
-The sound for 52 is "52"
+52的声音是 "52"
 
 ```kotlin
     tryCatch(raindrops(52) == "52")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105的声音是 "PlingPlangPlong"
 
 ```kotlin
     tryCatch(raindrops(105) == "PlingPlangPlong")
 ```
 
-The sound for 3125 is "Plang"
+3125的声音是 "Plang"
 
 ```kotlin
     tryCatch(raindrops(3125) == "Plang")

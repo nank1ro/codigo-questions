@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: 你好世界！
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ 是在新语言或环境中开始编程的传统第一个程序。
 
 # --instructions--
 
-Write a function that returns the string `"Hello, World!"`.
+编写一个函数，返回字符串 `"Hello, World!"`。
 
 # --before-seed--
 
@@ -41,7 +41,7 @@ function hello() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+函数应返回 "Hello, World!"。
 
 ```javascript
 tryCatch(hello() === "Hello, World!");

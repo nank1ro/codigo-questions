@@ -1,10 +1,10 @@
-Booleans represent one of two values: `true` or `false`.
-You can evaluate any expression in C, and get one of two answers, `true` or `false`.
+布尔值表示两个值中的一个：`true` 或 `false`。
+你可以对 C 中的任何表达式求值，并得到两个结果之一：`true` 或 `false`。
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+我们可以像存储数字或字符串一样，将布尔值 `true` 存储在变量中。
 
 ---
 
-The opposite value of `true` is `false`
+`true` 的相反值是 `false`

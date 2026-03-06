@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+运算符用于对变量和值执行操作。
+让我们从算术运算符开始，特别是**加法** `+` 运算符。
+它用于将两个数字相加，例如：
 ```
 >>> 5 + 3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+让我们继续学习**减法** `-` 运算符。
+它用于从一个数字中减去另一个数字，例如：
 ```
 >>> 5 - 3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+让我们来看**乘法** `*` 运算符。
+它用于将两个数字相乘，例如：
 ```
 >>> 5 * 3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+让我们来看**除法** `/` 运算符。
+它用于将两个数字相除，例如：
 ```c
 >>> 10 / 5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+让我们来看**取模** `%` 运算符。
+它用于求两个数字相除后的余数，例如：
 ```
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+结果为 1，因为 5 除以 2 的商是 2，余数是 1
 ```
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+这个结果为 0，因为 9 除以 3 的商是 3，余数是 0
 
 ---
 
-C doesn't have an **exponentiation** operator, so we have to use the `pow()` function included in the `math.h` library.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+C 语言没有**幂运算**运算符，因此我们需要使用 `math.h` 库中的 `pow()` 函数。
+幂运算对应于底数的重复乘法：即**b** 的 *n* 次幂是 *n* 个底数相乘的积：
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```
 >>> pow(5, 2);
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** using the `floor()` function.
-This function returns the integral part of the quotient, for example:
+让我们来看使用 `floor()` 函数进行的**向下取整除法**。
+该函数返回商的整数部分，例如：
 ```
 >>> 5.0 / 2
 2.5
 >>> floor(2.5)
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+也称为整数除法。结果值是一个整数，尽管结果的*类型*不一定是 int。

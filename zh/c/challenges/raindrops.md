@@ -2,28 +2,28 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨滴
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+你的任务是将一个数字转换为包含与某些潜在因数对应的雨滴声的字符串。
+因数是能整除另一个数字且没有余数的数字。
+测试一个数字是否是另一个数字的因数，最简单的方法是使用取模运算。
+雨滴的规则如下：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 以 3 为因数，在结果中添加 'Pling'。
+- 以 5 为因数，在结果中添加 'Plang'。
+- 以 7 为因数，在结果中添加 'Plong'。
+- 如果 3、5 或 7 都不是因数，则结果应为该数字本身。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个返回正确字符串的函数，示例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 以 7 为因数，但不以 3 或 5 为因数，所以结果为 `"Plong"`。
+- 30 同时以 3 和 5 为因数，但不以 7 为因数，所以结果为 `"PlingPlang"`。
+- 34 不能被 3、5 或 7 整除，所以结果为 `"34"`。
 
 # --before-seed--
 
@@ -169,110 +169,110 @@ int main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1 的声音是 "1"
 
 ```c
     try_catch(strcmp(convert(1), "1") == 0);
 ```
 
-The sound for 3 is "Pling"
+3 的声音是 "Pling"
 
 ```c
     try_catch(strcmp(convert(3), "Pling") == 0);
 ```
 
-The sound for 5 is "Plang"
+5 的声音是 "Plang"
 
 ```c
     try_catch(strcmp(convert(5), "Plang") == 0);
 ```
 
-The sound for 7 is "Plong"
+7 的声音是 "Plong"
 
 ```c
     try_catch(strcmp(convert(7), "Plong") == 0);
 ```
 
-The sound for 6 is "Pling"
+6 的声音是 "Pling"
 
 ```c
     try_catch(strcmp(convert(6), "Pling") == 0);
 ```
 
-The sound for 8 is "8"
+8 的声音是 "8"
 
 ```c
     try_catch(strcmp(convert(8), "8") == 0);
 ```
 
-The sound for 9 is "Pling"
+9 的声音是 "Pling"
 
 ```c
     try_catch(strcmp(convert(9), "Pling") == 0);
 ```
 
-The sound for 10 is "Plang"
+10 的声音是 "Plang"
 
 ```c
     try_catch(strcmp(convert(10), "Plang") == 0);
 ```
 
-The sound for 14 is "Plong"
+14 的声音是 "Plong"
 
 ```c
     try_catch(strcmp(convert(14), "Plong") == 0);
 ```
 
-The sound for 15 is "PlingPlang"
+15 的声音是 "PlingPlang"
 
 ```c
     try_catch(strcmp(convert(15), "PlingPlang") == 0);
 ```
 
-The sound for 21 is "PlingPlong"
+21 的声音是 "PlingPlong"
 
 ```c
     try_catch(strcmp(convert(21), "PlingPlong") == 0);
 ```
 
-The sound for 25 is "Plang"
+25 的声音是 "Plang"
 
 ```c
     try_catch(strcmp(convert(25), "Plang") == 0);
 ```
 
-The sound for 27 is "Pling"
+27 的声音是 "Pling"
 
 ```c
     try_catch(strcmp(convert(27), "Pling") == 0);
 ```
 
-The sound for 35 is "PlangPlong"
+35 的声音是 "PlangPlong"
 
 ```c
     try_catch(strcmp(convert(35), "PlangPlong") == 0);
 ```
 
-The sound for 49 is "Plong"
+49 的声音是 "Plong"
 
 ```c
     try_catch(strcmp(convert(49), "Plong") == 0);
 ```
 
-The sound for 52 is "52"
+52 的声音是 "52"
 
 ```c
     try_catch(strcmp(convert(52), "52") == 0);
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105 的声音是 "PlingPlangPlong"
 
 ```c
     try_catch(strcmp(convert(105), "PlingPlangPlong") == 0);
 ```
 
 
-The sound for 3125 is "Plang"
+3125 的声音是 "Plang"
 
 ```c
     try_catch(strcmp(convert(3125), "Plang") == 0);

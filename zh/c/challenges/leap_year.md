@@ -2,20 +2,20 @@
 language: c
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: 闰年
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+一个日历年恰好有 365.25 天。但最终，这会导致混乱，因为人类通常按整除 1 来计数，而不是用小数点。因此，为了避免这种情况，决定每四年周期将所有 0.25 天累加，给那一年 366 天（包括 2 月 29 日作为闰日），并称之为__闰年__。四年周期中的其他三年只有 365 天，__不是闰年__。
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `time.h` import, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+在这个挑战中，我们将提升难度，你需要在不使用 `time.h` 导入、`switch` 语句、__if 代码块__、__if-else 代码块__或__三元运算符__（`x ? a : b`）以及逻辑运算符 __AND__（`&&`）和 __OR__（`||`）的情况下判断是否为闰年，但可以使用 __NOT__（`!`）运算符。
 
-Return `true` if it's a leap year, `false` otherwise.
+如果是闰年返回 `true`，否则返回 `false`。
 
-Example of function call:
+函数调用示例：
 ```c
 printf("%d\n", leap_year(2000));
 // prints true
@@ -163,7 +163,7 @@ int main() {
 
 # --asserts--
 
-The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+不允许使用 `time.h`、`switch`、`if`、`else`、`&&`、`||` 或 `?`。
 
 ```json
 {
@@ -173,73 +173,73 @@ The use of `time.h`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+`2016` 年是闰年。
 
 ```c
     try_catch(leap_year(2016) == true);
 ```
 
-The year `1996` is a leap year.
+`1996` 年是闰年。
 
 ```c
     try_catch(leap_year(1996) == true);
 ```
 
-The year `1600` is a leap year.
+`1600` 年是闰年。
 
 ```c
     try_catch(leap_year(1600) == true);
 ```
 
-The year `2020` is a leap year.
+`2020` 年是闰年。
 
 ```c
     try_catch(leap_year(2020) == true);
 ```
 
-The year `2000` is a leap year.
+`2000` 年是闰年。
 
 ```c
     try_catch(leap_year(2000) == true);
 ```
 
-The year `2008` is a leap year.
+`2008` 年是闰年。
 
 ```c
     try_catch(leap_year(2008) == true);
 ```
 
-The year `1521` is not a leap year.
+`1521` 年不是闰年。
 
 ```c
     try_catch(leap_year(1521) == false);
 ```
 
-The year `1800` is not a leap year.
+`1800` 年不是闰年。
 
 ```c
     try_catch(leap_year(1800) == false);
 ```
 
-The year `2007` is not a leap year.
+`2007` 年不是闰年。
 
 ```c
     try_catch(leap_year(2007) == false);
 ```
 
-The year `2002` is not a leap year.
+`2002` 年不是闰年。
 
 ```c
     try_catch(leap_year(2002) == false);
 ```
 
-The year `1979` is not a leap year.
+`1979` 年不是闰年。
 
 ```c
     try_catch(leap_year(1979) == false);
 ```
 
-The year `2006` is not a leap year.
+`2006` 年不是闰年。
 
 ```c
     try_catch(leap_year(2006) == false);

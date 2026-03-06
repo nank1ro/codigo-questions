@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in C is an object and like other programming languages, C has commands for declaring a variable.
-To create a variable, we need to give it a **type** and a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+变量是用于存储数据值的容器。
+在 C 语言中，每个变量都是一个对象，和其他编程语言一样，C 语言有声明变量的命令。
+要创建一个变量，我们需要给它一个**类型**和一个**名称**，请注意名称中不能包含空格。
+变量在你第一次给它赋值时被创建。
+以下是创建名为 `x` 的变量的示例：
 ```c
 int x = 1;
 ```
-In this way we have assigned the value `1` to the _integer_ variable named `x`.
-If we print the variable `x` we get back the number `1`:
+这样，我们就将值 `1` 赋给了名为 `x` 的_整型_变量。
+如果我们打印变量 `x`，我们会得到数字 `1`：
 ```c
 >>> printf("%i\n", x);
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+变量之所以这样称呼，是因为它们存储的值可以改变。
+我们可以使用 `=` 并给 `x` 一个新值来更新它。
 ```c
 >>> x = 1;
 >>> printf("%i\n", x);
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+我们还可以将其他变量的值赋给变量。在这里，我们可以将 `x` 的值赋给变量 `y`
 ```c
 >>> int x = 5;
 >>> int y = x;
@@ -38,8 +38,8 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+当我们更新一个变量时，它会忘记之前的值。
+在这里，我们可以两次显示变量 `x`，并观察它的值如何更新。
 ```c
 >>> int x = 5;
 >>> printf("%i\n", x);
@@ -51,12 +51,12 @@ Here we can display the `x` variable twice and see how its value updates.
 
 ---
 
-In C string variables can be declared only by using double quotes:
+在 C 语言中，字符串变量只能使用双引号来声明：
 ```c
 char x[] = "May";
 ```
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+如果我们想要一个包含多个单词的变量名，我们使用**蛇形命名法（snake case）**。
+这意味着使用 `_` 来连接各个单词。

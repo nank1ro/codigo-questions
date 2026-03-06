@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+当我们只想在满足特定条件时执行代码时，就需要进行决策判断。
+假设我们只想在天气好的时候出去玩。
+在编程中，我们可以保存一个布尔变量 `niceWeather`，并在该变量为 `true` 时执行出去玩的操作，如下所示：
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+让我们继续上一个例子。
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+我们已经看到 `if` 语句只在条件为 `true` 时执行代码块。
+另一个需要注意的重要事项是**花括号** `{}`，它们用于表示代码块。
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In JavaScript we can use the `else` statement, like:
+我们刚刚学习了如何在条件满足时执行一段代码块，现在让我们看看如何在第一个条件不满足时执行另一段代码块。
+如果天气好，我们就出去玩；否则，我们就待在家里。
+在 JavaScript 中，我们可以使用 `else` 语句，如下所示：
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+假设我们还有另一个条件需要检查，如下例所示：
 ```javascript
 var num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     console.log("do something else");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+这段代码的输出是 `the number is 3`。
+首先，检查数字是否等于 2，结果为 false。
+然后进入第二个语句，检查 `num` 是否等于 3，结果为 true，因此执行后续代码块，打印 `the number is 3`
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+我们可以添加任意多个 `else if` 语句，没有限制
 ```javascript
 var num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     console.log("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+这段代码的输出是 `the number is 4`。
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+我们还可以在一个条件语句（`if`、`else if` 或 `else`）内部嵌套另一个条件语句，以创建更复杂的结构。
 ```javascript
 var num = 4;
 if (num < 3) {
@@ -87,13 +87,13 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+这段代码的输出是 `the number is 4`。
 
 ---
 
-The ternary conditional operator is a special operator with three parts, which takes the form `question ? answer1 : answer2`.
-It's a shortcut for evaluating one of two expressions based on whether `question` is true or false.
-If `question` is true, it evaluates `answer1` and returns its value; otherwise, it evaluates `answer2` and returns its value.
+三元条件运算符是一种特殊的运算符，由三部分组成，格式为 `question ? answer1 : answer2`。
+它是根据 `question` 为 true 还是 false 来计算两个表达式之一的快捷方式。
+如果 `question` 为 true，它计算 `answer1` 并返回其值；否则，它计算 `answer2` 并返回其值。
 ```javascript
 let a = 10, b = 20, c = 0;
 if (a < b) {
@@ -104,21 +104,21 @@ if (a < b) {
 console.log(c);
 // prints 10
 ```
-The shortand code for the above code is:
+上述代码的简写形式为：
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
 // prints 10
 ```
-`c` is set equal to `a`, because the condition `a < b` was true
+`c` 被赋值为 `a`，因为条件 `a < b` 为 true
 
 ---
 
-The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The nil-coalescing operator is shorthand for the code below:
+_空值合并运算符_ `a ?? b` 会解包可选值 `a`（如果它包含一个值），或者在 `a` 为 `nil` 时返回默认值 `b`。
+表达式 `a` 始终是可选类型。
+表达式 `b` 必须与 `a` 中存储的类型匹配。
+空值合并运算符是以下代码的简写形式：
 ```javascript
 a != nil ? a! : b;
 ```

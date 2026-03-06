@@ -2,18 +2,18 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: 算术平均值
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+编写一个名为 `mean` 的函数，用于计算数值向量的_算术平均值_。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+编写一个函数，返回数值向量的平均值。
 
-Example of function call:
+函数调用示例：
 ```javascript
 console.log(mean([1, 2, 3]));
 // prints 2.0
@@ -47,19 +47,19 @@ function mean() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+`[1, 2, 3, 4, 5, 6, 7]` 的平均值必须等于 4.0
 
 ```javascript
 tryCatch(mean([1, 2, 3, 4, 5, 6, 7]) === 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+`[4, 5, 6]` 的平均值必须等于 5.0
 
 ```javascript
 tryCatch(mean([4, 5, 6]) === 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+`[12, 34, 56, 78]` 的平均值必须等于 45.0
 
 ```javascript
 tryCatch(mean([12, 34, 56, 78]) === 45.0);

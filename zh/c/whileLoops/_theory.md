@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+在编程中，我们经常需要重复执行一段代码，例如：
 ```c
 printf("2 seconds\n");
 printf("3 seconds\n");
 printf("4 seconds\n");
 printf("5 seconds\n");
 ```
-This produces the following output:
+这会产生以下输出：
 ```c
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+显然，对于较长的语句，我们会花费大量时间编写代码，但幸运的是，我们可以使用循环。
+让我们来学习 `while` 循环，获得与上面相同的输出。
 ```c
 int count = 2;
 while (count <= 5) {
@@ -21,24 +21,24 @@ while (count <= 5) {
     count++;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count++;`.
-It increments the `count` value, otherwise, our loop will be infinite
+我们创建了一个变量 `count`，并赋值为 `2`，即初始值。
+然后我们使用了 `while` 语句，它会在条件 `count <= 5` 为 `true` 时反复运行代码块。
+在代码块内部，我们**不能**忘记添加 `count++;` 这一行。
+它会递增 `count` 的值，否则循环将会无限运行
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+要控制 `while` 循环的重复次数，我们首先将一个变量设置为一个数字。
+我们称这个变量为计数器变量
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+然后，我们在条件中使用比较运算，将 `counter` 变量与一个数字进行比较。
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+在代码块内部，为了停止 `while` 循环，我们递增 `counter` 变量。
 
 ---
 
-The order you write code affects the output.
+代码的编写顺序会影响输出结果。

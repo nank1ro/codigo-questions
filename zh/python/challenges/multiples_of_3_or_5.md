@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3或5的倍数
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+如果我们列出10以下所有3或5的倍数的自然数，我们得到3、5、6和9。这些倍数的和是23。
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+求给定参数值 `number` 以下所有3或5的倍数之和。
 
 # --seed--
 
@@ -30,21 +30,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`multiples_of_3_and_5(10)` should return 23.
+`multiples_of_3_and_5(10)` 应返回 23。
 
 ```python
     def test1(self):
         self.assertEqual(multiples_of_3_and_5(10), 23, "--err-t1--")
 ```
 
-`multiples_of_3_and_5(1000)` should return 233168.
+`multiples_of_3_and_5(1000)` 应返回 233168。
 
 ```python
     def test2(self):
         self.assertEqual(multiples_of_3_and_5(1000), 233168, "--err-t2--")
 ```
 
-`multiples_of_3_and_5(6987)` should return 11390208
+`multiples_of_3_and_5(6987)` 应返回 11390208
 
 ```python
     def test3(self):

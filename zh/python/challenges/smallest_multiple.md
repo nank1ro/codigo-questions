@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: 最小公倍数
 ---
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520是能被1到10中每个数字整除且没有余数的最小数字。
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+能被1到 `n` 的所有数字整除的最小正整数是多少？
 
 # --seed--
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`smallest_multiple(5)` should return 60.
+`smallest_multiple(5)` 应返回 60。
 
 ```python
     def test1(self):
         self.assertEqual(smallest_multiple(5), 60, "--err-t1--")
 ```
 
-`smallest_multiple(7)` should return 420.
+`smallest_multiple(7)` 应返回 420。
 
 ```python
     def test2(self):
         self.assertEqual(smallest_multiple(7), 420, "--err-t2--")
 ```
 
-`smallest_multiple(10)` should return 2520.
+`smallest_multiple(10)` 应返回 2520。
 
 ```python
     def test3(self):
         self.assertEqual(smallest_multiple(10), 2520, "--err-t3--")
 ```
 
-`smallest_multiple(13)` should return 360360.
+`smallest_multiple(13)` 应返回 360360。
 
 ```python
     def test4(self):
         self.assertEqual(smallest_multiple(13), 360360, "--err-t4--")
 ```
 
-`smallest_multiple(20)` should return 232792560.
+`smallest_multiple(20)` 应返回 232792560。
 
 ```python
     def test5(self):

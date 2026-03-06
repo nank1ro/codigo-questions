@@ -2,18 +2,18 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 加法
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+给定两个整数 `num1` 和 `num2`，编写一个程序将这两个数相加
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
+编写一个返回两个数之和的函数。
 
-Example of function call:
+函数调用示例：
 ```kotlin
 println(addition(1, 2))
 // prints 3
@@ -49,19 +49,19 @@ fun main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1和3的和必须等于4
 
 ```kotlin
     tryCatch(addition(1, 3) == 4)
 ```
 
-The sum of 200 and 210 must equal 410
+200和210的和必须等于410
 
 ```kotlin
     tryCatch(addition(200, 210) == 410)
 ```
 
-The sum of 15 and 35 must equal 50
+15和35的和必须等于50
 
 ```kotlin
     tryCatch(addition(15, 35) == 50)

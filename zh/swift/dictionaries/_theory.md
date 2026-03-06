@@ -1,15 +1,15 @@
-**Dictionaries** are similar to arrays and tuples, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Dictionaries are enclosed in square brackets, like so:
+**字典**与数组和元组类似，但你通过查找*键*而不是索引来访问值。
+键可以是任何字符串或数字。
+字典用方括号括起来，如下所示：
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+这是一个名为 `dictionaryName` 的字典，包含三个*键值对*。
+键 `key1` 指向值 `1`，`key2` 指向 `2`，依此类推。
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+通过键访问字典值就像通过索引访问数组值一样：
 ```swift
 // gets the age value from the user dictionary
 user['age']
@@ -17,42 +17,42 @@ user['age']
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+与数组一样，字典是_可变的_。
+这意味着它们在创建后可以被修改（如果没有被声明为常量）。
+这样做的一个好处是，我们可以在字典创建后向其中添加新的_键/值对_，如下所示：
 ```swift
 dictName[newKeyName] = newValue
 ```
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+字典的长度 `count` 是它拥有的_键值对_的数量。
+每对只计算一次，即使值是一个数组。（没错：你也可以把数组放在字典里！）
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+因为字典是可变的，所以它们可以通过多种方式进行修改。可以使用 `removeValue(forKey:)` 方法从字典中删除项目：
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
     print("The removed value is \(removedValue).") // prints the removed value, if the key exists
 }
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+这将从字典中删除键 `keyName` 及其关联的值。
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+如果我们想列出字典的所有键怎么办？
+可以使用 `keys` 属性。
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+如果我们想列出字典的所有值怎么办？
+可以使用 `values` 属性。
 
 ---
 
-As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+与数组一样，我们可以使用 `for..in` 关键字在字典元素之间循环。
+要在循环中同时获取键和值，我们不需要指定任何属性：
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -61,16 +61,16 @@ for (key, value) in dictName {
 
 ---
 
-We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+我们也可以使用数组中用过的 `isEmpty` 属性来判断字典是否为空
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `updateValue(_:forKey:)` method
+为了向字典__添加__或__修改__值，我们也可以使用 `updateValue(_:forKey:)` 方法
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+之前我们了解了如何使用 `removeValue()` 方法从字典中删除_键值对_。
+我们也可以通过将键的值赋为 `nil` 来删除元素
 ```swift
 dictName[keyName] = nil
 // keyName has been removed from the dictionary dictName

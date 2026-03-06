@@ -1,18 +1,18 @@
-Kotlin has a basic Boolean type, called `Boolean`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Kotlin, and get one of two answers, `true` or `false`.
+Kotlin 有一个基本的布尔类型，称为 `Boolean`。
+布尔值被称为逻辑值，因为它们只能是 true 或 false。
+你可以对 Kotlin 中的任何表达式求值，得到两个结果之一：`true` 或 `false`。
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+我们可以像存储数字或字符串一样，将布尔值 `true` 存储在变量中。
 
 ---
 
-The opposite value of `true` is `false`
+`true` 的相反值是 `false`
 
 ---
 
-Boolean values can also negated by using the `!` before them, e.g:
+布尔值也可以通过在其前面使用 `!` 来取反，例如：
 ```kotlin
 println(!true) // prints false
 println(!false) // prints true
@@ -20,10 +20,10 @@ println(!false) // prints true
 
 ---
 
-We can also create boolean expressions using the `&&` (_and_) and `||` (_or_):
+我们还可以使用 `&&`（_与_）和 `||`（_或_）创建布尔表达式：
 
-- `&&` (_and_): produces true only if the Boolean expression on the left of the operator and the one on the right are both true.
-- `||` (_or_): Produces true if either the expression on the left or right of the operator is true, or if both are true.
+- `&&`（_与_）：只有当运算符左侧和右侧的布尔表达式都为 true 时，才产生 true。
+- `||`（_或_）：如果运算符左侧或右侧的表达式为 true，或者两者都为 true，则产生 true。
 
 ```kotlin
 println(true && true) // prints true

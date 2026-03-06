@@ -1,13 +1,13 @@
-Variables are containers for storing data values.
-Every variable in Python is an object and unlike other programming languages, Python has no command for declaring a variable.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-An example of a variable creation named `x` is:
+变量是用于存储数据值的容器。
+Python 中的每个变量都是一个对象，与其他编程语言不同，Python 没有声明变量的命令。
+要创建一个变量，我们需要给它一个**名称**，并且注意名称不能包含空格。
+变量在你第一次给它赋值时就被创建了。
+创建一个名为 `x` 的变量的示例如下：
 ```python
 x = 1
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+这样我们就将值 `1` 赋给了名为 `x` 的变量。
+如果我们打印变量 `x`，我们会得到数字 `1`：
 ```python
 >>> print(x)
 1
@@ -15,8 +15,8 @@ If we print the variable `x` we get back the number `1`:
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+变量之所以被称为变量，是因为它们存储的值可以改变。
+我们可以使用 `=` 来更新 `x` 并给它一个新值。
 ```python
 >>> x = 1
 >>> print(x)
@@ -28,7 +28,7 @@ We can update `x` by using `=` and giving it a new value.
 
 ---
 
-We can also give variables the values of other variables. Here, we can give to the `y` variable the value of `x`
+我们还可以将其他变量的值赋给变量。在这里，我们可以将 `x` 的值赋给变量 `y`
 ```python
 >>> x = 5
 >>> y = x
@@ -38,7 +38,7 @@ We can also give variables the values of other variables. Here, we can give to t
 
 ---
 
-When we update a variable, it forgets its previous value. Here we can display the `x` variable twice and see how its value updates.
+当我们更新一个变量时，它会忘记之前的值。在这里我们可以两次显示变量 `x`，看看它的值是如何更新的。
 ```python
 >>> x = 5
 >>> print(x)
@@ -50,14 +50,14 @@ When we update a variable, it forgets its previous value. Here we can display th
 
 ---
 
-String variables can be declared either by using single or double quotes:
+字符串变量可以使用单引号或双引号来声明：
 ```python
 >>> x = "May"
 >>> x = 'May'
 ```
-Both are the same thing.
+两者是相同的。
 
 ---
 
-If we want a variable name with multiple words, we use **snake case**.
-It means using `_` to connect the additional words.
+如果我们想要一个包含多个单词的变量名，我们使用**蛇形命名法**（snake case）。
+这意味着使用 `_` 来连接额外的单词。

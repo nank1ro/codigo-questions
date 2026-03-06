@@ -1,9 +1,9 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `printf()` function to output data to the standard output device (screen).
-Every C program uses libraries, which give the ability to execute necessary functions, for example the print on the screen function is defined in the `stdio.h` header file.
-The first code which will run will always reside in the main function.
-To print `Hello, World!` on the screen with C we can write
+"__Hello, World!__"是学习新编程语言时的传统第一个程序。
+我们使用 `printf()` 函数将数据输出到标准输出设备（屏幕）。
+每个 C 程序都使用库，这些库提供了执行必要功能的能力，例如屏幕打印功能定义在 `stdio.h` 头文件中。
+首先运行的代码始终位于 main 函数中。
+要在屏幕上用 C 语言打印 `Hello, World!`，我们可以编写
 ```c
 printf("Hello, World!");
 ```
-Finally we return `0` to indicate that our program was successful
+最后我们返回 `0` 来表示程序成功执行

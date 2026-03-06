@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 最大回文乘积
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+回文数正读和反读都一样。由两个2位数的乘积构成的最大回文数是 9009 = 91 × 99。
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+找出由两个 `n` 位数的乘积构成的最大回文数。
 
 # --seed--
 
@@ -30,14 +30,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_palindrome_product(2)` should return 9009.
+`largest_palindrome_product(2)` 应返回 9009。
 
 ```python
     def test1(self):
         self.assertEqual(largest_palindrome_product(2), 9009, "--err-t1--")
 ```
 
-`largest_palindrome_product(3)` should return 906609.
+`largest_palindrome_product(3)` 应返回 906609。
 
 ```python
     def test2(self):

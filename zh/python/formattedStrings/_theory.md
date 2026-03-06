@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+在 Python 中，我们可以使用 `+` 号将两个或多个字符串连接在一起显示，例如：
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+但使用 `+` 号将数字（如 '10'）和字符串（如 `"friends"`）相加会产生错误，因为它们是不同类型的值
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+格式化字符串允许我们将不同类型的值（如字符串和数字）组合显示，而不会产生任何错误。
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+每个格式化字符串语句由两部分组成，首先是字符 `f`，然后是我们要格式化的字符串
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+接下来，我们将不同类型的值放在花括号中，这样它就会作为一个 print 语句显示。就像这里的 `{5}`
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+在花括号中插入变量（如 `friends`）也会显示它们的值
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+我们可以在格式化字符串中随意多次使用花括号来插入值
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+格式化字符串最好在 print 语句中使用，因为我们不能像普通字符串那样将它们存储在变量中。

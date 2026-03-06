@@ -1,15 +1,15 @@
-Swift is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Swift 是一种面向对象的编程语言，这意味着它操作被称为对象的编程结构。
+你可以将对象看作是一个包含数据和函数的单一数据结构；对象的函数被称为它的方法。
+例如，当你调用：
 ```swift
 dictName.removeValue(forKey: "keyName")
 ```
-Swift checks to see if `dictName` has a `removeValue()` method (which all dictionaries have) and executes that method if it finds it.
+Swift 会检查 `dictName` 是否有 `removeValue()` 方法（所有字典都有这个方法），如果找到就执行该方法。
 
 ---
 
-_Structures_ and _classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class|struct consists only of the `class` or `struct` keyword and its name, for example:
+_结构体_ 和 _类_ 是通用的、灵活的结构，它们构成了程序代码的基本组件。
+一个基本的类或结构体仅由 `class` 或 `struct` 关键字及其名称组成，例如：
 ```swift
 class ClassName {
     // class definition
@@ -21,43 +21,43 @@ struct ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
+让我们在 `Animal` 类中添加一些内容
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+定义一个类并不会创建一个对象。
+为了创建对象，我们需要创建一个类的__实例__
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+当一个类拥有自己的函数时，这些函数被称为__方法__。
 
 ---
 
-Structures and classes in Swift have many things in common. Both can:
-- Define properties to store values
-- Define methods to provide functionality
-- Define subscripts to provide access to their values using subscript syntax
-- Define initializers to set up their initial state
-- Be extended to expand their functionality beyond a default implementation
-- Conform to protocols to provide standard functionality of a certain kind
+Swift 中的结构体和类有很多共同点。两者都可以：
+- 定义属性来存储值
+- 定义方法来提供功能
+- 定义下标来使用下标语法访问其值
+- 定义构造器来设置初始状态
+- 通过扩展来增加超出默认实现的功能
+- 遵循协议来提供特定类型的标准功能
 
-But classes have additional capabilities that structures don't have:
-- Inheritance enables one class to inherit the characteristics of another
-- Type casting enables you to check and interpret the type of a class instance at runtime
-- Deinitializers enable an instance of a class to free up any resources it has assigned
-- Reference counting allows more than one reference to a class instance
+但类具有结构体没有的额外能力：
+- 继承使一个类能够继承另一个类的特征
+- 类型转换使你能够在运行时检查和解释类实例的类型
+- 析构器使类的实例能够释放其分配的资源
+- 引用计数允许对一个类实例有多个引用
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+你可以使用_点语法_来访问实例的属性。
+在点语法中，你在实例名称后面直接写属性名，用句点 `.` 分隔，中间没有空格：
 ```swift
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+使用同样的语法，我们也可以更新属性的值
 
 ---
 
-One advantage of structures is that have an automatically generated memberwise initializer, which you can use to initialize the member properties of new structure instances.
-Initial values for the properties of the new instance can be passed to the memberwise initializer by name
+结构体的一个优势是它们有一个自动生成的逐成员构造器，你可以用它来初始化新结构体实例的成员属性。
+新实例的属性初始值可以通过名称传递给逐成员构造器

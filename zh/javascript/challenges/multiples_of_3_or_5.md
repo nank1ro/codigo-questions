@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3或5的倍数
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+如果我们列出10以下所有3或5的倍数，我们得到3、5、6和9。这些倍数的和是23。
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+求所提供参数值 `number` 以下所有3或5的倍数之和。
 
 # --before-seed--
 
@@ -41,19 +41,19 @@ function multiplesOf3and5(number) {
 
 # --asserts--
 
-`multiplesOf3and5(10)` should return 23.
+`multiplesOf3and5(10)` 应返回 23。
 
 ```javascript
 tryCatch(multiplesOf3and5(10) === 23);
 ```
 
-`multiplesOf3and5(1000)` should return 233168.
+`multiplesOf3and5(1000)` 应返回 233168。
 
 ```javascript
 tryCatch(multiplesOf3and5(1000) === 233168);
 ```
 
-`multiplesOf3and5(6987)` should return 11390208
+`multiplesOf3and5(6987)` 应返回 11390208
 
 ```javascript
 tryCatch(multiplesOf3and5(6987) === 11390208);

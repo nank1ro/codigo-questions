@@ -2,22 +2,22 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100扇门
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+有 100 扇门排成一行，最初全部关闭。
+你经过这些门 100 次。
+第一次经过时，访问每扇门并"切换"门的状态（如果门是关闭的，就打开它；如果门是打开的，就关闭它）。
+第二次，只访问每第 2 扇门（即第 2、4、6 号门……）并切换状态。
+第三次，访问每第 3 扇门（即第 3、6、9 号门……），依此类推，直到你只访问第 100 扇门。
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+实现一个函数来确定最后一次经过后门的状态。
+将最终结果以数组形式返回，数组中只包含处于打开状态的门的编号。
+> 该方法必须能够处理可变数量的门。
 
 # --seed--
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+给定 100 扇门，返回正确的打开门列表
 
 ```dart
     test("test1", () {
@@ -51,7 +51,7 @@ Given 100 doors, return the correct list of open doors
     });
 ```
 
-Given 10 doors, return the correct list of open doors
+给定 10 扇门，返回正确的打开门列表
 
 ```dart
     test("test2", () {
@@ -60,7 +60,7 @@ Given 10 doors, return the correct list of open doors
     });
 ```
 
-Given 950 doors, return the correct list of open doors
+给定 950 扇门，返回正确的打开门列表
 
 ```dart
     test("test3", () {

@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 第10001个素数
 ---
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+列出前六个素数：2、3、5、7、11和13，我们可以看到第6个素数是13。
 
 # --instructions--
 
-What is the `n`th prime number?
+第`n`个素数是什么？
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function nthPrime(n) {
 
 # --asserts--
 
-`nthPrime(6)` should return 13.
+`nthPrime(6)` 应返回 13。
 
 ```javascript
 tryCatch(nthPrime(6) === 13);
 ```
 
-`nthPrime(10)` should return 29.
+`nthPrime(10)` 应返回 29。
 
 ```javascript
 tryCatch(nthPrime(10) === 29);
 ```
 
-`nthPrime(100)` should return 541.
+`nthPrime(100)` 应返回 541。
 
 ```javascript
 tryCatch(nthPrime(100) === 541);
 ```
 
-`nthPrime(1000)` should return 7919.
+`nthPrime(1000)` 应返回 7919。
 
 ```javascript
 tryCatch(nthPrime(1000) === 7919);
 ```
 
-`nthPrime(10001)` should return 104743.
+`nthPrime(10001)` 应返回 104743。
 
 ```javascript
 tryCatch(nthPrime(10001) === 104743);

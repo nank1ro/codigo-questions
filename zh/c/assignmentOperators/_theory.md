@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+我们已经学过，要给变量赋值可以使用 `=` 号，例如：
 ```c
 int a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+我们已经有一个初始化的变量 `total`
 ```c
 int total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+假设我们想把数字 `2` 加到变量 `total` 上，我们可以写
 ```c
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+没问题，这样可以！但有一种更简短的写法来实现同样的功能：
 ```c
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+符号 `+=` 被称为**加法赋值**。
+它将一个值加到变量的值上，并将结果赋给该变量。
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+与加法赋值类似，我们有**减法赋值** `-=`。
+功能是一样的，唯一的区别是它执行的是减法运算。
+因此，以下两种写法完全相同
 ```c
 num = num - 5;
 // is equal to
@@ -33,9 +33,9 @@ num -= 5;
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**乘法赋值** `*=` 运算符。
+它将变量乘以一个值，并将结果赋给该变量。
+因此，以下两种写法完全相同
 ```c
 num = num * 5;
 // is equal to
@@ -44,9 +44,9 @@ num *= 5;
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**除法赋值** `/=` 运算符。
+它将变量除以一个值，并将结果赋给该变量。
+因此，以下两种写法完全相同
 ```c
 num = num / 5;
 // is equal to
@@ -55,9 +55,9 @@ num /= 5;
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**取模赋值** `%=` 运算符。
+它计算变量与一个值的模，并将结果赋给该变量。
+因此，以下两种写法完全相同
 ```c
 num = num % 5;
 // is equal to

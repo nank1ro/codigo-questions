@@ -2,17 +2,17 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字之和
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+给定一个整数 `num`。
+编写一个程序计算 `num` 的所有数字之和
 
 # --instructions--
 
-Return the sum of digits of `num`
+返回 `num` 的数字之和
 
 # --before-seed--
 
@@ -157,31 +157,31 @@ int main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 的数字之和为 15
 
 ```c
     try_catch(sum_digits(12345) == 15);
 ```
 
-The sum of the digits of 57253 is 22
+57253 的数字之和为 22
 
 ```c
     try_catch(sum_digits(57253) == 22);
 ```
 
-The sum of the digits of 122 is 5
+122 的数字之和为 5
 
 ```c
     try_catch(sum_digits(122) == 5);
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 的数字之和为 60
 
 ```c
     try_catch(sum_digits(91979997) == 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 的数字之和为 46
 
 ```c
     try_catch(sum_digits(2147483647) == 46);

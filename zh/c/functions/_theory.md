@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In C we use the `return_type` followed by the `function` name, for example:
+你可能遇到过这样的情况：你想重复使用一段代码，只是使用不同的值。
+与其重写整段代码，不如定义一个函数，这样可以重复调用，代码也更加简洁。
+在 C 语言中，我们使用 `return_type`（返回类型）后跟 `function`（函数）名称，例如：
 ```c
 void say_hello() {
     printf("Hello!\n");
@@ -15,16 +15,16 @@ int main() {
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+如果我们想指定参数，__函数定义__中的括号不必为空
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+有时我们希望函数__返回__一个值。
+这时可以使用 `return` 关键字。
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+函数可以有多个输入参数，这些参数写在函数的括号内，用逗号分隔。
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";
@@ -44,10 +44,10 @@ int main() {
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+在函数中，我们可以添加一个_可选的注释_来解释函数的功能：
 ```c
 /*
- * Function:  hello_world 
+ * Function:  hello_world
  * --------------------
  * prints "Hello, World!" to the screen
  */
@@ -55,4 +55,4 @@ function hello_world() {
     printf("Hello, World!\n");
 }
 ```
-We can use `//` for a single line comment and `/* */` for a multi line comment
+我们可以使用 `//` 进行单行注释，使用 `/* */` 进行多行注释

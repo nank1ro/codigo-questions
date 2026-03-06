@@ -2,19 +2,19 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: 数字之和
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+给定一个整数 `N`。
+编写一个程序来计算 N 的所有数字之和
 
 # --instructions--
 
-Return the sum of digits of `N`.
+返回 `N` 的数字之和。
 
-Example of function call:
+函数调用示例：
 ```dart
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ void main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345 的数字之和为 15
 
 ```dart
   test('test1', () {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
   });
 ```
 
-The sum of the digits of 57253 is 22
+57253 的数字之和为 22
 
 ```dart
   test('test2', () {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
   });
 ```
 
-The sum of the digits of 122 is 5
+122 的数字之和为 5
 
 ```dart
   test('test3', () {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
   });
 ```
 
-The sum of the digits of 91979997 is 60
+91979997 的数字之和为 60
 
 ```dart
   test('test4', () {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
   });
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647 的数字之和为 46
 
 ```dart
   test('test5', () {

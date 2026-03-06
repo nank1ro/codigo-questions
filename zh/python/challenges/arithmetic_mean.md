@@ -1,19 +1,19 @@
 ---
 language: python
 exerciseType: 1
-title: Arithmetic mean
+title: 算术平均值
 difficulty: 1
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+编写一个名为 `mean` 的函数，用于计算数字向量的_算术平均值_。
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+编写一个函数，返回数字向量的平均值。
 
-Example of function call:
+函数调用示例：
 ```python
 print(mean([1, 2, 3]))
 # prints 2
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4
+`[1, 2, 3, 4, 5, 6, 7]` 的平均值必须等于4
 
 ```python
     def test1(self):
         self.assertEqual(mean([1, 2, 3, 4, 5, 6, 7]), 4, "--err-t1--")
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5
+`[4, 5, 6]` 的平均值必须等于5
 
 ```python
     def test2(self):
         self.assertEqual(mean([4, 5, 6]), 5, "--err-t2--")
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45
+`[12, 34, 56, 78]` 的平均值必须等于45
 
 ```python
     def test3(self):

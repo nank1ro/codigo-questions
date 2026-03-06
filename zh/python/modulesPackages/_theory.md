@@ -1,15 +1,15 @@
-A __module__ is a file that can contain any kind of Python code.
-Modules allow us to use code again and again.
+__模块__是一个可以包含任何类型 Python 代码的文件。
+模块允许我们反复使用代码。
 
 ---
 
-There are a lot of __built-in modules__ that can help us with all sorts of things, like working with dates and times.
-In order to include a module we use the `import` keyword
+有很多__内置模块__可以帮助我们处理各种事情，比如处理日期和时间。
+要引入一个模块，我们使用 `import` 关键字
 
 ---
 
-We can also just import specific functions we need from a module using the `from` and `import` keywords
+我们也可以使用 `from` 和 `import` 关键字从模块中只导入我们需要的特定函数
 
 ---
 
-We can also rename a function by importing it with the `as` keyword
+我们还可以使用 `as` 关键字在导入时重命名函数

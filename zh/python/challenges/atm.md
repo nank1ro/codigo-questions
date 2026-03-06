@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+James想从ATM取N美元。
+ATM只有在N是5的倍数且James的账户有足够的现金来完成取款交易（包括银行手续费）时才会接受交易。
+每次成功取款，银行收取 `0.50$` 的手续费。
+计算一次取款尝试后James的账户余额。
+输入按以下顺序给出：
+1. James希望取出的现金金额在以下范围内：`0 < N <= 2000`。
+2. James的初始余额精确到两位小数，范围如下：`0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+返回取款尝试后的账户余额，精确到两位小数。
+如果账户中没有足够的资金来完成交易，则返回当前银行余额。
 
 # --seed--
 
@@ -37,28 +37,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-Perform a successful transaction
+执行一次成功的交易
 
 ```python
     def test_successful_transaction(self):
         self.assertEqual(account_balance(50, 120.00), 69.50, "--err-t1--")
 ```
 
-Insufficient funds
+余额不足
 
 ```python
     def test_insufficient_funds(self):
         self.assertEqual(account_balance(200, 120.00), 120.00, "--err-t2--")
 ```
 
-Refused transaction, invalid amount
+交易被拒绝，金额无效
 
 ```python
     def test_not_multiple_of_5(self):
         self.assertEqual(account_balance(22, 120.00), 120.00, "--err-t3--")
 ```
 
-Withdraw all money successfully
+成功取出所有资金
 
 ```python
     def test_withdraw_all(self):

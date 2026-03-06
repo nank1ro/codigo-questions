@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+你可能遇到过这样的情况：你想重复使用一段代码，只是其中的一些值不同。
+与其重写整段代码，不如定义一个函数，这样可以反复使用，代码也更加简洁。
+在 Python 中，我们使用 `def` 关键字后跟函数名来定义函数：
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+__函数定义__中的括号不必为空。
+在括号中，我们可以指定参数
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+有时我们希望函数__返回__一个值。
+这时可以使用 `return` 关键字
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+在函数中，我们可以添加一个_可选的注释_来解释函数的功能：
 ```python
 """
 Prints 'Hello World' to the console.

@@ -7,20 +7,20 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+James 想从 ATM 取出 N 美元。
+ATM 只会在 N 是 5 的倍数且 James 的账户有足够的现金来执行取款交易（包括银行手续费）时才会接受交易。
+每次成功取款，银行收取 `0.50$` 的手续费。
+计算 James 在尝试交易后的账户余额。
+输入按以下顺序给出：
+1. James 希望取出的现金金额范围为：`0 < N <= 2000`。
+2. James 的初始余额精确到两位小数，范围为：`0 < B <= 2000`。
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+返回尝试交易后的账户余额，以精确到两位小数的数字表示。
+如果账户中没有足够的资金完成交易，则返回当前银行余额。
 
-Example of function call:
+函数调用示例：
 ```dart
 print(accountBalance(10, 20.00))
 // prints 9.5
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-Perform a successful transaction
+执行一笔成功的交易
 
 ```dart
     test('test1', () {
@@ -54,7 +54,7 @@ Perform a successful transaction
     });
 ```
 
-Insufficient funds
+资金不足
 
 ```dart
     test('test2', () {
@@ -62,7 +62,7 @@ Insufficient funds
     });
 ```
 
-Refused transaction, invalid amount
+交易被拒绝，金额无效
 
 ```dart
     test('test3', () {
@@ -70,7 +70,7 @@ Refused transaction, invalid amount
     });
 ```
 
-Withdraw all money successfully
+成功取出所有资金
 
 ```dart
     test('test4', () {

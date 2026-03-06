@@ -2,22 +2,22 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Ackermann function
+title: 阿克曼函数
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+阿克曼函数是递归函数的经典例子，尤其值得注意的是它不是原始递归函数。它的值增长非常快，其调用树的大小也是如此。
 
-The Ackermann function is usually defined as follows:
+阿克曼函数通常定义如下：
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+它的参数永远不会是负数，并且总是会终止
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+编写一个函数，返回阿克曼函数的值。
 
 # --seed--
 
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` 应该返回 1。
 
 ```swift
     func test1() {
@@ -46,7 +46,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` 应该返回 3。
 
 ```swift
     func test2() {
@@ -54,7 +54,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` 应该返回 13。
 
 ```swift
     func test3() {
@@ -62,7 +62,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` 应该返回 61。
 
 ```swift
     func test4() {

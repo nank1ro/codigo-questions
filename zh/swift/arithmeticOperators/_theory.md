@@ -1,43 +1,43 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+运算符用于对变量和值执行操作。
+让我们从算术运算符开始，特别是**加法** `+` 运算符。
+它用于将两个数字相加，例如：
 ```swift
 print(5 + 3) // 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+让我们继续学习**减法** `-` 运算符。
+它用于将一个数字减去另一个数字，例如：
 ```swift
 print(5 - 3) // 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+让我们来看看**乘法** `*` 运算符。
+它用于将两个数字相乘，例如：
 ```swift
 print(5 * 3) // 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+让我们来看看**除法** `/` 运算符。
+它用于将两个数字相除，例如：
 ```swift
 print(10 / 5) // 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+让我们来看看**取余** `%` 运算符。
+它用于求两个数字相除后的余数，例如：
 ```swift
 print(5 % 2) // 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+结果为 1，因为 5 除以 2 的商为 2，余数为 1
 ```swift
 print(9 % 3) // 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+这个结果为 0，因为 9 除以 3 的商为 3，余数为 0

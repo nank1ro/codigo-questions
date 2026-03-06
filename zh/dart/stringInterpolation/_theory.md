@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+字符串_插值_是一种以编程方式生成字符串的方法。
+在 Dart 中，我们可以使用 `+` 号（连接）将两个或多个字符串组合在一起显示，例如：
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+但使用 `+` 号将数字（如 `10`）与字符串（如 `" friends"`）相加会产生错误，因为它们是不同类型的值
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+字符串插值允许我们显示表达式，例如将字符串与数字相加，而不会产生任何错误。
+将表达式放在 `${}` 中会对其求值。
+返回值会被转换为字符串并插入到结果字符串中
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+如果在标识符名称前放置 `$`，字符串插值将把该标识符的内容插入到字符串中
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+如果 `$` 符号后面的内容无法被识别为程序标识符，你将会遇到一个错误
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+我们还可以在美元符号后插入变量来显示它们的值
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+我们可以使用花括号通过字符串插值随意插入值
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+在 `${}` 中我们还可以放入条件表达式，例如：
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+字符串插值最适合在 print 语句中使用，但我们也可以像普通字符串一样将它们存储在变量中。

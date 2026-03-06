@@ -1,15 +1,14 @@
-> Computers are ideal for repetitive tasks.
+> 计算机非常适合执行重复性任务。
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+最基本的重复形式使用 `while` 关键字。
+它会在控制的_布尔表达式_为 true 时重复执行一个代码块：
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+布尔表达式在循环开始时求值一次，然后在每次进一步迭代代码块之前再次求值。
 
 ```kotlin
 var x = 3
@@ -18,16 +17,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+在这里我们创建了一个变量 `x`，将其初始值赋为 __3__。
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+然后我们使用了 `while` 语句，它将运行代码块直到条件 `x > 0` 为 `true`。
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+在代码块内部，我们**不能**遗漏 `x--` 这一行。
+它递减 `x` 的值，否则我们的循环将会无限执行。
 
 ---
 
-Let's analyze this snippet of code.
+让我们分析这段代码。
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +34,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__：我们将 `counter` 变量初始化为 __0__。
+- __[2]__：_while_ 的条件表达式表示："只要 counter 小于 _100_，就重复执行循环体中的语句"。
+- __[3]__：`+=` 运算符将 _10_ 加到 `counter` 上，并在一次操作中将结果赋给 `counter`。
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+上面代码的输出是 _10_、_20_、_30_、_40_、_50_、_60_、_70_、_80_、_90_、_100_
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+使用 _while_ 还有第二种方式，即与 `do` 关键字结合使用。
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+如你所见，`do-while` 与 `while` 循环非常相似，但有一个重要区别：
+> 循环体在条件求值之前先执行一次。
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+换句话说，`do-while` 的循环体至少会执行一次，即使条件表达式最初为 `false`。
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+相反，如果条件第一次就为 `false`，`while` 循环的循环体则永远不会运行。
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+_while_ 循环支持三种结构性跳转表达式：
+- `break` 终止最近的外层循环。
+- `continue` 跳到最近的外层循环的下一步。
+- `return` 默认从最近的外层函数或匿名函数返回（_我们在讨论函数时会详细介绍_）。
 
-Here is an example of the use of `continue` within a _while_ loop:
+以下是在 _while_ 循环中使用 `continue` 的示例：
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +73,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+如你在 __[1]__ 处所见，当 `i` 等于 _2_ 时，我们跳过并_继续_到下一步。事实上数字 2 从未被打印。
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+以下是在 _while_ 循环中使用 `break` 的示例：
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +88,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+如你在 __[1]__ 处所见，当 `i` 等于 _2_ 时，我们_中断_了循环。事实上数字 2 和 3 从未被打印。

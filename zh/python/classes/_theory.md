@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python 是一种面向对象的编程语言，这意味着它操作称为对象的编程构造。
+你可以把对象看作一个包含数据和函数的单一数据结构；对象的函数称为它的方法。
+例如，当你调用：
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python 会检查 `my_dict` 是否有 `items()` 方法（所有字典都有该方法），如果找到就执行该方法。
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+一个基本的类只由 `class` 关键字和类名组成，例如：
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+让我们用其他内容替换 `pass`。
+`__init__()` 方法是类所必需的，它用于__初始化__所创建的对象。
+`__init__()` 至少接受一个参数 `self`，它指向正在创建的对象。
+你可以把 `__init__()` 看作是类创建每个对象时的启动方法。
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+当然，`__init__()` 方法可以使用比 `self` 更多的参数
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+`__init__()` 的第一个参数用于引用实例对象，按照惯例，该参数称为 `self`。
+如果你添加额外的参数（例如，为动物添加 `gender` 和 `legs`），在 `__init__()` 的方法体中将它们分别赋值给 `self.gender` 和 `self.legs`，这样当你创建 `Animal` 类的实例对象时，你需要为每个实例提供 gender 和 legs，它们将与你创建的特定实例关联
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+定义一个类并不会创建对象。
+要做到这一点，我们需要创建一个类的__实例__
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+当一个类有自己的函数时，这些函数称为__方法__。你已经见过一个这样的方法：`__init__()`。
+但你也可以定义自己的方法！

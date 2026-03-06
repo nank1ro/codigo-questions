@@ -1,35 +1,35 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+数组是一种数据类型，可以用来将一系列不同的信息存储在一个变量名下。
+数组以单一类型存储多个值，并使用**索引**来区分这些值。
+你可以使用以下表达式将元素赋值给数组：
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type` 是数组使用的数据类型，例如 `int`、`double` 等。
+`array_name` 是存储元素的变量名。
+`array_size` 是数组可以容纳的最大大小。
+最后，`item1` 和 `item2` 是我们要保存到数组中的值
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+你可以通过索引访问数组中的单个元素。
+索引就像一个地址，用于标识元素在数组中的位置。
+索引紧跟在数组名之后，放在方括号内，如下所示：
 ```
 list_name[index];
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item in a array like this: `list_name[0]`.
-The second item in a array is at index 1: `list_name[1]`.
+数组索引从 `0` 开始，**而不是** `1`！你可以这样访问数组的第一个元素：`list_name[0]`。
+数组的第二个元素在索引 1 处：`list_name[1]`。
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+数组索引的行为与任何其他变量名一样！它既可以用于访问值，也可以用于赋值。
+你之前看到了如何像这样访问数组索引：
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0]; // Gets the value 5
 ```
-This is how an assignment works:
+赋值操作是这样的：
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
@@ -38,19 +38,19 @@ printf("%d\n", numbers[0]); // prints the new value 1
 
 ---
 
-You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
-It works because every item in the array has the same type, and as such the same size.
-The resulting *length* is the number of items it contains
+你可以通过获取数组的 `sizeof` 来计算数组的字节长度，然后需要将其除以单个元素的大小。
+这样做是可行的，因为数组中的每个元素都具有相同的类型，因此大小也相同。
+得到的*长度*就是数组包含的元素个数
 
 ---
 
-An array in C must have a fixed length.
-You can't add items to the end of an array, after declaring its size.
+在 C 语言中，数组必须具有固定长度。
+在声明数组大小之后，你不能向数组末尾添加元素。
 
 ---
 
-In C programming, you can create an array of arrays.
-These arrays are known as multidimensional arrays, for example:
+在 C 编程中，你可以创建数组的数组。
+这些数组被称为多维数组，例如：
 ```c
 int numbers[2][3] = {{1, 2, 3}, {4, 5, 6}};
 ```

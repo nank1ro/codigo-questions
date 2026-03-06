@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 加法
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+给定两个整数 `num1` 和 `num2`，编写一个程序将这两个数相加
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+编写一个函数，返回两个数的和
 
 # --before-seed--
 
@@ -41,19 +41,19 @@ function addition() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1和3的和必须等于4
 
 ```javascript
 tryCatch(addition(1, 3) === 4);
 ```
 
-The sum of 200 and 210 must equal 410
+200和210的和必须等于410
 
 ```javascript
 tryCatch(addition(200, 210) === 410);
 ```
 
-The sum of 15 and 35 must equal 50
+15和35的和必须等于50
 
 ```javascript
 tryCatch(addition(15, 35) === 50);

@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In JavaScript we use the `function` keyword followed by the name of the function:
+你可能遇到过这样的情况：想要重复使用一段代码，只是需要改变一些值。
+与其重写整段代码，不如定义一个函数，这样可以反复使用，代码也更简洁。
+在 JavaScript 中，我们使用 `function` 关键字后跟函数名来定义函数：
 ```javascript
 function sayHi() {
     console.log("Hello!");
@@ -11,16 +11,16 @@ sayHi();
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+如果我们想指定参数，__函数定义__中的括号不必为空
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+有时我们希望函数能__返回__一个值。
+这就需要用到 `return` 关键字。
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+函数可以有多个输入参数，这些参数写在函数的括号内，用逗号分隔。
 ```javascript
 function sayHello(name, newUser) {
   var greet = `Hello ${name}!`;
@@ -35,8 +35,8 @@ console.log(sayHello("Smith", true));
 
 ---
 
-You can define a _default_ value for any parameter in a function by assigning a value to the parameter after that parameter's type.
-If a default value is defined, you can omit that parameter when calling the function
+你可以通过在参数后面赋值来为函数的任何参数定义_默认_值。
+如果定义了默认值，调用函数时可以省略该参数
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
     // do stuff here
@@ -45,18 +45,18 @@ function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
 
 ---
 
-The __rest parameter__ syntax allows us to represent an indefinite number of arguments as an array.
-Write rest parameters by inserting three period characters `...` before the parameter's name.
-The values passed to a rest parameter are made available within the function's body as an array.
-For example, a rest parameter with a name of `numbers` is made available within the function's body as a constant array called numbers
+__剩余参数__语法允许我们将不定数量的参数表示为一个数组。
+通过在参数名前插入三个句点字符 `...` 来编写剩余参数。
+传递给剩余参数的值在函数体内以数组的形式提供。
+例如，名为 `numbers` 的剩余参数在函数体内以名为 numbers 的常量数组形式提供
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+在函数中，我们可以添加一个_可选注释_来解释函数的作用：
 ```javascript
 // Prints 'Hello World' to the console.
 function helloWorld() {
     console.log("Hello, World!");
 }
 ```
-We can use `//` for a single line comment and `/** */` for a multi line comment
+我们可以使用 `//` 来写单行注释，使用 `/** */` 来写多行注释

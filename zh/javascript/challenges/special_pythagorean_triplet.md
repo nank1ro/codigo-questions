@@ -2,20 +2,20 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特殊勾股数组
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+勾股数组是一组三个自然数，`a` < `b` < `c`，其中 <latex>a^2 + b^2 = c^2</latex>
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+例如，<latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+恰好存在一个勾股数组，使得 `a` + `b` + `c` = 1000。
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+找到满足 `a` + `b` + `c` = `n` 的乘积 `abc`。
 
 # --before-seed--
 
@@ -45,19 +45,19 @@ function specialPythagoreanTriplet(n) {
 
 # --asserts--
 
-`specialPythagoreanTriplet(24)` should return 480.
+`specialPythagoreanTriplet(24)` 应返回 480。
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(24) === 480);
 ```
 
-`specialPythagoreanTriplet(120)` should return 49920, 55080 or 60000.
+`specialPythagoreanTriplet(120)` 应返回 49920、55080 或 60000。
 
 ```javascript
 tryCatch([49920, 55080, 60000].includes(specialPythagoreanTriplet(120)));
 ```
 
-`specialPythagoreanTriplet(1000)` should return 31875000.
+`specialPythagoreanTriplet(1000)` 应返回 31875000。
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(1000) === 31875000);

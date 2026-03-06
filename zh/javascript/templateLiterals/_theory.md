@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+在 JavaScript 中，我们可以使用 `+` 号将两个或多个字符串连接在一起显示，例如：
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+模板字面量允许我们显示表达式，例如将字符串和数字组合在一起，而无需使用 `+` 号。
+要创建有效的模板字面量，你需要使用反引号 \`\` 而不是双引号或单引号。
+你可以使用美元符号和花括号 `${expression}` 在模板字面量中插入变量
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+每个模板字面量语句由两部分组成：用于插入数字或变量的 `${}`，以及普通字符串
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+接下来，我们在花括号中添加不同类型的值，使其作为一条 console.log 语句显示。就像这里，使用 `${5}`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+在花括号中插入像 `friends` 这样的变量也会显示它们的值
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+我们可以在模板字面量中任意多次使用 `${}` 来插入值
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+模板字面量最适合用在打印语句中，但我们也可以像普通字符串一样将它们存储在变量中。

@@ -2,29 +2,29 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: 二换一
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+给定一个名字，返回包含以下消息的字符串：
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+其中 `X` 是给定的名字。
+但是，如果没有提供名字，则返回字符串：
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个返回正确字符串的函数，示例：
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**输入**: `Walter`
+**输出**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**输入**: `James`
+**输出**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**输入**: `Martha`
+**输出**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-No name given
+未提供名字
 
 ```dart
   test('test1', () {
@@ -54,7 +54,7 @@ No name given
   });
 ```
 
-Pass "James" as name
+传入 "James" 作为名字
 
 ```dart
   test('test2', () {
@@ -62,7 +62,7 @@ Pass "James" as name
   });
 ```
 
-Pass "Martha" as name
+传入 "Martha" 作为名字
 
 ```dart
   test('test3', () {

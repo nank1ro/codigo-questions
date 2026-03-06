@@ -2,16 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: 你好世界！
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ 是在新语言或环境中开始编程的传统第一个程序。
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+编写一个返回字符串 "Hello, World!" 的函数。
 
 # --before-seed--
 
@@ -156,7 +156,7 @@ int main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+该函数应返回 "Hello, World!"。
 
 ```c
     try_catch(strcmp(hello(), "Hello, World!") == 0);

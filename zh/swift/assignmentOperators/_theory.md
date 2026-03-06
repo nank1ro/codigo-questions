@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+我们已经学过，可以使用 `=` 号将值赋给变量，例如：
 ```swift
 let a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+我们已经有一个初始化的变量 `total`
 ```swift
 var total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+假设我们想将数字 `2` 加到变量 `total` 上，我们可以这样写
 ```swift
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+没问题，可以运行！但有一种更简短的方式做同样的事：
 ```swift
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+符号 `+=` 称为**加法赋值**。
+它将一个值加到变量的值上，并将结果赋给该变量。
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+与加法赋值一样，我们有**减法赋值** `-=`。
+功能相同，唯一的区别是它执行减法运算。
+因此以下两种写法完全相同
 ```swift
 var num = num - 5
 // is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**乘法赋值** `*=` 运算符。
+它将变量乘以一个值，并将结果赋给该变量。
+因此以下两种写法完全相同
 ```swift
 var num = num * 5
 // is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**除法赋值** `/=` 运算符。
+它将变量除以一个值，并将结果赋给该变量。
+因此以下两种写法完全相同
 ```swift
 num = num / 5
 // is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+让我们来看看**取余赋值** `%=` 运算符。
+它计算变量与一个值的余数，并将结果赋给该变量。
+因此以下两种写法完全相同
 ```swift
 num = num % 5
 // is equal to

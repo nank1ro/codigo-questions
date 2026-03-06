@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+让我们从**等于** `==` 关系运算符开始。
+它返回一个**布尔值**（`True` 或 `False`），表示两个表达式是否相等，例如：
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+让我们继续学习**不等于** `!=` 关系运算符。
+它返回一个**布尔值**（`True` 或 `False`），表示两个表达式是否**不**相等，例如：
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+它与*等于*运算符恰好相反
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+让我们继续学习**大于** `>` 关系运算符。
+它返回一个**布尔值**（`True` 或 `False`），表示一个表达式是否大于另一个，例如：
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+让我们继续学习**小于** `<` 关系运算符。
+它返回一个**布尔值**（`True` 或 `False`），表示一个表达式是否小于另一个，例如：
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+让我们继续学习**大于或等于** `>=` 关系运算符。
+它返回一个**布尔值**（`True` 或 `False`），表示一个表达式是否大于或等于另一个，例如：
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+让我们继续学习**小于或等于** `<=` 关系运算符。
+它返回一个**布尔值**（`True` 或 `False`），表示一个表达式是否小于或等于另一个，例如：
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+现在让我们来看**布尔**运算符，让我们从第一个叫做 `and` 的开始。
+它返回第一个计算结果为 *False* 的操作数，如果所有操作数都为 *True*，则返回最后一个。
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+让我们继续学习 **or** 布尔运算符。
+它返回第一个计算结果为 *True* 的操作数，如果所有操作数都为 *False*，则返回最后一个。
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+最后让我们学习 **not** 布尔运算符。
+它返回一个布尔值，该值是表达式逻辑状态的反转。
 ```python
 >>> not True
 False

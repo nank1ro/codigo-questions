@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+创建一个函数，接受一个数字作为参数，返回 `"Fizz"`、`"Buzz"` 或 `"FizzBuzz"`。
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- 如果数字是 `3` 的倍数，输出应为 `"Fizz"`
+- 如果给定的数字是 `5` 的倍数，输出应为 `"Buzz"`。
+- 如果给定的数字同时是 `3` 和 `5` 的倍数，输出应为 `"FizzBuzz"`。
+- 如果数字既不是 `3` 也不是 `5` 的倍数，则应输出数字本身，如下面的示例所示。
+- 即使数字不是 `3` 或 `5` 的倍数，输出也应始终是字符串。
 
-Examples:
+示例：
 ```javascript
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -53,31 +53,31 @@ function fizzBuzz() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+数字 `3` 必须等于 `"Fizz"`
 
 ```javascript
 tryCatch(fizzBuzz(3) === 'Fizz');
 ```
 
-The number `5` must equal `"Buzz"`
+数字 `5` 必须等于 `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(5) === 'Buzz');
 ```
 
-The number `15` must equal `"FizzBuzz"`
+数字 `15` 必须等于 `"FizzBuzz"`
 
 ```javascript
 tryCatch(fizzBuzz(15) === 'FizzBuzz');
 ```
 
-The number `10` must equal `"Buzz"`
+数字 `10` 必须等于 `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(10) === 'Buzz');
 ```
 
-The number `98` must equal `"98"`
+数字 `98` 必须等于 `"98"`
 
 ```javascript
 tryCatch(fizzBuzz(98) === '98');

@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+当我们想要仅在满足某个条件时执行代码时，就需要进行决策判断。
+假设我们只想在天气好的时候去外面玩。
+在编程中，我们可以保存一个布尔变量 `niceWeather`，并在该变量为 `true` 时执行去外面玩的操作，如下所示：
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+让我们继续上一个例子。
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+我们已经看到 `if` 语句只在条件为 `true` 时执行代码块。
+另一个需要注意的重要事项是**花括号** `{}`，它们表示一个代码块。
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Kotlin we can use the `else` statement, like:
+我们刚刚学习了如何在条件满足时执行一段代码块，现在让我们来看看如何在第一个条件不满足时执行另一段代码块。
+如果天气好，我们就去外面玩；否则，我们就待在家里。
+在 Kotlin 中，我们可以使用 `else` 语句，如下所示：
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+假设我们还有另一个条件需要检查，如以下示例所示：
 ```kotlin
 var num = 3
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     println("do something else")
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+这段代码的输出是 `the number is 3`。
+首先，我们检查数字是否等于 2，结果为 false。
+然后我们继续检查第二个语句，看 `num` 是否等于 3，结果为 true，所以我们执行接下来的代码块，打印 `the number is 3`
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+我们可以添加任意多个 `else if` 语句，没有限制
 ```kotlin
 var num = 4
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     println("the number is 6")
 }
 ```
-and the output of this code is `the number is 4`.
+这段代码的输出是 `the number is 4`。
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+我们还可以在一个条件语句（`if`、`else if` 或 `else`）中嵌套另一个条件语句，以创建更复杂的结构。
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -87,14 +87,14 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+这段代码的输出是 `the number is 4`。
 
 ---
 
-The _elvis operator_ `a ?: b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `null`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The elvis operator is shorthand for the code below:
+_Elvis 运算符_ `a ?: b` 如果可选值 `a` 包含值，则将其解包；如果 `a` 为 `null`，则返回默认值 `b`。
+表达式 `a` 始终是可选类型。
+表达式 `b` 必须与 `a` 中存储的类型匹配。
+Elvis 运算符是以下代码的简写形式：
 ```kotlin
 if (a != null) a else b
 ```

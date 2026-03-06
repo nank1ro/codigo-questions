@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**字典**与列表和元组类似，但你通过查找*键*而不是索引来访问值。
+键可以是任何字符串或数字。
+字典用花括号括起来，如下所示：
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+这是一个名为 `d` 的字典，包含三个*键值对*。
+键 `key1` 指向值 `1`，`key2` 指向 `2`，以此类推。
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+通过键访问字典的值就像通过索引访问列表的值一样：
 ```python
 user['age']
-# gets the age value from the user dictionary
+# 从 user 字典中获取 age 的值
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+与列表一样，字典是_可变的_。
+这意味着它们在创建后可以被修改。
+其中一个优势是我们可以在字典创建后向其添加新的_键/值对_，如下所示：
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+字典的长度 `len()` 是它拥有的_键值对_的数量。
+每对只计算一次，即使值是一个列表也是如此。（没错：你也可以在字典中放入列表！）
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+因为字典是可变的，所以它们可以通过多种方式进行修改。可以使用 `del` 命令从字典中删除元素：
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+将从字典中删除键 `key_name` 及其关联的值。
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+如果我们想列出字典的所有键怎么办？
+可以使用 `keys()` 方法。
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+如果我们想列出字典的所有值怎么办？
+可以使用 `values()` 方法。
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+与列表一样，我们可以使用 `for..in` 关键字遍历字典元素。
+要在循环中同时获取键和值，我们可以使用 `items()` 方法：
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+我们也可以使用循环中用过的 `in` 关键字来判断字典是否包含某个__键__
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+要向字典中__添加__或__修改__值，我们也可以使用 `update()` 方法，将要添加的_键值对_放在花括号中
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+如果我们想从字典中__删除__一个值怎么办？
+可以使用 `pop()` 方法：
 ```python
 dict_name.pop("key_name")
 ```

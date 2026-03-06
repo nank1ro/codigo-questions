@@ -2,18 +2,18 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: 加法
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+给定两个整数 `num1` 和 `num2`，编写一个程序将这两个数相加
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
+编写一个返回两个数之和的函数。
 
-Example of function call:
+函数调用示例：
 ```dart
 print(addition(1, 2));
 // prints 3
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+1 和 3 的和必须等于 4
 
 ```dart
   test('test1', () {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
   });
 ```
 
-The sum of 200 and 210 must equal 410
+200 和 210 的和必须等于 410
 
 ```dart
   test('test2', () {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
   });
 ```
 
-The sum of 15 and 35 must equal 50
+15 和 35 的和必须等于 50
 
 ```dart
   test('test3', () {

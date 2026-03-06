@@ -2,30 +2,30 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: 雨滴
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+你的任务是将一个数字转换为包含与某些潜在因数对应的雨滴声的字符串。
+因数是能整除另一个数字且没有余数的数字。
+测试一个数字是否是另一个数字的因数，最简单的方法是使用取模运算。
+雨滴的规则是，如果给定的数字：
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- 有因数 3，则在结果中添加 'Pling'。
+- 有因数 5，则在结果中添加 'Plang'。
+- 有因数 7，则在结果中添加 'Plong'。
+- 没有 3、5 或 7 作为因数，则结果应为该数字本身。
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+编写一个返回正确字符串的函数，示例：
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 有因数 7，但没有 3 或 5，所以结果是 `"Plong"`。
+- 30 同时有因数 3 和 5，但没有 7，所以结果是 `"PlingPlang"`。
+- 34 没有因数 3、5 或 7，所以结果是 `"34"`。
 
-Example of function call:
+函数调用示例：
 ```dart
 print(raindrops(28))
 // prints "Plong"
@@ -51,7 +51,7 @@ void main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+1 的声音是 "1"
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The sound for 1 is "1"
   });
 ```
 
-The sound for 3 is "Pling"
+3 的声音是 "Pling"
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The sound for 3 is "Pling"
   });
 ```
 
-The sound for 5 is "Plang"
+5 的声音是 "Plang"
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The sound for 5 is "Plang"
   });
 ```
 
-The sound for 7 is "Plong"
+7 的声音是 "Plong"
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The sound for 7 is "Plong"
   });
 ```
 
-The sound for 6 is "Pling"
+6 的声音是 "Pling"
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The sound for 6 is "Pling"
   });
 ```
 
-The sound for 8 is "8"
+8 的声音是 "8"
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The sound for 8 is "8"
   });
 ```
 
-The sound for 9 is "Pling"
+9 的声音是 "Pling"
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The sound for 9 is "Pling"
   });
 ```
 
-The sound for 10 is "Plang"
+10 的声音是 "Plang"
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The sound for 10 is "Plang"
   });
 ```
 
-The sound for 14 is "Plong"
+14 的声音是 "Plong"
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The sound for 14 is "Plong"
   });
 ```
 
-The sound for 15 is "PlingPlang"
+15 的声音是 "PlingPlang"
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The sound for 15 is "PlingPlang"
   });
 ```
 
-The sound for 21 is "PlingPlong"
+21 的声音是 "PlingPlong"
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The sound for 21 is "PlingPlong"
   });
 ```
 
-The sound for 25 is "Plang"
+25 的声音是 "Plang"
 
 ```dart
   test('test12', () {
@@ -147,7 +147,7 @@ The sound for 25 is "Plang"
   });
 ```
 
-The sound for 27 is "Pling"
+27 的声音是 "Pling"
 
 ```dart
   test('test13', () {
@@ -155,7 +155,7 @@ The sound for 27 is "Pling"
   });
 ```
 
-The sound for 35 is "PlangPlong"
+35 的声音是 "PlangPlong"
 
 ```dart
   test('test14', () {
@@ -163,7 +163,7 @@ The sound for 35 is "PlangPlong"
   });
 ```
 
-The sound for 49 is "Plong"
+49 的声音是 "Plong"
 
 ```dart
   test('test15', () {
@@ -171,7 +171,7 @@ The sound for 49 is "Plong"
   });
 ```
 
-The sound for 52 is "52"
+52 的声音是 "52"
 
 ```dart
   test('test16', () {
@@ -179,7 +179,7 @@ The sound for 52 is "52"
   });
 ```
 
-The sound for 105 is "PlingPlangPlong"
+105 的声音是 "PlingPlangPlong"
 
 ```dart
   test('test17', () {
@@ -187,7 +187,7 @@ The sound for 105 is "PlingPlangPlong"
   });
 ```
 
-The sound for 3125 is "Plang"
+3125 的声音是 "Plang"
 
 ```dart
   test('test18', () {

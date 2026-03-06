@@ -1,5 +1,5 @@
-A String _template_ is a programmatic way to generate a String.
-In Kotlin we can use the `+` sign (concatenation) to display two or more strings together, like:
+字符串_模板_是一种以编程方式生成字符串的方法。
+在 Kotlin 中，我们可以使用 `+` 号（连接符）将两个或多个字符串连接在一起显示，例如：
 ```kotlin
 println("Hello " + "Kotlin!")
 // prints "Hello Kotlin!"
@@ -7,33 +7,33 @@ println("Hello " + "Kotlin!")
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+但是使用 `+` 号将数字（如 '10'）与字符串（如 ` "friends"`）相加会产生错误，因为它们是不同类型的值
 
 ---
 
-String templates allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+字符串模板允许我们在不产生任何错误的情况下显示表达式，例如将字符串与数字相加。
+将表达式放在 `${}` 中可以对其求值。
+返回值会被转换为字符串并插入到结果字符串中
 
 ---
 
-If you put a $ before an identifier name, the String template will insert that identifier's contents into the String
+如果在标识符名称前放置 `$`，字符串模板会将该标识符的内容插入到字符串中
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, nothing special happens
+如果 `$` 符号后面的内容不能被识别为程序标识符，则不会发生任何特殊处理
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+我们还可以在美元符号后插入变量来显示它们的值
 
 ---
 
-We can use curly brackets to insert values as often as we like inside the string templates
+我们可以使用花括号在字符串模板中随意插入值
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+在 `${}` 中我们还可以放置条件表达式，例如：
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
 // prints Correct
@@ -41,4 +41,4 @@ println("${if (true) "Correct" else "Wrong"}")
 
 ---
 
-String templates are best used in print statements, but we can also store them in variables like normal strings.
+字符串模板最适合用在打印语句中，但我们也可以像普通字符串一样将它们存储在变量中。

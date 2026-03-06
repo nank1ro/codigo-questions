@@ -2,24 +2,24 @@
 language: swift
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: 罗马数字转换器
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+创建一个函数，接受一个正整数作为参数，并返回一个包含该整数罗马数字表示的字符串。现代罗马数字的书写方式是从最左边的数字开始，分别表示每个数字，跳过值为零的数字。
 
 # --instructions--
 
-Examples:
+示例：
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- 所有罗马数字应以大写形式返回。
+- 此表示法能表示的最大数字是 3,999。
 
 # --seed--
 
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `2` must equal `II` 
+数字 `2` 必须等于 `II`
 
 ```swift
     func test1() {
@@ -48,7 +48,7 @@ The number `2` must equal `II`
     }
 ```
 
-The number `12` must equal `XII` 
+数字 `12` 必须等于 `XII`
 
 ```swift
     func test2() {
@@ -56,7 +56,7 @@ The number `12` must equal `XII`
     }
 ```
 
-The number `16` must equal `XVI` 
+数字 `16` 必须等于 `XVI`
 
 ```swift
     func test3() {
@@ -64,7 +64,7 @@ The number `16` must equal `XVI`
     }
 ```
 
-The number `44` must equal `XLIV` 
+数字 `44` 必须等于 `XLIV`
 
 ```swift
     func test4() {
@@ -72,7 +72,7 @@ The number `44` must equal `XLIV`
     }
 ```
 
-The number `68` must equal `LXVIII` 
+数字 `68` 必须等于 `LXVIII`
 
 ```swift
     func test5() {
@@ -80,7 +80,7 @@ The number `68` must equal `LXVIII`
     }
 ```
 
-The number `400` must equal `CD` 
+数字 `400` 必须等于 `CD`
 
 ```swift
     func test6() {
@@ -88,7 +88,7 @@ The number `400` must equal `CD`
     }
 ```
 
-The number `798` must equal `DCCXCVIII` 
+数字 `798` 必须等于 `DCCXCVIII`
 
 ```swift
     func test7() {
@@ -96,7 +96,7 @@ The number `798` must equal `DCCXCVIII`
     }
 ```
 
-The number `1000` must equal `M` 
+数字 `1000` 必须等于 `M`
 
 ```swift
     func test8() {
@@ -104,7 +104,7 @@ The number `1000` must equal `M`
     }
 ```
 
-The number `3999` must equal `MMMCMXCIX` 
+数字 `3999` 必须等于 `MMMCMXCIX`
 
 ```swift
     func test9() {
@@ -112,7 +112,7 @@ The number `3999` must equal `MMMCMXCIX`
     }
 ```
 
-The number `649` must equal `DCXLIX` 
+数字 `649` 必须等于 `DCXLIX`
 
 ```swift
     func test10() {
@@ -120,7 +120,7 @@ The number `649` must equal `DCXLIX`
     }
 ```
 
-The number `1666` must equal `MDCLXVI` 
+数字 `1666` 必须等于 `MDCLXVI`
 
 ```swift
     func test11() {
