@@ -1,31 +1,31 @@
-Variables are containers for storing values.
-Every variable in Dart is an object (`Object`).
-To create a variable, we have to give it a __name__ taking into account the fact that it must not contain spaces.
-Take a look at the following:
+Zmienne to kontenery do przechowywania wartości.
+Każda zmienna w Dart jest obiektem (`Object`).
+Aby utworzyć zmienną, musimy nadać jej __nazwę__, pamiętając, że nie może zawierać spacji.
+Przyjrzyj się poniższemu:
 
 ```dart
 int number = 1;
 ```
 
-This statement declares a variable called `number` of type `int`.
-It then sets the value of the variable to number `1`.
-The `int` part of the declaration is known as __type annotation__, and tells Dart explicitly the type of the variable.
+Ta instrukcja deklaruje zmienną o nazwie `number` typu `int`.
+Następnie ustawia wartość zmiennej na liczbę `1`.
+Część `int` deklaracji jest znana jako __adnotacja typu__ i jawnie mówi Dart, jakiego typu jest zmienna.
 
 ---
 
-In the previous example, we saw the creation of a variable:
+W poprzednim przykładzie widzieliśmy tworzenie zmiennej:
 
 ```dart
 int number = 1;
 ```
 
-Do not be fooled by the symbol `=`.
-It is not the equality symbol as in mathematics, but is known as the __assignment operator__ because it assigns a value to the variable.
-The equality sign, on the other hand, is `==`.
+Nie daj się zmylić symbolem `=`.
+Nie jest to symbol równości jak w matematyce, ale jest znany jako __operator przypisania__, ponieważ przypisuje wartość zmiennej.
+Znak równości natomiast to `==`.
 
 ---
 
-If you want to change the value of a variable, simply assign it a different value of the same type:
+Jeśli chcesz zmienić wartość zmiennej, po prostu przypisz jej inną wartość tego samego typu:
 
 ```dart
 int number = 1;
@@ -34,28 +34,28 @@ number = 2;
 
 ---
 
-The `int` type allows whole numbers to be stored.
-To save decimal numbers instead, we can use the `double` type:
+Typ `int` pozwala przechowywać liczby całkowite.
+Aby zamiast tego zapisać liczby dziesiętne, możemy użyć typu `double`:
 
 ```dart
 double pi = 3.14159;
 ```
 
-This example is similar to the previous one. This time, however, the variable is of type `double`, a type which allows decimal numbers to be stored with high precision.
+Ten przykład jest podobny do poprzedniego. Tym razem jednak zmienna jest typu `double`, który pozwala przechowywać liczby dziesiętne z wysoką precyzją.
 
 ---
 
-Dart is a __type-safe__ language.
-This means that when you assign a type to a variable, you cannot change it afterwards. Here is an example:
+Dart jest językiem __bezpiecznym pod względem typów__.
+Oznacza to, że gdy przypisujesz typ do zmiennej, nie możesz go później zmienić. Oto przykład:
 
 ```dart
 int integerNumber = 1;
 integerNumber = 3.14159; // Error
 ```
 
-3.14159` is of type `double`, but you've already defined `integerNumber` with type `int`.
+`3.14159` jest typu `double`, ale już zdefiniowałeś `integerNumber` z typem `int`.
 
-Of course, occasionally it might be useful to assign related types to the same variable. For example you might want a variable `integerNumber` which accepts both `int` and `double` numbers, like here:
+Oczywiście, czasami może być przydatne przypisanie powiązanych typów do tej samej zmiennej. Na przykład możesz chcieć zmiennej `integerNumber`, która akceptuje zarówno liczby `int`, jak i `double`, jak tutaj:
 
 ```dart
 num number;
@@ -64,13 +64,13 @@ number = 3.14159; // OK
 number = '10'; // Error
 ```
 
-Both `int` and `double` extend `num`, so both types are accepted.
-However, if we try to assign a `String` the compiler returns an error.
+Zarówno `int`, jak i `double` rozszerzają `num`, więc oba typy są akceptowane.
+Jednak jeśli spróbujemy przypisać `String`, kompilator zwróci błąd.
 
 ---
 
-If you like to live by risk, we can completely ignore the __type-safety__ of the language by using the `dynamic` type.
-This allows you to assign any type of value to the variable.
+Jeśli lubisz ryzyko, możemy całkowicie zignorować __bezpieczeństwo typów__ języka, używając typu `dynamic`.
+Pozwala to przypisać dowolny typ wartości do zmiennej.
 
 ```dart
 dynamic number;
@@ -79,76 +79,76 @@ number = 3.14159; // OK
 number = '10'; // OK
 ```
 
-This approach is strongly discouraged as errors are no longer intercepted by the code's _analyzer_, but only _runtime_ (when the programme is running).
+To podejście jest zdecydowanie odradzane, ponieważ błędy nie są już przechwytywane przez _analizator_ kodu, ale tylko w _czasie wykonania_ (gdy program działa).
 
 ---
 
-Dart supports __type inference__.
-It is not necessary to indicate the type of a variable as Dart can infer its type.
-The `var` keyword tells Dart to use the most appropriate type.
+Dart obsługuje __wnioskowanie o typie__.
+Nie jest konieczne podawanie typu zmiennej, ponieważ Dart może wywnioskować jej typ.
+Słowo kluczowe `var` mówi Dart, aby użył najbardziej odpowiedniego typu.
 
 ```dart
 var number = 5;
 ```
 
-It is not necessary to tell Dart that the number `5` is of type `int`.
-Dart infers the type and makes `number` of type `int`.
+Nie jest konieczne informowanie Dart, że liczba `5` jest typu `int`.
+Dart wnioskuje typ i sprawia, że `number` jest typu `int`.
 
 ---
 
-Dart supports two different types of "_variables_" whose value never changes. They are declared with the keywords `const` and `final`.
-Let's start by seeing what is meant by `const`.
+Dart obsługuje dwa różne typy "_zmiennych_", których wartość nigdy się nie zmienia. Są one deklarowane za pomocą słów kluczowych `const` i `final`.
+Zacznijmy od zobaczenia, co oznacza `const`.
 
-## const (constants)
+## const (stałe)
 
-Variables whose value you can change are known as __mutable_data__. Mutable data is often overused and can present problems. It is easy to lose track of all the points in the code that can change the value of a variable.
+Zmienne, których wartość można zmieniać, są znane jako __dane mutowalne__. Dane mutowalne są często nadużywane i mogą powodować problemy. Łatwo jest stracić kontrolę nad wszystkimi miejscami w kodzie, które mogą zmienić wartość zmiennej.
 
-For this reason, you should use `const`ants instead of `var`iables whenever possible. These variables that cannot change value are also called __immutable data__.
+Z tego powodu powinieneś używać `const`ant zamiast `var`iables, gdy tylko jest to możliwe. Te zmienne, których wartość nie może się zmieniać, są również nazywane __danymi niemutowalnymi__.
 
-To create a constant in Dart we use the `const` keyword:
+Aby stworzyć stałą w Dart, używamy słowa kluczowego `const`:
 
 ```dart
 const number = 5;
 ```
 
-Just like `var`, Dart with the __type inference__ determines that `number` is of type `int`.
+Podobnie jak `var`, Dart z __wnioskowaniem o typie__ określa, że `number` jest typu `int`.
 
 ---
 
-When you have declared a constant variable, you can no longer change its value. For example:
+Gdy zadeklarowałeś stałą zmienną, nie możesz już zmieniać jej wartości. Na przykład:
 
 ```dart
 const number = 2;
 number = 3; // Error
 ```
 
-This code produces the error:
+Ten kod powoduje błąd:
 > Constant variables can't be assigned a value.
 
-That is, it is not possible to change the value of a constant variable.
+Oznacza to, że nie jest możliwa zmiana wartości stałej zmiennej.
 
 ---
 
-You will often find yourself in the situation of wanting to use a constant but not knowing the value at compile time. You will only know the value after the program has started execution.
-This type of constant is known as a __runtime constant__.
+Często znajdziesz się w sytuacji, gdy chcesz użyć stałej, ale nie znasz wartości w czasie kompilacji. Poznasz ją dopiero po uruchomieniu programu.
+Ten typ stałej jest znany jako __stała czasu wykonania__.
 
-In Dart `const` is only used for __compile-time constants__ for values that can be determined by the compiler before the programme is executed.
+W Dart `const` jest używane tylko dla __stałych czasu kompilacji__ dla wartości, które mogą być określone przez kompilator przed uruchomieniem programu.
 
-If you cannot create a constant variable because you do not know its compile-time value, then you must use the `final` keyword to make the variable a __runtime constant__.
+Jeśli nie możesz utworzyć stałej zmiennej, ponieważ nie znasz jej wartości w czasie kompilacji, musisz użyć słowa kluczowego `final`, aby uczynić zmienną __stałą czasu wykonania__.
 
-There are many reasons why you cannot know the value of a variable before running the program. For example, you would have to get the value from the server, or ask the user for it.
+Istnieje wiele powodów, dla których nie możesz znać wartości zmiennej przed uruchomieniem programu. Na przykład musiałbyś pobrać wartość z serwera lub poprosić użytkownika o jej podanie.
 
 ---
 
-Here is an example of a value that can only be obtained at runtime:
+Oto przykład wartości, którą można uzyskać tylko w czasie wykonania:
 
 ```dart
 final currentHour = DateTime.now().hour;
 ```
 
-`DateTime.now()` is a function to get the current date and time of when the code is executed.
-With the `hour` field we access the number of hours that have passed since the start of the day.
+`DateTime.now()` to funkcja pobierająca bieżącą datę i godzinę wykonania kodu.
+Za pomocą pola `hour` uzyskujemy liczbę godzin, które upłynęły od początku dnia.
 
-Since the value of `hour` is different depending on when the code is executed, this can be defined as the _runtime_ value.
+Ponieważ wartość `hour` jest różna w zależności od tego, kiedy kod jest wykonywany, można to zdefiniować jako wartość _runtime_.
 
-If you try to change the value of a `final` variable, you get an error.
+Jeśli spróbujesz zmienić wartość zmiennej `final`, otrzymasz błąd.

@@ -7,14 +7,14 @@ title: Addition
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Dane są dwie liczby całkowite `num1` i `num2`. Napisz program, który dodaje te dwie liczby.
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
-> HINT: omit the argument labels with the `_` (underscore)
+Napisz funkcję, która zwraca sumę dwóch liczb.
+> WSKAZÓWKA: pomiń etykiety argumentów używając `_` (podkreślnika)
 
-Example of function call:
+Przykład wywołania funkcji:
 ```swift
 print(addition(1, 2))
 // prints 3
@@ -39,7 +39,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Suma 1 i 3 musi być równa 4
 
 ```swift
     func testAddition1() {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
     }
 ```
 
-The sum of 200 and 210 must equal 410
+Suma 200 i 210 musi być równa 410
 
 ```swift
     func testAddition2() {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
     }
 ```
 
-The sum of 15 and 35 must equal 50
+Suma 15 i 35 musi być równa 50
 
 ```swift
     func testAddition3() {

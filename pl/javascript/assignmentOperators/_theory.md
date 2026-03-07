@@ -1,65 +1,65 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Już wiemy, że aby przypisać wartość do zmiennej, możemy użyć znaku `=`, na przykład:
 ```javascript
 let a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+Mamy już zainicjowaną zmienną `total`
 ```javascript
 var total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Powiedzmy, że chcemy dodać liczbę `2` do zmiennej `total`, możemy napisać
 ```javascript
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+Działa! Ale istnieje krótszy sposób na zrobienie tego samego:
 ```javascript
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+Znak `+=` nazywa się **operatorem przypisania z dodawaniem**.
+Dodaje wartość do wartości zmiennej i przypisuje wynik do tej zmiennej.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Podobnie jak przy przypisaniu z dodawaniem, mamy **operator przypisania z odejmowaniem** `-=`.
+Działanie jest takie samo, jedyna różnica polega na tym, że wykonuje odejmowanie.
+Poniższe zapisy są równoważne:
 ```javascript
 var num = num - 5;
-// is equal to
+// jest równoważne z
 num -= 5;
 ```
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania z mnożeniem** `*=`.
+Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe zapisy są równoważne:
 ```javascript
 var num = num * 5;
-// is equal to
+// jest równoważne z
 num *= 5;
 ```
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania z dzieleniem** `/=`.
+Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe zapisy są równoważne:
 ```javascript
 num = num / 5;
-// is equal to
+// jest równoważne z
 num /= 5;
 ```
 
 ---
 
-Let's see the **remainder assignment** `%=` operator.
-It computes the remainder of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania z resztą** `%=`.
+Oblicza resztę z dzielenia zmiennej przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe zapisy są równoważne:
 ```javascript
 num = num % 5;
-// is equal to
+// jest równoważne z
 num %= 5;
 ```

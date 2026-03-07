@@ -1,15 +1,15 @@
-**Objects** are similar to arrays, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Objects are enclosed in curly brackets, like so:
+**Obiekty** są podobne do tablic, ale dostęp do wartości uzyskuje się poprzez wyszukiwanie *klucza* zamiast indeksu.
+Klucz może być dowolnym ciągiem znaków lub liczbą.
+Obiekty są otoczone nawiasami klamrowymi, jak poniżej:
 ```javascript
 var objectName = {"key1": 1, "key2": 2, "key3": 3};
 ```
-This is a dictionary called `objectName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Jest to słownik o nazwie `objectName` z trzema *parami klucz-wartość*.
+Klucz `key1` wskazuje na wartość `1`, `key2` na `2` i tak dalej.
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+Dostęp do wartości słownika za pomocą klucza jest podobny do dostępu do wartości tablicy za pomocą indeksu:
 ```javascript
 // gets the age value from the user dictionary
 user['age'];
@@ -17,35 +17,35 @@ user['age'];
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Podobnie jak tablice, słowniki są _mutowalne_.
+Oznacza to, że można je zmieniać po ich utworzeniu (o ile nie są zadeklarowane jako stałe).
+Jedną z zalet jest to, że możemy dodawać nowe _pary klucz/wartość_ do słownika po jego utworzeniu w następujący sposób:
 ```javascript
 dictName[newKeyName] = newValue;
 ```
 
 ---
 
-Because dictionaries variables are mutable, they can be changed in many ways.
-Items can be removed from a dictionary with the 'delete' keyword:
+Ponieważ zmienne słownikowe są mutowalne, można je zmieniać na wiele sposobów.
+Elementy można usuwać ze słownika za pomocą słowa kluczowego 'delete':
 ```javascript
 delete dictName[keyName];
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+usunie klucz `keyName` i powiązaną z nim wartość ze słownika.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `Object.keys()` method.
+Co zrobić, jeśli chcemy wylistować wszystkie klucze słownika?
+Do tego służy metoda `Object.keys()`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `Object.values()` method.
+Co zrobić, jeśli chcemy wylistować wszystkie wartości słownika?
+Do tego służy metoda `Object.values()`.
 
 ---
 
-As for arrays, we can loop between dictionary elements using the `Object.entries()` method.
+Podobnie jak w przypadku tablic, możemy iterować po elementach słownika za pomocą metody `Object.entries()`.
 ```javascript
 var user = {"first_name": "John", "last_name": "Hood", "age": 30};
 for (const [key, value] of Object.entries(user)) {

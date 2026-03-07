@@ -7,15 +7,15 @@ title: Leap Year
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+W roku kalendarzowym jest dokładnie 365,25 dnia. Jednak z czasem prowadziłoby to do zamieszania, ponieważ ludzie liczą zazwyczaj przez dokładną podzielność przez 1, a nie z ułamkami dziesiętnymi. Aby tego uniknąć, postanowiono zbierać wszystkie 0,25 dnia w każdym cyklu czteroletnim i dawać danemu rokowi 366 dni (w tym 29 lutego jako dzień przestępny), nazywając go __rokiem przestępnym__. Pozostałe trzy lata w cyklu czteroletnim mają tylko 365 dni i __nie są latami przestępnymi__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `Date` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+W tym wyzwaniu wchodzimy na wyższy poziom — masz określić, czy dany rok jest rokiem przestępnym, bez używania klasy `Date`, instrukcji `switch`, __bloków if__, __bloków if-else__, __operacji trójargumentowej__ (`x ? a : b`) ani operatorów logicznych __AND__ (`&&`) i __OR__ (`||`), z wyjątkiem operatora __NOT__ (`!`).
 
-Return `true` if it's a leap year, `false` otherwise.
+Zwróć `true`, jeśli jest to rok przestępny, w przeciwnym razie `false`.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```kotlin
 println(leapYear(2000))
 // prints true
@@ -51,7 +51,7 @@ fun main() {
 
 # --asserts--
 
-The use of `Date`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+Używanie `Date`, `switch`, `if`, `else`, `&&`, `||` lub `?` jest niedozwolone.
 
 ```json
 {
@@ -61,73 +61,73 @@ The use of `Date`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+Rok `2016` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2016) == true)
 ```
 
-The year `1996` is a leap year.
+Rok `1996` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(1996) == true)
 ```
 
-The year `1600` is a leap year.
+Rok `1600` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(1600) == true)
 ```
 
-The year `2020` is a leap year.
+Rok `2020` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2020) == true)
 ```
 
-The year `2000` is a leap year.
+Rok `2000` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2000) == true)
 ```
 
-The year `2008` is a leap year.
+Rok `2008` jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2008) == true)
 ```
 
-The year `1521` is not a leap year.
+Rok `1521` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(1521) == false)
 ```
 
-The year `1800` is not a leap year.
+Rok `1800` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(1800) == false)
 ```
 
-The year `2007` is not a leap year.
+Rok `2007` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2007) == false)
 ```
 
-The year `2002` is not a leap year.
+Rok `2002` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2002) == false)
 ```
 
-The year `1979` is not a leap year.
+Rok `1979` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(1979) == false)
 ```
 
-The year `2006` is not a leap year.
+Rok `2006` nie jest rokiem przestępnym.
 
 ```kotlin
     tryCatch(leapYear(2006) == false)

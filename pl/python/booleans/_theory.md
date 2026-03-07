@@ -1,10 +1,10 @@
-Booleans represent one of two values: `True` or `False`.
-You can evaluate any expression in Python, and get one of two answers, `True` or `False`.
+Wartości logiczne (booleany) reprezentują jedną z dwóch wartości: `True` lub `False`.
+Możesz ocenić dowolne wyrażenie w Pythonie i uzyskać jedną z dwóch odpowiedzi: `True` lub `False`.
 
 ---
 
-We can store the boolean value `True` in a variable just like a number or a string.
+Możemy przechować wartość logiczną `True` w zmiennej tak samo jak liczbę lub ciąg znaków.
 
 ---
 
-The opposite value of `True` is `False`
+Przeciwna wartość do `True` to `False`

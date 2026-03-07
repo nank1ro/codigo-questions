@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `True`, like:
+Podejmowanie decyzji jest wymagane, gdy chcemy wykonać kod tylko wtedy, gdy spełniony jest określony warunek.
+Załóżmy, że chcemy bawić się na zewnątrz tylko wtedy, gdy pogoda jest ładna.
+W programowaniu możemy zapisać zmienną logiczną `nice_weather` i wykonać czynność zabawy na zewnątrz `if` ta zmienna jest `True`, jak:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -9,24 +9,24 @@ if (nice_weather):
 
 ---
 
-Let's continue with the previous example.
+Kontynuujmy poprzedni przykład.
 ```python
 nice_weather = True
 if (nice_weather):
     # play outside
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `True`.
-Another important thing to consider is represented by the **colons** `:` and the **indentation**, which indicate a code block start.
-Indentation refers to the spaces at the beginning of a code line.
-Where in other programming languages the indentation in code is for readability only, the indentation in Python is essential.
-You can use your favorite number of spaces (2, 4, 6, 8), noting that the preferred is 4.
-Here in the app, we suggest using the **TAB** key to indent your line of codes
+Widzieliśmy, że instrukcja `if` wykonuje blok kodu tylko wtedy, gdy warunek jest `True`.
+Inną ważną rzeczą do rozważenia są **dwukropki** `:` i **wcięcia**, które wskazują początek bloku kodu.
+Wcięcie odnosi się do spacji na początku linii kodu.
+Podczas gdy w innych językach programowania wcięcie w kodzie służy tylko do czytelności, w Pythonie wcięcie jest niezbędne.
+Możesz używać dowolnej liczby spacji (2, 4, 6, 8), przy czym preferowana jest 4.
+Tutaj w aplikacji sugerujemy użycie klawisza **TAB** do wcięcia wierszy kodu
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In Python we can use the `else` statement, like:
+Właśnie zobaczyliśmy, jak wykonać blok kodu, gdy wystąpi warunek, teraz zobaczmy, jak wykonać inny blok kodu, gdy pierwszy warunek nie jest spełniony.
+Idziemy bawić się na zewnątrz, jeśli pogoda jest ładna; w przeciwnym razie zostajemy w domu.
+W Pythonie możemy użyć instrukcji `else`, jak:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -37,7 +37,7 @@ else:
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+Załóżmy, że mamy kolejny warunek do sprawdzenia, jak w tym przykładzie:
 ```python
 num = 3
 if (num == 2):
@@ -47,13 +47,13 @@ elif (num == 3):
 else:
     print("do something else")
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+a wynik tego kodu to `the number is 3`.
+Przede wszystkim sprawdźmy, czy liczba jest równa 2, to jest fałsz.
+Przejdźmy więc do drugiej instrukcji i sprawdźmy, czy `num` jest równe 3, będąc prawdą, wykonujemy następujący blok kodu, drukując `the number is 3`
 
 ---
 
-We can add as many `elif` statements as we want, there are no limits
+Możemy dodać tyle instrukcji `elif`, ile chcemy, nie ma żadnych ograniczeń
 ```python
 num = 4
 if (num == 2):
@@ -67,11 +67,11 @@ elif (num == 5):
 elif (num == 6):
     print("the number is 6")
 ```
-and the output of this code is `the number is 4`.
+a wynik tego kodu to `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `elif` or `else`) inside another conditional statement, to create a more complex structure.
+Możemy również zagnieżdżać instrukcję warunkową (`if`, `elif` lub `else`) wewnątrz innej instrukcji warunkowej, aby stworzyć bardziej złożoną strukturę.
 ```python
 num = 4
 if (num < 3):
@@ -84,4 +84,4 @@ else:
     else:
         print("the number is greather than 4")
 ```
-and the output of this code is `the number is 4`.
+a wynik tego kodu to `the number is 4`.

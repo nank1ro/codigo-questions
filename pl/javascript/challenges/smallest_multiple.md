@@ -7,11 +7,11 @@ title: Smallest multiple
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 to najmniejsza liczba, którą można podzielić przez każdą z liczb od 1 do 10 bez reszty.
 
 # --instructions--
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+Jaka jest najmniejsza dodatnia liczba, która jest podzielna przez wszystkie liczby od 1 do `n`?
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function smallestMultiple(n) {
 
 # --asserts--
 
-`smallestMultiple(5)` should return 60.
+`smallestMultiple(5)` powinno zwrócić 60.
 
 ```javascript
 tryCatch(smallestMultiple(5) === 60);
 ```
 
-`smallestMultiple(7)` should return 420.
+`smallestMultiple(7)` powinno zwrócić 420.
 
 ```javascript
 tryCatch(smallestMultiple(7) === 420);
 ```
 
-`smallestMultiple(10)` should return 2520.
+`smallestMultiple(10)` powinno zwrócić 2520.
 
 ```javascript
 tryCatch(smallestMultiple(10) === 2520);
 ```
 
-`smallestMultiple(13)` should return 360360.
+`smallestMultiple(13)` powinno zwrócić 360360.
 
 ```javascript
 tryCatch(smallestMultiple(13) === 360360);
 ```
 
-`smallestMultiple(20)` should return 232792560.
+`smallestMultiple(20)` powinno zwrócić 232792560.
 
 ```javascript
 tryCatch(smallestMultiple(20) === 232792560);

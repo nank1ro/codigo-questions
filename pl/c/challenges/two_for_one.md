@@ -7,15 +7,15 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Mając podane imię, zwróć ciąg znaków z komunikatem:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+Gdzie `X` to podane imię.
+Jednak jeśli imię jest puste, zwróć ciąg znaków:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 
 **input**: `"Walter"`
 **output**: `One for Walter, one for me.`
@@ -169,19 +169,19 @@ int main() {
 
 # --asserts--
 
-No name given
+Nie podano imienia
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+Podaj "James" jako imię
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+Podaj "Martha" jako imię
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);

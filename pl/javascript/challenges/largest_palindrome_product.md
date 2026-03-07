@@ -7,11 +7,11 @@ title: Largest palindrome product
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+Liczba palindromiczna czyta się tak samo w obu kierunkach. Największy palindrom będący iloczynem dwóch 2-cyfrowych liczb to 9009 = 91 × 99.
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+Znajdź największy palindrom będący iloczynem dwóch liczb `n`-cyfrowych.
 
 # --before-seed--
 
@@ -41,13 +41,13 @@ function largestPalindromeProduct(n) {
 
 # --asserts--
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)` powinno zwrócić 9009.
 
 ```javascript
 tryCatch(largestPalindromeProduct(2) === 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)` powinno zwrócić 906609.
 
 ```javascript
 tryCatch(largestPalindromeProduct(3) === 906609);

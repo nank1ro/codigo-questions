@@ -7,17 +7,17 @@ title: Sum square difference
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+Suma kwadratów pierwszych dziesięciu liczb naturalnych wynosi:
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+Kwadrat sumy pierwszych dziesięciu liczb naturalnych wynosi:
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+Zatem różnica między sumą kwadratów a kwadratem sumy pierwszych dziesięciu liczb naturalnych wynosi 3025 − 385 = 2640.
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+Znajdź różnicę między sumą kwadratów pierwszych `n` liczb naturalnych a kwadratem ich sumy.
 
 # --before-seed--
 
@@ -47,19 +47,19 @@ function sumSquareDifference(n) {
 
 # --asserts--
 
-`sumSquareDifference(10)` should return 2640.
+`sumSquareDifference(10)` powinno zwrócić 2640.
 
 ```javascript
 tryCatch(sumSquareDifference(10) === 2640);
 ```
 
-`sumSquareDifference(20)` should return 41230.
+`sumSquareDifference(20)` powinno zwrócić 41230.
 
 ```javascript
 tryCatch(sumSquareDifference(20) === 41230);
 ```
 
-`sumSquareDifference(100)` should return 25164150.
+`sumSquareDifference(100)` powinno zwrócić 25164150.
 
 ```javascript
 tryCatch(sumSquareDifference(100) === 25164150);

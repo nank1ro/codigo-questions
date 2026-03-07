@@ -7,19 +7,19 @@ title: Roman Numeral Converter
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+Utwórz funkcję przyjmującą dodatnią liczbę całkowitą jako parametr i zwracającą ciąg znaków zawierający reprezentację tej liczby w postaci cyfr rzymskich. Współczesne cyfry rzymskie zapisuje się, wyrażając każdą cyfrę osobno, zaczynając od cyfry najbardziej z lewej i pomijając cyfry o wartości zero.
 
 # --instructions--
 
-Examples:
+Przykłady:
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Wszystkie cyfry rzymskie powinny być zwracane wielkimi literami.
+- Największa liczba, którą można przedstawić w tej notacji, to 3999.
 
 # --before-seed--
 
@@ -49,67 +49,67 @@ function convertToRoman(n) {
 
 # --asserts--
 
-The number `2` must equal `II` 
+Liczba `2` musi być równa `II`
 
 ```javascript
 tryCatch(convertToRoman(2) === "II");
 ```
 
-The number `12` must equal `XII` 
+Liczba `12` musi być równa `XII`
 
 ```javascript
 tryCatch(convertToRoman(12) === "XII");
 ```
 
-The number `16` must equal `XVI`
+Liczba `16` musi być równa `XVI`
 
 ```javascript
 tryCatch(convertToRoman(16) === "XVI");
 ```
 
-The number `44` must equal `XLIV`
+Liczba `44` musi być równa `XLIV`
 
 ```javascript
 tryCatch(convertToRoman(44) === "XLIV");
 ```
 
-The number `68` must equal `LXVIII`
+Liczba `68` musi być równa `LXVIII`
 
 ```javascript
 tryCatch(convertToRoman(68) === "LXVIII");
 ```
 
-The number `400` must equal `CD`
+Liczba `400` musi być równa `CD`
 
 ```javascript
 tryCatch(convertToRoman(400) === "CD");
 ```
 
-The number `798` must equal `DCCXCVIII`
+Liczba `798` musi być równa `DCCXCVIII`
 
 ```javascript
 tryCatch(convertToRoman(798) === "DCCXCVIII");
 ```
 
-The number `1000` must equal `M`
+Liczba `1000` musi być równa `M`
 
 ```javascript
 tryCatch(convertToRoman(1000) === "M");
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+Liczba `3999` musi być równa `MMMCMXCIX`
 
 ```javascript
 tryCatch(convertToRoman(3999) === "MMMCMXCIX");
 ```
 
-The number `649` must equal `DCXLIX`
+Liczba `649` musi być równa `DCXLIX`
 
 ```javascript
 tryCatch(convertToRoman(649) === "DCXLIX");
 ```
 
-The number `1666` must equal `MDCLXVI`
+Liczba `1666` musi być równa `MDCLXVI`
 
 ```javascript
 tryCatch(convertToRoman(1666) === "MDCLXVI");

@@ -1,22 +1,22 @@
-> The `for` keyword executes a block of code for each value in a sequence.
+> Słowo kluczowe `for` wykonuje blok kodu dla każdej wartości w sekwencji.
 
-The `for` loop iterates through anything that provides an iterator.
+Pętla `for` iteruje przez wszystko, co dostarcza iterator.
 
-The syntax of `for` is the following:
+Składnia `for` jest następująca:
 ```kotlin
 for (item in collection) print(item)
 ```
 
-The body of `for` can also be a block
+Ciało `for` może być również blokiem
 ```kotlin
 for (item in collection) {
     print(item)
 }
 ```
 
-Each time through the loop, `item` is given the next element in values.
+Przy każdym przejściu przez pętlę, `item` otrzymuje następny element w wartościach.
 
-Here's a `for` loop repeating an action a fixed number of times:
+Oto pętla `for` powtarzająca akcję określoną liczbę razy:
 
 ```kotlin
 for (i in 1..3) {
@@ -25,12 +25,12 @@ for (i in 1..3) {
 // prints 1, 2, 3
 ```
 
-The output shows the index `i` receiving each value in the range from _1_ to _3_.
+Wynik pokazuje indeks `i` otrzymujący każdą wartość z zakresu od _1_ do _3_.
 
 ---
 
-A _range_ is an interval of values defined by a pair of endpoints.
-There are two basic ways to define ranges:
+_Zakres_ to przedział wartości zdefiniowany przez parę punktów końcowych.
+Istnieją dwa podstawowe sposoby definiowania zakresów:
 
 ```kotlin
 var firstRange = 1..3           // [1]
@@ -44,35 +44,35 @@ println(secondRange)
 */
 ```
 
-- __[1]__ using the `..` syntax includes both bounds in the resulting range.
-- __[2]__ `until` excludes the end. The output shows that _3_ is not part of the range.
+- __[1]__ użycie składni `..` uwzględnia oba krańce w wynikowym zakresie.
+- __[2]__ `until` wyklucza koniec. Wynik pokazuje, że _3_ nie jest częścią zakresu.
 
 ---
 
-You can iterate over a range in reverse order.
+Można iterować po zakresie w odwrotnej kolejności.
 
-You will probably expect `3..1` to work, unfortunately, the Kotlin team has decided to import this functionality in a different way.
+Prawdopodobnie oczekujesz, że `3..1` zadziała, niestety zespół Kotlin postanowił zaimplementować tę funkcjonalność w inny sposób.
 
-In fact if you try to run this snippet of code:
+Jeśli spróbujesz uruchomić ten fragment kodu:
 ```kotlin
 for (i in 3..1) println(i)
 ```
 
-You'll see that nothing is printed.
-To make it working we've to use the `downTo` keyword:
+Zobaczysz, że nic nie jest drukowane.
+Aby to działało, musimy użyć słowa kluczowego `downTo`:
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
 // prints 3, 2, 1
 ```
 
-`downTo` produces a decreasing range.
+`downTo` tworzy malejący zakres.
 
 ---
 
-The default _step_ of a range is __1__, but you can explicitly set another value.
+Domyślny _krok_ zakresu wynosi __1__, ale możesz jawnie ustawić inną wartość.
 
-You can define the __step__ of your `for` loop using the `step` keyword.
+Możesz zdefiniować __krok__ swojej pętli `for` używając słowa kluczowego `step`.
 
 ```kotlin
 for (i in 1..10 step 2) {
@@ -81,11 +81,11 @@ for (i in 1..10 step 2) {
 // prints 1, 3, 5, 7, 9
 ```
 
-As you can see, the code-block runs with a step of _2_ instead of _1_, changing completely our output.
+Jak widać, blok kodu wykonuje się z krokiem _2_ zamiast _1_, co całkowicie zmienia nasz wynik.
 
 ---
 
-You can also produce a range of _characters_.
+Można również tworzyć zakres _znaków_.
 ```kotlin
 for (char in 'a'..'z') print(char)
 // prints abcdefghijklmnopqrstuvwxyz
@@ -93,21 +93,21 @@ for (char in 'a'..'z') print(char)
 
 ---
 
-You can iterate over a __String__.
+Można iterować po __String__.
 ```kotlin
 for (char in 'abc') print(char + 1)
 // prints bdc
 ```
 
-In the example above we've printed each character + 1, so `'a'` becomes `'b'`, `'b'` becomes `'c'` and so on.
+W powyższym przykładzie wydrukowaliśmy każdy znak + 1, więc `'a'` staje się `'b'`, `'b'` staje się `'c'` i tak dalej.
 
-This is possibile because characters are stored as numbers corresponding to their [ASCII Codes](https://en.wikipedia.org/wiki/ASCII).
+Jest to możliwe, ponieważ znaki są przechowywane jako liczby odpowiadające ich [kodom ASCII](https://en.wikipedia.org/wiki/ASCII).
 
-So adding an integer to a character produces a new character corresponding to the new code value.
+Dodanie liczby całkowitej do znaku daje nowy znak odpowiadający nowej wartości kodu.
 
 ---
 
-In case you simply need to repeat a block of code `n` times, you can use the `repeat(times: Int)` function.
+Jeśli po prostu musisz powtórzyć blok kodu `n` razy, możesz użyć funkcji `repeat(times: Int)`.
 
 ```kotlin
 repeat(3) {
@@ -116,7 +116,7 @@ repeat(3) {
 // prints repeat 3 times
 ```
 
-You can even access the index with
+Możesz nawet uzyskać dostęp do indeksu za pomocą
 ```kotlin
 repeat(3) { index ->
     println(index)
@@ -126,10 +126,10 @@ repeat(3) { index ->
 
 ---
 
-In Kotlin we can use the `for-in` also for iterable collections calling the given closure on each element:
+W Kotlinie możemy używać `for-in` również dla iterowalnych kolekcji, wywołując podane domknięcie na każdym elemencie:
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(2, 4, 6, 8, 10) 
+val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
@@ -138,17 +138,17 @@ for (num in numbers) {
 
 ---
 
-In Kotlin we have also the `forEach` loop.
-It calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+W Kotlinie mamy również pętlę `forEach`.
+Wywołuje ona podane domknięcie na każdym elemencie sekwencji w tej samej kolejności co pętla `for-in`:
 
 ```kotlin
 // this is a list, we'll see about that soon
-val numbers = listOf(1, 3, 5, 7, 9) 
+val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)
 }
 ```
 
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls. (_Actually it is possible with annotations, but it's a bit more complex topic that we won't see now._)
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+Użycie metody `forEach` różni się od pętli `for-in` na dwa ważne sposoby:
+1. Instrukcji `break` lub `continue` nie można użyć do wyjścia z bieżącego wywołania domknięcia ciała lub do pominięcia kolejnych wywołań. (_Faktycznie jest to możliwe z adnotacjami, ale jest to nieco bardziej złożony temat, który teraz nie będziemy omawiać._)
+2. Użycie instrukcji `return` w domknięciu ciała spowoduje wyjście tylko z domknięcia, a nie z zewnętrznego zakresu, i nie pominie kolejnych wywołań.

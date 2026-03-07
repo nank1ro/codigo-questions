@@ -7,24 +7,24 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Mając podane imię, zwróć ciąg znaków z wiadomością:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Gdzie `X` to podane imię.
+Jeśli jednak imię nie zostało podane, zwróć ciąg znaków:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję zwracającą poprawny ciąg znaków. Przykłady:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**wejście**: `Walter`
+**wyjście**: `One for Walter, one for me.`
 
-**input**:
-**output**: `One for you, one for me.`
+**wejście**:
+**wyjście**: `One for you, one for me.`
 
-**input**: `David`
-**output**: `One for David, one for me.`
+**wejście**: `David`
+**wyjście**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -54,19 +54,19 @@ function twoForOne() {
 
 # --asserts--
 
-No name given
+Brak podanego imienia
 
 ```javascript
 tryCatch(twoForOne() === "One for you, one for me.");
 ```
 
-Pass "James" as name
+Podaj "James" jako imię
 
 ```javascript
 tryCatch(twoForOne("James") === "One for James, one for me.");
 ```
 
-Pass "Martha" as name
+Podaj "Martha" jako imię
 
 ```javascript
 tryCatch(twoForOne("Martha") === "One for Martha, one for me.");

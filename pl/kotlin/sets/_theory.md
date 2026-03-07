@@ -1,16 +1,16 @@
-`Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `List`s is that a `Set` allows only one element of each value.
+`Set` to typ danych, który można używać do przechowywania kolekcji różnych informacji jako sekwencji pod jedną nazwą zmiennej.
+Główna różnica w stosunku do `List` polega na tym, że `Set` pozwala na przechowywanie tylko jednego elementu każdej wartości.
 
-Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to a set with an expression of the form:
+Podobnie jak `List`, `Set` przechowuje wiele wartości jednego lub wielu typów i używa **indeksów** do ich rozróżniania.
+Możesz przypisać elementy do zbioru za pomocą wyrażenia:
 ```kotlin
 val setName = setOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the set, for example, it can be `Int`, `String`, `Any`...
+`itemsType` oznacza typ elementów wewnątrz zbioru, na przykład może to być `Int`, `String`, `Any`...
 
 ---
 
-A `Set` is a collection of __unique__ items without a specific order.
+`Set` to kolekcja __unikalnych__ elementów bez określonej kolejności.
 
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
@@ -18,22 +18,22 @@ println(numbers)
 // prints [1, 2]
 ```
 
-At __[1]__ we're trying to create a set with the number __1__ present twice but as you can see each element must be unique and the second __1__ is automatically discarded.
+W __[1]__ próbujemy utworzyć zbiór z liczbą __1__ pojawiającą się dwukrotnie, ale jak widać każdy element musi być unikalny i drugi __1__ jest automatycznie odrzucany.
 
 ---
 
-There are two types of `Set`s in Kotlin:
+W Kotlinie istnieją dwa typy `Set`:
 
-- `Set` cannot be modified after you create it.
-- `MutableSet` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `Set` nie może być modyfikowany po utworzeniu.
+- `MutableSet` może być modyfikowany po utworzeniu, co oznacza, że można dodawać, usuwać lub aktualizować jego elementy.
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
 numbers.add(4) // [1]
 ```
-__[1]__ throws an Error because `Set`s are _read-only_.
+__[1]__ generuje błąd, ponieważ `Set` jest _tylko do odczytu_.
 
-To create a modifiable set use the `mutableSetOf` keyword
+Aby utworzyć modyfikowalny zbiór, użyj słowa kluczowego `mutableSetOf`
 ```kotlin
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
@@ -43,7 +43,7 @@ println(numbers)
 
 ---
 
-The most common `Set` activity is to test for membership using `in` or `contains()`
+Najczęstszą operacją na `Set` jest sprawdzanie przynależności za pomocą `in` lub `contains()`
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
@@ -51,16 +51,16 @@ println(2 in numbers) // prints true
 println(numbers.contains(5)) // prints false
 ```
 
-As you can see above the `in` and `contains` return a `Bool` telling if the element being passed is present in the set
+Jak widać powyżej, `in` i `contains` zwracają wartość `Bool` informującą, czy przekazany element jest obecny w zbiorze
 
 ---
 
-The order of the elements in a `Set` in not important.
-In fact if you try to compare two `Set`s with the same element but in different order you get that they are equal.
+Kolejność elementów w `Set` nie ma znaczenia.
+W rzeczywistości, jeśli porównasz dwa `Set` z tymi samymi elementami w różnej kolejności, okaże się, że są równe.
 
 ---
 
-On `Set`s you can perform several operations like checking for union, intersection, difference and subset.
+Na `Set` można wykonywać różne operacje, takie jak suma, część wspólna, różnica i podzbiór.
 
 ```kotlin
 val firstNumbers = setOf(1, 2, 3)
@@ -73,4 +73,4 @@ val subset = firstNumbers.containsAll(lastNumbers) // false
 
 ---
 
-To convert a `Set` to a `List` we can use the `toList()` function
+Aby przekonwertować `Set` na `List`, możemy użyć funkcji `toList()`

@@ -1,56 +1,56 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**Słowniki** są podobne do list i krotek, ale dostęp do wartości uzyskuje się przez wyszukiwanie *klucza*, a nie indeksu.
+Klucz może być dowolnym ciągiem znaków lub liczbą.
+Słowniki są otoczone nawiasami klamrowymi, na przykład:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+To jest słownik o nazwie `d` z trzema *parami klucz-wartość*.
+Klucz `key1` wskazuje na wartość `1`, `key2` na `2` i tak dalej.
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+Dostęp do wartości słownika za pomocą klucza działa tak samo jak dostęp do wartości listy za pomocą indeksu:
 ```python
 user['age']
-# gets the age value from the user dictionary
+# pobiera wartość age ze słownika user
 ```
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Podobnie jak listy, słowniki są _mutowalne_.
+Oznacza to, że można je zmieniać po ich utworzeniu.
+Jedną z zalet tego jest możliwość dodawania nowych _par klucz/wartość_ do słownika po jego utworzeniu w taki sposób:
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+Długość `len()` słownika to liczba _par klucz-wartość_, które zawiera.
+Każda para liczy się tylko raz, nawet jeśli wartość jest listą. (Zgadza się: wewnątrz słowników można też umieszczać listy!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+Ponieważ słowniki są mutowalne, można je zmieniać na wiele sposobów. Elementy można usuwać ze słownika za pomocą polecenia `del`:
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+usunie klucz `key_name` i jego skojarzoną wartość ze słownika.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+Co jeśli chcemy wylistować wszystkie klucze słownika?
+Do tego służy metoda `keys()`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+Co jeśli chcemy wylistować wszystkie wartości słownika?
+Do tego służy metoda `values()`.
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+Podobnie jak w listach, możemy iterować po elementach słownika używając słów kluczowych `for..in`.
+Aby uzyskać zarówno klucz, jak i wartość w pętli, możemy użyć metody `items()`:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+Możemy również użyć słowa kluczowego `in`, którego używaliśmy z pętlami, aby sprawdzić, czy słownik zawiera określony __klucz__
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+Aby __dodać__ lub __zmienić__ wartości w słowniku, możemy również użyć metody `update()` z _parami klucz-wartość_, które chcemy dodać w nawiasach klamrowych
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+A co jeśli chcemy __usunąć__ wartość ze słownika?
+Do tego służy metoda `pop()`:
 ```python
 dict_name.pop("key_name")
 ```

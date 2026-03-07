@@ -2,16 +2,16 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: Witaj Świecie!
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Witaj, Świecie!"__ to tradycyjny pierwszy program dla osób zaczynających programowanie w nowym języku lub środowisku.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Napisz funkcję, która zwraca ciąg znaków "Hello, World!".
 
 # --seed--
 
@@ -32,7 +32,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The function should return "Hello, World!".
+Funkcja powinna zwracać "Hello, World!".
 
 ```swift
     func testHi() {

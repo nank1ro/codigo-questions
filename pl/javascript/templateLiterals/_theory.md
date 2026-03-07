@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+W JavaScript możemy użyć znaku `+`, aby wyświetlić razem dwa lub więcej łańcuchów, na przykład:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+Literały szablonowe pozwalają nam wyświetlać wyrażenia, takie jak dodanie łańcucha do liczby, bez użycia znaku `+`.
+Aby utworzyć poprawny literał szablonowy, należy użyć grawisów \`\` zamiast podwójnych lub pojedynczych cudzysłowów.
+Zmienne można wstawiać wewnątrz literałów szablonowych za pomocą znaku dolara i nawiasów klamrowych `${wyrażenie}`
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+Każda instrukcja z literałem szablonowym składa się z dwóch części: `${}`, gdzie wstawiamy liczbę lub zmienną, oraz zwykłego łańcucha
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+Następnie dodajemy różne rodzaje wartości w nawiasach klamrowych, aby wyświetlały się jako jedna instrukcja console.log. Na przykład z `${5}`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Wstawianie zmiennych takich jak `friends` między nawiasy okrągłe wyświetla również ich wartość
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+Możemy używać `${}` do wstawiania wartości tyle razy, ile chcemy, wewnątrz literałów szablonowych
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+Literały szablonowe najlepiej używać w instrukcjach wyświetlania, ale możemy je też przechowywać w zmiennych jak zwykłe łańcuchy.

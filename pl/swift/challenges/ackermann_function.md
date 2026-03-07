@@ -7,17 +7,17 @@ title: Ackermann function
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Funkcja Ackermanna jest klasycznym przykładem funkcji rekurencyjnej, szczególnie godnej uwagi dlatego, że nie jest funkcją prymitywnie rekurencyjną. Jej wartości rosną bardzo szybko, podobnie jak rozmiar drzewa wywołań.
 
-The Ackermann function is usually defined as follows:
+Funkcja Ackermanna jest zazwyczaj definiowana następująco:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+Jej argumenty nigdy nie są ujemne i zawsze kończy swoje działanie.
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Napisz funkcję, która zwraca wartość funkcji Ackermanna.
 
 # --seed--
 
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` powinno zwrócić 1.
 
 ```swift
     func test1() {
@@ -46,7 +46,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` powinno zwrócić 3.
 
 ```swift
     func test2() {
@@ -54,7 +54,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` powinno zwrócić 13.
 
 ```swift
     func test3() {
@@ -62,7 +62,7 @@ class CodigoTests: XCTestCase {
     }
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` powinno zwrócić 61.
 
 ```swift
     func test4() {

@@ -7,15 +7,15 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Mając podane imię, zwróć ciąg znaków z wiadomością:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Gdzie `X` to podane imię.
+Jednak jeśli imię nie zostało podane, zwróć ciąg:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca odpowiedni ciąg znaków, przykłady:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -56,19 +56,19 @@ fun main() {
 
 # --asserts--
 
-No name given
+Nie podano imienia
 
 ```kotlin
     tryCatch(twoForOne() == "One for you, one for me.")
 ```
 
-Pass "James" as name
+Przekaż "James" jako imię
 
 ```kotlin
     tryCatch(twoForOne(name = "James") == "One for James, one for me.")
 ```
 
-Pass "Martha" as name
+Przekaż "Martha" jako imię
 
 ```kotlin
     tryCatch(twoForOne(name = "Martha") == "One for Martha, one for me.")

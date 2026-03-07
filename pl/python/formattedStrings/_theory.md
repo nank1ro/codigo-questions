@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+W Pythonie możemy użyć znaku `+`, aby wyświetlić dwa lub więcej ciągów znaków razem, jak tutaj:
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Ale użycie znaku `+` do dodania liczby, np. `10`, do ciągu znaków, np. `"friends"`, powoduje błąd, ponieważ są to wartości różnego rodzaju
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+Sformatowane ciągi znaków pozwalają nam wyświetlać wyrażenia, takie jak dodanie ciągu do liczby, bez żadnego błędu.
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+Każde sformatowane wyrażenie składa się z dwóch części: najpierw znaku `f`, a następnie ciągu znaków, który chcemy sformatować
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+Następnie dodajemy wartość innego rodzaju w nawiasach klamrowych, aby wyświetlała się jako jedno polecenie print. Jak tutaj, z `{5}`
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+Wstawianie zmiennych, takich jak `friends`, między nawiasy klamrowe wyświetla również ich wartość
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+Możemy używać nawiasów klamrowych do wstawiania wartości tak często, jak chcemy, wewnątrz sformatowanego ciągu znaków
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+Sformatowane ciągi znaków najlepiej używać w poleceniach print, ponieważ nie można ich przechowywać w zmiennych jak zwykłe ciągi znaków.

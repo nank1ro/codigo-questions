@@ -7,17 +7,17 @@ title: Ackermann function
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Funkcja Ackermanna jest klasycznym przykładem funkcji rekurencyjnej, godnym uwagi zwłaszcza dlatego, że nie jest funkcją pierwotnie rekurencyjną. Jej wartości rosną bardzo szybko, podobnie jak rozmiar drzewa wywołań.
 
-The Ackermann function is usually defined as follows:
+Funkcja Ackermanna jest zazwyczaj definiowana następująco:
 
 ![ackermann_function](https://bit.ly/3z9u4zh)
 
-Its arguments are never negative and it always terminates
+Jej argumenty nigdy nie są ujemne i zawsze się kończy
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Napisz funkcję, która zwraca wartość funkcji Ackermanna.
 
 # --seed--
 
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` powinno zwrócić 1.
 
 ```dart
     test('test1', () {
@@ -47,7 +47,7 @@ void main() {
     });
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` powinno zwrócić 3.
 
 ```dart
     test('test2', () {
@@ -55,7 +55,7 @@ void main() {
     });
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` powinno zwrócić 13.
 
 ```dart
     test('test3', () {
@@ -63,7 +63,7 @@ void main() {
     });
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` powinno zwrócić 61.
 
 ```dart
     test('test4', () {

@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+Często w programowaniu musimy powtarzać blok kodu, na przykład:
 ```c
 printf("2 seconds\n");
 printf("3 seconds\n");
 printf("4 seconds\n");
 printf("5 seconds\n");
 ```
-This produces the following output:
+Daje to następujący wynik:
 ```c
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+Oczywiście, w przypadku długich instrukcji spędzilibyśmy dużo czasu na pisaniu kodu, ale na szczęście możemy używać pętli.
+Poznajmy pętlę `while`, uzyskując ten sam wynik co powyżej.
 ```c
 int count = 2;
 while (count <= 5) {
@@ -21,24 +21,24 @@ while (count <= 5) {
     count++;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count++;`.
-It increments the `count` value, otherwise, our loop will be infinite
+Tak więc utworzyliśmy zmienną `count` przypisując jej `2`, wartość początkową.
+Następnie użyliśmy instrukcji `while`, która będzie wykonywać blok kodu dopóki warunek `count <= 5` jest `true`.
+Wewnątrz bloku kodu **NIE** możemy zapomnieć o dodaniu linii `count++;`.
+Zwiększa ona wartość `count`, w przeciwnym razie nasza pętla będzie nieskończona
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+Aby kontrolować liczbę powtórzeń pętli `while`, zaczynamy od zmiennej ustawionej na pewną liczbę.
+Tę zmienną nazywamy zmienną licznikową
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+Następnie używamy porównania w warunku, aby porównać zmienną `counter` z liczbą.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+Wewnątrz bloku kodu, aby zatrzymać pętlę `while`, zwiększamy zmienną `counter`.
 
 ---
 
-The order you write code affects the output.
+Kolejność pisania kodu wpływa na wynik.

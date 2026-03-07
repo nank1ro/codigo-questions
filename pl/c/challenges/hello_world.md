@@ -7,11 +7,11 @@ title: Hello World!
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ to tradycyjny pierwszy program dla osób zaczynających programowanie w nowym języku lub środowisku.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Napisz funkcję, która zwraca ciąg znaków "Hello, World!".
 
 # --before-seed--
 
@@ -156,7 +156,7 @@ int main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+Funkcja powinna zwrócić "Hello, World!".
 
 ```c
     try_catch(strcmp(hello(), "Hello, World!") == 0);

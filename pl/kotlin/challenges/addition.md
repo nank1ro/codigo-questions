@@ -7,13 +7,13 @@ title: Addition
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Dane są dwie liczby całkowite `num1` i `num2`. Napisz program, który doda te dwie liczby.
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
+Napisz funkcję, która zwraca sumę dwóch liczb.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```kotlin
 println(addition(1, 2))
 // prints 3
@@ -49,19 +49,19 @@ fun main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Suma 1 i 3 musi wynosić 4
 
 ```kotlin
     tryCatch(addition(1, 3) == 4)
 ```
 
-The sum of 200 and 210 must equal 410
+Suma 200 i 210 musi wynosić 410
 
 ```kotlin
     tryCatch(addition(200, 210) == 410)
 ```
 
-The sum of 15 and 35 must equal 50
+Suma 15 i 35 musi wynosić 50
 
 ```kotlin
     tryCatch(addition(15, 35) == 50)

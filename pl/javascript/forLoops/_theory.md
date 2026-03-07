@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Wiemy, jak powtarzać kod za pomocą pętli `while`.
+Jak ten program powtarzający instrukcje, aby wyświetlić `hello`
 ```javascript
 var counter = 0;
 
@@ -8,7 +8,7 @@ while (counter < 5) {
     counter++;
 }
 ```
-But we can do the same with `for` loops:
+Ale możemy zrobić to samo za pomocą pętli `for`:
 ```javascript
 for (let i = 0; i < 5; i++) {
     console.log("hello");
@@ -17,28 +17,28 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+W pętli `for` możemy określić, ile razy chcemy, aby nasza pętla się wykonała
 
 ---
 
-We can use `<` to loop until the next number excluded, or `<=` to loop until the next number included
+Możemy używać `<` do pętli aż do następnej liczby wyłącznie, lub `<=` do pętli aż do następnej liczby włącznie
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+Zmienna o nazwie `i` to zmienna licznikowa.
+Możemy nadać jej dowolną nazwę.
+Zlicza, na której iteracji pętli aktualnie się znajdujemy
 
 ---
 
-In JavaScript we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for` loop:
+W JavaScript mamy również pętlę `forEach`.
+W rzeczywistości `forEach` wywołuje podane domknięcie na każdym elemencie sekwencji w tej samej kolejności co pętla `for`:
 ```javascript
 // this is an array, we'll see about that soon
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```
-Using the `forEach` method is distinct from a `for` loop in two important ways:
-1. The `break` or `continue` statements cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
-NOTE: `=>` this is called _arrow function_ and it's an ES6 shorter function syntax that replaces curly brackets {} and returns the value (if needed)
+Używanie metody `forEach` różni się od pętli `for` na dwa ważne sposoby:
+1. Instrukcji `break` lub `continue` nie można używać do zakończenia bieżącego wywołania domknięcia ciała lub do pomijania kolejnych wywołań.
+2. Użycie instrukcji `return` w domknięciu ciała spowoduje jedynie wyjście z domknięcia, a nie z zewnętrznego zakresu, i nie pominie kolejnych wywołań.
+UWAGA: `=>` to tak zwana _funkcja strzałkowa_ i jest to skrócona składnia funkcji ES6, która zastępuje nawiasy klamrowe {} i zwraca wartość (jeśli potrzeba)

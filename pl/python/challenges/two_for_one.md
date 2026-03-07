@@ -2,29 +2,29 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Dwa za jednego
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Mając podane imię, zwróć ciąg znaków z komunikatem:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Gdzie `X` to podane imię.
+Jednak jeśli imię brakuje, zwróć ciąg znaków:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**wejście**: `Walter`
+**wyjście**: `One for Walter, one for me.`
 
-**input**:
-**output**: `One for you, one for me.`
+**wejście**:
+**wyjście**: `One for you, one for me.`
 
-**input**: `David`
-**output**: `One for David, one for me.`
+**wejście**: `David`
+**wyjście**: `One for David, one for me.`
 
 # --seed--
 
@@ -43,14 +43,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-No name given
+Nie podano imienia
 
 ```python
     def test_no_name_given(self):
         self.assertEqual(two_for_one(), "One for you, one for me.", "--err-t1--")
 ```
 
-Pass "James" as name
+Podaj "James" jako imię
 
 ```python
     def test_a_name_given(self):
@@ -58,7 +58,7 @@ Pass "James" as name
 ```
 
 
-Pass "Martha" as name
+Podaj "Martha" jako imię
 
 ```python
     def test_another_name_given(self):

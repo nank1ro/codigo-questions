@@ -7,15 +7,15 @@ title: Special pythagorean triplet
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+Trójka pitagorejska to zbiór trzech liczb naturalnych `a` < `b` < `c`, dla których zachodzi <latex>a^2 + b^2 = c^2</latex>
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+Na przykład <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+Istnieje dokładnie jedna trójka pitagorejska, dla której `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+Znajdź iloczyn `abc` taki, że `a` + `b` + `c` = `n`.
 
 # --before-seed--
 
@@ -45,19 +45,19 @@ function specialPythagoreanTriplet(n) {
 
 # --asserts--
 
-`specialPythagoreanTriplet(24)` should return 480.
+`specialPythagoreanTriplet(24)` powinno zwrócić 480.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(24) === 480);
 ```
 
-`specialPythagoreanTriplet(120)` should return 49920, 55080 or 60000.
+`specialPythagoreanTriplet(120)` powinno zwrócić 49920, 55080 lub 60000.
 
 ```javascript
 tryCatch([49920, 55080, 60000].includes(specialPythagoreanTriplet(120)));
 ```
 
-`specialPythagoreanTriplet(1000)` should return 31875000.
+`specialPythagoreanTriplet(1000)` powinno zwrócić 31875000.
 
 ```javascript
 tryCatch(specialPythagoreanTriplet(1000) === 31875000);

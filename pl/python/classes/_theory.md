@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python jest obiektowym językiem programowania, co oznacza, że operuje na konstruktach programistycznych zwanych obiektami.
+Możesz myśleć o obiekcie jako o pojedynczej strukturze danych, która zawiera zarówno dane, jak i funkcje; funkcje obiektu są nazywane jego metodami.
+Na przykład, gdy wywołujesz:
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python sprawdza, czy `my_dict` ma metodę `items()` (którą mają wszystkie słowniki) i wykonuje tę metodę, jeśli ją znajdzie.
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+Podstawowa klasa składa się tylko ze słowa kluczowego `class` i nazwy klasy, na przykład:
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+Zastąpmy `pass` czymś innym.
+Metoda `__init__()` jest wymagana dla klas i służy do __inicjalizacji__ tworzonych przez nią obiektów.
+`__init__()` zawsze przyjmuje co najmniej jeden argument, `self`, który odnosi się do tworzonego obiektu.
+Możesz myśleć o `__init__()` jak o metodzie, która uruchamia każdy obiekt tworzony przez klasę.
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+Oczywiście metoda `__init__()` może przyjmować więcej parametrów niż tylko `self`
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+Pierwszy argument `__init__()` służy do odwoływania się do obiektu instancji i zgodnie z konwencją argument ten nosi nazwę `self`.
+Jeśli dodasz dodatkowe argumenty (na przykład `gender` i `legs` dla swojego zwierzęcia), ustawienie każdego z nich jako równego `self.gender` i `self.legs` w ciele `__init__()` sprawi, że podczas tworzenia obiektu instancji klasy `Animal` będziesz musiał podać dla każdej instancji płeć i liczbę nóg, które zostaną skojarzone z tworzoną instancją
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+Zdefiniowanie klasy nie tworzy obiektu.
+Aby to zrobić, musimy utworzyć __instancję__ klasy
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+Gdy klasa ma własne funkcje, te funkcje są nazywane __metodami__. Widziałeś już jedną taką metodę: `__init__()`.
+Możesz jednak definiować własne metody!

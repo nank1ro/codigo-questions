@@ -7,13 +7,13 @@ title: Arithmetic mean
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Napisz funkcję o nazwie `mean`, która oblicza _średnią arytmetyczną_ wektora liczbowego.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Napisz funkcję, która zwraca średnią wektora liczbowego.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+Średnia `[1, 2, 3, 4, 5, 6, 7]` musi być równa 4.0
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+Średnia `[4, 5, 6]` musi być równa 5.0
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+Średnia `[12, 34, 56, 78]` musi być równa 45.0
 
 ```c
     double arr3[] = {12, 34, 56, 78};

@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Nauczyliśmy się już, że aby przypisać wartość do zmiennej, możemy użyć znaku `=`, na przykład:
 ```c
 int a = 5;
 ```
 
 ---
 
-We already have an initialized variable `total`
+Mamy już zainicjalizowaną zmienną `total`
 ```c
 int total = 5;
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Powiedzmy, że chcemy dodać liczbę `2` do zmiennej `total`, możemy napisać
 ```c
 total = total + 2;
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+Dobrze, działa! Ale jest krótsza wersja, która robi to samo:
 ```c
 total += 2;
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+Znak `+=` nazywa się **przypisaniem dodawania**.
+Dodaje wartość do wartości zmiennej i przypisuje wynik do tej zmiennej.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Podobnie jak przy przypisaniu dodawania, mamy **przypisanie dekrementacji** `-=`.
+Funkcjonalność jest taka sama, jedyna różnica polega na tym, że wykonuje odejmowanie.
+Zatem poniższe są dokładnie tym samym
 ```c
 num = num - 5;
 // is equal to
@@ -33,9 +33,9 @@ num -= 5;
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Zobaczmy operator **przypisania mnożenia** `*=`.
+Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Zatem poniższe są dokładnie tym samym
 ```c
 num = num * 5;
 // is equal to
@@ -44,9 +44,9 @@ num *= 5;
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Zobaczmy operator **przypisania dzielenia** `/=`.
+Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Zatem poniższe są dokładnie tym samym
 ```c
 num = num / 5;
 // is equal to
@@ -55,9 +55,9 @@ num /= 5;
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Zobaczmy operator **przypisania modulo** `%=`.
+Oblicza resztę z dzielenia zmiennej przez wartość i przypisuje wynik do tej zmiennej.
+Zatem poniższe są dokładnie tym samym
 ```c
 num = num % 5;
 // is equal to

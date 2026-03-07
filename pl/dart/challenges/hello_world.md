@@ -7,11 +7,11 @@ title: Hello World!
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Hello, World!"__ to tradycyjny pierwszy program dla osób zaczynających naukę programowania w nowym języku lub środowisku.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Napisz funkcję, która zwraca ciąg znaków "Hello, World!".
 
 # --seed--
 
@@ -33,7 +33,7 @@ void main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+Funkcja powinna zwrócić "Hello, World!".
 
 ```dart
   const expected = "Hello, World!";

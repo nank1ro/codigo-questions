@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+_Interpolacja_ ciągów znaków to programowy sposób generowania ciągu.
+W Dart możemy używać znaku `+` (konkatenacja), aby wyświetlać dwa lub więcej ciągów razem, na przykład:
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Jednak używanie znaku `+` do dodania liczby jak '10' do ciągu jak `"friends"` powoduje błąd, ponieważ są to różne rodzaje wartości
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+Interpolacja ciągów znaków pozwala nam wyświetlać wyrażenia takie jak dodawanie ciągu do liczby, bez żadnego błędu.
+Umieszczenie wyrażenia wewnątrz `${}` powoduje jego wykonanie.
+Zwracana wartość jest konwertowana na ciąg i wstawiana do wynikowego ciągu
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+Jeśli umieścisz `$` przed nazwą identyfikatora, interpolacja ciągu wstawi zawartość tego identyfikatora do `String`
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+Jeśli to, co następuje po znaku `$`, nie jest rozpoznawalne jako identyfikator programu, napotkasz błąd
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+Możemy też wstawiać zmienne po znakach dolara, aby pokazać ich wartość
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+Możemy używać nawiasów klamrowych, aby wstawiać wartości tyle razy, ile chcemy, używając interpolacji ciągów
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Wewnątrz `${}` możemy też umieszczać warunki, na przykład:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+Interpolacja ciągów najlepiej sprawdza się w instrukcjach print, ale możemy też przechowywać je w zmiennych jak zwykłe ciągi.

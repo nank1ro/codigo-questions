@@ -7,11 +7,11 @@ title: Largest product in a series
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+Cztery sąsiadujące cyfry w podanej poniżej liczbie 1000-cyfrowej, których iloczyn jest największy, to 9 × 9 × 8 × 9 = 5832.
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Znajdź `n` sąsiadujących cyfr w liczbie 1000-cyfrowej, których iloczyn jest największy. Jaka jest wartość tego iloczynu?
 
 # --before-seed--
 
@@ -42,13 +42,13 @@ function largestProductinaSeries(n) {
 
 # --asserts--
 
-`largestProductinaSeries(4)` should return 5832.
+`largestProductinaSeries(4)` powinno zwrócić 5832.
 
 ```javascript
 tryCatch(largestProductinaSeries(4) === 5832);
 ```
 
-`largestProductinaSeries(13)` should return 23514624000.
+`largestProductinaSeries(13)` powinno zwrócić 23514624000.
 
 ```javascript
 tryCatch(largestProductinaSeries(13) === 23514624000);

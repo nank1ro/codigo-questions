@@ -7,24 +7,24 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Mając podane imię, zwróć ciąg znaków z wiadomością:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Gdzie `X` to podane imię.
+Jednak jeśli imię nie zostało podane, zwróć ciąg:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**wejście**: `Walter`
+**wyjście**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**wejście**: `James`
+**wyjście**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**wejście**: `Martha`
+**wyjście**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -45,7 +45,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-No name given
+Nie podano imienia
 
 ```swift
     func testNoNameGiven() {
@@ -54,7 +54,7 @@ No name given
     }
 ```
 
-Pass "James" as name
+Podaj "James" jako imię
 
 ```swift
     func testANameGiven() {
@@ -63,7 +63,7 @@ Pass "James" as name
     }
 ```
 
-Pass "Martha" as name
+Podaj "Martha" jako imię
 
 ```swift
     func testAnotherNameGiven() {

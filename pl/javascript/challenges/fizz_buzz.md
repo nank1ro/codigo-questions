@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Utwórz funkcję, która przyjmuje liczbę jako argument i zwraca `"Fizz"`, `"Buzz"` lub `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Jeśli liczba jest wielokrotnością `3`, wynikiem powinno być `"Fizz"`
+- Jeśli liczba jest wielokrotnością `5`, wynikiem powinno być `"Buzz"`.
+- Jeśli liczba jest wielokrotnością zarówno `3`, jak i `5`, wynikiem powinno być `"FizzBuzz"`.
+- Jeśli liczba nie jest wielokrotnością ani `3`, ani `5`, wynikiem powinna być sama liczba, jak pokazano w przykładach poniżej.
+- Wynik powinien zawsze być ciągiem znaków, nawet jeśli nie jest wielokrotnością `3` ani `5`.
 
-Examples:
+Przykłady:
 ```javascript
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -53,31 +53,31 @@ function fizzBuzz() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Liczba `3` musi być równa `"Fizz"`
 
 ```javascript
 tryCatch(fizzBuzz(3) === 'Fizz');
 ```
 
-The number `5` must equal `"Buzz"`
+Liczba `5` musi być równa `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(5) === 'Buzz');
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Liczba `15` musi być równa `"FizzBuzz"`
 
 ```javascript
 tryCatch(fizzBuzz(15) === 'FizzBuzz');
 ```
 
-The number `10` must equal `"Buzz"`
+Liczba `10` musi być równa `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(10) === 'Buzz');
 ```
 
-The number `98` must equal `"98"`
+Liczba `98` musi być równa `"98"`
 
 ```javascript
 tryCatch(fizzBuzz(98) === '98');

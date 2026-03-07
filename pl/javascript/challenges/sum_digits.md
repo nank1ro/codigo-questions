@@ -7,12 +7,12 @@ title: Sum of digits
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+Dana jest liczba całkowita `num`.
+Napisz program obliczający sumę wszystkich cyfr liczby `num`.
 
 # --instructions--
 
-Return the sum of digits of `num`
+Zwróć sumę cyfr liczby `num`.
 
 # --before-seed--
 
@@ -42,31 +42,31 @@ function sumDigits(num) {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Suma cyfr liczby 12345 wynosi 15
 
 ```javascript
 tryCatch(sumDigits(12345) === 15);
 ```
 
-The sum of the digits of 57253 is 22
+Suma cyfr liczby 57253 wynosi 22
 
 ```javascript
 tryCatch(sumDigits(57253) === 22);
 ```
 
-The sum of the digits of 122 is 5
+Suma cyfr liczby 122 wynosi 5
 
 ```javascript
 tryCatch(sumDigits(122) === 5);
 ```
 
-The sum of the digits of 91979997 is 60
+Suma cyfr liczby 91979997 wynosi 60
 
 ```javascript
 tryCatch(sumDigits(91979997) === 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+Suma cyfr liczby 2147483647 wynosi 46
 
 ```javascript
 tryCatch(sumDigits(2147483647) === 46);

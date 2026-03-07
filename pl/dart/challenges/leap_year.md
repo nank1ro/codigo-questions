@@ -7,15 +7,15 @@ title: Leap Year
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+W roku kalendarzowym jest dokładnie 365,25 dnia. Z czasem jednak prowadziłoby to do zamieszania, ponieważ ludzie zazwyczaj liczą przez dokładną podzielność przez 1, a nie ułamkami dziesiętnymi. Aby tego uniknąć, postanowiono sumować wszystkie 0,25 dnia w każdym czteroletnim cyklu i nadawać temu rokowi 366 dni (łącznie z 29 lutego jako dniem przestępnym), nazywając go __rokiem przestępnym__. Pozostałe trzy lata w cyklu czteroletnim miałyby tylko 365 dni i __nie byłyby latami przestępnymi__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `DateTime` class, `switch` statements, __if blocks__, __if-else blocks__ or __ternary operation__ (`x ? a : b`) nor the logical operators __AND__ (`&&`) and __OR__ (`||`) with the exemption of the __NOT__ (`!`) operator.
+W tym wyzwaniu podnosimy poprzeczkę – musisz określić, czy dany rok jest rokiem przestępnym, bez użycia klasy `DateTime`, instrukcji `switch`, __bloków if__, __bloków if-else__ ani __operacji trójargumentowej__ (`x ? a : b`), a także bez operatorów logicznych __AND__ (`&&`) i __OR__ (`||`), z wyjątkiem operatora __NOT__ (`!`).
 
-Return `true` if it's a leap year, `false` otherwise.
+Zwróć `true` jeśli to rok przestępny, `false` w przeciwnym razie.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```dart
 print(leapYear(2000));
 // prints true
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
+Użycie `DateTime`, `switch`, `if`, `else`, `&&`, `||` lub `?` jest niedozwolone.
 
 ```json
 {
@@ -51,7 +51,7 @@ The use of `DateTime`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+Rok `2016` jest rokiem przestępnym.
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The year `2016` is a leap year.
   });
 ```
 
-The year `1996` is a leap year.
+Rok `1996` jest rokiem przestępnym.
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The year `1996` is a leap year.
   });
 ```
 
-The year `1600` is a leap year.
+Rok `1600` jest rokiem przestępnym.
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The year `1600` is a leap year.
   });
 ```
 
-The year `2020` is a leap year.
+Rok `2020` jest rokiem przestępnym.
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The year `2020` is a leap year.
   });
 ```
 
-The year `2000` is a leap year.
+Rok `2000` jest rokiem przestępnym.
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The year `2000` is a leap year.
   });
 ```
 
-The year `2008` is a leap year.
+Rok `2008` jest rokiem przestępnym.
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The year `2008` is a leap year.
   });
 ```
 
-The year `1521` is not a leap year.
+Rok `1521` nie jest rokiem przestępnym.
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The year `1521` is not a leap year.
   });
 ```
 
-The year `1800` is not a leap year.
+Rok `1800` nie jest rokiem przestępnym.
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The year `1800` is not a leap year.
   });
 ```
 
-The year `2007` is not a leap year.
+Rok `2007` nie jest rokiem przestępnym.
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The year `2007` is not a leap year.
   });
 ```
 
-The year `2002` is not a leap year.
+Rok `2002` nie jest rokiem przestępnym.
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The year `2002` is not a leap year.
   });
 ```
 
-The year `1979` is not a leap year.
+Rok `1979` nie jest rokiem przestępnym.
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The year `1979` is not a leap year.
   });
 ```
 
-The year `2006` is not a leap year.
+Rok `2006` nie jest rokiem przestępnym.
 
 ```dart
   test('test12', () {

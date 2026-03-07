@@ -1,72 +1,72 @@
 {
     "output": {
         "order": 1,
-        "title": "Output",
-        "description": "Learn how to output a value"
+        "title": "Wyświetlanie",
+        "description": "Naucz się wyświetlać wartości"
     },
     "templateLiterals": {
         "order": 2,
-        "title": "Template literals",
-        "description": "Learn how to interpolate strings with different data types"
+        "title": "Literały szablonowe",
+        "description": "Naucz się interpolować ciągi znaków z różnymi typami danych"
     },
     "variables": {
         "order": 3,
-        "title": "Variables",
-        "description": "Learn how to store values in a variable"
+        "title": "Zmienne",
+        "description": "Naucz się przechowywać wartości w zmiennej"
     },
     "booleans": {
         "order": 4,
-        "title": "Booleans",
-        "description": "Learn how to evaluate any expression"
+        "title": "Wartości logiczne",
+        "description": "Naucz się oceniać dowolne wyrażenie"
     },
     "arithmeticOperators": {
         "order": 5,
-        "title": "Arithmetic Operators",
-        "description": "Learn how to perform arithmetic operations on variables and values"
+        "title": "Operatory arytmetyczne",
+        "description": "Naucz się wykonywać operacje arytmetyczne na zmiennych i wartościach"
     },
     "assignmentOperators": {
         "order": 6,
-        "title": "Assignment Operators",
-        "description": "Learn how to assign values to variables"
+        "title": "Operatory przypisania",
+        "description": "Naucz się przypisywać wartości do zmiennych"
     },
     "comparisonLogicalOperators": {
         "order": 7,
-        "title": "Comparison and Logical Operators",
-        "description": "Learn how to compare values"
+        "title": "Operatory porównania i logiczne",
+        "description": "Naucz się porównywać wartości"
     },
     "conditionalStatements": {
         "order": 8,
-        "title": "Conditional Statements",
-        "description": "Learn how to make decisions"
+        "title": "Instrukcje warunkowe",
+        "description": "Naucz się podejmować decyzje"
     },
     "whileLoops": {
         "order": 9,
-        "title": "While Loops",
-        "description": "Learn how to repeat a set of statements"
+        "title": "Pętle while",
+        "description": "Naucz się powtarzać zestaw instrukcji"
     },
     "forLoops": {
         "order": 10,
-        "title": "For Loops",
-        "description": "Learn how to repeat a set of statements"
+        "title": "Pętle for",
+        "description": "Naucz się powtarzać zestaw instrukcji"
     },
     "arrays": {
         "order": 11,
-        "title": "Arrays",
-        "description": "Learn how to store different values into one variable"
+        "title": "Tablice",
+        "description": "Naucz się przechowywać różne wartości w jednej zmiennej"
     },
     "objects": {
         "order": 12,
-        "title": "Objects",
-        "description": "Learn how to store values with keys"
+        "title": "Obiekty",
+        "description": "Naucz się przechowywać wartości za pomocą kluczy"
     },
     "functions": {
         "order": 13,
-        "title": "Functions",
-        "description": "Learn how to divide code by specific tasks"
+        "title": "Funkcje",
+        "description": "Naucz się dzielić kod na konkretne zadania"
     },
     "classes": {
         "order": 14,
-        "title": "Classes",
-        "description": "Learn object-oriented programming"
+        "title": "Klasy",
+        "description": "Naucz się programowania obiektowego"
     }
 }

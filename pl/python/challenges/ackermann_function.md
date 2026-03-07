@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-title: Ackermann function
+title: Funkcja Ackermanna
 difficulty: 1
 ---
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Funkcja Ackermanna jest klasycznym przykładem funkcji rekurencyjnej, godnym uwagi zwłaszcza dlatego, że nie jest funkcją prymitywnie rekurencyjną. Jej wartości rosną bardzo szybko, podobnie jak rozmiar jej drzewa wywołań.
 
-The Ackermann function is usually defined as follows:
+Funkcja Ackermanna jest zazwyczaj definiowana następująco:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+Jej argumenty nigdy nie są ujemne i zawsze kończy działanie
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Napisz funkcję, która zwraca wartość funkcji Ackermanna.
 
 # --seed--
 
@@ -36,28 +36,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` powinno zwrócić 1.
 
 ```python
     def test1(self):
         self.assertEqual(ack(0, 0), 1, "--err-t1--")
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` powinno zwrócić 3.
 
 ```python
     def test2(self):
         self.assertEqual(ack(1, 1), 3, "--err-t2--")
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` powinno zwrócić 13.
 
 ```python
     def test3(self):
         self.assertEqual(ack(2, 5), 13, "--err-t3--")
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` powinno zwrócić 61.
 
 ```python
     def test4(self):

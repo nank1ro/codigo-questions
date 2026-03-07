@@ -7,11 +7,11 @@ title: Multiples of 3 or 5
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Jeśli wylistujemy wszystkie liczby naturalne poniżej 10, które są wielokrotnościami 3 lub 5, otrzymamy 3, 5, 6 i 9. Suma tych wielokrotności wynosi 23.
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+Znajdź sumę wszystkich wielokrotności 3 lub 5 poniżej podanej wartości parametru `number`.
 
 # --before-seed--
 
@@ -48,19 +48,19 @@ fun main() {
 
 # --asserts--
 
-`multiplesOf3and5(10)` should return 23.
+`multiplesOf3and5(10)` powinno zwrócić 23.
 
 ```kotlin
 tryCatch(multiplesOf3and5(10) == 23)
 ```
 
-`multiplesOf3and5(1000)` should return 233168.
+`multiplesOf3and5(1000)` powinno zwrócić 233168.
 
 ```kotlin
 tryCatch(multiplesOf3and5(1000) == 233168)
 ```
 
-`multiplesOf3and5(6987)` should return 11390208
+`multiplesOf3and5(6987)` powinno zwrócić 11390208
 
 ```kotlin
 tryCatch(multiplesOf3and5(6987) == 11390208)

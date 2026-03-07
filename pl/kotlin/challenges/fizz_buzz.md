@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Utwórz funkcję, która przyjmuje liczbę jako argument i zwraca `"Fizz"`, `"Buzz"` lub `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Jeśli liczba jest wielokrotnością `3`, wynikiem powinno być `"Fizz"`.
+- Jeśli liczba jest wielokrotnością `5`, wynikiem powinno być `"Buzz"`.
+- Jeśli liczba jest wielokrotnością zarówno `3`, jak i `5`, wynikiem powinno być `"FizzBuzz"`.
+- Jeśli liczba nie jest wielokrotnością `3` ani `5`, wynikiem powinna być sama liczba, jak pokazano w poniższych przykładach.
+- Wynik zawsze powinien być ciągiem znaków, nawet jeśli liczba nie jest wielokrotnością `3` ani `5`.
 
-Examples:
+Przykłady:
 ```kotlin
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -55,31 +55,31 @@ fun main() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Liczba `3` musi dać `"Fizz"`
 
 ```kotlin
     tryCatch(fizzBuzz(3) == "Fizz");
 ```
 
-The number `5` must equal `"Buzz"`
+Liczba `5` musi dać `"Buzz"`
 
 ```kotlin
     tryCatch(fizzBuzz(5) == "Buzz");
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Liczba `15` musi dać `"FizzBuzz"`
 
 ```kotlin
     tryCatch(fizzBuzz(15) == "FizzBuzz");
 ```
 
-The number `10` must equal `"Buzz"`
+Liczba `10` musi dać `"Buzz"`
 
 ```kotlin
     tryCatch(fizzBuzz(10) == "Buzz");
 ```
 
-The number `98` must equal `"98"`
+Liczba `98` musi dać `"98"`
 
 ```kotlin
     tryCatch(fizzBuzz(98) == "98");

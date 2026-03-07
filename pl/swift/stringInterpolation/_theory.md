@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+W Swift możemy używać znaku `+`, aby wyświetlić dwa lub więcej ciągów razem, na przykład:
 ```swift
 print("Hello " + "Swift!") // prints "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Jednak użycie znaku `+` do dodania liczby, np. '10', do ciągu, np. ` "friends"`, powoduje błąd, ponieważ są to różne rodzaje wartości
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+Interpolacja ciągów pozwala nam wyświetlać wyrażenia, takie jak dodanie ciągu do liczby, bez żadnego błędu.
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+Każda interpolacja ciągów składa się z dwóch części: `\()`, gdzie wstawiamy liczbę lub zmienną, oraz normalny ciąg
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+Następnie dodajemy różny rodzaj wartości w nawiasach klamrowych, aby wyświetlić je jako jedno polecenie print. Tutaj z `\(5)`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Wstawianie zmiennych, takich jak `friends`, między nawiasy okrągłe wyświetla również ich wartość
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+Możemy używać nawiasów okrągłych do wstawiania wartości tyle razy, ile chcemy wewnątrz interpolacji ciągów
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+Interpolacje ciągów najlepiej stosować w instrukcjach print, ale możemy je również przechowywać w zmiennych jak zwykłe ciągi.

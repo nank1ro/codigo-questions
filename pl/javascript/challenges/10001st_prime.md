@@ -7,11 +7,11 @@ title: 10001st prime
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+Wypisując pierwsze sześć liczb pierwszych: 2, 3, 5, 7, 11 i 13, widzimy, że 6. liczba pierwsza to 13.
 
 # --instructions--
 
-What is the `n`th prime number?
+Jaka jest `n`-ta liczba pierwsza?
 
 # --before-seed--
 
@@ -41,31 +41,31 @@ function nthPrime(n) {
 
 # --asserts--
 
-`nthPrime(6)` should return 13.
+`nthPrime(6)` powinno zwrócić 13.
 
 ```javascript
 tryCatch(nthPrime(6) === 13);
 ```
 
-`nthPrime(10)` should return 29.
+`nthPrime(10)` powinno zwrócić 29.
 
 ```javascript
 tryCatch(nthPrime(10) === 29);
 ```
 
-`nthPrime(100)` should return 541.
+`nthPrime(100)` powinno zwrócić 541.
 
 ```javascript
 tryCatch(nthPrime(100) === 541);
 ```
 
-`nthPrime(1000)` should return 7919.
+`nthPrime(1000)` powinno zwrócić 7919.
 
 ```javascript
 tryCatch(nthPrime(1000) === 7919);
 ```
 
-`nthPrime(10001)` should return 104743.
+`nthPrime(10001)` powinno zwrócić 104743.
 
 ```javascript
 tryCatch(nthPrime(10001) === 104743);

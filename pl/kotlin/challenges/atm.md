@@ -7,20 +7,20 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+James chce wypłacić N dolarów z bankomatu.
+Maszyna zaakceptuje transakcję tylko wtedy, gdy N jest wielokrotnością 5, a saldo konta Jamesa jest wystarczające do przeprowadzenia transakcji (łącznie z opłatą bankową).
+Za każdą udaną wypłatę bank pobiera `0.50$`.
+Oblicz saldo konta Jamesa po próbie transakcji.
+Dane wejściowe są w następującej kolejności:
+1. kwota, którą James chce wypłacić, jest w zakresie: `0 < N <= 2000`.
+2. początkowe saldo Jamesa podane jest z dokładnością do dwóch miejsc po przecinku i jest w zakresie: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Zwróć saldo konta po próbie transakcji jako liczbę z dokładnością do dwóch miejsc po przecinku.
+Jeśli na koncie nie ma wystarczających środków do przeprowadzenia transakcji, zwróć aktualne saldo.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```kotlin
 println(accountBalance(10, 20.00))
 // prints 9.5
@@ -56,25 +56,25 @@ fun main() {
 
 # --asserts--
 
-Perform a successful transaction
+Przeprowadź udaną transakcję
 
 ```kotlin
     tryCatch(accountBalance(50, 120.00) == 69.50)
 ```
 
-Insufficient funds
+Niewystarczające środki
 
 ```kotlin
     tryCatch(accountBalance(200, 120.00) == 120.00)
 ```
 
-Refused transaction, invalid amount
+Odrzucona transakcja, nieprawidłowa kwota
 
 ```kotlin
     tryCatch(accountBalance(22, 120.00) == 120.00)
 ```
 
-Withdraw all money successfully
+Wypłać wszystkie środki
 
 ```kotlin
     tryCatch(accountBalance(95, 95.50) == 0.00)

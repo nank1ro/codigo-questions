@@ -7,17 +7,17 @@ title: Ackermann function
 
 # --description--
 
-The Ackermann function is a classic example of a recursive function, notable especially because it is not a primitive recursive function. It grows very quickly in value, as does the size of its call tree.
+Funkcja Ackermanna jest klasycznym przykładem funkcji rekurencyjnej, godnej uwagi zwłaszcza dlatego, że nie jest funkcją pierwotnie rekurencyjną. Jej wartości rosną bardzo szybko, podobnie jak rozmiar jej drzewa wywołań.
 
-The Ackermann function is usually defined as follows:
+Funkcja Ackermanna jest zwykle definiowana następująco:
 
 <latex>A(m, n) = \begin{cases} n + 1 &\text{if } m = 0 \\ A(m - 1,1) &\text{if } m > 0 \text{ and } n = 0 \\ A(m -1, A(m, n - 1)) &\text{if } m > 0 \text{ and } n > 0 \end{cases}</latex>
 
-Its arguments are never negative and it always terminates
+Jej argumenty nigdy nie są ujemne i zawsze kończy działanie.
 
 # --instructions--
 
-Write a function which returns the value of the Ackermann function.
+Napisz funkcję, która zwraca wartość funkcji Ackermanna.
 
 # --seed--
 
@@ -49,25 +49,25 @@ fun main() {
 
 # --asserts--
 
-`ack(0, 0)` should return 1.
+`ack(0, 0)` powinno zwrócić 1.
 
 ```kotlin
     tryCatch(ack(0, 0) == 1)
 ```
 
-`ack(1, 1)` should return 3.
+`ack(1, 1)` powinno zwrócić 3.
 
 ```kotlin
     tryCatch(ack(1, 1) == 3)
 ```
 
-`ack(2, 5)` should return 13.
+`ack(2, 5)` powinno zwrócić 13.
 
 ```kotlin
     tryCatch(ack(2, 5) == 13)
 ```
 
-`ack(3, 3)` should return 61.
+`ack(3, 3)` powinno zwrócić 61.
 
 ```kotlin
     tryCatch(ack(3, 3) == 61)

@@ -1,27 +1,27 @@
 {
   "comments": {
     "order": 1,
-    "title": "Comments",
-    "description": "Learn how to comment the code"
+    "title": "Komentarze",
+    "description": "Naucz się komentować kod"
   },
   "output": {
     "order": 2,
-    "title": "Output",
-    "description": "Learn how to output a value"
+    "title": "Wyjście",
+    "description": "Naucz się wyświetlać wartości"
   },
   "stringInterpolation": {
     "order": 3,
-    "title": "String interpolation",
-    "description": "Learn how to interpolate strings with different data types"
+    "title": "Interpolacja ciągów",
+    "description": "Naucz się interpolować ciągi znaków z różnymi typami danych"
   },
   "variables": {
     "order": 4,
-    "title": "Variables",
-    "description": "Learn how to store values in a variable"
+    "title": "Zmienne",
+    "description": "Naucz się przechowywać wartości w zmiennej"
   },
   "types": {
     "order": 5,
-    "title": "Types",
-    "description": "Learn the types assignable to a variable"
+    "title": "Typy",
+    "description": "Poznaj typy przypisywalne do zmiennej"
   }
 }

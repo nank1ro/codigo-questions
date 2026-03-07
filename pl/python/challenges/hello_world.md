@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: Witaj Świecie!
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Witaj, Świecie!"__ to tradycyjny pierwszy program dla osób zaczynających programować w nowym języku lub środowisku.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Napisz funkcję, która zwraca ciąg znaków "Hello, World!".
 
 # --seed--
 
@@ -30,7 +30,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The function should return "Hello, World!".
+Funkcja powinna zwrócić "Hello, World!".
 
 ```python
     def test_say_hi(self):

@@ -1,22 +1,22 @@
 ---
 language: python
 exerciseType: 1
-title: Arithmetic mean
+title: Średnia arytmetyczna
 difficulty: 1
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Napisz funkcję o nazwie `mean`, która znajduje _średnią arytmetyczną_ wektora liczbowego.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Napisz funkcję, która zwraca średnią wektora liczbowego.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# drukuje 2
 ```
 
 # --seed--
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4
+Średnia z `[1, 2, 3, 4, 5, 6, 7]` musi wynosić 4
 
 ```python
     def test1(self):
         self.assertEqual(mean([1, 2, 3, 4, 5, 6, 7]), 4, "--err-t1--")
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5
+Średnia z `[4, 5, 6]` musi wynosić 5
 
 ```python
     def test2(self):
         self.assertEqual(mean([4, 5, 6]), 5, "--err-t2--")
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45
+Średnia z `[12, 34, 56, 78]` musi wynosić 45
 
 ```python
     def test3(self):

@@ -2,17 +2,17 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Suma cyfr
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+Dana jest liczba całkowita `num`.
+Napisz program obliczający sumę wszystkich cyfr liczby `num`
 
 # --instructions--
 
-Return the sum of digits of `num`
+Zwróć sumę cyfr liczby `num`
 
 # --seed--
 
@@ -31,35 +31,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Suma cyfr liczby 12345 wynosi 15
 
 ```python
     def test_sum_of_digits_1(self):
         self.assertEqual(sum_digits(12345), 15, "--err-t1--")
 ```
 
-The sum of the digits of 57253 is 22
+Suma cyfr liczby 57253 wynosi 22
 
 ```python
     def test_sum_of_digits_2(self):
         self.assertEqual(sum_digits(57253), 22, "--err-t2--")
 ```
 
-The sum of the digits of 122 is 5
+Suma cyfr liczby 122 wynosi 5
 
 ```python
     def test_sum_of_digits_3(self):
         self.assertEqual(sum_digits(122), 5, "--err-t3--")
 ```
 
-The sum of the digits of 91979997 is 60
+Suma cyfr liczby 91979997 wynosi 60
 
 ```python
     def test_sum_of_digits_4(self):
         self.assertEqual(sum_digits(91979997), 60, "--err-t4--")
 ```
 
-The sum of the digits of 2147483647 is 46
+Suma cyfr liczby 2147483647 wynosi 46
 
 ```python
     def test_sum_of_digits_5(self):

@@ -7,11 +7,11 @@ title: Summation of primes
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Suma liczb pierwszych poniżej 10 wynosi 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+Znajdź sumę wszystkich liczb pierwszych poniżej `n`.
 
 # --before-seed--
 
@@ -41,25 +41,25 @@ function primeSummation(n) {
 
 # --asserts--
 
-`primeSummation(17)` should return 41.
+`primeSummation(17)` powinno zwrócić 41.
 
 ```javascript
 tryCatch(primeSummation(17) === 41);
 ```
 
-`primeSummation(2001)` should return 277050.
+`primeSummation(2001)` powinno zwrócić 277050.
 
 ```javascript
 tryCatch(primeSummation(2001) === 277050);
 ```
 
-`primeSummation(140759)` should return 873608362.
+`primeSummation(140759)` powinno zwrócić 873608362.
 
 ```javascript
 tryCatch(primeSummation(140759) === 873608362);
 ```
 
-`primeSummation(2000000)` should return 142913828922.
+`primeSummation(2000000)` powinno zwrócić 142913828922.
 
 ```javascript
 tryCatch(primeSummation(2000000) === 142913828922);

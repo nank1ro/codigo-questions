@@ -7,25 +7,25 @@ title: Raindrops
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+Twoim zadaniem jest zamiana liczby na ciąg znaków zawierający dźwięki kropel deszczu odpowiadające określonym potencjalnym czynnikom.
+Czynnik to liczba, która dzieli inną liczbę bez reszty.
+Najprostszym sposobem sprawdzenia, czy liczba jest czynnikiem innej, jest użycie operacji modulo.
+Zasady gry Raindrops są następujące — jeśli dana liczba:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- ma 3 jako czynnik, dodaj 'Pling' do wyniku.
+- ma 5 jako czynnik, dodaj 'Plang' do wyniku.
+- ma 7 jako czynnik, dodaj 'Plong' do wyniku.
+- nie ma żadnego z czynników 3, 5 ani 7, wynikiem powinny być cyfry tej liczby.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca odpowiedni ciąg znaków, przykłady:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 ma 7 jako czynnik, ale nie 3 ani 5, więc wynikiem będzie `"Plong"`.
+- 30 ma zarówno 3, jak i 5 jako czynniki, ale nie 7, więc wynikiem będzie `"PlingPlang"`.
+- 34 nie ma czynnika 3, 5 ani 7, więc wynikiem będzie `"34"`.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```kotlin
 println(raindrops(28))
 // prints "Plong"
@@ -61,109 +61,109 @@ fun main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+Dźwięk dla 1 to "1"
 
 ```kotlin
     tryCatch(raindrops(1) == "1")
 ```
 
-The sound for 3 is "Pling"
+Dźwięk dla 3 to "Pling"
 
 ```kotlin
     tryCatch(raindrops(3) == "Pling")
 ```
 
-The sound for 5 is "Plang"
+Dźwięk dla 5 to "Plang"
 
 ```kotlin
     tryCatch(raindrops(5) == "Plang")
 ```
 
-The sound for 7 is "Plong"
+Dźwięk dla 7 to "Plong"
 
 ```kotlin
     tryCatch(raindrops(7) == "Plong")
 ```
 
-The sound for 6 is "Pling"
+Dźwięk dla 6 to "Pling"
 
 ```kotlin
     tryCatch(raindrops(6) == "Pling")
 ```
 
-The sound for 8 is "8"
+Dźwięk dla 8 to "8"
 
 ```kotlin
     tryCatch(raindrops(8) == "8")
 ```
 
-The sound for 9 is "Pling"
+Dźwięk dla 9 to "Pling"
 
 ```kotlin
     tryCatch(raindrops(9) == "Pling")
 ```
 
-The sound for 10 is "Plang"
+Dźwięk dla 10 to "Plang"
 
 ```kotlin
     tryCatch(raindrops(10) == "Plang")
 ```
 
-The sound for 14 is "Plong"
+Dźwięk dla 14 to "Plong"
 
 ```kotlin
     tryCatch(raindrops(14) == "Plong")
 ```
 
-The sound for 15 is "PlingPlang"
+Dźwięk dla 15 to "PlingPlang"
 
 ```kotlin
     tryCatch(raindrops(15) == "PlingPlang")
 ```
 
-The sound for 21 is "PlingPlong"
+Dźwięk dla 21 to "PlingPlong"
 
 ```kotlin
     tryCatch(raindrops(21) == "PlingPlong")
 ```
 
-The sound for 25 is "Plang"
+Dźwięk dla 25 to "Plang"
 
 ```kotlin
     tryCatch(raindrops(25) == "Plang")
 ```
 
-The sound for 27 is "Pling"
+Dźwięk dla 27 to "Pling"
 
 ```kotlin
     tryCatch(raindrops(27) == "Pling")
 ```
 
-The sound for 35 is "PlangPlong"
+Dźwięk dla 35 to "PlangPlong"
 
 ```kotlin
     tryCatch(raindrops(35) == "PlangPlong")
 ```
 
-The sound for 49 is "Plong"
+Dźwięk dla 49 to "Plong"
 
 ```kotlin
     tryCatch(raindrops(49) == "Plong")
 ```
 
-The sound for 52 is "52"
+Dźwięk dla 52 to "52"
 
 ```kotlin
     tryCatch(raindrops(52) == "52")
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Dźwięk dla 105 to "PlingPlangPlong"
 
 ```kotlin
     tryCatch(raindrops(105) == "PlingPlangPlong")
 ```
 
-The sound for 3125 is "Plang"
+Dźwięk dla 3125 to "Plang"
 
 ```kotlin
     tryCatch(raindrops(3125) == "Plang")

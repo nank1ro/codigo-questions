@@ -1,15 +1,15 @@
-Variables are containers for storing data values.
-Every variable in JavaScript is an object.
-To create a variable, we need to give it a **name** keeping in mind that it must not contain spaces.
-A variable is created the moment you first assign a value to it.
-In JavaScript you declare constants with the `let` or `const` keywords and variables with the `var` keyword.
-The value of a constant can't be changed once it's set, whereas a variable can be set to a different value in the future.
-An example of a variable creation named `x` is:
+Zmienne są kontenerami do przechowywania wartości danych.
+Każda zmienna w JavaScript jest obiektem.
+Aby utworzyć zmienną, musimy nadać jej **nazwę**, pamiętając, że nie może ona zawierać spacji.
+Zmienna jest tworzona w momencie pierwszego przypisania do niej wartości.
+W JavaScript stałe deklaruje się za pomocą słów kluczowych `let` lub `const`, a zmienne za pomocą słowa kluczowego `var`.
+Wartości stałej nie można zmienić po jej ustawieniu, podczas gdy zmienna może w przyszłości przyjąć inną wartość.
+Przykład tworzenia zmiennej o nazwie `x`:
 ```javascript
 var x = 1;
 ```
-In this way we have assigned the value `1` to the variable named `x`.
-If we print the variable `x` we get back the number `1`:
+W ten sposób przypisaliśmy wartość `1` do zmiennej o nazwie `x`.
+Jeśli wydrukujemy zmienną `x`, otrzymamy liczbę `1`:
 ```javascript
 console.log(x);
 // prints 1
@@ -17,8 +17,8 @@ console.log(x);
 
 ---
 
-Variables are called in this way because the value they store can change.
-We can update `x` by using `=` and giving it a new value.
+Zmienne są tak nazywane, ponieważ przechowywane przez nie wartości mogą się zmieniać.
+Możemy zaktualizować `x`, używając `=` i podając nową wartość.
 ```javascript
 var x = 1;
 console.log(x); // prints 1
@@ -28,8 +28,8 @@ console.log(x); // prints 2
 
 ---
 
-We can also give variables the values of other variables.
-Here, we can give to the `y` variable the value of `x`
+Możemy również nadawać zmiennym wartości innych zmiennych.
+Tutaj możemy nadać zmiennej `y` wartość `x`
 ```javascript
 var x = 5;
 var y = x;
@@ -38,8 +38,8 @@ console.log(y); // prints 5
 
 ---
 
-When we update a variable, it forgets its previous value.
-Here we can display the `x` variable twice and see how its value updates.
+Kiedy aktualizujemy zmienną, zapomina ona swoją poprzednią wartość.
+Tutaj możemy wyświetlić zmienną `x` dwa razy i zobaczyć, jak aktualizuje się jej wartość.
 ```javascript
 var x = 5;
 console.log(x); // prints 5
@@ -49,7 +49,7 @@ console.log(x); // prints 10
 
 ---
 
-In JavaScript string variables can be declared using both double quotes and single quotes:
+W JavaScript zmienne łańcuchowe można deklarować zarówno za pomocą podwójnych, jak i pojedynczych cudzysłowów:
 ```javascript
 let x = "May";
 // both are the same string
@@ -60,5 +60,5 @@ console.log(x === y);
 
 ---
 
-If we want a variable name with multiple words, we use **camelCase**.
-It is the practice of writing phrases such that each word in the middle of the phrase begins with a capital letter
+Jeśli chcemy nazwy zmiennej składającej się z wielu słów, używamy **camelCase**.
+Jest to praktyka pisania wyrażeń, w której każde słowo w środku wyrażenia zaczyna się od wielkiej litery

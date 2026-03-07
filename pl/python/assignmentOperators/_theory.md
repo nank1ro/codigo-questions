@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Już wiesz, że aby przypisać wartość do zmiennej, możemy użyć znaku `=`, na przykład:
 ```python
 a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+Mamy już zainicjalizowaną zmienną `total`
 ```python
 total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Powiedzmy, że chcemy dodać liczbę `2` do zmiennej `total`, możemy napisać
 ```python
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+Działa! Ale istnieje krótsza wersja, która robi to samo:
 ```python
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+Znak `+=` nazywa się **przypisaniem dodawania**.
+Dodaje wartość do wartości zmiennej i przypisuje wynik do tej zmiennej.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Podobnie jak przypisanie dodawania, mamy **przypisanie odejmowania** `-=`.
+Funkcjonalność jest taka sama, jedyną różnicą jest to, że wykonuje odejmowanie.
+Poniższe są dokładnie równoważne:
 ```python
 num = num - 5
 # is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania mnożenia** `*=`.
+Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe są dokładnie równoważne:
 ```python
 num = num * 5
 # is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania dzielenia** `/=`.
+Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe są dokładnie równoważne:
 ```python
 num = num / 5
 # is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **power assignment** `**=` operator.
-It raises the variable to a specified power and assigns the result to the variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania potęgowania** `**=`.
+Podnosi zmienną do określonej potęgi i przypisuje wynik do zmiennej.
+Poniższe są dokładnie równoważne:
 ```python
 num = num ** 5
 # is equal to
@@ -66,9 +66,9 @@ num **= 5
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania modulo** `%=`.
+Oblicza modulo zmiennej i wartości, a następnie przypisuje wynik do tej zmiennej.
+Poniższe są dokładnie równoważne:
 ```python
 num = num % 5
 # is equal to
@@ -77,9 +77,9 @@ num %= 5
 
 ---
 
-Let's see the **floor assignment** `//=` operator.
-It floor divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Poznajmy operator **przypisania dzielenia całkowitego** `//=`.
+Dzieli zmienną całkowicie przez wartość i przypisuje wynik do tej zmiennej.
+Poniższe są dokładnie równoważne:
 ```python
 num = num // 5
 # is equal to

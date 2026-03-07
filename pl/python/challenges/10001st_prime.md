@@ -7,11 +7,11 @@ title: 10001st prime
 
 # --description--
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+Wypisując pierwsze sześć liczb pierwszych: 2, 3, 5, 7, 11 i 13, widzimy, że 6. liczba pierwsza to 13.
 
 # --instructions--
 
-What is the `n`th prime number?
+Jaka jest `n`-ta liczba pierwsza?
 
 # --seed--
 
@@ -30,35 +30,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`nth_prime(6)` should return 13.
+`nth_prime(6)` powinno zwrócić 13.
 
 ```python
     def test1(self):
         self.assertEqual(nth_prime(6), 13, "--err-t1--")
 ```
 
-`nth_prime(10)` should return 29.
+`nth_prime(10)` powinno zwrócić 29.
 
 ```python
     def test2(self):
         self.assertEqual(nth_prime(10), 29, "--err-t2--")
 ```
 
-`nth_prime(100)` should return 541.
+`nth_prime(100)` powinno zwrócić 541.
 
 ```python
     def test3(self):
         self.assertEqual(nth_prime(100), 541, "--err-t3--")
 ```
 
-`nth_prime(1000)` should return 7919.
+`nth_prime(1000)` powinno zwrócić 7919.
 
 ```python
     def test4(self):
         self.assertEqual(nth_prime(1000), 7919, "--err-t4--")
 ```
 
-`nth_prime(10001)` should return 104743.
+`nth_prime(10001)` powinno zwrócić 104743.
 
 ```python
     def test5(self):

@@ -7,17 +7,17 @@ title: 100 doors
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+W rzędzie stoi 100 drzwi, wszystkie początkowo zamknięte.
+Wykonujesz 100 przejść obok drzwi.
+Za pierwszym razem odwiedzasz każde drzwi i „przełączasz" je (jeśli drzwi są zamknięte, otwierasz je; jeśli są otwarte, zamykasz je).
+Za drugim razem odwiedzasz tylko co 2. drzwi (tzn. drzwi nr 2, 4, 6, ...) i je przełączasz.
+Za trzecim razem odwiedzasz co 3. drzwi (tzn. drzwi nr 3, 6, 9, ...) itd., aż do momentu, gdy odwiedzasz tylko 100. drzwi.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Zaimplementuj funkcję określającą stan drzwi po ostatnim przejściu.
+Zwróć końcowy wynik w tablicy, w której znajdą się tylko numery otwartych drzwi.
+> Metoda musi działać dla zmiennej liczby drzwi.
 
 # --before-seed--
 
@@ -61,21 +61,21 @@ function getFinalOpenedDoors(numDoors) {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Dla 100 drzwi zwróć poprawną listę otwartych drzwi
 
 ```javascript
 const sol1 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
 tryCatch(arraysMatch(getFinalOpenedDoors(100), sol1));
 ```
 
-Given 10 doors, return the correct list of open doors
+Dla 10 drzwi zwróć poprawną listę otwartych drzwi
 
 ```javascript
 const sol2 = [1, 4, 9];
 tryCatch(arraysMatch(getFinalOpenedDoors(10), sol2));
 ```
 
-Given 950 doors, return the correct list of open doors
+Dla 950 drzwi zwróć poprawną listę otwartych drzwi
 
 ```javascript
 const sol3 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900];

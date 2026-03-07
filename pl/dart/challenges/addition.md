@@ -7,13 +7,13 @@ title: Addition
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Dane są dwie liczby całkowite `num1` i `num2`. Napisz program, który dodaje te dwie liczby.
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
+Napisz funkcję, która zwraca sumę dwóch liczb.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```dart
 print(addition(1, 2));
 // prints 3
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Suma 1 i 3 musi być równa 4
 
 ```dart
   test('test1', () {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
   });
 ```
 
-The sum of 200 and 210 must equal 410
+Suma 200 i 210 musi być równa 410
 
 ```dart
   test('test2', () {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
   });
 ```
 
-The sum of 15 and 35 must equal 50
+Suma 15 i 35 musi być równa 50
 
 ```dart
   test('test3', () {

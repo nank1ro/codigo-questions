@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+Zacznijmy od relacyjnego operatora **równości** `==`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy dwa wyrażenia są równe, na przykład:
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+Kontynuujmy z relacyjnym operatorem **nierówności** `!=`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy dwa wyrażenia **NIE** są równe, na przykład:
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+Jest dokładnie przeciwieństwem operatora *równości*
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+Kontynuujmy z relacyjnym operatorem **większości** `>`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy jedno wyrażenie jest większe od drugiego, na przykład:
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+Kontynuujmy z relacyjnym operatorem **mniejszości** `<`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy jedno wyrażenie jest mniejsze od drugiego, na przykład:
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+Kontynuujmy z relacyjnym operatorem **większości lub równości** `>=`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy jedno wyrażenie jest większe lub równe drugiemu, na przykład:
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+Kontynuujmy z relacyjnym operatorem **mniejszości lub równości** `<=`.
+Zwraca **wartość logiczną** (boolean): prawda `1`  lub fałsz `0`, określając czy jedno wyrażenie jest mniejsze lub równe drugiemu, na przykład:
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Teraz poznajmy operatory **logiczne** (boolean), zacznijmy od pierwszego zwanego __and__ `&&`.
+Zwraca pierwszy operand, który ma wartość *fałsz*, lub ostatni, jeśli wszystkie mają wartość *prawda*.
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Kontynuujmy z logicznym operatorem **or** `||`.
+Zwraca pierwszy operand, który ma wartość *prawda*, lub ostatni, jeśli wszystkie mają wartość *fałsz*.
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Zakończmy z logicznym operatorem **not** `!`.
+Zwraca wartość logiczną będącą odwrotnością stanu logicznego wyrażenia.
 ```c
 >>> !true
 0

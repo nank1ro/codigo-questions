@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+Często w programowaniu musimy powtarzać blok kodu, na przykład:
 ```javascript
 console.log("2 seconds");
 console.log("3 seconds");
 console.log("4 seconds");
 console.log("5 seconds");
 ```
-This produces the following output:
+Daje to następujący wynik:
 ```javascript
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+Oczywiście, przy długich instrukcjach spędzilibyśmy dużo czasu na pisaniu kodu, ale na szczęście możemy używać pętli.
+Poznajmy pętlę `while`, uzyskując ten sam wynik co powyżej.
 ```javascript
 var count = 2;
 while (count <= 5) {
@@ -21,30 +21,30 @@ while (count <= 5) {
     count += 1;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+Stworzyliśmy zmienną `count` przypisując jej `2`, wartość początkową.
+Następnie użyliśmy instrukcji `while`, która będzie uruchamiać blok kodu, dopóki warunek `count <= 5` jest `true`.
+Wewnątrz bloku kodu **NIE** możemy zapomnieć o dodaniu linii `count += 1`.
+Zwiększa ona wartość `count`, w przeciwnym razie nasza pętla będzie nieskończona
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+Aby kontrolować, ile razy pętla `while` się powtarza, zaczynamy od zmiennej ustawionej na liczbę.
+Tę zmienną nazywamy zmienną licznikową
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+Następnie używamy porównania w warunku, aby porównać zmienną `counter` z liczbą.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+Wewnątrz bloku kodu, aby zatrzymać pętlę `while`, zwiększamy zmienną `counter`.
 
 ---
 
-The order you write code affects the output.
+Kolejność pisania kodu wpływa na wynik.
 
 ---
 
-In JavaScript we also have the **do-while** variation of the `while` loop.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
+W JavaScript mamy również wariant **do-while** pętli `while`.
+Wykonuje on najpierw pojedyncze przejście przez blok pętli, _przed_ sprawdzeniem warunku pętli.
+Następnie kontynuuje powtarzanie pętli, dopóki warunek jest `false`.

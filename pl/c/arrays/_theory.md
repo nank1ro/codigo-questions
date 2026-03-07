@@ -1,35 +1,35 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of a single type and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+Tablice to typ danych, którego możesz używać do przechowywania kolekcji różnych informacji jako sekwencji pod jedną nazwą zmiennej.
+Tablica przechowuje wiele wartości jednego typu i używa **indeksów** do ich rozróżniania.
+Możesz przypisać elementy do tablicy wyrażeniem w postaci:
 ```
 data_type array_name[array_size] = {item1, item2};
 ```
-`data_type` is the type of data you'll be using for the array, for example `int`, `double`, etc.
-`array_name` is the name of the variable that stores the items.
-`array_size` is the maximum size that the array can have.
-Finally, `item1` and `item2` are the values that we want to save in the array
+`data_type` to typ danych, którego będziesz używać dla tablicy, na przykład `int`, `double` itp.
+`array_name` to nazwa zmiennej przechowującej elementy.
+`array_size` to maksymalny rozmiar tablicy.
+Na końcu, `item1` i `item2` to wartości, które chcemy zapisać w tablicy
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+Możesz uzyskać dostęp do pojedynczego elementu tablicy za pomocą jego indeksu.
+Indeks jest jak adres, który identyfikuje miejsce elementu w tablicy.
+Indeks pojawia się bezpośrednio po nazwie tablicy, w nawiasach kwadratowych, w następujący sposób:
 ```
 list_name[index];
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item in a array like this: `list_name[0]`.
-The second item in a array is at index 1: `list_name[1]`.
+Indeksy tablicy zaczynają się od `0`, **nie** od `1`! Dostęp do pierwszego elementu tablicy uzyskujesz w ten sposób: `list_name[0]`.
+Drugi element tablicy ma indeks 1: `list_name[1]`.
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+Indeks listy zachowuje się jak każda inna nazwa zmiennej! Może być używany zarówno do odczytu, jak i do przypisywania wartości.
+Widziałeś, jak uzyskać dostęp do indeksu listy w ten sposób:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0]; // Gets the value 5
 ```
-This is how an assignment works:
+Tak działa przypisanie:
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
@@ -38,19 +38,19 @@ printf("%d\n", numbers[0]); // prints the new value 1
 
 ---
 
-You can calculate the length in bytes of an array obtaining the `sizeof` the array, then you need to divide it by the size of one element.
-It works because every item in the array has the same type, and as such the same size.
-The resulting *length* is the number of items it contains
+Możesz obliczyć długość tablicy w bajtach, uzyskując `sizeof` tablicy, a następnie podzielić ją przez rozmiar jednego elementu.
+Działa to dlatego, że każdy element tablicy ma ten sam typ, a zatem ten sam rozmiar.
+Wynikowa *długość* to liczba zawartych w niej elementów
 
 ---
 
-An array in C must have a fixed length.
-You can't add items to the end of an array, after declaring its size.
+Tablica w języku C musi mieć stałą długość.
+Nie możesz dodawać elementów na końcu tablicy po zadeklarowaniu jej rozmiaru.
 
 ---
 
-In C programming, you can create an array of arrays.
-These arrays are known as multidimensional arrays, for example:
+W programowaniu w C możesz tworzyć tablice tablic.
+Takie tablice są znane jako tablice wielowymiarowe, na przykład:
 ```c
 int numbers[2][3] = {{1, 2, 3}, {4, 5, 6}};
 ```

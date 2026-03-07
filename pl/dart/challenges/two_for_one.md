@@ -7,15 +7,15 @@ title: Two for one
 
 # --description--
 
-Given a name, return a string with the message:
+Dane jest imię. Zwróć ciąg znaków z wiadomością:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Gdzie `X` to podane imię.
+Jednak jeśli imię nie zostało podane, zwróć ciąg znaków:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-No name given
+Nie podano imienia
 
 ```dart
   test('test1', () {
@@ -54,7 +54,7 @@ No name given
   });
 ```
 
-Pass "James" as name
+Podaj "James" jako imię
 
 ```dart
   test('test2', () {
@@ -62,7 +62,7 @@ Pass "James" as name
   });
 ```
 
-Pass "Martha" as name
+Podaj "Martha" jako imię
 
 ```dart
   test('test3', () {

@@ -9,7 +9,7 @@
   },
   "hello_world": {
     "difficulty": 1,
-    "name": "Hello World!"
+    "name": "Witaj Świecie!"
   },
   "raindrops": {
     "difficulty": 1,
@@ -51,12 +51,12 @@
   },
   "roman_numeral_converter": {
     "difficulty": 3,
-    "name": "Roman numeral converter",
+    "name": "Roman Numeral Converter",
     "isPro": true
   },
   "leap_year": {
     "difficulty": 3,
-    "name": "Leap year",
+    "name": "Leap Year",
     "isPro": true
   }
 }

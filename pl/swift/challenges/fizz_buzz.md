@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Utwórz funkcję, która przyjmuje liczbę jako argument i zwraca `"Fizz"`, `"Buzz"` lub `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Jeśli liczba jest wielokrotnością `3`, wynik powinien być `"Fizz"`
+- Jeśli podana liczba jest wielokrotnością `5`, wynik powinien być `"Buzz"`.
+- Jeśli podana liczba jest wielokrotnością zarówno `3`, jak i `5`, wynik powinien być `"FizzBuzz"`.
+- Jeśli liczba nie jest wielokrotnością ani `3`, ani `5`, powinna zostać zwrócona sama liczba, jak pokazano w poniższych przykładach.
+- Wynik powinien zawsze być ciągiem znaków, nawet jeśli nie jest wielokrotnością `3` ani `5`.
 
-Examples:
+Przykłady:
 ```swift
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -44,7 +44,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Liczba `3` musi być równa `"Fizz"`
 
 ```swift
     func test1() {
@@ -52,7 +52,7 @@ The number `3` must equal `"Fizz"`
     }
 ```
 
-The number `5` must equal `"Buzz"`
+Liczba `5` musi być równa `"Buzz"`
 
 ```swift
     func test2() {
@@ -60,7 +60,7 @@ The number `5` must equal `"Buzz"`
     }
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Liczba `15` musi być równa `"FizzBuzz"`
 
 ```swift
     func test3() {
@@ -68,7 +68,7 @@ The number `15` must equal `"FizzBuzz"`
     }
 ```
 
-The number `10` must equal `"Buzz"`
+Liczba `10` musi być równa `"Buzz"`
 
 ```swift
     func test4() {
@@ -76,7 +76,7 @@ The number `10` must equal `"Buzz"`
     }
 ```
 
-The number `98` must equal `"98"`
+Liczba `98` musi być równa `"98"`
 
 ```swift
     func test5() {

@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Leap Year
+title: Rok przestępny
 ---
 
 # --description--
 
-In a calendar year there are exactly 365.25 days. But, eventually, this will lead to confusion because humans normally count by exact divisibility of 1 and not with decimal points. So, to avoid the latter, it was decided to add up all 0.25 days every four-year cycle and give that year 366 days (including February 29 as an intercalary day) and call it a __leap year__. The other three years in the four-year cycle would only contain 365 days and __wouldn't be leap years__.
+W roku kalendarzowym jest dokładnie 365,25 dnia. Jednak z czasem prowadzi to do zamieszania, ponieważ ludzie normalnie liczą przez dokładną podzielność przez 1, a nie z miejscami dziesiętnymi. Aby temu zapobiec, postanowiono zsumować wszystkie 0,25 dnia w każdym czteroletnim cyklu i dać temu rokowi 366 dni (włącznie z 29 lutego jako dniem przestępnym) i nazwać go __rokiem przestępnym__. Pozostałe trzy lata w czteroletnim cyklu zawierałyby tylko 365 dni i __nie byłyby latami przestępnymi__.
 
 # --instructions--
 
-In this challenge we'll take it to a new level, where you are to determine if it's a leap year or not without the use of the `datetime` class, __if blocks__, __if-elif blocks__ or __conditionals__ (`a if b else c`) nor the logical operators __AND__ (`and`) and __OR__ (`or`) with the exemption of the __NOT__ (`not`) operator.
+W tym wyzwaniu przejdziemy na wyższy poziom, gdzie musisz określić, czy dany rok jest przestępny, bez użycia klasy `datetime`, __bloków if__, __bloków if-elif__ ani __warunków__ (`a if b else c`), ani operatorów logicznych __AND__ (`and`) i __OR__ (`or`), z wyjątkiem operatora __NOT__ (`not`).
 
-Return `True` if it's a leap year, `False` otherwise.
+Zwróć `True` jeśli jest rokiem przestępnym, `False` w przeciwnym razie.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```dart
 print(leap_year(2000))
 // prints true
@@ -38,7 +38,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
+Użycie `month`, `day`, `if`, `else`, `elif`, `and`, `or` jest niedozwolone.
 
 ```json
 {
@@ -48,84 +48,84 @@ The use of `month`, `day`, `if`, `else`, `elif`, `and`, `or` is not allowed.
 }
 ```
 
-The year `2016` is a leap year.
+Rok `2016` jest rokiem przestępnym.
 
 ```python
     def test1(self):
         self.assertEqual(leap_year(2016), True, "--err-t1--")
 ```
 
-The year `1996` is a leap year.
+Rok `1996` jest rokiem przestępnym.
 
 ```python
     def test2(self):
         self.assertEqual(leap_year(1996), True, "--err-t2--")
 ```
 
-The year `1600` is a leap year.
+Rok `1600` jest rokiem przestępnym.
 
 ```python
     def test3(self):
         self.assertEqual(leap_year(1600), True, "--err-t3--")
 ```
 
-The year `2020` is a leap year.
+Rok `2020` jest rokiem przestępnym.
 
 ```python
     def test4(self):
         self.assertEqual(leap_year(2020), True, "--err-t4--")
 ```
 
-The year `2000` is a leap year.
+Rok `2000` jest rokiem przestępnym.
 
 ```python
     def test5(self):
         self.assertEqual(leap_year(2000), True, "--err-t5--")
 ```
 
-The year `2008` is a leap year.
+Rok `2008` jest rokiem przestępnym.
 
 ```python
     def test6(self):
         self.assertEqual(leap_year(2008), True, "--err-t6--")
 ```
 
-The year `1521` is not a leap year.
+Rok `1521` nie jest rokiem przestępnym.
 
 ```python
     def test7(self):
         self.assertEqual(leap_year(1521), False, "--err-t7--")
 ```
 
-The year `1800` is not a leap year.
+Rok `1800` nie jest rokiem przestępnym.
 
 ```python
     def test8(self):
         self.assertEqual(leap_year(1800), False, "--err-t8--")
 ```
 
-The year `2007` is not a leap year.
+Rok `2007` nie jest rokiem przestępnym.
 
 ```python
     def test9(self):
         self.assertEqual(leap_year(2007), False, "--err-t9--")
 ```
 
-The year `2002` is a leap year.
+Rok `2002` jest rokiem przestępnym.
 
 ```python
     def test10(self):
         self.assertEqual(leap_year(2002), False, "--err-t10--")
 ```
 
-The year `1979` is not a leap year.
+Rok `1979` nie jest rokiem przestępnym.
 
 ```python
     def test11(self):
         self.assertEqual(leap_year(1979), False, "--err-t11--")
 ```
 
-The year `2006` is not a leap year.
+Rok `2006` nie jest rokiem przestępnym.
 
 ```python
     def test12(self):

@@ -1,34 +1,34 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+Tablice to typ danych, którego możesz używać do przechowywania kolekcji różnych informacji jako sekwencji pod jedną nazwą zmiennej.
+Tablica przechowuje wiele wartości jednego lub wielu typów i używa **indeksów** do ich rozróżnienia.
+Możesz przypisać elementy do tablicy za pomocą wyrażenia o postaci:
 ```swift
 var arrayName: [itemsType] = [item1, item2]
 ```
-`itemsType` stands for the type of the items inside the array, for example, it can be `Int`, `String`, `Any`...
+`itemsType` oznacza typ elementów wewnątrz tablicy, na przykład może to być `Int`, `String`, `Any`...
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+Możesz uzyskać dostęp do pojedynczego elementu tablicy za pomocą jego indeksu.
+Indeks jest jak adres, który identyfikuje miejsce elementu w tablicy.
+Indeks pojawia się bezpośrednio po nazwie tablicy, w nawiasach kwadratowych, w taki sposób:
 ```swift
 arrayName[index]
 ```
 
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+Indeksy tablicy zaczynają się od `0`, **nie** od `1`! Dostęp do pierwszego elementu tablicy uzyskujesz w ten sposób: `arrayName[0]`.
+Drugi element tablicy jest pod indeksem 1: `arrayName[1]`.
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+Indeks tablicy zachowuje się jak każda inna nazwa zmiennej.
+Można go używać zarówno do odczytywania, jak i przypisywania wartości.
+Zobaczyłeś, jak uzyskać dostęp do indeksu tablicy w taki sposób:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 // Prints the value "Jeremiah"
 print(names[0])
 ```
-This is how an assignment works:
+Tak działa przypisanie:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 // Assign the new value "Jordan"
@@ -39,14 +39,14 @@ print(names[0])
 
 ---
 
-Just like strings, arrays have a **length** `count`.
-An arrays's length is the number of items it contains
+Podobnie jak ciągi znaków, tablice mają **długość** `count`.
+Długość tablicy to liczba elementów, które zawiera
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `append` function:
+Tablica nie musi mieć stałej długości.
+Możesz dodawać elementy na koniec tablicy w dowolnym momencie!
+Aby dodać element do tablicy, używamy funkcji `append`:
 ```swift
 var letters = ["a", "b"]
 letters.append("c")
@@ -56,43 +56,43 @@ print(letters)
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+Czasami chcesz uzyskać dostęp tylko do części tablicy.
+Rozważ następujący kod:
 ```swift
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
 // prints [2, 3]
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers[1...2]`.
-In Swift we can include the last index using `...`, but we can also exclude the last index using `..<`
+Najpierw tworzymy tablicę o nazwie `numbers`.
+Następnie pobieramy podsekcję tablicy i zapisujemy ją w tablicy slice.
+Robimy to, definiując indeksy, które chcemy uwzględnić po nazwie tablicy: `numbers[1...2]`.
+W Swift możemy uwzględnić ostatni indeks używając `...`, ale możemy też wykluczyć ostatni indeks używając `..<`
 
 ---
 
-In Swift we can slice an array as we want!
+W Swift możemy wycinać tablicę według własnych potrzeb!
 ```swift
 // Grabs the first two items
 listName[..<2]
 // Grabs the fourth through last items
 listName[3...]
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+Jeśli wycinek tablicy zawiera pierwszy lub ostatni element tablicy, indeks tego elementu nie musi być uwzględniony
 
 ---
 
-Array elements could be of any type, if we specify the `Any` type:
+Elementy tablicy mogą być dowolnego typu, jeśli określimy typ `Any`:
 ```swift
 var arrayName: [Any] = ["one", 2, true]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+Mamy tu kolejno: ciąg znaków, liczbę całkowitą i wartość logiczną.
+Możemy też mieć tablice zawierające tablice!
 
 ---
 
-Sometimes you need to search for an item in an array.
-In Swift we can use the `firstIndex()` method:
+Czasami musisz wyszukać element w tablicy.
+W Swift możemy użyć metody `firstIndex()`:
 ```swift
 var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
@@ -100,30 +100,30 @@ if let index = names.firstIndex(of: "Zac") {
 }
 // prints 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `insert()` method:
+Powyższy kod drukuje pierwszy indeks zawierający ciąg `"Zac"`, w tym przypadku `1`.
+Możemy również wstawiać elementy do tablicy pod określonym indeksem, używając metody `insert()`:
 ```swift
 names.insert("Ali", at: 1)
 // prints ["Trevor", "Ali", "Zac", "Glenn"]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+Powyższy kod wstawia `"Ali"` pod indeksem `1`, co przesuwa wszystko po tym indeksie o 1
 
 ---
 
-In Swift we can loop through an array in a very simple way using the `for..in` keywords:
+W Swift możemy przeglądać tablicę w bardzo prosty sposób używając słów kluczowych `for..in`:
 ```swift
 var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3 
+// prints 1, 2, 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+Nazwa zmiennej następuje po słowie kluczowym `for` - będzie jej przypisywana wartość każdego kolejnego elementu tablicy.
 
 ---
 
-**Tuples** are like arrays but you can name the elements and use those names to refer to them
-To create a tuple we use the round brackets `()` 
+**Krotki** są podobne do tablic, ale możesz nadawać nazwy elementom i używać tych nazw do odwoływania się do nich
+Aby utworzyć krotkę, używamy nawiasów okrągłych `()`
 ```swift
 var person = (firstName: "John", lastName: "Smith")
 var firstName = person.firstName // John

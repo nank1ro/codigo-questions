@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In C we use the `return_type` followed by the `function` name, for example:
+Być może zastanawiałeś się nad sytuacją, w której chciałbyś ponownie wykorzystać fragment kodu, ale z nieco innymi wartościami.
+Zamiast przepisywać cały kod, znacznie lepiej jest zdefiniować funkcję, którą można następnie wielokrotnie używać.
+W C używamy `return_type` poprzedzonego nazwą `function`, na przykład:
 ```c
 void say_hello() {
     printf("Hello!\n");
@@ -15,16 +15,16 @@ int main() {
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+Nawiasy w __definicji funkcji__ nie muszą być puste, jeśli chcemy określić parametry
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+Czasami chcemy, aby funkcja __zwracała__ wartość.
+Do tego służy słowo kluczowe `return`.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Funkcje mogą mieć wiele parametrów wejściowych, które zapisuje się wewnątrz nawiasów funkcji, oddzielone przecinkami.
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";
@@ -44,10 +44,10 @@ int main() {
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+W funkcjach możemy dodać _opcjonalny komentarz_ wyjaśniający, co dana funkcja robi:
 ```c
 /*
- * Function:  hello_world 
+ * Function:  hello_world
  * --------------------
  * prints "Hello, World!" to the screen
  */
@@ -55,4 +55,4 @@ function hello_world() {
     printf("Hello, World!\n");
 }
 ```
-We can use `//` for a single line comment and `/* */` for a multi line comment
+Możemy użyć `//` dla komentarza jednoliniowego i `/* */` dla komentarza wieloliniowego

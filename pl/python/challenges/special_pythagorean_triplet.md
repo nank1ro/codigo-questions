@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Specjalna trójka pitagorejska
 ---
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` < `b` < `c`, for which, <latex>a^2 + b^2 = c^2</latex>
+Trójka pitagorejska to zbiór trzech liczb naturalnych, `a` < `b` < `c`, dla których zachodzi <latex>a^2 + b^2 = c^2</latex>
 
-For example, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+Na przykład, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000.
+Istnieje dokładnie jedna trójka pitagorejska, dla której `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Find the product `abc` such that `a` + `b` + `c` = `n`.
+Znajdź iloczyn `abc` taki, że `a` + `b` + `c` = `n`.
 
 # --seed--
 
@@ -34,21 +34,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`special_pythagorean_triplet(24)` should return 480.
+`special_pythagorean_triplet(24)` powinno zwrócić 480.
 
 ```python
     def test1(self):
         self.assertEqual(special_pythagorean_triplet(24), 480, "--err-t1--")
 ```
 
-`special_pythagorean_triplet(120)` should return 49920, 55080 or 60000.
+`special_pythagorean_triplet(120)` powinno zwrócić 49920, 55080 lub 60000.
 
 ```python
     def test2(self):
         self.assertIn(special_pythagorean_triplet(120), [49920, 55080, 60000], "--err-t2--")
 ```
 
-`special_pythagorean_triplet(1000)` should return 31875000.
+`special_pythagorean_triplet(1000)` powinno zwrócić 31875000.
 
 ```python
     def test3(self):

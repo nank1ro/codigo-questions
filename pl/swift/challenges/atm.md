@@ -7,22 +7,22 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+James chciałby wypłacić N dolarów z bankomatu.
+Automat zaakceptuje transakcję tylko wtedy, gdy N jest wielokrotnością 5, a konto Jamesa ma wystarczające środki na przeprowadzenie transakcji wypłaty (wraz z opłatami bankowymi).
+Za każdą pomyślną wypłatę bank pobiera `0.50$`.
+Oblicz stan konta Jamesa po próbie transakcji.
+Dane wejściowe podane są w następującej kolejności:
+1. kwota, którą James chce wypłacić, mieści się w zakresie: `0 < N <= 2000`.
+2. początkowe saldo Jamesa podane jest z dokładnością do dwóch cyfr i mieści się w zakresie: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Zwróć stan konta po próbie transakcji, podany jako liczba z dokładnością do dwóch miejsc po przecinku.
+Jeśli na koncie nie ma wystarczających środków do realizacji transakcji, zwróć bieżące saldo bankowe.
 
-> HINT: omit the argument labels with the `_` (underscore)
+> WSKAZÓWKA: pomiń etykiety argumentów używając `_` (podkreślnika)
 
-Example of function call:
+Przykład wywołania funkcji:
 ```swift
 print(accountBalance(10, 20))
 // prints 9,5
@@ -47,7 +47,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-Perform a successful transaction
+Wykonaj pomyślną transakcję
 
 ```swift
     func testSuccessfulTransaction() {
@@ -56,7 +56,7 @@ Perform a successful transaction
     }
 ```
 
-Insufficient funds
+Niewystarczające środki
 
 ```swift
     func testInsufficientFunds() {
@@ -65,7 +65,7 @@ Insufficient funds
     }
 ```
 
-Refused transaction, invalid amount
+Transakcja odrzucona, nieprawidłowa kwota
 
 ```swift
     func testNotMultipleOf5() {
@@ -74,7 +74,7 @@ Refused transaction, invalid amount
     }
 ```
 
-Withdraw all money successfully
+Wypłać wszystkie środki pomyślnie
 
 ```swift
     func testWithdrawAll() {

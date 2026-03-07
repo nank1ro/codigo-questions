@@ -1,5 +1,5 @@
-A String _template_ is a programmatic way to generate a String.
-In Kotlin we can use the `+` sign (concatenation) to display two or more strings together, like:
+Szablon tekstowy (_String template_) to programowy sposób generowania ciągu znaków.
+W Kotlinie możemy użyć znaku `+` (konkatenacja) do wyświetlania dwóch lub więcej ciągów razem, na przykład:
 ```kotlin
 println("Hello " + "Kotlin!")
 // prints "Hello Kotlin!"
@@ -7,33 +7,33 @@ println("Hello " + "Kotlin!")
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Jednak użycie znaku `+` do dodania liczby jak '10' do ciągu znaków jak `"friends"` powoduje błąd, ponieważ są to różne rodzaje wartości
 
 ---
 
-String templates allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+Szablony tekstowe pozwalają nam wyświetlać wyrażenia, takie jak dodawanie ciągu do liczby, bez żadnych błędów.
+Umieszczenie wyrażenia wewnątrz `${}` powoduje jego ewaluację.
+Wartość zwracana jest konwertowana na ciąg znaków i wstawiana do wynikowego ciągu
 
 ---
 
-If you put a $ before an identifier name, the String template will insert that identifier's contents into the String
+Jeśli umieścisz `$` przed nazwą identyfikatora, szablon tekstowy wstawi zawartość tego identyfikatora do ciągu
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, nothing special happens
+Jeśli to, co następuje po znaku `$`, nie jest rozpoznawalne jako identyfikator programu, nic szczególnego się nie dzieje
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+Możemy również wstawiać zmienne po znakach dolara, aby wyświetlić ich wartości
 
 ---
 
-We can use curly brackets to insert values as often as we like inside the string templates
+Możemy używać nawiasów klamrowych do wstawiania wartości tak często, jak chcemy wewnątrz szablonów tekstowych
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Wewnątrz `${}` możemy również umieszczać warunki, na przykład:
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
 // prints Correct
@@ -41,4 +41,4 @@ println("${if (true) "Correct" else "Wrong"}")
 
 ---
 
-String templates are best used in print statements, but we can also store them in variables like normal strings.
+Szablony tekstowe najlepiej stosować w instrukcjach wyświetlania, ale możemy je też przechowywać w zmiennych jak normalne ciągi znaków.

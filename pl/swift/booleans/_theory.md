@@ -1,11 +1,11 @@
-Swift has a basic Boolean type, called `Bool`.
-Boolean values are referred to as logical, because they can only ever be true or false.
-You can evaluate any expression in Swift, and get one of two answers, `true` or `false`.
+Swift posiada podstawowy typ logiczny o nazwie `Bool`.
+Wartości logiczne są nazywane boolowskimi, ponieważ mogą przyjmować wyłącznie wartość prawda lub fałsz.
+Możesz ocenić dowolne wyrażenie w Swift i uzyskać jedną z dwóch odpowiedzi: `true` lub `false`.
 
 ---
 
-We can store the boolean value `true` in a variable just like a number or a string.
+Możemy przechowywać wartość logiczną `true` w zmiennej, tak jak liczbę lub ciąg znaków.
 
 ---
 
-The opposite value of `true` is `false`
+Przeciwną wartością `true` jest `false`

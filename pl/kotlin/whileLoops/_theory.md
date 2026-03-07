@@ -1,15 +1,15 @@
-> Computers are ideal for repetitive tasks.
+> Komputery doskonale nadają się do zadań powtarzalnych.
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+Najprostsza forma powtarzania używa słowa kluczowego `while`.
+Powtarza blok kodu tak długo, jak _wyrażenie boolowskie_ kontrolujące jest prawdziwe:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+Wyrażenie boolowskie jest sprawdzane raz na początku pętli i
+ponownie przed każdą kolejną iteracją przez blok.
 
 ```kotlin
 var x = 3
@@ -18,16 +18,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+Tutaj utworzyliśmy zmienną `x`, przypisując jej wartość początkową __3__.
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+Następnie użyliśmy instrukcji `while`, która będzie wykonywać blok kodu dopóki warunek `x > 0` jest `true`.
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+Wewnątrz bloku kodu **NIE** możemy zapomnieć o dodaniu linii `x--`.
+Dekrementuje ona wartość `x`, w przeciwnym razie pętla będzie nieskończona.
 
 ---
 
-Let's analyze this snippet of code.
+Przeanalizujmy ten fragment kodu.
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +35,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__: Inicjalizujemy zmienną `counter` wartością __0__.
+- __[2]__: Wyrażenie warunkowe dla _while_ mówi: "powtarzaj instrukcje w treści tak długo, jak counter jest mniejszy niż _100_".
+- __[3]__: Operator `+=` dodaje _10_ do `counter` i przypisuje wynik do `counter` w jednej operacji.
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+Wynik powyższego kodu to _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+Istnieje drugi sposób użycia _while_, w połączeniu ze słowem kluczowym `do`.
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+Jak widać, `do-while` jest bardzo podobna do pętli `while`, z wyjątkiem jednej ważnej różnicy:
+> ciało pętli jest wykonywane raz przed sprawdzeniem warunku.
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+Innymi słowy, ciało `do-while` zawsze wykonuje się przynajmniej raz, nawet jeśli wyrażenie warunkowe początkowo daje `false`.
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+Dla kontrastu, ciało pętli `while` nigdy nie zostanie uruchomione, jeśli warunek da `false` za pierwszym razem.
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+Pętla _while_ obsługuje trzy strukturalne wyrażenia skoku:
+- `break` kończy najbliższą otaczającą pętlę.
+- `continue` przechodzi do następnego kroku najbliższej otaczającej pętli.
+- `return` domyślnie zwraca z najbliższej otaczającej funkcji lub funkcji anonimowej (_zobaczymy to później, gdy będziemy mówić o funkcjach_).
 
-Here is an example of the use of `continue` within a _while_ loop:
+Oto przykład użycia `continue` w pętli _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +74,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+Jak widać w __[1]__, gdy `i` jest równe _2_, pomijamy i _kontynuujemy_ do następnego kroku. W rzeczywistości liczba 2 nigdy nie jest wyświetlana.
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+Oto przykład użycia `break` w pętli _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +89,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+Jak widać w __[1]__, gdy `i` jest równe _2_, _przerywamy_ pętlę. W rzeczywistości liczby 2 i 3 nigdy nie są wyświetlane.

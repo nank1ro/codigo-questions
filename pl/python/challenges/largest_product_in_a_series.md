@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Największy iloczyn w ciągu
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+Cztery sąsiednie cyfry w poniższej 1000-cyfrowej liczbie, których iloczyn jest największy, to 9 × 9 × 8 × 9 = 5832.
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Znajdź `n` sąsiednich cyfr w 1000-cyfrowej liczbie, których iloczyn jest największy. Jaka jest wartość tego iloczynu?
 
 # --seed--
 
@@ -31,14 +31,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_productina_series(4)` should return 5832.
+`largest_productina_series(4)` powinno zwrócić 5832.
 
 ```python
     def test1(self):
         self.assertEqual(largest_productina_series(4), 5832, "--err-t1--")
 ```
 
-`largest_productina_series(13)` should return 23514624000.
+`largest_productina_series(13)` powinno zwrócić 23514624000.
 
 ```python
     def test2(self):

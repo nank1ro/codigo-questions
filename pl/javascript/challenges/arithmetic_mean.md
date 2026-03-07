@@ -7,13 +7,13 @@ title: Arithmetic mean
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Napisz funkcję o nazwie `mean`, która oblicza _średnią arytmetyczną_ wektora liczbowego.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Napisz funkcję, która zwraca średnią wektora liczbowego.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```javascript
 console.log(mean([1, 2, 3]));
 // prints 2.0
@@ -47,19 +47,19 @@ function mean() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+Średnia `[1, 2, 3, 4, 5, 6, 7]` musi wynosić 4.0
 
 ```javascript
 tryCatch(mean([1, 2, 3, 4, 5, 6, 7]) === 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+Średnia `[4, 5, 6]` musi wynosić 5.0
 
 ```javascript
 tryCatch(mean([4, 5, 6]) === 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+Średnia `[12, 34, 56, 78]` musi wynosić 45.0
 
 ```javascript
 tryCatch(mean([12, 34, 56, 78]) === 45.0);

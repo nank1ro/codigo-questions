@@ -7,17 +7,17 @@ difficulty: 1
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Utwórz funkcję, która przyjmuje liczbę jako argument i zwraca `"Fizz"`, `"Buzz"` lub `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Jeśli liczba jest wielokrotnością `3`, wynikiem powinno być `"Fizz"`
+- Jeśli podana liczba jest wielokrotnością `5`, wynikiem powinno być `"Buzz"`.
+- Jeśli podana liczba jest wielokrotnością zarówno `3`, jak i `5`, wynikiem powinno być `"FizzBuzz"`.
+- Jeśli liczba nie jest wielokrotnością ani `3`, ani `5`, wynikiem powinna być sama liczba, jak pokazano w przykładach poniżej.
+- Wynik powinien zawsze być ciągiem znaków, nawet jeśli nie jest wielokrotnością `3` ani `5`.
 
-Examples:
+Przykłady:
 ```python
 fizz_buzz(3) // ➞ "Fizz"
 fizz_buzz(5) // ➞ "Buzz"
@@ -42,35 +42,35 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Liczba `3` musi być równa `"Fizz"`
 
 ```python
     def test1(self):
         self.assertEqual(fizz_buzz(3), "Fizz", "--err-t1--")
 ```
 
-The number `5` must equal `"Buzz"`
+Liczba `5` musi być równa `"Buzz"`
 
 ```python
     def test2(self):
         self.assertEqual(fizz_buzz(5), "Buzz", "--err-t2--")
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Liczba `15` musi być równa `"FizzBuzz"`
 
 ```python
     def test3(self):
         self.assertEqual(fizz_buzz(15), "FizzBuzz", "--err-t3--")
 ```
 
-The number `10` must equal `"Buzz"`
+Liczba `10` musi być równa `"Buzz"`
 
 ```python
     def test4(self):
         self.assertEqual(fizz_buzz(10), "Buzz", "--err-t4--")
 ```
 
-The number `98` must equal `"98"`
+Liczba `98` musi być równa `"98"`
 
 ```python
     def test5(self):

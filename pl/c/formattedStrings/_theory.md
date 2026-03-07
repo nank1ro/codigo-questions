@@ -1,28 +1,28 @@
-In C we use the `printf` function with an expression in order to display two or more values together, like:
+W języku C używamy funkcji `printf` z wyrażeniem, aby wyświetlić dwie lub więcej wartości razem, na przykład:
 ```c
 >>> char c = 'C';
 >>> printf("Hello %c!\n", c);
 Hello C!
 ```
-`%c` is used to display a single character
+`%c` służy do wyświetlania pojedynczego znaku
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
-To display an integer we use the `%i` expression
+Sformatowane ciągi znaków pozwalają nam wyświetlać wyrażenia, takie jak łączenie ciągu z liczbą, bez żadnych błędów.
+Do wyświetlania liczby całkowitej używamy wyrażenia `%i`
 
 ---
 
-Every formatted string statement consists of two parts, the text we want to include and the expression we want to format inside the text
+Każda instrukcja sformatowanego ciągu znaków składa się z dwóch części: tekstu, który chcemy umieścić, oraz wyrażenia, które chcemy sformatować wewnątrz tekstu
 
 ---
 
-Next, we add the different kind of value. Like here, with `%i`
+Następnie dodajemy inny rodzaj wartości. Jak tutaj, z `%i`
 
 ---
 
-Inserting variables like `friends` displays their value too
+Wstawianie zmiennych takich jak `friends` wyświetla również ich wartość
 
 ---
 
-We can use expressions to insert values as often as we like inside the formatted string
+Możemy używać wyrażeń do wstawiania wartości tak często, jak chcemy, wewnątrz sformatowanego ciągu znaków

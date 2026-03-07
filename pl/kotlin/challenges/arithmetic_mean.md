@@ -7,13 +7,13 @@ title: Arithmetic mean
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Napisz funkcję o nazwie `mean`, która oblicza _średnią arytmetyczną_ wektora liczb.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Napisz funkcję, która zwraca średnią wektora liczb.
 
-Example of function call:
+Przykład wywołania funkcji:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
@@ -50,19 +50,19 @@ fun main() {
 
 # --asserts--
 
-The mean of `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` must be equal to 4.0
+Średnia `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` musi być równa 4.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)) == 4.0)
 ```
 
-The mean of `[4.0, 5.0, 6.0]` must be equal to 5.0
+Średnia `[4.0, 5.0, 6.0]` musi być równa 5.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(4.0, 5.0, 6.0)) == 5.0)
 ```
 
-The mean of `[12.0, 34.0, 56.0, 78.0]` must be equal to 45.0
+Średnia `[12.0, 34.0, 56.0, 78.0]` musi być równa 45.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(12.0, 34.0, 56.0, 78.0)) == 45.0)
