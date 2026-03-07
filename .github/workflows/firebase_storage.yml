@@ -8,6 +8,16 @@ on:
       - "curriculum.json"
       - "en/**"
       - "it/**"
+      - "es/**"
+      - "de/**"
+      - "fr/**"
+      - "pt/**"
+      - "ja/**"
+      - "ko/**"
+      - "hi/**"
+      - "zh/**"
+      - "ru/**"
+      - "pl/**"
       - "assets/**"
   workflow_dispatch:
 
@@ -38,6 +48,66 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v1
         with:
           path: it
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-es
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: es
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-de
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: de
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-fr
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: fr
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-pt
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: pt
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-ja
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: ja
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-ko
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: ko
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-hi
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: hi
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-zh
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: zh
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-ru
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: ru
+          destination: ${{ secrets.BUCKET_NAME }}
+
+      - id: upload-pl
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: pl
           destination: ${{ secrets.BUCKET_NAME }}
 
       - id: upload-curriculum

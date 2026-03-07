@@ -1,0 +1,13 @@
+> Zanim zacznę, chciałem powiedzieć, że jestem bardzo szczęśliwy mogąc uczyć cię Dart.
+Przy tej okazji chcę ci przekazać, że aplikacja, której używasz, została napisana właśnie w Dart, przy użyciu frameworka Flutter. Dlatego to dla mnie zaszczyt móc dzielić się swoją wiedzą na temat tego języka.
+
+Dart, podobnie jak wiele innych języków programowania, pozwala na dokumentowanie kodu.
+Dzięki temu możesz pisać dowolny tekst obok kodu.
+Komentarze są ignorowane przez kompilator.
+
+Dart obsługuje komentarze _jednoliniowe_, _wieloliniowe_ i _dokumentacyjne_.
+
+Oto jak napisać komentarz _jednoliniowy_:
+```dart
+// To jest komentarz. Nie jest wykonywany.
+```

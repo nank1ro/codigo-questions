@@ -1,0 +1,51 @@
+W programowaniu często musimy powtarzać blok kodu, na przykład:
+```swift
+print("2 seconds")
+print("3 seconds")
+print("4 seconds")
+print("5 seconds")
+```
+Daje to następujący wynik:
+```swift
+2 seconds
+3 seconds
+4 seconds
+5 seconds
+```
+Oczywiście, dla długich instrukcji spędzilibyśmy dużo czasu pisząc kod, ale na szczęście możemy używać pętli.
+Nauczmy się pętli `while`, uzyskując ten sam wynik co powyżej.
+```swift
+var count = 2
+while count <= 5 {
+    print("\(count) seconds")
+    count += 1
+}
+```
+Tak więc utworzyliśmy zmienną `count` przypisując `2` jako wartość początkową.
+Następnie użyliśmy instrukcji `while`, która będzie wykonywać blok kodu, dopóki warunek `count <= 5` jest `true`.
+Wewnątrz bloku kodu **NIE MOŻEMY** pominąć dodania linii `count += 1`.
+Zwiększa ona wartość `count`, w przeciwnym razie nasza pętla będzie nieskończona
+
+---
+
+Aby kontrolować, ile razy pętla `while` się powtarza, zaczynamy od zmiennej ustawionej na liczbę.
+Nazywamy tę zmienną zmienną licznikową
+
+---
+
+Następnie używamy porównania w warunku, aby porównać zmienną `counter` z liczbą.
+
+---
+
+Wewnątrz bloku kodu, aby zatrzymać pętlę `while`, zwiększamy zmienną `counter`.
+
+---
+
+Kolejność pisania kodu wpływa na wynik.
+
+---
+
+W Swift mamy również wariant **repeat-while** pętli `while`.
+Najpierw wykonuje jeden przebieg przez blok pętli, _przed_ sprawdzeniem warunku pętli.
+Następnie kontynuuje powtarzanie pętli, dopóki warunek nie jest `false`.
+Pętla __repeat-while__ w Swift jest analogiczna do pętli __do-while__ w innych językach

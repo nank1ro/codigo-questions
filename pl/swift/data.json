@@ -1,0 +1,77 @@
+{
+    "output": {
+        "order": 1,
+        "title": "Wyjście",
+        "description": "Naucz się wyświetlać wartości"
+    },
+    "stringInterpolation": {
+        "order": 2,
+        "title": "Interpolacja ciągów znaków",
+        "description": "Naucz się interpolować ciągi znaków z różnymi typami danych"
+    },
+    "variables": {
+        "order": 3,
+        "title": "Zmienne",
+        "description": "Naucz się przechowywać wartości w zmiennej"
+    },
+    "booleans": {
+        "order": 4,
+        "title": "Wartości logiczne",
+        "description": "Naucz się oceniać dowolne wyrażenia"
+    },
+    "arithmeticOperators": {
+        "order": 5,
+        "title": "Operatory arytmetyczne",
+        "description": "Naucz się wykonywać operacje arytmetyczne na zmiennych i wartościach"
+    },
+    "assignmentOperators": {
+        "order": 6,
+        "title": "Operatory przypisania",
+        "description": "Naucz się przypisywać wartości do zmiennych"
+    },
+    "comparisonLogicalOperators": {
+        "order": 7,
+        "title": "Operatory porównania i logiczne",
+        "description": "Naucz się porównywać wartości"
+    },
+    "conditionalStatements": {
+        "order": 8,
+        "title": "Instrukcje warunkowe",
+        "description": "Naucz się podejmować decyzje"
+    },
+    "whileLoops": {
+        "order": 9,
+        "title": "Pętle while",
+        "description": "Naucz się powtarzać zestaw instrukcji"
+    },
+    "forLoops": {
+        "order": 10,
+        "title": "Pętle for",
+        "description": "Naucz się powtarzać zestaw instrukcji"
+    },
+    "arrays": {
+        "order": 11,
+        "title": "Tablice",
+        "description": "Naucz się przechowywać różne wartości w jednej zmiennej"
+    },
+    "dictionaries": {
+        "order": 12,
+        "title": "Słowniki",
+        "description": "Naucz się przechowywać wartości z kluczami"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funkcje",
+        "description": "Naucz się dzielić kod na określone zadania"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Wyliczenia",
+        "description": "Naucz się tworzyć wspólny typ dla grupy powiązanych wartości"
+    },
+    "classes": {
+        "order": 15,
+        "title": "Klasy",
+        "description": "Naucz się programowania obiektowego"
+    }
+}

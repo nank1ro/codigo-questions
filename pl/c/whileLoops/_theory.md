@@ -1,0 +1,44 @@
+Często w programowaniu musimy powtarzać blok kodu, na przykład:
+```c
+printf("2 seconds\n");
+printf("3 seconds\n");
+printf("4 seconds\n");
+printf("5 seconds\n");
+```
+Daje to następujący wynik:
+```c
+2 seconds
+3 seconds
+4 seconds
+5 seconds
+```
+Oczywiście, w przypadku długich instrukcji spędzilibyśmy dużo czasu na pisaniu kodu, ale na szczęście możemy używać pętli.
+Poznajmy pętlę `while`, uzyskując ten sam wynik co powyżej.
+```c
+int count = 2;
+while (count <= 5) {
+    printf("%d seconds\n", count);
+    count++;
+}
+```
+Tak więc utworzyliśmy zmienną `count` przypisując jej `2`, wartość początkową.
+Następnie użyliśmy instrukcji `while`, która będzie wykonywać blok kodu dopóki warunek `count <= 5` jest `true`.
+Wewnątrz bloku kodu **NIE** możemy zapomnieć o dodaniu linii `count++;`.
+Zwiększa ona wartość `count`, w przeciwnym razie nasza pętla będzie nieskończona
+
+---
+
+Aby kontrolować liczbę powtórzeń pętli `while`, zaczynamy od zmiennej ustawionej na pewną liczbę.
+Tę zmienną nazywamy zmienną licznikową
+
+---
+
+Następnie używamy porównania w warunku, aby porównać zmienną `counter` z liczbą.
+
+---
+
+Wewnątrz bloku kodu, aby zatrzymać pętlę `while`, zwiększamy zmienną `counter`.
+
+---
+
+Kolejność pisania kodu wpływa na wynik.

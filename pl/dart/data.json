@@ -1,0 +1,27 @@
+{
+  "comments": {
+    "order": 1,
+    "title": "Komentarze",
+    "description": "Naucz się komentować kod"
+  },
+  "output": {
+    "order": 2,
+    "title": "Wyjście",
+    "description": "Naucz się wyświetlać wartości"
+  },
+  "stringInterpolation": {
+    "order": 3,
+    "title": "Interpolacja ciągów",
+    "description": "Naucz się interpolować ciągi znaków z różnymi typami danych"
+  },
+  "variables": {
+    "order": 4,
+    "title": "Zmienne",
+    "description": "Naucz się przechowywać wartości w zmiennej"
+  },
+  "types": {
+    "order": 5,
+    "title": "Typy",
+    "description": "Poznaj typy przypisywalne do zmiennej"
+  }
+}

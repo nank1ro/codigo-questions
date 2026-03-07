@@ -11,7 +11,7 @@ import 'package:validator/constants.dart';
 
 /// Returns all the available exercise languages.
 List<String> get locales =>
-    ['en', 'it', 'es', 'de', 'fr', 'pt', 'ja', 'ko', 'hi', 'zh', 'ru'];
+    ['en', 'it', 'es', 'de', 'fr', 'pt', 'ja', 'ko', 'hi', 'zh', 'ru', 'pl'];
 
 /// The list of currently supported programming languages
 const supportedProgrammingLanguages = <String>{
