@@ -60,7 +60,8 @@ git add {locale}/ && git commit -m "chore: copy en/ to {locale}/ (translation ba
 
 ### Step 2: Batch Translation with Agents (Per Folder)
 
-**IMPORTANT: Token Limit Lesson Learned**
+**IMPORTANT: Always use Haiku for translation agents**
+- Always spawn subagents with `model: claude-haiku-4-5-20251001` — it is faster and cheaper for bulk translation
 - Haiku agents have limited context (~30k tokens)
 - Do NOT assign entire languages to a single agent - they will hit token limits
 - Instead, spawn **one agent per argument folder** (e.g., `{locale}/python/variabl{locale}/`)
@@ -89,8 +90,10 @@ Each agent will:
 ### Step 3: Validation
 Run validator after each batch:
 ```bash
-cd validator && dart test lib/validator.dart --chain-stack-traces --fail-fast
+cd validator && dart test lib/validator.dart --reporter=failures-only --chain-stack-traces --fail-fast
 ```
+
+Use `--fail-fast` to stop on first error, fix it, then re-run. Remove it if you want to see all errors at once.
 
 ## Progress Tracking
 
