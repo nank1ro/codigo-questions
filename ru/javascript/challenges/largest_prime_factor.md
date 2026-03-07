@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Наибольший простой делитель
 ---
 
 # --description--
 
-The prime factors of 13195 are 5, 7, 13 and 29.
+Простые делители числа 13195 — это 5, 7, 13 и 29.
 
 # --instructions--
 
-What is the largest prime factor of the given `number`?
+Каков наибольший простой делитель заданного числа `number`?
 
 # --before-seed--
 
@@ -41,43 +41,43 @@ function largestPrimeFactor(number) {
 
 # --asserts--
 
-`largestPrimeFactor(2)` should return 2.
+`largestPrimeFactor(2)` должна возвращать 2.
 
 ```javascript
 tryCatch(largestPrimeFactor(2) === 2);
 ```
 
-`largestPrimeFactor(3)` should return 3.
+`largestPrimeFactor(3)` должна возвращать 3.
 
 ```javascript
 tryCatch(largestPrimeFactor(3) === 3);
 ```
 
-`largestPrimeFactor(5)` should return 5.
+`largestPrimeFactor(5)` должна возвращать 5.
 
 ```javascript
 tryCatch(largestPrimeFactor(5) === 5);
 ```
 
-`largestPrimeFactor(7)` should return 7.
+`largestPrimeFactor(7)` должна возвращать 7.
 
 ```javascript
 tryCatch(largestPrimeFactor(7) === 7);
 ```
 
-`largestPrimeFactor(8)` should return 2.
+`largestPrimeFactor(8)` должна возвращать 2.
 
 ```javascript
 tryCatch(largestPrimeFactor(8) === 2);
 ```
 
-`largestPrimeFactor(13195)` should return 29.
+`largestPrimeFactor(13195)` должна возвращать 29.
 
 ```javascript
 tryCatch(largestPrimeFactor(13195) === 29);
 ```
 
-`largestPrimeFactor(600851475143)` should return 6857.
+`largestPrimeFactor(600851475143)` должна возвращать 6857.
 
 ```javascript
 tryCatch(largestPrimeFactor(600851475143) === 6857);

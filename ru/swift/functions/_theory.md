@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Swift we use the `func` keyword followed by the name of the function:
+Вы, возможно, сталкивались с ситуацией, когда хотели бы повторно использовать фрагмент кода, только с немного другими значениями.
+Вместо того чтобы переписывать весь код, гораздо удобнее определить функцию, которую затем можно использовать многократно.
+В Swift мы используем ключевое слово `func`, за которым следует имя функции:
 ```swift
 func say_hi() {
     print("Hello!")
@@ -10,16 +10,16 @@ say_hi() // prints "Hello!"
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+Скобки в __определении функции__ не обязательно должны быть пустыми, если мы хотим указать параметры
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+Иногда мы хотим, чтобы функция __возвращала__ значение.
+Для этого существует ключевое слово `return`.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Функции могут иметь несколько входных параметров, которые записываются в скобках функции через запятую.
 ```swift
 func sayHello(name: String, newUser: Bool) -> String {
   var greet: String = "Hello \(name)!"
@@ -34,16 +34,16 @@ print(sayHello(name: "Smith", newUser: true))
 
 ---
 
-You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+Вы можете использовать тип кортежа в качестве возвращаемого типа функции, чтобы вернуть несколько значений как часть одного составного возвращаемого значения.
 
 ---
 
-If you don't want an argument label for a parameter, write an underscore `_` instead of an explicit argument label for that parameter
+Если вы не хотите указывать метку аргумента для параметра, напишите подчёркивание `_` вместо явной метки аргумента
 
 ---
 
-You can define a _default_ value for any parameter in a function by assigning a value to the parameter after that parameter's type.
-If a default value is defined, you can omit that parameter when calling the function
+Вы можете определить значение _по умолчанию_ для любого параметра функции, присвоив значение параметру после указания его типа.
+Если значение по умолчанию определено, вы можете опустить этот параметр при вызове функции
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
     // do stuff here
@@ -52,19 +52,19 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
 
 ---
 
-A _variadic parameter_ accepts zero or more values of a specified type.
-You use a variadic parameter to specify that the parameter can be passed a varying number of input values when the function is called.
-Write variadic parameters by inserting three period characters `...` after the parameter's type name.
-The values passed to a variadic parameter are made available within the function's body as an array of the appropriate type.
-For example, a variadic parameter with a name of `numbers` and a type of `Double...` is made available within the function's body as a constant array called numbers of type `[Double]`
+_Вариативный параметр_ принимает ноль или более значений указанного типа.
+Вы используете вариативный параметр, чтобы указать, что параметру может быть передано различное количество входных значений при вызове функции.
+Вариативные параметры записываются путём добавления трёх точек `...` после имени типа параметра.
+Значения, переданные вариативному параметру, доступны внутри тела функции как массив соответствующего типа.
+Например, вариативный параметр с именем `numbers` и типом `Double...` доступен внутри тела функции как константный массив numbers типа `[Double]`
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+В функциях мы можем добавить _необязательный комментарий_, который объясняет, что делает функция:
 ```swift
 /// Prints 'Hello World' to the console.
 func helloWorld() {
     print("Hello, World!")
 }
 ```
-We can use `///` for a single line comment and `/** */` for a multi line comment
+Мы можем использовать `///` для однострочного комментария и `/** */` для многострочного комментария

@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Наибольшее произведение-палиндром
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+Число-палиндром читается одинаково в обоих направлениях. Наибольший палиндром, полученный из произведения двух 2-значных чисел, — это 9009 = 91 × 99.
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+Найдите наибольший палиндром, полученный из произведения двух `n`-значных чисел.
 
 # --before-seed--
 
@@ -41,13 +41,13 @@ function largestPalindromeProduct(n) {
 
 # --asserts--
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)` должна возвращать 9009.
 
 ```javascript
 tryCatch(largestPalindromeProduct(2) === 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)` должна возвращать 906609.
 
 ```javascript
 tryCatch(largestPalindromeProduct(3) === 906609);

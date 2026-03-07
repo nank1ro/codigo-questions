@@ -1,5 +1,5 @@
-We know how to repeat code using a `while` loop.
-Like this program repeating statements to display `hello`
+Мы знаем, как повторять код с помощью цикла `while`.
+Например, эта программа повторяет инструкции для вывода `hello`
 ```swift
 var counter = 0
 
@@ -8,7 +8,7 @@ while counter < 5 {
     counter += 1;
 }
 ```
-But we can do the same with `for` loops:
+Но то же самое можно сделать с помощью циклов `for`:
 ```swift
 for i in 0..<5 {
     print("hello")
@@ -17,47 +17,47 @@ for i in 0..<5 {
 
 ---
 
-In a `for` loop we can specify how many times we'd like our loop to run
+В цикле `for` мы можем указать, сколько раз цикл должен выполниться
 
 ---
 
-We can use `..<` to loop until the next number excluded, or `...` to loop until the next number included
+Мы можем использовать `..<` для цикла до следующего числа (не включая его) или `...` для цикла до следующего числа (включая его)
 
 ---
 
-The variable called `i` is the counter variable.
-We can give it the name we want.
-It counts what repetition of the loop we're currently on
+Переменная `i` называется переменной-счётчиком.
+Мы можем дать ей любое имя.
+Она показывает, на какой итерации цикла мы сейчас находимся
 
 ---
 
-The `stride()` function returns a sequence of numbers.
-It requires the _from_, _to_ and _by_ parameters.
-These are the syntax of the function:
+Функция `stride()` возвращает последовательность чисел.
+Она требует параметры _from_, _to_ и _by_.
+Вот синтаксис функции:
 ```swift
 stride(from:to:by:)
 ```
-Keep in mind that the `to` value is excluded
+Обратите внимание, что значение `to` не включается в последовательность
 
 ---
 
-With the `stride()` function we can also use closed ranges, by using:
+С помощью функции `stride()` мы также можем использовать замкнутые диапазоны, используя:
 ```swift
 stride(from:through:by:)
 ```
-In this case the `through` value is included
+В этом случае значение `through` включается в последовательность
 
 ---
 
-In Swift we have also the `forEach` loop.
-In fact, `forEach` calls the given closure on each element in the sequence in the same order as a `for-in` loop:
+В Swift также есть цикл `forEach`.
+`forEach` вызывает заданное замыкание для каждого элемента последовательности в том же порядке, что и цикл `for-in`:
 ```swift
-// this is an array, we'll see about that soon
-let numbers: [Int] = [1, 3, 5, 7, 9] 
-numbers.forEach { num in 
+// это массив, мы скоро узнаем о нём подробнее
+let numbers: [Int] = [1, 3, 5, 7, 9]
+numbers.forEach { num in
     print(num)
 }
 ```
-Using the `forEach` method is distinct from a `for-in` loop in two important ways:
-1. The `break` or `continue` statement cannot be used to exit the current call of the body closure or to skip subsequent calls.
-2. Using the `return` statement in the body closure will only exit the closure and not the outer scope, and it won't skip subsequent calls.
+Использование метода `forEach` отличается от цикла `for-in` двумя важными особенностями:
+1. Операторы `break` и `continue` не могут быть использованы для выхода из текущего вызова замыкания или для пропуска последующих вызовов.
+2. Использование оператора `return` в теле замыкания завершает только замыкание, а не внешнюю область видимости, и не пропускает последующие вызовы.

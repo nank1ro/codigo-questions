@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Сумма простых чисел
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Сумма простых чисел меньше 10 равна 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+Найдите сумму всех простых чисел меньше `n`.
 
 # --before-seed--
 
@@ -41,25 +41,25 @@ function primeSummation(n) {
 
 # --asserts--
 
-`primeSummation(17)` should return 41.
+`primeSummation(17)` должна возвращать 41.
 
 ```javascript
 tryCatch(primeSummation(17) === 41);
 ```
 
-`primeSummation(2001)` should return 277050.
+`primeSummation(2001)` должна возвращать 277050.
 
 ```javascript
 tryCatch(primeSummation(2001) === 277050);
 ```
 
-`primeSummation(140759)` should return 873608362.
+`primeSummation(140759)` должна возвращать 873608362.
 
 ```javascript
 tryCatch(primeSummation(140759) === 873608362);
 ```
 
-`primeSummation(2000000)` should return 142913828922.
+`primeSummation(2000000)` должна возвращать 142913828922.
 
 ```javascript
 tryCatch(primeSummation(2000000) === 142913828922);

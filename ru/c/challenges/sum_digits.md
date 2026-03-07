@@ -2,17 +2,17 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Сумма цифр
 ---
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+Дано целое число `num`.
+Напишите программу для вычисления суммы всех цифр числа `num`
 
 # --instructions--
 
-Return the sum of digits of `num`
+Верните сумму цифр числа `num`
 
 # --before-seed--
 
@@ -157,31 +157,31 @@ int main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Сумма цифр числа 12345 равна 15
 
 ```c
     try_catch(sum_digits(12345) == 15);
 ```
 
-The sum of the digits of 57253 is 22
+Сумма цифр числа 57253 равна 22
 
 ```c
     try_catch(sum_digits(57253) == 22);
 ```
 
-The sum of the digits of 122 is 5
+Сумма цифр числа 122 равна 5
 
 ```c
     try_catch(sum_digits(122) == 5);
 ```
 
-The sum of the digits of 91979997 is 60
+Сумма цифр числа 91979997 равна 60
 
 ```c
     try_catch(sum_digits(91979997) == 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+Сумма цифр числа 2147483647 равна 46
 
 ```c
     try_catch(sum_digits(2147483647) == 46);

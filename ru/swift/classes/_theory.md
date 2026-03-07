@@ -1,15 +1,15 @@
-Swift is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Swift — это объектно-ориентированный язык программирования, что означает, что он оперирует программными конструкциями, называемыми объектами.
+Объект можно представить как единую структуру данных, которая содержит как данные, так и функции; функции объекта называются его методами.
+Например, когда вы вызываете:
 ```swift
 dictName.removeValue(forKey: "keyName")
 ```
-Swift checks to see if `dictName` has a `removeValue()` method (which all dictionaries have) and executes that method if it finds it.
+Swift проверяет, есть ли у `dictName` метод `removeValue()` (который есть у всех словарей), и выполняет этот метод, если находит его.
 
 ---
 
-_Structures_ and _classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class|struct consists only of the `class` or `struct` keyword and its name, for example:
+_Структуры_ и _классы_ — это универсальные, гибкие конструкции, которые становятся строительными блоками кода вашей программы.
+Базовый класс|структура состоит только из ключевого слова `class` или `struct` и его имени, например:
 ```swift
 class ClassName {
     // class definition
@@ -21,43 +21,43 @@ struct ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
+Давайте добавим что-нибудь в наш класс `Animal`
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+Определение класса не создаёт объект.
+Для этого нам нужно создать __экземпляр__ класса
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+Когда класс имеет собственные функции, эти функции называются __методами__.
 
 ---
 
-Structures and classes in Swift have many things in common. Both can:
-- Define properties to store values
-- Define methods to provide functionality
-- Define subscripts to provide access to their values using subscript syntax
-- Define initializers to set up their initial state
-- Be extended to expand their functionality beyond a default implementation
-- Conform to protocols to provide standard functionality of a certain kind
+Структуры и классы в Swift имеют много общего. Оба могут:
+- Определять свойства для хранения значений
+- Определять методы для обеспечения функциональности
+- Определять сабскрипты для доступа к значениям с помощью синтаксиса сабскриптов
+- Определять инициализаторы для настройки начального состояния
+- Расширяться для расширения функциональности за пределы реализации по умолчанию
+- Соответствовать протоколам для обеспечения стандартной функциональности определённого вида
 
-But classes have additional capabilities that structures don't have:
-- Inheritance enables one class to inherit the characteristics of another
-- Type casting enables you to check and interpret the type of a class instance at runtime
-- Deinitializers enable an instance of a class to free up any resources it has assigned
-- Reference counting allows more than one reference to a class instance
+Однако классы обладают дополнительными возможностями, которых нет у структур:
+- Наследование позволяет одному классу наследовать характеристики другого
+- Приведение типов позволяет проверять и интерпретировать тип экземпляра класса во время выполнения
+- Деинициализаторы позволяют экземпляру класса освобождать выделенные ресурсы
+- Подсчёт ссылок допускает более одной ссылки на экземпляр класса
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+Вы можете получить доступ к свойствам экземпляра с помощью _точечного синтаксиса_.
+В точечном синтаксисе имя свойства записывается сразу после имени экземпляра, разделённое точкой `.`, без пробелов:
 ```swift
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+Используя тот же синтаксис, мы также можем обновить значение свойства
 
 ---
 
-One advantage of structures is that have an automatically generated memberwise initializer, which you can use to initialize the member properties of new structure instances.
-Initial values for the properties of the new instance can be passed to the memberwise initializer by name
+Одним из преимуществ структур является автоматически генерируемый почленный инициализатор, который можно использовать для инициализации свойств новых экземпляров структуры.
+Начальные значения свойств нового экземпляра могут быть переданы почленному инициализатору по имени

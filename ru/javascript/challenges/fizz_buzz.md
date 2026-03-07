@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Создайте функцию, которая принимает число в качестве аргумента и возвращает `"Fizz"`, `"Buzz"` или `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Если число кратно `3`, результат должен быть `"Fizz"`
+- Если число кратно `5`, результат должен быть `"Buzz"`.
+- Если число кратно и `3`, и `5`, результат должен быть `"FizzBuzz"`.
+- Если число не кратно ни `3`, ни `5`, число должно быть выведено как есть, как показано в примерах ниже.
+- Результат всегда должен быть строкой, даже если число не кратно `3` или `5`.
 
-Examples:
+Примеры:
 ```javascript
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -53,31 +53,31 @@ function fizzBuzz() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Число `3` должно быть равно `"Fizz"`
 
 ```javascript
 tryCatch(fizzBuzz(3) === 'Fizz');
 ```
 
-The number `5` must equal `"Buzz"`
+Число `5` должно быть равно `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(5) === 'Buzz');
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Число `15` должно быть равно `"FizzBuzz"`
 
 ```javascript
 tryCatch(fizzBuzz(15) === 'FizzBuzz');
 ```
 
-The number `10` must equal `"Buzz"`
+Число `10` должно быть равно `"Buzz"`
 
 ```javascript
 tryCatch(fizzBuzz(10) === 'Buzz');
 ```
 
-The number `98` must equal `"98"`
+Число `98` должно быть равно `"98"`
 
 ```javascript
 tryCatch(fizzBuzz(98) === '98');

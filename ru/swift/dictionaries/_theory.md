@@ -1,15 +1,15 @@
-**Dictionaries** are similar to arrays and tuples, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Dictionaries are enclosed in square brackets, like so:
+**Словари** похожи на массивы и кортежи, но вы получаете доступ к значениям по *ключу*, а не по индексу.
+Ключом может быть любая строка или число.
+Словари заключаются в квадратные скобки, например:
 ```swift
 var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 ```
-This is a dictionary called `dictionaryName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Это словарь с именем `dictionaryName`, содержащий три *пары ключ-значение*.
+Ключ `key1` указывает на значение `1`, `key2` на `2` и так далее.
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+Доступ к значениям словаря по ключу аналогичен доступу к значениям массива по индексу:
 ```swift
 // gets the age value from the user dictionary
 user['age']
@@ -17,42 +17,42 @@ user['age']
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Как и массивы, словари являются _изменяемыми_.
+Это означает, что их можно изменять после создания (если они не объявлены как константы).
+Одно из преимуществ этого -- мы можем добавлять новые _пары ключ/значение_ в словарь после его создания, например:
 ```swift
 dictName[newKeyName] = newValue
 ```
 
 ---
 
-The length `count` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is an array. (That's right: you can also put arrays inside dictionaries!)
+Длина `count` словаря -- это количество _пар ключ-значение_, которые он содержит.
+Каждая пара считается только один раз, даже если значение является массивом. (Да, вы можете помещать массивы внутрь словарей!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `removeValue(forKey:)` method:
+Поскольку словари изменяемы, их можно модифицировать различными способами. Элементы можно удалить из словаря с помощью метода `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
     print("The removed value is \(removedValue).") // prints the removed value, if the key exists
 }
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+удалит ключ `keyName` и связанное с ним значение из словаря.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys` property.
+Что если мы хотим перечислить все ключи словаря?
+Для этого есть свойство `keys`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values` property.
+Что если мы хотим перечислить все значения словаря?
+Для этого есть свойство `values`.
 
 ---
 
-As for arrays, we can loop between dictionary elements using the keywords `for..in`.
-To get both the key and the value in the loop we don't have to specify any property:
+Как и для массивов, мы можем перебирать элементы словаря с помощью ключевых слов `for..in`.
+Чтобы получить и ключ, и значение в цикле, не нужно указывать никаких свойств:
 ```swift
 for (key, value) in dictName {
     print("\(key): \(value)")
@@ -61,16 +61,16 @@ for (key, value) in dictName {
 
 ---
 
-We can also use the `isEmpty` property we used with arrays to determine if a dictionary is empty
+Мы также можем использовать свойство `isEmpty`, которое мы использовали с массивами, чтобы определить, пуст ли словарь
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `updateValue(_:forKey:)` method
+Для __добавления__ или __изменения__ значений в словаре мы также можем использовать метод `updateValue(_:forKey:)`
 
 ---
 
-Previously we saw how to remove a _key-value pair_ from the dictionary with the `removeValue()` method.
-We can also remove an element by assigning to the key the value `nil`
+Ранее мы видели, как удалить _пару ключ-значение_ из словаря с помощью метода `removeValue()`.
+Мы также можем удалить элемент, присвоив ключу значение `nil`
 ```swift
 dictName[keyName] = nil
 // keyName has been removed from the dictionary dictName

@@ -7,17 +7,17 @@ title: FizzBuzz
 
 # --description--
 
-Create a function that takes a number as an argument and returns `"Fizz"`, `"Buzz"` or `"FizzBuzz"`.
+Создайте функцию, которая принимает число в качестве аргумента и возвращает `"Fizz"`, `"Buzz"` или `"FizzBuzz"`.
 
 # --instructions--
 
-- If the number is a multiple of `3` the output should be `"Fizz"`
-- If the number given is a multiple of `5`, the output should be `"Buzz"`.
-- If the number given is a multiple of both `3` and `5`, the output should be `"FizzBuzz"`.
-- If the number is not a multiple of either `3` or `5`, the number should be output on its own as shown in the examples below.
-- The output should always be a string even if it is not a multiple of `3` or `5`.
+- Если число кратно `3`, вывод должен быть `"Fizz"`
+- Если число кратно `5`, вывод должен быть `"Buzz"`.
+- Если число кратно и `3`, и `5`, вывод должен быть `"FizzBuzz"`.
+- Если число не кратно ни `3`, ни `5`, должно быть выведено само число, как показано в примерах ниже.
+- Вывод всегда должен быть строкой, даже если число не кратно `3` или `5`.
 
-Examples:
+Примеры:
 ```c
 fizz_buzz(3); // ➞ "Fizz"
 fizz_buzz(5); // ➞ "Buzz"
@@ -169,31 +169,31 @@ int main() {
 
 # --asserts--
 
-The number `3` must equal `"Fizz"`
+Число `3` должно быть равно `"Fizz"`
 
 ```c
     try_catch(strcmp(fizz_buzz(3), "Fizz") == 0);
 ```
 
-The number `5` must equal `"Buzz"`
+Число `5` должно быть равно `"Buzz"`
 
 ```c
     try_catch(strcmp(fizz_buzz(5), "Buzz") == 0);
 ```
 
-The number `15` must equal `"FizzBuzz"`
+Число `15` должно быть равно `"FizzBuzz"`
 
 ```c
     try_catch(strcmp(fizz_buzz(15), "FizzBuzz") == 0);
 ```
 
-The number `10` must equal `"Buzz"`
+Число `10` должно быть равно `"Buzz"`
 
 ```c
     try_catch(strcmp(fizz_buzz(10), "Buzz") == 0);
 ```
 
-The number `98` must equal `"98"`
+Число `98` должно быть равно `"98"`
 
 ```c
     try_catch(strcmp(fizz_buzz(98), "98") == 0);

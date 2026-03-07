@@ -1,6 +1,6 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Операторы используются для выполнения операций с переменными и значениями.
+Начнём с арифметических операторов, в частности с оператора **сложения** `+`.
+Он используется для сложения двух чисел, например:
 ```
 >>> 5 + 3
 8
@@ -8,8 +8,8 @@ It is used to add two numbers, like:
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Продолжим с оператором **вычитания** `-`.
+Он используется для вычитания одного числа из другого, например:
 ```
 >>> 5 - 3
 2
@@ -17,8 +17,8 @@ It is used to subtract one number from another, like:
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Рассмотрим оператор **умножения** `*`.
+Он используется для умножения двух чисел, например:
 ```
 >>> 5 * 3
 15
@@ -26,8 +26,8 @@ It is used to multiply two numbers together, like:
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Рассмотрим оператор **деления** `/`.
+Он используется для деления двух чисел, например:
 ```c
 >>> 10 / 5
 2
@@ -35,23 +35,23 @@ It is used to divide two numbers together, like:
 
 ---
 
-Let's see the **modulus** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Рассмотрим оператор **остатка от деления** `%`.
+Он используется для нахождения остатка от деления двух чисел, например:
 ```
 >>> 5 % 2
 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Результат равен 1, потому что 5, делённое на 2, даёт частное 2 и остаток 1
 ```
 >>> 9 % 3
 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Этот результат равен 0, потому что 9, делённое на 3, даёт частное 3 и остаток 0
 
 ---
 
-C doesn't have an **exponentiation** operator, so we have to use the `pow()` function included in the `math.h` library.
-Exponentiation corresponds to repeated multiplication of the base: that is, **b** with exponent *n* is the product of multiplying *n* bases:
+В C нет оператора **возведения в степень**, поэтому необходимо использовать функцию `pow()`, входящую в библиотеку `math.h`.
+Возведение в степень соответствует многократному умножению основания: то есть **b** с показателем *n* — это произведение *n* оснований:
 ![exponentiation](https://bit.ly/3zcz6Lt)
 ```
 >>> pow(5, 2);
@@ -60,12 +60,12 @@ Exponentiation corresponds to repeated multiplication of the base: that is, **b*
 
 ---
 
-Let's see the **floor division** using the `floor()` function.
-This function returns the integral part of the quotient, for example:
+Рассмотрим **целочисленное деление** с использованием функции `floor()`.
+Эта функция возвращает целую часть частного, например:
 ```
 >>> 5.0 / 2
 2.5
 >>> floor(2.5)
 2.0
 ```
-Also referred to as integer division. The resultant value is a whole integer, though the result's *type* is not necessarily int.
+Также называется целочисленным делением. Результат — целое число, хотя *тип* результата не обязательно int.

@@ -2,16 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Кратные 3 или 5
 ---
 
 # --description--
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Если перечислить все натуральные числа меньше 10, которые кратны 3 или 5, мы получим 3, 5, 6 и 9. Сумма этих кратных равна 23.
 
 # --instructions--
 
-Find the sum of all the multiples of 3 or 5 below the provided parameter value `number`.
+Найдите сумму всех чисел, кратных 3 или 5, ниже заданного значения параметра `number`.
 
 # --before-seed--
 
@@ -48,19 +48,19 @@ fun main() {
 
 # --asserts--
 
-`multiplesOf3and5(10)` should return 23.
+`multiplesOf3and5(10)` должна вернуть 23.
 
 ```kotlin
 tryCatch(multiplesOf3and5(10) == 23)
 ```
 
-`multiplesOf3and5(1000)` should return 233168.
+`multiplesOf3and5(1000)` должна вернуть 233168.
 
 ```kotlin
 tryCatch(multiplesOf3and5(1000) == 233168)
 ```
 
-`multiplesOf3and5(6987)` should return 11390208
+`multiplesOf3and5(6987)` должна вернуть 11390208
 
 ```kotlin
 tryCatch(multiplesOf3and5(6987) == 11390208)

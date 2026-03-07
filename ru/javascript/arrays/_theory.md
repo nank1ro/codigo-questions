@@ -1,118 +1,118 @@
-Arrays are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-An array stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to an array with an expression of the form:
+Массивы — это тип данных, который позволяет хранить коллекцию различных элементов в виде последовательности под одним именем переменной.
+Массив хранит несколько значений одного или нескольких типов и использует **индексы** для различения этих значений.
+Вы можете присвоить элементы массиву с помощью выражения вида:
 ```javascript
 var arrayName = [item1, item2];
 ```
 
 ---
 
-You can access an individual item of the array by its index.
-An index is like an address that identifies the item's place in the array.
-The index appears directly after the array name, in between brackets, like this:
+Вы можете получить доступ к отдельному элементу массива по его индексу.
+Индекс — это как адрес, который определяет место элемента в массиве.
+Индекс указывается сразу после имени массива в квадратных скобках, вот так:
 ```javascript
 arrayName[index];
 ```
-Array indices begin with `0`, **not** `1`! You access the first item of an array like this: `arrayName[0]`.
-The second item in an array is at index 1: `arrayName[1]`.
+Индексы массива начинаются с `0`, а **не** с `1`! Доступ к первому элементу массива осуществляется так: `arrayName[0]`.
+Второй элемент массива находится по индексу 1: `arrayName[1]`.
 
 ---
 
-An array index behaves like any other variable name.
-It can be used to access as well as assign values.
-You saw how to access an array index like this:
+Индекс массива ведёт себя как любое другое имя переменной.
+Его можно использовать как для доступа, так и для присвоения значений.
+Вы видели, как получить доступ к элементу массива по индексу:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// Выводит значение "Jeremiah"
 console.log(names[0]);
 ```
-This is how an assignment works:
+А вот как работает присвоение:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// Присваиваем новое значение "Jordan"
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// Выводит значение "Jordan"
 console.log(names[0]);
 ```
 
 ---
 
-Just like strings, arrays have a **length**.
-An arrays's length is the number of items it contains
+Как и строки, массивы имеют **длину**.
+Длина массива — это количество элементов, которые он содержит
 
 ---
 
-An array doesn't have to have a fixed length.
-You can add items to the end of an array any time you like!
-To add an item to an array we use the `push` function:
+Массив не обязательно должен иметь фиксированную длину.
+Вы можете добавлять элементы в конец массива в любое время!
+Для добавления элемента в массив используется функция `push`:
 ```javascript
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// Выводит ["a", "b", "c"]
 ```
 
 ---
 
-Sometimes, you only want to access a portion of an array.
-Consider the following code:
+Иногда нужно получить доступ только к части массива.
+Рассмотрим следующий код:
 ```javascript
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// выводит [2, 3]
 ```
-First, we create an array called `numbers`.
-Then, we take a subsection of the array and store it in the slice array.
-We do this by defining the indices we want to include after the name of the array: `numbers.slice(1, 3)`.
-Keep in mind that the right index is excluded
+Сначала мы создаём массив `numbers`.
+Затем мы берём подмножество массива и сохраняем его в массив slice.
+Мы делаем это, указывая индексы после имени массива: `numbers.slice(1, 3)`.
+Имейте в виду, что правый индекс не включается
 
 ---
 
-In JavaScript we can slice an array as we want!
+В JavaScript мы можем делать срезы массива как угодно!
 ```javascript
-// Grabs the first two items
+// Берём первые два элемента
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// Берём элементы с четвёртого до последнего
 listName.slice(3);
 ```
-If your array slice includes the very first or last item in an array, the index for that item doesn't have to be included
+Если срез массива включает самый первый или последний элемент, индекс для этого элемента можно не указывать
 
 ---
 
-Array elements could be of any type.
+Элементы массива могут быть любого типа.
 ```javascript
 var arrayName = ["one", 2, true];
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have arrays with arrays as well!
+На самом деле, выше у нас по порядку строка, целое число и логическое значение.
+Но мы также можем иметь массивы, содержащие другие массивы!
 
 ---
 
-Sometimes you need to search for an item in an array.
-In JavaScript we can use the `indexOf()` method:
+Иногда нужно найти элемент в массиве.
+В JavaScript мы можем использовать метод `indexOf()`:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// выводит 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into an array in a specific index, using the `splice()` method:
+Код выше выводит первый индекс, содержащий строку `"Zac"`, в данном случае `1`.
+Мы также можем вставлять элементы в массив по определённому индексу, используя метод `splice()`:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// выводит ["Trevor", "Ali", "Zac", "Glenn"]
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1.
-The second value `0` means _deleteCount_, in this case, we don't delete any item in the array; but if we had specified `1` the value `Zac` would have been removed from the array
+Код выше вставляет `"Ali"` по индексу `1`, что сдвигает все элементы после этого индекса на 1 позицию.
+Второе значение `0` означает _deleteCount_ (количество удаляемых элементов), в данном случае мы не удаляем ни одного элемента; но если бы мы указали `1`, значение `Zac` было бы удалено из массива
 
 ---
 
-In JavaScript we can loop through an array in a very simple way using the `for..of` keywords:
+В JavaScript мы можем перебирать массив очень просто, используя ключевые слова `for..of`:
 ```javascript
 var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3 
+// выводит 1, 2, 3 
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each array item in turn.
+После ключевого слова `for` следует имя переменной, которой поочерёдно будет присваиваться значение каждого элемента массива.

@@ -2,16 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: Сложение
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Даны два целых числа `num1` и `num2`, напишите программу для сложения этих двух чисел
 
 # --instructions--
 
-Write a function that returns the sum of two numbers
+Напишите функцию, которая возвращает сумму двух чисел
 
 # --before-seed--
 
@@ -155,19 +155,19 @@ int main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Сумма 1 и 3 должна быть равна 4
 
 ```c
     try_catch(addition(1, 3) == 4);
 ```
 
-The sum of 200 and 210 must equal 410
+Сумма 200 и 210 должна быть равна 410
 
 ```c
     try_catch(addition(200, 210) == 410);
 ```
 
-The sum of 15 and 35 must equal 50
+Сумма 15 и 35 должна быть равна 50
 
 ```c
     try_catch(addition(15, 35) == 50);

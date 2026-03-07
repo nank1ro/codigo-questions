@@ -1,30 +1,30 @@
-We've already learned that to assign a value to a variable we can use the `=` sign, like:
+Мы уже знаем, что для присвоения значения переменной можно использовать знак `=`, например:
 ```python
 a = 5
 ```
 
 ---
 
-We already have an initialized variable `total`
+У нас уже есть инициализированная переменная `total`
 ```python
 total = 5
 ```
-Let's say that we want to add the number `2` to the variable `total`, we can write
+Допустим, мы хотим прибавить число `2` к переменной `total`, мы можем написать
 ```python
 total = total + 2
 ```
-Okay, it works! But there is a shorter version to do the same thing:
+Хорошо, это работает! Но есть более короткая запись для того же самого:
 ```python
 total += 2
 ```
-The sign `+=` is called **addition assignment**.
-It adds a value to the variable value and assigns the result to that variable.
+Знак `+=` называется **присваивание сложения**.
+Он прибавляет значение к значению переменной и присваивает результат этой переменной.
 
 ---
 
-Just like in the addition assignment, we have the **decrement assignment** `-=`.
-The functionality is the same, the only difference is that it performs the subtraction.
-So the followings are exactly the same
+Так же, как и присваивание сложения, существует **присваивание вычитания** `-=`.
+Функциональность та же, единственное отличие — выполняется вычитание.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num - 5
 # is equal to
@@ -33,9 +33,9 @@ num -= 5
 
 ---
 
-Let's see the **multiplication assignment** `*=` operator.
-It multiplies the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Рассмотрим оператор **присваивания умножения** `*=`.
+Он умножает переменную на значение и присваивает результат этой переменной.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num * 5
 # is equal to
@@ -44,9 +44,9 @@ num *= 5
 
 ---
 
-Let's see the **division assignment** `/=` operator.
-It divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Рассмотрим оператор **присваивания деления** `/=`.
+Он делит переменную на значение и присваивает результат этой переменной.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num / 5
 # is equal to
@@ -55,9 +55,9 @@ num /= 5
 
 ---
 
-Let's see the **power assignment** `**=` operator.
-It raises the variable to a specified power and assigns the result to the variable.
-So the followings are exactly the same
+Рассмотрим оператор **присваивания возведения в степень** `**=`.
+Он возводит переменную в указанную степень и присваивает результат переменной.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num ** 5
 # is equal to
@@ -66,9 +66,9 @@ num **= 5
 
 ---
 
-Let's see the **modulus assignment** `%=` operator.
-It computes the modulus of the variable and a value and assigns the result to that variable.
-So the followings are exactly the same
+Рассмотрим оператор **присваивания остатка от деления** `%=`.
+Он вычисляет остаток от деления переменной на значение и присваивает результат этой переменной.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num % 5
 # is equal to
@@ -77,9 +77,9 @@ num %= 5
 
 ---
 
-Let's see the **floor assignment** `//=` operator.
-It floor divides the variable by a value and assigns the result to that variable.
-So the followings are exactly the same
+Рассмотрим оператор **присваивания целочисленного деления** `//=`.
+Он выполняет целочисленное деление переменной на значение и присваивает результат этой переменной.
+Таким образом, следующие записи полностью эквивалентны
 ```python
 num = num // 5
 # is equal to

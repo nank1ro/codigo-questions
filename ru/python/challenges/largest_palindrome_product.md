@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Наибольшее произведение-палиндром
 ---
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+Палиндромное число читается одинаково в обоих направлениях. Наибольший палиндром, полученный из произведения двух 2-значных чисел, равен 9009 = 91 x 99.
 
 # --instructions--
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+Найдите наибольший палиндром, полученный из произведения двух `n`-значных чисел.
 
 # --seed--
 
@@ -30,14 +30,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`largest_palindrome_product(2)` should return 9009.
+`largest_palindrome_product(2)` должна возвращать 9009.
 
 ```python
     def test1(self):
         self.assertEqual(largest_palindrome_product(2), 9009, "--err-t1--")
 ```
 
-`largest_palindrome_product(3)` should return 906609.
+`largest_palindrome_product(3)` должна возвращать 906609.
 
 ```python
     def test2(self):

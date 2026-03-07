@@ -1,44 +1,44 @@
-A String _template_ is a programmatic way to generate a String.
-In Kotlin we can use the `+` sign (concatenation) to display two or more strings together, like:
+Строковый _шаблон_ — это программный способ генерации строки.
+В Kotlin мы можем использовать знак `+` (конкатенация) для отображения двух или более строк вместе, например:
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// выводит "Hello Kotlin!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Но использование знака `+` для сложения числа, например '10', со строкой, например `"friends"`, приводит к ошибке, так как они являются разными типами значений
 
 ---
 
-String templates allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+Строковые шаблоны позволяют отображать выражения, такие как сложение строки с числом, без ошибок.
+Размещение выражения внутри `${}` вычисляет его.
+Возвращаемое значение преобразуется в строку и вставляется в результирующую строку
 
 ---
 
-If you put a $ before an identifier name, the String template will insert that identifier's contents into the String
+Если вы поставите $ перед именем идентификатора, строковый шаблон вставит содержимое этого идентификатора в строку
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, nothing special happens
+Если то, что следует за знаком `$`, не распознаётся как программный идентификатор, ничего особенного не происходит
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+Мы также можем вставлять переменные после знаков доллара, чтобы показать их значение
 
 ---
 
-We can use curly brackets to insert values as often as we like inside the string templates
+Мы можем использовать фигурные скобки для вставки значений сколько угодно раз внутри строковых шаблонов
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Внутри `${}` мы также можем помещать условия, например:
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// выводит Correct
 ```
 
 ---
 
-String templates are best used in print statements, but we can also store them in variables like normal strings.
+Строковые шаблоны лучше всего использовать в операторах вывода, но мы также можем сохранять их в переменных, как обычные строки.

@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are equal, for example:
+Начнём с оператора сравнения **равно** `==`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, равны ли два выражения, например:
 ```c
 >>> 2 == 2
 1
@@ -9,20 +9,20 @@ It returns a **boolean**, true `1`  or false `0`, stating whether two expression
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether two expressions are **NOT** equal, for example:
+Продолжим с оператором сравнения **не равно** `!=`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, **НЕ** равны ли два выражения, например:
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-It is exactly the opposite of the *equal* operator
+Он является полной противоположностью оператора *равно*
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than the other, for example:
+Продолжим с оператором сравнения **больше** `>`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, больше ли одно выражение другого, например:
 ```c
 >>> 2 > 2
 0
@@ -32,8 +32,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than the other, for example:
+Продолжим с оператором сравнения **меньше** `<`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, меньше ли одно выражение другого, например:
 ```c
 >>> 2 < 2
 0
@@ -43,8 +43,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is greater than or equal the other, for example:
+Продолжим с оператором сравнения **больше или равно** `>=`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, больше или равно ли одно выражение другому, например:
 ```c
 >>> 2 >= 2
 1
@@ -56,8 +56,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **boolean**, true `1`  or false `0`, stating whether one expression is less than or equal the other, for example:
+Продолжим с оператором сравнения **меньше или равно** `<=`.
+Он возвращает **булево значение**, истина `1` или ложь `0`, указывая, меньше или равно ли одно выражение другому, например:
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ It returns a **boolean**, true `1`  or false `0`, stating whether one expression
 
 ---
 
-Now let's see the **boolean** operators, let's start with the first called __and__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Теперь рассмотрим **логические** операторы, начнём с первого — __и__ `&&`.
+Он возвращает первый операнд, который вычисляется как *ложь*, или последний, если все *истинны*.
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -80,8 +80,8 @@ It returns the first operand that evaluates to *false* or the last one if all ar
 
 ---
 
-Let's continue with the **or** `||` boolean operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Продолжим с логическим оператором **или** `||`.
+Он возвращает первый операнд, который вычисляется как *истина*, или последний, если все *ложны*.
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -91,8 +91,8 @@ It returns the first operand that evaluates to *true* or the last one if all are
 
 ---
 
-Let's finish with the **not** `!` boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Завершим логическим оператором **не** `!`.
+Он возвращает булево значение, противоположное логическому состоянию выражения.
 ```c
 >>> !true
 0

@@ -2,19 +2,19 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Сумма цифр
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+Дано целое число `N`.
+Напишите программу для вычисления суммы всех цифр числа N
 
 # --instructions--
 
-Return the sum of digits of `N`.
+Верните сумму цифр числа `N`.
 
-Example of function call:
+Пример вызова функции:
 ```kotlin
 println(sumDigits(28))
 // prints 10
@@ -50,31 +50,31 @@ fun main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Сумма цифр числа 12345 равна 15
 
 ```kotlin
     tryCatch(sumDigits(12345) == 15)
 ```
 
-The sum of the digits of 57253 is 22
+Сумма цифр числа 57253 равна 22
 
 ```kotlin
     tryCatch(sumDigits(57253) == 22)
 ```
 
-The sum of the digits of 122 is 5
+Сумма цифр числа 122 равна 5
 
 ```kotlin
     tryCatch(sumDigits(122) == 5)
 ```
 
-The sum of the digits of 91979997 is 60
+Сумма цифр числа 91979997 равна 60
 
 ```kotlin
     tryCatch(sumDigits(91979997) == 60)
 ```
 
-The sum of the digits of 2147483647 is 46
+Сумма цифр числа 2147483647 равна 46
 
 ```kotlin
     tryCatch(sumDigits(2147483647) == 46)

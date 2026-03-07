@@ -2,16 +2,16 @@
 language: javascript
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Наибольшее произведение в последовательности
 ---
 
 # --description--
 
-The four adjacent digits in the 1000-digit number mentioned below that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+Четыре смежные цифры в 1000-значном числе, приведённом ниже, которые дают наибольшее произведение, — это 9 × 9 × 8 × 9 = 5832.
 
 # --instructions--
 
-Find the `n` adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Найдите `n` смежных цифр в 1000-значном числе, которые дают наибольшее произведение. Чему равно это произведение?
 
 # --before-seed--
 
@@ -42,13 +42,13 @@ function largestProductinaSeries(n) {
 
 # --asserts--
 
-`largestProductinaSeries(4)` should return 5832.
+`largestProductinaSeries(4)` должна возвращать 5832.
 
 ```javascript
 tryCatch(largestProductinaSeries(4) === 5832);
 ```
 
-`largestProductinaSeries(13)` should return 23514624000.
+`largestProductinaSeries(13)` должна возвращать 23514624000.
 
 ```javascript
 tryCatch(largestProductinaSeries(13) === 23514624000);

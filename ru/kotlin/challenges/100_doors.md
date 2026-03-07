@@ -2,22 +2,22 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 дверей
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+В ряду стоят 100 дверей, все изначально закрыты.
+Вы проходите мимо дверей 100 раз.
+В первый раз посетите каждую дверь и 'переключите' её (если дверь закрыта — откройте; если открыта — закройте).
+Во второй раз посетите только каждую 2-ю дверь (т.е. дверь #2, #4, #6, ...) и переключите её.
+В третий раз посетите каждую 3-ю дверь (т.е. дверь #3, #6, #9, ...), и т.д., пока не посетите только 100-ю дверь.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Реализуйте функцию для определения состояния дверей после последнего прохода.
+Верните конечный результат в массиве, включив в массив только номер двери, если она открыта.
+> Метод должен работать с переменным количеством дверей.
 
 # --seed--
 
@@ -49,21 +49,21 @@ fun main() {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Для 100 дверей вернуть правильный список открытых дверей
 
 ```kotlin
     val solution1 = listOf(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
     tryCatch(getFinalOpenedDoors(100) == solution1)
 ```
 
-Given 10 doors, return the correct list of open doors
+Для 10 дверей вернуть правильный список открытых дверей
 
 ```kotlin
     val solution2 = listOf(1, 4, 9)
     tryCatch(getFinalOpenedDoors(10) == solution2)
 ```
 
-Given 950 doors, return the correct list of open doors
+Для 950 дверей вернуть правильный список открытых дверей
 
 ```kotlin
     val solution3 = listOf(1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900)

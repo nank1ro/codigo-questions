@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+Начнём с оператора сравнения **равно** `==`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, равны ли два выражения, например:
 ```swift
 print(2 == 2) // true
 print(2 == 3) // false
@@ -7,18 +7,18 @@ print(2 == 3) // false
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+Продолжим с оператором сравнения **не равно** `!=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, **НЕ** равны ли два выражения, например:
 ```swift
 print(2 != 2) // false
 print(2 != 3) // true
 ```
-It is exactly the opposite of the *equal* operator
+Это полная противоположность оператора *равно*
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+Продолжим с оператором сравнения **больше** `>`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, больше ли одно выражение другого, например:
 ```swift
 print(2 > 2) // false
 print(3 > 2) // true
@@ -26,8 +26,8 @@ print(3 > 2) // true
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+Продолжим с оператором сравнения **меньше** `<`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, меньше ли одно выражение другого, например:
 ```swift
 print(2 < 2) // false
 print(2 < 3) // true
@@ -35,8 +35,8 @@ print(2 < 3) // true
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+Продолжим с оператором сравнения **больше или равно** `>=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, больше ли одно выражение или равно другому, например:
 ```swift
 print(2 >= 2) // true
 print(3 >= 2) // true
@@ -45,8 +45,8 @@ print(3 >= 4) // false
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+Продолжим с оператором сравнения **меньше или равно** `<=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, меньше ли одно выражение или равно другому, например:
 ```swift
 print(2 <= 2) // true
 print(3 <= 2) // false
@@ -55,8 +55,8 @@ print(3 <= 4) // true
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Теперь рассмотрим **логические** операторы, начнём с первого, который называется __И__ `&&`.
+Он возвращает первый операнд, который оценивается как *false*, или последний, если все *true*.
 ```swift
 print(2 == 2 && 2 == 3) // false
 print(1 == 1 && 1 == 1.0) // true
@@ -64,8 +64,8 @@ print(1 == 1 && 1 == 1.0) // true
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Продолжим с логическим оператором **или** `||`.
+Он возвращает первый операнд, который оценивается как *true*, или последний, если все *false*.
 ```swift
 print(2 == 2 || 2 == 3) // true
 print(1 == 2 || 1 == 3) // false
@@ -73,8 +73,8 @@ print(1 == 2 || 1 == 3) // false
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Завершим знакомство с логическим оператором **НЕ** `!`.
+Он возвращает логическое значение, противоположное логическому состоянию выражения.
 ```swift
 print(!true) // false
 print(!false) // true

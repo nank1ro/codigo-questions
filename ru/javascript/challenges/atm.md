@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+Джеймс хотел бы снять N долларов из ATM.
+Банкомат примет транзакцию только если N кратно 5, и на счету Джеймса достаточно средств для выполнения операции снятия (включая банковскую комиссию).
+За каждое успешное снятие банк взимает комиссию `0.50$`.
+Рассчитайте баланс счёта Джеймса после попытки транзакции.
+Входные данные расположены в следующем порядке:
+1. сумма наличных, которую Джеймс хочет снять, находится в следующем диапазоне: `0 < N <= 2000`.
+2. начальный баланс Джеймса задан с точностью до двух знаков после запятой и находится в следующем диапазоне: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Верните баланс счёта после попытки транзакции в виде числа с точностью до двух знаков после запятой.
+Если на счету недостаточно средств для завершения транзакции, верните текущий банковский баланс.
 
 # --before-seed--
 
@@ -48,25 +48,25 @@ function accountBalance() {
 
 # --asserts--
 
-Perform a successful transaction
+Выполнить успешную транзакцию
 
 ```javascript
 tryCatch(accountBalance(50, 120.00) === 69.50);
 ```
 
-Insufficient funds
+Недостаточно средств
 
 ```javascript
 tryCatch(accountBalance(200, 120.00) === 120.00);
 ```
 
-Refused transaction, invalid amount
+Отклонённая транзакция, недопустимая сумма
 
 ```javascript
 tryCatch(accountBalance(22, 120.00) === 120.00);
 ```
 
-Withdraw all money successfully
+Успешно снять все деньги
 
 ```javascript
 tryCatch(accountBalance(95, 95.50) === 0.00);

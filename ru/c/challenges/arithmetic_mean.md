@@ -2,18 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: Среднее арифметическое
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Напишите функцию `mean` для нахождения _среднего арифметического_ числового вектора.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Напишите функцию, которая возвращает среднее арифметическое числового вектора.
 
-Example of function call:
+Пример вызова функции:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
@@ -162,7 +162,7 @@ int main() {
 
 # --asserts--
 
-The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
+Среднее арифметическое `[1, 2, 3, 4, 5, 6, 7]` должно быть равно 4.0
 
 ```c
     double arr1[] = {1, 2, 3, 4, 5, 6, 7};
@@ -170,7 +170,7 @@ The mean of `[1, 2, 3, 4, 5, 6, 7]` must be equal to 4.0
     try_catch(mean(arr1, length1) == 4.0);
 ```
 
-The mean of `[4, 5, 6]` must be equal to 5.0
+Среднее арифметическое `[4, 5, 6]` должно быть равно 5.0
 
 ```c
     double arr2[] = {4, 5, 6};
@@ -178,7 +178,7 @@ The mean of `[4, 5, 6]` must be equal to 5.0
     try_catch(mean(arr2, length2) == 5.0);
 ```
 
-The mean of `[12, 34, 56, 78]` must be equal to 45.0
+Среднее арифметическое `[12, 34, 56, 78]` должно быть равно 45.0
 
 ```c
     double arr3[] = {12, 34, 56, 78};

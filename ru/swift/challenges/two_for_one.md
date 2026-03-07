@@ -2,29 +2,29 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Два за одного
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Дано имя, верните строку с сообщением:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Где `X` — это данное имя.
+Однако, если имя отсутствует, верните строку:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**ввод**: `Walter`
+**вывод**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**ввод**: `James`
+**вывод**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**ввод**: `Martha`
+**вывод**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -45,7 +45,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-No name given
+Имя не указано
 
 ```swift
     func testNoNameGiven() {
@@ -54,7 +54,7 @@ No name given
     }
 ```
 
-Pass "James" as name
+Передано имя "James"
 
 ```swift
     func testANameGiven() {
@@ -63,7 +63,7 @@ Pass "James" as name
     }
 ```
 
-Pass "Martha" as name
+Передано имя "Martha"
 
 ```swift
     func testAnotherNameGiven() {

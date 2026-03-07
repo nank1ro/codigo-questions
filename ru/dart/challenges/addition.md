@@ -2,18 +2,18 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Addition
+title: Сложение
 ---
 
 # --description--
 
-Given two integers `num1` and `num2`, write a program to add these two numbers
+Даны два целых числа `num1` и `num2`, напишите программу для сложения этих двух чисел
 
 # --instructions--
 
-Write a function that returns the sum of two numbers.
+Напишите функцию, которая возвращает сумму двух чисел.
 
-Example of function call:
+Пример вызова функции:
 ```dart
 print(addition(1, 2));
 // prints 3
@@ -39,7 +39,7 @@ void main() {
 
 # --asserts--
 
-The sum of 1 and 3 must equal 4
+Сумма 1 и 3 должна быть равна 4
 
 ```dart
   test('test1', () {
@@ -47,7 +47,7 @@ The sum of 1 and 3 must equal 4
   });
 ```
 
-The sum of 200 and 210 must equal 410
+Сумма 200 и 210 должна быть равна 410
 
 ```dart
   test('test2', () {
@@ -55,7 +55,7 @@ The sum of 200 and 210 must equal 410
   });
 ```
 
-The sum of 15 and 35 must equal 50
+Сумма 15 и 35 должна быть равна 50
 
 ```dart
   test('test3', () {

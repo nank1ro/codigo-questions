@@ -1,32 +1,32 @@
-In Swift we can use the `+` sign to display two or more strings together, like:
+В Swift мы можем использовать знак `+` для отображения двух или более строк вместе, например:
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // выводит "Hello Swift!"
 ```
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Но использование знака `+` для добавления числа, например '10', к строке, например ` "friends"`, вызывает ошибку, так как это разные типы значений
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
+Интерполяция строк позволяет отображать выражения, такие как сложение строки и числа, без ошибок.
 
 ---
 
-Every string interpolation statement consists of two parts, the `\()` where we insert the number or variable, and the normal string
+Каждое выражение интерполяции строк состоит из двух частей: `\()`, куда мы вставляем число или переменную, и обычной строки
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `\(5)`
+Затем мы добавляем значение другого типа в круглые скобки, чтобы оно отображалось как одна инструкция print. Например, с `\(5)`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Вставка переменных, таких как `friends`, между круглыми скобками также отображает их значение
 
 ---
 
-We can use round brackets to insert values as often as we like inside the string interpolation
+Мы можем использовать круглые скобки для вставки значений внутри интерполяции строк столько раз, сколько нужно
 
 ---
 
-String interpolations are best used in print statements, but we can also store them in variables like normal strings.
+Интерполяцию строк лучше всего использовать в инструкциях print, но мы также можем сохранять их в переменных, как обычные строки.

@@ -2,32 +2,32 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: Капли дождя
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+Ваша задача — преобразовать число в строку, содержащую звуки капель дождя, соответствующие определённым потенциальным делителям.
+Делитель — это число, которое делит другое число нацело, без остатка.
+Самый простой способ проверить, является ли число делителем другого — использовать операцию модуля.
+Правила капель дождя таковы: если данное число:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- имеет 3 в качестве делителя, добавить 'Pling' к результату.
+- имеет 5 в качестве делителя, добавить 'Plang' к результату.
+- имеет 7 в качестве делителя, добавить 'Plong' к результату.
+- не имеет ни 3, ни 5, ни 7 в качестве делителя, результатом должны быть цифры числа.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 имеет делитель 7, но не 3 или 5, поэтому результат будет `"Plong"`.
+- 30 имеет делители 3 и 5, но не 7, поэтому результат будет `"PlingPlang"`.
+- 34 не делится на 3, 5 или 7, поэтому результат будет `"34"`.
 
-> HINT: omit the argument label with the `_` (underscore)
+> ПОДСКАЗКА: опустите метку аргумента с помощью `_` (нижнее подчёркивание)
 
-Example of function call:
+Пример вызова функции:
 ```swift
 print(raindrops(28))
 // prints "Plong"
@@ -52,7 +52,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sound for 1 is "1"
+Звук для 1 — "1"
 
 ```swift
     func test1() {
@@ -60,7 +60,7 @@ The sound for 1 is "1"
     }
 ```
 
-The sound for 3 is "Pling"
+Звук для 3 — "Pling"
 
 ```swift
     func test3() {
@@ -68,7 +68,7 @@ The sound for 3 is "Pling"
     }
 ```
 
-The sound for 5 is "Plang"
+Звук для 5 — "Plang"
 
 ```swift
     func test5() {
@@ -76,7 +76,7 @@ The sound for 5 is "Plang"
     }
 ```
 
-The sound for 7 is "Plong"
+Звук для 7 — "Plong"
 
 ```swift
     func test7() {
@@ -84,7 +84,7 @@ The sound for 7 is "Plong"
     }
 ```
 
-The sound for 6 is "Pling"
+Звук для 6 — "Pling"
 
 ```swift
     func test6() {
@@ -92,7 +92,7 @@ The sound for 6 is "Pling"
     }
 ```
 
-The sound for 8 is "8"
+Звук для 8 — "8"
 
 ```swift
     func test8() {
@@ -100,7 +100,7 @@ The sound for 8 is "8"
     }
 ```
 
-The sound for 9 is "Pling"
+Звук для 9 — "Pling"
 
 ```swift
     func test9() {
@@ -108,7 +108,7 @@ The sound for 9 is "Pling"
     }
 ```
 
-The sound for 10 is "Plang"
+Звук для 10 — "Plang"
 
 ```swift
     func test10() {
@@ -116,7 +116,7 @@ The sound for 10 is "Plang"
     }
 ```
 
-The sound for 14 is "Plong"
+Звук для 14 — "Plong"
 
 ```swift
     func test14() {
@@ -124,7 +124,7 @@ The sound for 14 is "Plong"
     }
 ```
 
-The sound for 15 is "PlingPlang"
+Звук для 15 — "PlingPlang"
 
 ```swift
     func test15() {
@@ -132,7 +132,7 @@ The sound for 15 is "PlingPlang"
     }
 ```
 
-The sound for 21 is "PlingPlong"
+Звук для 21 — "PlingPlong"
 
 ```swift
     func test21() {
@@ -140,7 +140,7 @@ The sound for 21 is "PlingPlong"
     }
 ```
 
-The sound for 25 is "Plang"
+Звук для 25 — "Plang"
 
 ```swift
     func test25() {
@@ -148,7 +148,7 @@ The sound for 25 is "Plang"
     }
 ```
 
-The sound for 27 is "Pling"
+Звук для 27 — "Pling"
 
 ```swift
     func test27() {
@@ -156,7 +156,7 @@ The sound for 27 is "Pling"
     }
 ```
 
-The sound for 35 is "PlangPlong"
+Звук для 35 — "PlangPlong"
 
 ```swift
     func test35() {
@@ -164,7 +164,7 @@ The sound for 35 is "PlangPlong"
     }
 ```
 
-The sound for 49 is "Plong"
+Звук для 49 — "Plong"
 
 ```swift
     func test49() {
@@ -172,7 +172,7 @@ The sound for 49 is "Plong"
     }
 ```
 
-The sound for 52 is "52"
+Звук для 52 — "52"
 
 ```swift
     func test52() {
@@ -180,7 +180,7 @@ The sound for 52 is "52"
     }
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Звук для 105 — "PlingPlangPlong"
 
 ```swift
     func test105() {
@@ -188,7 +188,7 @@ The sound for 105 is "PlingPlangPlong"
     }
 ```
 
-The sound for 3125 is "Plang"
+Звук для 3125 — "Plang"
 
 ```swift
     func test3125() {

@@ -1,13 +1,13 @@
-> Before I begin, I wanted to tell you that I am very happy to teach you Dart.
-With this message I take the opportunity to let you know that the app you are using was written right in Dart, using the Flutter framework. So it is an honor for me to be able to share my expertise in the language.
+> Прежде чем начать, хочу сказать, что мне очень приятно обучать вас Dart.
+Этим сообщением я пользуюсь случаем, чтобы сообщить вам, что приложение, которым вы пользуетесь, написано именно на Dart с использованием фреймворка Flutter. Поэтому для меня большая честь поделиться своими знаниями этого языка.
 
-Dart, like many other programming languages, allows you to document your code.
-This allows you to write any text next to the code.
-Comments are ignored by the compiler.
+Dart, как и многие другие языки программирования, позволяет документировать код.
+Это позволяет писать любой текст рядом с кодом.
+Комментарии игнорируются компилятором.
 
-Dart supports _single-line_ comments, _multi-line_ comments, and _documentation_ comments.
+Dart поддерживает _однострочные_ комментарии, _многострочные_ комментарии и комментарии _документации_.
 
-Here is how to write a _single-line_ comment:
+Вот как написать _однострочный_ комментарий:
 ```dart
 // This is a comment. It is not executed.
 ```

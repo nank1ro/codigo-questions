@@ -2,29 +2,29 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Два к одному
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Дано имя, верните строку с сообщением:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Где `X` — данное имя.
+Однако, если имя отсутствует, верните строку:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-**input**: `Walter`
-**output**: `One for Walter, one for me.`
+**вход**: `Walter`
+**выход**: `One for Walter, one for me.`
 
-**input**: `James`
-**output**: `One for James, one for me.`
+**вход**: `James`
+**выход**: `One for James, one for me.`
 
-**input**: `Martha`
-**output**: `One for Martha, one for me.`
+**вход**: `Martha`
+**выход**: `One for Martha, one for me.`
 
 # --seed--
 
@@ -56,19 +56,19 @@ fun main() {
 
 # --asserts--
 
-No name given
+Имя не указано
 
 ```kotlin
     tryCatch(twoForOne() == "One for you, one for me.")
 ```
 
-Pass "James" as name
+Передать "James" как имя
 
 ```kotlin
     tryCatch(twoForOne(name = "James") == "One for James, one for me.")
 ```
 
-Pass "Martha" as name
+Передать "Martha" как имя
 
 ```kotlin
     tryCatch(twoForOne(name = "Martha") == "One for Martha, one for me.")

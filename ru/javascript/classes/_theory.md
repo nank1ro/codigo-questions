@@ -1,15 +1,15 @@
-JavaScript is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+JavaScript — это объектно-ориентированный язык программирования, что означает, что он оперирует программными конструкциями, называемыми объектами.
+Объект можно представить как единую структуру данных, которая содержит как данные, так и функции; функции объекта называются его методами.
+Например, когда вы вызываете:
 ```javascript
 arrayName.push("value");
 ```
-JavaScript checks to see if `arrayName` has a `push()` method (which all arrays have) and executes that method if it finds it.
+JavaScript проверяет, есть ли у `arrayName` метод `push()` (который есть у всех массивов), и выполняет этот метод, если находит его.
 
 ---
 
-_Classes_ are general-purpose, flexible constructs that become the building blocks of your program's code.
-A basic class consists only of the `class` keyword and its name, for example:
+_Классы_ — это универсальные, гибкие конструкции, которые становятся строительными блоками кода вашей программы.
+Базовый класс состоит только из ключевого слова `class` и его имени, например:
 ```javascript
 class ClassName {
     // class definition
@@ -18,29 +18,29 @@ class ClassName {
 
 ---
 
-Let's put something inside our `Animal` class
-To add some parameters we have to use the default `constructor`
+Давайте добавим что-нибудь в наш класс `Animal`
+Чтобы добавить параметры, нам нужно использовать стандартный `constructor`
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class.
-In JavaScript to create a new instance of a class, we always use the `new` keyword before the class name.
-If you want to assign a default value to a parameter, do it in the constructor list of parameter names
+Определение класса не создаёт объект.
+Для этого нам нужно создать __экземпляр__ класса.
+В JavaScript для создания нового экземпляра класса мы всегда используем ключевое слово `new` перед именем класса.
+Если вы хотите присвоить значение по умолчанию параметру, сделайте это в списке параметров конструктора
 
 ---
 
-When a class has its own functions, those functions are called __methods__.
+Когда у класса есть собственные функции, эти функции называются __методами__.
 
 ---
 
-JavaScript allows us to create a class as a child of another, using the `extends` keyword
+JavaScript позволяет создавать класс как дочерний от другого, используя ключевое слово `extends`
 
 ---
 
-You can access the properties of an instance using _dot syntax_.
-In dot syntax, you write the property name immediately after the instance name, separated by a period `.`, without any spaces:
+Вы можете получить доступ к свойствам экземпляра, используя _точечный синтаксис_.
+В точечном синтаксисе имя свойства записывается сразу после имени экземпляра, разделённое точкой `.`, без пробелов:
 ```javascript
 someInstance.someProperty
 ```
-Using the same syntax we can also update the value of a property
+Используя тот же синтаксис, мы также можем обновить значение свойства

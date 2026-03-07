@@ -7,20 +7,20 @@ title: "ATM"
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is gived with two digits of precision and is in the following range: `0 < B <= 2000`.
+Джеймс хочет снять N долларов из ATM.
+Банкомат примет транзакцию только в том случае, если N кратно 5, и на счету Джеймса достаточно средств для выполнения операции снятия (включая банковскую комиссию).
+За каждое успешное снятие банк взимает `0.50$`.
+Рассчитайте баланс счёта Джеймса после попытки транзакции.
+Входные данные указаны в следующем порядке:
+1. сумма наличных, которую Джеймс хочет снять, находится в следующем диапазоне: `0 < N <= 2000`.
+2. начальный баланс Джеймса задаётся с двумя знаками после запятой и находится в следующем диапазоне: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Верните баланс счёта после попытки транзакции, заданный как число с двумя знаками после запятой.
+Если на счёте недостаточно средств для завершения транзакции, верните текущий баланс.
 
-Example of function call:
+Пример вызова функции:
 ```dart
 print(accountBalance(10, 20.00))
 // prints 9.5
@@ -46,7 +46,7 @@ void main() {
 
 # --asserts--
 
-Perform a successful transaction
+Выполнить успешную транзакцию
 
 ```dart
     test('test1', () {
@@ -54,7 +54,7 @@ Perform a successful transaction
     });
 ```
 
-Insufficient funds
+Недостаточно средств
 
 ```dart
     test('test2', () {
@@ -62,7 +62,7 @@ Insufficient funds
     });
 ```
 
-Refused transaction, invalid amount
+Отклонённая транзакция, недопустимая сумма
 
 ```dart
     test('test3', () {
@@ -70,7 +70,7 @@ Refused transaction, invalid amount
     });
 ```
 
-Withdraw all money successfully
+Успешное снятие всех средств
 
 ```dart
     test('test4', () {

@@ -1,5 +1,5 @@
-Let's start with the **equal** `==` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are equal, for example:
+Начнём с оператора сравнения **равно** `==`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, равны ли два выражения, например:
 ```python
 >>> 2 == 2
 True
@@ -9,20 +9,20 @@ False
 
 ---
 
-Let's continue with the **not equal** `!=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether two expressions are **NOT** equal, for example:
+Продолжим с оператором сравнения **не равно** `!=`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, **НЕ** равны ли два выражения, например:
 ```python
 >>> 2 != 2
 False
 >>> 2 != 3
 True
 ```
-It is exactly the opposite of the *equal* operator
+Он является полной противоположностью оператора *равно*
 
 ---
 
-Let's continue with the **greater than** `>` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than the other, for example:
+Продолжим с оператором сравнения **больше** `>`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, больше ли одно выражение другого, например:
 ```python
 >>> 2 > 2
 False
@@ -32,8 +32,8 @@ True
 
 ---
 
-Let's continue with the **less than** `<` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than the other, for example:
+Продолжим с оператором сравнения **меньше** `<`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, меньше ли одно выражение другого, например:
 ```python
 >>> 2 < 2
 False
@@ -43,8 +43,8 @@ True
 
 ---
 
-Let's continue with the **greater than or equal** `>=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is greater than or equal the other, for example:
+Продолжим с оператором сравнения **больше или равно** `>=`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, больше или равно ли одно выражение другому, например:
 ```python
 >>> 2 >= 2
 True
@@ -56,8 +56,8 @@ False
 
 ---
 
-Let's continue with the **less than or equal** `<=` relational operator.
-It returns a **Boolean** (`True` or `False`) stating whether one expression is less than or equal the other, for example:
+Продолжим с оператором сравнения **меньше или равно** `<=`.
+Он возвращает **логическое значение** (`True` или `False`), указывающее, меньше или равно ли одно выражение другому, например:
 ```python
 >>> 2 <= 2
 True
@@ -69,8 +69,8 @@ True
 
 ---
 
-Now let's see the **Boolean** operators, let's start with the first called `and`.
-It returns the first operand that evaluates to *False* or the last one if all are *True*.
+Теперь рассмотрим **логические** операторы, начнём с первого — `and`.
+Он возвращает первый операнд, который вычисляется как *False*, или последний, если все равны *True*.
 ```python
 >>> 2 == 2 and 2 == 3
 False
@@ -80,8 +80,8 @@ True
 
 ---
 
-Let's continue with the **or** boolean operator.
-It returns the first operand that evaluates to *True* or the last one if all are *False*.
+Продолжим с логическим оператором **or**.
+Он возвращает первый операнд, который вычисляется как *True*, или последний, если все равны *False*.
 ```python
 >>> 2 == 2 or 2 == 3
 True
@@ -91,8 +91,8 @@ False
 
 ---
 
-Let's finish with the **not** boolean operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Завершим логическим оператором **not**.
+Он возвращает логическое значение, противоположное логическому состоянию выражения.
 ```python
 >>> not True
 False

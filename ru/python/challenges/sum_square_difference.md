@@ -2,22 +2,22 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: Разность суммы квадратов
 ---
 
 # --description--
 
-The sum of the squares of the first ten natural numbers is,
+Сумма квадратов первых десяти натуральных чисел равна:
 
 12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
+Квадрат суммы первых десяти натуральных чисел равен:
 
 (1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+Следовательно, разность между суммой квадратов первых десяти натуральных чисел и квадратом суммы равна 3025 − 385 = 2640.
 
 # --instructions--
 
-Find the difference between the sum of the squares of the first `n` natural numbers and the square of the sum.
+Найдите разность между суммой квадратов первых `n` натуральных чисел и квадратом суммы.
 
 # --seed--
 
@@ -36,21 +36,21 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`sum_square_difference(10)` should return 2640.
+`sum_square_difference(10)` должна возвращать 2640.
 
 ```python
     def test1(self):
         self.assertEqual(sum_square_difference(10), 2640, "--err-t1--")
 ```
 
-`sum_square_difference(20)` should return 41230.
+`sum_square_difference(20)` должна возвращать 41230.
 
 ```python
     def test2(self):
         self.assertEqual(sum_square_difference(20), 41230, "--err-t2--")
 ```
 
-`sum_square_difference(100)` should return 25164150.
+`sum_square_difference(100)` должна возвращать 25164150.
 
 ```python
     def test3(self):

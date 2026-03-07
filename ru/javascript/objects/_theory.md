@@ -1,51 +1,51 @@
-**Objects** are similar to arrays, but you access values by looking up a *key* instead of an index
-A key can be any string or number.
-Objects are enclosed in curly brackets, like so:
+**Объекты** похожи на массивы, но вы получаете доступ к значениям по *ключу*, а не по индексу.
+Ключом может быть любая строка или число.
+Объекты заключаются в фигурные скобки, например:
 ```javascript
 var objectName = {"key1": 1, "key2": 2, "key3": 3};
 ```
-This is a dictionary called `objectName` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Это словарь с именем `objectName`, содержащий три *пары ключ-значение*.
+Ключ `key1` указывает на значение `1`, `key2` на `2` и так далее.
 
 ---
 
-Accessing dictionary values by key is just like accessing array values by index:
+Доступ к значениям словаря по ключу аналогичен доступу к значениям массива по индексу:
 ```javascript
-// gets the age value from the user dictionary
+// получает значение age из словаря user
 user['age'];
 ```
 
 ---
 
-Like Arrays, Dictionaries are _mutable_.
-This means they can be changed after they are created (if are not declared constant).
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Как и массивы, словари являются _изменяемыми_.
+Это означает, что их можно изменять после создания (если они не объявлены константами).
+Одним из преимуществ этого является то, что мы можем добавлять новые _пары ключ/значение_ в словарь после его создания, например:
 ```javascript
 dictName[newKeyName] = newValue;
 ```
 
 ---
 
-Because dictionaries variables are mutable, they can be changed in many ways.
-Items can be removed from a dictionary with the 'delete' keyword:
+Поскольку переменные-словари являются изменяемыми, их можно модифицировать различными способами.
+Элементы могут быть удалены из словаря с помощью ключевого слова 'delete':
 ```javascript
 delete dictName[keyName];
 ```
-will remove the key `keyName` and its associated value from the dictionary.
+удалит ключ `keyName` и связанное с ним значение из словаря.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `Object.keys()` method.
+Что если мы хотим получить список всех ключей словаря?
+Для этого есть метод `Object.keys()`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `Object.values()` method.
+Что если мы хотим получить список всех значений словаря?
+Для этого есть метод `Object.values()`.
 
 ---
 
-As for arrays, we can loop between dictionary elements using the `Object.entries()` method.
+Как и для массивов, мы можем перебирать элементы словаря с помощью метода `Object.entries()`.
 ```javascript
 var user = {"first_name": "John", "last_name": "Hood", "age": 30};
 for (const [key, value] of Object.entries(user)) {

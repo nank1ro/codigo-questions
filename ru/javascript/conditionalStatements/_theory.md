@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `niceWeather` and perform the action of playing outside `if` this variable is `true`, like:
+Принятие решений необходимо, когда мы хотим выполнить код только при выполнении определённого условия.
+Допустим, мы хотим играть на улице, только если погода хорошая.
+В программировании мы можем сохранить логическую переменную `niceWeather` и выполнить действие — играть на улице — `if` (если) эта переменная равна `true`, например:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -10,21 +10,21 @@ if (niceWeather) {
 
 ---
 
-Let's continue with the previous example.
+Продолжим с предыдущим примером.
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+Мы видели, что оператор `if` выполняет блок кода только если условие равно `true`.
+Ещё один важный момент — это **фигурные скобки** `{}`, которые обозначают блок кода.
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In JavaScript we can use the `else` statement, like:
+Мы только что увидели, как выполнить блок кода при наступлении условия. Теперь давайте посмотрим, как выполнить другой блок кода, если первое условие не выполняется.
+Мы идём играть на улицу, если погода хорошая; в противном случае остаёмся дома.
+В JavaScript мы можем использовать оператор `else`, например:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+Допустим, у нас есть ещё одно условие для проверки, как в этом примере:
 ```javascript
 var num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     console.log("do something else");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+и результат выполнения этого кода — `the number is 3`.
+Сначала проверяем, равно ли число 2 — это ложь.
+Поэтому переходим ко второму оператору и проверяем, равно ли `num` числу 3. Так как это истина, выполняем следующий блок кода и выводим `the number is 3`
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+Мы можем добавить сколько угодно операторов `else if`, ограничений нет
 ```javascript
 var num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     console.log("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+и результат выполнения этого кода — `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+Мы также можем вложить условный оператор (`if`, `else if` или `else`) внутрь другого условного оператора, чтобы создать более сложную структуру.
 ```javascript
 var num = 4;
 if (num < 3) {
@@ -87,13 +87,13 @@ if (num < 3) {
     }
 }
 ```
-and the output of this code is `the number is 4`.
+и результат выполнения этого кода — `the number is 4`.
 
 ---
 
-The ternary conditional operator is a special operator with three parts, which takes the form `question ? answer1 : answer2`.
-It's a shortcut for evaluating one of two expressions based on whether `question` is true or false.
-If `question` is true, it evaluates `answer1` and returns its value; otherwise, it evaluates `answer2` and returns its value.
+Тернарный условный оператор — это специальный оператор с тремя частями, который имеет вид `question ? answer1 : answer2`.
+Это сокращённый способ вычисления одного из двух выражений в зависимости от того, истинен `question` или ложен.
+Если `question` истинен, вычисляется `answer1` и возвращается его значение; в противном случае вычисляется `answer2` и возвращается его значение.
 ```javascript
 let a = 10, b = 20, c = 0;
 if (a < b) {
@@ -104,21 +104,21 @@ if (a < b) {
 console.log(c);
 // prints 10
 ```
-The shortand code for the above code is:
+Сокращённый код для приведённого выше:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
 // prints 10
 ```
-`c` is set equal to `a`, because the condition `a < b` was true
+`c` присваивается значение `a`, потому что условие `a < b` было истинным
 
 ---
 
-The _nil-coalescing operator_ `a ?? b` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`.
-The expression `a` is always of an optional type.
-The expression `b` must match the type that is stored inside a.
-The nil-coalescing operator is shorthand for the code below:
+Оператор _объединения с null_ `a ?? b` извлекает значение из необязательного `a`, если оно содержит значение, или возвращает значение по умолчанию `b`, если `a` равно `nil`.
+Выражение `a` всегда имеет необязательный тип.
+Выражение `b` должно соответствовать типу, хранящемуся внутри a.
+Оператор объединения с null является сокращением для следующего кода:
 ```javascript
 a != nil ? a! : b;
 ```

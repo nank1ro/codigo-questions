@@ -2,16 +2,16 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Сумма простых чисел
 ---
 
 # --description--
 
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Сумма простых чисел меньше 10 равна 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Find the sum of all the primes below `n`.
+Найдите сумму всех простых чисел меньше `n`.
 
 # --seed--
 
@@ -30,28 +30,28 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-`prime_summation(17)` should return 41.
+`prime_summation(17)` должна возвращать 41.
 
 ```python
     def test1(self):
         self.assertEqual(prime_summation(17), 41, "--err-t1--")
 ```
 
-`prime_summation(2001)` should return 277050.
+`prime_summation(2001)` должна возвращать 277050.
 
 ```python
     def test2(self):
         self.assertEqual(prime_summation(2001), 277050, "--err-t2--")
 ```
 
-`prime_summation(140759)` should return 873608362.
+`prime_summation(140759)` должна возвращать 873608362.
 
 ```python
     def test3(self):
         self.assertEqual(prime_summation(140759), 873608362, "--err-t2--")
 ```
 
-`prime_summation(2000000)` should return 142913828922.
+`prime_summation(2000000)` должна возвращать 142913828922.
 
 ```python
     def test4(self):

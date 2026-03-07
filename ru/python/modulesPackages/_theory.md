@@ -1,15 +1,15 @@
-A __module__ is a file that can contain any kind of Python code.
-Modules allow us to use code again and again.
+__Модуль__ — это файл, который может содержать любой код Python.
+Модули позволяют использовать код снова и снова.
 
 ---
 
-There are a lot of __built-in modules__ that can help us with all sorts of things, like working with dates and times.
-In order to include a module we use the `import` keyword
+Существует множество __встроенных модулей__, которые помогают в самых разных задачах, например, в работе с датами и временем.
+Для подключения модуля используется ключевое слово `import`
 
 ---
 
-We can also just import specific functions we need from a module using the `from` and `import` keywords
+Мы также можем импортировать только определённые функции из модуля, используя ключевые слова `from` и `import`
 
 ---
 
-We can also rename a function by importing it with the `as` keyword
+Мы также можем переименовать функцию при импорте с помощью ключевого слова `as`

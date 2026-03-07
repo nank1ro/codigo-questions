@@ -1,27 +1,27 @@
 {
   "comments": {
     "order": 1,
-    "title": "Comments",
-    "description": "Learn how to comment the code"
+    "title": "Комментарии",
+    "description": "Узнайте, как комментировать код"
   },
   "output": {
     "order": 2,
-    "title": "Output",
-    "description": "Learn how to output a value"
+    "title": "Вывод",
+    "description": "Узнайте, как вывести значение"
   },
   "stringInterpolation": {
     "order": 3,
-    "title": "String interpolation",
-    "description": "Learn how to interpolate strings with different data types"
+    "title": "Интерполяция строк",
+    "description": "Узнайте, как интерполировать строки с различными типами данных"
   },
   "variables": {
     "order": 4,
-    "title": "Variables",
-    "description": "Learn how to store values in a variable"
+    "title": "Переменные",
+    "description": "Узнайте, как хранить значения в переменной"
   },
   "types": {
     "order": 5,
-    "title": "Types",
-    "description": "Learn the types assignable to a variable"
+    "title": "Типы",
+    "description": "Узнайте, какие типы можно присвоить переменной"
   }
 }

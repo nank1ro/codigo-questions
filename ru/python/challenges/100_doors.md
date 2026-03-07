@@ -1,23 +1,23 @@
 ---
 language: python
 exerciseType: 1
-title: 100 doors
+title: 100 дверей
 difficulty: 1
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+В ряду стоят 100 дверей, все изначально закрыты.
+Вы совершаете 100 проходов мимо дверей.
+В первый раз вы посещаете каждую дверь и переключаете её (если дверь закрыта — открываете; если открыта — закрываете).
+Во второй раз вы посещаете только каждую 2-ю дверь (т.е. дверь №2, №4, №6, ...) и переключаете её.
+В третий раз вы посещаете каждую 3-ю дверь (т.е. дверь №3, №6, №9, ...) и т.д., пока не посетите только 100-ю дверь.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Реализуйте функцию для определения состояния дверей после последнего прохода.
+Верните итоговый результат в виде массива, включив в него только номера открытых дверей.
+> Метод должен работать с переменным количеством дверей.
 
 # --seed--
 
@@ -36,7 +36,7 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Для 100 дверей вернуть правильный список открытых дверей
 
 ```python
     def test_1(self):
@@ -44,7 +44,7 @@ Given 100 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(100), solution, "--err-t1--")
 ```
 
-Given 10 doors, return the correct list of open doors
+Для 10 дверей вернуть правильный список открытых дверей
 
 ```python
     def test_2(self):
@@ -52,7 +52,7 @@ Given 10 doors, return the correct list of open doors
         self.assertEqual(get_final_opened_doors(10), solution, "--err-t2--")
 ```
 
-Given 950 doors, return the correct list of open doors
+Для 950 дверей вернуть правильный список открытых дверей
 
 ```python
     def test_3(self):

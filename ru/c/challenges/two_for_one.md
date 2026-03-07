@@ -2,29 +2,29 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Два за одного
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Дано имя, верните строку с сообщением:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+Где `X` -- это данное имя.
+Однако, если имя пустое, верните строку:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
+**ввод**: `"Walter"`
+**вывод**: `One for Walter, one for me.`
 
-**input**: `""`
-**output**: `One for you, one for me.`
+**ввод**: `""`
+**вывод**: `One for you, one for me.`
 
-**input**: `"David"`
-**output**: `One for David, one for me.`
+**ввод**: `"David"`
+**вывод**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -169,19 +169,19 @@ int main() {
 
 # --asserts--
 
-No name given
+Имя не указано
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+Передать "James" в качестве имени
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+Передать "Martha" в качестве имени
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);

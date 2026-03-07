@@ -2,19 +2,19 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Сумма цифр
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+Дано целое число `N`.
+Напишите программу для вычисления суммы всех цифр числа N
 
 # --instructions--
 
-Return the sum of digits of `N`.
+Верните сумму цифр числа `N`.
 
-Example of function call:
+Пример вызова функции:
 ```dart
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ void main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Сумма цифр числа 12345 равна 15
 
 ```dart
   test('test1', () {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
   });
 ```
 
-The sum of the digits of 57253 is 22
+Сумма цифр числа 57253 равна 22
 
 ```dart
   test('test2', () {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
   });
 ```
 
-The sum of the digits of 122 is 5
+Сумма цифр числа 122 равна 5
 
 ```dart
   test('test3', () {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
   });
 ```
 
-The sum of the digits of 91979997 is 60
+Сумма цифр числа 91979997 равна 60
 
 ```dart
   test('test4', () {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
   });
 ```
 
-The sum of the digits of 2147483647 is 46
+Сумма цифр числа 2147483647 равна 46
 
 ```dart
   test('test5', () {

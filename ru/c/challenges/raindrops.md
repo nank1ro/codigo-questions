@@ -2,28 +2,28 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: Капли дождя
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+Ваша задача -- преобразовать число в строку, содержащую звуки капель дождя, соответствующие определённым потенциальным делителям.
+Делитель -- это число, которое делит другое число без остатка.
+Самый простой способ проверить, является ли число делителем другого -- использовать операцию взятия остатка от деления.
+Правила для капель дождя следующие:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- если 3 является делителем, добавить 'Pling' к результату.
+- если 5 является делителем, добавить 'Plang' к результату.
+- если 7 является делителем, добавить 'Plong' к результату.
+- если ни 3, ни 5, ни 7 не являются делителями, результатом должны быть цифры самого числа.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 имеет делитель 7, но не 3 и не 5, поэтому результат будет `"Plong"`.
+- 30 имеет делители 3 и 5, но не 7, поэтому результат будет `"PlingPlang"`.
+- 34 не делится на 3, 5 или 7, поэтому результат будет `"34"`.
 
 # --before-seed--
 
@@ -169,110 +169,110 @@ int main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+Звук для 1 -- "1"
 
 ```c
     try_catch(strcmp(convert(1), "1") == 0);
 ```
 
-The sound for 3 is "Pling"
+Звук для 3 -- "Pling"
 
 ```c
     try_catch(strcmp(convert(3), "Pling") == 0);
 ```
 
-The sound for 5 is "Plang"
+Звук для 5 -- "Plang"
 
 ```c
     try_catch(strcmp(convert(5), "Plang") == 0);
 ```
 
-The sound for 7 is "Plong"
+Звук для 7 -- "Plong"
 
 ```c
     try_catch(strcmp(convert(7), "Plong") == 0);
 ```
 
-The sound for 6 is "Pling"
+Звук для 6 -- "Pling"
 
 ```c
     try_catch(strcmp(convert(6), "Pling") == 0);
 ```
 
-The sound for 8 is "8"
+Звук для 8 -- "8"
 
 ```c
     try_catch(strcmp(convert(8), "8") == 0);
 ```
 
-The sound for 9 is "Pling"
+Звук для 9 -- "Pling"
 
 ```c
     try_catch(strcmp(convert(9), "Pling") == 0);
 ```
 
-The sound for 10 is "Plang"
+Звук для 10 -- "Plang"
 
 ```c
     try_catch(strcmp(convert(10), "Plang") == 0);
 ```
 
-The sound for 14 is "Plong"
+Звук для 14 -- "Plong"
 
 ```c
     try_catch(strcmp(convert(14), "Plong") == 0);
 ```
 
-The sound for 15 is "PlingPlang"
+Звук для 15 -- "PlingPlang"
 
 ```c
     try_catch(strcmp(convert(15), "PlingPlang") == 0);
 ```
 
-The sound for 21 is "PlingPlong"
+Звук для 21 -- "PlingPlong"
 
 ```c
     try_catch(strcmp(convert(21), "PlingPlong") == 0);
 ```
 
-The sound for 25 is "Plang"
+Звук для 25 -- "Plang"
 
 ```c
     try_catch(strcmp(convert(25), "Plang") == 0);
 ```
 
-The sound for 27 is "Pling"
+Звук для 27 -- "Pling"
 
 ```c
     try_catch(strcmp(convert(27), "Pling") == 0);
 ```
 
-The sound for 35 is "PlangPlong"
+Звук для 35 -- "PlangPlong"
 
 ```c
     try_catch(strcmp(convert(35), "PlangPlong") == 0);
 ```
 
-The sound for 49 is "Plong"
+Звук для 49 -- "Plong"
 
 ```c
     try_catch(strcmp(convert(49), "Plong") == 0);
 ```
 
-The sound for 52 is "52"
+Звук для 52 -- "52"
 
 ```c
     try_catch(strcmp(convert(52), "52") == 0);
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Звук для 105 -- "PlingPlangPlong"
 
 ```c
     try_catch(strcmp(convert(105), "PlingPlangPlong") == 0);
 ```
 
 
-The sound for 3125 is "Plang"
+Звук для 3125 -- "Plang"
 
 ```c
     try_catch(strcmp(convert(3125), "Plang") == 0);

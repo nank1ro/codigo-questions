@@ -1,15 +1,15 @@
-**Dictionaries** are similar to lists and tuples, but you access values by looking up a *key* instead of an index.
-A key can be any string or number.
-Dictionaries are enclosed in curly braces, like so:
+**Словари** похожи на списки и кортежи, но доступ к значениям осуществляется по *ключу*, а не по индексу.
+Ключом может быть любая строка или число.
+Словари заключаются в фигурные скобки, вот так:
 ```python
 d = {"key1": 1, "key2": 2, "key3": 3}
 ```
-This is a dictionary called `d` with three *key-value pairs*.
-The key `key1` points to the value `1`, `key2` to `2`, and so on.
+Это словарь `d` с тремя *парами ключ-значение*.
+Ключ `key1` указывает на значение `1`, `key2` на `2` и так далее.
 
 ---
 
-Accessing dictionary values by key is just like accessing list values by index:
+Доступ к значениям словаря по ключу аналогичен доступу к значениям списка по индексу:
 ```python
 user['age']
 # gets the age value from the user dictionary
@@ -17,40 +17,40 @@ user['age']
 
 ---
 
-Like Lists, Dictionaries are _mutable_.
-This means they can be changed after they are created.
-One advantage of this is that we can add new _key/value pairs_ to the dictionary after it is created like so:
+Как и списки, словари являются _изменяемыми_.
+Это означает, что их можно изменять после создания.
+Одно из преимуществ — мы можем добавлять новые _пары ключ-значение_ в словарь после его создания, вот так:
 ```python
 dict_name[new_key_name] = new_value
 ```
 
 ---
 
-The length `len()` of a dictionary is the number of _key-value pairs_ it has.
-Each pair counts only once, even if the value is a list. (That's right: you can also put lists inside dictionaries!)
+Длина `len()` словаря — это количество _пар ключ-значение_, которые он содержит.
+Каждая пара считается только один раз, даже если значение является списком. (Да, вы можете помещать списки внутрь словарей!)
 
 ---
 
-Because dictionaries are mutable, they can be changed in many ways. Items can be removed from a dictionary with the `del` command:
+Поскольку словари изменяемы, их можно модифицировать различными способами. Элементы можно удалять из словаря с помощью команды `del`:
 ```python
 del dict_name[key_name]
 ```
-will remove the key `key_name` and its associated value from the dictionary.
+удалит ключ `key_name` и связанное с ним значение из словаря.
 
 ---
 
-What if we want to list all the keys of the dictionary?
-Well, these's the `keys()` method.
+Что если мы хотим вывести список всех ключей словаря?
+Для этого есть метод `keys()`.
 
 ---
 
-What if we want to list all the values of the dictionary?
-Well, these's the `values()` method.
+Что если мы хотим вывести список всех значений словаря?
+Для этого есть метод `values()`.
 
 ---
 
-As for lists, we can loop between dictionary elements using the keywords `for..in`
-To get both the key and the value in the loop we can use the `items()` method:
+Как и для списков, мы можем перебирать элементы словаря с помощью ключевых слов `for..in`
+Чтобы получить и ключ, и значение в цикле, можно использовать метод `items()`:
 ```python
 for key, value in dict_name:
     print(key, value)
@@ -58,16 +58,16 @@ for key, value in dict_name:
 
 ---
 
-We can also use the `in` keyword we used with loops to determine if a dictionary contains certain __key__
+Мы также можем использовать ключевое слово `in`, которое использовали в циклах, чтобы проверить, содержит ли словарь определённый __ключ__
 
 ---
 
-In order to __add__ or __change__ values to a dictionary, we can also use the `update()` method with the _key-value pairs_ we want to add in braces
+Чтобы __добавить__ или __изменить__ значения в словаре, мы также можем использовать метод `update()` с _парами ключ-значение_, которые хотим добавить, в фигурных скобках
 
 ---
 
-What if we want to __remove__ a value a dictionary though?
-There's the `pop()` method:
+Что если мы хотим __удалить__ значение из словаря?
+Для этого есть метод `pop()`:
 ```python
 dict_name.pop("key_name")
 ```

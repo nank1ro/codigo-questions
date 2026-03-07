@@ -2,20 +2,20 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Сумма цифр
 ---
 
 # --description--
 
-You're given an integer `N`.
-Write a program to calculate the sum of all the digits of N
+Дано целое число `N`.
+Напишите программу для вычисления суммы всех цифр числа N
 
 # --instructions--
 
-Return the sum of digits of `N`.
-> HINT: omit the argument label with the `_` (underscore)
+Верните сумму цифр числа `N`.
+> ПОДСКАЗКА: опустите метку аргумента с помощью `_` (нижнее подчёркивание)
 
-Example of function call:
+Пример вызова функции:
 ```swift
 print(sumDigits(28))
 // prints 10
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+Сумма цифр числа 12345 равна 15
 
 ```swift
     func testSumOfDigits1() {
@@ -48,7 +48,7 @@ The sum of the digits of 12345 is 15
     }
 ```
 
-The sum of the digits of 57253 is 22
+Сумма цифр числа 57253 равна 22
 
 ```swift
     func testSumOfDigits2() {
@@ -56,7 +56,7 @@ The sum of the digits of 57253 is 22
     }
 ```
 
-The sum of the digits of 122 is 5
+Сумма цифр числа 122 равна 5
 
 ```swift
     func testSumOfDigits3() {
@@ -64,7 +64,7 @@ The sum of the digits of 122 is 5
     }
 ```
 
-The sum of the digits of 91979997 is 60
+Сумма цифр числа 91979997 равна 60
 
 ```swift
     func testSumOfDigits4() {
@@ -72,7 +72,7 @@ The sum of the digits of 91979997 is 60
     }
 ```
 
-The sum of the digits of 2147483647 is 46
+Сумма цифр числа 2147483647 равна 46
 
 ```swift
     func testSumOfDigits5() {

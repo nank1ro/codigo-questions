@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In C we use the `return_type` followed by the `function` name, for example:
+Возможно, вы сталкивались с ситуацией, когда хотели повторно использовать фрагмент кода, лишь с несколькими другими значениями.
+Вместо того чтобы переписывать весь код, гораздо удобнее определить функцию, которую затем можно использовать многократно.
+В C мы используем `return_type`, за которым следует имя `function`, например:
 ```c
 void say_hello() {
     printf("Hello!\n");
@@ -15,16 +15,16 @@ int main() {
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty if we want to specify parameters
+Скобки в __определении функции__ не обязательно должны быть пустыми, если мы хотим указать параметры
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword.
+Иногда мы хотим, чтобы функция __возвращала__ значение.
+Для этого есть ключевое слово `return`.
 
 ---
 
-Functions can have multiple input parameters, which are written within the function's parentheses, separated by commas.
+Функции могут иметь несколько входных параметров, которые записываются в скобках функции через запятую.
 ```c
 void say_hello(char *name, bool new_user) {
   char greet[40] = "Hello ";
@@ -44,10 +44,10 @@ int main() {
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+В функциях можно добавить _необязательный комментарий_, объясняющий, что делает функция:
 ```c
 /*
- * Function:  hello_world 
+ * Function:  hello_world
  * --------------------
  * prints "Hello, World!" to the screen
  */
@@ -55,4 +55,4 @@ function hello_world() {
     printf("Hello, World!\n");
 }
 ```
-We can use `//` for a single line comment and `/* */` for a multi line comment
+Мы можем использовать `//` для однострочного комментария и `/* */` для многострочного комментария

@@ -1,5 +1,5 @@
-An `enumeration` defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
-We declare enumerations using the `enum` keyword:
+`Перечисление` определяет общий тип для группы связанных значений и позволяет вам работать с этими значениями типобезопасным способом в вашем коде.
+Мы объявляем перечисления с помощью ключевого слова `enum`:
 ```swift
 enum Colors {
     case blue
@@ -7,12 +7,12 @@ enum Colors {
     case green
 }
 ```
-The values defined in an enumeration (such as `blue`, `red` and `green`) are its _enumeration cases_.
-We use the `case` keyword to introduce new enumeration cases.
+Значения, определённые в перечислении (такие как `blue`, `red` и `green`), являются его _вариантами перечисления_.
+Мы используем ключевое слово `case` для введения новых вариантов перечисления.
 
 ---
 
-Multiple cases can appear on a single line, separated by commas:
+Несколько вариантов могут быть записаны в одну строку, разделённые запятыми:
 ```swift
 enum Colors {
     case blue, red, green
@@ -21,7 +21,7 @@ enum Colors {
 
 ---
 
-We can match individual enumeration values with a `switch` statement:
+Мы можем сопоставлять отдельные значения перечисления с помощью оператора `switch`:
 ```swift
 let color = Colors.red
 switch color {
@@ -34,13 +34,13 @@ switch color {
 }
 // prints "Red"
 ```
-Keep in mind that if you don't need to provide a `case` for every enumeration case, you can provide a `default` case to cover any cases that aren't addressed explicitly
+Имейте в виду, что если вам не нужно предоставлять `case` для каждого варианта перечисления, вы можете указать ветку `default` для покрытия всех случаев, которые не указаны явно
 
 ---
 
-For some enumerations, it's useful to have a collection of all of that enumeration's cases.
-You enable this by writing `: CaseIterable` after the enumeration's name.
-Swift exposes a collection of all the cases as an `allCases` property of the enumeration type:
+Для некоторых перечислений полезно иметь коллекцию всех вариантов.
+Вы включаете это, написав `: CaseIterable` после имени перечисления.
+Swift предоставляет коллекцию всех вариантов в виде свойства `allCases` типа перечисления:
 ```swift
 enum Colors: CaseIterable {
     case blue, red, green

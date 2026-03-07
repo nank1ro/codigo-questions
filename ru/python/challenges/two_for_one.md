@@ -2,20 +2,20 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Два за одного
 ---
 
 # --description--
 
-Given a name, return a string with the message:
+Дано имя, вернуть строку с сообщением:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is missing, return the string:
+Где `X` — это заданное имя.
+Однако, если имя не указано, вернуть строку:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
 **input**: `Walter`
 **output**: `One for Walter, one for me.`
@@ -43,14 +43,14 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-No name given
+Имя не указано
 
 ```python
     def test_no_name_given(self):
         self.assertEqual(two_for_one(), "One for you, one for me.", "--err-t1--")
 ```
 
-Pass "James" as name
+Передать "James" в качестве имени
 
 ```python
     def test_a_name_given(self):
@@ -58,7 +58,7 @@ Pass "James" as name
 ```
 
 
-Pass "Martha" as name
+Передать "Martha" в качестве имени
 
 ```python
     def test_another_name_given(self):

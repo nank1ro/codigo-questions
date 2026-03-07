@@ -1,49 +1,49 @@
-Operators are used to perform operations on variables and values.
-Let's start with the arithmetic operators, in particular with the **addition** `+` operator.
-It is used to add two numbers, like:
+Операторы используются для выполнения операций над переменными и значениями.
+Начнём с арифметических операторов, в частности с оператора **сложения** `+`.
+Он используется для сложения двух чисел, например:
 ```javascript
 console.log(5 + 3);
-// prints 8
+// выводит 8
 ```
 
 ---
 
-Let's continue with the **subtraction** `-` operator.
-It is used to subtract one number from another, like:
+Продолжим с оператором **вычитания** `-`.
+Он используется для вычитания одного числа из другого, например:
 ```javascript
 console.log(5 - 3);
-// prints 2
+// выводит 2
 ```
 
 ---
 
-Let's see the **multiplication** `*` operator.
-It is used to multiply two numbers together, like:
+Рассмотрим оператор **умножения** `*`.
+Он используется для умножения двух чисел, например:
 ```javascript
 console.log(5 * 3);
-// prints 15
+// выводит 15
 ```
 
 ---
 
-Let's see the **division** `/` operator.
-It is used to divide two numbers together, like:
+Рассмотрим оператор **деления** `/`.
+Он используется для деления двух чисел, например:
 ```javascript
 console.log(10 / 5);
-// prints 2
+// выводит 2
 ```
 
 ---
 
-Let's see the **remainder** `%` operator.
-It is used to find the remainder after a division between two numbers, like:
+Рассмотрим оператор **остатка от деления** `%`.
+Он используется для нахождения остатка от деления двух чисел, например:
 ```javascript
 console.log(5 % 2);
-// prints 1
+// выводит 1
 ```
-This evaluates to 1 because 5 divided by 2 has a quotient of 2 and a remainder of 1
+Результат равен 1, потому что 5, делённое на 2, даёт частное 2 и остаток 1
 ```javascript
 console.log(9 % 3);
-// prints 0
+// выводит 0
 ```
-This other evaluates to 0 because 9 divided by 3 has a quotient of 3 and leaves a remainder of 0
+Этот пример даёт 0, потому что 9, делённое на 3, даёт частное 3 и остаток 0

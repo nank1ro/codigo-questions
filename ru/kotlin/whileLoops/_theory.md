@@ -1,15 +1,15 @@
-> Computers are ideal for repetitive tasks.
+> Компьютеры идеально подходят для повторяющихся задач.
 
-The most basic form of repetition uses the `while` keyword.
-This repeats a block as long as the controlling _Boolean expression_ is true:
+Самая базовая форма повторения использует ключевое слово `while`.
+Оно повторяет блок до тех пор, пока управляющее _логическое выражение_ истинно:
 
 ```kotlin
 while (Boolean-expression) {
   // Code to be repeated
 }
 ```
-The Boolean expression is evaluated once at the beginning of the loop and
-again before each further iteration through the block.
+Логическое выражение вычисляется один раз в начале цикла и
+снова перед каждой последующей итерацией блока.
 
 ```kotlin
 var x = 3
@@ -18,16 +18,16 @@ while (x > 0) {
     x--
 }
 ```
-Here we've created a variable `x`, assigning it the initial value of __3__.
+Здесь мы создали переменную `x`, присвоив ей начальное значение __3__.
 
-Then we have used the `while` statement that will run the block of code until the condition `x > 0` is `true`.
+Затем мы использовали оператор `while`, который будет выполнять блок кода, пока условие `x > 0` равно `true`.
 
-Inside the block of code, we should **NOT** miss to add the line `x--`.
-It decrements the `x` value, otherwise, our loop will be infinite.
+Внутри блока кода мы **НЕ** должны забыть добавить строку `x--`.
+Она уменьшает значение `x`, иначе наш цикл будет бесконечным.
 
 ---
 
-Let's analyze this snippet of code.
+Давайте разберём этот фрагмент кода.
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,35 +35,35 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: We initialize the `counter` variable to __0__.
-- __[2]__: The conditional expression for the _while_ says: "repeat the statements in the body as long as counter is less than _100_".
-- __[3]__: The `+=` operator adds _10_ to `counter` and assigns the result to `counter` in a single operation.
+- __[1]__: Мы инициализируем переменную `counter` значением __0__.
+- __[2]__: Условное выражение для _while_ гласит: «повторять операторы в теле, пока counter меньше _100_».
+- __[3]__: Оператор `+=` прибавляет _10_ к `counter` и присваивает результат `counter` в одной операции.
 
-The output of the code above is _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+Вывод приведённого выше кода — _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
-There's a second way to use _while_, in conjuction with the `do` keyword.
+Существует второй способ использования _while_, совместно с ключевым словом `do`.
 ```kotlin
 do {
   // Code to be repeated
 } while (Boolean-expression)
 ```
-As you can see the `do-while` is pretty similar to the `while` loop, except for one important difference:
-> the body of the loop is executed once before the condition is evaluated.
+Как видите, `do-while` очень похож на цикл `while`, за исключением одного важного отличия:
+> тело цикла выполняется один раз перед проверкой условия.
 
-In other words, the body of the `do-while` always executes at least once, even if the condition expression initially produces `false`.
+Другими словами, тело `do-while` всегда выполняется хотя бы один раз, даже если условное выражение изначально возвращает `false`.
 
-In constrast, the body of a `while` loop will never run if the condition produces `false` the first time.
+В отличие от этого, тело цикла `while` никогда не выполнится, если условие возвращает `false` с первого раза.
 
 ---
 
-The _while_ loop supports the three structural jump expression:
-- `break` terminates the nearest enclosing loop.
-- `continue` proceeds to the next step of the nearest enclosing loop.
-- `return` by default returns from the nearest enclosing function or anonymous function (_we will see it later when we talk about functions_).
+Цикл _while_ поддерживает три структурных выражения перехода:
+- `break` завершает ближайший охватывающий цикл.
+- `continue` переходит к следующему шагу ближайшего охватывающего цикла.
+- `return` по умолчанию возвращает из ближайшей охватывающей функции или анонимной функции (_мы рассмотрим это позже, когда будем говорить о функциях_).
 
-Here is an example of the use of `continue` within a _while_ loop:
+Вот пример использования `continue` в цикле _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +74,11 @@ while (i < 3) {
 // prints 1, 3
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we skip and _continue_ to the next step. In fact the number 2 is never printed.
+Как видите, в __[1]__, когда `i` равно _2_, мы пропускаем и _продолжаем_ к следующему шагу. Поэтому число 2 никогда не выводится.
 
 ---
 
-Here is an example of the use of `break` within a _while_ loop:
+Вот пример использования `break` в цикле _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +89,4 @@ while (i < 3) {
 // prints 1
 ```
 
-As you can see at __[1]__ when `i` is equal to _2_, we _break_ the loop. In fact the numbers 2 and 3 are never printed.
+Как видите, в __[1]__, когда `i` равно _2_, мы _прерываем_ цикл. Поэтому числа 2 и 3 никогда не выводятся.

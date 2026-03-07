@@ -2,30 +2,30 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: Капли дождя
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are that if a given number:
+Ваша задача — преобразовать число в строку, содержащую звуки капель дождя, соответствующие определённым потенциальным делителям.
+Делитель — это число, которое делит другое число нацело, без остатка.
+Простейший способ проверить, является ли число делителем другого — использовать операцию модуля.
+Правила капель дождя таковы: если данное число:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- имеет 3 в качестве делителя, добавить 'Pling' к результату.
+- имеет 5 в качестве делителя, добавить 'Plang' к результату.
+- имеет 7 в качестве делителя, добавить 'Plong' к результату.
+- не имеет ни 3, ни 5, ни 7 в качестве делителя, результатом должны быть цифры самого числа.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 имеет 7 в качестве делителя, но не 3 или 5, поэтому результат будет `"Plong"`.
+- 30 имеет и 3, и 5 в качестве делителей, но не 7, поэтому результат будет `"PlingPlang"`.
+- 34 не делится на 3, 5 или 7, поэтому результат будет `"34"`.
 
-Example of function call:
+Пример вызова функции:
 ```dart
 print(raindrops(28))
 // prints "Plong"
@@ -51,7 +51,7 @@ void main() {
 
 # --asserts--
 
-The sound for 1 is "1"
+Звук для 1 — это "1"
 
 ```dart
   test('test1', () {
@@ -59,7 +59,7 @@ The sound for 1 is "1"
   });
 ```
 
-The sound for 3 is "Pling"
+Звук для 3 — это "Pling"
 
 ```dart
   test('test2', () {
@@ -67,7 +67,7 @@ The sound for 3 is "Pling"
   });
 ```
 
-The sound for 5 is "Plang"
+Звук для 5 — это "Plang"
 
 ```dart
   test('test3', () {
@@ -75,7 +75,7 @@ The sound for 5 is "Plang"
   });
 ```
 
-The sound for 7 is "Plong"
+Звук для 7 — это "Plong"
 
 ```dart
   test('test4', () {
@@ -83,7 +83,7 @@ The sound for 7 is "Plong"
   });
 ```
 
-The sound for 6 is "Pling"
+Звук для 6 — это "Pling"
 
 ```dart
   test('test5', () {
@@ -91,7 +91,7 @@ The sound for 6 is "Pling"
   });
 ```
 
-The sound for 8 is "8"
+Звук для 8 — это "8"
 
 ```dart
   test('test6', () {
@@ -99,7 +99,7 @@ The sound for 8 is "8"
   });
 ```
 
-The sound for 9 is "Pling"
+Звук для 9 — это "Pling"
 
 ```dart
   test('test7', () {
@@ -107,7 +107,7 @@ The sound for 9 is "Pling"
   });
 ```
 
-The sound for 10 is "Plang"
+Звук для 10 — это "Plang"
 
 ```dart
   test('test8', () {
@@ -115,7 +115,7 @@ The sound for 10 is "Plang"
   });
 ```
 
-The sound for 14 is "Plong"
+Звук для 14 — это "Plong"
 
 ```dart
   test('test9', () {
@@ -123,7 +123,7 @@ The sound for 14 is "Plong"
   });
 ```
 
-The sound for 15 is "PlingPlang"
+Звук для 15 — это "PlingPlang"
 
 ```dart
   test('test10', () {
@@ -131,7 +131,7 @@ The sound for 15 is "PlingPlang"
   });
 ```
 
-The sound for 21 is "PlingPlong"
+Звук для 21 — это "PlingPlong"
 
 ```dart
   test('test11', () {
@@ -139,7 +139,7 @@ The sound for 21 is "PlingPlong"
   });
 ```
 
-The sound for 25 is "Plang"
+Звук для 25 — это "Plang"
 
 ```dart
   test('test12', () {
@@ -147,7 +147,7 @@ The sound for 25 is "Plang"
   });
 ```
 
-The sound for 27 is "Pling"
+Звук для 27 — это "Pling"
 
 ```dart
   test('test13', () {
@@ -155,7 +155,7 @@ The sound for 27 is "Pling"
   });
 ```
 
-The sound for 35 is "PlangPlong"
+Звук для 35 — это "PlangPlong"
 
 ```dart
   test('test14', () {
@@ -163,7 +163,7 @@ The sound for 35 is "PlangPlong"
   });
 ```
 
-The sound for 49 is "Plong"
+Звук для 49 — это "Plong"
 
 ```dart
   test('test15', () {
@@ -171,7 +171,7 @@ The sound for 49 is "Plong"
   });
 ```
 
-The sound for 52 is "52"
+Звук для 52 — это "52"
 
 ```dart
   test('test16', () {
@@ -179,7 +179,7 @@ The sound for 52 is "52"
   });
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Звук для 105 — это "PlingPlangPlong"
 
 ```dart
   test('test17', () {
@@ -187,7 +187,7 @@ The sound for 105 is "PlingPlangPlong"
   });
 ```
 
-The sound for 3125 is "Plang"
+Звук для 3125 — это "Plang"
 
 ```dart
   test('test18', () {

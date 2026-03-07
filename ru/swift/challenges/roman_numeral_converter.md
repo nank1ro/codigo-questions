@@ -2,24 +2,24 @@
 language: swift
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: Конвертер римских чисел
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+Создайте функцию, принимающую положительное целое число в качестве параметра и возвращающую строку с представлением этого числа в римских цифрах. Современные римские цифры записываются путём выражения каждой цифры отдельно, начиная с крайней левой цифры и пропуская цифры со значением ноль.
 
 # --instructions--
 
-Examples:
+Примеры:
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Все римские цифры должны возвращаться в верхнем регистре.
+- Наибольшее число, которое может быть представлено в этой нотации — 3 999.
 
 # --seed--
 
@@ -40,7 +40,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-The number `2` must equal `II` 
+Число `2` должно равняться `II`
 
 ```swift
     func test1() {
@@ -48,7 +48,7 @@ The number `2` must equal `II`
     }
 ```
 
-The number `12` must equal `XII` 
+Число `12` должно равняться `XII`
 
 ```swift
     func test2() {
@@ -56,7 +56,7 @@ The number `12` must equal `XII`
     }
 ```
 
-The number `16` must equal `XVI` 
+Число `16` должно равняться `XVI`
 
 ```swift
     func test3() {
@@ -64,7 +64,7 @@ The number `16` must equal `XVI`
     }
 ```
 
-The number `44` must equal `XLIV` 
+Число `44` должно равняться `XLIV`
 
 ```swift
     func test4() {
@@ -72,7 +72,7 @@ The number `44` must equal `XLIV`
     }
 ```
 
-The number `68` must equal `LXVIII` 
+Число `68` должно равняться `LXVIII`
 
 ```swift
     func test5() {
@@ -80,7 +80,7 @@ The number `68` must equal `LXVIII`
     }
 ```
 
-The number `400` must equal `CD` 
+Число `400` должно равняться `CD`
 
 ```swift
     func test6() {
@@ -88,7 +88,7 @@ The number `400` must equal `CD`
     }
 ```
 
-The number `798` must equal `DCCXCVIII` 
+Число `798` должно равняться `DCCXCVIII`
 
 ```swift
     func test7() {
@@ -96,7 +96,7 @@ The number `798` must equal `DCCXCVIII`
     }
 ```
 
-The number `1000` must equal `M` 
+Число `1000` должно равняться `M`
 
 ```swift
     func test8() {
@@ -104,7 +104,7 @@ The number `1000` must equal `M`
     }
 ```
 
-The number `3999` must equal `MMMCMXCIX` 
+Число `3999` должно равняться `MMMCMXCIX`
 
 ```swift
     func test9() {
@@ -112,7 +112,7 @@ The number `3999` must equal `MMMCMXCIX`
     }
 ```
 
-The number `649` must equal `DCXLIX` 
+Число `649` должно равняться `DCXLIX`
 
 ```swift
     func test10() {
@@ -120,7 +120,7 @@ The number `649` must equal `DCXLIX`
     }
 ```
 
-The number `1666` must equal `MDCLXVI` 
+Число `1666` должно равняться `MDCLXVI`
 
 ```swift
     func test11() {

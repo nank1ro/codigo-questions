@@ -1,30 +1,30 @@
-In JavaScript we can use the `+` sign to display two or more strings together, like:
+В JavaScript мы можем использовать знак `+` для объединения двух или более строк, например:
 ```javascript
 console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
 ```
 
 ---
 
-Template literals allow us to display expressions like adding a string to a number, without using the `+` sign.
-To create a valid template literal you have to use the backticks \`\` instead of double or single quotes.
-You can insert variables inside the template literals using the dollar sign and curly braces `${expression}`
+Шаблонные литералы позволяют отображать выражения, например, объединять строку с числом, без использования знака `+`.
+Для создания шаблонного литерала нужно использовать обратные кавычки \`\` вместо двойных или одинарных кавычек.
+Вы можете вставлять переменные внутрь шаблонных литералов, используя знак доллара и фигурные скобки `${expression}`
 
 ---
 
-Every template literals statement consists of two parts, the `${}` where we insert the number or variable, and the normal string
+Каждое выражение шаблонного литерала состоит из двух частей: `${}`, куда мы вставляем число или переменную, и обычной строки
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one console.log statement. Like here, with `${5}`
+Далее мы добавляем значение другого типа в фигурные скобки, чтобы оно отобразилось в одном операторе console.log. Как здесь, с `${5}`
 
 ---
 
-Inserting variables like `friends` between the round brackets displays their value too
+Вставка переменных, таких как `friends`, между круглыми скобками также отображает их значение
 
 ---
 
-We can use `${}` to insert values as often as we like inside the template literals
+Мы можем использовать `${}` для вставки значений сколько угодно раз внутри шаблонных литералов
 
 ---
 
-Template literals are best used in print statements, but we can also store them in variables like normal strings.
+Шаблонные литералы лучше всего использовать в операторах вывода, но мы также можем сохранять их в переменных, как обычные строки.

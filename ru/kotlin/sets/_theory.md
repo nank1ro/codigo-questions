@@ -1,66 +1,66 @@
-`Set`s are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-The main difference with `List`s is that a `Set` allows only one element of each value.
+`Set` — это тип данных, который можно использовать для хранения коллекции различных элементов информации в виде последовательности под одним именем переменной.
+Главное отличие от `List` заключается в том, что `Set` допускает только один элемент каждого значения.
 
-Like `List`s, a `Set` stores multiple values of one or multiple types and uses **indexes** to distinguish these values.
-You can assign items to a set with an expression of the form:
+Как и `List`, `Set` хранит несколько значений одного или нескольких типов и использует **индексы** для различения этих значений.
+Вы можете присвоить элементы множеству с помощью выражения следующего вида:
 ```kotlin
 val setName = setOf<itemsType>(item1, item2)
 ```
-`itemsType` stands for the type of the items inside the set, for example, it can be `Int`, `String`, `Any`...
+`itemsType` обозначает тип элементов внутри множества, например, это может быть `Int`, `String`, `Any`...
 
 ---
 
-A `Set` is a collection of __unique__ items without a specific order.
+`Set` — это коллекция __уникальных__ элементов без определённого порядка.
 
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// выводит [1, 2]
 ```
 
-At __[1]__ we're trying to create a set with the number __1__ present twice but as you can see each element must be unique and the second __1__ is automatically discarded.
+В __[1]__ мы пытаемся создать множество с числом __1__, присутствующим дважды, но, как видите, каждый элемент должен быть уникальным, и второй __1__ автоматически отбрасывается.
 
 ---
 
-There are two types of `Set`s in Kotlin:
+В Kotlin существует два типа `Set`:
 
-- `Set` cannot be modified after you create it.
-- `MutableSet` can be modified after you create it, meaning you can add, remove, or update its elements.
+- `Set` нельзя изменить после создания.
+- `MutableSet` можно изменять после создания, то есть можно добавлять, удалять или обновлять его элементы.
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
 numbers.add(4) // [1]
 ```
-__[1]__ throws an Error because `Set`s are _read-only_.
+__[1]__ вызывает ошибку, потому что `Set` является _только для чтения_.
 
-To create a modifiable set use the `mutableSetOf` keyword
+Чтобы создать изменяемое множество, используйте ключевое слово `mutableSetOf`
 ```kotlin
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// выводит [1, 2, 3, 4]
 ```
 
 ---
 
-The most common `Set` activity is to test for membership using `in` or `contains()`
+Наиболее распространённая операция с `Set` — это проверка принадлежности с помощью `in` или `contains()`
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // выводит true
+println(numbers.contains(5)) // выводит false
 ```
 
-As you can see above the `in` and `contains` return a `Bool` telling if the element being passed is present in the set
+Как видно выше, `in` и `contains` возвращают `Bool`, указывающий, присутствует ли переданный элемент в множестве
 
 ---
 
-The order of the elements in a `Set` in not important.
-In fact if you try to compare two `Set`s with the same element but in different order you get that they are equal.
+Порядок элементов в `Set` не важен.
+На самом деле, если вы попытаетесь сравнить два `Set` с одинаковыми элементами, но в разном порядке, вы получите, что они равны.
 
 ---
 
-On `Set`s you can perform several operations like checking for union, intersection, difference and subset.
+С `Set` можно выполнять различные операции, такие как объединение, пересечение, разность и проверка подмножества.
 
 ```kotlin
 val firstNumbers = setOf(1, 2, 3)
@@ -73,4 +73,4 @@ val subset = firstNumbers.containsAll(lastNumbers) // false
 
 ---
 
-To convert a `Set` to a `List` we can use the `toList()` function
+Чтобы преобразовать `Set` в `List`, можно использовать функцию `toList()`

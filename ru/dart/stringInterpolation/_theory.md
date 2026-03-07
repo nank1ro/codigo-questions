@@ -1,5 +1,5 @@
-A String _interpolation_ is a programmatic way to generate a String.
-In Dart we can use the `+` sign (concatenation) to display two or more strings together, like:
+_Интерполяция_ строк — это программный способ создания строки.
+В Dart мы можем использовать знак `+` (конкатенация) для отображения двух или более строк вместе, например:
 ```dart
 print("Hello " + "Dart!");
 // prints "Hello Dart!"
@@ -7,33 +7,33 @@ print("Hello " + "Dart!");
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Но использование знака `+` для сложения числа, такого как '10', со строкой, такой как ` "friends"`, вызывает ошибку, так как это значения разных типов
 
 ---
 
-String interpolation allow us to display expressions like adding a string to a number, without any error.
-Placing an expression inside `${}` evaluates it.
-The return value is converted to a String and inserted into the resulting String
+Интерполяция строк позволяет отображать выражения, например, добавлять строку к числу, без ошибок.
+Размещение выражения внутри `${}` вычисляет его.
+Возвращаемое значение преобразуется в строку и вставляется в результирующую строку
 
 ---
 
-If you put a `$` before an identifier name, the string interpolation will insert that identifier's contents into the `String`
+Если поставить `$` перед именем идентификатора, интерполяция строк вставит содержимое этого идентификатора в строку
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+Если то, что следует после знака `$`, не распознаётся как идентификатор программы, вы столкнётесь с ошибкой
 
 ---
 
-We can also insert variables after the dollar signs to show their value
+Мы также можем вставлять переменные после знака доллара, чтобы показать их значение
 
 ---
 
-We can use curly brackets to insert values as often as we like using the string interpolation
+Мы можем использовать фигурные скобки для вставки значений столько раз, сколько нужно, с помощью интерполяции строк
 
 ---
 
-Inside the `${}` we can also put conditions, for example:
+Внутри `${}` мы также можем размещать условия, например:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // prints The answer is correct
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-String interpolation is best used in print statements, but we can also store them in variables like normal strings.
+Интерполяция строк лучше всего используется в операторах вывода, но мы также можем сохранять их в переменных, как обычные строки.

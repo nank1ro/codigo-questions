@@ -2,16 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Hello World!
+title: "Привет, мир!"
 ---
 
 # --description--
 
-__"Hello, World!"__ is the traditional first program for beginning programming in a new language or environment.
+__"Привет, мир!"__ — это традиционная первая программа для начинающих программировать на новом языке или в новой среде.
 
 # --instructions--
 
-Write a function that returns the string "Hello, World!".
+Напишите функцию, которая возвращает строку "Hello, World!".
 
 # --seed--
 
@@ -43,7 +43,7 @@ fun main() {
 
 # --asserts--
 
-The function should return "Hello, World!".
+Функция должна возвращать "Hello, World!".
 
 ```kotlin
     val expected = "Hello, World!"

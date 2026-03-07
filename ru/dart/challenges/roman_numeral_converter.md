@@ -2,24 +2,24 @@
 language: dart
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: Конвертер римских цифр
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+Создайте функцию, принимающую положительное целое число в качестве параметра и возвращающую строку, содержащую представление этого числа римскими цифрами. Современные римские цифры записываются путём выражения каждой цифры отдельно, начиная с крайней левой цифры и пропуская любую цифру со значением ноль.
 
 # --instructions--
 
-Examples:
+Примеры:
 ```
 convertToRoman(2) ➞ "II"
 convertToRoman(12) ➞ "XII"
 convertToRoman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Все римские цифры должны возвращаться в верхнем регистре.
+- Наибольшее число, которое можно представить в этой нотации — 3 999.
 
 # --seed--
 
@@ -41,7 +41,7 @@ void main() {
 
 # --asserts--
 
-The number `2` must equal `II` 
+Число `2` должно быть равно `II`
 
 ```dart
   test('test1', () {
@@ -49,7 +49,7 @@ The number `2` must equal `II`
   });
 ```
 
-The number `12` must equal `XII` 
+Число `12` должно быть равно `XII`
 
 ```dart
   test('test2', () {
@@ -57,7 +57,7 @@ The number `12` must equal `XII`
   });
 ```
 
-The number `16` must equal `XVI` 
+Число `16` должно быть равно `XVI`
 
 ```dart
   test('test3', () {
@@ -65,7 +65,7 @@ The number `16` must equal `XVI`
   });
 ```
 
-The number `44` must equal `XLIV` 
+Число `44` должно быть равно `XLIV`
 
 ```dart
   test('test4', () {
@@ -73,7 +73,7 @@ The number `44` must equal `XLIV`
   });
 ```
 
-The number `68` must equal `LXVIII` 
+Число `68` должно быть равно `LXVIII`
 
 ```dart
   test('test5', () {
@@ -81,7 +81,7 @@ The number `68` must equal `LXVIII`
   });
 ```
 
-The number `400` must equal `CD` 
+Число `400` должно быть равно `CD`
 
 ```dart
   test('test6', () {
@@ -89,7 +89,7 @@ The number `400` must equal `CD`
   });
 ```
 
-The number `798` must equal `DCCXCVIII` 
+Число `798` должно быть равно `DCCXCVIII`
 
 ```dart
   test('test7', () {
@@ -97,7 +97,7 @@ The number `798` must equal `DCCXCVIII`
   });
 ```
 
-The number `1000` must equal `M` 
+Число `1000` должно быть равно `M`
 
 ```dart
   test('test8', () {
@@ -105,7 +105,7 @@ The number `1000` must equal `M`
   });
 ```
 
-The number `3999` must equal `MMMCMXCIX` 
+Число `3999` должно быть равно `MMMCMXCIX`
 
 ```dart
   test('test9', () {
@@ -113,7 +113,7 @@ The number `3999` must equal `MMMCMXCIX`
   });
 ```
 
-The number `649` must equal `DCXLIX` 
+Число `649` должно быть равно `DCXLIX`
 
 ```dart
   test('test10', () {
@@ -121,7 +121,7 @@ The number `649` must equal `DCXLIX`
   });
 ```
 
-The number `1666` must equal `MDCLXVI` 
+Число `1666` должно быть равно `MDCLXVI`
 
 ```dart
   test('test11', () {

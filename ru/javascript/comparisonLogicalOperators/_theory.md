@@ -1,103 +1,103 @@
-Let's start with the **equal** `==` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are equal, for example:
+Начнём с оператора сравнения **равно** `==`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, равны ли два выражения, например:
 ```javascript
-console.log(2 == 2); 
-// prints true
+console.log(2 == 2);
+// выводит true
 console.log(2 == 3);
-// prints false
+// выводит false
 ```
 
 ---
 
-Let's continue with the **not equal** `!=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether two expressions are **NOT** equal, for example:
+Продолжим с оператором сравнения **не равно** `!=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, **НЕ** равны ли два выражения, например:
 ```javascript
 console.log(2 != 2);
-// prints false
-console.log(2 != 3); 
-// prints true
+// выводит false
+console.log(2 != 3);
+// выводит true
 ```
-It is exactly the opposite of the *equal* operator
+Это полная противоположность оператора *равно*
 
 ---
 
-Let's continue with the **greater than** `>` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than the other, for example:
+Продолжим с оператором сравнения **больше** `>`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, больше ли одно выражение другого, например:
 ```javascript
 console.log(2 > 2);
-// prints false
+// выводит false
 console.log(3 > 2);
-// prints true
+// выводит true
 ```
 
 ---
 
-Let's continue with the **less than** `<` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than the other, for example:
+Продолжим с оператором сравнения **меньше** `<`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, меньше ли одно выражение другого, например:
 ```javascript
 console.log(2 < 2);
-// prints false
+// выводит false
 console.log(2 < 3);
-// prints true
+// выводит true
 ```
 
 ---
 
-Let's continue with the **greater than or equal to** `>=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is greater than or equal the other, for example:
+Продолжим с оператором сравнения **больше или равно** `>=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, больше ли или равно одно выражение другому, например:
 ```javascript
-console.log(2 >= 2); 
-// prints true
+console.log(2 >= 2);
+// выводит true
 console.log(3 >= 2);
-// prints true
+// выводит true
 console.log(3 >= 4);
-// prints false
+// выводит false
 ```
 
 ---
 
-Let's continue with the **less than or equal to** `<=` comparison operator.
-It returns a **boolean** (`true` or `false`) stating whether one expression is less than or equal to the other, for example:
+Продолжим с оператором сравнения **меньше или равно** `<=`.
+Он возвращает **логическое значение** (`true` или `false`), указывающее, меньше ли или равно одно выражение другому, например:
 ```javascript
-console.log(2 <= 2); 
-// prints true
+console.log(2 <= 2);
+// выводит true
 console.log(3 <= 2);
-// prints false
+// выводит false
 console.log(3 <= 4);
-// prints true
+// выводит true
 ```
 
 ---
 
-Now let's see the **logical** operators, let's start with the first called __AND__ `&&`.
-It returns the first operand that evaluates to *false* or the last one if all are *true*.
+Теперь рассмотрим **логические** операторы, начнём с первого — __И__ `&&`.
+Он возвращает первый операнд, который вычисляется как *false*, или последний, если все равны *true*.
 ```javascript
 console.log(2 == 2 && 2 == 3);
-// prints false
+// выводит false
 console.log(1 == 1 && 1 == 1.0);
-// prints true
+// выводит true
 ```
 
 ---
 
-Let's continue with the **or** `||` logical operator.
-It returns the first operand that evaluates to *true* or the last one if all are *false*.
+Продолжим с логическим оператором **или** `||`.
+Он возвращает первый операнд, который вычисляется как *true*, или последний, если все равны *false*.
 ```javascript
 console.log(2 == 2 || 2 == 3);
-// prints true
+// выводит true
 console.log(1 == 2 || 1 == 3);
-// prints false
+// выводит false
 ```
 
 ---
 
-Let's finish with the **not** `!` logical operator.
-It returns a boolean that is the reverse of the logical state of an expression.
+Завершим логическим оператором **НЕ** `!`.
+Он возвращает логическое значение, противоположное логическому состоянию выражения.
 ```javascript
 console.log(!true);
-// prints false
+// выводит false
 console.log(!false);
-// prints true
+// выводит true
 console.log(!(2 == 2));
-// prints false
+// выводит false
 ```

@@ -1,14 +1,14 @@
-Python is an object-oriented programming language, which means it manipulates programming constructs called objects.
-You can think of an object as a single data structure that contains data as well as functions; the functions of an object are called its methods.
-For example, when you call:
+Python -- это объектно-ориентированный язык программирования, что означает, что он оперирует программными конструкциями, называемыми объектами.
+Вы можете представить объект как единую структуру данных, которая содержит как данные, так и функции; функции объекта называются его методами.
+Например, когда вы вызываете:
 ```python
 dict_name.items()
 ```
-Python checks to see if `my_dict` has an `items()` method (which all dictionaries have) and executes that method if it finds it.
+Python проверяет, есть ли у `my_dict` метод `items()` (который есть у всех словарей), и выполняет этот метод, если находит его.
 
 ---
 
-A basic class consists only of the `class` keyword and the name of the class, for example:
+Базовый класс состоит только из ключевого слова `class` и имени класса, например:
 ```python
 class ClassName:
     pass
@@ -16,26 +16,26 @@ class ClassName:
 
 ---
 
-Let's replace `pass` with something else.
-The method `__init__()` is required for classes, and it's used to __initialize__ the objects it creates.
-`__init__()` always takes at least one argument, `self`, that refers to the object being created.
-You can think of `__init__()` as the method that boots up each object the class creates.
+Давайте заменим `pass` на что-то другое.
+Метод `__init__()` необходим для классов и используется для __инициализации__ создаваемых объектов.
+`__init__()` всегда принимает как минимум один аргумент, `self`, который ссылается на создаваемый объект.
+Вы можете думать о `__init__()` как о методе, который запускает каждый объект, создаваемый классом.
 
 ---
 
-Of course, the `__init__()` method can use more parameters than `self`
+Разумеется, метод `__init__()` может принимать больше параметров, чем просто `self`
 
 ---
 
-The first argument `__init__()` is used to refer to the instance object, and by convention, that argument is called `self`.
-If you add additional arguments (for instance, a `gender` and `legs` for your animal) setting each of those equal to `self.gender` and `self.legs` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a gender and legs, and those will be associated with the particular instance you create
+Первый аргумент `__init__()` используется для ссылки на объект экземпляра, и по соглашению этот аргумент называется `self`.
+Если вы добавите дополнительные аргументы (например, `gender` и `legs` для вашего животного), присвоение каждого из них `self.gender` и `self.legs` в теле `__init__()` приведёт к тому, что при создании объекта экземпляра класса `Animal` вам нужно будет указать для каждого экземпляра пол и количество ног, и они будут связаны с конкретным создаваемым экземпляром
 
 ---
 
-Defining a class doesn't create an object.
-In order to do that, we need to create an __instance__ of a class
+Определение класса не создаёт объект.
+Для этого нам нужно создать __экземпляр__ класса
 
 ---
 
-When a class has its own functions, those functions are called __methods__. You've already seen one such method: `__init__()`.
-But you can also define your own methods!
+Когда у класса есть собственные функции, эти функции называются __методами__. Вы уже видели один такой метод: `__init__()`.
+Но вы также можете определять свои собственные методы!

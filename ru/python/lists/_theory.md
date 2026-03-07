@@ -1,47 +1,47 @@
-Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name.
-A list stores multiple values of any type and uses **indexes** to distinguish these values.
-You can assign items to a list with an expression of the form:
+Списки — это тип данных, который можно использовать для хранения коллекции различных элементов информации в виде последовательности под одним именем переменной.
+Список хранит несколько значений любого типа и использует **индексы** для различения этих значений.
+Вы можете присвоить элементы списку с помощью выражения вида:
 ```python
 list_name = [item1, item2]
 ```
 
 ---
 
-You can access an individual item of the list by its index.
-An index is like an address that identifies the item's place in the list.
-The index appears directly after the list name, in between brackets, like this:
+Вы можете получить доступ к отдельному элементу списка по его индексу.
+Индекс — это своего рода адрес, который определяет место элемента в списке.
+Индекс указывается сразу после имени списка в квадратных скобках, вот так:
 ```python
 list_name[index]
 ```
 
-List indices begin with `0`, **not** `1`! You access the first item in a list like this: `list_name[0]`.
-The second item in a list is at index 1: `list_name[1]`.
+Индексы списка начинаются с `0`, а **не** с `1`! Доступ к первому элементу списка осуществляется так: `list_name[0]`.
+Второй элемент списка находится по индексу 1: `list_name[1]`.
 
 ---
 
-A list index behaves like any other variable name! It can be used to access as well as assign values.
-You saw how to access a list index like this:
+Индекс списка ведёт себя как любое другое имя переменной! Его можно использовать как для доступа, так и для присвоения значений.
+Вы видели, как получить доступ к элементу по индексу:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # Получает значение "Jeremiah"
 ```
-This is how an assignment works:
+А вот как работает присвоение:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # Получает новое значение "Jordan"
 ```
 
 ---
 
-Just like strings, lists have a **length**.
-A list's length is the number of items it contains
+Как и строки, списки имеют **длину**.
+Длина списка — это количество содержащихся в нём элементов
 
 ---
 
-A list doesn't have to have a fixed length.
-You can add items to the end of a list any time you like!
-To add an item to a list we use the `append` keyword:
+Список не обязан иметь фиксированную длину.
+Вы можете добавлять элементы в конец списка в любой момент!
+Для добавления элемента в список используется ключевое слово `append`:
 ```python
 >>> letters = ["a", "b"]
 >>> letters.append("c")
@@ -51,60 +51,60 @@ To add an item to a list we use the `append` keyword:
 
 ---
 
-Sometimes, you only want to access a portion of a list.
-Consider the following code:
+Иногда вам нужно получить доступ только к части списка.
+Рассмотрим следующий код:
 ```python
 >>> numbers = [1, 2, 3, 4]
 >>> slice = numbers[1:3]
 >>> print(slice)
 [2, 3]
 ```
-First, we create a list called `numbers`.
-Then, we take a subsection of the list and store it in the slice list.
-We do this by defining the indices we want to include after the name of the list: `numbers[1:3]`.
-In Python, when we specify a portion of a list in this manner, we include the element with the first index, `1`, but we exclude the element with the second index, `3`.
+Сначала мы создаём список с именем `numbers`.
+Затем берём часть списка и сохраняем её в переменной slice.
+Для этого мы указываем индексы после имени списка: `numbers[1:3]`.
+В Python при таком указании части списка мы включаем элемент с первым индексом, `1`, но исключаем элемент со вторым индексом, `3`.
 
 ---
 
-You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index `0`.
+Строку можно нарезать точно так же, как список! По сути, строку можно рассматривать как список символов: каждый символ является последовательным элементом списка, начиная с индекса `0`.
 ```python
 list_name[:2]
-# Grabs the first two items
+# Берёт первые два элемента
 list_name[3:]
-# Grabs the fourth through last items
+# Берёт элементы с четвёртого до последнего
 ```
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.
+Если срез включает самый первый или последний элемент списка (или строки), индекс для этого элемента можно не указывать.
 
 ---
 
-List elements could be of any type:
+Элементы списка могут быть любого типа:
 ```python
 list_name = ["one", 2, True]
 ```
-In fact, above we have, in order, a string, an integer and a boolean.
-But we can also have lists with lists as well!
+В данном случае у нас, по порядку, строка, целое число и логическое значение.
+Но списки также могут содержать другие списки!
 
 ---
 
-Sometimes you need to search for an item in a list.
-In Python we can use the `index()` method:
+Иногда нужно найти элемент в списке.
+В Python для этого можно использовать метод `index()`:
 ```python
 >>> names = ["Trevor", "Zac", "Glenn"]
 >>> print(names.index("Zac"))
 1
 ```
-The code above prints the first index that contains the string `"Zac"`, `1` in this case.
-We can also insert items into a list in a specific index, using the `insert()` method:
+Код выше выводит первый индекс, содержащий строку `"Zac"`, в данном случае `1`.
+Также можно вставлять элементы в список по определённому индексу с помощью метода `insert()`:
 ```python
 >>> names.insert(1, "Ali")
 >>> print(names)
 ['Trevor', 'Ali', 'Zac', 'Glenn']
 ```
-The code above inserts `"Ali"` at index `1`, which moves everything, after this index, down by 1
+Код выше вставляет `"Ali"` по индексу `1`, что сдвигает все элементы после этого индекса на 1 позицию
 
 ---
 
-In Python we can loop through a list in a very simple way using the `for..in` keywords:
+В Python можно перебирать список очень простым способом, используя ключевые слова `for..in`:
 ```python
 >>> numbers = [1, 2, 3]
 >>> for num in numbers:
@@ -113,20 +113,20 @@ In Python we can loop through a list in a very simple way using the `for..in` ke
 2
 3
 ```
-A variable name follows the `for` keyword, it will be assigned the value of each list item in turn.
+Имя переменной после ключевого слова `for` будет последовательно принимать значение каждого элемента списка.
 
 ---
 
-**Tuples** are like lists but are much faster.
-However, tuple values cannot be changed.
-We tend to use tuples for **read-only** data that remains constant while the program is running.
-To create a tuple we use the round brackets `()`
+**Кортежи** похожи на списки, но работают гораздо быстрее.
+Однако значения кортежей нельзя изменять.
+Кортежи обычно используются для данных **только для чтения**, которые остаются неизменными во время работы программы.
+Для создания кортежа используются круглые скобки `()`
 
 ---
 
-There may be times when we want to change our tuple into a list.
-In order to do this, we can use the `list()` function
+Иногда может потребоваться преобразовать кортеж в список.
+Для этого можно использовать функцию `list()`
 
 ---
 
-Likewise, we can convert a list into a tuple
+Аналогично можно преобразовать список в кортеж

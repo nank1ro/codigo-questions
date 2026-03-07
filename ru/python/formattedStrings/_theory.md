@@ -1,4 +1,4 @@
-In Python we can use the `+` sign to display two or more strings together, like:
+В Python мы можем использовать знак `+` для отображения двух или более строк вместе, например:
 ```python
 >>> print("Hello " + "Python!")
 Hello Python!
@@ -6,28 +6,28 @@ Hello Python!
 
 ---
 
-But using the sign `+` to add a number like '10' to a string like ` "friends"` produces an error as they are a different kind of values
+Но использование знака `+` для сложения числа, например '10', со строкой, например `"friends"`, приводит к ошибке, так как это разные типы значений
 
 ---
 
-Formatted strings allow us to display expressions like adding a string to a number, without any error.
+Форматированные строки позволяют отображать выражения, такие как сложение строки с числом, без ошибок.
 
 ---
 
-Every formatted string statement consists of two parts, first the character `f`, then the string that we want to format
+Каждое выражение с форматированной строкой состоит из двух частей: сначала символ `f`, затем строка, которую мы хотим отформатировать
 
 ---
 
-Next, we add the different kind of value in curly braces so it'll display as one print statement. Like here, with `{5}`
+Далее мы добавляем значение другого типа в фигурные скобки, чтобы оно отобразилось в одном операторе print. Как здесь, с `{5}`
 
 ---
 
-Inserting variables like `friends` between the curly braces displays their value too
+Вставка переменных, таких как `friends`, между фигурными скобками также отображает их значение
 
 ---
 
-We can use curly braces to insert values as often as we like inside the formatted string
+Мы можем использовать фигурные скобки для вставки значений сколько угодно раз внутри форматированной строки
 
 ---
 
-Formatted strings are best used in print statements, as we can't store them in variables like normal strings.
+Форматированные строки лучше всего использовать в операторах print, так как мы не можем сохранять их в переменных, как обычные строки.

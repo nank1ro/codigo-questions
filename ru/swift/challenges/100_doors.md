@@ -2,22 +2,22 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: 100 doors
+title: 100 дверей
 ---
 
 # --description--
 
-There are 100 doors in a row that are all initially closed.
-You make 100 passes by the doors.
-The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it).
-The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it.
-The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+В ряду находятся 100 дверей, все они изначально закрыты.
+Вы совершаете 100 проходов мимо дверей.
+В первый раз вы посещаете каждую дверь и «переключаете» её (если дверь закрыта — открываете; если открыта — закрываете).
+Во второй раз вы посещаете только каждую 2-ю дверь (т.е. дверь №2, №4, №6, ...) и переключаете её.
+В третий раз — каждую 3-ю дверь (т.е. дверь №3, №6, №9, ...) и так далее, пока не посетите только 100-ю дверь.
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass.
-Return the final result in an array, with only the door number included in the array if it is open.
-> The method must be able to work with a variable number of doors.
+Реализуйте функцию для определения состояния дверей после последнего прохода.
+Верните результат в виде массива, содержащего только номера открытых дверей.
+> Метод должен работать с переменным количеством дверей.
 
 # --seed--
 
@@ -38,7 +38,7 @@ class CodigoTests: XCTestCase {
 
 # --asserts--
 
-Given 100 doors, return the correct list of open doors
+Для 100 дверей вернуть правильный список открытых дверей
 
 ```swift
     func test1() {
@@ -47,7 +47,7 @@ Given 100 doors, return the correct list of open doors
     }
 ```
 
-Given 10 doors, return the correct list of open doors
+Для 10 дверей вернуть правильный список открытых дверей
 
 ```swift
     func test2() {
@@ -56,7 +56,7 @@ Given 10 doors, return the correct list of open doors
     }
 ```
 
-Given 950 doors, return the correct list of open doors
+Для 950 дверей вернуть правильный список открытых дверей
 
 ```swift
     func test3() {

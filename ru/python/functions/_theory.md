@@ -1,6 +1,6 @@
-You might have considered the situation where you would like to reuse a piece of code, just with a few different values.
-Instead of rewriting the whole code, it's much cleaner to define a function, which can then be used repeatedly.
-In Python we use the `def` keyword followed by the name of the function:
+Возможно, вы сталкивались с ситуацией, когда хотели бы повторно использовать фрагмент кода, но с несколькими другими значениями.
+Вместо того чтобы переписывать весь код, гораздо удобнее определить функцию, которую затем можно использовать многократно.
+В Python мы используем ключевое слово `def`, за которым следует имя функции:
 ```python
 def say_hi():
     print("Hello!")
@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-The parentheses in the __function definition__ don't have to be empty.
-Within them, we can specify parameters
+Круглые скобки в __определении функции__ не обязательно должны быть пустыми.
+Внутри них мы можем указать параметры
 
 ---
 
-Sometimes we want a function to __return__ a value.
-Well, there's the `return` keyword
+Иногда мы хотим, чтобы функция __возвращала__ значение.
+Для этого существует ключевое слово `return`
 
 ---
 
-In functions we can add an _optional comment_ that explains what the function does:
+В функциях мы можем добавить _необязательный комментарий_, который объясняет, что делает функция:
 ```python
 """
 Prints 'Hello World' to the console.

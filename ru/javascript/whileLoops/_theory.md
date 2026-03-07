@@ -1,19 +1,19 @@
-Often in programming, we need to repeat a block of code, for example:
+Часто в программировании нам нужно повторять блок кода, например:
 ```javascript
 console.log("2 seconds");
 console.log("3 seconds");
 console.log("4 seconds");
 console.log("5 seconds");
 ```
-This produces the following output:
+Это даёт следующий вывод:
 ```javascript
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviously, for long statements we would spend a lot of time writing the code, but fortunately, we can use loops.
-Let's learn the `while` loop, getting the same output above.
+Очевидно, для длинных инструкций мы потратили бы много времени на написание кода, но, к счастью, мы можем использовать циклы.
+Давайте изучим цикл `while`, получив тот же вывод, что и выше.
 ```javascript
 var count = 2;
 while (count <= 5) {
@@ -21,30 +21,30 @@ while (count <= 5) {
     count += 1;
 }
 ```
-So we created a variable `count` assigning `2`, the initial value.
-Then we have used the `while` statement that will run the block of code until the condition `count <= 5` is `true`.
-Inside the block of code, we should **NOT** miss to add the line `count += 1`.
-It increments the `count` value, otherwise, our loop will be infinite
+Итак, мы создали переменную `count`, присвоив ей `2` — начальное значение.
+Затем мы использовали оператор `while`, который будет выполнять блок кода, пока условие `count <= 5` равно `true`.
+Внутри блока кода мы **НЕ** должны забывать добавить строку `count += 1`.
+Она увеличивает значение `count`, иначе наш цикл будет бесконечным
 
 ---
 
-To control the times a `while` loop repeats, we start with a variable set to a number.
-We call this variable a counter variable
+Чтобы контролировать количество повторений цикла `while`, мы начинаем с переменной, которой присваиваем число.
+Эту переменную мы называем переменной-счётчиком
 
 ---
 
-Then, we use a comparison in the condition to compare the `counter` variable to a number.
+Затем мы используем сравнение в условии, чтобы сравнить переменную `counter` с числом.
 
 ---
 
-Inside the block of code, in order to stop the `while` loop, we increment the `counter` variable.
+Внутри блока кода, чтобы остановить цикл `while`, мы увеличиваем переменную `counter`.
 
 ---
 
-The order you write code affects the output.
+Порядок написания кода влияет на вывод.
 
 ---
 
-In JavaScript we also have the **do-while** variation of the `while` loop.
-It performs a single pass through the loop block first, _before_ considering the loop's condition.
-It then continues to repeat the loop until the condition is `false`.
+В JavaScript также есть вариация **do-while** цикла `while`.
+Она сначала выполняет один проход по блоку цикла, _до_ проверки условия цикла.
+Затем продолжает повторять цикл, пока условие не станет `false`.

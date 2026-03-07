@@ -1,6 +1,6 @@
-"__Hello, World!__" is the traditional first program for beginning programming in a new language.
-We use the `print()` function to output data to the standard output device (screen).
-To print `Hello, World!` on the screen with Dart we can write
+"__Привет, мир!__" — это традиционная первая программа для начинающих программировать на новом языке.
+Мы используем функцию `print()` для вывода данных на стандартное устройство вывода (экран).
+Чтобы вывести `Hello, World!` на экран с помощью Dart, мы можем написать
 ```dart
 print("Hello, World!")
 ```

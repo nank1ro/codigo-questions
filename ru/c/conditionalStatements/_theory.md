@@ -1,6 +1,6 @@
-Decision making is required when we want to execute code only if a certain condition is satisfied.
-Let's assume we want to play outside only if the weather is nice.
-In programming, we can save a boolean variable `nice_weather` and perform the action of playing outside `if` this variable is `true`, like:
+Принятие решений необходимо, когда мы хотим выполнить код только при выполнении определённого условия.
+Предположим, мы хотим играть на улице только если погода хорошая.
+В программировании мы можем сохранить булеву переменную `nice_weather` и выполнить действие "играть на улице" `if` (если) эта переменная равна `true`, например:
 ```c
 bool nice_weather = true;
 if (nice_weather) {
@@ -10,21 +10,21 @@ if (nice_weather) {
 
 ---
 
-Let's continue with the previous example.
+Продолжим с предыдущим примером.
 ```c
 bool nice_weather = true;
 if (nice_weather) {
     // play outside
 }
 ```
-We've seen that the `if` statement executes the block of code only if the condition is `true`.
-Another important thing to consider is represented by the **curly brackets** `{}` which indicate a code block.
+Мы увидели, что оператор `if` выполняет блок кода только если условие равно `true`.
+Ещё один важный момент — это **фигурные скобки** `{}`, которые обозначают блок кода.
 
 ---
 
-We just saw how to execute a block of code if a condition occurs, now let's see how to execute another block of code if the first condition fails.
-We go to play outside if the weather is nice; otherwise, we stay home.
-In C we can use the `else` statement, like:
+Мы только что увидели, как выполнить блок кода при наступлении определённого условия, теперь давайте посмотрим, как выполнить другой блок кода, если первое условие не выполняется.
+Мы идём играть на улицу, если погода хорошая; в противном случае мы остаёмся дома.
+В C мы можем использовать оператор `else`, например:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
@@ -36,7 +36,7 @@ if (nice_weather) {
 
 ---
 
-Let's assume we have another condition to check, like in this example:
+Предположим, у нас есть ещё одно условие для проверки, как в этом примере:
 ```c
 int num = 3;
 if (num == 2) {
@@ -47,13 +47,13 @@ if (num == 2) {
     printf("do something else\n");
 }
 ```
-and the output of this code is `the number is 3`.
-First of all, let's check if the number is equal to 2, this is false.
-So let's move on to the second statement and check if `num` is equal to 3, being true we execute the following block of code by printing `the number is 3`
+и вывод этого кода — `the number is 3`.
+Сначала проверяем, равно ли число 2 — это ложь.
+Поэтому переходим ко второму оператору и проверяем, равно ли `num` 3; так как это истина, мы выполняем следующий блок кода, выводя `the number is 3`
 
 ---
 
-We can add as many `else if` statements as we want, there are no limits
+Мы можем добавить сколько угодно операторов `else if`, ограничений нет
 ```c
 int num = 4;
 if (num == 2) {
@@ -68,11 +68,11 @@ if (num == 2) {
     printf("the number is 6");
 }
 ```
-and the output of this code is `the number is 4`.
+и вывод этого кода — `the number is 4`.
 
 ---
 
-We can also nest a conditional statement (`if`, `else if` or `else`) inside another conditional statement, to create a more complex structure.
+Мы также можем вложить условный оператор (`if`, `else if` или `else`) внутрь другого условного оператора, чтобы создать более сложную структуру.
 ```c
 int num = 4;
 if (num < 3) {
@@ -87,4 +87,4 @@ if (num < 3) {
   }
 }
 ```
-and the output of this code is `the number is 4`.
+и вывод этого кода — `the number is 4`.

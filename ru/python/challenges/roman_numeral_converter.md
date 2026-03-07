@@ -2,24 +2,24 @@
 language: python
 exerciseType: 1
 difficulty: 3
-title: Roman Numeral Converter
+title: Конвертер римских цифр
 ---
 
 # --description--
 
-Create a function taking a positive integer as its parameter and returning a string containing the Roman numeral representation of that integer. Modern Roman numerals are written by expressing each digit separately, starting with the left most digit and skipping any digit with a value of zero.
+Создайте функцию, которая принимает положительное целое число в качестве параметра и возвращает строку, содержащую представление этого числа римскими цифрами. Современные римские цифры записываются путём выражения каждой цифры отдельно, начиная с самой левой цифры и пропуская любую цифру со значением ноль.
 
 # --instructions--
 
-Examples:
+Примеры:
 ```
 convert_to_roman(2) ➞ "II"
 convert_to_roman(12) ➞ "XII"
 convert_to_roman(16) ➞ "XVI"
 ```
 
-- All roman numerals should be returned as uppercase.
-- The largest number that can be represented in this notation is 3,999.
+- Все римские цифры должны возвращаться в верхнем регистре.
+- Наибольшее число, которое можно представить в этой нотации — 3999.
 
 # --seed--
 
@@ -38,77 +38,77 @@ class CodigoTests(unittest.TestCase):
 
 # --asserts--
 
-The number `2` must equal `II` 
+Число `2` должно быть равно `II`
 
 ```python
     def test1(self):
         self.assertEqual(convert_to_roman(2), "II", "--err-t1--")
 ```
 
-The number `12` must equal `XII`
+Число `12` должно быть равно `XII`
 
 ```python
     def test2(self):
         self.assertEqual(convert_to_roman(12), "XII", "--err-t2--")
 ```
 
-The number `16` must equal `XVI`
+Число `16` должно быть равно `XVI`
 
 ```python
     def test3(self):
         self.assertEqual(convert_to_roman(16), "XVI", "--err-t3--")
 ```
 
-The number `44` must equal `XLIV`
+Число `44` должно быть равно `XLIV`
 
 ```python
     def test4(self):
         self.assertEqual(convert_to_roman(44), "XLIV", "--err-t4--")
 ```
 
-The number `68` must equal `LXVIII`
+Число `68` должно быть равно `LXVIII`
 
 ```python
     def test5(self):
         self.assertEqual(convert_to_roman(68), "LXVIII", "--err-t5--")
 ```
 
-The number `400` must equal `CD`
+Число `400` должно быть равно `CD`
 
 ```python
     def test6(self):
         self.assertEqual(convert_to_roman(400), "CD", "--err-t6--")
 ```
 
-The number `798` must equal `DCCXCVIII`
+Число `798` должно быть равно `DCCXCVIII`
 
 ```python
     def test7(self):
         self.assertEqual(convert_to_roman(798), "DCCXCVIII", "--err-t7--")
 ```
 
-The number `1000` must equal `M`
+Число `1000` должно быть равно `M`
 
 ```python
     def test8(self):
         self.assertEqual(convert_to_roman(1000), "M", "--err-t8--")
 ```
 
-The number `3999` must equal `MMMCMXCIX`
+Число `3999` должно быть равно `MMMCMXCIX`
 
 ```python
     def test9(self):
         self.assertEqual(convert_to_roman(3999), "MMMCMXCIX", "--err-t9--")
 ```
 
-The number `649` must equal `DCXLIX`
+Число `649` должно быть равно `DCXLIX`
 
 ```python
     def test10(self):
         self.assertEqual(convert_to_roman(649), "DCXLIX", "--err-t10--")
 ```
 
-The number `1666` must equal `MDCLXVI`
+Число `1666` должно быть равно `MDCLXVI`
 
 ```python
     def test11(self):

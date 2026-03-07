@@ -2,18 +2,18 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Arithmetic mean
+title: Среднее арифметическое
 ---
 
 # --description--
 
-Write a function called `mean` to find the _arithmetic average_ of a numeric vector.
+Напишите функцию `mean` для нахождения _среднего арифметического_ числового вектора.
 
 # --instructions--
 
-Write a function that returns the mean of a numeric vector.
+Напишите функцию, которая возвращает среднее значение числового вектора.
 
-Example of function call:
+Пример вызова функции:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
@@ -50,19 +50,19 @@ fun main() {
 
 # --asserts--
 
-The mean of `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` must be equal to 4.0
+Среднее значение `[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]` должно быть равно 4.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)) == 4.0)
 ```
 
-The mean of `[4.0, 5.0, 6.0]` must be equal to 5.0
+Среднее значение `[4.0, 5.0, 6.0]` должно быть равно 5.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(4.0, 5.0, 6.0)) == 5.0)
 ```
 
-The mean of `[12.0, 34.0, 56.0, 78.0]` must be equal to 45.0
+Среднее значение `[12.0, 34.0, 56.0, 78.0]` должно быть равно 45.0
 
 ```kotlin
     tryCatch(mean(doubleArrayOf(12.0, 34.0, 56.0, 78.0)) == 45.0)

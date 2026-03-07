@@ -2,28 +2,28 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Raindrops
+title: Капли дождя
 ---
 
 # --description--
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors.
-A factor is a number that evenly divides into another number, leaving no remainder.
-The simplest way to test if a number is a factor of another is to use the modulo operation.
-The rules of raindrops are the followings:
+Ваша задача — преобразовать число в строку, содержащую звуки капель дождя, соответствующие определённым возможным делителям.
+Делитель — это число, которое делит другое число нацело, без остатка.
+Самый простой способ проверить, является ли число делителем другого, — использовать операцию взятия остатка от деления.
+Правила капель дождя следующие:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- does not have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- если делится на 3, добавить 'Pling' к результату.
+- если делится на 5, добавить 'Plang' к результату.
+- если делится на 7, добавить 'Plong' к результату.
+- если не делится ни на 3, ни на 5, ни на 7, результатом должны быть цифры числа.
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+Напишите функцию, которая возвращает правильную строку, примеры:
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be `"Plong"`.
-- 30 has both 3 and 5 as factors, but not 7, so the result would be `"PlingPlang"`.
-- 34 is not factored by 3, 5, or 7, so the result would be `"34"`.
+- 28 делится на 7, но не на 3 или 5, поэтому результат будет `"Plong"`.
+- 30 делится и на 3, и на 5, но не на 7, поэтому результат будет `"PlingPlang"`.
+- 34 не делится ни на 3, ни на 5, ни на 7, поэтому результат будет `"34"`.
 
 # --before-seed--
 
@@ -53,109 +53,109 @@ function convert(number) {
 
 # --asserts--
 
-The sound for 1 is "1"
+Звук для 1 — "1"
 
 ```javascript
 tryCatch(convert(1) === "1");
 ```
 
-The sound for 3 is "Pling"
+Звук для 3 — "Pling"
 
 ```javascript
 tryCatch(convert(3) === "Pling");
 ```
 
-The sound for 5 is "Plang"
+Звук для 5 — "Plang"
 
 ```javascript
 tryCatch(convert(5) === "Plang");
 ```
 
-The sound for 7 is "Plong"
+Звук для 7 — "Plong"
 
 ```javascript
 tryCatch(convert(7) === "Plong");
 ```
 
-The sound for 6 is "Pling"
+Звук для 6 — "Pling"
 
 ```javascript
 tryCatch(convert(6) === "Pling");
 ```
 
-The sound for 8 is "8"
+Звук для 8 — "8"
 
 ```javascript
 tryCatch(convert(8) === "8");
 ```
 
-The sound for 9 is "Pling"
+Звук для 9 — "Pling"
 
 ```javascript
 tryCatch(convert(9) === "Pling");
 ```
 
-The sound for 10 is "Plang"
+Звук для 10 — "Plang"
 
 ```javascript
 tryCatch(convert(10) === "Plang");
 ```
 
-The sound for 14 is "Plong"
+Звук для 14 — "Plong"
 
 ```javascript
 tryCatch(convert(14) === "Plong");
 ```
 
-The sound for 15 is "PlingPlang"
+Звук для 15 — "PlingPlang"
 
 ```javascript
 tryCatch(convert(15) === "PlingPlang");
 ```
 
-The sound for 21 is "PlingPlong"
+Звук для 21 — "PlingPlong"
 
 ```javascript
 tryCatch(convert(21) === "PlingPlong");
 ```
 
-The sound for 25 is "Plang"
+Звук для 25 — "Plang"
 
 ```javascript
 tryCatch(convert(25) === "Plang");
 ```
 
-The sound for 27 is "Pling"
+Звук для 27 — "Pling"
 
 ```javascript
 tryCatch(convert(27) === "Pling");
 ```
 
-The sound for 35 is "PlangPlong"
+Звук для 35 — "PlangPlong"
 
 ```javascript
 tryCatch(convert(35) === "PlangPlong");
 ```
 
-The sound for 49 is "Plong"
+Звук для 49 — "Plong"
 
 ```javascript
 tryCatch(convert(49) === "Plong");
 ```
 
-The sound for 52 is "52"
+Звук для 52 — "52"
 
 ```javascript
 tryCatch(convert(52) === "52");
 ```
 
-The sound for 105 is "PlingPlangPlong"
+Звук для 105 — "PlingPlangPlong"
 
 ```javascript
 tryCatch(convert(105) === "PlingPlangPlong");
 ```
 
-The sound for 3125 is "Plang"
+Звук для 3125 — "Plang"
 
 ```javascript
 tryCatch(convert(3125) === "Plang");
