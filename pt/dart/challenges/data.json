@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Ano Bissexto",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Múltiplos de 3 ou 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Números de Fibonacci Pares"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Maior Fator Primo"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Maior Produto Palíndromo"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Menor Múltiplo"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Diferença Soma-Quadrado"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "O 10001º Primo"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Maior Produto numa Série"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Tripla Pitagórica Especial"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Soma dos Números Primos"
   }
 }
