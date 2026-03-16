@@ -58,5 +58,10 @@
     "order": 11,
     "title": "while 반복문",
     "description": "while 반복문 사용법 배우기"
+  },
+  "classes": {
+    "order": 15,
+    "title": "클래스",
+    "description": "클래스 만들기와 사용법 배우기"
   }
 }

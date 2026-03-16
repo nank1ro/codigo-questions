@@ -58,5 +58,10 @@
     "order": 11,
     "title": "While लूप",
     "description": "While लूप का उपयोग करना सीखें"
+  },
+  "classes": {
+    "order": 15,
+    "title": "क्लास",
+    "description": "क्लास बनाना और उपयोग करना सीखें"
   }
 }

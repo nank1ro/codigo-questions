@@ -58,5 +58,10 @@
     "order": 11,
     "title": "While loops",
     "description": "Learn how to use while loops"
+  },
+  "classes": {
+    "order": 15,
+    "title": "Classes",
+    "description": "Learn how to create and use classes"
   }
 }
