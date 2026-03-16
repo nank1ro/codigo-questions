@@ -63,5 +63,10 @@
     "order": 13,
     "title": "リスト",
     "description": "リストの使い方を学ぶ"
+  },
+  "functions": {
+    "order": 14,
+    "title": "関数",
+    "description": "関数の作成と使い方を学ぶ"
   }
 }

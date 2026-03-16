@@ -63,5 +63,10 @@
     "order": 13,
     "title": "리스트",
     "description": "리스트 사용법 배우기"
+  },
+  "functions": {
+    "order": 14,
+    "title": "함수",
+    "description": "함수 만들기와 사용법 배우기"
   }
 }

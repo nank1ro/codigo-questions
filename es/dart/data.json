@@ -63,5 +63,10 @@
     "order": 13,
     "title": "Listas",
     "description": "Aprende a usar listas"
+  },
+  "functions": {
+    "order": 14,
+    "title": "Funciones",
+    "description": "Aprende a crear y usar funciones"
   }
 }

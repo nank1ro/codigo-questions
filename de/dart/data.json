@@ -63,5 +63,10 @@
     "order": 13,
     "title": "Listen",
     "description": "Lerne, wie man Listen verwendet"
+  },
+  "functions": {
+    "order": 14,
+    "title": "Funktionen",
+    "description": "Lerne, wie man Funktionen erstellt und verwendet"
   }
 }
