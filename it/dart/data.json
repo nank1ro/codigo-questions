@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Operatori di confronto e logici",
     "description": "Impara ad utilizzare gli operatori di confronto e logici"
+  },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "Istruzioni condizionali",
+    "description": "Impara ad utilizzare le istruzioni condizionali"
   }
 }
