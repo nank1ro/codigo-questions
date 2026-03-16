@@ -23,5 +23,10 @@
     "order": 5,
     "title": "타입",
     "description": "변수에 할당할 수 있는 타입을 배웁니다"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "불리언",
+    "description": "불리언 값 사용법 배우기"
   }
 }

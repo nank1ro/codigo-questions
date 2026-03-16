@@ -23,5 +23,10 @@
     "order": 5,
     "title": "Types",
     "description": "Learn the types assignable to a variable"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "Booleans",
+    "description": "Learn how to use boolean values"
   }
 }

@@ -70,6 +70,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -95,7 +100,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -468,6 +473,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -493,7 +503,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -866,6 +876,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -891,7 +906,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -1264,6 +1279,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -1289,7 +1309,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -1662,6 +1682,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -1687,7 +1712,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -2060,6 +2085,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -2085,7 +2115,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -2458,6 +2488,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -2483,7 +2518,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -2856,6 +2891,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -2881,7 +2921,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -3254,6 +3294,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -3279,7 +3324,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -3652,6 +3697,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -3677,7 +3727,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -4050,6 +4100,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -4075,7 +4130,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",
@@ -4448,6 +4503,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "booleans",
+          "trainUntil": 5,
+          "totalExercises": 14
+        },
+        {
           "name": "comments",
           "trainUntil": 4,
           "totalExercises": 12
@@ -4473,7 +4533,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 91
+      "totalExercises": 105
     },
     {
       "name": "javascript",

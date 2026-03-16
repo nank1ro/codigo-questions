@@ -23,5 +23,10 @@
     "order": 5,
     "title": "型",
     "description": "変数に割り当て可能な型を学ぶ"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "ブーリアン",
+    "description": "ブーリアン値の使い方を学ぶ"
   }
 }

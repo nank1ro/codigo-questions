@@ -23,5 +23,10 @@
     "order": 5,
     "title": "Tipi",
     "description": "Impara i tipi assegnabili ad una variabile"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "Booleani",
+    "description": "Impara ad utilizzare i valori booleani"
   }
 }

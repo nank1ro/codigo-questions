@@ -23,5 +23,10 @@
     "order": 5,
     "title": "类型",
     "description": "学习可赋值给变量的类型"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "布尔值",
+    "description": "学习如何使用布尔值"
   }
 }
