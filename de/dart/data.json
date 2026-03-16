@@ -44,6 +44,11 @@
     "title": "Vergleichs- und logische Operatoren",
     "description": "Lerne, wie man Vergleichs- und logische Operatoren verwendet"
   },
+  "forLoops": {
+    "order": 12,
+    "title": "For-Schleifen",
+    "description": "Lerne, wie man For-Schleifen verwendet"
+  },
   "whileLoops": {
     "order": 11,
     "title": "While-Schleifen",

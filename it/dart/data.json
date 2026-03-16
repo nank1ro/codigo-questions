@@ -44,6 +44,11 @@
     "title": "Operatori di confronto e logici",
     "description": "Impara ad utilizzare gli operatori di confronto e logici"
   },
+  "forLoops": {
+    "order": 12,
+    "title": "Cicli for",
+    "description": "Impara ad utilizzare i cicli for"
+  },
   "whileLoops": {
     "order": 11,
     "title": "Cicli while",

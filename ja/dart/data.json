@@ -44,6 +44,11 @@
     "title": "比較演算子と論理演算子",
     "description": "比較演算子と論理演算子の使い方を学ぶ"
   },
+  "forLoops": {
+    "order": 12,
+    "title": "forループ",
+    "description": "forループの使い方を学ぶ"
+  },
   "whileLoops": {
     "order": 11,
     "title": "whileループ",

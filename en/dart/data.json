@@ -44,6 +44,11 @@
     "title": "Comparison and logical operators",
     "description": "Learn how to use comparison and logical operators"
   },
+  "forLoops": {
+    "order": 12,
+    "title": "For loops",
+    "description": "Learn how to use for loops"
+  },
   "whileLoops": {
     "order": 11,
     "title": "While loops",

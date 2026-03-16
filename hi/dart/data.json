@@ -44,6 +44,11 @@
     "title": "तुलना और तार्किक ऑपरेटर",
     "description": "तुलना और तार्किक ऑपरेटरों का उपयोग करना सीखें"
   },
+  "forLoops": {
+    "order": 12,
+    "title": "For लूप",
+    "description": "For लूप का उपयोग करना सीखें"
+  },
   "whileLoops": {
     "order": 11,
     "title": "While लूप",
