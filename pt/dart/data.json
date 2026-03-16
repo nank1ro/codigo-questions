@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Operadores de comparação e lógicos",
     "description": "Aprenda a usar os operadores de comparação e lógicos"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "Laços for",
+    "description": "Aprenda a usar laços for"
   }
 }
