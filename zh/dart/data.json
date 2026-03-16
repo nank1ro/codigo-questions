@@ -58,5 +58,10 @@
     "order": 11,
     "title": "while循环",
     "description": "学习如何使用while循环"
+  },
+  "lists": {
+    "order": 13,
+    "title": "列表",
+    "description": "学习如何使用列表"
   }
 }

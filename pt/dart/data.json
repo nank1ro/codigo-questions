@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Laços while",
     "description": "Aprenda a usar laços while"
+  },
+  "lists": {
+    "order": 13,
+    "title": "Listas",
+    "description": "Aprenda a usar listas"
   }
 }
