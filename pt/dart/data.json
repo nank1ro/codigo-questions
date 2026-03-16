@@ -48,5 +48,15 @@
     "order": 10,
     "title": "Instruções condicionais",
     "description": "Aprenda a usar instruções condicionais"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "Laços for",
+    "description": "Aprenda a usar laços for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Laços while",
+    "description": "Aprenda a usar laços while"
   }
 }

@@ -48,5 +48,15 @@
     "order": 10,
     "title": "조건문",
     "description": "조건문 사용법 배우기"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "for 반복문",
+    "description": "for 반복문 사용법 배우기"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "while 반복문",
+    "description": "while 반복문 사용법 배우기"
   }
 }

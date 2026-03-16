@@ -48,5 +48,15 @@
     "order": 10,
     "title": "सशर्त कथन",
     "description": "सशर्त कथनों का उपयोग करना सीखें"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "For लूप",
+    "description": "For लूप का उपयोग करना सीखें"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While लूप",
+    "description": "While लूप का उपयोग करना सीखें"
   }
 }

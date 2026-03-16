@@ -48,5 +48,15 @@
     "order": 10,
     "title": "条件文",
     "description": "条件文の使い方を学ぶ"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "forループ",
+    "description": "forループの使い方を学ぶ"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "whileループ",
+    "description": "whileループの使い方を学ぶ"
   }
 }

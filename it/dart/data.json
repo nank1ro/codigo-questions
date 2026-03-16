@@ -48,5 +48,15 @@
     "order": 10,
     "title": "Istruzioni condizionali",
     "description": "Impara ad utilizzare le istruzioni condizionali"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "Cicli for",
+    "description": "Impara ad utilizzare i cicli for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Cicli while",
+    "description": "Impara ad utilizzare i cicli while"
   }
 }

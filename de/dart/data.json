@@ -48,5 +48,15 @@
     "order": 10,
     "title": "Bedingte Anweisungen",
     "description": "Lerne, wie man bedingte Anweisungen verwendet"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "For-Schleifen",
+    "description": "Lerne, wie man For-Schleifen verwendet"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While-Schleifen",
+    "description": "Lerne, wie man While-Schleifen verwendet"
   }
 }

@@ -48,5 +48,15 @@
     "order": 10,
     "title": "Conditional statements",
     "description": "Learn how to use conditional statements"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "For loops",
+    "description": "Learn how to use for loops"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While loops",
+    "description": "Learn how to use while loops"
   }
 }
