@@ -38,5 +38,10 @@
     "order": 8,
     "title": "赋值运算符",
     "description": "学习如何使用赋值运算符"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "比较和逻辑运算符",
+    "description": "学习如何使用比较和逻辑运算符"
   }
 }

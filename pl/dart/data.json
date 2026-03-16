@@ -38,5 +38,10 @@
     "order": 8,
     "title": "Operatory przypisania",
     "description": "Naucz się używać operatorów przypisania"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "Operatory porównania i logiczne",
+    "description": "Naucz się używać operatorów porównania i logicznych"
   }
 }

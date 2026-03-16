@@ -90,6 +90,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -110,7 +115,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -503,6 +508,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -523,7 +533,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -916,6 +926,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -936,7 +951,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -1329,6 +1344,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -1349,7 +1369,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -1742,6 +1762,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -1762,7 +1787,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -2155,6 +2180,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -2175,7 +2205,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -2568,6 +2598,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -2588,7 +2623,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -2981,6 +3016,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -3001,7 +3041,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -3394,6 +3434,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -3414,7 +3459,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -3807,6 +3852,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -3827,7 +3877,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -4220,6 +4270,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -4240,7 +4295,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
@@ -4633,6 +4688,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comparisonLogicalOperators",
+          "trainUntil": 7,
+          "totalExercises": 22
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -4653,7 +4713,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 142
+      "totalExercises": 164
     },
     {
       "name": "javascript",
