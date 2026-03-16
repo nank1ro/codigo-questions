@@ -28,5 +28,10 @@
     "order": 6,
     "title": "Booleans",
     "description": "Learn how to use boolean values"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "Arithmetic operators",
+    "description": "Learn how to use arithmetic operators"
   }
 }

@@ -70,6 +70,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -100,7 +105,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -473,6 +478,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -503,7 +513,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -876,6 +886,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -906,7 +921,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -1279,6 +1294,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -1309,7 +1329,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -1682,6 +1702,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -1712,7 +1737,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -2085,6 +2110,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2115,7 +2145,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -2488,6 +2518,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2518,7 +2553,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -2891,6 +2926,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2921,7 +2961,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -3294,6 +3334,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -3324,7 +3369,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -3697,6 +3742,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -3727,7 +3777,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -4100,6 +4150,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -4130,7 +4185,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
@@ -4503,6 +4558,11 @@
       "name": "dart",
       "arguments": [
         {
+          "name": "arithmeticOperators",
+          "trainUntil": 6,
+          "totalExercises": 20
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -4533,7 +4593,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 105
+      "totalExercises": 125
     },
     {
       "name": "javascript",
