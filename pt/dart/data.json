@@ -68,5 +68,10 @@
     "order": 14,
     "title": "Funções",
     "description": "Aprenda a criar e usar funções"
+  },
+  "classes": {
+    "order": 15,
+    "title": "Classes",
+    "description": "Aprenda a criar e usar classes"
   }
 }
