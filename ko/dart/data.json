@@ -43,5 +43,10 @@
     "order": 9,
     "title": "비교 및 논리 연산자",
     "description": "비교 및 논리 연산자 사용법 배우기"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "while 반복문",
+    "description": "while 반복문 사용법 배우기"
   }
 }

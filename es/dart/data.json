@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Operadores de comparación y lógicos",
     "description": "Aprende a usar los operadores de comparación y lógicos"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Bucles while",
+    "description": "Aprende a usar los bucles while"
   }
 }

@@ -43,5 +43,10 @@
     "order": 9,
     "title": "तुलना और तार्किक ऑपरेटर",
     "description": "तुलना और तार्किक ऑपरेटरों का उपयोग करना सीखें"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While लूप",
+    "description": "While लूप का उपयोग करना सीखें"
   }
 }

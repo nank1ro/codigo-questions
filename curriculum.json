@@ -113,9 +113,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -531,9 +536,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -949,9 +959,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -1367,9 +1382,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -1785,9 +1805,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -2203,9 +2228,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -2621,9 +2651,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -3039,9 +3074,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -3457,9 +3497,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -3875,9 +3920,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -4293,9 +4343,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",
@@ -4711,9 +4766,14 @@
           "name": "variables",
           "trainUntil": 11,
           "totalExercises": 20
+        },
+        {
+          "name": "whileLoops",
+          "trainUntil": 5,
+          "totalExercises": 22
         }
       ],
-      "totalExercises": 164
+      "totalExercises": 186
     },
     {
       "name": "javascript",

@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Vergleichs- und logische Operatoren",
     "description": "Lerne, wie man Vergleichs- und logische Operatoren verwendet"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While-Schleifen",
+    "description": "Lerne, wie man While-Schleifen verwendet"
   }
 }

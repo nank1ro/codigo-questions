@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Comparison and logical operators",
     "description": "Learn how to use comparison and logical operators"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While loops",
+    "description": "Learn how to use while loops"
   }
 }
