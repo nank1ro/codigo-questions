@@ -43,5 +43,10 @@
     "order": 9,
     "title": "Operatory porównania i logiczne",
     "description": "Naucz się używać operatorów porównania i logicznych"
+  },
+  "forLoops": {
+    "order": 12,
+    "title": "Pętle for",
+    "description": "Naucz się używać pętli for"
   }
 }
