@@ -48,5 +48,10 @@
     "order": 12,
     "title": "For लूप",
     "description": "For लूप का उपयोग करना सीखें"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "While लूप",
+    "description": "While लूप का उपयोग करना सीखें"
   }
 }

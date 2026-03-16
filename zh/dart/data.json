@@ -48,5 +48,10 @@
     "order": 12,
     "title": "for循环",
     "description": "学习如何使用for循环"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "while循环",
+    "description": "学习如何使用while循环"
   }
 }

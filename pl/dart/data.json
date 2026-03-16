@@ -48,5 +48,10 @@
     "order": 12,
     "title": "Pętle for",
     "description": "Naucz się używać pętli for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Pętle while",
+    "description": "Naucz się używać pętli while"
   }
 }

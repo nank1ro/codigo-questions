@@ -48,5 +48,10 @@
     "order": 12,
     "title": "forループ",
     "description": "forループの使い方を学ぶ"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "whileループ",
+    "description": "whileループの使い方を学ぶ"
   }
 }

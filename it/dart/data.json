@@ -48,5 +48,10 @@
     "order": 12,
     "title": "Cicli for",
     "description": "Impara ad utilizzare i cicli for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Cicli while",
+    "description": "Impara ad utilizzare i cicli while"
   }
 }

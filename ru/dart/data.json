@@ -48,5 +48,10 @@
     "order": 12,
     "title": "Циклы for",
     "description": "Научитесь использовать циклы for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Циклы while",
+    "description": "Научитесь использовать циклы while"
   }
 }

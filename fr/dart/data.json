@@ -48,5 +48,10 @@
     "order": 12,
     "title": "Boucles for",
     "description": "Apprenez à utiliser les boucles for"
+  },
+  "whileLoops": {
+    "order": 11,
+    "title": "Boucles while",
+    "description": "Apprenez à utiliser les boucles while"
   }
 }
