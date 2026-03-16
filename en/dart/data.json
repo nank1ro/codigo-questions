@@ -44,6 +44,11 @@
     "title": "Comparison and logical operators",
     "description": "Learn how to use comparison and logical operators"
   },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "Conditional statements",
+    "description": "Learn how to use conditional statements"
+  },
   "forLoops": {
     "order": 12,
     "title": "For loops",

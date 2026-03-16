@@ -44,6 +44,11 @@
     "title": "Operatory porównania i logiczne",
     "description": "Naucz się używać operatorów porównania i logicznych"
   },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "Instrukcje warunkowe",
+    "description": "Naucz się używać instrukcji warunkowych"
+  },
   "forLoops": {
     "order": 12,
     "title": "Pętle for",

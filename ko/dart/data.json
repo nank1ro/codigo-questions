@@ -44,6 +44,11 @@
     "title": "비교 및 논리 연산자",
     "description": "비교 및 논리 연산자 사용법 배우기"
   },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "조건문",
+    "description": "조건문 사용법 배우기"
+  },
   "forLoops": {
     "order": 12,
     "title": "for 반복문",

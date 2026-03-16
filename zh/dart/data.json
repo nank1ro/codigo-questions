@@ -44,6 +44,11 @@
     "title": "比较和逻辑运算符",
     "description": "学习如何使用比较和逻辑运算符"
   },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "条件语句",
+    "description": "学习如何使用条件语句"
+  },
   "forLoops": {
     "order": 12,
     "title": "for循环",

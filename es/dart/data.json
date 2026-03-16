@@ -44,6 +44,11 @@
     "title": "Operadores de comparación y lógicos",
     "description": "Aprende a usar los operadores de comparación y lógicos"
   },
+  "conditionalStatements": {
+    "order": 10,
+    "title": "Sentencias condicionales",
+    "description": "Aprende a usar las sentencias condicionales"
+  },
   "forLoops": {
     "order": 12,
     "title": "Bucles for",
