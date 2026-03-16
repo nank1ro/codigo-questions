@@ -23,5 +23,10 @@
     "order": 5,
     "title": "Typen",
     "description": "Lerne die Typen, die einer Variable zugewiesen werden können"
+  },
+  "booleans": {
+    "order": 6,
+    "title": "Booleans",
+    "description": "Lerne, wie man boolesche Werte verwendet"
   }
 }
