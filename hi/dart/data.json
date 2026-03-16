@@ -58,5 +58,10 @@
     "order": 11,
     "title": "While लूप",
     "description": "While लूप का उपयोग करना सीखें"
+  },
+  "functions": {
+    "order": 14,
+    "title": "फंक्शन",
+    "description": "फंक्शन बनाना और उपयोग करना सीखें"
   }
 }

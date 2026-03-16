@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Циклы while",
     "description": "Научитесь использовать циклы while"
+  },
+  "functions": {
+    "order": 14,
+    "title": "Функции",
+    "description": "Научитесь создавать и использовать функции"
   }
 }
