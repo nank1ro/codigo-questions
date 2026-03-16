@@ -10,7 +10,7 @@ Das Ergebnis eines Vergleichs ist immer ein `bool`-Wert.
 
 ---
 
-The **not equal operator** `!=` returns `true` when two values are **different**, and `false` when they are the same.
+Der **Ungleichheitsoperator** `!=` gibt `true` zurück, wenn zwei Werte **unterschiedlich** sind, und `false`, wenn sie gleich sind.
 
 ```dart
 int x = 3;
@@ -18,11 +18,11 @@ int y = 7;
 bool result = x != y; // true
 ```
 
-It is the opposite of `==`.
+Er ist das Gegenteil von `==`.
 
 ---
 
-The **greater than operator** `>` returns `true` when the left value is strictly larger than the right value.
+Der **Größer-als-Operator** `>` gibt `true` zurück, wenn der linke Wert strikt größer als der rechte Wert ist.
 
 ```dart
 int a = 8;
@@ -30,11 +30,11 @@ int b = 3;
 bool result = a > b; // true
 ```
 
-If the left value is equal to or smaller than the right, it returns `false`.
+Wenn der linke Wert gleich oder kleiner als der rechte ist, gibt er `false` zurück.
 
 ---
 
-The **less than operator** `<` returns `true` when the left value is strictly smaller than the right value.
+Der **Kleiner-als-Operator** `<` gibt `true` zurück, wenn der linke Wert strikt kleiner als der rechte Wert ist.
 
 ```dart
 int a = 2;
@@ -42,7 +42,7 @@ int b = 9;
 bool result = a < b; // true
 ```
 
-If the left value is equal to or larger than the right, it returns `false`.
+Wenn der linke Wert gleich oder größer als der rechte ist, gibt er `false` zurück.
 
 ---
 
