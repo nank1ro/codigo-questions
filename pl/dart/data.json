@@ -33,5 +33,10 @@
     "order": 7,
     "title": "Operatory arytmetyczne",
     "description": "Naucz się używać operatorów arytmetycznych"
+  },
+  "assignmentOperators": {
+    "order": 8,
+    "title": "Operatory przypisania",
+    "description": "Naucz się używać operatorów przypisania"
   }
 }

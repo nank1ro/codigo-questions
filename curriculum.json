@@ -75,6 +75,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -105,7 +110,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -483,6 +488,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -513,7 +523,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -891,6 +901,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -921,7 +936,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -1299,6 +1314,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -1329,7 +1349,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -1707,6 +1727,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 4,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -1737,7 +1762,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -2115,6 +2140,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2145,7 +2175,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -2523,6 +2553,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 4,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2553,7 +2588,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -2931,6 +2966,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 4,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -2961,7 +3001,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -3339,6 +3379,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -3369,7 +3414,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -3747,6 +3792,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 4,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -3777,7 +3827,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -4155,6 +4205,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -4185,7 +4240,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",
@@ -4563,6 +4618,11 @@
           "totalExercises": 20
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 14
@@ -4593,7 +4653,7 @@
           "totalExercises": 20
         }
       ],
-      "totalExercises": 125
+      "totalExercises": 142
     },
     {
       "name": "javascript",

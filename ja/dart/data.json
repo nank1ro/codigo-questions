@@ -2,7 +2,7 @@
   "comments": {
     "order": 1,
     "title": "コメント",
-    "description": "コードにコメントを書く方法を学ぶ"
+    "description": "コードにコメントを付ける方法を学ぶ"
   },
   "output": {
     "order": 2,
@@ -22,16 +22,21 @@
   "types": {
     "order": 5,
     "title": "型",
-    "description": "変数に割り当て可能な型を学ぶ"
+    "description": "変数に割り当てることができる型を学ぶ"
   },
   "booleans": {
     "order": 6,
-    "title": "ブーリアン",
-    "description": "ブーリアン値の使い方を学ぶ"
+    "title": "ブール値",
+    "description": "ブール値の使い方を学ぶ"
   },
   "arithmeticOperators": {
     "order": 7,
     "title": "算術演算子",
     "description": "算術演算子の使い方を学ぶ"
+  },
+  "assignmentOperators": {
+    "order": 8,
+    "title": "代入演算子",
+    "description": "代入演算子の使い方を学ぶ"
   }
 }
