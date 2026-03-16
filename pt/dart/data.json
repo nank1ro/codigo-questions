@@ -2,22 +2,22 @@
   "comments": {
     "order": 1,
     "title": "Comentários",
-    "description": "Aprenda como comentar o código"
+    "description": "Aprenda a comentar o código"
   },
   "output": {
     "order": 2,
     "title": "Saída",
-    "description": "Aprenda como exibir um valor"
+    "description": "Aprenda a exibir um valor"
   },
   "stringInterpolation": {
     "order": 3,
     "title": "Interpolação de strings",
-    "description": "Aprenda como interpolar strings com diferentes tipos de dados"
+    "description": "Aprenda a interpolar strings com diferentes tipos de dados"
   },
   "variables": {
     "order": 4,
     "title": "Variáveis",
-    "description": "Aprenda como armazenar valores em uma variável"
+    "description": "Aprenda a armazenar valores em uma variável"
   },
   "types": {
     "order": 5,
@@ -32,6 +32,11 @@
   "arithmeticOperators": {
     "order": 7,
     "title": "Operadores aritméticos",
-    "description": "Aprenda a usar os operadores aritméticos"
+    "description": "Aprenda a usar operadores aritméticos"
+  },
+  "assignmentOperators": {
+    "order": 8,
+    "title": "Operadores de atribuição",
+    "description": "Aprenda a usar os operadores de atribuição"
   }
 }

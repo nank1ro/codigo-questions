@@ -33,5 +33,10 @@
     "order": 7,
     "title": "Arithmetische Operatoren",
     "description": "Lerne, wie man arithmetische Operatoren verwendet"
+  },
+  "assignmentOperators": {
+    "order": 8,
+    "title": "Zuweisungsoperatoren",
+    "description": "Lerne, wie man Zuweisungsoperatoren verwendet"
   }
 }

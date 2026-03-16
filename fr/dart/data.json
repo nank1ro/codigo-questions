@@ -33,5 +33,10 @@
     "order": 7,
     "title": "Opérateurs arithmétiques",
     "description": "Apprenez à utiliser les opérateurs arithmétiques"
+  },
+  "assignmentOperators": {
+    "order": 8,
+    "title": "Opérateurs d'affectation",
+    "description": "Apprenez à utiliser les opérateurs d'affectation"
   }
 }
