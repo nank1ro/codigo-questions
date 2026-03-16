@@ -38,5 +38,10 @@
     "order": 8,
     "title": "代入演算子",
     "description": "代入演算子の使い方を学ぶ"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "比較演算子と論理演算子",
+    "description": "比較演算子と論理演算子の使い方を学ぶ"
   }
 }

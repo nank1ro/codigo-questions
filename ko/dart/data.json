@@ -38,5 +38,10 @@
     "order": 8,
     "title": "대입 연산자",
     "description": "대입 연산자 사용법 배우기"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "비교 및 논리 연산자",
+    "description": "비교 및 논리 연산자 사용법 배우기"
   }
 }

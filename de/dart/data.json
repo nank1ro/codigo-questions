@@ -38,5 +38,10 @@
     "order": 8,
     "title": "Zuweisungsoperatoren",
     "description": "Lerne, wie man Zuweisungsoperatoren verwendet"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "Vergleichs- und logische Operatoren",
+    "description": "Lerne, wie man Vergleichs- und logische Operatoren verwendet"
   }
 }

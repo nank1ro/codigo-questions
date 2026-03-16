@@ -38,5 +38,10 @@
     "order": 8,
     "title": "Operatori di assegnazione",
     "description": "Impara ad utilizzare gli operatori di assegnazione"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "Operatori di confronto e logici",
+    "description": "Impara ad utilizzare gli operatori di confronto e logici"
   }
 }

@@ -38,5 +38,10 @@
     "order": 8,
     "title": "Assignment operators",
     "description": "Learn how to use assignment operators"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "Comparison and logical operators",
+    "description": "Learn how to use comparison and logical operators"
   }
 }

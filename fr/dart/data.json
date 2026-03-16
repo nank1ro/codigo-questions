@@ -38,5 +38,10 @@
     "order": 8,
     "title": "Opérateurs d'affectation",
     "description": "Apprenez à utiliser les opérateurs d'affectation"
+  },
+  "comparisonLogicalOperators": {
+    "order": 9,
+    "title": "Opérateurs de comparaison et logiques",
+    "description": "Apprenez à utiliser les opérateurs de comparaison et logiques"
   }
 }
