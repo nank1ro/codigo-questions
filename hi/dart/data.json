@@ -28,5 +28,10 @@
     "order": 6,
     "title": "बूलियन",
     "description": "बूलियन मानों का उपयोग करना सीखें"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "अंकगणितीय ऑपरेटर",
+    "description": "अंकगणितीय ऑपरेटरों का उपयोग करना सीखें"
   }
 }

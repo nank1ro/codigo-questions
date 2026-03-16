@@ -28,5 +28,10 @@
     "order": 6,
     "title": "불리언",
     "description": "불리언 값 사용법 배우기"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "산술 연산자",
+    "description": "산술 연산자 사용법 배우기"
   }
 }

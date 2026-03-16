@@ -28,5 +28,10 @@
     "order": 6,
     "title": "ブーリアン",
     "description": "ブーリアン値の使い方を学ぶ"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "算術演算子",
+    "description": "算術演算子の使い方を学ぶ"
   }
 }

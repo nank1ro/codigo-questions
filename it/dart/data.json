@@ -28,5 +28,10 @@
     "order": 6,
     "title": "Booleani",
     "description": "Impara ad utilizzare i valori booleani"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "Operatori aritmetici",
+    "description": "Impara ad utilizzare gli operatori aritmetici"
   }
 }

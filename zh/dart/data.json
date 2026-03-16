@@ -28,5 +28,10 @@
     "order": 6,
     "title": "布尔值",
     "description": "学习如何使用布尔值"
+  },
+  "arithmeticOperators": {
+    "order": 7,
+    "title": "算术运算符",
+    "description": "学习如何使用算术运算符"
   }
 }
