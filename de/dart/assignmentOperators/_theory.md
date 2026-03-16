@@ -1,4 +1,4 @@
-The **assignment operator** `=` speichert einen Wert in einer Variable.
+Der **Zuweisungsoperator** `=` speichert einen Wert in einer Variable.
 
 ```dart
 int x = 5;
@@ -9,7 +9,7 @@ Nachdem eine Variable zugewiesen wurde, behält sie diesen Wert bis zur Neuzuwei
 
 ---
 
-The **addition assignment operator** `+=` addiert einen Wert zu einer Variable und speichert das Ergebnis zurück in dieser Variable.
+Der **Additionszuweisungsoperator** `+=` addiert einen Wert zu einer Variable und speichert das Ergebnis zurück in dieser Variable.
 
 ```dart
 int score = 10;
@@ -20,7 +20,7 @@ Dies ist eine Kurzform für `score = score + 5`.
 
 ---
 
-The **subtraction assignment operator** `-=` subtrahiert einen Wert von einer Variable und speichert das Ergebnis zurück in dieser Variable.
+Der **Subtraktionszuweisungsoperator** `-=` subtrahiert einen Wert von einer Variable und speichert das Ergebnis zurück in dieser Variable.
 
 ```dart
 int lives = 3;
@@ -31,7 +31,7 @@ Dies ist eine Kurzform für `lives = lives - 1`.
 
 ---
 
-The **multiplication assignment operator** `*=` multipliziert eine Variable mit einem Wert und speichert das Ergebnis zurück in dieser Variable.
+Der **Multiplikationszuweisungsoperator** `*=` multipliziert eine Variable mit einem Wert und speichert das Ergebnis zurück in dieser Variable.
 
 ```dart
 int side = 4;

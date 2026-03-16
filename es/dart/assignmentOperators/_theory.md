@@ -1,4 +1,4 @@
-The **assignment operator** `=` almacena un valor en una variable.
+El **operador de asignación** `=` almacena un valor en una variable.
 
 ```dart
 int x = 5;
@@ -9,7 +9,7 @@ Una vez asignada, la variable mantiene ese valor hasta que se reasigna.
 
 ---
 
-The **addition assignment operator** `+=` suma un valor a una variable y almacena el resultado de nuevo en esa variable.
+El **operador de asignación de adición** `+=` suma un valor a una variable y almacena el resultado de nuevo en esa variable.
 
 ```dart
 int score = 10;
@@ -20,7 +20,7 @@ Esta es una abreviatura para `score = score + 5`.
 
 ---
 
-The **subtraction assignment operator** `-=` resta un valor de una variable y almacena el resultado de nuevo en esa variable.
+El **operador de asignación de sustracción** `-=` resta un valor de una variable y almacena el resultado de nuevo en esa variable.
 
 ```dart
 int lives = 3;
@@ -31,7 +31,7 @@ Esta es una abreviatura para `lives = lives - 1`.
 
 ---
 
-The **multiplication assignment operator** `*=` multiplica una variable por un valor y almacena el resultado de nuevo en esa variable.
+El **operador de asignación de multiplicación** `*=` multiplica una variable por un valor y almacena el resultado de nuevo en esa variable.
 
 ```dart
 int side = 4;

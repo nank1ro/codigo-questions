@@ -1,4 +1,4 @@
-The **assignment operator** `=` stocke une valeur dans une variable.
+L'**opérateur d'affectation** `=` stocke une valeur dans une variable.
 
 ```dart
 int x = 5;
@@ -9,7 +9,7 @@ Une fois assignée, la variable conserve cette valeur jusqu'à ce qu'elle soit r
 
 ---
 
-The **addition assignment operator** `+=` ajoute une valeur à une variable et stocke le résultat dans cette variable.
+L'**opérateur d'affectation d'addition** `+=` ajoute une valeur à une variable et stocke le résultat dans cette variable.
 
 ```dart
 int score = 10;
@@ -20,7 +20,7 @@ C'est un raccourci pour `score = score + 5`.
 
 ---
 
-The **subtraction assignment operator** `-=` soustrait une valeur d'une variable et stocke le résultat dans cette variable.
+L'**opérateur d'affectation de soustraction** `-=` soustrait une valeur d'une variable et stocke le résultat dans cette variable.
 
 ```dart
 int lives = 3;
@@ -31,7 +31,7 @@ C'est un raccourci pour `lives = lives - 1`.
 
 ---
 
-The **multiplication assignment operator** `*=` multiplie une variable par une valeur et stocke le résultat dans cette variable.
+L'**opérateur d'affectation de multiplication** `*=` multiplie une variable par une valeur et stocke le résultat dans cette variable.
 
 ```dart
 int side = 4;
