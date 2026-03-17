@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "うるう年",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3または5の倍数"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "偶数フィボナッチ数"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "最大の素因数"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "最大の回文積"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "最小公倍数"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "平方和の差"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001番目の素数"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "数列中の最大積"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "特別なピタゴラスの三数組"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "素数の総和"
   }
 }
