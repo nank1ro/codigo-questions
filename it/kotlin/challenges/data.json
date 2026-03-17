@@ -1,62 +1,34 @@
 {
-  "addition": {
+  "10001st_prime": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "Il 10001° numero primo"
   },
-  "atm": {
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Prodotto palindromo più grande"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Fattore primo più grande"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Prodotto più grande in una serie"
+  },
+  "smallest_multiple": {
     "difficulty": 1,
-    "name": "ATM"
+    "name": "Minimo comune multiplo"
   },
-  "hello_world": {
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Terna pitagorica speciale"
+  },
+  "sum_square_difference": {
     "difficulty": 1,
-    "name": "Hello World!"
+    "name": "Differenza somma dei quadrati"
   },
-  "raindrops": {
-    "difficulty": 1,
-    "name": "Raindrops"
-  },
-  "sum_digits": {
-    "difficulty": 1,
-    "name": "Sum of digits"
-  },
-  "two_for_one": {
-    "difficulty": 1,
-    "name": "Two for one"
-  },
-  "100_doors": {
-    "difficulty": 1,
-    "name": "100 doors"
-  },
-  "ackermann_function": {
-    "difficulty": 1,
-    "name": "Funzione di Ackermann"
-  },
-  "multiples_of_3_or_5": {
-    "difficulty": 1,
-    "name": "Multipli di 3 o 5"
-  },
-  "even_fibonacci_numbers": {
-    "difficulty": 1,
-    "name": "I numeri pari di Fibonacci"
-  },
-  "arithmetic_mean": {
-    "difficulty": 1,
-    "name": "Media aritmetica",
-    "isPro": true
-  },
-  "fizz_buzz": {
-    "difficulty": 1,
-    "name": "FizzBuzz",
-    "isPro": true
-  },
-  "roman_numeral_converter": {
-    "difficulty": 3,
-    "name": "Convertitore numerico romano",
-    "isPro": true
-  },
-  "leap_year": {
-    "difficulty": 3,
-    "name": "Anno bisestile",
-    "isPro": true
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Somma dei numeri primi"
   }
 }

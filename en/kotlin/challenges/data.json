@@ -58,5 +58,37 @@
     "difficulty": 3,
     "name": "Leap year",
     "isPro": true
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001st prime"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Largest palindrome product"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Largest prime factor"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Largest product in a series"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Smallest multiple"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Special pythagorean triplet"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Sum square difference"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Summation of primes"
   }
 }
