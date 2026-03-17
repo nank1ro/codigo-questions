@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Mengen",
         "description": "Lerne, wie man einzigartige Elemente in einer ungeordneten Sammlung speichert"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "Zuweisungsoperatoren",
+        "description": "Lerne, wie man Zuweisungsoperatoren verwendet"
     }
 }

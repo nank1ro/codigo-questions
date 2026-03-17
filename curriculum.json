@@ -217,6 +217,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -267,7 +272,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -650,6 +655,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -700,7 +710,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -1083,6 +1093,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -1133,7 +1148,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -1516,6 +1531,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -1566,7 +1586,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -1949,6 +1969,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -1999,7 +2024,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -2382,6 +2407,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -2432,7 +2462,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -2815,6 +2845,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -2865,7 +2900,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -3248,6 +3283,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -3298,7 +3338,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -3681,6 +3721,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -3731,7 +3776,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -4114,6 +4159,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -4164,7 +4214,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -4547,6 +4597,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -4597,7 +4652,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
@@ -4980,6 +5035,11 @@
           "totalExercises": 17
         },
         {
+          "name": "assignmentOperators",
+          "trainUntil": 5,
+          "totalExercises": 17
+        },
+        {
           "name": "booleans",
           "trainUntil": 5,
           "totalExercises": 19
@@ -5030,7 +5090,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 304
     },
     {
       "name": "python",
