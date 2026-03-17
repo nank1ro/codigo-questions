@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "闰年",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3或5的倍数"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "斐波那契偶数"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "最大质因数"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "最大回文乘积"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "最小公倍数"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "平方和差"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "第10001个质数"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "数列中的最大乘积"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "特殊勾股数组"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "质数求和"
   }
 }
