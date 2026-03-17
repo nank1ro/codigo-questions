@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Schaltjahr",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Vielfache von 3 oder 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Gerade Fibonacci-Zahlen"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Größter Primfaktor"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Größtes Palindromprodukt"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Kleinstes gemeinsames Vielfaches"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Quadratsummendifferenz"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001. Primzahl"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Größtes Produkt in einer Reihe"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Spezielles pythagoräisches Tripel"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Summe der Primzahlen"
   }
 }
