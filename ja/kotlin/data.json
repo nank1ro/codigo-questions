@@ -63,5 +63,10 @@
     "order": 14,
     "title": "クラス",
     "description": "クラスの作成と使い方を学ぶ"
+  },
+  "functions": {
+    "order": 13,
+    "title": "関数",
+    "description": "関数の作成と使い方を学ぶ"
   }
 }
