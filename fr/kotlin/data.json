@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Ensembles",
         "description": "Apprenez comment stocker des éléments uniques dans une collection non ordonnée"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Fonctions",
+        "description": "Apprenez à créer et utiliser des fonctions"
     }
 }
