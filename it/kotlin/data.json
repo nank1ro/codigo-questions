@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Set",
         "description": "Imparare a memorizzare elementi unici in una collezione non ordinata"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "Operatori di assegnazione",
+        "description": "Impara ad utilizzare gli operatori di assegnazione"
     }
 }

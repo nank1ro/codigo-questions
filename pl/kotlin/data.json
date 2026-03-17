@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Zbiory",
         "description": "Naucz się przechowywać unikalne elementy w nieuporządkowanej kolekcji"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "Operatory przypisania",
+        "description": "Naucz się używać operatorów przypisania"
     }
 }
