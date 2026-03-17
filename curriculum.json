@@ -222,6 +222,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -267,7 +272,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -655,6 +660,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -700,7 +710,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -1088,6 +1098,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1133,7 +1148,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -1521,6 +1536,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1566,7 +1586,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -1954,6 +1974,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1999,7 +2024,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -2387,6 +2412,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2432,7 +2462,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -2820,6 +2850,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2865,7 +2900,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -3253,6 +3288,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3298,7 +3338,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -3686,6 +3726,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3731,7 +3776,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -4119,6 +4164,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4164,7 +4214,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -4552,6 +4602,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4597,7 +4652,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",
@@ -4985,6 +5040,11 @@
           "totalExercises": 19
         },
         {
+          "name": "classes",
+          "trainUntil": 5,
+          "totalExercises": 15
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5030,7 +5090,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 287
+      "totalExercises": 302
     },
     {
       "name": "python",

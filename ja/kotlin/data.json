@@ -53,5 +53,10 @@
         "order": 11,
         "title": "セット",
         "description": "順序なしコレクションに一意の要素を格納する方法を学ぶ"
+    },
+    "classes": {
+        "order": 14,
+        "title": "クラス",
+        "description": "クラスの作成と使い方を学ぶ"
     }
 }

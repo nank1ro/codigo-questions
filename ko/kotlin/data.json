@@ -53,5 +53,10 @@
         "order": 11,
         "title": "세트",
         "description": "순서가 없는 컬렉션에 고유한 요소를 저장하는 방법을 배웁니다"
+    },
+    "classes": {
+        "order": 14,
+        "title": "클래스",
+        "description": "클래스 만들기와 사용법 배우기"
     }
 }
