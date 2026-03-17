@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Zbiory",
         "description": "Naucz się przechowywać unikalne elementy w nieuporządkowanej kolekcji"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Klasy",
+        "description": "Naucz się tworzyć i używać klas"
     }
 }

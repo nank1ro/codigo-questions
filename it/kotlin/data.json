@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Set",
         "description": "Imparare a memorizzare elementi unici in una collezione non ordinata"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Classi",
+        "description": "Impara a creare e utilizzare le classi"
     }
 }

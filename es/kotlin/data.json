@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Conjuntos",
         "description": "Aprende cómo almacenar elementos únicos en una colección desordenada"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Clases",
+        "description": "Aprende a crear y usar clases"
     }
 }
