@@ -58,5 +58,10 @@
     "order": 11,
     "title": "While-Schleifen",
     "description": "Lerne, wie man While-Schleifen verwendet"
+  },
+  "classes": {
+    "order": 15,
+    "title": "Klassen",
+    "description": "Lerne, wie man Klassen erstellt und verwendet"
   }
 }
