@@ -58,5 +58,37 @@
     "difficulty": 3,
     "name": "うるう年",
     "isPro": true
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001番目の素数"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "最大の回文積"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "最大の素因数"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "数列の中の最大積"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "最小公倍数"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "特別なピタゴラス数の組"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "二乗和の差"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "素数の総和"
   }
 }

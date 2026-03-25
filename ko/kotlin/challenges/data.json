@@ -58,5 +58,37 @@
     "difficulty": 3,
     "name": "윤년",
     "isPro": true
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001번째 소수"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "가장 큰 회문 곱"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "가장 큰 소인수"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "수열에서 가장 큰 곱"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "가장 작은 공배수"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "특별한 피타고라스 수의 쌍"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "제곱합의 차이"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "소수의 합산"
   }
 }
