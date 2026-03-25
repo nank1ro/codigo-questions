@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Pętle while",
     "description": "Naucz się używać pętli while"
+  },
+  "lists": {
+    "order": 13,
+    "title": "Listy",
+    "description": "Naucz się używać list"
   }
 }
