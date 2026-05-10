@@ -695,25 +695,26 @@ void _runFillInEmptySpacesTests({
       var exerciseIsValid = false;
 
       for (final solution in solutions) {
-        exerciseIsValid = false;
         // Gets the difference between the solution and the seed
         final differences = getDifferences(solution);
         final expectedAnswers = <String>[];
         final availableAnswers = [...answers];
+        var allAnswersAvailable = true;
 
         for (final dif in differences) {
           // If there is a difference, it should be an answer, check if the
           // [availableAnswers] contains it and remove it.
           // In case the answer is not present, the exercise is not valid.
-          expectedAnswers.add(dif);
           if (availableAnswers.contains(dif)) {
+            expectedAnswers.add(dif);
             availableAnswers.remove(dif);
           } else {
-            exerciseIsValid = false;
+            allAnswersAvailable = false;
             break;
           }
         }
-        // Solution found, stop the iteration over the next solution.
+
+        if (!allAnswersAvailable) continue;
 
         exerciseIsValid =
             checkIfAnswersFillCorrectly(expectedAnswers, solution);
