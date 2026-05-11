@@ -244,30 +244,15 @@ Il numero `1666` deve essere uguale a `MDCLXVI`
 ```c
 char* convert_to_roman(int n) {
     char* result = (char*)malloc(100 * sizeof(char));
+    result[0] = '\0';
 
-    int values[13][2] = {
-        {1000, "M"},
-        {900, "CM"},
-        {500, "D"},
-        {400, "CD"},
-        {100, "C"},
-        {90, "XC"},
-        {50, "L"},
-        {40, "XL"},
-        {10, "X"},
-        {9, "IX"},
-        {5, "V"},
-        {4, "IV"},
-        {1, "I"}
-    };
+    int values[13] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    char* letters[13] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
     for (int i = 0; i < 13; i++) {
-        int value = values[i][0];
-        char* letter = values[i][1];
-
-        while (n >= value) {
-            strcat(result, letter);
-            n -= value;
+        while (n >= values[i]) {
+            strcat(result, letters[i]);
+            n -= values[i];
         }
     }
 

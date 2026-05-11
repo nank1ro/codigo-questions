@@ -8,6 +8,7 @@ import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 import 'package:trotter/trotter.dart';
 import 'package:validator/constants.dart';
+import 'package:validator/reserved_identifiers.dart';
 
 /// Returns all the available exercise languages.
 List<String> get locales =>
@@ -212,6 +213,11 @@ void _runCodeTests({
   });
   final languageName = model.frontMatterModel.language;
 
+  _validateNoReservedIdentifierCollisions(
+    exercisePath: exercisePath,
+    model: model,
+  );
+
   if (!requiredRunCodeExerciseCodes.containsKey(languageName)) return;
   final requiredCode = requiredRunCodeExerciseCodes[languageName];
 
@@ -233,7 +239,7 @@ void _runCodeTests({
           equals(true),
           reason: _fancyLogger(
             message: '''
-You must provide the 
+You must provide the
 ```
 $beforeSeed
 ````
@@ -531,6 +537,11 @@ The challenge solution must not be null or empty and must be only one''',
       ),
     );
   });
+
+  _validateNoReservedIdentifierCollisions(
+    exercisePath: exercisePath,
+    model: model,
+  );
 }
 
 void _runFillInEmptySpacesTests({
@@ -740,6 +751,11 @@ void _runFillInEmptySpacesTests({
       ),
     );
   });
+
+  _validateNoReservedIdentifierCollisions(
+    exercisePath: exercisePath,
+    model: model,
+  );
 }
 
 void _runChooseAnAnswerTests({
@@ -764,6 +780,11 @@ void _runChooseAnAnswerTests({
       ),
     );
   });
+
+  _validateNoReservedIdentifierCollisions(
+    exercisePath: exercisePath,
+    model: model,
+  );
 }
 
 void _runSortItemsTests({
@@ -825,6 +846,52 @@ void _runSortItemsTests({
       ),
     );
   });
+
+  _validateNoReservedIdentifierCollisions(
+    exercisePath: exercisePath,
+    model: model,
+  );
+}
+
+/// Validates that solutions and seed code do not declare identifiers
+/// that collide with the language's test framework reserved names.
+void _validateNoReservedIdentifierCollisions({
+  required String exercisePath,
+  required ExerciseModel model,
+}) {
+  final language = model.frontMatterModel.language;
+  final reserved = reservedIdentifiersByLanguage[language];
+  if (reserved == null || reserved.isEmpty) return;
+
+  final codeBlocks = <String>[
+    ...?model.solutions,
+    if (model.seed?.code != null) model.seed!.code,
+  ];
+
+  final allDeclared = <String>{};
+  for (final code in codeBlocks) {
+    allDeclared.addAll(extractTopLevelIdentifiers(code, language));
+  }
+
+  final clashes = allDeclared.intersection(reserved);
+  if (clashes.isEmpty) return;
+
+  _testHandler(
+    'Verify no top-level identifier collides with $language test framework reserved names',
+    () {
+      expect(
+        clashes,
+        isEmpty,
+        reason: _fancyLogger(
+          message: '''
+The exercise declares top-level identifier(s) that collide with names reserved by the $language test scaffold: ${clashes.join(', ')}.
+This causes the test harness to fail to compile/run even when the user's answer is correct.
+Rename the identifier(s) to something else.''',
+          exercisePath: exercisePath,
+        ),
+      );
+    },
+  );
 }
 
 /// Checks if the directory has a consisten structure of the files.
