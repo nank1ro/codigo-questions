@@ -13,6 +13,24 @@ __"Hello, World!"__ 是在新语言或环境中开始编程的传统第一个程
 
 编写一个返回字符串 "Hello, World!" 的函数。
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -21,42 +39,22 @@ func hello() -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 函数应该返回 "Hello, World!"。
 
 ```swift
-    func testHi() {
-        let expected = "Hello, World!"
-        XCTAssertEqual(hello(), expected, "--err-t1--")
-    }
+do {
+    let expected = "Hello, World!"
+    tryCatch(hello() == expected)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testHi", testHi),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

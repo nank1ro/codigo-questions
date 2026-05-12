@@ -21,7 +21,7 @@ Jeśli umieścisz `$` przed nazwą identyfikatora, interpolacja ciągu wstawi za
 
 ---
 
-Jeśli to, co następuje po znaku `$`, nie jest rozpoznawalne jako identyfikator programu, napotkasz błąd
+Jeśli to, co następuje po znaku `$`, nie jest rozpoznawalne jako identyfikator programu, Dart zgłosi błąd kompilacji: po `$` w ciągu znaków zawsze musi pojawić się identyfikator lub wyrażenie ujęte w nawiasy klamrowe (`${}`).
 
 ---
 

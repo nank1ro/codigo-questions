@@ -26,6 +26,24 @@ title: 둘이서 하나
 **입력**: `Martha`
 **출력**: `One for Martha, one for me.`
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -34,62 +52,40 @@ func twoForOne(name: String) -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 이름이 주어지지 않음
 
 ```swift
-    func testNoNameGiven() {
-        let expected = "One for you, one for me."
-        XCTAssertEqual(twoForOne(), expected, "--err-t1--")
-    }
+do {
+    let expected = "One for you, one for me."
+    tryCatch(twoForOne() == expected)
+}
 ```
 
 "James"를 이름으로 전달
 
 ```swift
-    func testANameGiven() {
-        let expected = "One for James, one for me."
-        XCTAssertEqual(twoForOne(name: "James"), expected, "--err-t2--")
-    }
+do {
+    let expected = "One for James, one for me."
+    tryCatch(twoForOne(name: "James") == expected)
+}
 ```
 
 "Martha"를 이름으로 전달
 
 ```swift
-    func testAnotherNameGiven() {
-        let expected = "One for Martha, one for me."
-        XCTAssertEqual(twoForOne(name: "Martha"), expected, "--err-t3--")
-    }
+do {
+    let expected = "One for Martha, one for me."
+    tryCatch(twoForOne(name: "Martha") == expected)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testNoNameGiven", testNoNameGiven),
-            ("testANameGiven", testANameGiven),
-            ("testAnotherNameGiven", testAnotherNameGive),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

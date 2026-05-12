@@ -1,5 +1,8 @@
 **/.DS_Store
 
+# Claude Code local scheduling artifact
+.claude/scheduled_tasks.lock
+
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub

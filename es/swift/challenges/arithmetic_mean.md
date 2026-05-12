@@ -19,6 +19,24 @@ print(mean([1, 2, 3]))
 // prints 2.0
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,59 +45,31 @@ func mean() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 La media de `[1, 2, 3, 4, 5, 6, 7]` debe ser igual a 4.0
 
 ```swift
-    func test1() {
-        XCTAssertEqual(mean([1, 2, 3, 4, 5, 6, 7]), 4.0, "--err-t1--")
-    }
+tryCatch(mean([1, 2, 3, 4, 5, 6, 7]) == 4.0)
 ```
 
 La media de `[4, 5, 6]` debe ser igual a 5.0
 
 ```swift
-    func test2() {
-        XCTAssertEqual(mean([4, 5, 6]), 5.0, "--err-t2--")
-    }
+tryCatch(mean([4, 5, 6]) == 5.0)
 ```
 
 La media de `[12, 34, 56, 78]` debe ser igual a 45.0
 
 ```swift
-    func test3() {
-        XCTAssertEqual(mean([12, 34, 56, 78]), 45.0, "--err-t3--")
-    }
+tryCatch(mean([12, 34, 56, 78]) == 45.0)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

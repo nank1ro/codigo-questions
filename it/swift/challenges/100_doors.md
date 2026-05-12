@@ -19,6 +19,24 @@ Implementa una funzione per determinare lo stato delle porte dopo l'ultimo passa
 Restituire il risultato finale in un array, con solo il numero delle porte aperte.
 > Il metodo deve essere in grado di funzionare con un numero variabile di porte.
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,62 +45,40 @@ func calcolaPorteAperte(_ numPorte: Int) -> Array<Int> {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Date 100 porte, restituire l'elenco corretto delle porte aperte
 
 ```swift
-    func test1() {
-        let solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-        XCTAssertEqual(calcolaPorteAperte(100), solution, "--err-t1--")
-    }
+do {
+    let solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    tryCatch(calcolaPorteAperte(100) == solution)
+}
 ```
 
 Date 10 porte, restituire l'elenco corretto delle porte aperte
 
 ```swift
-    func test2() {
-        let solution = [1, 4, 9]
-        XCTAssertEqual(calcolaPorteAperte(16), solution, "--err-t2--")
-    }
+do {
+    let solution = [1, 4, 9]
+    tryCatch(calcolaPorteAperte(10) == solution)
+}
 ```
 
 Date 950 porte, restituire l'elenco corretto delle porte aperte
 
 ```swift
-    func test3() {
-        let solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900]
-        XCTAssertEqual(calcolaPorteAperte(950), solution, "--err-t3--")
-    }
+do {
+    let solution = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900]
+    tryCatch(calcolaPorteAperte(950) == solution)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

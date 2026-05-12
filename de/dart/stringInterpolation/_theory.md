@@ -21,7 +21,7 @@ Wenn Sie ein `$` vor einen Identifikatornamen setzen, wird die String-Interpolat
 
 ---
 
-Wenn das, was dem `$`-Zeichen folgt, nicht als Programmbezeichner erkennbar ist, erhalten Sie einen Fehler
+Wenn das, was dem `$`-Zeichen folgt, nicht als Programmbezeichner erkennbar ist, erzeugt Dart einen Kompilierungsfehler: das `$` in einem String muss immer von einem Bezeichner oder einem Ausdruck in geschweiften Klammern (`${}`) gefolgt werden.
 
 ---
 

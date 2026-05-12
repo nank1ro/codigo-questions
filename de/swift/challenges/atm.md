@@ -28,6 +28,24 @@ print(accountBalance(10, 20))
 // prints 9,5
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -36,72 +54,49 @@ func accountBalance() -> Double {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Führen Sie eine erfolgreiche Transaktion durch
 
 ```swift
-    func testSuccessfulTransaction() {
-        let expected: Double = 69.50
-        XCTAssertEqual(accountBalance(50, 120.00), expected, "--err-t1--")
-    }
+do {
+    let expected: Double = 69.50
+    tryCatch(accountBalance(50, 120.00) == expected)
+}
 ```
 
 Unzureichende Deckung
 
 ```swift
-    func testInsufficientFunds() {
-        let expected: Double = 120.00
-        XCTAssertEqual(accountBalance(200, 120.00), expected, "--err-t2--")
-    }
+do {
+    let expected: Double = 120.00
+    tryCatch(accountBalance(200, 120.00) == expected)
+}
 ```
 
 Transaktion abgelehnt, ungültiger Betrag
 
 ```swift
-    func testNotMultipleOf5() {
-        let expected: Double = 120.00
-        XCTAssertEqual(accountBalance(22, 120.00), expected, "--err-t3--")
-    }
+do {
+    let expected: Double = 120.00
+    tryCatch(accountBalance(22, 120.00) == expected)
+}
 ```
 
 Heben Sie das ganze Geld erfolgreich ab
 
 ```swift
-    func testWithdrawAll() {
-        let expected: Double = 0.00
-        XCTAssertEqual(accountBalance(95, 95.50), expected, "--err-t4--")
-    }
+do {
+    let expected: Double = 0.00
+    tryCatch(accountBalance(95, 95.50) == expected)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testSuccessfulTransaction", testSuccessfulTransaction),
-            ("testInsufficientFunds", testInsufficientFunds),
-            ("testNotMultipleOf5", testNotMultipleOf5),
-            ("testWithdrawAll", testWithdrawAll),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

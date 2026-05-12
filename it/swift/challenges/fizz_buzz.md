@@ -25,6 +25,24 @@ fizz_buzz(15) // ➞ "FizzBuzz"
 fizz_buzz(4) // ➞ "4"
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -33,77 +51,43 @@ func fizzBuzz() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Il numero `3` deve essere uguale a `"Fizz"`
 
 ```swift
-    func test1() {
-        XCTAssertEqual(fizzBuzz(3), "Fizz", "--err-t1--")
-    }
+tryCatch(fizzBuzz(3) == "Fizz")
 ```
 
 Il numero `5` deve essere uguale a `"Buzz"`
 
 ```swift
-    func test2() {
-        XCTAssertEqual(fizzBuzz(5), "Buzz", "--err-t2--")
-    }
+tryCatch(fizzBuzz(5) == "Buzz")
 ```
 
 Il numero `15` deve essere uguale a `"FizzBuzz"`
 
 ```swift
-    func test3() {
-        XCTAssertEqual(fizzBuzz(15), "FizzBuzz", "--err-t3--")
-    }
+tryCatch(fizzBuzz(15) == "FizzBuzz")
 ```
 
 Il numero `10` deve essere uguale a `"Buzz"`
 
 ```swift
-    func test4() {
-        XCTAssertEqual(fizzBuzz(10), "Buzz", "--err-t4--")
-    }
+tryCatch(fizzBuzz(10) == "Buzz")
 ```
 
 Il numero `98` deve essere uguale a `"98"`
 
 ```swift
-    func test5() {
-        XCTAssertEqual(fizzBuzz(98), "98", "--err-t5--")
-    }
+tryCatch(fizzBuzz(98) == "98")
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

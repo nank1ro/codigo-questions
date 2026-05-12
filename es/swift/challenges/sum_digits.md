@@ -21,6 +21,24 @@ print(sumDigits(28))
 // prints 10
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -29,77 +47,43 @@ func sumDigits() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 La suma de los dígitos de 12345 es 15
 
 ```swift
-    func testSumOfDigits1() {
-        XCTAssertEqual(sumDigits(12345), 15, "--err-t1--")
-    }
+tryCatch(sumDigits(12345) == 15)
 ```
 
 La suma de los dígitos de 57253 es 22
 
 ```swift
-    func testSumOfDigits2() {
-        XCTAssertEqual(sumDigits(57253), 22, "--err-t2--")
-    }
+tryCatch(sumDigits(57253) == 22)
 ```
 
 La suma de los dígitos de 122 es 5
 
 ```swift
-    func testSumOfDigits3() {
-        XCTAssertEqual(sumDigits(122), 5, "--err-t3--")
-    }
+tryCatch(sumDigits(122) == 5)
 ```
 
 La suma de los dígitos de 91979997 es 60
 
 ```swift
-    func testSumOfDigits4() {
-        XCTAssertEqual(sumDigits(91979997), 60, "--err-t4--")
-    }
+tryCatch(sumDigits(91979997) == 60)
 ```
 
 La suma de los dígitos de 2147483647 es 46
 
 ```swift
-    func testSumOfDigits5() {
-        XCTAssertEqual(sumDigits(2147483647), 46, "--err-t5--")
-    }
+tryCatch(sumDigits(2147483647) == 46)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testSumOfDigits1", testSumOfDigits1),
-            ("testSumOfDigits2", testSumOfDigits2),
-            ("testSumOfDigits3", testSumOfDigits3),
-            ("testSumOfDigits4", testSumOfDigits4),
-            ("testSumOfDigits5", testSumOfDigits5),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

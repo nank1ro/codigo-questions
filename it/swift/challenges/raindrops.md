@@ -33,6 +33,24 @@ print(gocceDiPioggia(28))
 // stampa "Plong"
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -41,194 +59,121 @@ func gocceDiPioggia() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Il suono per 1 è "1"
 
 ```swift
-    func test1() {
-        XCTAssertEqual("1", gocceDiPioggia(1), "--err-t1--")
-    }
+tryCatch("1" == gocceDiPioggia(1))
 ```
 
 Il suono per 3 è "Pling"
 
 ```swift
-    func test3() {
-        XCTAssertEqual("Pling", gocceDiPioggia(3), "--err-t2--")
-    }
+tryCatch("Pling" == gocceDiPioggia(3))
 ```
 
 Il suono per 5 è "Plang"
 
 ```swift
-    func test5() {
-        XCTAssertEqual("Plang", gocceDiPioggia(5), "--err-t3--")
-    }
+tryCatch("Plang" == gocceDiPioggia(5))
 ```
 
 Il suono per 7 è "Plong"
 
 ```swift
-    func test7() {
-        XCTAssertEqual("Plong", gocceDiPioggia(7), "--err-t4--")
-    }
+tryCatch("Plong" == gocceDiPioggia(7))
 ```
 
 Il suono per 6 è "Pling"
 
 ```swift
-    func test6() {
-        XCTAssertEqual("Pling", gocceDiPioggia(6), "--err-t5--")
-    }
+tryCatch("Pling" == gocceDiPioggia(6))
 ```
 
 Il suono per 8 è "8"
 
 ```swift
-    func test8() {
-        XCTAssertEqual("8", gocceDiPioggia(8), "--err-t6--")
-    }
+tryCatch("8" == gocceDiPioggia(8))
 ```
 
 Il suono per 9 è "Pling"
 
 ```swift
-    func test9() {
-        XCTAssertEqual("Pling", gocceDiPioggia(9), "--err-t7--")
-    }
+tryCatch("Pling" == gocceDiPioggia(9))
 ```
 
 Il suono per 10 è "Plang"
 
 ```swift
-    func test10() {
-        XCTAssertEqual("Plang", gocceDiPioggia(10), "--err-t8--")
-    }
+tryCatch("Plang" == gocceDiPioggia(10))
 ```
 
 Il suono per 14 è "Plong"
 
 ```swift
-    func test14() {
-        XCTAssertEqual("Plong", gocceDiPioggia(14), "--err-t9--")
-    }
+tryCatch("Plong" == gocceDiPioggia(14))
 ```
 
 Il suono per 15 è "PlingPlang"
 
 ```swift
-    func test15() {
-        XCTAssertEqual("PlingPlang", gocceDiPioggia(15), "--err-t10--")
-    }
+tryCatch("PlingPlang" == gocceDiPioggia(15))
 ```
 
 Il suono per 21 è "PlingPlong"
 
 ```swift
-    func test21() {
-        XCTAssertEqual("PlingPlong", gocceDiPioggia(21), "--err-t11--")
-    }
+tryCatch("PlingPlong" == gocceDiPioggia(21))
 ```
 
 Il suono per 25 è "Plang"
 
 ```swift
-    func test25() {
-        XCTAssertEqual("Plang", gocceDiPioggia(25), "--err-t12--")
-    }
+tryCatch("Plang" == gocceDiPioggia(25))
 ```
 
 Il suono per 27 è "Pling"
 
 ```swift
-    func test27() {
-        XCTAssertEqual("Pling", gocceDiPioggia(27), "--err-t13--")
-    }
+tryCatch("Pling" == gocceDiPioggia(27))
 ```
 
 Il suono per 35 è "PlangPlong"
 
 ```swift
-    func test35() {
-        XCTAssertEqual("PlangPlong", gocceDiPioggia(35), "--err-t14--")
-    }
+tryCatch("PlangPlong" == gocceDiPioggia(35))
 ```
 
 Il suono per 49 è "Plong"
 
 ```swift
-    func test49() {
-        XCTAssertEqual("Plong", gocceDiPioggia(49), "--err-t15--")
-    }
+tryCatch("Plong" == gocceDiPioggia(49))
 ```
 
 Il suono per 52 è "52"
 
 ```swift
-    func test52() {
-        XCTAssertEqual("52", gocceDiPioggia(52), "--err-t16--")
-    }
+tryCatch("52" == gocceDiPioggia(52))
 ```
 
 Il suono per 105 è "PlingPlangPlong"
 
 ```swift
-    func test105() {
-        XCTAssertEqual("PlingPlangPlong", gocceDiPioggia(105), "--err-t17--")
-    }
+tryCatch("PlingPlangPlong" == gocceDiPioggia(105))
 ```
 
 Il suono per 3125 è "Plang"
 
 ```swift
-    func test3125() {
-        XCTAssertEqual("Plang", gocceDiPioggia(3125), "--err-t18--")
-    }
+tryCatch("Plang" == gocceDiPioggia(3125))
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test3", test3),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test14", test14),
-            ("test15", test15),
-            ("test21", test21),
-            ("test25", test25),
-            ("test27", test27),
-            ("test35", test35),
-            ("test49", test49),
-            ("test52", test52),
-            ("test105", test105),
-            ("test3125", test3125),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

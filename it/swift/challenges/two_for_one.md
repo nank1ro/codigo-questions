@@ -26,6 +26,24 @@ Scrivi una funzione che restituisca la stringa corretta, ad esempio:
 **input**: `Martha`
 **output**: `Uno per Martha, uno per me.`
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -34,62 +52,40 @@ func duePerUno(nome: String) -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Dividi con qualcuno
 
 ```swift
-    func testNoNameGiven() {
-        let expected = "Uno per te, uno per me."
-        XCTAssertEqual(twoForOne(), expected, "--err-t1--")
-    }
+do {
+    let expected = "Uno per te, uno per me."
+    tryCatch(twoForOne() == expected)
+}
 ```
 
 Dividi con "Daniele"
 
 ```swift
-    func testANameGiven() {
-        let expected = "Uno per Daniele, uno per me."
-        XCTAssertEqual(twoForOne(nome: "Daniele"), expected, "--err-t2--")
-    }
+do {
+    let expected = "Uno per Daniele, uno per me."
+    tryCatch(twoForOne(nome: "Daniele") == expected)
+}
 ```
 
 Dividi con "Marta"
 
 ```swift
-    func testAnotherNameGiven() {
-        let expected = "Uno per Marta, uno per me."
-        XCTAssertEqual(twoForOne(nome: "Marta"), expected, "--err-t3--")
-    }
+do {
+    let expected = "Uno per Marta, uno per me."
+    tryCatch(twoForOne(nome: "Marta") == expected)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testNoNameGiven", testNoNameGiven),
-            ("testANameGiven", testANameGiven),
-            ("testAnotherNameGiven", testAnotherNameGive),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -21,21 +21,30 @@ print(leapYear(2000))
 // prints true
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
 func leapYear(_ year: Int) -> Bool {
     
 }
-```
-
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -53,126 +62,80 @@ L'uso di `Date`, `switch`, `if`, `else`, `&&`, `||` or `?` is not allowed.
 L'anno `2016` è bisestile.
 
 ```swift
-    func test1() {
-        XCTAssertEqual(leapYear(2016), true, "--err-t1--")
-    }
+tryCatch(leapYear(2016) == true)
 ```
 
 L'anno `1996` è bisestile.
 
 ```swift
-    func test2() {
-        XCTAssertEqual(leapYear(1996), true, "--err-t2--")
-    }
+tryCatch(leapYear(1996) == true)
 ```
 
 L'anno `1600` è bisestile.
 
 ```swift
-    func test3() {
-        XCTAssertEqual(leapYear(1600), true, "--err-t3--")
-    }
+tryCatch(leapYear(1600) == true)
 ```
 
 L'anno `2020` è bisestile.
 
 ```swift
-    func test4() {
-        XCTAssertEqual(leapYear(2020), true, "--err-t4--")
-    }
+tryCatch(leapYear(2020) == true)
 ```
 
 L'anno `2000` è bisestile.
 
 ```swift
-    func test5() {
-        XCTAssertEqual(leapYear(2000), true, "--err-t5--")
-    }
+tryCatch(leapYear(2000) == true)
 ```
 
 L'anno `2008` è bisestile.
 
 ```swift
-    func test6() {
-        XCTAssertEqual(leapYear(2008), true, "--err-t6--")
-    }
+tryCatch(leapYear(2008) == true)
 ```
 
 L'anno `1521` non è bisestile.
 
 ```swift
-    func test7() {
-        XCTAssertEqual(leapYear(1521), false, "--err-t7--")
-    }
+tryCatch(leapYear(1521) == false)
 ```
 
 L'anno `1800` non è bisestile.
 
 ```swift
-    func test8() {
-        XCTAssertEqual(leapYear(1800), false, "--err-t8--")
-    }
+tryCatch(leapYear(1800) == false)
 ```
 
 L'anno `2007` non è bisestile.
 
 ```swift
-    func test9() {
-        XCTAssertEqual(leapYear(2007), false, "--err-t9--")
-    }
+tryCatch(leapYear(2007) == false)
 ```
 
 L'anno `2002` non è bisestile.
 
 ```swift
-    func test10() {
-        XCTAssertEqual(leapYear(2002), false, "--err-t10--")
-    }
+tryCatch(leapYear(2002) == false)
 ```
 
 L'anno `1979` non è bisestile.
 
 ```swift
-    func test11() {
-        XCTAssertEqual(leapYear(1979), false, "--err-t11--")
-    }
+tryCatch(leapYear(1979) == false)
 ```
 
 L'anno `2006` non è bisestile.
 
 ```swift
-    func test12() {
-        XCTAssertEqual(leapYear(2006), false, "--err-t12--")
-    }
+tryCatch(leapYear(2006) == false)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test11", test11),
-            ("test12", test12), 
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

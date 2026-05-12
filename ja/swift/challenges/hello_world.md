@@ -13,6 +13,24 @@ __"Hello, World!"__ は、新しい言語や環境でプログラミングを始
 
 文字列 "Hello, World!" を返す関数を書いてください。
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -21,42 +39,22 @@ func hello() -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 関数は "Hello, World!" を返す必要があります。
 
 ```swift
-    func testHi() {
-        let expected = "Hello, World!"
-        XCTAssertEqual(hello(), expected, "--err-t1--")
-    }
+do {
+    let expected = "Hello, World!"
+    tryCatch(hello() == expected)
+}
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testHi", testHi),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -21,6 +21,24 @@ convertToRoman(16) ➞ "XVI"
 - Все римские цифры должны возвращаться в верхнем регистре.
 - Наибольшее число, которое может быть представлено в этой нотации — 3 999.
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -29,131 +47,79 @@ func convertToRoman(_ n: Int) -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Число `2` должно равняться `II`
 
 ```swift
-    func test1() {
-        XCTAssertEqual(convertToRoman(2), "II", "--err-t1--")
-    }
+tryCatch(convertToRoman(2) == "II")
 ```
 
 Число `12` должно равняться `XII`
 
 ```swift
-    func test2() {
-        XCTAssertEqual(convertToRoman(12), "XII", "--err-t2--")
-    }
+tryCatch(convertToRoman(12) == "XII")
 ```
 
 Число `16` должно равняться `XVI`
 
 ```swift
-    func test3() {
-        XCTAssertEqual(convertToRoman(16), "XVI", "--err-t3--")
-    }
+tryCatch(convertToRoman(16) == "XVI")
 ```
 
 Число `44` должно равняться `XLIV`
 
 ```swift
-    func test4() {
-        XCTAssertEqual(convertToRoman(44), "XLIV", "--err-t4--")
-    }
+tryCatch(convertToRoman(44) == "XLIV")
 ```
 
 Число `68` должно равняться `LXVIII`
 
 ```swift
-    func test5() {
-        XCTAssertEqual(convertToRoman(68), "LXVIII", "--err-t5--")
-    }
+tryCatch(convertToRoman(68) == "LXVIII")
 ```
 
 Число `400` должно равняться `CD`
 
 ```swift
-    func test6() {
-        XCTAssertEqual(convertToRoman(400), "CD", "--err-t6--")
-    }
+tryCatch(convertToRoman(400) == "CD")
 ```
 
 Число `798` должно равняться `DCCXCVIII`
 
 ```swift
-    func test7() {
-        XCTAssertEqual(convertToRoman(798), "DCCXCVIII", "--err-t7--")
-    }
+tryCatch(convertToRoman(798) == "DCCXCVIII")
 ```
 
 Число `1000` должно равняться `M`
 
 ```swift
-    func test8() {
-        XCTAssertEqual(convertToRoman(1000), "M", "--err-t8--")
-    }
+tryCatch(convertToRoman(1000) == "M")
 ```
 
 Число `3999` должно равняться `MMMCMXCIX`
 
 ```swift
-    func test9() {
-        XCTAssertEqual(convertToRoman(3999), "MMMCMXCIX", "--err-t9--")
-    }
+tryCatch(convertToRoman(3999) == "MMMCMXCIX")
 ```
 
 Число `649` должно равняться `DCXLIX`
 
 ```swift
-    func test10() {
-        XCTAssertEqual(convertToRoman(649), "DCXLIX", "--err-t10--")
-    }
+tryCatch(convertToRoman(649) == "DCXLIX")
 ```
 
 Число `1666` должно равняться `MDCLXVI`
 
 ```swift
-    func test11() {
-        XCTAssertEqual(convertToRoman(1666), "MDCLXVI", "--err-t11--")
-    }
+tryCatch(convertToRoman(1666) == "MDCLXVI")
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test11", test11),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

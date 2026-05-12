@@ -20,6 +20,24 @@ print(addition(1, 2))
 // prints 3
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -28,59 +46,31 @@ func addition() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Die Summe von 1 und 3 muss gleich 4 sein
 
 ```swift
-    func testAddition1() {
-        XCTAssertEqual(addition(1, 3), 4, "--err-t1--")
-    }
+tryCatch(addition(1, 3) == 4)
 ```
 
 Die Summe von 200 und 210 muss gleich 410 sein
 
 ```swift
-    func testAddition2() {
-        XCTAssertEqual(addition(200, 210), 410, "--err-t2--")
-    }
+tryCatch(addition(200, 210) == 410)
 ```
 
 Die Summe von 15 und 35 muss gleich 50 sein
 
 ```swift
-    func testAddition3() {
-        XCTAssertEqual(addition(15, 35), 50, "--err-t3--")
-    }
+tryCatch(addition(15, 35) == 50)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testAddition1", testAddition1),
-            ("testAddition2", testAddition2),
-            ("testAddition3", testAddition3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

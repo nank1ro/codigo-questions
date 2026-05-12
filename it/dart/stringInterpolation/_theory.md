@@ -21,7 +21,7 @@ Se si mette il `$` (dollaro) prima del nome di un identificatore, l'interpolazio
 
 ---
 
-Se ciò che segue il segno `$` non è riconoscibile come un identificatore di programma, riscontrerai un errore
+Se ciò che segue il segno `$` non è riconoscibile come un identificatore di programma, Dart genererà un errore di compilazione: il `$` in una stringa deve sempre essere seguito da un identificatore o da un'espressione tra parentesi graffe (`${}`).
 
 ---
 

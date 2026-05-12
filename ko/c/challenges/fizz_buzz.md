@@ -151,6 +151,7 @@ void try_catch(bool assertion) {
 // DO NOT EDIT UNTIL HERE
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--

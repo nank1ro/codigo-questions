@@ -33,6 +33,24 @@ print(raindrops(28))
 // prints "Plong"
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -41,194 +59,121 @@ func raindrops() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 O som para 1 é "1"
 
 ```swift
-    func test1() {
-        XCTAssertEqual("1", raindrops(1), "--err-t1--")
-    }
+tryCatch("1" == raindrops(1))
 ```
 
 O som para 3 é "Pling"
 
 ```swift
-    func test3() {
-        XCTAssertEqual("Pling", raindrops(3), "--err-t2--")
-    }
+tryCatch("Pling" == raindrops(3))
 ```
 
 O som para 5 é "Plang"
 
 ```swift
-    func test5() {
-        XCTAssertEqual("Plang", raindrops(5), "--err-t3--")
-    }
+tryCatch("Plang" == raindrops(5))
 ```
 
 O som para 7 é "Plong"
 
 ```swift
-    func test7() {
-        XCTAssertEqual("Plong", raindrops(7), "--err-t4--")
-    }
+tryCatch("Plong" == raindrops(7))
 ```
 
 O som para 6 é "Pling"
 
 ```swift
-    func test6() {
-        XCTAssertEqual("Pling", raindrops(6), "--err-t5--")
-    }
+tryCatch("Pling" == raindrops(6))
 ```
 
 O som para 8 é "8"
 
 ```swift
-    func test8() {
-        XCTAssertEqual("8", raindrops(8), "--err-t6--")
-    }
+tryCatch("8" == raindrops(8))
 ```
 
 O som para 9 é "Pling"
 
 ```swift
-    func test9() {
-        XCTAssertEqual("Pling", raindrops(9), "--err-t7--")
-    }
+tryCatch("Pling" == raindrops(9))
 ```
 
 O som para 10 é "Plang"
 
 ```swift
-    func test10() {
-        XCTAssertEqual("Plang", raindrops(10), "--err-t8--")
-    }
+tryCatch("Plang" == raindrops(10))
 ```
 
 O som para 14 é "Plong"
 
 ```swift
-    func test14() {
-        XCTAssertEqual("Plong", raindrops(14), "--err-t9--")
-    }
+tryCatch("Plong" == raindrops(14))
 ```
 
 O som para 15 é "PlingPlang"
 
 ```swift
-    func test15() {
-        XCTAssertEqual("PlingPlang", raindrops(15), "--err-t10--")
-    }
+tryCatch("PlingPlang" == raindrops(15))
 ```
 
 O som para 21 é "PlingPlong"
 
 ```swift
-    func test21() {
-        XCTAssertEqual("PlingPlong", raindrops(21), "--err-t11--")
-    }
+tryCatch("PlingPlong" == raindrops(21))
 ```
 
 O som para 25 é "Plang"
 
 ```swift
-    func test25() {
-        XCTAssertEqual("Plang", raindrops(25), "--err-t12--")
-    }
+tryCatch("Plang" == raindrops(25))
 ```
 
 O som para 27 é "Pling"
 
 ```swift
-    func test27() {
-        XCTAssertEqual("Pling", raindrops(27), "--err-t13--")
-    }
+tryCatch("Pling" == raindrops(27))
 ```
 
 O som para 35 é "PlangPlong"
 
 ```swift
-    func test35() {
-        XCTAssertEqual("PlangPlong", raindrops(35), "--err-t14--")
-    }
+tryCatch("PlangPlong" == raindrops(35))
 ```
 
 O som para 49 é "Plong"
 
 ```swift
-    func test49() {
-        XCTAssertEqual("Plong", raindrops(49), "--err-t15--")
-    }
+tryCatch("Plong" == raindrops(49))
 ```
 
 O som para 52 é "52"
 
 ```swift
-    func test52() {
-        XCTAssertEqual("52", raindrops(52), "--err-t16--")
-    }
+tryCatch("52" == raindrops(52))
 ```
 
 O som para 105 é "PlingPlangPlong"
 
 ```swift
-    func test105() {
-        XCTAssertEqual("PlingPlangPlong", raindrops(105), "--err-t17--")
-    }
+tryCatch("PlingPlangPlong" == raindrops(105))
 ```
 
 O som para 3125 é "Plang"
 
 ```swift
-    func test3125() {
-        XCTAssertEqual("Plang", raindrops(3125), "--err-t18--")
-    }
+tryCatch("Plang" == raindrops(3125))
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test3", test3),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test14", test14),
-            ("test15", test15),
-            ("test21", test21),
-            ("test25", test25),
-            ("test27", test27),
-            ("test35", test35),
-            ("test49", test49),
-            ("test52", test52),
-            ("test105", test105),
-            ("test3125", test3125),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

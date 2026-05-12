@@ -21,6 +21,24 @@ print(sumDigits(28))
 // prints 10
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -29,77 +47,43 @@ func sumDigits() {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 12345の桁の合計は15です
 
 ```swift
-    func testSumOfDigits1() {
-        XCTAssertEqual(sumDigits(12345), 15, "--err-t1--")
-    }
+tryCatch(sumDigits(12345) == 15)
 ```
 
 57253の桁の合計は22です
 
 ```swift
-    func testSumOfDigits2() {
-        XCTAssertEqual(sumDigits(57253), 22, "--err-t2--")
-    }
+tryCatch(sumDigits(57253) == 22)
 ```
 
 122の桁の合計は5です
 
 ```swift
-    func testSumOfDigits3() {
-        XCTAssertEqual(sumDigits(122), 5, "--err-t3--")
-    }
+tryCatch(sumDigits(122) == 5)
 ```
 
 91979997の桁の合計は60です
 
 ```swift
-    func testSumOfDigits4() {
-        XCTAssertEqual(sumDigits(91979997), 60, "--err-t4--")
-    }
+tryCatch(sumDigits(91979997) == 60)
 ```
 
 2147483647の桁の合計は46です
 
 ```swift
-    func testSumOfDigits5() {
-        XCTAssertEqual(sumDigits(2147483647), 46, "--err-t5--")
-    }
+tryCatch(sumDigits(2147483647) == 46)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testSumOfDigits1", testSumOfDigits1),
-            ("testSumOfDigits2", testSumOfDigits2),
-            ("testSumOfDigits3", testSumOfDigits3),
-            ("testSumOfDigits4", testSumOfDigits4),
-            ("testSumOfDigits5", testSumOfDigits5),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
