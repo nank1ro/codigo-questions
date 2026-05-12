@@ -21,6 +21,24 @@ convertToRoman(16) ➞ "XVI"
 - सभी रोमन अंक अपरकेस में लौटाए जाने चाहिए।
 - इस संकेतन में प्रदर्शित की जा सकने वाली सबसे बड़ी संख्या 3,999 है।
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -29,131 +47,79 @@ func convertToRoman(_ n: Int) -> String {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 संख्या `2` का मान `II` होना चाहिए
 
 ```swift
-    func test1() {
-        XCTAssertEqual(convertToRoman(2), "II", "--err-t1--")
-    }
+tryCatch(convertToRoman(2) == "II")
 ```
 
 संख्या `12` का मान `XII` होना चाहिए
 
 ```swift
-    func test2() {
-        XCTAssertEqual(convertToRoman(12), "XII", "--err-t2--")
-    }
+tryCatch(convertToRoman(12) == "XII")
 ```
 
 संख्या `16` का मान `XVI` होना चाहिए
 
 ```swift
-    func test3() {
-        XCTAssertEqual(convertToRoman(16), "XVI", "--err-t3--")
-    }
+tryCatch(convertToRoman(16) == "XVI")
 ```
 
 संख्या `44` का मान `XLIV` होना चाहिए
 
 ```swift
-    func test4() {
-        XCTAssertEqual(convertToRoman(44), "XLIV", "--err-t4--")
-    }
+tryCatch(convertToRoman(44) == "XLIV")
 ```
 
 संख्या `68` का मान `LXVIII` होना चाहिए
 
 ```swift
-    func test5() {
-        XCTAssertEqual(convertToRoman(68), "LXVIII", "--err-t5--")
-    }
+tryCatch(convertToRoman(68) == "LXVIII")
 ```
 
 संख्या `400` का मान `CD` होना चाहिए
 
 ```swift
-    func test6() {
-        XCTAssertEqual(convertToRoman(400), "CD", "--err-t6--")
-    }
+tryCatch(convertToRoman(400) == "CD")
 ```
 
 संख्या `798` का मान `DCCXCVIII` होना चाहिए
 
 ```swift
-    func test7() {
-        XCTAssertEqual(convertToRoman(798), "DCCXCVIII", "--err-t7--")
-    }
+tryCatch(convertToRoman(798) == "DCCXCVIII")
 ```
 
 संख्या `1000` का मान `M` होना चाहिए
 
 ```swift
-    func test8() {
-        XCTAssertEqual(convertToRoman(1000), "M", "--err-t8--")
-    }
+tryCatch(convertToRoman(1000) == "M")
 ```
 
 संख्या `3999` का मान `MMMCMXCIX` होना चाहिए
 
 ```swift
-    func test9() {
-        XCTAssertEqual(convertToRoman(3999), "MMMCMXCIX", "--err-t9--")
-    }
+tryCatch(convertToRoman(3999) == "MMMCMXCIX")
 ```
 
 संख्या `649` का मान `DCXLIX` होना चाहिए
 
 ```swift
-    func test10() {
-        XCTAssertEqual(convertToRoman(649), "DCXLIX", "--err-t10--")
-    }
+tryCatch(convertToRoman(649) == "DCXLIX")
 ```
 
 संख्या `1666` का मान `MDCLXVI` होना चाहिए
 
 ```swift
-    func test11() {
-        XCTAssertEqual(convertToRoman(1666), "MDCLXVI", "--err-t11--")
-    }
+tryCatch(convertToRoman(1666) == "MDCLXVI")
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test11", test11),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

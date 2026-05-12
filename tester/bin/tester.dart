@@ -29,6 +29,10 @@ Future<void> main(List<String> arguments) async {
           'skipped silently.',
     )
     ..addFlag('fail-fast', help: 'Stop on first failure.', negatable: false)
+    ..addMultiOption(
+      'skip-language',
+      help: 'Mark all exercises of this language as SKIP. May be repeated.',
+    )
     ..addOption(
       'timeout',
       help: 'Per-exercise timeout for RTDB wait in seconds.',
@@ -82,6 +86,8 @@ Future<void> _run(ArgResults args, TesterConfig config) async {
   final failFast = args['fail-fast'] as bool;
   final report = args['report'] as String;
 
+  final skipLanguages = (args['skip-language'] as List<String>).toSet();
+
   final glob = Glob(pattern, recursive: true);
   final matches = glob
       .listSync(root: repoRoot.path)
@@ -96,8 +102,19 @@ Future<void> _run(ArgResults args, TesterConfig config) async {
   }
 
   final mdParser = MDParserBLoC();
-  final runner = Runner(config: config, parser: mdParser);
+  final runner = Runner(
+    config: config,
+    parser: mdParser,
+    skipLanguages: skipLanguages,
+  );
   final results = <ExerciseRun>[];
+
+  if (skipLanguages.isNotEmpty) {
+    stderr.writeln(
+      'note: skipping languages: ${skipLanguages.join(", ")} '
+      '(override with --skip-language=)',
+    );
+  }
 
   try {
     for (final file in matches) {

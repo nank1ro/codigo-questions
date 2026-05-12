@@ -19,6 +19,24 @@ La funzione termina sempre e i suoi argomenti non sono mai negativi
 
 Scrivi una funzione che restituisca il valore della funzione Ackermann.
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,68 +45,37 @@ func ack(_ m: Int, _ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 `ack(0, 0)` deve restituire 1.
 
 ```swift
-    func test1() {
-        XCTAssertEqual(ack(0, 0), 1, "--err-t1--")
-    }
+tryCatch(ack(0, 0) == 1)
 ```
 
 `ack(1, 1)` deve restituire 3.
 
 ```swift
-    func test2() {
-        XCTAssertEqual(ack(1, 1), 3, "--err-t2--")
-    }
+tryCatch(ack(1, 1) == 3)
 ```
 
 `ack(2, 5)` deve restituire 13.
 
 ```swift
-    func test3() {
-        XCTAssertEqual(ack(2, 5), 13, "--err-t3--")
-    }
+tryCatch(ack(2, 5) == 13)
 ```
 
 `ack(3, 3)` deve restituire 61.
 
 ```swift
-    func test4() {
-        XCTAssertEqual(ack(3, 3), 61, "--err-t4--")
-    }
+tryCatch(ack(3, 3) == 61)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

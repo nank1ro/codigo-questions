@@ -31,10 +31,15 @@ class ExerciseRun {
 }
 
 class Runner {
-  Runner({required this.config, required this.parser});
+  Runner({
+    required this.config,
+    required this.parser,
+    this.skipLanguages = const <String>{},
+  });
 
   final TesterConfig config;
   final MDParserBLoC parser;
+  final Set<String> skipLanguages;
 
   CodecompilerClient? _compiler;
   RtdbClient? _rtdb;
@@ -76,6 +81,15 @@ class Runner {
         language: language,
         exerciseType: type,
         skipReason: 'unsupported language',
+      );
+    }
+
+    if (skipLanguages.contains(language)) {
+      return ExerciseRun(
+        path: relativePath,
+        language: language,
+        exerciseType: type,
+        skipReason: 'language `$language` is in skip list',
       );
     }
 

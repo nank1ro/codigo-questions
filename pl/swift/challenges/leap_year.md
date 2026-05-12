@@ -21,21 +21,30 @@ print(leapYear(2000))
 // prints true
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
 func leapYear(_ year: Int) -> Bool {
     
 }
-```
-
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
 ```
 
 # --asserts--
@@ -53,126 +62,80 @@ Użycie `Date`, `switch`, `if`, `else`, `&&`, `||` lub `?` jest niedozwolone.
 Rok `2016` jest rokiem przestępnym.
 
 ```swift
-    func test1() {
-        XCTAssertEqual(leapYear(2016), true, "--err-t1--")
-    }
+tryCatch(leapYear(2016) == true)
 ```
 
 Rok `1996` jest rokiem przestępnym.
 
 ```swift
-    func test2() {
-        XCTAssertEqual(leapYear(1996), true, "--err-t2--")
-    }
+tryCatch(leapYear(1996) == true)
 ```
 
 Rok `1600` jest rokiem przestępnym.
 
 ```swift
-    func test3() {
-        XCTAssertEqual(leapYear(1600), true, "--err-t3--")
-    }
+tryCatch(leapYear(1600) == true)
 ```
 
 Rok `2020` jest rokiem przestępnym.
 
 ```swift
-    func test4() {
-        XCTAssertEqual(leapYear(2020), true, "--err-t4--")
-    }
+tryCatch(leapYear(2020) == true)
 ```
 
 Rok `2000` jest rokiem przestępnym.
 
 ```swift
-    func test5() {
-        XCTAssertEqual(leapYear(2000), true, "--err-t5--")
-    }
+tryCatch(leapYear(2000) == true)
 ```
 
 Rok `2008` jest rokiem przestępnym.
 
 ```swift
-    func test6() {
-        XCTAssertEqual(leapYear(2008), true, "--err-t6--")
-    }
+tryCatch(leapYear(2008) == true)
 ```
 
 Rok `1521` nie jest rokiem przestępnym.
 
 ```swift
-    func test7() {
-        XCTAssertEqual(leapYear(1521), false, "--err-t7--")
-    }
+tryCatch(leapYear(1521) == false)
 ```
 
 Rok `1800` nie jest rokiem przestępnym.
 
 ```swift
-    func test8() {
-        XCTAssertEqual(leapYear(1800), false, "--err-t8--")
-    }
+tryCatch(leapYear(1800) == false)
 ```
 
 Rok `2007` nie jest rokiem przestępnym.
 
 ```swift
-    func test9() {
-        XCTAssertEqual(leapYear(2007), false, "--err-t9--")
-    }
+tryCatch(leapYear(2007) == false)
 ```
 
 Rok `2002` nie jest rokiem przestępnym.
 
 ```swift
-    func test10() {
-        XCTAssertEqual(leapYear(2002), false, "--err-t10--")
-    }
+tryCatch(leapYear(2002) == false)
 ```
 
 Rok `1979` nie jest rokiem przestępnym.
 
 ```swift
-    func test11() {
-        XCTAssertEqual(leapYear(1979), false, "--err-t11--")
-    }
+tryCatch(leapYear(1979) == false)
 ```
 
 Rok `2006` nie jest rokiem przestępnym.
 
 ```swift
-    func test12() {
-        XCTAssertEqual(leapYear(2006), false, "--err-t12--")
-    }
+tryCatch(leapYear(2006) == false)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-            ("test9", test9),
-            ("test10", test10),
-            ("test11", test11),
-            ("test12", test12), 
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

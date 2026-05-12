@@ -201,10 +201,18 @@ const pythonAfterAssertsCode = '''
 if __name__ == "__main__":
     unittest.main()''';
 
-const swiftBeforeSeedCode = '''
-import XCTest
+const swiftBeforeSeedCode = r'''
+// DO NOT EDIT FROM HERE
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE''';
 
-class CodigoTests: XCTestCase {''';
-
-const swiftAfterAssertsCode = '''
-XCTMain([testCase(CodigoTests.allTests)])''';
+const swiftAfterAssertsCode = r'''
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")''';
