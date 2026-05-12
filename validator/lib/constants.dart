@@ -203,6 +203,8 @@ if __name__ == "__main__":
 
 const swiftBeforeSeedCode = r'''
 // DO NOT EDIT FROM HERE
+import Foundation
+
 var _testCount = 0
 var _testFailedCount = 0
 func tryCatch(_ assertion: Bool) {
