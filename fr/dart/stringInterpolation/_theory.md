@@ -21,7 +21,7 @@ Si vous mettez un `$` avant un nom d'identificateur, l'interpolation de chaîne 
 
 ---
 
-Si ce qui suit le signe `$` n'est pas reconnaissable comme un identificateur de programme, vous allez rencontrer une erreur
+Si ce qui suit le signe `$` n'est pas reconnaissable comme un identificateur de programme, Dart génère une erreur de compilation : le `$` dans une chaîne doit toujours être suivi d'un identificateur ou d'une expression entre accolades (`${}`).
 
 ---
 

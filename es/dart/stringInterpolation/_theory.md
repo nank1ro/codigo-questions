@@ -21,7 +21,7 @@ Si pones un `$` antes de un nombre de identificador, la interpolación de cadena
 
 ---
 
-Si lo que sigue al signo `$` no es reconocible como un identificador de programa, vas a encontrarte con un error
+Si lo que sigue al signo `$` no es reconocible como un identificador de programa, Dart producirá un error de compilación: el `$` dentro de una cadena siempre debe ir seguido de un identificador o de una expresión entre llaves (`${}`).
 
 ---
 

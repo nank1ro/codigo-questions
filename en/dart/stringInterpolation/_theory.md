@@ -21,7 +21,7 @@ If you put a `$` before an identifier name, the string interpolation will insert
 
 ---
 
-If what follows the `$` sign isn't recognizable as a program identifier, you are going to encounter an error
+If what follows the `$` sign isn't recognizable as a program identifier, Dart will raise a compile error: the `$` in a string must always be followed by an identifier or an expression in curly braces (`${}`).
 
 ---
 

@@ -21,7 +21,7 @@ Se voce colocar um `$` antes do nome de um identificador, a interpolacao de stri
 
 ---
 
-Se o que vem apos o sinal `$` nao for reconhecido como um identificador de programa, voce encontrara um erro
+Se o que vem após o sinal `$` não for reconhecido como um identificador de programa, o Dart produzirá um erro de compilação: o `$` dentro de uma string deve sempre ser seguido por um identificador ou por uma expressão entre chaves (`${}`).
 
 ---
 
