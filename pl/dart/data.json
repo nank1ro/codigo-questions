@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Pętle while",
     "description": "Naucz się używać pętli while"
+  },
+  "functions": {
+    "order": 14,
+    "title": "Funkcje",
+    "description": "Naucz się tworzyć i używać funkcji"
   }
 }

@@ -58,5 +58,10 @@
     "order": 11,
     "title": "while 반복문",
     "description": "while 반복문 사용법 배우기"
+  },
+  "functions": {
+    "order": 14,
+    "title": "함수",
+    "description": "함수 만들기와 사용법 배우기"
   }
 }

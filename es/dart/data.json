@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Bucles while",
     "description": "Aprende a usar los bucles while"
+  },
+  "functions": {
+    "order": 14,
+    "title": "Funciones",
+    "description": "Aprende a crear y usar funciones"
   }
 }
