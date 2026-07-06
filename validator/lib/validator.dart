@@ -157,6 +157,11 @@ void _validateExercise({
     exercisePath: exercisePath,
   );
 
+  _validateEmptySpaceTokens(
+    model: exerciseModel,
+    exercisePath: exercisePath,
+  );
+
   if (isAChallenge(exercisePath)) {
     _runChallengeTests(
       exercisePath: exercisePath,
@@ -191,6 +196,44 @@ void _validateExercise({
     solutions: exerciseModel.solutions,
     exercisePath: exercisePath,
   );
+}
+
+/// Validates that the `[/]` fill-in-the-blank token is used only in type-2
+/// (Fill Empty Spaces) exercises, and that every type-2 seed contains at least
+/// one. A `[/]` in any other exercise type is rendered verbatim by the app.
+void _validateEmptySpaceTokens({
+  required ExerciseModel model,
+  required String exercisePath,
+}) {
+  final type = model.frontMatterModel.exerciseType;
+  final hasToken = _codeSpaceRegex.hasMatch(model.seed?.code ?? '');
+  if (type == 2) {
+    _testHandler(
+        'Verify a Fill-Empty-Spaces exercise contains at least one [/] token',
+        () {
+      expect(
+        hasToken,
+        isTrue,
+        reason: _fancyLogger(
+          message:
+              'A type-2 (Fill Empty Spaces) exercise must contain at least one `[/]` placeholder in its --seed--.',
+          exercisePath: exercisePath,
+        ),
+      );
+    });
+  } else {
+    _testHandler('Verify a non Fill-Empty-Spaces exercise has no [/] token', () {
+      expect(
+        hasToken,
+        isFalse,
+        reason: _fancyLogger(
+          message:
+              'The `[/]` placeholder is only valid in type-2 (Fill Empty Spaces) exercises; found it in a type-$type --seed--.',
+          exercisePath: exercisePath,
+        ),
+      );
+    });
+  }
 }
 
 /// Validates the Run Code exercises
