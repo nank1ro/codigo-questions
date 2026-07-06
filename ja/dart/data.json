@@ -58,5 +58,10 @@
     "order": 11,
     "title": "whileループ",
     "description": "whileループの使い方を学ぶ"
+  },
+  "classes": {
+    "order": 15,
+    "title": "クラス",
+    "description": "クラスの作成と使い方を学ぶ"
   }
 }
