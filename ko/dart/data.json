@@ -58,5 +58,10 @@
     "order": 11,
     "title": "while 반복문",
     "description": "while 반복문 사용법 배우기"
+  },
+  "lists": {
+    "order": 13,
+    "title": "리스트",
+    "description": "리스트 사용법 배우기"
   }
 }

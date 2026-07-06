@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Cicli while",
     "description": "Impara ad utilizzare i cicli while"
+  },
+  "lists": {
+    "order": 13,
+    "title": "Liste",
+    "description": "Impara ad utilizzare le liste"
   }
 }

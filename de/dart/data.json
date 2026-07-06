@@ -58,5 +58,10 @@
     "order": 11,
     "title": "While-Schleifen",
     "description": "Lerne, wie man While-Schleifen verwendet"
+  },
+  "lists": {
+    "order": 13,
+    "title": "Listen",
+    "description": "Lerne, wie man Listen verwendet"
   }
 }

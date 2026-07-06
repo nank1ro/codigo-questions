@@ -58,5 +58,10 @@
     "order": 11,
     "title": "Bucles while",
     "description": "Aprende a usar los bucles while"
+  },
+  "lists": {
+    "order": 13,
+    "title": "Listas",
+    "description": "Aprende a usar listas"
   }
 }

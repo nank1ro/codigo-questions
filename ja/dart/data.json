@@ -58,5 +58,10 @@
     "order": 11,
     "title": "whileループ",
     "description": "whileループの使い方を学ぶ"
+  },
+  "lists": {
+    "order": 13,
+    "title": "リスト",
+    "description": "リストの使い方を学ぶ"
   }
 }
