@@ -53,5 +53,10 @@
         "order": 11,
         "title": "集合",
         "description": "学习如何将唯一元素存储到无序集合中"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "赋值运算符",
+        "description": "学习如何使用赋值运算符"
     }
 }

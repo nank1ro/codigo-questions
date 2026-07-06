@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Conjuntos",
         "description": "Aprenda como armazenar elementos únicos em uma coleção não ordenada"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "Operadores de atribuição",
+        "description": "Aprenda a usar os operadores de atribuição"
     }
 }
