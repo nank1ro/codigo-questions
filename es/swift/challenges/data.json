@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Año bisiesto",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Múltiplos de 3 o 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Números de Fibonacci pares"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Mayor factor primo"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Mayor producto palíndromo"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Mínimo múltiplo común"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Diferencia de suma de cuadrados"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "El primo número 10001"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Mayor producto en una serie"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Terna pitagórica especial"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Suma de números primos"
   }
 }
