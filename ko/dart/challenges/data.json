@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "윤년",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3 또는 5의 배수"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "짝수 피보나치 수"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "가장 큰 소인수"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "가장 큰 회문 곱"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "최소공배수"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "합의 제곱과 제곱의 합의 차"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001번째 소수"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "연속된 숫자의 가장 큰 곱"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "특별한 피타고라스 삼조수"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "소수의 합"
   }
 }

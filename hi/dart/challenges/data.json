@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "लीप वर्ष",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "3 या 5 के गुणज"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "सम फिबोनाची संख्याएँ"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "सबसे बड़ा अभाज्य गुणनखंड"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "सबसे बड़ा पैलिंड्रोम गुणनफल"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "सबसे छोटा गुणज"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "योग-वर्ग अंतर"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001वीं अभाज्य संख्या"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "श्रृंखला में सबसे बड़ा गुणनफल"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "विशेष पाइथागोरस त्रिक"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "अभाज्य संख्याओं का योग"
   }
 }
