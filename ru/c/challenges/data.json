@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Високосный год",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Кратные 3 или 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Чётные числа Фибоначчи"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Наибольший простой множитель"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Наибольший палиндром-произведение"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Наименьшее кратное"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Разность квадрата суммы и суммы квадратов"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001-е простое число"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Наибольшее произведение в ряду"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Особая пифагорова тройка"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Сумма простых чисел"
   }
 }

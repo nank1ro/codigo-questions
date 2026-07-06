@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Année bissextile",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Multiples de 3 ou 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Nombres de Fibonacci pairs"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Plus grand facteur premier"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Plus grand produit palindromique"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Plus petit multiple commun"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Différence carré-somme"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "Le 10001e nombre premier"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Plus grand produit dans une série"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Triplet pythagoricien spécial"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Somme des nombres premiers"
   }
 }

@@ -50,5 +50,45 @@
     "difficulty": 3,
     "name": "Leap Year",
     "isPro": true
+  },
+  "multiples_of_3_or_5": {
+    "difficulty": 1,
+    "name": "Wielokrotności 3 lub 5"
+  },
+  "even_fibonacci_numbers": {
+    "difficulty": 1,
+    "name": "Parzyste liczby Fibonacciego"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Największy czynnik pierwszy"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Największy iloczyn palindromiczny"
+  },
+  "smallest_multiple": {
+    "difficulty": 2,
+    "name": "Najmniejsza wielokrotność"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Różnica kwadratów sum"
+  },
+  "10001st_prime": {
+    "difficulty": 2,
+    "name": "10001. liczba pierwsza"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Największy iloczyn w ciągu"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Szczególna trójka pitagorejska"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Suma liczb pierwszych"
   }
 }
