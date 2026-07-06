@@ -53,5 +53,10 @@
         "order": 11,
         "title": "セット",
         "description": "順序なしコレクションに一意の要素を格納する方法を学ぶ"
+    },
+    "functions": {
+        "order": 13,
+        "title": "関数",
+        "description": "関数の作成と使い方を学ぶ"
     }
 }

@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Zbiory",
         "description": "Naucz się przechowywać unikalne elementy w nieuporządkowanej kolekcji"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funkcje",
+        "description": "Naucz się tworzyć i używać funkcji"
     }
 }

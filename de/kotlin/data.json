@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Mengen",
         "description": "Lerne, wie man einzigartige Elemente in einer ungeordneten Sammlung speichert"
+    },
+    "functions": {
+        "order": 13,
+        "title": "Funktionen",
+        "description": "Lerne, wie man Funktionen erstellt und verwendet"
     }
 }
