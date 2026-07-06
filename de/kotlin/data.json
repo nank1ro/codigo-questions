@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Mengen",
         "description": "Lerne, wie man einzigartige Elemente in einer ungeordneten Sammlung speichert"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Klassen",
+        "description": "Lerne, wie man Klassen erstellt und verwendet"
     }
 }

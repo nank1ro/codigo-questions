@@ -53,5 +53,10 @@
         "order": 11,
         "title": "Ensembles",
         "description": "Apprenez comment stocker des éléments uniques dans une collection non ordonnée"
+    },
+    "classes": {
+        "order": 14,
+        "title": "Classes",
+        "description": "Apprenez à créer et utiliser des classes"
     }
 }
