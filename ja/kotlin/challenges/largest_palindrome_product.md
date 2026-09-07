@@ -11,21 +11,7 @@ title: 最大の回文積
 
 # --instructions--
 
-n桁の2つの数の積で作られる最大の回文を求める関数を書いてください。
-
-関数呼び出しの例：
-```kotlin
-println(largestPalindromeProduct(2))
-// 9009 を出力
-```
-
-# --seed--
-
-```kotlin
-fun largestPalindromeProduct(n: Int): Int {
-
-}
-```
+`n`桁の2つの数の積で作られる最大の回文を求めてください。
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPalindromeProduct(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,13 +51,13 @@ fun main() {
 2桁の数2つの積から作られる最大の回文積は9009でなければならない
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(2) == 9009)
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
 3桁の数2つの積から作られる最大の回文積は906609でなければならない
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(3) == 906609)
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
@@ -74,16 +73,14 @@ fun main() {
 
 ```kotlin
 fun largestPalindromeProduct(n: Int): Int {
-    val max = Math.pow(10.0, n.toDouble()).toInt() - 1
-    val min = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val start = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val end = Math.pow(10.0, n.toDouble()).toInt() - 1
     var largest = 0
-    for (i in max downTo min) {
-        for (j in i downTo min) {
+    for (i in end downTo start) {
+        for (j in end downTo i) {
             val product = i * j
             if (product <= largest) break
-            if (isPalindrome(product)) {
-                largest = product
-            }
+            if (isPalindrome(product)) largest = product
         }
     }
     return largest

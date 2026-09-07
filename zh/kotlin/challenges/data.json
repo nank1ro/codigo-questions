@@ -60,7 +60,7 @@
     "isPro": true
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "第10001个质数"
   },
   "largest_palindrome_product": {
@@ -76,7 +76,7 @@
     "name": "序列中的最大乘积"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "最小公倍数"
   },
   "special_pythagorean_triplet": {

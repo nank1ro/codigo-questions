@@ -2,30 +2,20 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特殊勾股数
 ---
 
 # --description--
 
-勾股数是满足 a < b < c 且 a² + b² = c² 的三个自然数的集合。恰好存在一组勾股数满足 a + b + c = 1000。求 a × b × c 的乘积。
+勾股数组是一组三个自然数，`a` < `b` < `c`，满足 <latex>a^2 + b^2 = c^2</latex>
+
+例如，<latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+
+恰好存在一组勾股数使得 `a` + `b` + `c` = 1000。
 
 # --instructions--
 
-编写一个函数，找出满足 a + b + c = n 的勾股数的乘积。
-
-函数调用示例：
-```kotlin
-println(specialPythagoreanTriplet(12))
-// prints 60
-```
-
-# --seed--
-
-```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-
-}
-```
+求满足 `a` + `b` + `c` = `n` 的乘积 `abc`。
 
 # --before-seed--
 
@@ -44,21 +34,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun specialPythagoreanTriplet(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-满足 a + b + c = 12 的勾股数之积必须为 60
+`specialPythagoreanTriplet(24)` 应返回480。
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(12) == 60)
+tryCatch(specialPythagoreanTriplet(24) == 480L)
 ```
 
-满足 a + b + c = 1000 的勾股数之积必须为 31875000
+`specialPythagoreanTriplet(120)` 应返回49920、55080或60000。
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(1000) == 31875000)
+tryCatch(specialPythagoreanTriplet(120) in listOf(49920L, 55080L, 60000L))
+```
+
+`specialPythagoreanTriplet(1000)` 应返回31875000。
+
+```kotlin
+tryCatch(specialPythagoreanTriplet(1000) == 31875000L)
 ```
 
 # --after-asserts--
@@ -73,15 +82,15 @@ fun main() {
 # --solutions--
 
 ```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-    for (a in 1 until n) {
-        for (b in a + 1 until n) {
+fun specialPythagoreanTriplet(n: Int): Long {
+    for (a in 1..n / 3) {
+        for (b in a + 1..n / 2) {
             val c = n - a - b
             if (c > b && a * a + b * b == c * c) {
-                return a * b * c
+                return a.toLong() * b.toLong() * c.toLong()
             }
         }
     }
-    return -1
+    return -1L
 }
 ```

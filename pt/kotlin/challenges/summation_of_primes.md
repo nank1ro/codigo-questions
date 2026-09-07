@@ -7,25 +7,11 @@ title: Soma dos primos
 
 # --description--
 
-A soma dos primos abaixo de 10 é 2 + 3 + 5 + 7 = 17. Encontre a soma de todos os primos abaixo de dois milhões.
+A soma dos primos abaixo de 10 é 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Escreva uma função que retorne a soma de todos os primos abaixo de n.
-
-Exemplo de chamada da função:
-```kotlin
-println(primeSummation(10))
-// imprime 17
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+Encontre a soma de todos os primos abaixo de `n`.
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-A soma dos primos abaixo de 10 deve ser 17
+`primeSummation(17)` deve retornar 41.
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-A soma dos primos abaixo de 1000 deve ser 76127
+`primeSummation(2001)` deve retornar 277050.
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-A soma dos primos abaixo de 100000 deve ser 454396537
+`primeSummation(140759)` deve retornar 873608362.
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+`primeSummation(2000000)` deve retornar 142913828922.
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

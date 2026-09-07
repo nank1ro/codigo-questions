@@ -2,30 +2,24 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 平方差之和
 ---
 
 # --description--
 
-前十个自然数的平方和为 1² + 2² + ... + 10² = 385。前十个自然数之和的平方为 (1 + 2 + ... + 10)² = 55² = 3025。因此，前十个自然数的平方和与和的平方之差为 3025 − 385 = 2640。
+前十个自然数的平方和为，
+
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
+
+前十个自然数之和的平方为，
+
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
+
+因此，前十个自然数的平方和与和的平方之差为 3025 − 385 = 2640。
 
 # --instructions--
 
-编写一个函数，求前 n 个自然数的和的平方与平方和之差。
-
-函数调用示例：
-```kotlin
-println(sumSquareDifference(10))
-// prints 2640
-```
-
-# --seed--
-
-```kotlin
-fun sumSquareDifference(n: Int): Int {
-
-}
-```
+求前 `n` 个自然数的平方和与和的平方之差。
 
 # --before-seed--
 
@@ -44,27 +38,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun sumSquareDifference(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-n = 10 时的平方差必须为 2640
+`sumSquareDifference(10)` 应返回2640。
 
 ```kotlin
-    tryCatch(sumSquareDifference(10) == 2640)
+tryCatch(sumSquareDifference(10) == 2640L)
 ```
 
-n = 20 时的平方差必须为 41230
+`sumSquareDifference(20)` 应返回41230。
 
 ```kotlin
-    tryCatch(sumSquareDifference(20) == 41230)
+tryCatch(sumSquareDifference(20) == 41230L)
 ```
 
-n = 100 时的平方差必须为 25164150
+`sumSquareDifference(100)` 应返回25164150。
 
 ```kotlin
-    tryCatch(sumSquareDifference(100) == 25164150)
+tryCatch(sumSquareDifference(100) == 25164150L)
 ```
 
 # --after-asserts--
@@ -79,10 +86,9 @@ n = 100 时的平方差必须为 25164150
 # --solutions--
 
 ```kotlin
-fun sumSquareDifference(n: Int): Int {
-    val sumOfSquares = (1..n).sumOf { it * it }
-    val sum = (1..n).sum()
-    val squareOfSum = sum * sum
-    return squareOfSum - sumOfSquares
+fun sumSquareDifference(n: Int): Long {
+    val sumOfSquares = (1..n).sumOf { it.toLong() * it.toLong() }
+    val sum = (1..n).sumOf { it.toLong() }
+    return sum * sum - sumOfSquares
 }
 ```

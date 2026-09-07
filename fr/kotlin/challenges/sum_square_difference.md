@@ -9,11 +9,11 @@ title: Sum square difference
 
 La somme des carrés des dix premiers nombres naturels est :
 
-12 + 22 + ... + 102 = 385
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
 
 Le carré de la somme des dix premiers nombres naturels est :
 
-(1 + 2 + ... + 10)2 = 552 = 3025
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
 
 Donc la différence entre la somme des carrés des dix premiers nombres naturels et le carré de la somme est 3025 − 385 = 2640.
 

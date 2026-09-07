@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
-title: Smallest multiple
+difficulty: 1
+title: Наименьшее кратное
 ---
 
 # --description--
 
-2520 — наименьшее число, которое делится без остатка на каждое из чисел от 1 до 10. Каково наименьшее положительное число, равномерно делящееся на все числа от 1 до n?
+2520 — это наименьшее число, которое делится на каждое из чисел от 1 до 10 без остатка.
 
 # --instructions--
 
-Напишите функцию, которая возвращает наименьшее положительное число, делящееся без остатка на все числа от 1 до n.
-
-Пример вызова функции:
-```kotlin
-println(smallestMultiple(10))
-// prints 2520
-```
-
-# --seed--
-
-```kotlin
-fun smallestMultiple(n: Int): Long {
-
-}
-```
+Какое наименьшее положительное число делится нацело на все числа от 1 до `n`?
 
 # --before-seed--
 
@@ -44,27 +30,52 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun smallestMultiple(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Наименьшее кратное для чисел от 1 до 5 должно равняться 60
+`smallestMultiple(5)` должна вернуть 60.
 
 ```kotlin
-    tryCatch(smallestMultiple(5) == 60L)
+tryCatch(smallestMultiple(5) == 60L)
 ```
 
-Наименьшее кратное для чисел от 1 до 10 должно равняться 2520
+`smallestMultiple(7)` должна вернуть 420.
 
 ```kotlin
-    tryCatch(smallestMultiple(10) == 2520L)
+tryCatch(smallestMultiple(7) == 420L)
 ```
 
-Наименьшее кратное для чисел от 1 до 20 должно равняться 232792560
+`smallestMultiple(10)` должна вернуть 2520.
 
 ```kotlin
-    tryCatch(smallestMultiple(20) == 232792560L)
+tryCatch(smallestMultiple(10) == 2520L)
+```
+
+`smallestMultiple(13)` должна вернуть 360360.
+
+```kotlin
+tryCatch(smallestMultiple(13) == 360360L)
+```
+
+`smallestMultiple(20)` должна вернуть 232792560.
+
+```kotlin
+tryCatch(smallestMultiple(20) == 232792560L)
 ```
 
 # --after-asserts--
@@ -80,14 +91,8 @@ fun main() {
 
 ```kotlin
 fun smallestMultiple(n: Int): Long {
-    var result = 1L
-    for (i in 2..n) {
-        result = lcm(result, i.toLong())
-    }
-    return result
+    fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
+    fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
+    return (2..n).fold(1L) { acc, i -> lcm(acc, i.toLong()) }
 }
-
-fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
-
-fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
 ```

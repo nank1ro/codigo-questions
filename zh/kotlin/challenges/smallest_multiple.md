@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
-title: Smallest multiple
+difficulty: 1
+title: 最小公倍数
 ---
 
 # --description--
 
-2520 是能被 1 到 10 中每个数整除的最小正整数。从 1 到 n 的所有整数都能整除的最小正整数是多少？
+2520是能被1到10中每个数字整除且没有余数的最小数字。
 
 # --instructions--
 
-编写一个函数，返回能被 1 到 n 所有整数整除的最小正整数。
-
-函数调用示例：
-```kotlin
-println(smallestMultiple(10))
-// prints 2520
-```
-
-# --seed--
-
-```kotlin
-fun smallestMultiple(n: Int): Long {
-
-}
-```
+能被1到 `n` 的所有数字整除的最小正整数是多少？
 
 # --before-seed--
 
@@ -44,27 +30,52 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun smallestMultiple(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-1 到 5 的最小公倍数必须为 60
+`smallestMultiple(5)` 应返回60。
 
 ```kotlin
-    tryCatch(smallestMultiple(5) == 60L)
+tryCatch(smallestMultiple(5) == 60L)
 ```
 
-1 到 10 的最小公倍数必须为 2520
+`smallestMultiple(7)` 应返回420。
 
 ```kotlin
-    tryCatch(smallestMultiple(10) == 2520L)
+tryCatch(smallestMultiple(7) == 420L)
 ```
 
-1 到 20 的最小公倍数必须为 232792560
+`smallestMultiple(10)` 应返回2520。
 
 ```kotlin
-    tryCatch(smallestMultiple(20) == 232792560L)
+tryCatch(smallestMultiple(10) == 2520L)
+```
+
+`smallestMultiple(13)` 应返回360360。
+
+```kotlin
+tryCatch(smallestMultiple(13) == 360360L)
+```
+
+`smallestMultiple(20)` 应返回232792560。
+
+```kotlin
+tryCatch(smallestMultiple(20) == 232792560L)
 ```
 
 # --after-asserts--
@@ -80,14 +91,8 @@ fun main() {
 
 ```kotlin
 fun smallestMultiple(n: Int): Long {
-    var result = 1L
-    for (i in 2..n) {
-        result = lcm(result, i.toLong())
-    }
-    return result
+    fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
+    fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
+    return (2..n).fold(1L) { acc, i -> lcm(acc, i.toLong()) }
 }
-
-fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
-
-fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
 ```

@@ -7,25 +7,15 @@ title: 特別なピタゴラス数の組
 
 # --description--
 
-ピタゴラス数の組とは3つの自然数 a < b < c の集合で、a² + b² = c² を満たすものです。a + b + c = 1000 を満たすピタゴラス数の組はちょうど1つ存在します。積 a × b × c を求めてください。
+ピタゴラス数の組とは、`a` < `b` < `c`を満たす3つの自然数の組であり、<latex>a^2 + b^2 = c^2</latex>を満たします。
+
+例えば、<latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>です。
+
+`a` + `b` + `c` = 1000を満たすピタゴラス数の組はちょうど1つ存在します。
 
 # --instructions--
 
-a + b + c = n となるピタゴラス数の組の積を求める関数を書いてください。
-
-関数呼び出しの例：
-```kotlin
-println(specialPythagoreanTriplet(12))
-// 60 を出力
-```
-
-# --seed--
-
-```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-
-}
-```
+`a` + `b` + `c` = `n`となる積`abc`を求めてください。
 
 # --before-seed--
 
@@ -44,21 +34,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun specialPythagoreanTriplet(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-a + b + c = 12 のときピタゴラス数の組の積は60でなければならない
+a + b + c = 24のときピタゴラス数の組の積は480でなければならない
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(12) == 60)
+tryCatch(specialPythagoreanTriplet(24) == 480L)
 ```
 
-a + b + c = 1000 のときピタゴラス数の組の積は31875000でなければならない
+a + b + c = 120のときピタゴラス数の組の積は49920、55080、または60000でなければならない
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(1000) == 31875000)
+tryCatch(specialPythagoreanTriplet(120) in listOf(49920L, 55080L, 60000L))
+```
+
+a + b + c = 1000のときピタゴラス数の組の積は31875000でなければならない
+
+```kotlin
+tryCatch(specialPythagoreanTriplet(1000) == 31875000L)
 ```
 
 # --after-asserts--
@@ -73,15 +82,15 @@ a + b + c = 1000 のときピタゴラス数の組の積は31875000でなけれ�
 # --solutions--
 
 ```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-    for (a in 1 until n) {
-        for (b in a + 1 until n) {
+fun specialPythagoreanTriplet(n: Int): Long {
+    for (a in 1..n / 3) {
+        for (b in a + 1..n / 2) {
             val c = n - a - b
             if (c > b && a * a + b * b == c * c) {
-                return a * b * c
+                return a.toLong() * b.toLong() * c.toLong()
             }
         }
     }
-    return -1
+    return -1L
 }
 ```

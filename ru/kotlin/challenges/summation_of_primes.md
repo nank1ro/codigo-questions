@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Сумма простых чисел
 ---
 
 # --description--
 
-Сумма простых чисел ниже 10 равна 2 + 3 + 5 + 7 = 17. Найдите сумму всех простых чисел ниже двух миллионов.
+Сумма простых чисел меньше 10 равна 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Напишите функцию, которая возвращает сумму всех простых чисел ниже n.
-
-Пример вызова функции:
-```kotlin
-println(primeSummation(10))
-// prints 17
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+Найдите сумму всех простых чисел меньше `n`.
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Сумма простых чисел ниже 10 должна равняться 17
+`primeSummation(17)` должна вернуть 41.
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-Сумма простых чисел ниже 1000 должна равняться 76127
+`primeSummation(2001)` должна вернуть 277050.
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-Сумма простых чисел ниже 100000 должна равняться 454396537
+`primeSummation(140759)` должна вернуть 873608362.
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+`primeSummation(2000000)` должна вернуть 142913828922.
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

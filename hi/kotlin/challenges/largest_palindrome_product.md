@@ -11,21 +11,7 @@ title: सबसे बड़ा पैलिंड्रोम गुणनफ�
 
 # --instructions--
 
-एक ऐसा फ़ंक्शन लिखें जो दो n-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम खोजे।
-
-फ़ंक्शन कॉल का उदाहरण:
-```kotlin
-println(largestPalindromeProduct(2))
-// 9009 प्रिंट करता है
-```
-
-# --seed--
-
-```kotlin
-fun largestPalindromeProduct(n: Int): Int {
-
-}
-```
+दो `n`-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम ज्ञात करें।
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPalindromeProduct(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,13 +51,13 @@ fun main() {
 दो 2-अंकीय संख्याओं का सबसे बड़ा पैलिंड्रोम गुणनफल 9009 होना चाहिए
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(2) == 9009)
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
 दो 3-अंकीय संख्याओं का सबसे बड़ा पैलिंड्रोम गुणनफल 906609 होना चाहिए
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(3) == 906609)
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
@@ -74,16 +73,14 @@ fun main() {
 
 ```kotlin
 fun largestPalindromeProduct(n: Int): Int {
-    val max = Math.pow(10.0, n.toDouble()).toInt() - 1
-    val min = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val start = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val end = Math.pow(10.0, n.toDouble()).toInt() - 1
     var largest = 0
-    for (i in max downTo min) {
-        for (j in i downTo min) {
+    for (i in end downTo start) {
+        for (j in end downTo i) {
             val product = i * j
             if (product <= largest) break
-            if (isPalindrome(product)) {
-                largest = product
-            }
+            if (isPalindrome(product)) largest = product
         }
     }
     return largest

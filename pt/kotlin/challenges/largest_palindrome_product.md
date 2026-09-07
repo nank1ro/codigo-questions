@@ -7,25 +7,11 @@ title: Maior produto palíndromo
 
 # --description--
 
-Um número palíndromo se lê da mesma forma nos dois sentidos. O maior palíndromo formado pelo produto de dois números de 2 dígitos é 9009 = 91 × 99.
+Um número palíndromo é lido da mesma forma nos dois sentidos. O maior palíndromo feito a partir do produto de dois números de 2 dígitos é 9009 = 91 × 99.
 
 # --instructions--
 
-Escreva uma função que encontre o maior palíndromo formado pelo produto de dois números de n dígitos.
-
-Exemplo de chamada da função:
-```kotlin
-println(largestPalindromeProduct(2))
-// imprime 9009
-```
-
-# --seed--
-
-```kotlin
-fun largestPalindromeProduct(n: Int): Int {
-
-}
-```
+Encontre o maior palíndromo feito a partir do produto de dois números de `n` dígitos.
 
 # --before-seed--
 
@@ -44,21 +30,34 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPalindromeProduct(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-O maior produto palíndromo de dois números de 2 dígitos deve ser 9009
+`largestPalindromeProduct(2)` deve retornar 9009.
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(2) == 9009)
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
-O maior produto palíndromo de dois números de 3 dígitos deve ser 906609
+`largestPalindromeProduct(3)` deve retornar 906609.
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(3) == 906609)
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
@@ -74,16 +73,14 @@ O maior produto palíndromo de dois números de 3 dígitos deve ser 906609
 
 ```kotlin
 fun largestPalindromeProduct(n: Int): Int {
-    val max = Math.pow(10.0, n.toDouble()).toInt() - 1
-    val min = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val start = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val end = Math.pow(10.0, n.toDouble()).toInt() - 1
     var largest = 0
-    for (i in max downTo min) {
-        for (j in i downTo min) {
+    for (i in end downTo start) {
+        for (j in end downTo i) {
             val product = i * j
             if (product <= largest) break
-            if (isPalindrome(product)) {
-                largest = product
-            }
+            if (isPalindrome(product)) largest = product
         }
     }
     return largest

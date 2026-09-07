@@ -7,25 +7,11 @@ title: अभाज्य संख्याओं का योग
 
 # --description--
 
-10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है। दो मिलियन से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
+10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है।
 
 # --instructions--
 
-एक ऐसा फ़ंक्शन लिखें जो n से कम सभी अभाज्य संख्याओं का योग लौटाए।
-
-फ़ंक्शन कॉल का उदाहरण:
-```kotlin
-println(primeSummation(10))
-// 17 प्रिंट करता है
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+`n` से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-10 से कम अभाज्य संख्याओं का योग 17 होना चाहिए
+17 से कम अभाज्य संख्याओं का योग 41 होना चाहिए
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-1000 से कम अभाज्य संख्याओं का योग 76127 होना चाहिए
+2001 से कम अभाज्य संख्याओं का योग 277050 होना चाहिए
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-100000 से कम अभाज्य संख्याओं का योग 454396537 होना चाहिए
+140759 से कम अभाज्य संख्याओं का योग 873608362 होना चाहिए
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+2000000 से कम अभाज्य संख्याओं का योग 142913828922 होना चाहिए
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

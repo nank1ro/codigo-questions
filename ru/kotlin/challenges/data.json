@@ -60,7 +60,7 @@
     "isPro": true
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001-е простое число"
   },
   "largest_palindrome_product": {
@@ -76,7 +76,7 @@
     "name": "Наибольшее произведение в последовательности"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Наименьшее кратное"
   },
   "special_pythagorean_triplet": {

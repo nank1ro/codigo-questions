@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
-title: 10001st prime
+difficulty: 1
+title: 第10001个质数
 ---
 
 # --description--
 
-列出前六个质数：2、3、5、7、11 和 13，可以看出第 6 个质数是 13。
+列出前六个素数：2、3、5、7、11和13，我们可以看到第6个素数是13。
 
 # --instructions--
 
-编写一个函数，返回第 n 个质数。
-
-函数调用示例：
-```kotlin
-println(nthPrime(6))
-// prints 13
-```
-
-# --seed--
-
-```kotlin
-fun nthPrime(n: Int): Int {
-
-}
-```
+第`n`个素数是什么？
 
 # --before-seed--
 
@@ -44,33 +30,52 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun nthPrime(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-第 6 个质数必须为 13
+`nthPrime(6)` 应返回13。
 
 ```kotlin
-    tryCatch(nthPrime(6) == 13)
+tryCatch(nthPrime(6) == 13)
 ```
 
-第 10 个质数必须为 29
+`nthPrime(10)` 应返回29。
 
 ```kotlin
-    tryCatch(nthPrime(10) == 29)
+tryCatch(nthPrime(10) == 29)
 ```
 
-第 1000 个质数必须为 7919
+`nthPrime(100)` 应返回541。
 
 ```kotlin
-    tryCatch(nthPrime(1000) == 7919)
+tryCatch(nthPrime(100) == 541)
 ```
 
-第 10001 个质数必须为 104743
+`nthPrime(1000)` 应返回7919。
 
 ```kotlin
-    tryCatch(nthPrime(10001) == 104743)
+tryCatch(nthPrime(1000) == 7919)
+```
+
+`nthPrime(10001)` 应返回104743。
+
+```kotlin
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--

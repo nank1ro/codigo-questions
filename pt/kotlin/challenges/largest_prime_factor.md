@@ -7,25 +7,11 @@ title: Maior fator primo
 
 # --description--
 
-Os fatores primos de 13195 são 5, 7, 13 e 29. Qual é o maior fator primo do número 600851475143?
+Os fatores primos de 13195 são 5, 7, 13 e 29.
 
 # --instructions--
 
-Escreva uma função que retorne o maior fator primo de um número dado.
-
-Exemplo de chamada da função:
-```kotlin
-println(largestPrimeFactor(13195L))
-// imprime 29
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+Qual é o maior fator primo do `number` dado?
 
 # --before-seed--
 
@@ -44,27 +30,64 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-O maior fator primo de 2 deve ser 2
+`largestPrimeFactor(2)` deve retornar 2.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
 ```
 
-O maior fator primo de 13195 deve ser 29
+`largestPrimeFactor(3)` deve retornar 3.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(3) == 3L)
 ```
 
-O maior fator primo de 600851475143 deve ser 6857
+`largestPrimeFactor(5)` deve retornar 5.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+`largestPrimeFactor(7)` deve retornar 7.
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+`largestPrimeFactor(8)` deve retornar 2.
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
+```
+
+`largestPrimeFactor(13195)` deve retornar 29.
+
+```kotlin
+tryCatch(largestPrimeFactor(13195) == 29L)
+```
+
+`largestPrimeFactor(600851475143)` deve retornar 6857.
+
+```kotlin
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

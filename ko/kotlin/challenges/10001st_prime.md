@@ -1,7 +1,7 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
+difficulty: 1
 title: 10001번째 소수
 ---
 
@@ -11,21 +11,7 @@ title: 10001번째 소수
 
 # --instructions--
 
-n번째 소수를 반환하는 함수를 작성하세요.
-
-함수 호출 예시:
-```kotlin
-println(nthPrime(6))
-// 13 출력
-```
-
-# --seed--
-
-```kotlin
-fun nthPrime(n: Int): Int {
-
-}
-```
+`n`번째 소수는 무엇입니까?
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun nthPrime(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,25 +51,31 @@ fun main() {
 6번째 소수는 13이어야 합니다
 
 ```kotlin
-    tryCatch(nthPrime(6) == 13)
+tryCatch(nthPrime(6) == 13)
 ```
 
 10번째 소수는 29이어야 합니다
 
 ```kotlin
-    tryCatch(nthPrime(10) == 29)
+tryCatch(nthPrime(10) == 29)
+```
+
+100번째 소수는 541이어야 합니다
+
+```kotlin
+tryCatch(nthPrime(100) == 541)
 ```
 
 1000번째 소수는 7919이어야 합니다
 
 ```kotlin
-    tryCatch(nthPrime(1000) == 7919)
+tryCatch(nthPrime(1000) == 7919)
 ```
 
 10001번째 소수는 104743이어야 합니다
 
 ```kotlin
-    tryCatch(nthPrime(10001) == 104743)
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--

@@ -9,11 +9,11 @@ title: Sum square difference
 
 The sum of the squares of the first ten natural numbers is,
 
-12 + 22 + ... + 102 = 385
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
 
 The square of the sum of the first ten natural numbers is,
 
-(1 + 2 + ... + 10)2 = 552 = 3025
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
 
 Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
 

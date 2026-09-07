@@ -2,30 +2,20 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Szczególna trójka pitagorejska
 ---
 
 # --description--
 
-Trójka pitagorejska to zbiór trzech liczb naturalnych, a < b < c, dla których a² + b² = c². Istnieje dokładnie jedna trójka pitagorejska, dla której a + b + c = 1000. Znajdź iloczyn a × b × c.
+Trójka pitagorejska to zbiór trzech liczb naturalnych, `a` < `b` < `c`, dla których zachodzi <latex>a^2 + b^2 = c^2</latex>
+
+Na przykład, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+
+Istnieje dokładnie jedna trójka pitagorejska, dla której `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Napisz funkcję, która znajduje iloczyn trójki pitagorejskiej, gdzie a + b + c = n.
-
-Przykład wywołania funkcji:
-```kotlin
-println(specialPythagoreanTriplet(12))
-// prints 60
-```
-
-# --seed--
-
-```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-
-}
-```
+Znajdź iloczyn `abc` taki, że `a` + `b` + `c` = `n`.
 
 # --before-seed--
 
@@ -44,21 +34,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun specialPythagoreanTriplet(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Iloczyn trójki pitagorejskiej, gdzie a + b + c = 12, musi wynosić 60
+`specialPythagoreanTriplet(24)` powinno zwrócić 480.
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(12) == 60)
+tryCatch(specialPythagoreanTriplet(24) == 480L)
 ```
 
-Iloczyn trójki pitagorejskiej, gdzie a + b + c = 1000, musi wynosić 31875000
+`specialPythagoreanTriplet(120)` powinno zwrócić 49920, 55080 lub 60000.
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(1000) == 31875000)
+tryCatch(specialPythagoreanTriplet(120) in listOf(49920L, 55080L, 60000L))
+```
+
+`specialPythagoreanTriplet(1000)` powinno zwrócić 31875000.
+
+```kotlin
+tryCatch(specialPythagoreanTriplet(1000) == 31875000L)
 ```
 
 # --after-asserts--
@@ -73,15 +82,15 @@ Iloczyn trójki pitagorejskiej, gdzie a + b + c = 1000, musi wynosić 31875000
 # --solutions--
 
 ```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-    for (a in 1 until n) {
-        for (b in a + 1 until n) {
+fun specialPythagoreanTriplet(n: Int): Long {
+    for (a in 1..n / 3) {
+        for (b in a + 1..n / 2) {
             val c = n - a - b
             if (c > b && a * a + b * b == c * c) {
-                return a * b * c
+                return a.toLong() * b.toLong() * c.toLong()
             }
         }
     }
-    return -1
+    return -1L
 }
 ```

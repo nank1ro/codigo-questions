@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Największy palindrom będący iloczynem
 ---
 
 # --description--
@@ -11,21 +11,7 @@ Liczba palindromiczna czyta się tak samo w obu kierunkach. Największy palindro
 
 # --instructions--
 
-Napisz funkcję, która znajduje największy palindrom będący iloczynem dwóch n-cyfrowych liczb.
-
-Przykład wywołania funkcji:
-```kotlin
-println(largestPalindromeProduct(2))
-// prints 9009
-```
-
-# --seed--
-
-```kotlin
-fun largestPalindromeProduct(n: Int): Int {
-
-}
-```
+Znajdź największy palindrom będący iloczynem dwóch `n`-cyfrowych liczb.
 
 # --before-seed--
 
@@ -44,21 +30,34 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPalindromeProduct(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Największy palindrom będący iloczynem dwóch 2-cyfrowych liczb musi wynosić 9009
+`largestPalindromeProduct(2)` powinno zwrócić 9009.
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(2) == 9009)
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
-Największy palindrom będący iloczynem dwóch 3-cyfrowych liczb musi wynosić 906609
+`largestPalindromeProduct(3)` powinno zwrócić 906609.
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(3) == 906609)
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
@@ -74,16 +73,14 @@ Największy palindrom będący iloczynem dwóch 3-cyfrowych liczb musi wynosić 
 
 ```kotlin
 fun largestPalindromeProduct(n: Int): Int {
-    val max = Math.pow(10.0, n.toDouble()).toInt() - 1
-    val min = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val start = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val end = Math.pow(10.0, n.toDouble()).toInt() - 1
     var largest = 0
-    for (i in max downTo min) {
-        for (j in i downTo min) {
+    for (i in end downTo start) {
+        for (j in end downTo i) {
             val product = i * j
             if (product <= largest) break
-            if (isPalindrome(product)) {
-                largest = product
-            }
+            if (isPalindrome(product)) largest = product
         }
     }
     return largest

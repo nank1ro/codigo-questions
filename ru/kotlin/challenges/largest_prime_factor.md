@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Наибольший простой множитель
 ---
 
 # --description--
 
-Простые множители числа 13195 — это 5, 7, 13 и 29. Каков наибольший простой множитель числа 600851475143?
+Простые делители числа 13195 — это 5, 7, 13 и 29.
 
 # --instructions--
 
-Напишите функцию, которая возвращает наибольший простой множитель заданного числа.
-
-Пример вызова функции:
-```kotlin
-println(largestPrimeFactor(13195L))
-// prints 29
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+Какой наибольший простой делитель заданного числа `number`?
 
 # --before-seed--
 
@@ -44,27 +30,64 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Наибольший простой множитель числа 2 должен равняться 2
+`largestPrimeFactor(2)` должна вернуть 2.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
 ```
 
-Наибольший простой множитель числа 13195 должен равняться 29
+`largestPrimeFactor(3)` должна вернуть 3.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(3) == 3L)
 ```
 
-Наибольший простой множитель числа 600851475143 должен равняться 6857
+`largestPrimeFactor(5)` должна вернуть 5.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+`largestPrimeFactor(7)` должна вернуть 7.
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+`largestPrimeFactor(8)` должна вернуть 2.
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
+```
+
+`largestPrimeFactor(13195)` должна вернуть 29.
+
+```kotlin
+tryCatch(largestPrimeFactor(13195) == 29L)
+```
+
+`largestPrimeFactor(600851475143)` должна вернуть 6857.
+
+```kotlin
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

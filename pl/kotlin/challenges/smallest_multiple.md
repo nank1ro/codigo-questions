@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
-title: Smallest multiple
+difficulty: 1
+title: Najmniejsza wielokrotność
 ---
 
 # --description--
 
-2520 to najmniejsza liczba, która bez reszty dzieli się przez każdą z liczb od 1 do 10. Jaka jest najmniejsza dodatnia liczba podzielna przez wszystkie liczby od 1 do n?
+2520 to najmniejsza liczba, która może być podzielona przez każdą z liczb od 1 do 10 bez reszty.
 
 # --instructions--
 
-Napisz funkcję, która zwraca najmniejszą dodatnią liczbę podzielną przez wszystkie liczby od 1 do n.
-
-Przykład wywołania funkcji:
-```kotlin
-println(smallestMultiple(10))
-// prints 2520
-```
-
-# --seed--
-
-```kotlin
-fun smallestMultiple(n: Int): Long {
-
-}
-```
+Jaka jest najmniejsza dodatnia liczba, która jest równomiernie podzielna przez wszystkie liczby od 1 do `n`?
 
 # --before-seed--
 
@@ -44,27 +30,52 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun smallestMultiple(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Najmniejsza wielokrotność dla liczb od 1 do 5 musi wynosić 60
+`smallestMultiple(5)` powinno zwrócić 60.
 
 ```kotlin
-    tryCatch(smallestMultiple(5) == 60L)
+tryCatch(smallestMultiple(5) == 60L)
 ```
 
-Najmniejsza wielokrotność dla liczb od 1 do 10 musi wynosić 2520
+`smallestMultiple(7)` powinno zwrócić 420.
 
 ```kotlin
-    tryCatch(smallestMultiple(10) == 2520L)
+tryCatch(smallestMultiple(7) == 420L)
 ```
 
-Najmniejsza wielokrotność dla liczb od 1 do 20 musi wynosić 232792560
+`smallestMultiple(10)` powinno zwrócić 2520.
 
 ```kotlin
-    tryCatch(smallestMultiple(20) == 232792560L)
+tryCatch(smallestMultiple(10) == 2520L)
+```
+
+`smallestMultiple(13)` powinno zwrócić 360360.
+
+```kotlin
+tryCatch(smallestMultiple(13) == 360360L)
+```
+
+`smallestMultiple(20)` powinno zwrócić 232792560.
+
+```kotlin
+tryCatch(smallestMultiple(20) == 232792560L)
 ```
 
 # --after-asserts--
@@ -80,14 +91,8 @@ Najmniejsza wielokrotność dla liczb od 1 do 20 musi wynosić 232792560
 
 ```kotlin
 fun smallestMultiple(n: Int): Long {
-    var result = 1L
-    for (i in 2..n) {
-        result = lcm(result, i.toLong())
-    }
-    return result
+    fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
+    fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
+    return (2..n).fold(1L) { acc, i -> lcm(acc, i.toLong()) }
 }
-
-fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
-
-fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
 ```

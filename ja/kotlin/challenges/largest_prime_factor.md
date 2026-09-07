@@ -7,25 +7,11 @@ title: 最大の素因数
 
 # --description--
 
-13195の素因数は5、7、13、29です。600851475143の最大の素因数は何ですか？
+13195の素因数は5、7、13、29です。
 
 # --instructions--
 
-与えられた数の最大の素因数を返す関数を書いてください。
-
-関数呼び出しの例：
-```kotlin
-println(largestPrimeFactor(13195L))
-// 29 を出力
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+与えられた`number`の最大の素因数は何ですか？
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,19 +51,43 @@ fun main() {
 2の最大の素因数は2でなければならない
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
+```
+
+3の最大の素因数は3でなければならない
+
+```kotlin
+tryCatch(largestPrimeFactor(3) == 3L)
+```
+
+5の最大の素因数は5でなければならない
+
+```kotlin
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+7の最大の素因数は7でなければならない
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+8の最大の素因数は2でなければならない
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
 ```
 
 13195の最大の素因数は29でなければならない
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(13195) == 29L)
 ```
 
 600851475143の最大の素因数は6857でなければならない
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

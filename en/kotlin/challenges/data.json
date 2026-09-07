@@ -60,7 +60,7 @@
     "isPro": true
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001st prime"
   },
   "largest_palindrome_product": {
@@ -76,7 +76,7 @@
     "name": "Largest product in a series"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Smallest multiple"
   },
   "special_pythagorean_triplet": {

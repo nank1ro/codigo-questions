@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
+difficulty: 1
 title: सबसे छोटा गुणज
 ---
 
 # --description--
 
-2520 सबसे छोटी संख्या है जिसे 1 से 10 तक की प्रत्येक संख्या से बिना शेष के विभाजित किया जा सकता है। वह सबसे छोटी धनात्मक संख्या क्या है जो 1 से n तक की सभी संख्याओं से समान रूप से विभाज्य है?
+2520 सबसे छोटी संख्या है जिसे 1 से 10 तक की प्रत्येक संख्या से बिना शेष के विभाजित किया जा सकता है।
 
 # --instructions--
 
-एक ऐसा फ़ंक्शन लिखें जो 1 से n तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या लौटाए।
-
-फ़ंक्शन कॉल का उदाहरण:
-```kotlin
-println(smallestMultiple(10))
-// 2520 प्रिंट करता है
-```
-
-# --seed--
-
-```kotlin
-fun smallestMultiple(n: Int): Long {
-
-}
-```
+1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या क्या है?
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun smallestMultiple(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,19 +51,31 @@ fun main() {
 1 से 5 तक का सबसे छोटा गुणज 60 होना चाहिए
 
 ```kotlin
-    tryCatch(smallestMultiple(5) == 60L)
+tryCatch(smallestMultiple(5) == 60L)
+```
+
+1 से 7 तक का सबसे छोटा गुणज 420 होना चाहिए
+
+```kotlin
+tryCatch(smallestMultiple(7) == 420L)
 ```
 
 1 से 10 तक का सबसे छोटा गुणज 2520 होना चाहिए
 
 ```kotlin
-    tryCatch(smallestMultiple(10) == 2520L)
+tryCatch(smallestMultiple(10) == 2520L)
+```
+
+1 से 13 तक का सबसे छोटा गुणज 360360 होना चाहिए
+
+```kotlin
+tryCatch(smallestMultiple(13) == 360360L)
 ```
 
 1 से 20 तक का सबसे छोटा गुणज 232792560 होना चाहिए
 
 ```kotlin
-    tryCatch(smallestMultiple(20) == 232792560L)
+tryCatch(smallestMultiple(20) == 232792560L)
 ```
 
 # --after-asserts--
@@ -80,14 +91,8 @@ fun main() {
 
 ```kotlin
 fun smallestMultiple(n: Int): Long {
-    var result = 1L
-    for (i in 2..n) {
-        result = lcm(result, i.toLong())
-    }
-    return result
+    fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
+    fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
+    return (2..n).fold(1L) { acc, i -> lcm(acc, i.toLong()) }
 }
-
-fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
-
-fun lcm(a: Long, b: Long): Long = a / gcd(a, b) * b
 ```

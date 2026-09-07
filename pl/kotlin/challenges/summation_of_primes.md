@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Suma liczb pierwszych
 ---
 
 # --description--
 
-Suma liczb pierwszych poniżej 10 wynosi 2 + 3 + 5 + 7 = 17. Znajdź sumę wszystkich liczb pierwszych poniżej dwóch milionów.
+Suma liczb pierwszych poniżej 10 wynosi 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Napisz funkcję, która zwraca sumę wszystkich liczb pierwszych poniżej n.
-
-Przykład wywołania funkcji:
-```kotlin
-println(primeSummation(10))
-// prints 17
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+Znajdź sumę wszystkich liczb pierwszych poniżej `n`.
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Suma liczb pierwszych poniżej 10 musi wynosić 17
+`primeSummation(17)` powinno zwrócić 41.
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-Suma liczb pierwszych poniżej 1000 musi wynosić 76127
+`primeSummation(2001)` powinno zwrócić 277050.
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-Suma liczb pierwszych poniżej 100000 musi wynosić 454396537
+`primeSummation(140759)` powinno zwrócić 873608362.
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+`primeSummation(2000000)` powinno zwrócić 142913828922.
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

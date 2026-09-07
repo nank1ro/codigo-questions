@@ -60,7 +60,7 @@
     "isPro": true
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001번째 소수"
   },
   "largest_palindrome_product": {
@@ -76,7 +76,7 @@
     "name": "수열에서 가장 큰 곱"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "가장 작은 공배수"
   },
   "special_pythagorean_triplet": {

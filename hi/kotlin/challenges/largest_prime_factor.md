@@ -7,25 +7,11 @@ title: सबसे बड़ा अभाज्य गुणनखंड
 
 # --description--
 
-13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं। संख्या 600851475143 का सबसे बड़ा अभाज्य गुणनखंड क्या है?
+13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं।
 
 # --instructions--
 
-एक ऐसा फ़ंक्शन लिखें जो किसी दी गई संख्या का सबसे बड़ा अभाज्य गुणनखंड लौटाए।
-
-फ़ंक्शन कॉल का उदाहरण:
-```kotlin
-println(largestPrimeFactor(13195L))
-// 29 प्रिंट करता है
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+दिए गए `number` का सबसे बड़ा अभाज्य गुणनखंड क्या है?
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,19 +51,43 @@ fun main() {
 2 का सबसे बड़ा अभाज्य गुणनखंड 2 होना चाहिए
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
+```
+
+3 का सबसे बड़ा अभाज्य गुणनखंड 3 होना चाहिए
+
+```kotlin
+tryCatch(largestPrimeFactor(3) == 3L)
+```
+
+5 का सबसे बड़ा अभाज्य गुणनखंड 5 होना चाहिए
+
+```kotlin
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+7 का सबसे बड़ा अभाज्य गुणनखंड 7 होना चाहिए
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+8 का सबसे बड़ा अभाज्य गुणनखंड 2 होना चाहिए
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
 ```
 
 13195 का सबसे बड़ा अभाज्य गुणनखंड 29 होना चाहिए
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(13195) == 29L)
 ```
 
 600851475143 का सबसे बड़ा अभाज्य गुणनखंड 6857 होना चाहिए
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

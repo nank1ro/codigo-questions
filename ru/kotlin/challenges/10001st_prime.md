@@ -1,31 +1,17 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
-title: 10001st prime
+difficulty: 1
+title: 10001-е простое число
 ---
 
 # --description--
 
-Перечислив первые шесть простых чисел: 2, 3, 5, 7, 11 и 13, можно увидеть, что шестое простое число равно 13.
+Перечислив первые шесть простых чисел: 2, 3, 5, 7, 11 и 13, мы видим, что 6-е простое число — это 13.
 
 # --instructions--
 
-Напишите функцию, которая возвращает n-е простое число.
-
-Пример вызова функции:
-```kotlin
-println(nthPrime(6))
-// prints 13
-```
-
-# --seed--
-
-```kotlin
-fun nthPrime(n: Int): Int {
-
-}
-```
+Какое `n`-е простое число?
 
 # --before-seed--
 
@@ -44,33 +30,52 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun nthPrime(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-6-е простое число должно равняться 13
+`nthPrime(6)` должна вернуть 13.
 
 ```kotlin
-    tryCatch(nthPrime(6) == 13)
+tryCatch(nthPrime(6) == 13)
 ```
 
-10-е простое число должно равняться 29
+`nthPrime(10)` должна вернуть 29.
 
 ```kotlin
-    tryCatch(nthPrime(10) == 29)
+tryCatch(nthPrime(10) == 29)
 ```
 
-1000-е простое число должно равняться 7919
+`nthPrime(100)` должна вернуть 541.
 
 ```kotlin
-    tryCatch(nthPrime(1000) == 7919)
+tryCatch(nthPrime(100) == 541)
 ```
 
-10001-е простое число должно равняться 104743
+`nthPrime(1000)` должна вернуть 7919.
 
 ```kotlin
-    tryCatch(nthPrime(10001) == 104743)
+tryCatch(nthPrime(1000) == 7919)
+```
+
+`nthPrime(10001)` должна вернуть 104743.
+
+```kotlin
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--

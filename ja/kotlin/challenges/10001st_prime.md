@@ -1,7 +1,7 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
+difficulty: 1
 title: 10001番目の素数
 ---
 
@@ -11,21 +11,7 @@ title: 10001番目の素数
 
 # --instructions--
 
-n番目の素数を返す関数を書いてください。
-
-関数呼び出しの例：
-```kotlin
-println(nthPrime(6))
-// 13 を出力
-```
-
-# --seed--
-
-```kotlin
-fun nthPrime(n: Int): Int {
-
-}
-```
+`n`番目の素数は何ですか？
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun nthPrime(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,25 +51,31 @@ fun main() {
 6番目の素数は13でなければならない
 
 ```kotlin
-    tryCatch(nthPrime(6) == 13)
+tryCatch(nthPrime(6) == 13)
 ```
 
 10番目の素数は29でなければならない
 
 ```kotlin
-    tryCatch(nthPrime(10) == 29)
+tryCatch(nthPrime(10) == 29)
+```
+
+100番目の素数は541でなければならない
+
+```kotlin
+tryCatch(nthPrime(100) == 541)
 ```
 
 1000番目の素数は7919でなければならない
 
 ```kotlin
-    tryCatch(nthPrime(1000) == 7919)
+tryCatch(nthPrime(1000) == 7919)
 ```
 
 10001番目の素数は104743でなければならない
 
 ```kotlin
-    tryCatch(nthPrime(10001) == 104743)
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--

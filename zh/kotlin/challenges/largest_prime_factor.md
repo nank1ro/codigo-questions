@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: 最大质因数
 ---
 
 # --description--
 
-13195 的质因数为 5、7、13 和 29。数字 600851475143 的最大质因数是多少？
+13195的质因数是5、7、13和29。
 
 # --instructions--
 
-编写一个函数，返回给定数字的最大质因数。
-
-函数调用示例：
-```kotlin
-println(largestPrimeFactor(13195L))
-// prints 29
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+给定 `number` 的最大质因数是什么？
 
 # --before-seed--
 
@@ -44,27 +30,64 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-数字 2 的最大质因数必须为 2
+`largestPrimeFactor(2)` 应返回2。
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
 ```
 
-数字 13195 的最大质因数必须为 29
+`largestPrimeFactor(3)` 应返回3。
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(3) == 3L)
 ```
 
-数字 600851475143 的最大质因数必须为 6857
+`largestPrimeFactor(5)` 应返回5。
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+`largestPrimeFactor(7)` 应返回7。
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+`largestPrimeFactor(8)` 应返回2。
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
+```
+
+`largestPrimeFactor(13195)` 应返回29。
+
+```kotlin
+tryCatch(largestPrimeFactor(13195) == 29L)
+```
+
+`largestPrimeFactor(600851475143)` 应返回6857。
+
+```kotlin
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

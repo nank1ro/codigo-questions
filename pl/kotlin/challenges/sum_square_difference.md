@@ -2,30 +2,24 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: Różnica kwadratów sum
 ---
 
 # --description--
 
-Suma kwadratów pierwszych dziesięciu liczb naturalnych wynosi 1² + 2² + ... + 10² = 385. Kwadrat sumy pierwszych dziesięciu liczb naturalnych wynosi (1 + 2 + ... + 10)² = 55² = 3025. Różnica między kwadratem sumy a sumą kwadratów pierwszych dziesięciu liczb naturalnych wynosi 3025 − 385 = 2640.
+Suma kwadratów pierwszych dziesięciu liczb naturalnych wynosi,
+
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
+
+Kwadrat sumy pierwszych dziesięciu liczb naturalnych wynosi,
+
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
+
+Zatem różnica między sumą kwadratów pierwszych dziesięciu liczb naturalnych a kwadratem sumy wynosi 3025 − 385 = 2640.
 
 # --instructions--
 
-Napisz funkcję, która wyznacza różnicę między kwadratem sumy a sumą kwadratów pierwszych n liczb naturalnych.
-
-Przykład wywołania funkcji:
-```kotlin
-println(sumSquareDifference(10))
-// prints 2640
-```
-
-# --seed--
-
-```kotlin
-fun sumSquareDifference(n: Int): Int {
-
-}
-```
+Znajdź różnicę między sumą kwadratów pierwszych `n` liczb naturalnych a kwadratem sumy.
 
 # --before-seed--
 
@@ -44,27 +38,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun sumSquareDifference(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Różnica kwadratów sum dla n = 10 musi wynosić 2640
+`sumSquareDifference(10)` powinno zwrócić 2640.
 
 ```kotlin
-    tryCatch(sumSquareDifference(10) == 2640)
+tryCatch(sumSquareDifference(10) == 2640L)
 ```
 
-Różnica kwadratów sum dla n = 20 musi wynosić 41230
+`sumSquareDifference(20)` powinno zwrócić 41230.
 
 ```kotlin
-    tryCatch(sumSquareDifference(20) == 41230)
+tryCatch(sumSquareDifference(20) == 41230L)
 ```
 
-Różnica kwadratów sum dla n = 100 musi wynosić 25164150
+`sumSquareDifference(100)` powinno zwrócić 25164150.
 
 ```kotlin
-    tryCatch(sumSquareDifference(100) == 25164150)
+tryCatch(sumSquareDifference(100) == 25164150L)
 ```
 
 # --after-asserts--
@@ -79,10 +86,9 @@ Różnica kwadratów sum dla n = 100 musi wynosić 25164150
 # --solutions--
 
 ```kotlin
-fun sumSquareDifference(n: Int): Int {
-    val sumOfSquares = (1..n).sumOf { it * it }
-    val sum = (1..n).sum()
-    val squareOfSum = sum * sum
-    return squareOfSum - sumOfSquares
+fun sumSquareDifference(n: Int): Long {
+    val sumOfSquares = (1..n).sumOf { it.toLong() * it.toLong() }
+    val sum = (1..n).sumOf { it.toLong() }
+    return sum * sum - sumOfSquares
 }
 ```

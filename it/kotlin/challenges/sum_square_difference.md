@@ -9,11 +9,11 @@ title: Sum square difference
 
 La somma dei quadrati dei primi dieci numeri naturali è:
 
-12 + 22 + ... + 102 = 385
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
 
 Il quadrato della somma dei primi dieci numeri naturali è:
 
-(1 + 2 + ... + 10)2 = 552 = 3025
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
 
 Quindi la differenza tra la somma dei quadrati dei primi dieci numeri naturali e il quadrato della somma è 3025 − 385 = 2640.
 

@@ -60,7 +60,7 @@
     "isPro": true
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001. liczba pierwsza"
   },
   "largest_palindrome_product": {
@@ -76,7 +76,7 @@
     "name": "Największy iloczyn w ciągu"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Najmniejsza wielokrotność"
   },
   "special_pythagorean_triplet": {

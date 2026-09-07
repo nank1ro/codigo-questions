@@ -7,25 +7,11 @@ title: 가장 큰 소인수
 
 # --description--
 
-13195의 소인수는 5, 7, 13, 29입니다. 600851475143의 가장 큰 소인수는 무엇입니까?
+13195의 소인수는 5, 7, 13, 29입니다.
 
 # --instructions--
 
-주어진 수의 가장 큰 소인수를 반환하는 함수를 작성하세요.
-
-함수 호출 예시:
-```kotlin
-println(largestPrimeFactor(13195L))
-// 29 출력
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+주어진 `number`의 가장 큰 소인수는 무엇입니까?
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,19 +51,43 @@ fun main() {
 2의 가장 큰 소인수는 2이어야 합니다
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
+```
+
+3의 가장 큰 소인수는 3이어야 합니다
+
+```kotlin
+tryCatch(largestPrimeFactor(3) == 3L)
+```
+
+5의 가장 큰 소인수는 5이어야 합니다
+
+```kotlin
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+7의 가장 큰 소인수는 7이어야 합니다
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+8의 가장 큰 소인수는 2이어야 합니다
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
 ```
 
 13195의 가장 큰 소인수는 29이어야 합니다
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(13195) == 29L)
 ```
 
 600851475143의 가장 큰 소인수는 6857이어야 합니다
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

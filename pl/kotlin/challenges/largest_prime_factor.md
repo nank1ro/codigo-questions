@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Największy czynnik pierwszy
 ---
 
 # --description--
 
-Pierwiastki pierwsze liczby 13195 to 5, 7, 13 i 29. Jaki jest największy czynnik pierwszy liczby 600851475143?
+Czynniki pierwsze liczby 13195 to 5, 7, 13 i 29.
 
 # --instructions--
 
-Napisz funkcję, która zwraca największy czynnik pierwszy podanej liczby.
-
-Przykład wywołania funkcji:
-```kotlin
-println(largestPrimeFactor(13195L))
-// prints 29
-```
-
-# --seed--
-
-```kotlin
-fun largestPrimeFactor(number: Long): Long {
-
-}
-```
+Jaki jest największy czynnik pierwszy podanej liczby `number`?
 
 # --before-seed--
 
@@ -44,27 +30,64 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPrimeFactor(number: Long): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-Największy czynnik pierwszy liczby 2 musi wynosić 2
+`largestPrimeFactor(2)` powinno zwrócić 2.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(2L) == 2L)
+tryCatch(largestPrimeFactor(2) == 2L)
 ```
 
-Największy czynnik pierwszy liczby 13195 musi wynosić 29
+`largestPrimeFactor(3)` powinno zwrócić 3.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(13195L) == 29L)
+tryCatch(largestPrimeFactor(3) == 3L)
 ```
 
-Największy czynnik pierwszy liczby 600851475143 musi wynosić 6857
+`largestPrimeFactor(5)` powinno zwrócić 5.
 
 ```kotlin
-    tryCatch(largestPrimeFactor(600851475143L) == 6857L)
+tryCatch(largestPrimeFactor(5) == 5L)
+```
+
+`largestPrimeFactor(7)` powinno zwrócić 7.
+
+```kotlin
+tryCatch(largestPrimeFactor(7) == 7L)
+```
+
+`largestPrimeFactor(8)` powinno zwrócić 2.
+
+```kotlin
+tryCatch(largestPrimeFactor(8) == 2L)
+```
+
+`largestPrimeFactor(13195)` powinno zwrócić 29.
+
+```kotlin
+tryCatch(largestPrimeFactor(13195) == 29L)
+```
+
+`largestPrimeFactor(600851475143)` powinno zwrócić 6857.
+
+```kotlin
+tryCatch(largestPrimeFactor(600851475143) == 6857L)
 ```
 
 # --after-asserts--

@@ -1,7 +1,7 @@
 ---
 language: kotlin
 exerciseType: 1
-difficulty: 2
+difficulty: 1
 title: 10001वाँ अभाज्य संख्या
 ---
 
@@ -11,21 +11,7 @@ title: 10001वाँ अभाज्य संख्या
 
 # --instructions--
 
-एक ऐसा फ़ंक्शन लिखें जो n-वीं अभाज्य संख्या लौटाए।
-
-फ़ंक्शन कॉल का उदाहरण:
-```kotlin
-println(nthPrime(6))
-// 13 प्रिंट करता है
-```
-
-# --seed--
-
-```kotlin
-fun nthPrime(n: Int): Int {
-
-}
-```
+`n`वीं अभाज्य संख्या क्या है?
 
 # --before-seed--
 
@@ -44,6 +30,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun nthPrime(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,25 +51,31 @@ fun main() {
 6वीं अभाज्य संख्या 13 होनी चाहिए
 
 ```kotlin
-    tryCatch(nthPrime(6) == 13)
+tryCatch(nthPrime(6) == 13)
 ```
 
 10वीं अभाज्य संख्या 29 होनी चाहिए
 
 ```kotlin
-    tryCatch(nthPrime(10) == 29)
+tryCatch(nthPrime(10) == 29)
+```
+
+100वीं अभाज्य संख्या 541 होनी चाहिए
+
+```kotlin
+tryCatch(nthPrime(100) == 541)
 ```
 
 1000वीं अभाज्य संख्या 7919 होनी चाहिए
 
 ```kotlin
-    tryCatch(nthPrime(1000) == 7919)
+tryCatch(nthPrime(1000) == 7919)
 ```
 
 10001वीं अभाज्य संख्या 104743 होनी चाहिए
 
 ```kotlin
-    tryCatch(nthPrime(10001) == 104743)
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--

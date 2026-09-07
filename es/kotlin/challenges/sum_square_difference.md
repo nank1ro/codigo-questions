@@ -9,11 +9,11 @@ title: Sum square difference
 
 La suma de los cuadrados de los primeros diez números naturales es:
 
-12 + 22 + ... + 102 = 385
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
 
 El cuadrado de la suma de los primeros diez números naturales es:
 
-(1 + 2 + ... + 10)2 = 552 = 3025
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
 
 Por lo tanto, la diferencia entre la suma de los cuadrados de los primeros diez números naturales y el cuadrado de la suma es 3025 − 385 = 2640.
 

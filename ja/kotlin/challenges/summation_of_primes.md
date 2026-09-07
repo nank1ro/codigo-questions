@@ -7,25 +7,11 @@ title: 素数の総和
 
 # --description--
 
-10未満の素数の和は 2 + 3 + 5 + 7 = 17 です。200万未満のすべての素数の和を求めてください。
+10未満の素数の和は 2 + 3 + 5 + 7 = 17 です。
 
 # --instructions--
 
-n未満のすべての素数の和を返す関数を書いてください。
-
-関数呼び出しの例：
-```kotlin
-println(primeSummation(10))
-// 17 を出力
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+`n`未満のすべての素数の和を求めてください。
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-10未満の素数の和は17でなければならない
+17未満の素数の和は41でなければならない
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-1000未満の素数の和は76127でなければならない
+2001未満の素数の和は277050でなければならない
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-100000未満の素数の和は454396537でなければならない
+140759未満の素数の和は873608362でなければならない
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+2000000未満の素数の和は142913828922でなければならない
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

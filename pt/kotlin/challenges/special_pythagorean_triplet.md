@@ -7,25 +7,15 @@ title: Tripla pitagórica especial
 
 # --description--
 
-Uma tripla pitagórica é um conjunto de três números naturais, a < b < c, para os quais a² + b² = c². Existe exatamente uma tripla pitagórica para a qual a + b + c = 1000. Encontre o produto a × b × c.
+Uma tripla pitagórica é um conjunto de três números naturais, `a` < `b` < `c`, para os quais, <latex>a^2 + b^2 = c^2</latex>
+
+Por exemplo, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
+
+Existe exatamente uma tripla pitagórica para a qual `a` + `b` + `c` = 1000.
 
 # --instructions--
 
-Escreva uma função que encontre o produto da tripla pitagórica onde a + b + c = n.
-
-Exemplo de chamada da função:
-```kotlin
-println(specialPythagoreanTriplet(12))
-// imprime 60
-```
-
-# --seed--
-
-```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-
-}
-```
+Encontre o produto `abc` tal que `a` + `b` + `c` = `n`.
 
 # --before-seed--
 
@@ -44,21 +34,40 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun specialPythagoreanTriplet(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-O produto da tripla pitagórica onde a + b + c = 12 deve ser 60
+`specialPythagoreanTriplet(24)` deve retornar 480.
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(12) == 60)
+tryCatch(specialPythagoreanTriplet(24) == 480L)
 ```
 
-O produto da tripla pitagórica onde a + b + c = 1000 deve ser 31875000
+`specialPythagoreanTriplet(120)` deve retornar 49920, 55080 ou 60000.
 
 ```kotlin
-    tryCatch(specialPythagoreanTriplet(1000) == 31875000)
+tryCatch(specialPythagoreanTriplet(120) in listOf(49920L, 55080L, 60000L))
+```
+
+`specialPythagoreanTriplet(1000)` deve retornar 31875000.
+
+```kotlin
+tryCatch(specialPythagoreanTriplet(1000) == 31875000L)
 ```
 
 # --after-asserts--
@@ -73,15 +82,15 @@ O produto da tripla pitagórica onde a + b + c = 1000 deve ser 31875000
 # --solutions--
 
 ```kotlin
-fun specialPythagoreanTriplet(n: Int): Int {
-    for (a in 1 until n) {
-        for (b in a + 1 until n) {
+fun specialPythagoreanTriplet(n: Int): Long {
+    for (a in 1..n / 3) {
+        for (b in a + 1..n / 2) {
             val c = n - a - b
             if (c > b && a * a + b * b == c * c) {
-                return a * b * c
+                return a.toLong() * b.toLong() * c.toLong()
             }
         }
     }
-    return -1
+    return -1L
 }
 ```

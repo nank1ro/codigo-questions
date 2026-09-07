@@ -2,30 +2,16 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 最大回文数乘积
 ---
 
 # --description--
 
-回文数正读反读都一样。由两个 2 位数之积组成的最大回文数为 9009 = 91 × 99。
+回文数正读和反读都一样。由两个2位数的乘积构成的最大回文数是 9009 = 91 × 99。
 
 # --instructions--
 
-编写一个函数，找出由两个 n 位数之积组成的最大回文数。
-
-函数调用示例：
-```kotlin
-println(largestPalindromeProduct(2))
-// prints 9009
-```
-
-# --seed--
-
-```kotlin
-fun largestPalindromeProduct(n: Int): Int {
-
-}
-```
+找出由两个 `n` 位数的乘积构成的最大回文数。
 
 # --before-seed--
 
@@ -44,21 +30,34 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun largestPalindromeProduct(n: Int): Int {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-两个 2 位数之积组成的最大回文数必须为 9009
+`largestPalindromeProduct(2)` 应返回9009。
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(2) == 9009)
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
-两个 3 位数之积组成的最大回文数必须为 906609
+`largestPalindromeProduct(3)` 应返回906609。
 
 ```kotlin
-    tryCatch(largestPalindromeProduct(3) == 906609)
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
@@ -74,16 +73,14 @@ fun main() {
 
 ```kotlin
 fun largestPalindromeProduct(n: Int): Int {
-    val max = Math.pow(10.0, n.toDouble()).toInt() - 1
-    val min = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val start = Math.pow(10.0, (n - 1).toDouble()).toInt()
+    val end = Math.pow(10.0, n.toDouble()).toInt() - 1
     var largest = 0
-    for (i in max downTo min) {
-        for (j in i downTo min) {
+    for (i in end downTo start) {
+        for (j in end downTo i) {
             val product = i * j
             if (product <= largest) break
-            if (isPalindrome(product)) {
-                largest = product
-            }
+            if (isPalindrome(product)) largest = product
         }
     }
     return largest

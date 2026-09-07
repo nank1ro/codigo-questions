@@ -7,25 +7,11 @@ title: 소수의 합산
 
 # --description--
 
-10 미만의 소수의 합은 2 + 3 + 5 + 7 = 17입니다. 200만 미만의 모든 소수의 합을 구하세요.
+10 미만의 소수의 합은 2 + 3 + 5 + 7 = 17입니다.
 
 # --instructions--
 
-n 미만의 모든 소수의 합을 반환하는 함수를 작성하세요.
-
-함수 호출 예시:
-```kotlin
-println(primeSummation(10))
-// 17 출력
-```
-
-# --seed--
-
-```kotlin
-fun primeSummation(n: Int): Long {
-
-}
-```
+`n` 미만의 모든 소수의 합을 구하세요.
 
 # --before-seed--
 
@@ -44,27 +30,46 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun primeSummation(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
 # --asserts--
 
-10 미만의 소수의 합은 17이어야 합니다
+17 미만의 소수의 합은 41이어야 합니다
 
 ```kotlin
-    tryCatch(primeSummation(10) == 17L)
+tryCatch(primeSummation(17) == 41L)
 ```
 
-1000 미만의 소수의 합은 76127이어야 합니다
+2001 미만의 소수의 합은 277050이어야 합니다
 
 ```kotlin
-    tryCatch(primeSummation(1000) == 76127L)
+tryCatch(primeSummation(2001) == 277050L)
 ```
 
-100000 미만의 소수의 합은 454396537이어야 합니다
+140759 미만의 소수의 합은 873608362이어야 합니다
 
 ```kotlin
-    tryCatch(primeSummation(100000) == 454396537L)
+tryCatch(primeSummation(140759) == 873608362L)
+```
+
+2000000 미만의 소수의 합은 142913828922이어야 합니다
+
+```kotlin
+tryCatch(primeSummation(2000000) == 142913828922L)
 ```
 
 # --after-asserts--

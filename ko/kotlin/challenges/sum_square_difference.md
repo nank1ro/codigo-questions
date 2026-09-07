@@ -7,25 +7,19 @@ title: 제곱합의 차이
 
 # --description--
 
-처음 열 개의 자연수의 제곱의 합은 1² + 2² + ... + 10² = 385입니다. 처음 열 개의 자연수의 합의 제곱은 (1 + 2 + ... + 10)² = 55² = 3025입니다. 따라서 처음 열 개의 자연수의 합의 제곱과 제곱의 합의 차이는 3025 − 385 = 2640입니다.
+처음 10개의 자연수의 제곱의 합은,
+
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
+
+처음 10개의 자연수의 합의 제곱은,
+
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
+
+따라서 처음 10개의 자연수의 제곱의 합과 합의 제곱의 차이는 3025 − 385 = 2640입니다.
 
 # --instructions--
 
-처음 n개의 자연수의 합의 제곱과 제곱의 합의 차이를 찾는 함수를 작성하세요.
-
-함수 호출 예시:
-```kotlin
-println(sumSquareDifference(10))
-// 2640 출력
-```
-
-# --seed--
-
-```kotlin
-fun sumSquareDifference(n: Int): Int {
-
-}
-```
+처음 `n`개의 자연수의 제곱의 합과 합의 제곱의 차이를 구하세요.
 
 # --before-seed--
 
@@ -44,6 +38,19 @@ fun tryCatch(assertion: Boolean) {
   }
 };
 // DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```kotlin
+fun sumSquareDifference(n: Int): Long {
+
+}
+```
+
+# --before-asserts--
+
+```kotlin
 fun main() {
 ```
 
@@ -52,19 +59,19 @@ fun main() {
 n = 10일 때 제곱합의 차이는 2640이어야 합니다
 
 ```kotlin
-    tryCatch(sumSquareDifference(10) == 2640)
+tryCatch(sumSquareDifference(10) == 2640L)
 ```
 
 n = 20일 때 제곱합의 차이는 41230이어야 합니다
 
 ```kotlin
-    tryCatch(sumSquareDifference(20) == 41230)
+tryCatch(sumSquareDifference(20) == 41230L)
 ```
 
 n = 100일 때 제곱합의 차이는 25164150이어야 합니다
 
 ```kotlin
-    tryCatch(sumSquareDifference(100) == 25164150)
+tryCatch(sumSquareDifference(100) == 25164150L)
 ```
 
 # --after-asserts--
@@ -79,10 +86,9 @@ n = 100일 때 제곱합의 차이는 25164150이어야 합니다
 # --solutions--
 
 ```kotlin
-fun sumSquareDifference(n: Int): Int {
-    val sumOfSquares = (1..n).sumOf { it * it }
-    val sum = (1..n).sum()
-    val squareOfSum = sum * sum
-    return squareOfSum - sumOfSquares
+fun sumSquareDifference(n: Int): Long {
+    val sumOfSquares = (1..n).sumOf { it.toLong() * it.toLong() }
+    val sum = (1..n).sumOf { it.toLong() }
+    return sum * sum - sumOfSquares
 }
 ```

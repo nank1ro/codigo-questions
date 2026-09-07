@@ -9,11 +9,11 @@ title: Sum square difference
 
 Die Summe der Quadrate der ersten zehn natürlichen Zahlen ist:
 
-12 + 22 + ... + 102 = 385
+<latex>1^2 + 2^2 + ... + 10^2 = 385</latex>
 
 Das Quadrat der Summe der ersten zehn natürlichen Zahlen ist:
 
-(1 + 2 + ... + 10)2 = 552 = 3025
+<latex>(1 + 2 + ... + 10)^2 = 55^2 = 3025</latex>
 
 Die Differenz zwischen der Summe der Quadrate der ersten zehn natürlichen Zahlen und dem Quadrat der Summe beträgt daher 3025 − 385 = 2640.
 
