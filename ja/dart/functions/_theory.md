@@ -51,7 +51,9 @@ Dartは `=>` 構文を使った**アロー関数**をサポートしています
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // アロー関数 — 同じ結果
 int double(int n) => n * 2;
 ```

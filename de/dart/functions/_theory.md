@@ -51,7 +51,9 @@ Dart unterstützt **Pfeilfunktionen** mit der `=>`-Syntax. Wenn der Funktionsrum
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Pfeilfunktion — gleiche Ergebnis
 int double(int n) => n * 2;
 ```

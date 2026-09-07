@@ -51,7 +51,9 @@ Dart suporta **funções de seta** usando a sintaxe `=>`. Quando o corpo de uma 
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Função de seta — mesmo resultado
 int double(int n) => n * 2;
 ```

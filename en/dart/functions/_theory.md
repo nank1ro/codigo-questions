@@ -51,7 +51,9 @@ Dart supports **arrow functions** using the `=>` syntax. When a function body is
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Arrow function — same result
 int double(int n) => n * 2;
 ```

@@ -51,7 +51,9 @@ Dart prend en charge les **fonctions fléchées** avec la syntaxe `=>`. Lorsque 
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Fonction fléchée — même résultat
 int double(int n) => n * 2;
 ```

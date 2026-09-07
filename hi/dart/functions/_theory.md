@@ -51,7 +51,9 @@ Dart `=>` सिंटैक्स का उपयोग करके **ऐर�
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // ऐरो फंक्शन — समान परिणाम
 int double(int n) => n * 2;
 ```

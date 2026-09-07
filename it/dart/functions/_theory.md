@@ -51,7 +51,9 @@ Dart supporta le **funzioni freccia** usando la sintassi `=>`. Quando il corpo d
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Funzione freccia — stesso risultato
 int double(int n) => n * 2;
 ```

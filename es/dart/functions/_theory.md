@@ -51,7 +51,9 @@ Dart admite **funciones flecha** usando la sintaxis `=>`. Cuando el cuerpo de un
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Función flecha — mismo resultado
 int double(int n) => n * 2;
 ```

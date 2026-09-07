@@ -51,7 +51,9 @@ Dart obsługuje **funkcje strzałkowe** z użyciem składni `=>`. Gdy ciało fun
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // Funkcja strzałkowa — ten sam wynik
 int double(int n) => n * 2;
 ```

@@ -51,7 +51,9 @@ Dart는 `=>` 구문을 사용한 **화살표 함수**를 지원합니다. 함수
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // 화살표 함수 — 동일한 결과
 int double(int n) => n * 2;
 ```

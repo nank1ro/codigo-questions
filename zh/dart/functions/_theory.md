@@ -51,7 +51,9 @@ Dart 支持使用 `=>` 语法的**箭头函数**。当函数体是单个表达�
 int double(int n) {
   return n * 2;
 }
+```
 
+```dart
 // 箭头函数——结果相同
 int double(int n) => n * 2;
 ```
