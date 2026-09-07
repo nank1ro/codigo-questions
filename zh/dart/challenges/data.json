@@ -68,7 +68,7 @@
     "name": "最大回文积"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "最小公倍数"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "平方差之和"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "第10001个质数"
   },
   "largest_product_in_a_series": {

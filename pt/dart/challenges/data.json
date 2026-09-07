@@ -68,7 +68,7 @@
     "name": "Maior Produto Palíndromo"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Menor Múltiplo"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Diferença Soma-Quadrado"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "O 10001º Primo"
   },
   "largest_product_in_a_series": {

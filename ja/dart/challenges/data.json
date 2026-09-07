@@ -68,7 +68,7 @@
     "name": "最大回文積"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "最小公倍数"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "和の二乗と二乗の和の差"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001番目の素数"
   },
   "largest_product_in_a_series": {

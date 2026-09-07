@@ -68,7 +68,7 @@
     "name": "Największy iloczyn palindromiczny"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Najmniejsza wspólna wielokrotność"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Różnica kwadratów sum"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001. liczba pierwsza"
   },
   "largest_product_in_a_series": {

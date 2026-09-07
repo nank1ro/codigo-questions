@@ -68,7 +68,7 @@
     "name": "सबसे बड़ा पैलिंड्रोम गुणनफल"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "सबसे छोटा गुणज"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "योग-वर्ग अंतर"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001वीं अभाज्य संख्या"
   },
   "largest_product_in_a_series": {

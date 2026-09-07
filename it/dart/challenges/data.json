@@ -72,11 +72,11 @@
     "name": "Maggior prodotto palindromo"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Minimo comune multiplo"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Il 10001° numero primo"
   },
   "largest_product_in_a_series": {

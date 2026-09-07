@@ -72,11 +72,11 @@
     "name": "Plus grand produit palindromique"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Plus petit multiple commun"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Le 10001e nombre premier"
   },
   "largest_product_in_a_series": {
