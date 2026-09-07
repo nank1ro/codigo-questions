@@ -66,3 +66,16 @@ var x = 7
 x /= 2
 // x ist jetzt 3 (nicht 3.5)
 ```
+
+---
+
+Der Operator `%=` dividiert eine Variable durch einen Wert und weist den **Rest** wieder zu.
+Anstatt zu schreiben:
+```kotlin
+x = x % 3
+```
+Kann man schreiben:
+```kotlin
+x %= 3
+```
+Dies speichert den Rest der Division von `x` durch `3` wieder in `x`.

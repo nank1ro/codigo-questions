@@ -66,3 +66,16 @@ var x = 7
 x /= 2
 // x wynosi teraz 3 (nie 3.5)
 ```
+
+---
+
+Operator `%=` dzieli zmienną przez wartość i przypisuje **resztę** z powrotem do niej.
+Zamiast pisać:
+```kotlin
+x = x % 3
+```
+Możesz napisać:
+```kotlin
+x %= 3
+```
+To zapisuje resztę z dzielenia `x` przez `3` z powrotem do `x`.
