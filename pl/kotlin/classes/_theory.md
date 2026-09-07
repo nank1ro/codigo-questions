@@ -92,3 +92,20 @@ Funkcja `copy()` tworzy nową instancję z niektórymi zmienionymi właściwośc
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+W Kotlinie **dziedziczenie** pozwala klasie rozszerzać inną klasę. Klasa musi być oznaczona jako `open`, aby można było ją podklasować. Metody i właściwości nadpisuje się słowem kluczowym `override`.
+
+---
+
+**Obiekt towarzyszący** (`companion object`) to singleton powiązany z klasą. Pozwala definiować właściwości i metody należące do samej klasy, a nie do jej instancji — podobnie jak składowe `static` w innych językach:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

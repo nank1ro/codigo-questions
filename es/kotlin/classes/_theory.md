@@ -92,3 +92,20 @@ La función `copy()` crea una nueva instancia con algunas propiedades modificada
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+En Kotlin, la **herencia** permite que una clase extienda otra clase. Una clase debe marcarse como `open` para poder ser subclasificada. Los métodos y propiedades se anulan con la palabra clave `override`.
+
+---
+
+Un **objeto companion** es un singleton asociado a una clase. Permite definir propiedades y métodos que pertenecen a la clase en sí, no a las instancias — similar a los miembros `static` en otros lenguajes:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

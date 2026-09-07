@@ -92,3 +92,20 @@ La funzione `copy()` crea una nuova istanza con alcune proprietà modificate:
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+In Kotlin, l'**ereditarietà** permette a una classe di estenderne un'altra. Una classe deve essere contrassegnata con `open` per poter essere sottoclassata. I metodi e le proprietà vengono sovrascritti con la parola chiave `override`.
+
+---
+
+Un **oggetto companion** è un singleton associato a una classe. Permette di definire proprietà e metodi che appartengono alla classe stessa piuttosto che alle istanze — simile ai membri `static` in altri linguaggi:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

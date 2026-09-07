@@ -92,3 +92,20 @@ println(p.toString()) // Point(x=1, y=2)
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+在 Kotlin 中，**继承**允许一个类扩展另一个类。类必须标记为 `open` 才能被子类化。使用 `override` 关键字覆盖方法和属性。
+
+---
+
+**伴生对象**（`companion object`）是与类关联的单例。它允许你定义属于类本身而非实例的属性和方法——类似于其他语言中的 `static` 成员：
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

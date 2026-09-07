@@ -92,3 +92,20 @@ println(p.toString()) // Point(x=1, y=2)
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+Kotlinでは、**継承**によってクラスが別のクラスを拡張できます。サブクラス化を許可するには、クラスを`open`としてマークする必要があります。メソッドとプロパティは`override`キーワードでオーバーライドします。
+
+---
+
+**コンパニオンオブジェクト**はクラスに関連付けられたシングルトンです。インスタンスではなくクラス自体に属するプロパティとメソッドを定義できます — 他の言語の`static`メンバーに似ています：
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

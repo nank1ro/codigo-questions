@@ -92,3 +92,20 @@ La fonction `copy()` crée une nouvelle instance avec certaines propriétés mod
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+En Kotlin, l'**héritage** permet à une classe d'étendre une autre classe. Une classe doit être marquée `open` pour pouvoir être sous-classée. Les méthodes et propriétés sont redéfinies avec le mot-clé `override`.
+
+---
+
+Un **objet companion** est un singleton associé à une classe. Il permet de définir des propriétés et des méthodes qui appartiennent à la classe elle-même plutôt qu'aux instances — similaire aux membres `static` dans d'autres langages :
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

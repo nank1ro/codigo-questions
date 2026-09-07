@@ -92,3 +92,20 @@ println(p.toString()) // Point(x=1, y=2)
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+Kotlin에서 **상속**은 클래스가 다른 클래스를 확장할 수 있게 합니다. 서브클래스를 허용하려면 클래스를 `open`으로 표시해야 합니다. 메서드와 프로퍼티는 `override` 키워드로 재정의합니다.
+
+---
+
+**컴패니언 오브젝트**는 클래스에 연결된 싱글톤입니다. 인스턴스가 아닌 클래스 자체에 속하는 프로퍼티와 메서드를 정의할 수 있습니다 — 다른 언어의 `static` 멤버와 유사합니다:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

@@ -92,3 +92,20 @@ Die Funktion `copy()` erstellt eine neue Instanz mit einigen geänderten Eigensc
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+In Kotlin ermöglicht **Vererbung**, dass eine Klasse eine andere Klasse erweitert. Eine Klasse muss mit `open` markiert sein, damit sie als Basisklasse verwendet werden kann. Methoden und Eigenschaften werden mit dem Schlüsselwort `override` überschrieben.
+
+---
+
+Ein **Companion Object** ist ein Singleton, das einer Klasse zugeordnet ist. Es ermöglicht die Definition von Eigenschaften und Methoden, die zur Klasse selbst gehören, nicht zu Instanzen — ähnlich wie `static`-Mitglieder in anderen Sprachen:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```

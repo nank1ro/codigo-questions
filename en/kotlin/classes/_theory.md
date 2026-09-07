@@ -92,3 +92,20 @@ The `copy()` function creates a new instance with some properties changed:
 val p2 = p.copy(y = 10)
 println(p2) // Point(x=1, y=10)
 ```
+
+---
+
+In Kotlin, **inheritance** lets a class extend another class. A class must be marked `open` to allow it to be subclassed. Override methods and properties with the `override` keyword.
+
+---
+
+A **companion object** is a singleton associated with a class. It lets you define properties and methods that belong to the class itself rather than to instances — similar to `static` members in other languages:
+
+```kotlin
+class MathHelper {
+    companion object {
+        fun square(n: Int): Int = n * n
+    }
+}
+println(MathHelper.square(4)) // 16
+```
