@@ -7,24 +7,24 @@ title: 2つで1つ
 
 # --description--
 
-Given a name, return a string with the message:
+名前が与えられたとき、次のメッセージを含む文字列を返してください:
 `One for X, one for me.`
-Where `X` is the given name.
-However, if the name is empty, return the string:
+ここで`X`は与えられた名前です。
+ただし、名前が空の場合は次の文字列を返してください:
 `One for you, one for me.`
 
 # --instructions--
 
-Write a function that returns the correct string, examples:
+正しい文字列を返す関数を書いてください。例:
 
-**input**: `"Walter"`
-**output**: `One for Walter, one for me.`
+**入力**: `"Walter"`
+**出力**: `One for Walter, one for me.`
 
-**input**: `""`
-**output**: `One for you, one for me.`
+**入力**: `""`
+**出力**: `One for you, one for me.`
 
-**input**: `"David"`
-**output**: `One for David, one for me.`
+**入力**: `"David"`
+**出力**: `One for David, one for me.`
 
 # --before-seed--
 
@@ -170,19 +170,19 @@ int main() {
 
 # --asserts--
 
-No name given
+名前が与えられていない場合
 
 ```c
     try_catch(strcmp(two_for_one(""), "One for you, one for me.") == 0);
 ```
 
-Pass "James" as name
+名前として"James"を渡す
 
 ```c
     try_catch(strcmp(two_for_one("James"), "One for James, one for me.") == 0);
 ```
 
-Pass "Martha" as name
+名前として"Martha"を渡す
 
 ```c
     try_catch(strcmp(two_for_one("Martha"), "One for Martha, one for me.") == 0);
