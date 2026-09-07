@@ -2,21 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci Numbers
+title: 偶数フィボナッチ数
 ---
 
 # --description--
 
-フィボナッチ数列の各項は、前の2項の和で生成されます。1と2から始めると、最初の10項は 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... となります。
+フィボナッチ数列の各新しい項は、直前の2つの項を足すことで生成されます。1と2から始めると、最初の10項は次のようになります: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+値が指定された上限を超えないフィボナッチ数列の項を考え、偶数値の項の合計を求めてください。
 
 # --instructions--
 
-値が`n`以下のフィボナッチ数列の項のうち、偶数の項の合計を求めてください。
-
-例:
-```c
-even_fibonacci(10); // ➞ 10  (2 + 8)
-```
+整数`n`を受け取り、`n`を超えない偶数のフィボナッチ項の合計を返す関数`fibonacciEvenSum`を書いてください。
 
 # --before-seed--
 
@@ -142,12 +139,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long even_fibonacci(long long n) {
+int fibonacciEvenSum(int n) {
 
 }
 ```
@@ -160,28 +160,34 @@ int main() {
 
 # --asserts--
 
-`even_fibonacci(10)` は `10` を返すべきです。
+8を超えない偶数のフィボナッチ項の合計は10でなければなりません
 
 ```c
-    try_catch(even_fibonacci(10) == 10);
+    try_catch(fibonacciEvenSum(8) == 10);
 ```
 
-`even_fibonacci(100)` は `44` を返すべきです。
+10を超えない偶数のフィボナッチ項の合計は10でなければなりません
 
 ```c
-    try_catch(even_fibonacci(100) == 44);
+    try_catch(fibonacciEvenSum(10) == 10);
 ```
 
-`even_fibonacci(4000000)` は `4613732` を返すべきです。
+34を超えない偶数のフィボナッチ項の合計は44でなければなりません
 
 ```c
-    try_catch(even_fibonacci(4000000) == 4613732);
+    try_catch(fibonacciEvenSum(34) == 44);
 ```
 
-`even_fibonacci(1)` は `0` を返すべきです。
+1000を超えない偶数のフィボナッチ項の合計は798でなければなりません
 
 ```c
-    try_catch(even_fibonacci(1) == 0);
+    try_catch(fibonacciEvenSum(1000) == 798);
+```
+
+4000000を超えない偶数のフィボナッチ項の合計は4613732でなければなりません
+
+```c
+    try_catch(fibonacciEvenSum(4000000) == 4613732);
 ```
 
 # --after-asserts--
@@ -195,14 +201,14 @@ int main() {
 # --solutions--
 
 ```c
-long long even_fibonacci(long long n) {
-    long long sum = 0;
-    long long a = 1, b = 2;
+int fibonacciEvenSum(int n) {
+    int sum = 0;
+    int a = 1, b = 2;
     while (a <= n) {
         if (a % 2 == 0) {
             sum += a;
         }
-        long long temp = a + b;
+        int temp = a + b;
         a = b;
         b = temp;
     }

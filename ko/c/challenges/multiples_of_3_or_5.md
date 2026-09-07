@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 또는 5의 배수
 ---
 
 # --description--
 
-10 미만의 자연수 중 3 또는 5의 배수를 나열하면 3, 5, 6, 9입니다. 이 배수들의 합은 23입니다.
+10 미만의 자연수 중 3 또는 5의 배수를 모두 나열하면 3, 5, 6, 9가 됩니다. 이 배수들의 합은 23입니다.
 
 # --instructions--
 
-`n` 미만의 3 또는 5의 모든 배수의 합을 구하세요.
-
-예시:
-```c
-sum_multiples(10); // ➞ 23
-```
+정수 `number`를 받아 그 수 미만의 3 또는 5의 배수의 합을 반환하는 함수 `multiplesOf3And5`를 작성하세요.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_multiples(int n) {
+int multiplesOf3And5(int number) {
 
 }
 ```
@@ -160,28 +158,16 @@ int main() {
 
 # --asserts--
 
-`sum_multiples(10)` 은 `23` 을 반환해야 합니다.
+10 미만의 3 또는 5의 배수의 합은 23이어야 합니다
 
 ```c
-    try_catch(sum_multiples(10) == 23);
+    try_catch(multiplesOf3And5(10) == 23);
 ```
 
-`sum_multiples(20)` 은 `78` 을 반환해야 합니다.
+1000 미만의 3 또는 5의 배수의 합은 233168이어야 합니다
 
 ```c
-    try_catch(sum_multiples(20) == 78);
-```
-
-`sum_multiples(1000)` 은 `233168` 을 반환해야 합니다.
-
-```c
-    try_catch(sum_multiples(1000) == 233168);
-```
-
-`sum_multiples(1)` 은 `0` 을 반환해야 합니다.
-
-```c
-    try_catch(sum_multiples(1) == 0);
+    try_catch(multiplesOf3And5(1000) == 233168);
 ```
 
 # --after-asserts--
@@ -195,9 +181,9 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_multiples(int n) {
-    long long sum = 0;
-    for (int i = 1; i < n; i++) {
+int multiplesOf3And5(int number) {
+    int sum = 0;
+    for (int i = 1; i < number; i++) {
         if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
         }

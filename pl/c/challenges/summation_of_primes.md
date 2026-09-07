@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Suma liczb pierwszych
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -184,9 +187,6 @@ Suma liczb pierwszych poniżej 100000 musi być równa 454396537
 # --solutions--
 
 ```c
-#include <stdlib.h>
-#include <string.h>
-
 long long primeSummation(int n) {
     if (n < 2) return 0;
     bool *sieve = (bool *)malloc(n * sizeof(bool));

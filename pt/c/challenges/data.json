@@ -68,7 +68,7 @@
     "name": "Maior produto palíndromo"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Menor múltiplo comum"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Diferença entre quadrado da soma e soma dos quadrados"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001º primo"
   },
   "largest_product_in_a_series": {

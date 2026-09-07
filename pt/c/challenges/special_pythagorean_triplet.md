@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Special Pythagorean Triplet
+title: Trinca pitagórica especial
 ---
 
 # --description--
 
-Uma trinca pitagórica é um conjunto de três números naturais, a < b < c, para os quais a² + b² = c². Por exemplo, 3² + 4² = 9 + 16 = 25 = 5². Existe exatamente uma trinca pitagórica para a qual a + b + c = 1000.
+Uma trinca pitagórica é um conjunto de três números naturais, a < b < c, para os quais a² + b² = c². Existe exatamente uma trinca pitagórica para a qual a + b + c = 1000. Encontre o produto abc.
 
 # --instructions--
 
-Dada uma soma `n`, encontre a trinca pitagórica para a qual a + b + c = `n` e retorne o produto a × b × c. Retorne `-1` se nenhuma trinca existir.
-
-Exemplo:
-```c
-pythagorean_triplet(12); // ➞ 60  (3 + 4 + 5 = 12, 3 × 4 × 5 = 60)
-```
+Escreva uma função `specialPythagoreanTriplet` que recebe um inteiro `n` e retorna o produto `a * b * c` da trinca pitagórica em que `a + b + c = n`. Retorne -1 se não existir tal trinca.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
 
 }
 ```
@@ -160,22 +158,16 @@ int main() {
 
 # --asserts--
 
-`pythagorean_triplet(12)` deve retornar `60`.
+O produto da trinca pitagórica em que a+b+c=12 deve ser igual a 60
 
 ```c
-    try_catch(pythagorean_triplet(12) == 60);
+    try_catch(specialPythagoreanTriplet(12) == 60);
 ```
 
-`pythagorean_triplet(1000)` deve retornar `31875000`.
+O produto da trinca pitagórica em que a+b+c=1000 deve ser igual a 31875000
 
 ```c
-    try_catch(pythagorean_triplet(1000) == 31875000);
-```
-
-`pythagorean_triplet(4)` deve retornar `-1`.
-
-```c
-    try_catch(pythagorean_triplet(4) == -1);
+    try_catch(specialPythagoreanTriplet(1000) == 31875000);
 ```
 
 # --after-asserts--
@@ -189,12 +181,12 @@ int main() {
 # --solutions--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
     for (int a = 1; a < n / 3; a++) {
         for (int b = a + 1; b < n / 2; b++) {
             int c = n - a - b;
-            if (c > b && (long long)a*a + (long long)b*b == (long long)c*c) {
-                return (long long)a * b * c;
+            if (c > b && a * a + b * b == c * c) {
+                return a * b * c;
             }
         }
     }

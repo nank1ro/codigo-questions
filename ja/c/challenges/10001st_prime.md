@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: 10001st Prime
+difficulty: 1
+title: 10001番目の素数
 ---
 
 # --description--
 
-最初の6つの素数を列挙すると、2、3、5、7、11、13であり、6番目の素数は13であることがわかります。
+最初の6つの素数を列挙すると2, 3, 5, 7, 11, 13となり、6番目の素数が13であることがわかります。`n`番目の素数は何でしょうか？
 
 # --instructions--
 
-`n`番目の素数を求めてください。
-
-例:
-```c
-nth_prime(6); // ➞ 13
-```
+整数`n`を受け取り、`n`番目の素数を返す関数`nthPrime`を書いてください。
 
 # --before-seed--
 
@@ -142,13 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
-#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-int nth_prime(int n) {
+int nthPrime(int n) {
 
 }
 ```
@@ -161,28 +158,28 @@ int main() {
 
 # --asserts--
 
-`nth_prime(1)` は `2` を返すべきです。
+6番目の素数は13でなければなりません
 
 ```c
-    try_catch(nth_prime(1) == 2);
+    try_catch(nthPrime(6) == 13);
 ```
 
-`nth_prime(6)` は `13` を返すべきです。
+10番目の素数は29でなければなりません
 
 ```c
-    try_catch(nth_prime(6) == 13);
+    try_catch(nthPrime(10) == 29);
 ```
 
-`nth_prime(100)` は `541` を返すべきです。
+1000番目の素数は7919でなければなりません
 
 ```c
-    try_catch(nth_prime(100) == 541);
+    try_catch(nthPrime(1000) == 7919);
 ```
 
-`nth_prime(10001)` は `104743` を返すべきです。
+10001番目の素数は104743でなければなりません
 
 ```c
-    try_catch(nth_prime(10001) == 104743);
+    try_catch(nthPrime(10001) == 104743);
 ```
 
 # --after-asserts--
@@ -196,21 +193,26 @@ int main() {
 # --solutions--
 
 ```c
-int is_prime(int n) {
-    if (n < 2) return 0;
-    if (n == 2) return 1;
-    if (n % 2 == 0) return 0;
-    for (int i = 3; i <= (int)sqrt(n); i += 2) {
-        if (n % i == 0) return 0;
+#include <math.h>
+
+bool isPrime(int num) {
+    if (num < 2) return false;
+    if (num == 2) return true;
+    if (num % 2 == 0) return false;
+    for (int i = 3; i <= (int)sqrt((double)num); i += 2) {
+        if (num % i == 0) return false;
     }
-    return 1;
+    return true;
 }
 
-int nth_prime(int n) {
-    int count = 0, num = 1;
+int nthPrime(int n) {
+    int count = 0;
+    int num = 1;
     while (count < n) {
         num++;
-        if (is_prime(num)) count++;
+        if (isPrime(num)) {
+            count++;
+        }
     }
     return num;
 }

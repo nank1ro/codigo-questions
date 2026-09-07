@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum Square Difference
+title: 平方和の差
 ---
 
 # --description--
 
-最初の10個の自然数の平方の和は 1² + 2² + ... + 10² = 385 です。最初の10個の自然数の和の平方は (1 + 2 + ... + 10)² = 55² = 3025 です。したがって、最初の10個の自然数の平方の和と和の平方の差は 3025 − 385 = 2640 です。
+最初の10個の自然数の平方の和は1² + 2² + ... + 10² = 385です。最初の10個の自然数の和の平方は(1 + 2 + ... + 10)² = 55² = 3025です。したがって、最初の10個の自然数における平方の和と和の平方の差は3025 − 385 = 2640です。
 
 # --instructions--
 
-最初の`n`個の自然数について、和の平方と平方の和の差を求めてください。
-
-例:
-```c
-sum_square_difference(10); // ➞ 2640
-```
+整数`n`を受け取り、最初の`n`個の自然数における和の平方と平方の和の差を返す関数`sumSquareDifference`を書いてください。
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_square_difference(int n) {
+int sumSquareDifference(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_square_difference(10)` は `2640` を返すべきです。
+n=10のときの平方差は2640でなければなりません
 
 ```c
-    try_catch(sum_square_difference(10) == 2640);
+    try_catch(sumSquareDifference(10) == 2640);
 ```
 
-`sum_square_difference(5)` は `170` を返すべきです。
+n=20のときの平方差は41230でなければなりません
 
 ```c
-    try_catch(sum_square_difference(5) == 170);
+    try_catch(sumSquareDifference(20) == 41230);
 ```
 
-`sum_square_difference(100)` は `25164150` を返すべきです。
+n=100のときの平方差は25164150でなければなりません
 
 ```c
-    try_catch(sum_square_difference(100) == 25164150);
-```
-
-`sum_square_difference(1)` は `0` を返すべきです。
-
-```c
-    try_catch(sum_square_difference(1) == 0);
+    try_catch(sumSquareDifference(100) == 25164150);
 ```
 
 # --after-asserts--
@@ -195,12 +187,13 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_square_difference(int n) {
-    long long sum = 0, sum_sq = 0;
+int sumSquareDifference(int n) {
+    int sumOfSquares = 0;
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
+        sumOfSquares += i * i;
         sum += i;
-        sum_sq += (long long)i * i;
     }
-    return sum * sum - sum_sq;
+    return sum * sum - sumOfSquares;
 }
 ```

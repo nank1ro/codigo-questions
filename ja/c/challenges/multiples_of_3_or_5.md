@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3または5の倍数
 ---
 
 # --description--
 
-10未満の自然数のうち、3または5の倍数を列挙すると、3、5、6、9となります。これらの倍数の合計は23です。
+10未満の自然数の中で3または5の倍数であるものをすべて列挙すると、3, 5, 6, 9となります。これらの倍数の合計は23です。
 
 # --instructions--
 
-`n`未満の3または5の倍数をすべて合計した値を返してください。
-
-例:
-```c
-sum_multiples(10); // ➞ 23
-```
+整数`number`を受け取り、その数未満の3または5の倍数すべての合計を返す関数`multiplesOf3And5`を書いてください。
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_multiples(int n) {
+int multiplesOf3And5(int number) {
 
 }
 ```
@@ -160,28 +158,16 @@ int main() {
 
 # --asserts--
 
-`sum_multiples(10)` は `23` を返すべきです。
+10未満の3または5の倍数の合計は23でなければなりません
 
 ```c
-    try_catch(sum_multiples(10) == 23);
+    try_catch(multiplesOf3And5(10) == 23);
 ```
 
-`sum_multiples(20)` は `78` を返すべきです。
+1000未満の3または5の倍数の合計は233168でなければなりません
 
 ```c
-    try_catch(sum_multiples(20) == 78);
-```
-
-`sum_multiples(1000)` は `233168` を返すべきです。
-
-```c
-    try_catch(sum_multiples(1000) == 233168);
-```
-
-`sum_multiples(1)` は `0` を返すべきです。
-
-```c
-    try_catch(sum_multiples(1) == 0);
+    try_catch(multiplesOf3And5(1000) == 233168);
 ```
 
 # --after-asserts--
@@ -195,9 +181,9 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_multiples(int n) {
-    long long sum = 0;
-    for (int i = 1; i < n; i++) {
+int multiplesOf3And5(int number) {
+    int sum = 0;
+    for (int i = 1; i < number; i++) {
         if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
         }

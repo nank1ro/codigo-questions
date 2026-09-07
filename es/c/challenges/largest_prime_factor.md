@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Factor primo más grande
 ---
 
 # --description--
@@ -20,7 +20,6 @@ Escribe una función `largestPrimeFactor` que reciba un entero `long long` llama
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 
 #ifndef _CEXCEPTION_H
 #define _CEXCEPTION_H
@@ -138,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -185,6 +187,8 @@ El factor primo más grande de 600851475143 debe ser igual a 6857
 # --solutions--
 
 ```c
+#include <math.h>
+
 long long largestPrimeFactor(long long number) {
     long long largest = -1;
     while (number % 2 == 0) {

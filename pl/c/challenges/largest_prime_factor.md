@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Największy czynnik pierwszy
 ---
 
 # --description--
@@ -20,7 +20,6 @@ Napisz funkcję `largestPrimeFactor`, która przyjmuje liczbę całkowitą typu 
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 
 #ifndef _CEXCEPTION_H
 #define _CEXCEPTION_H
@@ -138,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -185,6 +187,8 @@ Największy czynnik pierwszy liczby 600851475143 musi być równy 6857
 # --solutions--
 
 ```c
+#include <math.h>
+
 long long largestPrimeFactor(long long number) {
     long long largest = -1;
     while (number % 2 == 0) {

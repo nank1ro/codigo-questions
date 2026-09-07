@@ -68,7 +68,7 @@
     "name": "Prodotto palindromo più grande"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Multiplo più piccolo"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Differenza quadrato-somma"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Il 10001° numero primo"
   },
   "largest_product_in_a_series": {

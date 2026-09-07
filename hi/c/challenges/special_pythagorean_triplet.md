@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Special Pythagorean Triplet
+title: विशेष पाइथागोरियन त्रिक
 ---
 
 # --description--
 
-पाइथागोरियन त्रिक तीन प्राकृतिक संख्याओं का एक समूह है, a < b < c, जिसके लिए a² + b² = c² होता है। उदाहरण के लिए, 3² + 4² = 9 + 16 = 25 = 5²। ठीक एक पाइथागोरियन त्रिक है जिसके लिए a + b + c = 1000 है।
+एक पाइथागोरियन त्रिक तीन प्राकृतिक संख्याओं a < b < c का एक समुच्चय है, जिसके लिए a² + b² = c² होता है। ऐसा ठीक एक पाइथागोरियन त्रिक मौजूद है जिसके लिए a + b + c = 1000 है। गुणनफल abc ज्ञात करें।
 
 # --instructions--
 
-दी गई योगफल `n` के लिए वह पाइथागोरियन त्रिक ज्ञात करें जिसके लिए a + b + c = `n` हो और गुणनफल a × b × c लौटाएं। यदि ऐसा कोई त्रिक न हो तो `-1` लौटाएं।
-
-उदाहरण:
-```c
-pythagorean_triplet(12); // ➞ 60  (3 + 4 + 5 = 12, 3 × 4 × 5 = 60)
-```
+एक फ़ंक्शन `specialPythagoreanTriplet` लिखें जो एक पूर्णांक `n` लेता है और उस पाइथागोरियन त्रिक का गुणनफल `a * b * c` लौटाता है जिसके लिए `a + b + c = n` है। यदि ऐसा कोई त्रिक मौजूद नहीं है, तो -1 लौटाएं।
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
 
 }
 ```
@@ -160,22 +158,16 @@ int main() {
 
 # --asserts--
 
-`pythagorean_triplet(12)` का मान `60` होना चाहिए।
+जहाँ a+b+c=12 है, उस पाइथागोरियन त्रिक का गुणनफल 60 होना चाहिए
 
 ```c
-    try_catch(pythagorean_triplet(12) == 60);
+    try_catch(specialPythagoreanTriplet(12) == 60);
 ```
 
-`pythagorean_triplet(1000)` का मान `31875000` होना चाहिए।
+जहाँ a+b+c=1000 है, उस पाइथागोरियन त्रिक का गुणनफल 31875000 होना चाहिए
 
 ```c
-    try_catch(pythagorean_triplet(1000) == 31875000);
-```
-
-`pythagorean_triplet(4)` का मान `-1` होना चाहिए।
-
-```c
-    try_catch(pythagorean_triplet(4) == -1);
+    try_catch(specialPythagoreanTriplet(1000) == 31875000);
 ```
 
 # --after-asserts--
@@ -189,12 +181,12 @@ int main() {
 # --solutions--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
     for (int a = 1; a < n / 3; a++) {
         for (int b = a + 1; b < n / 2; b++) {
             int c = n - a - b;
-            if (c > b && (long long)a*a + (long long)b*b == (long long)c*c) {
-                return (long long)a * b * c;
+            if (c > b && a * a + b * b == c * c) {
+                return a * b * c;
             }
         }
     }

@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Prime Factor
+title: 最大の素因数
 ---
 
 # --description--
 
-13195の素因数は5、7、13、29です。素因数とは、ある数の約数のうち素数であるものです。
+13195の素因数は5、7、13、29です。ある数の最大の素因数は何でしょうか？
 
 # --instructions--
 
-数`n`の最大の素因数を求めてください。
-
-例:
-```c
-largest_prime_factor(13195); // ➞ 29
-```
+`long long`型の整数`number`を受け取り、その最大の素因数を返す関数`largestPrimeFactor`を書いてください。
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_prime_factor(long long n) {
+long long largestPrimeFactor(long long number) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`largest_prime_factor(13195)` は `29` を返すべきです。
+2の最大の素因数は2でなければなりません
 
 ```c
-    try_catch(largest_prime_factor(13195) == 29);
+    try_catch(largestPrimeFactor(2) == 2);
 ```
 
-`largest_prime_factor(2)` は `2` を返すべきです。
+13195の最大の素因数は29でなければなりません
 
 ```c
-    try_catch(largest_prime_factor(2) == 2);
+    try_catch(largestPrimeFactor(13195) == 29);
 ```
 
-`largest_prime_factor(12)` は `3` を返すべきです。
+600851475143の最大の素因数は6857でなければなりません
 
 ```c
-    try_catch(largest_prime_factor(12) == 3);
-```
-
-`largest_prime_factor(600851475143)` は `6857` を返すべきです。
-
-```c
-    try_catch(largest_prime_factor(600851475143LL) == 6857);
+    try_catch(largestPrimeFactor(600851475143LL) == 6857);
 ```
 
 # --after-asserts--
@@ -195,15 +187,23 @@ int main() {
 # --solutions--
 
 ```c
-long long largest_prime_factor(long long n) {
-    long long largest = 1;
-    for (long long d = 2; d * d <= n; d++) {
-        while (n % d == 0) {
-            largest = d;
-            n /= d;
+#include <math.h>
+
+long long largestPrimeFactor(long long number) {
+    long long largest = -1;
+    while (number % 2 == 0) {
+        largest = 2;
+        number /= 2;
+    }
+    for (long long i = 3; i <= (long long)sqrt((double)number); i += 2) {
+        while (number % i == 0) {
+            largest = i;
+            number /= i;
         }
     }
-    if (n > 1) largest = n;
+    if (number > 1) {
+        largest = number;
+    }
     return largest;
 }
 ```

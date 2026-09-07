@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Múltiplos de 3 ou 5
 ---
 
 # --description--
@@ -11,12 +11,7 @@ Se listarmos todos os números naturais abaixo de 10 que são múltiplos de 3 ou
 
 # --instructions--
 
-Encontre a soma de todos os múltiplos de 3 ou 5 abaixo de `n`.
-
-Exemplo:
-```c
-sum_multiples(10); // ➞ 23
-```
+Escreva uma função `multiplesOf3And5` que recebe um inteiro `number` e retorna a soma de todos os múltiplos de 3 ou 5 abaixo desse número.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_multiples(int n) {
+int multiplesOf3And5(int number) {
 
 }
 ```
@@ -160,28 +158,16 @@ int main() {
 
 # --asserts--
 
-`sum_multiples(10)` deve retornar `23`.
+A soma dos múltiplos de 3 ou 5 abaixo de 10 deve ser igual a 23
 
 ```c
-    try_catch(sum_multiples(10) == 23);
+    try_catch(multiplesOf3And5(10) == 23);
 ```
 
-`sum_multiples(20)` deve retornar `78`.
+A soma dos múltiplos de 3 ou 5 abaixo de 1000 deve ser igual a 233168
 
 ```c
-    try_catch(sum_multiples(20) == 78);
-```
-
-`sum_multiples(1000)` deve retornar `233168`.
-
-```c
-    try_catch(sum_multiples(1000) == 233168);
-```
-
-`sum_multiples(1)` deve retornar `0`.
-
-```c
-    try_catch(sum_multiples(1) == 0);
+    try_catch(multiplesOf3And5(1000) == 233168);
 ```
 
 # --after-asserts--
@@ -195,9 +181,9 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_multiples(int n) {
-    long long sum = 0;
-    for (int i = 1; i < n; i++) {
+int multiplesOf3And5(int number) {
+    int sum = 0;
+    for (int i = 1; i < number; i++) {
         if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
         }

@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: Smallest Multiple
+difficulty: 1
+title: 最小公倍数
 ---
 
 # --description--
 
-2520は1から10までのすべての数で割り切れる最小の数です。1から`n`までのすべての数で割り切れる最小の正の数は、それらの数の最小公倍数（LCM）です。
+2520は、1から10までのすべての数で割り切れる最小の数です。1から`n`までのすべての数で割り切れる最小の正の数は何でしょうか？
 
 # --instructions--
 
-1から`n`までのすべての数で割り切れる最小の正の数を求めてください。
-
-例:
-```c
-smallest_multiple(10); // ➞ 2520
-```
+整数`n`を受け取り、1から`n`までのすべての数で割り切れる最小の正の数を返す関数`smallestMultiple`を書いてください。
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`smallest_multiple(10)` は `2520` を返すべきです。
+1から5までの最小公倍数は60でなければなりません
 
 ```c
-    try_catch(smallest_multiple(10) == 2520);
+    try_catch(smallestMultiple(5) == 60LL);
 ```
 
-`smallest_multiple(5)` は `60` を返すべきです。
+1から10までの最小公倍数は2520でなければなりません
 
 ```c
-    try_catch(smallest_multiple(5) == 60);
+    try_catch(smallestMultiple(10) == 2520LL);
 ```
 
-`smallest_multiple(20)` は `232792560` を返すべきです。
+1から20までの最小公倍数は232792560でなければなりません
 
 ```c
-    try_catch(smallest_multiple(20) == 232792560);
-```
-
-`smallest_multiple(1)` は `1` を返すべきです。
-
-```c
-    try_catch(smallest_multiple(1) == 1);
+    try_catch(smallestMultiple(20) == 232792560LL);
 ```
 
 # --after-asserts--
@@ -196,7 +188,7 @@ int main() {
 
 ```c
 long long gcd(long long a, long long b) {
-    while (b) {
+    while (b != 0) {
         long long t = b;
         b = a % b;
         a = t;
@@ -208,10 +200,10 @@ long long lcm(long long a, long long b) {
     return a / gcd(a, b) * b;
 }
 
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
     long long result = 1;
     for (int i = 2; i <= n; i++) {
-        result = lcm(result, i);
+        result = lcm(result, (long long)i);
     }
     return result;
 }

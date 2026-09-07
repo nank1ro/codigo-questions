@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Plus grand facteur premier
 ---
 
 # --description--
@@ -20,7 +20,6 @@ Les facteurs premiers de 13195 sont 5, 7, 13 et 29. Quel est le plus grand facte
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 
 #ifndef _CEXCEPTION_H
 #define _CEXCEPTION_H
@@ -138,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -185,6 +187,8 @@ Le plus grand facteur premier de 600851475143 doit être égal à 6857
 # --solutions--
 
 ```c
+#include <math.h>
+
 long long largestPrimeFactor(long long number) {
     long long largest = -1;
     while (number % 2 == 0) {

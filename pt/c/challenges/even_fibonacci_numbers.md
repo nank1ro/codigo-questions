@@ -2,21 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci Numbers
+title: Números de Fibonacci pares
 ---
 
 # --description--
 
-Cada novo termo da sequência de Fibonacci é gerado somando os dois termos anteriores. Começando com 1 e 2, os primeiros 10 termos são: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+Cada novo termo da sequência de Fibonacci é gerado somando os dois termos anteriores. Começando com 1 e 2, os primeiros 10 termos serão: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+Considerando os termos da sequência de Fibonacci cujos valores não excedem um determinado limite, encontre a soma dos termos de valor par.
 
 # --instructions--
 
-Considerando os termos da sequência de Fibonacci cujos valores não excedem `n`, encontre a soma dos termos de valor par.
-
-Exemplo:
-```c
-even_fibonacci(10); // ➞ 10  (2 + 8)
-```
+Escreva uma função `fibonacciEvenSum` que recebe um inteiro `n` e retorna a soma dos termos pares da sequência de Fibonacci cujos valores não excedem `n`.
 
 # --before-seed--
 
@@ -142,12 +139,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long even_fibonacci(long long n) {
+int fibonacciEvenSum(int n) {
 
 }
 ```
@@ -160,28 +160,34 @@ int main() {
 
 # --asserts--
 
-`even_fibonacci(10)` deve retornar `10`.
+A soma dos termos pares de Fibonacci que não excedem 8 deve ser igual a 10
 
 ```c
-    try_catch(even_fibonacci(10) == 10);
+    try_catch(fibonacciEvenSum(8) == 10);
 ```
 
-`even_fibonacci(100)` deve retornar `44`.
+A soma dos termos pares de Fibonacci que não excedem 10 deve ser igual a 10
 
 ```c
-    try_catch(even_fibonacci(100) == 44);
+    try_catch(fibonacciEvenSum(10) == 10);
 ```
 
-`even_fibonacci(4000000)` deve retornar `4613732`.
+A soma dos termos pares de Fibonacci que não excedem 34 deve ser igual a 44
 
 ```c
-    try_catch(even_fibonacci(4000000) == 4613732);
+    try_catch(fibonacciEvenSum(34) == 44);
 ```
 
-`even_fibonacci(1)` deve retornar `0`.
+A soma dos termos pares de Fibonacci que não excedem 1000 deve ser igual a 798
 
 ```c
-    try_catch(even_fibonacci(1) == 0);
+    try_catch(fibonacciEvenSum(1000) == 798);
+```
+
+A soma dos termos pares de Fibonacci que não excedem 4000000 deve ser igual a 4613732
+
+```c
+    try_catch(fibonacciEvenSum(4000000) == 4613732);
 ```
 
 # --after-asserts--
@@ -195,14 +201,14 @@ int main() {
 # --solutions--
 
 ```c
-long long even_fibonacci(long long n) {
-    long long sum = 0;
-    long long a = 1, b = 2;
+int fibonacciEvenSum(int n) {
+    int sum = 0;
+    int a = 1, b = 2;
     while (a <= n) {
         if (a % 2 == 0) {
             sum += a;
         }
-        long long temp = a + b;
+        int temp = a + b;
         a = b;
         b = temp;
     }

@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: Smallest Multiple
+difficulty: 1
+title: सबसे छोटा सार्व गुणज
 ---
 
 # --description--
 
-2520 वह सबसे छोटी संख्या है जिसे 1 से 10 तक की प्रत्येक संख्या से बिना शेषफल के विभाजित किया जा सकता है। 1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या उन संख्याओं का लघुत्तम समापवर्त्य (LCM) होती है।
+2520 सबसे छोटी संख्या है जिसे 1 से 10 तक की प्रत्येक संख्या से बिना किसी शेषफल के विभाजित किया जा सकता है। 1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या क्या है?
 
 # --instructions--
 
-1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या ज्ञात करें।
-
-उदाहरण:
-```c
-smallest_multiple(10); // ➞ 2520
-```
+एक फ़ंक्शन `smallestMultiple` लिखें जो एक पूर्णांक `n` लेता है और 1 से `n` तक की सभी संख्याओं से समान रूप से विभाज्य सबसे छोटी धनात्मक संख्या लौटाता है।
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`smallest_multiple(10)` का मान `2520` होना चाहिए।
+1 से 5 तक का सबसे छोटा सार्व गुणज 60 होना चाहिए
 
 ```c
-    try_catch(smallest_multiple(10) == 2520);
+    try_catch(smallestMultiple(5) == 60LL);
 ```
 
-`smallest_multiple(5)` का मान `60` होना चाहिए।
+1 से 10 तक का सबसे छोटा सार्व गुणज 2520 होना चाहिए
 
 ```c
-    try_catch(smallest_multiple(5) == 60);
+    try_catch(smallestMultiple(10) == 2520LL);
 ```
 
-`smallest_multiple(20)` का मान `232792560` होना चाहिए।
+1 से 20 तक का सबसे छोटा सार्व गुणज 232792560 होना चाहिए
 
 ```c
-    try_catch(smallest_multiple(20) == 232792560);
-```
-
-`smallest_multiple(1)` का मान `1` होना चाहिए।
-
-```c
-    try_catch(smallest_multiple(1) == 1);
+    try_catch(smallestMultiple(20) == 232792560LL);
 ```
 
 # --after-asserts--
@@ -196,7 +188,7 @@ int main() {
 
 ```c
 long long gcd(long long a, long long b) {
-    while (b) {
+    while (b != 0) {
         long long t = b;
         b = a % b;
         a = t;
@@ -208,10 +200,10 @@ long long lcm(long long a, long long b) {
     return a / gcd(a, b) * b;
 }
 
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
     long long result = 1;
     for (int i = 2; i <= n; i++) {
-        result = lcm(result, i);
+        result = lcm(result, (long long)i);
     }
     return result;
 }

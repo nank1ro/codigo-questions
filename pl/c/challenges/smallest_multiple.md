@@ -1,8 +1,8 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: Smallest multiple
+difficulty: 1
+title: Najmniejsza wielokrotność
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--

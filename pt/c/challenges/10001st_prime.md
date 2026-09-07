@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: 10001st Prime
+difficulty: 1
+title: 10001º primo
 ---
 
 # --description--
 
-Listando os seis primeiros números primos: 2, 3, 5, 7, 11 e 13, vemos que o 6º primo é 13.
+Ao listar os seis primeiros números primos: 2, 3, 5, 7, 11 e 13, podemos ver que o 6º primo é 13. Qual é o `n`-ésimo número primo?
 
 # --instructions--
 
-Encontre o `n`-ésimo número primo.
-
-Exemplo:
-```c
-nth_prime(6); // ➞ 13
-```
+Escreva uma função `nthPrime` que recebe um inteiro `n` e retorna o `n`-ésimo número primo.
 
 # --before-seed--
 
@@ -142,13 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
-#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-int nth_prime(int n) {
+int nthPrime(int n) {
 
 }
 ```
@@ -161,28 +158,28 @@ int main() {
 
 # --asserts--
 
-`nth_prime(1)` deve retornar `2`.
+O 6º primo deve ser igual a 13
 
 ```c
-    try_catch(nth_prime(1) == 2);
+    try_catch(nthPrime(6) == 13);
 ```
 
-`nth_prime(6)` deve retornar `13`.
+O 10º primo deve ser igual a 29
 
 ```c
-    try_catch(nth_prime(6) == 13);
+    try_catch(nthPrime(10) == 29);
 ```
 
-`nth_prime(100)` deve retornar `541`.
+O 1000º primo deve ser igual a 7919
 
 ```c
-    try_catch(nth_prime(100) == 541);
+    try_catch(nthPrime(1000) == 7919);
 ```
 
-`nth_prime(10001)` deve retornar `104743`.
+O 10001º primo deve ser igual a 104743
 
 ```c
-    try_catch(nth_prime(10001) == 104743);
+    try_catch(nthPrime(10001) == 104743);
 ```
 
 # --after-asserts--
@@ -196,21 +193,26 @@ int main() {
 # --solutions--
 
 ```c
-int is_prime(int n) {
-    if (n < 2) return 0;
-    if (n == 2) return 1;
-    if (n % 2 == 0) return 0;
-    for (int i = 3; i <= (int)sqrt(n); i += 2) {
-        if (n % i == 0) return 0;
+#include <math.h>
+
+bool isPrime(int num) {
+    if (num < 2) return false;
+    if (num == 2) return true;
+    if (num % 2 == 0) return false;
+    for (int i = 3; i <= (int)sqrt((double)num); i += 2) {
+        if (num % i == 0) return false;
     }
-    return 1;
+    return true;
 }
 
-int nth_prime(int n) {
-    int count = 0, num = 1;
+int nthPrime(int n) {
+    int count = 0;
+    int num = 1;
     while (count < n) {
         num++;
-        if (is_prime(num)) count++;
+        if (isPrime(num)) {
+            count++;
+        }
     }
     return num;
 }

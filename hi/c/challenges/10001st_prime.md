@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: 10001st Prime
+difficulty: 1
+title: 10001वाँ अभाज्य
 ---
 
 # --description--
 
-पहले छह अभाज्य संख्याओं को सूचीबद्ध करने पर: 2, 3, 5, 7, 11 और 13, हम देखते हैं कि 6वीं अभाज्य संख्या 13 है।
+पहली छह अभाज्य संख्याओं को सूचीबद्ध करने पर: 2, 3, 5, 7, 11, और 13, हम देख सकते हैं कि 6वीं अभाज्य संख्या 13 है। `n`वीं अभाज्य संख्या क्या है?
 
 # --instructions--
 
-`n`वीं अभाज्य संख्या ज्ञात करें।
-
-उदाहरण:
-```c
-nth_prime(6); // ➞ 13
-```
+एक फ़ंक्शन `nthPrime` लिखें जो एक पूर्णांक `n` लेता है और `n`वीं अभाज्य संख्या लौटाता है।
 
 # --before-seed--
 
@@ -142,13 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
-#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-int nth_prime(int n) {
+int nthPrime(int n) {
 
 }
 ```
@@ -161,28 +158,28 @@ int main() {
 
 # --asserts--
 
-`nth_prime(1)` का मान `2` होना चाहिए।
+6वीं अभाज्य संख्या 13 होनी चाहिए
 
 ```c
-    try_catch(nth_prime(1) == 2);
+    try_catch(nthPrime(6) == 13);
 ```
 
-`nth_prime(6)` का मान `13` होना चाहिए।
+10वीं अभाज्य संख्या 29 होनी चाहिए
 
 ```c
-    try_catch(nth_prime(6) == 13);
+    try_catch(nthPrime(10) == 29);
 ```
 
-`nth_prime(100)` का मान `541` होना चाहिए।
+1000वीं अभाज्य संख्या 7919 होनी चाहिए
 
 ```c
-    try_catch(nth_prime(100) == 541);
+    try_catch(nthPrime(1000) == 7919);
 ```
 
-`nth_prime(10001)` का मान `104743` होना चाहिए।
+10001वीं अभाज्य संख्या 104743 होनी चाहिए
 
 ```c
-    try_catch(nth_prime(10001) == 104743);
+    try_catch(nthPrime(10001) == 104743);
 ```
 
 # --after-asserts--
@@ -196,21 +193,26 @@ int main() {
 # --solutions--
 
 ```c
-int is_prime(int n) {
-    if (n < 2) return 0;
-    if (n == 2) return 1;
-    if (n % 2 == 0) return 0;
-    for (int i = 3; i <= (int)sqrt(n); i += 2) {
-        if (n % i == 0) return 0;
+#include <math.h>
+
+bool isPrime(int num) {
+    if (num < 2) return false;
+    if (num == 2) return true;
+    if (num % 2 == 0) return false;
+    for (int i = 3; i <= (int)sqrt((double)num); i += 2) {
+        if (num % i == 0) return false;
     }
-    return 1;
+    return true;
 }
 
-int nth_prime(int n) {
-    int count = 0, num = 1;
+int nthPrime(int n) {
+    int count = 0;
+    int num = 1;
     while (count < n) {
         num++;
-        if (is_prime(num)) count++;
+        if (isPrime(num)) {
+            count++;
+        }
     }
     return num;
 }

@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Summation of Primes
+title: अभाज्य संख्याओं का योग
 ---
 
 # --description--
 
-10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है।
+10 से कम अभाज्य संख्याओं का योग 2 + 3 + 5 + 7 = 17 है। किसी दी गई संख्या `n` से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
 
 # --instructions--
 
-`n` से कम सभी अभाज्य संख्याओं का योग ज्ञात करें।
-
-उदाहरण:
-```c
-sum_primes(10); // ➞ 17
-```
+एक फ़ंक्शन `primeSummation` लिखें जो एक पूर्णांक `n` लेता है और `n` से कम सभी अभाज्य संख्याओं का योग लौटाता है।
 
 # --before-seed--
 
@@ -143,13 +138,14 @@ void try_catch(bool assertion) {
 }
 // DO NOT EDIT UNTIL HERE
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_primes(int n) {
+long long primeSummation(int n) {
 
 }
 ```
@@ -162,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_primes(10)` का मान `17` होना चाहिए।
+10 से कम अभाज्य संख्याओं का योग 17 होना चाहिए
 
 ```c
-    try_catch(sum_primes(10) == 17);
+    try_catch(primeSummation(10) == 17LL);
 ```
 
-`sum_primes(5)` का मान `10` होना चाहिए।
+1000 से कम अभाज्य संख्याओं का योग 76127 होना चाहिए
 
 ```c
-    try_catch(sum_primes(5) == 10);
+    try_catch(primeSummation(1000) == 76127LL);
 ```
 
-`sum_primes(100)` का मान `1060` होना चाहिए।
+100000 से कम अभाज्य संख्याओं का योग 454396537 होना चाहिए
 
 ```c
-    try_catch(sum_primes(100) == 1060);
-```
-
-`sum_primes(2000000)` का मान `142913828922` होना चाहिए।
-
-```c
-    try_catch(sum_primes(2000000) == 142913828922LL);
+    try_catch(primeSummation(100000) == 454396537LL);
 ```
 
 # --after-asserts--
@@ -197,20 +187,22 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_primes(int n) {
-    char* sieve = calloc(n, 1);
-    sieve[0] = 1;
-    if (n > 1) sieve[1] = 1;
+long long primeSummation(int n) {
+    if (n < 2) return 0;
+    bool *sieve = (bool *)malloc(n * sizeof(bool));
+    memset(sieve, true, n * sizeof(bool));
+    sieve[0] = false;
+    sieve[1] = false;
     for (int i = 2; (long long)i * i < n; i++) {
-        if (!sieve[i]) {
+        if (sieve[i]) {
             for (int j = i * i; j < n; j += i) {
-                sieve[j] = 1;
+                sieve[j] = false;
             }
         }
     }
     long long sum = 0;
     for (int i = 2; i < n; i++) {
-        if (!sieve[i]) sum += i;
+        if (sieve[i]) sum += i;
     }
     free(sieve);
     return sum;

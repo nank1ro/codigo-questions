@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: 10001st Prime
+difficulty: 1
+title: 10001번째 소수
 ---
 
 # --description--
 
-처음 여섯 개의 소수를 나열하면 2, 3, 5, 7, 11, 13이며, 6번째 소수는 13임을 알 수 있습니다.
+처음 여섯 개의 소수 2, 3, 5, 7, 11, 13을 나열해보면 6번째 소수가 13임을 알 수 있습니다. `n`번째 소수는 무엇일까요?
 
 # --instructions--
 
-`n`번째 소수를 구하세요.
-
-예시:
-```c
-nth_prime(6); // ➞ 13
-```
+정수 `n`을 받아 `n`번째 소수를 반환하는 함수 `nthPrime`을 작성하세요.
 
 # --before-seed--
 
@@ -142,13 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
-#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-int nth_prime(int n) {
+int nthPrime(int n) {
 
 }
 ```
@@ -161,28 +158,28 @@ int main() {
 
 # --asserts--
 
-`nth_prime(1)` 은 `2` 를 반환해야 합니다.
+6번째 소수는 13이어야 합니다
 
 ```c
-    try_catch(nth_prime(1) == 2);
+    try_catch(nthPrime(6) == 13);
 ```
 
-`nth_prime(6)` 은 `13` 을 반환해야 합니다.
+10번째 소수는 29여야 합니다
 
 ```c
-    try_catch(nth_prime(6) == 13);
+    try_catch(nthPrime(10) == 29);
 ```
 
-`nth_prime(100)` 은 `541` 을 반환해야 합니다.
+1000번째 소수는 7919여야 합니다
 
 ```c
-    try_catch(nth_prime(100) == 541);
+    try_catch(nthPrime(1000) == 7919);
 ```
 
-`nth_prime(10001)` 은 `104743` 을 반환해야 합니다.
+10001번째 소수는 104743이어야 합니다
 
 ```c
-    try_catch(nth_prime(10001) == 104743);
+    try_catch(nthPrime(10001) == 104743);
 ```
 
 # --after-asserts--
@@ -196,21 +193,26 @@ int main() {
 # --solutions--
 
 ```c
-int is_prime(int n) {
-    if (n < 2) return 0;
-    if (n == 2) return 1;
-    if (n % 2 == 0) return 0;
-    for (int i = 3; i <= (int)sqrt(n); i += 2) {
-        if (n % i == 0) return 0;
+#include <math.h>
+
+bool isPrime(int num) {
+    if (num < 2) return false;
+    if (num == 2) return true;
+    if (num % 2 == 0) return false;
+    for (int i = 3; i <= (int)sqrt((double)num); i += 2) {
+        if (num % i == 0) return false;
     }
-    return 1;
+    return true;
 }
 
-int nth_prime(int n) {
-    int count = 0, num = 1;
+int nthPrime(int n) {
+    int count = 0;
+    int num = 1;
     while (count < n) {
         num++;
-        if (is_prime(num)) count++;
+        if (isPrime(num)) {
+            count++;
+        }
     }
     return num;
 }

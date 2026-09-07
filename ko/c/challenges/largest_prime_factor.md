@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Prime Factor
+title: 가장 큰 소인수
 ---
 
 # --description--
 
-13195의 소인수는 5, 7, 13, 29입니다. 소인수란 어떤 수의 약수이면서 동시에 소수인 수입니다.
+13195의 소인수는 5, 7, 13, 29입니다. 주어진 수의 가장 큰 소인수는 무엇일까요?
 
 # --instructions--
 
-수 `n`의 가장 큰 소인수를 구하세요.
-
-예시:
-```c
-largest_prime_factor(13195); // ➞ 29
-```
+`long long` 정수 `number`를 받아 그 수의 가장 큰 소인수를 반환하는 함수 `largestPrimeFactor`를 작성하세요.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_prime_factor(long long n) {
+long long largestPrimeFactor(long long number) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`largest_prime_factor(13195)` 는 `29` 를 반환해야 합니다.
+2의 가장 큰 소인수는 2여야 합니다
 
 ```c
-    try_catch(largest_prime_factor(13195) == 29);
+    try_catch(largestPrimeFactor(2) == 2);
 ```
 
-`largest_prime_factor(2)` 는 `2` 를 반환해야 합니다.
+13195의 가장 큰 소인수는 29여야 합니다
 
 ```c
-    try_catch(largest_prime_factor(2) == 2);
+    try_catch(largestPrimeFactor(13195) == 29);
 ```
 
-`largest_prime_factor(12)` 는 `3` 을 반환해야 합니다.
+600851475143의 가장 큰 소인수는 6857이어야 합니다
 
 ```c
-    try_catch(largest_prime_factor(12) == 3);
-```
-
-`largest_prime_factor(600851475143)` 는 `6857` 을 반환해야 합니다.
-
-```c
-    try_catch(largest_prime_factor(600851475143LL) == 6857);
+    try_catch(largestPrimeFactor(600851475143LL) == 6857);
 ```
 
 # --after-asserts--
@@ -195,15 +187,23 @@ int main() {
 # --solutions--
 
 ```c
-long long largest_prime_factor(long long n) {
-    long long largest = 1;
-    for (long long d = 2; d * d <= n; d++) {
-        while (n % d == 0) {
-            largest = d;
-            n /= d;
+#include <math.h>
+
+long long largestPrimeFactor(long long number) {
+    long long largest = -1;
+    while (number % 2 == 0) {
+        largest = 2;
+        number /= 2;
+    }
+    for (long long i = 3; i <= (long long)sqrt((double)number); i += 2) {
+        while (number % i == 0) {
+            largest = i;
+            number /= i;
         }
     }
-    if (n > 1) largest = n;
+    if (number > 1) {
+        largest = number;
+    }
     return largest;
 }
 ```

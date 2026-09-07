@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Наибольший палиндром-произведение
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -178,8 +181,6 @@ int main() {
 # --solutions--
 
 ```c
-#include <string.h>
-
 bool isPalindrome(int num) {
     char s[20];
     sprintf(s, "%d", num);

@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: Smallest Multiple
+difficulty: 1
+title: Menor múltiplo comum
 ---
 
 # --description--
 
-2520 é o menor número que pode ser dividido por cada um dos números de 1 a 10 sem deixar resto. O menor número positivo divisível por todos os números de 1 a `n` é o mínimo múltiplo comum (MMC) desses números.
+2520 é o menor número que pode ser dividido por cada um dos números de 1 a 10 sem deixar resto. Qual é o menor número positivo que é divisível exatamente por todos os números de 1 a `n`?
 
 # --instructions--
 
-Encontre o menor número positivo divisível por todos os números de 1 a `n`.
-
-Exemplo:
-```c
-smallest_multiple(10); // ➞ 2520
-```
+Escreva uma função `smallestMultiple` que recebe um inteiro `n` e retorna o menor número positivo divisível exatamente por todos os números de 1 a `n`.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`smallest_multiple(10)` deve retornar `2520`.
+O menor múltiplo de 1 a 5 deve ser igual a 60
 
 ```c
-    try_catch(smallest_multiple(10) == 2520);
+    try_catch(smallestMultiple(5) == 60LL);
 ```
 
-`smallest_multiple(5)` deve retornar `60`.
+O menor múltiplo de 1 a 10 deve ser igual a 2520
 
 ```c
-    try_catch(smallest_multiple(5) == 60);
+    try_catch(smallestMultiple(10) == 2520LL);
 ```
 
-`smallest_multiple(20)` deve retornar `232792560`.
+O menor múltiplo de 1 a 20 deve ser igual a 232792560
 
 ```c
-    try_catch(smallest_multiple(20) == 232792560);
-```
-
-`smallest_multiple(1)` deve retornar `1`.
-
-```c
-    try_catch(smallest_multiple(1) == 1);
+    try_catch(smallestMultiple(20) == 232792560LL);
 ```
 
 # --after-asserts--
@@ -196,7 +188,7 @@ int main() {
 
 ```c
 long long gcd(long long a, long long b) {
-    while (b) {
+    while (b != 0) {
         long long t = b;
         b = a % b;
         a = t;
@@ -208,10 +200,10 @@ long long lcm(long long a, long long b) {
     return a / gcd(a, b) * b;
 }
 
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
     long long result = 1;
     for (int i = 2; i <= n; i++) {
-        result = lcm(result, i);
+        result = lcm(result, (long long)i);
     }
     return result;
 }

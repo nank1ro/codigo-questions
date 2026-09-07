@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Summation of Primes
+title: 素数の総和
 ---
 
 # --description--
 
-10未満の素数の合計は 2 + 3 + 5 + 7 = 17 です。
+10未満の素数の合計は2 + 3 + 5 + 7 = 17です。与えられた数`n`未満のすべての素数の合計を求めてください。
 
 # --instructions--
 
-`n`未満のすべての素数の合計を求めてください。
-
-例:
-```c
-sum_primes(10); // ➞ 17
-```
+整数`n`を受け取り、`n`未満のすべての素数の合計を返す関数`primeSummation`を書いてください。
 
 # --before-seed--
 
@@ -143,13 +138,14 @@ void try_catch(bool assertion) {
 }
 // DO NOT EDIT UNTIL HERE
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_primes(int n) {
+long long primeSummation(int n) {
 
 }
 ```
@@ -162,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_primes(10)` は `17` を返すべきです。
+10未満の素数の合計は17でなければなりません
 
 ```c
-    try_catch(sum_primes(10) == 17);
+    try_catch(primeSummation(10) == 17LL);
 ```
 
-`sum_primes(5)` は `10` を返すべきです。
+1000未満の素数の合計は76127でなければなりません
 
 ```c
-    try_catch(sum_primes(5) == 10);
+    try_catch(primeSummation(1000) == 76127LL);
 ```
 
-`sum_primes(100)` は `1060` を返すべきです。
+100000未満の素数の合計は454396537でなければなりません
 
 ```c
-    try_catch(sum_primes(100) == 1060);
-```
-
-`sum_primes(2000000)` は `142913828922` を返すべきです。
-
-```c
-    try_catch(sum_primes(2000000) == 142913828922LL);
+    try_catch(primeSummation(100000) == 454396537LL);
 ```
 
 # --after-asserts--
@@ -197,20 +187,22 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_primes(int n) {
-    char* sieve = calloc(n, 1);
-    sieve[0] = 1;
-    if (n > 1) sieve[1] = 1;
+long long primeSummation(int n) {
+    if (n < 2) return 0;
+    bool *sieve = (bool *)malloc(n * sizeof(bool));
+    memset(sieve, true, n * sizeof(bool));
+    sieve[0] = false;
+    sieve[1] = false;
     for (int i = 2; (long long)i * i < n; i++) {
-        if (!sieve[i]) {
+        if (sieve[i]) {
             for (int j = i * i; j < n; j += i) {
-                sieve[j] = 1;
+                sieve[j] = false;
             }
         }
     }
     long long sum = 0;
     for (int i = 2; i < n; i++) {
-        if (!sieve[i]) sum += i;
+        if (sieve[i]) sum += i;
     }
     free(sieve);
     return sum;

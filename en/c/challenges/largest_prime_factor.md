@@ -20,7 +20,6 @@ Write a function `largestPrimeFactor` that takes a `long long` integer `number` 
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 
 #ifndef _CEXCEPTION_H
 #define _CEXCEPTION_H
@@ -138,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -185,6 +187,8 @@ The largest prime factor of 600851475143 must equal 6857
 # --solutions--
 
 ```c
+#include <math.h>
+
 long long largestPrimeFactor(long long number) {
     long long largest = -1;
     while (number % 2 == 0) {

@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum Square Difference
+title: वर्गों के योग और योग के वर्ग का अंतर
 ---
 
 # --description--
 
-पहले दस प्राकृतिक संख्याओं के वर्गों का योग 1² + 2² + ... + 10² = 385 है। पहले दस प्राकृतिक संख्याओं के योग का वर्ग (1 + 2 + ... + 10)² = 55² = 3025 है। अतः पहले दस प्राकृतिक संख्याओं के वर्गों के योग और उनके योग के वर्ग का अंतर 3025 − 385 = 2640 है।
+पहली दस प्राकृतिक संख्याओं के वर्गों का योग 1² + 2² + ... + 10² = 385 है। पहली दस प्राकृतिक संख्याओं के योग का वर्ग (1 + 2 + ... + 10)² = 55² = 3025 है। इस प्रकार, पहली दस प्राकृतिक संख्याओं के वर्गों के योग और योग के वर्ग के बीच का अंतर 3025 − 385 = 2640 है।
 
 # --instructions--
 
-पहले `n` प्राकृतिक संख्याओं के वर्गों के योग और उनके योग के वर्ग का अंतर ज्ञात करें।
-
-उदाहरण:
-```c
-sum_square_difference(10); // ➞ 2640
-```
+एक फ़ंक्शन `sumSquareDifference` लिखें जो एक पूर्णांक `n` लेता है और पहली `n` प्राकृतिक संख्याओं के योग के वर्ग और वर्गों के योग के बीच का अंतर लौटाता है।
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_square_difference(int n) {
+int sumSquareDifference(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_square_difference(10)` का मान `2640` होना चाहिए।
+n=10 के लिए वर्ग योग अंतर 2640 होना चाहिए
 
 ```c
-    try_catch(sum_square_difference(10) == 2640);
+    try_catch(sumSquareDifference(10) == 2640);
 ```
 
-`sum_square_difference(5)` का मान `170` होना चाहिए।
+n=20 के लिए वर्ग योग अंतर 41230 होना चाहिए
 
 ```c
-    try_catch(sum_square_difference(5) == 170);
+    try_catch(sumSquareDifference(20) == 41230);
 ```
 
-`sum_square_difference(100)` का मान `25164150` होना चाहिए।
+n=100 के लिए वर्ग योग अंतर 25164150 होना चाहिए
 
 ```c
-    try_catch(sum_square_difference(100) == 25164150);
-```
-
-`sum_square_difference(1)` का मान `0` होना चाहिए।
-
-```c
-    try_catch(sum_square_difference(1) == 0);
+    try_catch(sumSquareDifference(100) == 25164150);
 ```
 
 # --after-asserts--
@@ -195,12 +187,13 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_square_difference(int n) {
-    long long sum = 0, sum_sq = 0;
+int sumSquareDifference(int n) {
+    int sumOfSquares = 0;
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
+        sumOfSquares += i * i;
         sum += i;
-        sum_sq += (long long)i * i;
     }
-    return sum * sum - sum_sq;
+    return sum * sum - sumOfSquares;
 }
 ```

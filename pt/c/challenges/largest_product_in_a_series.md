@@ -2,21 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Product in a Series
+title: Maior produto em uma série
 ---
 
 # --description--
 
-Os quatro dígitos adjacentes no número de 1000 dígitos que possuem o maior produto são 9 × 9 × 8 × 9 = 5832.
+Os quatro dígitos adjacentes no número de 1000 dígitos que têm o maior produto são 9 × 9 × 8 × 9 = 5832.
+
+Encontre os `n` dígitos adjacentes no número de 1000 dígitos que têm o maior produto. Qual é o valor desse produto?
 
 # --instructions--
 
-Encontre os `n` dígitos adjacentes na string `digits` que possuem o maior produto. Retorne esse produto.
-
-Exemplo:
-```c
-largest_product("1234", 2); // ➞ 12  (3 × 4)
-```
+Escreva uma função `largestProductInASeries` que recebe um inteiro `n` e retorna o maior produto de `n` dígitos consecutivos no número de 1000 dígitos.
 
 # --before-seed--
 
@@ -142,13 +139,36 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_product(const char* digits, int n) {
+long long largestProductInASeries(int n) {
+    const char *digits =
+        "73167176531330624919225119674426574742355349194934"
+        "96983520312774506326239578318016984801869478851843"
+        "85861560789112949495459501737958331952853208805511"
+        "12540698747158523863050715693290963295227443043557"
+        "66896648950445244523161731856403098711121722383113"
+        "62229893423380308135336276614282806444486645238749"
+        "30358907296290491560440772390713810515859307960866"
+        "70172427121883998797908792274921901699720888093776"
+        "65727333001053367881220235421809751254540594752243"
+        "52584907711670556013604839586446706324415722155397"
+        "53697817977846174064955149290862569321978468622482"
+        "83972241375657056057490261407972968652414535100474"
+        "82166370484403199890008895243450658541227588666881"
+        "16427171479924442928230863465674813919123162824586"
+        "17866458359124566529476545682848912883142607690042"
+        "24219022671055626321111109370544217506941658960408"
+        "07198403850962455444362981230987879927244284909188"
+        "84580156166097919133875499200524063689912560717606"
+        "05886116467109405077541002256983155200055935729725"
+        "71636269561882670428252483600823257530420752963450";
 
 }
 ```
@@ -161,28 +181,16 @@ int main() {
 
 # --asserts--
 
-`largest_product("1234", 2)` deve retornar `12`.
+O maior produto de 4 dígitos adjacentes deve ser igual a 5832
 
 ```c
-    try_catch(largest_product("1234", 2) == 12);
+    try_catch(largestProductInASeries(4) == 5832LL);
 ```
 
-`largest_product("1234", 1)` deve retornar `4`.
+O maior produto de 13 dígitos adjacentes deve ser igual a 23514624000
 
 ```c
-    try_catch(largest_product("1234", 1) == 4);
-```
-
-`largest_product("99820", 3)` deve retornar `144`.
-
-```c
-    try_catch(largest_product("99820", 3) == 144);
-```
-
-`largest_product("73167176531330624919225119674426574742355349194934", 4)` deve retornar `5765760`.
-
-```c
-    try_catch(largest_product("73167176531330624919225119674426574742355349194934", 4) == 5765760);
+    try_catch(largestProductInASeries(13) == 23514624000LL);
 ```
 
 # --after-asserts--
@@ -196,16 +204,40 @@ int main() {
 # --solutions--
 
 ```c
-long long largest_product(const char* digits, int n) {
+long long largestProductInASeries(int n) {
+    const char *digits =
+        "73167176531330624919225119674426574742355349194934"
+        "96983520312774506326239578318016984801869478851843"
+        "85861560789112949495459501737958331952853208805511"
+        "12540698747158523863050715693290963295227443043557"
+        "66896648950445244523161731856403098711121722383113"
+        "62229893423380308135336276614282806444486645238749"
+        "30358907296290491560440772390713810515859307960866"
+        "70172427121883998797908792274921901699720888093776"
+        "65727333001053367881220235421809751254540594752243"
+        "52584907711670556013604839586446706324415722155397"
+        "53697817977846174064955149290862569321978468622482"
+        "83972241375657056057490261407972968652414535100474"
+        "82166370484403199890008895243450658541227588666881"
+        "16427171479924442928230863465674813919123162824586"
+        "17866458359124566529476545682848912883142607690042"
+        "24219022671055626321111109370544217506941658960408"
+        "07198403850962455444362981230987879927244284909188"
+        "84580156166097919133875499200524063689912560717606"
+        "05886116467109405077541002256983155200055935729725"
+        "71636269561882670428252483600823257530420752963450";
+
     int len = strlen(digits);
-    long long max_product = 0;
+    long long largest = 0;
     for (int i = 0; i <= len - n; i++) {
         long long product = 1;
         for (int j = 0; j < n; j++) {
             product *= (digits[i + j] - '0');
         }
-        if (product > max_product) max_product = product;
+        if (product > largest) {
+            largest = product;
+        }
     }
-    return max_product;
+    return largest;
 }
 ```

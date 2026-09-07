@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Plus grand produit palindromique
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -178,8 +181,6 @@ Le plus grand produit palindromique de deux nombres à 3 chiffres doit être ég
 # --solutions--
 
 ```c
-#include <string.h>
-
 bool isPalindrome(int num) {
     char s[20];
     sprintf(s, "%d", num);

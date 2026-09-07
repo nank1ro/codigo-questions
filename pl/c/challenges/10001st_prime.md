@@ -1,8 +1,8 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: 10001st prime
+difficulty: 1
+title: 10001. liczba pierwsza
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--

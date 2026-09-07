@@ -2,21 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci Numbers
+title: सम फिबोनाची संख्याएं
 ---
 
 # --description--
 
-फिबोनाची अनुक्रम में प्रत्येक नया पद पिछले दो पदों को जोड़कर बनाया जाता है। 1 और 2 से शुरू करने पर पहले 10 पद होंगे: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+फिबोनाची श्रृंखला में प्रत्येक नया पद पिछले दो पदों को जोड़कर उत्पन्न होता है। 1 और 2 से शुरू करने पर, पहले 10 पद होंगे: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+किसी दिए गए सीमा से अधिक न होने वाले फिबोनाची श्रृंखला के पदों पर विचार करते हुए, सम-मान वाले पदों का योग ज्ञात करें।
 
 # --instructions--
 
-फिबोनाची अनुक्रम के उन पदों का योग ज्ञात करें जिनका मान `n` से अधिक नहीं है और जो सम संख्याएं हैं।
-
-उदाहरण:
-```c
-even_fibonacci(10); // ➞ 10  (2 + 8)
-```
+एक फ़ंक्शन `fibonacciEvenSum` लिखें जो एक पूर्णांक `n` लेता है और `n` से अधिक न होने वाले सम फिबोनाची पदों का योग लौटाता है।
 
 # --before-seed--
 
@@ -142,12 +139,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long even_fibonacci(long long n) {
+int fibonacciEvenSum(int n) {
 
 }
 ```
@@ -160,28 +160,34 @@ int main() {
 
 # --asserts--
 
-`even_fibonacci(10)` का मान `10` होना चाहिए।
+8 से अधिक न होने वाले सम फिबोनाची पदों का योग 10 होना चाहिए
 
 ```c
-    try_catch(even_fibonacci(10) == 10);
+    try_catch(fibonacciEvenSum(8) == 10);
 ```
 
-`even_fibonacci(100)` का मान `44` होना चाहिए।
+10 से अधिक न होने वाले सम फिबोनाची पदों का योग 10 होना चाहिए
 
 ```c
-    try_catch(even_fibonacci(100) == 44);
+    try_catch(fibonacciEvenSum(10) == 10);
 ```
 
-`even_fibonacci(4000000)` का मान `4613732` होना चाहिए।
+34 से अधिक न होने वाले सम फिबोनाची पदों का योग 44 होना चाहिए
 
 ```c
-    try_catch(even_fibonacci(4000000) == 4613732);
+    try_catch(fibonacciEvenSum(34) == 44);
 ```
 
-`even_fibonacci(1)` का मान `0` होना चाहिए।
+1000 से अधिक न होने वाले सम फिबोनाची पदों का योग 798 होना चाहिए
 
 ```c
-    try_catch(even_fibonacci(1) == 0);
+    try_catch(fibonacciEvenSum(1000) == 798);
+```
+
+4000000 से अधिक न होने वाले सम फिबोनाची पदों का योग 4613732 होना चाहिए
+
+```c
+    try_catch(fibonacciEvenSum(4000000) == 4613732);
 ```
 
 # --after-asserts--
@@ -195,14 +201,14 @@ int main() {
 # --solutions--
 
 ```c
-long long even_fibonacci(long long n) {
-    long long sum = 0;
-    long long a = 1, b = 2;
+int fibonacciEvenSum(int n) {
+    int sum = 0;
+    int a = 1, b = 2;
     while (a <= n) {
         if (a % 2 == 0) {
             sum += a;
         }
-        long long temp = a + b;
+        int temp = a + b;
         a = b;
         b = temp;
     }

@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Prime Factor
+title: सबसे बड़ा अभाज्य गुणनखंड
 ---
 
 # --description--
 
-13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं। एक अभाज्य गुणनखंड किसी संख्या का वह गुणनखंड होता है जो स्वयं एक अभाज्य संख्या हो।
+13195 के अभाज्य गुणनखंड 5, 7, 13 और 29 हैं। किसी दी गई संख्या का सबसे बड़ा अभाज्य गुणनखंड क्या है?
 
 # --instructions--
 
-संख्या `n` का सबसे बड़ा अभाज्य गुणनखंड ज्ञात करें।
-
-उदाहरण:
-```c
-largest_prime_factor(13195); // ➞ 29
-```
+एक फ़ंक्शन `largestPrimeFactor` लिखें जो एक `long long` पूर्णांक `number` लेता है और उसका सबसे बड़ा अभाज्य गुणनखंड लौटाता है।
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_prime_factor(long long n) {
+long long largestPrimeFactor(long long number) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`largest_prime_factor(13195)` का मान `29` होना चाहिए।
+2 का सबसे बड़ा अभाज्य गुणनखंड 2 होना चाहिए
 
 ```c
-    try_catch(largest_prime_factor(13195) == 29);
+    try_catch(largestPrimeFactor(2) == 2);
 ```
 
-`largest_prime_factor(2)` का मान `2` होना चाहिए।
+13195 का सबसे बड़ा अभाज्य गुणनखंड 29 होना चाहिए
 
 ```c
-    try_catch(largest_prime_factor(2) == 2);
+    try_catch(largestPrimeFactor(13195) == 29);
 ```
 
-`largest_prime_factor(12)` का मान `3` होना चाहिए।
+600851475143 का सबसे बड़ा अभाज्य गुणनखंड 6857 होना चाहिए
 
 ```c
-    try_catch(largest_prime_factor(12) == 3);
-```
-
-`largest_prime_factor(600851475143)` का मान `6857` होना चाहिए।
-
-```c
-    try_catch(largest_prime_factor(600851475143LL) == 6857);
+    try_catch(largestPrimeFactor(600851475143LL) == 6857);
 ```
 
 # --after-asserts--
@@ -195,15 +187,23 @@ int main() {
 # --solutions--
 
 ```c
-long long largest_prime_factor(long long n) {
-    long long largest = 1;
-    for (long long d = 2; d * d <= n; d++) {
-        while (n % d == 0) {
-            largest = d;
-            n /= d;
+#include <math.h>
+
+long long largestPrimeFactor(long long number) {
+    long long largest = -1;
+    while (number % 2 == 0) {
+        largest = 2;
+        number /= 2;
+    }
+    for (long long i = 3; i <= (long long)sqrt((double)number); i += 2) {
+        while (number % i == 0) {
+            largest = i;
+            number /= i;
         }
     }
-    if (n > 1) largest = n;
+    if (number > 1) {
+        largest = number;
+    }
     return largest;
 }
 ```

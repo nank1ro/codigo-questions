@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Special Pythagorean Triplet
+title: 特別なピタゴラスの三数組
 ---
 
 # --description--
 
-ピタゴラスの三数組とは、a < b < c を満たす3つの自然数の組であり、a² + b² = c² が成り立ちます。例えば、3² + 4² = 9 + 16 = 25 = 5² です。a + b + c = 1000 となるピタゴラスの三数組はちょうど1つだけ存在します。
+ピタゴラス数とは、a² + b² = c²を満たす3つの自然数a < b < cの組です。a + b + c = 1000となるピタゴラス数の組がちょうど1つ存在します。積abcを求めてください。
 
 # --instructions--
 
-合計`n`に対して、a + b + c = `n` となるピタゴラスの三数組を見つけ、積 a × b × c を返してください。そのような三数組が存在しない場合は `-1` を返してください。
-
-例:
-```c
-pythagorean_triplet(12); // ➞ 60  (3 + 4 + 5 = 12, 3 × 4 × 5 = 60)
-```
+整数`n`を受け取り、`a + b + c = n`となるピタゴラス数の組の積`a * b * c`を返す関数`specialPythagoreanTriplet`を書いてください。そのような組が存在しない場合は-1を返してください。
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
 
 }
 ```
@@ -160,22 +158,16 @@ int main() {
 
 # --asserts--
 
-`pythagorean_triplet(12)` は `60` を返すべきです。
+a+b+c=12となるピタゴラス数の組の積は60でなければなりません
 
 ```c
-    try_catch(pythagorean_triplet(12) == 60);
+    try_catch(specialPythagoreanTriplet(12) == 60);
 ```
 
-`pythagorean_triplet(1000)` は `31875000` を返すべきです。
+a+b+c=1000となるピタゴラス数の組の積は31875000でなければなりません
 
 ```c
-    try_catch(pythagorean_triplet(1000) == 31875000);
-```
-
-`pythagorean_triplet(4)` は `-1` を返すべきです。
-
-```c
-    try_catch(pythagorean_triplet(4) == -1);
+    try_catch(specialPythagoreanTriplet(1000) == 31875000);
 ```
 
 # --after-asserts--
@@ -189,12 +181,12 @@ int main() {
 # --solutions--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
     for (int a = 1; a < n / 3; a++) {
         for (int b = a + 1; b < n / 2; b++) {
             int c = n - a - b;
-            if (c > b && (long long)a*a + (long long)b*b == (long long)c*c) {
-                return (long long)a * b * c;
+            if (c > b && a * a + b * b == c * c) {
+                return a * b * c;
             }
         }
     }

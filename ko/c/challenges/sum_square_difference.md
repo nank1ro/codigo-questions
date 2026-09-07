@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum Square Difference
+title: 제곱합의 차
 ---
 
 # --description--
 
-처음 10개의 자연수의 제곱의 합은 1² + 2² + ... + 10² = 385입니다. 처음 10개의 자연수의 합의 제곱은 (1 + 2 + ... + 10)² = 55² = 3025입니다. 따라서 처음 10개의 자연수의 합의 제곱과 제곱의 합의 차이는 3025 − 385 = 2640입니다.
+처음 10개 자연수의 제곱의 합은 1² + 2² + ... + 10² = 385입니다. 처음 10개 자연수의 합의 제곱은 (1 + 2 + ... + 10)² = 55² = 3025입니다. 따라서 처음 10개 자연수에서 제곱의 합과 합의 제곱의 차이는 3025 − 385 = 2640입니다.
 
 # --instructions--
 
-처음 `n`개의 자연수에 대해 합의 제곱과 제곱의 합의 차이를 구하세요.
-
-예시:
-```c
-sum_square_difference(10); // ➞ 2640
-```
+정수 `n`을 받아 처음 `n`개 자연수의 합의 제곱과 제곱의 합의 차이를 반환하는 함수 `sumSquareDifference`를 작성하세요.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_square_difference(int n) {
+int sumSquareDifference(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_square_difference(10)` 은 `2640` 을 반환해야 합니다.
+n=10일 때 제곱합의 차는 2640이어야 합니다
 
 ```c
-    try_catch(sum_square_difference(10) == 2640);
+    try_catch(sumSquareDifference(10) == 2640);
 ```
 
-`sum_square_difference(5)` 는 `170` 을 반환해야 합니다.
+n=20일 때 제곱합의 차는 41230이어야 합니다
 
 ```c
-    try_catch(sum_square_difference(5) == 170);
+    try_catch(sumSquareDifference(20) == 41230);
 ```
 
-`sum_square_difference(100)` 은 `25164150` 을 반환해야 합니다.
+n=100일 때 제곱합의 차는 25164150이어야 합니다
 
 ```c
-    try_catch(sum_square_difference(100) == 25164150);
-```
-
-`sum_square_difference(1)` 은 `0` 을 반환해야 합니다.
-
-```c
-    try_catch(sum_square_difference(1) == 0);
+    try_catch(sumSquareDifference(100) == 25164150);
 ```
 
 # --after-asserts--
@@ -195,12 +187,13 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_square_difference(int n) {
-    long long sum = 0, sum_sq = 0;
+int sumSquareDifference(int n) {
+    int sumOfSquares = 0;
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
+        sumOfSquares += i * i;
         sum += i;
-        sum_sq += (long long)i * i;
     }
-    return sum * sum - sum_sq;
+    return sum * sum - sumOfSquares;
 }
 ```

@@ -7,12 +7,12 @@ title: 桁の合計
 
 # --description--
 
-You're given an integer `num`.
-Write a program to calculate the sum of all the digits of `num`
+整数`num`が与えられます。
+`num`のすべての桁の合計を計算するプログラムを書いてください
 
 # --instructions--
 
-Return the sum of digits of `num`
+`num`の桁の合計を返してください
 
 # --before-seed--
 
@@ -157,31 +157,31 @@ int main() {
 
 # --asserts--
 
-The sum of the digits of 12345 is 15
+12345の桁の合計は15です
 
 ```c
     try_catch(sum_digits(12345) == 15);
 ```
 
-The sum of the digits of 57253 is 22
+57253の桁の合計は22です
 
 ```c
     try_catch(sum_digits(57253) == 22);
 ```
 
-The sum of the digits of 122 is 5
+122の桁の合計は5です
 
 ```c
     try_catch(sum_digits(122) == 5);
 ```
 
-The sum of the digits of 91979997 is 60
+91979997の桁の合計は60です
 
 ```c
     try_catch(sum_digits(91979997) == 60);
 ```
 
-The sum of the digits of 2147483647 is 46
+2147483647の桁の合計は46です
 
 ```c
     try_catch(sum_digits(2147483647) == 46);

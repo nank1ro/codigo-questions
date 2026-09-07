@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Special Pythagorean Triplet
+title: 특별한 피타고라스 세 쌍
 ---
 
 # --description--
 
-피타고라스 세 쌍은 a < b < c를 만족하는 세 자연수의 집합으로, a² + b² = c²이 성립합니다. 예를 들어 3² + 4² = 9 + 16 = 25 = 5²입니다. a + b + c = 1000이 되는 피타고라스 세 쌍은 정확히 하나만 존재합니다.
+피타고라스 세 쌍은 a² + b² = c²을 만족하는 세 자연수 a < b < c의 집합입니다. a + b + c = 1000을 만족하는 피타고라스 세 쌍이 정확히 하나 존재합니다. 곱 abc를 구하세요.
 
 # --instructions--
 
-합 `n`이 주어졌을 때, a + b + c = `n`이 되는 피타고라스 세 쌍을 찾아 곱 a × b × c를 반환하세요. 그러한 세 쌍이 없으면 `-1`을 반환하세요.
-
-예시:
-```c
-pythagorean_triplet(12); // ➞ 60  (3 + 4 + 5 = 12, 3 × 4 × 5 = 60)
-```
+정수 `n`을 받아 `a + b + c = n`을 만족하는 피타고라스 세 쌍의 곱 `a * b * c`를 반환하는 함수 `specialPythagoreanTriplet`을 작성하세요. 그러한 세 쌍이 존재하지 않으면 -1을 반환하세요.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
 
 }
 ```
@@ -160,22 +158,16 @@ int main() {
 
 # --asserts--
 
-`pythagorean_triplet(12)` 는 `60` 을 반환해야 합니다.
+a+b+c=12일 때 피타고라스 세 쌍의 곱은 60이어야 합니다
 
 ```c
-    try_catch(pythagorean_triplet(12) == 60);
+    try_catch(specialPythagoreanTriplet(12) == 60);
 ```
 
-`pythagorean_triplet(1000)` 은 `31875000` 을 반환해야 합니다.
+a+b+c=1000일 때 피타고라스 세 쌍의 곱은 31875000이어야 합니다
 
 ```c
-    try_catch(pythagorean_triplet(1000) == 31875000);
-```
-
-`pythagorean_triplet(4)` 는 `-1` 을 반환해야 합니다.
-
-```c
-    try_catch(pythagorean_triplet(4) == -1);
+    try_catch(specialPythagoreanTriplet(1000) == 31875000);
 ```
 
 # --after-asserts--
@@ -189,12 +181,12 @@ int main() {
 # --solutions--
 
 ```c
-long long pythagorean_triplet(int n) {
+int specialPythagoreanTriplet(int n) {
     for (int a = 1; a < n / 3; a++) {
         for (int b = a + 1; b < n / 2; b++) {
             int c = n - a - b;
-            if (c > b && (long long)a*a + (long long)b*b == (long long)c*c) {
-                return (long long)a * b * c;
+            if (c > b && a * a + b * b == c * c) {
+                return a * b * c;
             }
         }
     }

@@ -2,21 +2,18 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci Numbers
+title: 짝수 피보나치 수
 ---
 
 # --description--
 
-피보나치 수열의 각 항은 이전 두 항의 합으로 생성됩니다. 1과 2로 시작하면 처음 10개의 항은 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...입니다.
+피보나치 수열의 각 새로운 항은 이전 두 항을 더하여 생성됩니다. 1과 2로 시작하면 처음 10개의 항은 다음과 같습니다: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+주어진 한계를 초과하지 않는 피보나치 수열의 항들을 고려하여, 짝수 값을 가지는 항들의 합을 구하세요.
 
 # --instructions--
 
-값이 `n`을 초과하지 않는 피보나치 수열의 항 중 짝수 값인 항들의 합을 구하세요.
-
-예시:
-```c
-even_fibonacci(10); // ➞ 10  (2 + 8)
-```
+정수 `n`을 받아 `n`을 초과하지 않는 짝수 피보나치 항들의 합을 반환하는 함수 `fibonacciEvenSum`을 작성하세요.
 
 # --before-seed--
 
@@ -142,12 +139,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long even_fibonacci(long long n) {
+int fibonacciEvenSum(int n) {
 
 }
 ```
@@ -160,28 +160,34 @@ int main() {
 
 # --asserts--
 
-`even_fibonacci(10)` 은 `10` 을 반환해야 합니다.
+8을 초과하지 않는 짝수 피보나치 항의 합은 10이어야 합니다
 
 ```c
-    try_catch(even_fibonacci(10) == 10);
+    try_catch(fibonacciEvenSum(8) == 10);
 ```
 
-`even_fibonacci(100)` 은 `44` 를 반환해야 합니다.
+10을 초과하지 않는 짝수 피보나치 항의 합은 10이어야 합니다
 
 ```c
-    try_catch(even_fibonacci(100) == 44);
+    try_catch(fibonacciEvenSum(10) == 10);
 ```
 
-`even_fibonacci(4000000)` 은 `4613732` 를 반환해야 합니다.
+34를 초과하지 않는 짝수 피보나치 항의 합은 44여야 합니다
 
 ```c
-    try_catch(even_fibonacci(4000000) == 4613732);
+    try_catch(fibonacciEvenSum(34) == 44);
 ```
 
-`even_fibonacci(1)` 은 `0` 을 반환해야 합니다.
+1000을 초과하지 않는 짝수 피보나치 항의 합은 798이어야 합니다
 
 ```c
-    try_catch(even_fibonacci(1) == 0);
+    try_catch(fibonacciEvenSum(1000) == 798);
+```
+
+4000000을 초과하지 않는 짝수 피보나치 항의 합은 4613732여야 합니다
+
+```c
+    try_catch(fibonacciEvenSum(4000000) == 4613732);
 ```
 
 # --after-asserts--
@@ -195,14 +201,14 @@ int main() {
 # --solutions--
 
 ```c
-long long even_fibonacci(long long n) {
-    long long sum = 0;
-    long long a = 1, b = 2;
+int fibonacciEvenSum(int n) {
+    int sum = 0;
+    int a = 1, b = 2;
     while (a <= n) {
         if (a % 2 == 0) {
             sum += a;
         }
-        long long temp = a + b;
+        int temp = a + b;
         a = b;
         b = temp;
     }

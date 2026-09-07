@@ -1,22 +1,17 @@
 ---
 language: c
 exerciseType: 1
-difficulty: 2
-title: Smallest Multiple
+difficulty: 1
+title: 최소공배수
 ---
 
 # --description--
 
-2520은 1부터 10까지의 모든 수로 나머지 없이 나누어지는 가장 작은 수입니다. 1부터 `n`까지의 모든 수로 균등하게 나누어지는 가장 작은 양의 정수는 이들의 최소공배수(LCM)입니다.
+2520은 1부터 10까지의 모든 수로 나누어떨어지는 가장 작은 수입니다. 1부터 `n`까지의 모든 수로 나누어떨어지는 가장 작은 양의 정수는 무엇일까요?
 
 # --instructions--
 
-1부터 `n`까지의 모든 수로 균등하게 나누어지는 가장 작은 양의 정수를 구하세요.
-
-예시:
-```c
-smallest_multiple(10); // ➞ 2520
-```
+정수 `n`을 받아 1부터 `n`까지의 모든 수로 나누어떨어지는 가장 작은 양의 정수를 반환하는 함수 `smallestMultiple`을 작성하세요.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`smallest_multiple(10)` 은 `2520` 을 반환해야 합니다.
+1부터 5까지의 최소공배수는 60이어야 합니다
 
 ```c
-    try_catch(smallest_multiple(10) == 2520);
+    try_catch(smallestMultiple(5) == 60LL);
 ```
 
-`smallest_multiple(5)` 은 `60` 을 반환해야 합니다.
+1부터 10까지의 최소공배수는 2520이어야 합니다
 
 ```c
-    try_catch(smallest_multiple(5) == 60);
+    try_catch(smallestMultiple(10) == 2520LL);
 ```
 
-`smallest_multiple(20)` 은 `232792560` 을 반환해야 합니다.
+1부터 20까지의 최소공배수는 232792560이어야 합니다
 
 ```c
-    try_catch(smallest_multiple(20) == 232792560);
-```
-
-`smallest_multiple(1)` 은 `1` 을 반환해야 합니다.
-
-```c
-    try_catch(smallest_multiple(1) == 1);
+    try_catch(smallestMultiple(20) == 232792560LL);
 ```
 
 # --after-asserts--
@@ -196,7 +188,7 @@ int main() {
 
 ```c
 long long gcd(long long a, long long b) {
-    while (b) {
+    while (b != 0) {
         long long t = b;
         b = a % b;
         a = t;
@@ -208,10 +200,10 @@ long long lcm(long long a, long long b) {
     return a / gcd(a, b) * b;
 }
 
-long long smallest_multiple(int n) {
+long long smallestMultiple(int n) {
     long long result = 1;
     for (int i = 2; i <= n; i++) {
-        result = lcm(result, i);
+        result = lcm(result, (long long)i);
     }
     return result;
 }

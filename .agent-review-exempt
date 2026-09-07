@@ -1,0 +1,6 @@
+# Files exempt from the agent commit-review gate: deterministic tool output, registries, icons.
+curriculum.json
+*/*/data.json
+*/*/challenges/data.json
+_theory.md
+assets/*/*.svg

@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
@@ -178,8 +181,6 @@ The largest palindrome product of two 3-digit numbers must equal 906609
 # --solutions--
 
 ```c
-#include <string.h>
-
 bool isPalindrome(int num) {
     char s[20];
     sprintf(s, "%d", num);

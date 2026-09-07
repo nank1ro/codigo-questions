@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Prime Factor
+title: Maior fator primo
 ---
 
 # --description--
 
-Os fatores primos de 13195 são 5, 7, 13 e 29. Um fator primo é um divisor de um número que é, ele mesmo, um número primo.
+Os fatores primos de 13195 são 5, 7, 13 e 29. Qual é o maior fator primo de um determinado número?
 
 # --instructions--
 
-Encontre o maior fator primo do número `n`.
-
-Exemplo:
-```c
-largest_prime_factor(13195); // ➞ 29
-```
+Escreva uma função `largestPrimeFactor` que recebe um inteiro `long long` chamado `number` e retorna seu maior fator primo.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_prime_factor(long long n) {
+long long largestPrimeFactor(long long number) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`largest_prime_factor(13195)` deve retornar `29`.
+O maior fator primo de 2 deve ser igual a 2
 
 ```c
-    try_catch(largest_prime_factor(13195) == 29);
+    try_catch(largestPrimeFactor(2) == 2);
 ```
 
-`largest_prime_factor(2)` deve retornar `2`.
+O maior fator primo de 13195 deve ser igual a 29
 
 ```c
-    try_catch(largest_prime_factor(2) == 2);
+    try_catch(largestPrimeFactor(13195) == 29);
 ```
 
-`largest_prime_factor(12)` deve retornar `3`.
+O maior fator primo de 600851475143 deve ser igual a 6857
 
 ```c
-    try_catch(largest_prime_factor(12) == 3);
-```
-
-`largest_prime_factor(600851475143)` deve retornar `6857`.
-
-```c
-    try_catch(largest_prime_factor(600851475143LL) == 6857);
+    try_catch(largestPrimeFactor(600851475143LL) == 6857);
 ```
 
 # --after-asserts--
@@ -195,15 +187,23 @@ int main() {
 # --solutions--
 
 ```c
-long long largest_prime_factor(long long n) {
-    long long largest = 1;
-    for (long long d = 2; d * d <= n; d++) {
-        while (n % d == 0) {
-            largest = d;
-            n /= d;
+#include <math.h>
+
+long long largestPrimeFactor(long long number) {
+    long long largest = -1;
+    while (number % 2 == 0) {
+        largest = 2;
+        number /= 2;
+    }
+    for (long long i = 3; i <= (long long)sqrt((double)number); i += 2) {
+        while (number % i == 0) {
+            largest = i;
+            number /= i;
         }
     }
-    if (n > 1) largest = n;
+    if (number > 1) {
+        largest = number;
+    }
     return largest;
 }
 ```

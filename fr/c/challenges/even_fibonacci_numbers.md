@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: Nombres de Fibonacci pairs
 ---
 
 # --description--
@@ -139,6 +139,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--

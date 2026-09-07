@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 2
-title: Largest Palindrome Product
+title: सबसे बड़ा पैलिंड्रोम गुणनफल
 ---
 
 # --description--
 
-एक पैलिंड्रोमिक संख्या दोनों दिशाओं से एक जैसी पढ़ी जाती है। दो 2-अंकीय संख्याओं के गुणनफल से बनने वाला सबसे बड़ा पैलिंड्रोम 9009 = 91 × 99 है।
+एक पैलिंड्रोम संख्या दोनों दिशाओं में समान पढ़ी जाती है। दो 2-अंकीय संख्याओं के गुणनफल से बनने वाला सबसे बड़ा पैलिंड्रोम 9009 = 91 × 99 है।
 
 # --instructions--
 
-दो `n`-अंकीय संख्याओं के गुणनफल से बनने वाला सबसे बड़ा पैलिंड्रोम ज्ञात करें।
-
-उदाहरण:
-```c
-largest_palindrome_product(2); // ➞ 9009
-```
+एक फ़ंक्शन `largestPalindromeProduct` लिखें जो एक पूर्णांक `n` लेता है और दो `n`-अंकीय संख्याओं के गुणनफल से बनने वाला सबसे बड़ा पैलिंड्रोम लौटाता है।
 
 # --before-seed--
 
@@ -142,14 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
-#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long largest_palindrome_product(int n) {
+int largestPalindromeProduct(int n) {
 
 }
 ```
@@ -162,22 +158,16 @@ int main() {
 
 # --asserts--
 
-`largest_palindrome_product(2)` का मान `9009` होना चाहिए।
+दो 2-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम 9009 होना चाहिए
 
 ```c
-    try_catch(largest_palindrome_product(2) == 9009);
+    try_catch(largestPalindromeProduct(2) == 9009);
 ```
 
-`largest_palindrome_product(1)` का मान `9` होना चाहिए।
+दो 3-अंकीय संख्याओं के गुणनफल से बना सबसे बड़ा पैलिंड्रोम 906609 होना चाहिए
 
 ```c
-    try_catch(largest_palindrome_product(1) == 9);
-```
-
-`largest_palindrome_product(3)` का मान `906609` होना चाहिए।
-
-```c
-    try_catch(largest_palindrome_product(3) == 906609);
+    try_catch(largestPalindromeProduct(3) == 906609);
 ```
 
 # --after-asserts--
@@ -191,25 +181,26 @@ int main() {
 # --solutions--
 
 ```c
-int is_palindrome(long long num) {
-    char s[32];
-    sprintf(s, "%lld", num);
+bool isPalindrome(int num) {
+    char s[20];
+    sprintf(s, "%d", num);
     int len = strlen(s);
     for (int i = 0; i < len / 2; i++) {
-        if (s[i] != s[len - 1 - i]) return 0;
+        if (s[i] != s[len - 1 - i]) return false;
     }
-    return 1;
+    return true;
 }
 
-long long largest_palindrome_product(int n) {
-    long long max_val = (long long)pow(10, n) - 1;
-    long long min_val = (long long)pow(10, n - 1);
-    long long largest = 0;
-    for (long long i = max_val; i >= min_val; i--) {
-        for (long long j = i; j >= min_val; j--) {
-            long long product = i * j;
+int largestPalindromeProduct(int n) {
+    int start = 1;
+    for (int i = 1; i < n; i++) start *= 10;
+    int end = start * 10 - 1;
+    int largest = 0;
+    for (int i = end; i >= start; i--) {
+        for (int j = i; j >= start; j--) {
+            int product = i * j;
             if (product <= largest) break;
-            if (is_palindrome(product)) {
+            if (isPalindrome(product)) {
                 largest = product;
             }
         }

@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 या 5 के गुणज
 ---
 
 # --description--
 
-यदि हम 10 से कम सभी प्राकृतिक संख्याओं को सूचीबद्ध करें जो 3 या 5 के गुणज हैं, तो हमें 3, 5, 6 और 9 प्राप्त होते हैं। इन गुणजों का योग 23 है।
+यदि हम 10 से कम सभी प्राकृतिक संख्याओं को सूचीबद्ध करें जो 3 या 5 के गुणज हैं, तो हमें 3, 5, 6 और 9 मिलते हैं। इन गुणजों का योग 23 है।
 
 # --instructions--
 
-`n` से कम सभी 3 या 5 के गुणजों का योग ज्ञात करें।
-
-उदाहरण:
-```c
-sum_multiples(10); // ➞ 23
-```
+एक फ़ंक्शन `multiplesOf3And5` लिखें जो एक पूर्णांक `number` लेता है और उस संख्या से कम सभी 3 या 5 के गुणजों का योग लौटाता है।
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_multiples(int n) {
+int multiplesOf3And5(int number) {
 
 }
 ```
@@ -160,28 +158,16 @@ int main() {
 
 # --asserts--
 
-`sum_multiples(10)` का मान `23` होना चाहिए।
+10 से कम 3 या 5 के गुणजों का योग 23 होना चाहिए
 
 ```c
-    try_catch(sum_multiples(10) == 23);
+    try_catch(multiplesOf3And5(10) == 23);
 ```
 
-`sum_multiples(20)` का मान `78` होना चाहिए।
+1000 से कम 3 या 5 के गुणजों का योग 233168 होना चाहिए
 
 ```c
-    try_catch(sum_multiples(20) == 78);
-```
-
-`sum_multiples(1000)` का मान `233168` होना चाहिए।
-
-```c
-    try_catch(sum_multiples(1000) == 233168);
-```
-
-`sum_multiples(1)` का मान `0` होना चाहिए।
-
-```c
-    try_catch(sum_multiples(1) == 0);
+    try_catch(multiplesOf3And5(1000) == 233168);
 ```
 
 # --after-asserts--
@@ -195,9 +181,9 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_multiples(int n) {
-    long long sum = 0;
-    for (int i = 1; i < n; i++) {
+int multiplesOf3And5(int number) {
+    int sum = 0;
+    for (int i = 1; i < number; i++) {
         if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
         }

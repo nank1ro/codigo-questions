@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Múltiplos de 3 o 5
 ---
 
 # --description--
@@ -137,6 +137,9 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--

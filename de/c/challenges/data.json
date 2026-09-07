@@ -68,7 +68,7 @@
     "name": "Größtes Palindromprodukt"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Kleinstes gemeinsames Vielfaches"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Quadratsummendifferenz"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001. Primzahl"
   },
   "largest_product_in_a_series": {

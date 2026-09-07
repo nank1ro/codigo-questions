@@ -2,21 +2,16 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Sum Square Difference
+title: Diferença entre quadrado da soma e soma dos quadrados
 ---
 
 # --description--
 
-A soma dos quadrados dos dez primeiros números naturais é 1² + 2² + ... + 10² = 385. O quadrado da soma dos dez primeiros números naturais é (1 + 2 + ... + 10)² = 55² = 3025. Portanto, a diferença entre o quadrado da soma e a soma dos quadrados dos dez primeiros números naturais é 3025 − 385 = 2640.
+A soma dos quadrados dos dez primeiros números naturais é 1² + 2² + ... + 10² = 385. O quadrado da soma dos dez primeiros números naturais é (1 + 2 + ... + 10)² = 55² = 3025. Portanto, a diferença entre a soma dos quadrados e o quadrado da soma dos dez primeiros números naturais é 3025 − 385 = 2640.
 
 # --instructions--
 
-Encontre a diferença entre o quadrado da soma e a soma dos quadrados dos primeiros `n` números naturais.
-
-Exemplo:
-```c
-sum_square_difference(10); // ➞ 2640
-```
+Escreva uma função `sumSquareDifference` que recebe um inteiro `n` e retorna a diferença entre o quadrado da soma e a soma dos quadrados dos primeiros `n` números naturais.
 
 # --before-seed--
 
@@ -142,12 +137,15 @@ void try_catch(bool assertion) {
     }
 }
 // DO NOT EDIT UNTIL HERE
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 ```
 
 # --seed--
 
 ```c
-long long sum_square_difference(int n) {
+int sumSquareDifference(int n) {
 
 }
 ```
@@ -160,28 +158,22 @@ int main() {
 
 # --asserts--
 
-`sum_square_difference(10)` deve retornar `2640`.
+A diferença de quadrados para n=10 deve ser igual a 2640
 
 ```c
-    try_catch(sum_square_difference(10) == 2640);
+    try_catch(sumSquareDifference(10) == 2640);
 ```
 
-`sum_square_difference(5)` deve retornar `170`.
+A diferença de quadrados para n=20 deve ser igual a 41230
 
 ```c
-    try_catch(sum_square_difference(5) == 170);
+    try_catch(sumSquareDifference(20) == 41230);
 ```
 
-`sum_square_difference(100)` deve retornar `25164150`.
+A diferença de quadrados para n=100 deve ser igual a 25164150
 
 ```c
-    try_catch(sum_square_difference(100) == 25164150);
-```
-
-`sum_square_difference(1)` deve retornar `0`.
-
-```c
-    try_catch(sum_square_difference(1) == 0);
+    try_catch(sumSquareDifference(100) == 25164150);
 ```
 
 # --after-asserts--
@@ -195,12 +187,13 @@ int main() {
 # --solutions--
 
 ```c
-long long sum_square_difference(int n) {
-    long long sum = 0, sum_sq = 0;
+int sumSquareDifference(int n) {
+    int sumOfSquares = 0;
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
+        sumOfSquares += i * i;
         sum += i;
-        sum_sq += (long long)i * i;
     }
-    return sum * sum - sum_sq;
+    return sum * sum - sumOfSquares;
 }
 ```

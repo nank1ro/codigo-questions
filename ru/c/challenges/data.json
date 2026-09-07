@@ -68,7 +68,7 @@
     "name": "Наибольший палиндром-произведение"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Наименьшее кратное"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Разность квадрата суммы и суммы квадратов"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "10001-е простое число"
   },
   "largest_product_in_a_series": {
