@@ -53,5 +53,10 @@
         "order": 11,
         "title": "セット",
         "description": "順序なしコレクションに一意の要素を格納する方法を学ぶ"
+    },
+    "assignmentOperators": {
+        "order": 12,
+        "title": "代入演算子",
+        "description": "代入演算子の使い方を学ぶ"
     }
 }
