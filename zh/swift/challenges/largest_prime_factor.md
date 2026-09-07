@@ -19,6 +19,24 @@ print(largestPrimeFactor(13195))
 // prints 29
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,59 +45,31 @@ func largestPrimeFactor(_ number: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 2 的最大质因数必须等于 2
 
 ```swift
-    func testLargestPrime1() {
-        XCTAssertEqual(largestPrimeFactor(2), 2, "--err-t1--")
-    }
+tryCatch(largestPrimeFactor(2) == 2)
 ```
 
 13195 的最大质因数必须等于 29
 
 ```swift
-    func testLargestPrime2() {
-        XCTAssertEqual(largestPrimeFactor(13195), 29, "--err-t2--")
-    }
+tryCatch(largestPrimeFactor(13195) == 29)
 ```
 
 600851475143 的最大质因数必须等于 6857
 
 ```swift
-    func testLargestPrime3() {
-        XCTAssertEqual(largestPrimeFactor(600851475143), 6857, "--err-t3--")
-    }
+tryCatch(largestPrimeFactor(600851475143) == 6857)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testLargestPrime1", testLargestPrime1),
-            ("testLargestPrime2", testLargestPrime2),
-            ("testLargestPrime3", testLargestPrime3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -2,22 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: वर्गों के योग और योग के वर्ग का अंतर
 ---
 
 # --description--
 
-पहले दस प्राकृतिक संख्याओं के वर्गों का योग है,
-
-12 + 22 + ... + 102 = 385
-पहले दस प्राकृतिक संख्याओं के योग का वर्ग है,
-
-(1 + 2 + ... + 10)2 = 552 = 3025
-अतः पहले दस प्राकृतिक संख्याओं के वर्गों के योग और योग के वर्ग के बीच का अंतर 3025 − 385 = 2640 है।
+पहली दस प्राकृत संख्याओं के वर्गों का योग 1² + 2² + ... + 10² = 385 है। पहली दस प्राकृत संख्याओं के योग का वर्ग (1 + 2 + ... + 10)² = 55² = 3025 है। इस प्रकार वर्गों के योग और योग के वर्ग के बीच का अंतर 3025 − 385 = 2640 है।
 
 # --instructions--
 
-पहले `n` प्राकृतिक संख्याओं के वर्गों के योग और योग के वर्ग के बीच का अंतर ज्ञात करें।
+एक फ़ंक्शन लिखें जो पहली n प्राकृत संख्याओं के लिए योग के वर्ग और वर्गों के योग के बीच का अंतर ज्ञात करे।
+
+फ़ंक्शन कॉल का उदाहरण:
+```swift
+print(sumSquareDifference(10))
+// prints 2640
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -27,59 +45,31 @@ func sumSquareDifference(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`sumSquareDifference(10)` को 2640 लौटाना चाहिए।
+n=10 के लिए वर्ग-योग अंतर 2640 होना चाहिए
 
 ```swift
-    func test1() {
-        XCTAssertEqual(sumSquareDifference(10), 2640, "--err-t1--")
-    }
+tryCatch(sumSquareDifference(10) == 2640)
 ```
 
-`sumSquareDifference(20)` को 41230 लौटाना चाहिए।
+n=20 के लिए वर्ग-योग अंतर 41230 होना चाहिए
 
 ```swift
-    func test2() {
-        XCTAssertEqual(sumSquareDifference(20), 41230, "--err-t2--")
-    }
+tryCatch(sumSquareDifference(20) == 41230)
 ```
 
-`sumSquareDifference(100)` को 25164150 लौटाना चाहिए।
+n=100 के लिए वर्ग-योग अंतर 25164150 होना चाहिए
 
 ```swift
-    func test3() {
-        XCTAssertEqual(sumSquareDifference(100), 25164150, "--err-t3--")
-    }
+tryCatch(sumSquareDifference(100) == 25164150)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -2,88 +2,84 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 या 5 के गुणज
 ---
 
 # --description--
 
-यदि हम 10 से कम सभी प्राकृतिक संख्याओं को सूचीबद्ध करें जो 3 या 5 के गुणज हैं, तो हमें 3, 5, 6 और 9 मिलते हैं। इन गुणजों का योग 23 है।
+यदि हम 10 से कम सभी प्राकृत संख्याओं को सूचीबद्ध करें जो 3 या 5 के गुणज हैं, तो हमें 3, 5, 6 और 9 मिलते हैं। इन गुणजों का योग 23 है।
 
 # --instructions--
 
-दिए गए पैरामीटर मान `number` से कम 3 या 5 के सभी गुणजों का योग ज्ञात करें।
+एक फ़ंक्शन लिखें जो दी गई संख्या से कम सभी 3 या 5 के गुणजों का योग ज्ञात करे।
+
+फ़ंक्शन कॉल का उदाहरण:
+```swift
+print(multiplesOf3And5(10))
+// prints 23
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
 ```swift
-func multiplesOf3and5(_ number: Int) -> Int {
+func multiplesOf3And5(_ number: Int) -> Int {
 
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`multiplesOf3and5(10)` को 23 लौटाना चाहिए।
+10 से कम 3 या 5 के गुणजों का योग 23 होना चाहिए
 
 ```swift
-    func test1() {
-        XCTAssertEqual(multiplesOf3and5(10), 23, "--err-t1--")
-    }
+tryCatch(multiplesOf3And5(10) == 23)
 ```
 
-`multiplesOf3and5(1000)` को 233168 लौटाना चाहिए।
+1000 से कम 3 या 5 के गुणजों का योग 233168 होना चाहिए
 
 ```swift
-    func test2() {
-        XCTAssertEqual(multiplesOf3and5(1000), 233168, "--err-t2--")
-    }
+tryCatch(multiplesOf3And5(1000) == 233168)
 ```
 
-`multiplesOf3and5(6987)` को 11390208 लौटाना चाहिए।
+6987 से कम 3 या 5 के गुणजों का योग 11390208 होना चाहिए
 
 ```swift
-    func test3() {
-        XCTAssertEqual(multiplesOf3and5(6987), 11390208, "--err-t3--")
-    }
+tryCatch(multiplesOf3And5(6987) == 11390208)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
-func multiplesOf3and5(_ number: Int) -> Int {
-    var total = 0
-    for i in 0..<number {
+func multiplesOf3And5(_ number: Int) -> Int {
+    var sum = 0
+    for i in 1..<number {
         if i % 3 == 0 || i % 5 == 0 {
-            total += i
+            sum += i
         }
     }
-    return total
+    return sum
 }
 ```

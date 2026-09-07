@@ -68,7 +68,7 @@
     "name": "Plus grand produit palindrome"
   },
   "smallest_multiple": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Plus petit multiple commun"
   },
   "sum_square_difference": {
@@ -76,7 +76,7 @@
     "name": "Différence somme-carré"
   },
   "10001st_prime": {
-    "difficulty": 2,
+    "difficulty": 1,
     "name": "Le 10001ème nombre premier"
   },
   "largest_product_in_a_series": {

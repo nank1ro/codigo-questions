@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: Menor múltiplo
 ---
 
 # --description--
@@ -11,7 +11,31 @@ title: Smallest multiple
 
 # --instructions--
 
-Qual é o menor número positivo que é divisível por todos os números de 1 a `n`?
+Escreva uma função que retorne o menor número positivo que é divisível por todos os números de 1 a n.
+
+Exemplo de chamada da função:
+```swift
+print(smallestMultiple(10))
+// prints 2520
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -21,77 +45,31 @@ func smallestMultiple(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`smallestMultiple(5)` deve retornar 60.
+O menor múltiplo de 1 a 5 deve ser igual a 60
 
 ```swift
-    func test1() {
-        XCTAssertEqual(smallestMultiple(5), 60, "--err-t1--")
-    }
+tryCatch(smallestMultiple(5) == 60)
 ```
 
-`smallestMultiple(7)` deve retornar 420.
+O menor múltiplo de 1 a 10 deve ser igual a 2520
 
 ```swift
-    func test2() {
-        XCTAssertEqual(smallestMultiple(7), 420, "--err-t2--")
-    }
+tryCatch(smallestMultiple(10) == 2520)
 ```
 
-`smallestMultiple(10)` deve retornar 2520.
+O menor múltiplo de 1 a 20 deve ser igual a 232792560
 
 ```swift
-    func test3() {
-        XCTAssertEqual(smallestMultiple(10), 2520, "--err-t3--")
-    }
-```
-
-`smallestMultiple(13)` deve retornar 360360.
-
-```swift
-    func test4() {
-        XCTAssertEqual(smallestMultiple(13), 360360, "--err-t4--")
-    }
-```
-
-`smallestMultiple(20)` deve retornar 232792560.
-
-```swift
-    func test5() {
-        XCTAssertEqual(smallestMultiple(20), 232792560, "--err-t5--")
-    }
+tryCatch(smallestMultiple(20) == 232792560)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
@@ -102,10 +80,6 @@ func smallestMultiple(_ n: Int) -> Int {
     func lcm(_ a: Int, _ b: Int) -> Int {
         return a / gcd(a, b) * b
     }
-    var result = 1
-    for i in 2...n {
-        result = lcm(result, i)
-    }
-    return result
+    return (1...n).reduce(1) { lcm($0, $1) }
 }
 ```

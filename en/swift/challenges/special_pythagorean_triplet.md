@@ -19,6 +19,24 @@ print(specialPythagoreanTriplet(12))
 // prints 60
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,50 +45,25 @@ func specialPythagoreanTriplet(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 The product of the Pythagorean triplet where a + b + c = 12 must equal 60
 
 ```swift
-    func testPythagorean1() {
-        XCTAssertEqual(specialPythagoreanTriplet(12), 60, "--err-t1--")
-    }
+tryCatch(specialPythagoreanTriplet(12) == 60)
 ```
 
 The product of the Pythagorean triplet where a + b + c = 1000 must equal 31875000
 
 ```swift
-    func testPythagorean2() {
-        XCTAssertEqual(specialPythagoreanTriplet(1000), 31875000, "--err-t2--")
-    }
+tryCatch(specialPythagoreanTriplet(1000) == 31875000)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testPythagorean1", testPythagorean1),
-            ("testPythagorean2", testPythagorean2),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

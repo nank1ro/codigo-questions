@@ -2,22 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 제곱의 합과 합의 제곱의 차이
 ---
 
 # --description--
 
-처음 10개의 자연수의 제곱의 합은,
-
-12 + 22 + ... + 102 = 385
-처음 10개의 자연수의 합의 제곱은,
-
-(1 + 2 + ... + 10)2 = 552 = 3025
-따라서 처음 10개의 자연수의 제곱의 합과 합의 제곱의 차이는 3025 − 385 = 2640입니다.
+처음 10개의 자연수의 제곱의 합은 1² + 2² + ... + 10² = 385입니다. 처음 10개의 자연수의 합의 제곱은 (1 + 2 + ... + 10)² = 55² = 3025입니다. 따라서 제곱의 합과 합의 제곱의 차이는 3025 − 385 = 2640입니다.
 
 # --instructions--
 
-처음 `n`개의 자연수의 제곱의 합과 합의 제곱의 차이를 구하세요.
+처음 n개의 자연수에 대해 합의 제곱과 제곱의 합의 차이를 구하는 함수를 작성하세요.
+
+함수 호출 예시:
+```swift
+print(sumSquareDifference(10))
+// prints 2640
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -27,59 +45,31 @@ func sumSquareDifference(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`sumSquareDifference(10)`은 2640을 반환해야 합니다.
+n=10일 때 제곱의 합과 합의 제곱의 차이는 2640이어야 합니다
 
 ```swift
-    func test1() {
-        XCTAssertEqual(sumSquareDifference(10), 2640, "--err-t1--")
-    }
+tryCatch(sumSquareDifference(10) == 2640)
 ```
 
-`sumSquareDifference(20)`은 41230을 반환해야 합니다.
+n=20일 때 제곱의 합과 합의 제곱의 차이는 41230이어야 합니다
 
 ```swift
-    func test2() {
-        XCTAssertEqual(sumSquareDifference(20), 41230, "--err-t2--")
-    }
+tryCatch(sumSquareDifference(20) == 41230)
 ```
 
-`sumSquareDifference(100)`은 25164150을 반환해야 합니다.
+n=100일 때 제곱의 합과 합의 제곱의 차이는 25164150이어야 합니다
 
 ```swift
-    func test3() {
-        XCTAssertEqual(sumSquareDifference(100), 25164150, "--err-t3--")
-    }
+tryCatch(sumSquareDifference(100) == 25164150)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

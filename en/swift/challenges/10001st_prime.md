@@ -1,7 +1,7 @@
 ---
 language: swift
 exerciseType: 1
-difficulty: 2
+difficulty: 1
 title: 10001st prime
 ---
 
@@ -19,6 +19,24 @@ print(nthPrime(6))
 // prints 13
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,68 +45,37 @@ func nthPrime(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 The 6th prime must equal 13
 
 ```swift
-    func testNthPrime1() {
-        XCTAssertEqual(nthPrime(6), 13, "--err-t1--")
-    }
+tryCatch(nthPrime(6) == 13)
 ```
 
 The 10th prime must equal 29
 
 ```swift
-    func testNthPrime2() {
-        XCTAssertEqual(nthPrime(10), 29, "--err-t2--")
-    }
+tryCatch(nthPrime(10) == 29)
 ```
 
 The 1000th prime must equal 7919
 
 ```swift
-    func testNthPrime3() {
-        XCTAssertEqual(nthPrime(1000), 7919, "--err-t3--")
-    }
+tryCatch(nthPrime(1000) == 7919)
 ```
 
 The 10001st prime must equal 104743
 
 ```swift
-    func testNthPrime4() {
-        XCTAssertEqual(nthPrime(10001), 104743, "--err-t4--")
-    }
+tryCatch(nthPrime(10001) == 104743)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testNthPrime1", testNthPrime1),
-            ("testNthPrime2", testNthPrime2),
-            ("testNthPrime3", testNthPrime3),
-            ("testNthPrime4", testNthPrime4),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

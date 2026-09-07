@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Soma dos primos
 ---
 
 # --description--
@@ -11,7 +11,31 @@ A soma dos primos abaixo de 10 é 2 + 3 + 5 + 7 = 17.
 
 # --instructions--
 
-Encontre a soma de todos os primos abaixo de `n`.
+Escreva uma função que encontre a soma de todos os primos abaixo do número dado.
+
+Exemplo de chamada da função:
+```swift
+print(primeSummation(10))
+// prints 17
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -21,76 +45,38 @@ func primeSummation(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`primeSummation(17)` deve retornar 41.
+A soma de todos os primos abaixo de 10 deve ser igual a 17
 
 ```swift
-    func test1() {
-        XCTAssertEqual(primeSummation(17), 41, "--err-t1--")
-    }
+tryCatch(primeSummation(10) == 17)
 ```
 
-`primeSummation(2001)` deve retornar 277050.
+A soma de todos os primos abaixo de 1000 deve ser igual a 76127
 
 ```swift
-    func test2() {
-        XCTAssertEqual(primeSummation(2001), 277050, "--err-t2--")
-    }
+tryCatch(primeSummation(1000) == 76127)
 ```
 
-`primeSummation(140759)` deve retornar 873608362.
+A soma de todos os primos abaixo de 100000 deve ser igual a 454396537
 
 ```swift
-    func test3() {
-        XCTAssertEqual(primeSummation(140759), 873608362, "--err-t3--")
-    }
-```
-
-`primeSummation(2000000)` deve retornar 142913828922.
-
-```swift
-    func test4() {
-        XCTAssertEqual(primeSummation(2000000), 142913828922, "--err-t4--")
-    }
+tryCatch(primeSummation(100000) == 454396537)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
 func primeSummation(_ n: Int) -> Int {
-    guard n > 2 else { return 0 }
     var sieve = [Bool](repeating: true, count: n)
-    sieve[0] = false
-    sieve[1] = false
+    if n > 0 { sieve[0] = false }
+    if n > 1 { sieve[1] = false }
     var i = 2
     while i * i < n {
         if sieve[i] {
@@ -102,6 +88,6 @@ func primeSummation(_ n: Int) -> Int {
         }
         i += 1
     }
-    return sieve.enumerated().filter { $0.element }.reduce(0) { $0 + $1.offset }
+    return sieve.indices.filter { sieve[$0] }.reduce(0, +)
 }
 ```

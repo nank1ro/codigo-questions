@@ -19,6 +19,24 @@ print(primeSummation(10))
 // prints 17
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,59 +45,31 @@ func primeSummation(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 La suma de todos los números primos menores de 10 debe ser igual a 17
 
 ```swift
-    func testPrimeSummation1() {
-        XCTAssertEqual(primeSummation(10), 17, "--err-t1--")
-    }
+tryCatch(primeSummation(10) == 17)
 ```
 
 La suma de todos los números primos menores de 1000 debe ser igual a 76127
 
 ```swift
-    func testPrimeSummation2() {
-        XCTAssertEqual(primeSummation(1000), 76127, "--err-t2--")
-    }
+tryCatch(primeSummation(1000) == 76127)
 ```
 
 La suma de todos los números primos menores de 100000 debe ser igual a 454396537
 
 ```swift
-    func testPrimeSummation3() {
-        XCTAssertEqual(primeSummation(100000), 454396537, "--err-t3--")
-    }
+tryCatch(primeSummation(100000) == 454396537)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testPrimeSummation1", testPrimeSummation1),
-            ("testPrimeSummation2", testPrimeSummation2),
-            ("testPrimeSummation3", testPrimeSummation3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -2,20 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: विशेष पाइथागोरियन त्रिक
 ---
 
 # --description--
 
-पाइथागोरियन त्रिक तीन प्राकृतिक संख्याओं का एक समुच्चय है, `a` < `b` < `c`, जिसके लिए, <latex>a^2 + b^2 = c^2</latex>
-
-उदाहरण के लिए, <latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
-
-एक ऐसा पाइथागोरियन त्रिक है जिसके लिए `a` + `b` + `c` = 1000।
+एक पाइथागोरियन त्रिक तीन प्राकृत संख्याओं a < b < c का समुच्चय है, जिसके लिए a² + b² = c² होता है। ठीक एक पाइथागोरियन त्रिक मौजूद है जिसके लिए a + b + c = 1000 होता है। गुणनफल a × b × c ज्ञात करें।
 
 # --instructions--
 
-ऐसा गुणनफल `abc` ज्ञात करें जिसके लिए `a` + `b` + `c` = `n`।
+एक फ़ंक्शन लिखें जो उस पाइथागोरियन त्रिक का गुणनफल a × b × c ज्ञात करे जहाँ a + b + c = n हो।
+
+फ़ंक्शन कॉल का उदाहरण:
+```swift
+print(specialPythagoreanTriplet(12))
+// prints 60
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -25,72 +45,37 @@ func specialPythagoreanTriplet(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`specialPythagoreanTriplet(24)` को 480 लौटाना चाहिए।
+a + b + c = 12 वाले पाइथागोरियन त्रिक का गुणनफल 60 होना चाहिए
 
 ```swift
-    func test1() {
-        XCTAssertEqual(specialPythagoreanTriplet(24), 480, "--err-t1--")
-    }
+tryCatch(specialPythagoreanTriplet(12) == 60)
 ```
 
-`specialPythagoreanTriplet(120)` को 49920, 55080 या 60000 लौटाना चाहिए।
+a + b + c = 1000 वाले पाइथागोरियन त्रिक का गुणनफल 31875000 होना चाहिए
 
 ```swift
-    func test2() {
-        XCTAssertTrue([49920, 55080, 60000].contains(specialPythagoreanTriplet(120)), "--err-t2--")
-    }
-```
-
-`specialPythagoreanTriplet(1000)` को 31875000 लौटाना चाहिए।
-
-```swift
-    func test3() {
-        XCTAssertEqual(specialPythagoreanTriplet(1000), 31875000, "--err-t3--")
-    }
+tryCatch(specialPythagoreanTriplet(1000) == 31875000)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
 func specialPythagoreanTriplet(_ n: Int) -> Int {
-    for a in 1...(n / 3) {
-        for b in (a + 1)...(n / 2) {
-            let cSquared = a * a + b * b
-            let c = Int(Double(cSquared).squareRoot())
-            if c * c == cSquared && a + b + c == n {
+    for a in 1..<n {
+        for b in (a + 1)..<n {
+            let c = n - a - b
+            if c > b && a * a + b * b == c * c {
                 return a * b * c
             }
         }
     }
-    return 0
+    return -1
 }
 ```

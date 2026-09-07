@@ -2,16 +2,42 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: 짝수 피보나치 수
 ---
 
 # --description--
 
-피보나치 수열의 각 새 항은 이전 두 항을 더하여 생성됩니다. 1과 2로 시작하면 처음 10개의 항은 `1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...`입니다.
+피보나치 수열의 각 새로운 항은 이전 두 항을 더하여 생성됩니다. 1과 2로 시작하면 처음 10개의 항은 다음과 같습니다: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+주어진 수를 초과하지 않는 피보나치 수열의 항들을 고려하여, 짝수인 항들의 합을 구하세요.
 
 # --instructions--
 
-값이 `n`을 초과하지 않는 피보나치 수열의 항을 고려하여 짝수 값을 가진 항의 합을 구하세요.
+주어진 한계값 이하의 모든 짝수 피보나치 수의 합을 반환하는 함수를 작성하세요.
+
+함수 호출 예시:
+```swift
+print(fibonacciEvenSum(8))
+// prints 10
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -21,120 +47,58 @@ func fibonacciEvenSum(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-함수는 짝수 값을 반환해야 합니다.
+8까지의 짝수 피보나치 수의 합은 10이어야 합니다
 
 ```swift
-    func test1() {
-        XCTAssertEqual(fibonacciEvenSum(10) % 2, 0, "--err-t1--")
-    }
+tryCatch(fibonacciEvenSum(8) == 10)
 ```
 
-`fibonacciEvenSum(8)`은 10을 반환해야 합니다.
+10까지의 짝수 피보나치 수의 합은 10이어야 합니다
 
 ```swift
-    func test2() {
-        XCTAssertEqual(fibonacciEvenSum(8), 10, "--err-t2--")
-    }
+tryCatch(fibonacciEvenSum(10) == 10)
 ```
 
-`fibonacciEvenSum(10)`은 10을 반환해야 합니다.
+34까지의 짝수 피보나치 수의 합은 44여야 합니다
 
 ```swift
-    func test3() {
-        XCTAssertEqual(fibonacciEvenSum(10), 10, "--err-t3--")
-    }
+tryCatch(fibonacciEvenSum(34) == 44)
 ```
 
-`fibonacciEvenSum(34)`은 44를 반환해야 합니다.
+1000까지의 짝수 피보나치 수의 합은 798이어야 합니다
 
 ```swift
-    func test4() {
-        XCTAssertEqual(fibonacciEvenSum(34), 44, "--err-t4--")
-    }
+tryCatch(fibonacciEvenSum(1000) == 798)
 ```
 
-`fibonacciEvenSum(60)`은 44를 반환해야 합니다.
+4000000까지의 짝수 피보나치 수의 합은 4613732여야 합니다
 
 ```swift
-    func test5() {
-        XCTAssertEqual(fibonacciEvenSum(60), 44, "--err-t5--")
-    }
-```
-
-`fibonacciEvenSum(1000)`은 798을 반환해야 합니다.
-
-```swift
-    func test6() {
-        XCTAssertEqual(fibonacciEvenSum(1000), 798, "--err-t6--")
-    }
-```
-
-`fibonacciEvenSum(100000)`은 60696을 반환해야 합니다.
-
-```swift
-    func test7() {
-        XCTAssertEqual(fibonacciEvenSum(100000), 60696, "--err-t7--")
-    }
-```
-
-`fibonacciEvenSum(4000000)`은 4613732를 반환해야 합니다.
-
-```swift
-    func test8() {
-        XCTAssertEqual(fibonacciEvenSum(4000000), 4613732, "--err-t8--")
-    }
+tryCatch(fibonacciEvenSum(4000000) == 4613732)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
-func fibonacciEvenSum(_ number: Int) -> Int {
-    if number <= 1 { return 0 }
-    var evenSum = 0
-    var prevFibNum = 1
-    var fibNum = 2
-    while fibNum <= number {
-        if fibNum % 2 == 0 {
-            evenSum += fibNum
+func fibonacciEvenSum(_ n: Int) -> Int {
+    var sum = 0
+    var a = 1
+    var b = 2
+    while a <= n {
+        if a % 2 == 0 {
+            sum += a
         }
-        let next = prevFibNum + fibNum
-        prevFibNum = fibNum
-        fibNum = next
+        let temp = a + b
+        a = b
+        b = temp
     }
-    return evenSum
+    return sum
 }
 ```

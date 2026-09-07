@@ -2,20 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特別なピタゴラスの三つ組
 ---
 
 # --description--
 
-ピタゴラスの三つ組は、<latex>a^2 + b^2 = c^2</latex> を満たす3つの自然数 `a` < `b` < `c` の集合です。
-
-例えば、<latex>3^2 + 4^2 = 9 + 16 = 25 = 5^2</latex>
-
-`a` + `b` + `c` = 1000 を満たすピタゴラスの三つ組がちょうど一つ存在します。
+ピタゴラス数とは、a² + b² = c² を満たす3つの自然数 a < b < c の組です。a + b + c = 1000 となるピタゴラス数の組がちょうど1つ存在します。その積 a × b × c を求めてください。
 
 # --instructions--
 
-`a` + `b` + `c` = `n` となる積 `abc` を求めてください。
+a + b + c = n となるピタゴラス数の積 a × b × c を求める関数を書いてください。
+
+関数呼び出しの例:
+```swift
+print(specialPythagoreanTriplet(12))
+// prints 60
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -25,72 +45,37 @@ func specialPythagoreanTriplet(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`specialPythagoreanTriplet(24)`は480を返すべきです。
+a + b + c = 12 のピタゴラス数の積は60でなければなりません
 
 ```swift
-    func test1() {
-        XCTAssertEqual(specialPythagoreanTriplet(24), 480, "--err-t1--")
-    }
+tryCatch(specialPythagoreanTriplet(12) == 60)
 ```
 
-`specialPythagoreanTriplet(120)`は49920、55080または60000を返すべきです。
+a + b + c = 1000 のピタゴラス数の積は31875000でなければなりません
 
 ```swift
-    func test2() {
-        XCTAssertTrue([49920, 55080, 60000].contains(specialPythagoreanTriplet(120)), "--err-t2--")
-    }
-```
-
-`specialPythagoreanTriplet(1000)`は31875000を返すべきです。
-
-```swift
-    func test3() {
-        XCTAssertEqual(specialPythagoreanTriplet(1000), 31875000, "--err-t3--")
-    }
+tryCatch(specialPythagoreanTriplet(1000) == 31875000)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
 func specialPythagoreanTriplet(_ n: Int) -> Int {
-    for a in 1...(n / 3) {
-        for b in (a + 1)...(n / 2) {
-            let cSquared = a * a + b * b
-            let c = Int(Double(cSquared).squareRoot())
-            if c * c == cSquared && a + b + c == n {
+    for a in 1..<n {
+        for b in (a + 1)..<n {
+            let c = n - a - b
+            if c > b && a * a + b * b == c * c {
                 return a * b * c
             }
         }
     }
-    return 0
+    return -1
 }
 ```

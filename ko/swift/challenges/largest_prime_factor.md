@@ -2,16 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: 가장 큰 소인수
 ---
 
 # --description--
 
-13195의 소인수는 5, 7, 13, 29입니다.
+13195의 소인수는 5, 7, 13, 29입니다. 13195의 가장 큰 소인수는 29입니다.
 
 # --instructions--
 
-주어진 `number`의 가장 큰 소인수는 무엇입니까?
+주어진 수의 가장 큰 소인수를 반환하는 함수를 작성하세요.
+
+함수 호출 예시:
+```swift
+print(largestPrimeFactor(13195))
+// prints 29
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -21,108 +45,48 @@ func largestPrimeFactor(_ number: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`largestPrimeFactor(2)`는 2를 반환해야 합니다.
+2의 가장 큰 소인수는 2여야 합니다
 
 ```swift
-    func test1() {
-        XCTAssertEqual(largestPrimeFactor(2), 2, "--err-t1--")
-    }
+tryCatch(largestPrimeFactor(2) == 2)
 ```
 
-`largestPrimeFactor(3)`는 3을 반환해야 합니다.
+13195의 가장 큰 소인수는 29여야 합니다
 
 ```swift
-    func test2() {
-        XCTAssertEqual(largestPrimeFactor(3), 3, "--err-t2--")
-    }
+tryCatch(largestPrimeFactor(13195) == 29)
 ```
 
-`largestPrimeFactor(5)`는 5를 반환해야 합니다.
+600851475143의 가장 큰 소인수는 6857이어야 합니다
 
 ```swift
-    func test3() {
-        XCTAssertEqual(largestPrimeFactor(5), 5, "--err-t3--")
-    }
-```
-
-`largestPrimeFactor(7)`는 7을 반환해야 합니다.
-
-```swift
-    func test4() {
-        XCTAssertEqual(largestPrimeFactor(7), 7, "--err-t4--")
-    }
-```
-
-`largestPrimeFactor(8)`는 2를 반환해야 합니다.
-
-```swift
-    func test5() {
-        XCTAssertEqual(largestPrimeFactor(8), 2, "--err-t5--")
-    }
-```
-
-`largestPrimeFactor(13195)`는 29를 반환해야 합니다.
-
-```swift
-    func test6() {
-        XCTAssertEqual(largestPrimeFactor(13195), 29, "--err-t6--")
-    }
-```
-
-`largestPrimeFactor(600851475143)`는 6857을 반환해야 합니다.
-
-```swift
-    func test7() {
-        XCTAssertEqual(largestPrimeFactor(600851475143), 6857, "--err-t7--")
-    }
+tryCatch(largestPrimeFactor(600851475143) == 6857)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
 func largestPrimeFactor(_ number: Int) -> Int {
-    var largestFactor = number
-    var i = 2
-    while i * i <= largestFactor {
-        if largestFactor % i == 0 {
-            largestFactor /= i
-        } else {
-            i += 1
+    var n = number
+    var largest = 1
+    var factor = 2
+    while factor * factor <= n {
+        while n % factor == 0 {
+            largest = factor
+            n /= factor
         }
+        factor += 1
     }
-    return largestFactor
+    if n > 1 {
+        largest = n
+    }
+    return largest
 }
 ```

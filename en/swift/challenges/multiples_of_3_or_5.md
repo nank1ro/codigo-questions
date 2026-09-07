@@ -19,6 +19,24 @@ print(multiplesOf3And5(10))
 // prints 23
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,59 +45,31 @@ func multiplesOf3And5(_ number: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 The sum of multiples of 3 or 5 below 10 must equal 23
 
 ```swift
-    func testMultiples1() {
-        XCTAssertEqual(multiplesOf3And5(10), 23, "--err-t1--")
-    }
+tryCatch(multiplesOf3And5(10) == 23)
 ```
 
 The sum of multiples of 3 or 5 below 1000 must equal 233168
 
 ```swift
-    func testMultiples2() {
-        XCTAssertEqual(multiplesOf3And5(1000), 233168, "--err-t2--")
-    }
+tryCatch(multiplesOf3And5(1000) == 233168)
 ```
 
 The sum of multiples of 3 or 5 below 6987 must equal 11390208
 
 ```swift
-    func testMultiples3() {
-        XCTAssertEqual(multiplesOf3And5(6987), 11390208, "--err-t3--")
-    }
+tryCatch(multiplesOf3And5(6987) == 11390208)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testMultiples1", testMultiples1),
-            ("testMultiples2", testMultiples2),
-            ("testMultiples3", testMultiples3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

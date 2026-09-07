@@ -19,6 +19,24 @@ print(largestPalindromeProduct(2))
 // prints 9009
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,50 +45,25 @@ func largestPalindromeProduct(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 Das größte Palindromprodukt zweier 2-stelliger Zahlen muss 9009 ergeben
 
 ```swift
-    func testPalindrome1() {
-        XCTAssertEqual(largestPalindromeProduct(2), 9009, "--err-t1--")
-    }
+tryCatch(largestPalindromeProduct(2) == 9009)
 ```
 
 Das größte Palindromprodukt zweier 3-stelliger Zahlen muss 906609 ergeben
 
 ```swift
-    func testPalindrome2() {
-        XCTAssertEqual(largestPalindromeProduct(3), 906609, "--err-t2--")
-    }
+tryCatch(largestPalindromeProduct(3) == 906609)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testPalindrome1", testPalindrome1),
-            ("testPalindrome2", testPalindrome2),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

@@ -2,88 +2,84 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3または5の倍数
 ---
 
 # --description--
 
-10未満の自然数のうち、3または5の倍数をリストすると、3、5、6、9が得られます。これらの倍数の合計は23です。
+10未満の自然数のうち、3または5の倍数をすべて挙げると 3, 5, 6, 9 になります。これらの倍数の合計は23です。
 
 # --instructions--
 
-指定されたパラメータ値`number`未満の3または5のすべての倍数の合計を求めてください。
+与えられた数未満の3または5の倍数の合計を求める関数を書いてください。
+
+関数呼び出しの例:
+```swift
+print(multiplesOf3And5(10))
+// prints 23
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
 ```swift
-func multiplesOf3and5(_ number: Int) -> Int {
+func multiplesOf3And5(_ number: Int) -> Int {
 
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`multiplesOf3and5(10)`は23を返すべきです。
+10未満の3または5の倍数の合計は23でなければなりません
 
 ```swift
-    func test1() {
-        XCTAssertEqual(multiplesOf3and5(10), 23, "--err-t1--")
-    }
+tryCatch(multiplesOf3And5(10) == 23)
 ```
 
-`multiplesOf3and5(1000)`は233168を返すべきです。
+1000未満の3または5の倍数の合計は233168でなければなりません
 
 ```swift
-    func test2() {
-        XCTAssertEqual(multiplesOf3and5(1000), 233168, "--err-t2--")
-    }
+tryCatch(multiplesOf3And5(1000) == 233168)
 ```
 
-`multiplesOf3and5(6987)`は11390208を返すべきです。
+6987未満の3または5の倍数の合計は11390208でなければなりません
 
 ```swift
-    func test3() {
-        XCTAssertEqual(multiplesOf3and5(6987), 11390208, "--err-t3--")
-    }
+tryCatch(multiplesOf3And5(6987) == 11390208)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
-func multiplesOf3and5(_ number: Int) -> Int {
-    var total = 0
-    for i in 0..<number {
+func multiplesOf3And5(_ number: Int) -> Int {
+    var sum = 0
+    for i in 1..<number {
         if i % 3 == 0 || i % 5 == 0 {
-            total += i
+            sum += i
         }
     }
-    return total
+    return sum
 }
 ```

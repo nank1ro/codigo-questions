@@ -2,16 +2,42 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: 偶数フィボナッチ数
 ---
 
 # --description--
 
-フィボナッチ数列の各新しい項は、前の2つの項を加算することで生成されます。1と2から始めると、最初の10項は `1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...` となります。
+フィボナッチ数列の各新しい項は、直前の2つの項を足し合わせることで生成されます。1と2から始めると、最初の10項は次のようになります: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+与えられた数を超えないフィボナッチ数列の項を考え、偶数である項の合計を求めてください。
 
 # --instructions--
 
-`n`を超えない値を持つフィボナッチ数列の項を考え、偶数値の項の合計を求めてください。
+与えられた上限以下の偶数のフィボナッチ数の合計を返す関数を書いてください。
+
+関数呼び出しの例:
+```swift
+print(fibonacciEvenSum(8))
+// prints 10
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -21,120 +47,58 @@ func fibonacciEvenSum(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-関数は偶数値を返すべきです。
+8までの偶数フィボナッチ数の合計は10でなければなりません
 
 ```swift
-    func test1() {
-        XCTAssertEqual(fibonacciEvenSum(10) % 2, 0, "--err-t1--")
-    }
+tryCatch(fibonacciEvenSum(8) == 10)
 ```
 
-`fibonacciEvenSum(8)`は10を返すべきです。
+10までの偶数フィボナッチ数の合計は10でなければなりません
 
 ```swift
-    func test2() {
-        XCTAssertEqual(fibonacciEvenSum(8), 10, "--err-t2--")
-    }
+tryCatch(fibonacciEvenSum(10) == 10)
 ```
 
-`fibonacciEvenSum(10)`は10を返すべきです。
+34までの偶数フィボナッチ数の合計は44でなければなりません
 
 ```swift
-    func test3() {
-        XCTAssertEqual(fibonacciEvenSum(10), 10, "--err-t3--")
-    }
+tryCatch(fibonacciEvenSum(34) == 44)
 ```
 
-`fibonacciEvenSum(34)`は44を返すべきです。
+1000までの偶数フィボナッチ数の合計は798でなければなりません
 
 ```swift
-    func test4() {
-        XCTAssertEqual(fibonacciEvenSum(34), 44, "--err-t4--")
-    }
+tryCatch(fibonacciEvenSum(1000) == 798)
 ```
 
-`fibonacciEvenSum(60)`は44を返すべきです。
+4000000までの偶数フィボナッチ数の合計は4613732でなければなりません
 
 ```swift
-    func test5() {
-        XCTAssertEqual(fibonacciEvenSum(60), 44, "--err-t5--")
-    }
-```
-
-`fibonacciEvenSum(1000)`は798を返すべきです。
-
-```swift
-    func test6() {
-        XCTAssertEqual(fibonacciEvenSum(1000), 798, "--err-t6--")
-    }
-```
-
-`fibonacciEvenSum(100000)`は60696を返すべきです。
-
-```swift
-    func test7() {
-        XCTAssertEqual(fibonacciEvenSum(100000), 60696, "--err-t7--")
-    }
-```
-
-`fibonacciEvenSum(4000000)`は4613732を返すべきです。
-
-```swift
-    func test8() {
-        XCTAssertEqual(fibonacciEvenSum(4000000), 4613732, "--err-t8--")
-    }
+tryCatch(fibonacciEvenSum(4000000) == 4613732)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-            ("test4", test4),
-            ("test5", test5),
-            ("test6", test6),
-            ("test7", test7),
-            ("test8", test8),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
-func fibonacciEvenSum(_ number: Int) -> Int {
-    if number <= 1 { return 0 }
-    var evenSum = 0
-    var prevFibNum = 1
-    var fibNum = 2
-    while fibNum <= number {
-        if fibNum % 2 == 0 {
-            evenSum += fibNum
+func fibonacciEvenSum(_ n: Int) -> Int {
+    var sum = 0
+    var a = 1
+    var b = 2
+    while a <= n {
+        if a % 2 == 0 {
+            sum += a
         }
-        let next = prevFibNum + fibNum
-        prevFibNum = fibNum
-        fibNum = next
+        let temp = a + b
+        a = b
+        b = temp
     }
-    return evenSum
+    return sum
 }
 ```

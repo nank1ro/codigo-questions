@@ -19,6 +19,24 @@ print(sumSquareDifference(10))
 // prints 2640
 ```
 
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
+
 # --seed--
 
 ```swift
@@ -27,59 +45,31 @@ func sumSquareDifference(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
 n=10 时的平方差必须等于 2640
 
 ```swift
-    func testSumSquare1() {
-        XCTAssertEqual(sumSquareDifference(10), 2640, "--err-t1--")
-    }
+tryCatch(sumSquareDifference(10) == 2640)
 ```
 
 n=20 时的平方差必须等于 41230
 
 ```swift
-    func testSumSquare2() {
-        XCTAssertEqual(sumSquareDifference(20), 41230, "--err-t2--")
-    }
+tryCatch(sumSquareDifference(20) == 41230)
 ```
 
 n=100 时的平方差必须等于 25164150
 
 ```swift
-    func testSumSquare3() {
-        XCTAssertEqual(sumSquareDifference(100), 25164150, "--err-t3--")
-    }
+tryCatch(sumSquareDifference(100) == 25164150)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("testSumSquare1", testSumSquare1),
-            ("testSumSquare2", testSumSquare2),
-            ("testSumSquare3", testSumSquare3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift

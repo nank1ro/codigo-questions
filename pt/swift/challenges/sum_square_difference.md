@@ -2,22 +2,40 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: Diferença entre quadrado da soma e soma dos quadrados
 ---
 
 # --description--
 
-A soma dos quadrados dos primeiros dez números naturais é,
-
-12 + 22 + ... + 102 = 385
-O quadrado da soma dos primeiros dez números naturais é,
-
-(1 + 2 + ... + 10)2 = 552 = 3025
-Portanto, a diferença entre a soma dos quadrados dos primeiros dez números naturais e o quadrado da soma é 3025 − 385 = 2640.
+A soma dos quadrados dos primeiros dez números naturais é 1² + 2² + ... + 10² = 385. O quadrado da soma dos primeiros dez números naturais é (1 + 2 + ... + 10)² = 55² = 3025. Portanto, a diferença entre a soma dos quadrados dos primeiros dez números naturais e o quadrado da soma é 3025 − 385 = 2640.
 
 # --instructions--
 
-Encontre a diferença entre a soma dos quadrados dos primeiros `n` números naturais e o quadrado da soma.
+Escreva uma função que encontre a diferença entre o quadrado da soma e a soma dos quadrados dos primeiros n números naturais.
+
+Exemplo de chamada da função:
+```swift
+print(sumSquareDifference(10))
+// prints 2640
+```
+
+# --before-seed--
+
+```swift
+// DO NOT EDIT FROM HERE
+import Foundation
+
+var _testCount = 0
+var _testFailedCount = 0
+func tryCatch(_ assertion: Bool) {
+    _testCount += 1
+    if !assertion {
+        _testFailedCount += 1
+        print("Test Case '--err-t\(_testCount)--' failed")
+    }
+}
+// DO NOT EDIT UNTIL HERE
+```
 
 # --seed--
 
@@ -27,59 +45,31 @@ func sumSquareDifference(_ n: Int) -> Int {
 }
 ```
 
-# --before-asserts--
-
-```swift
-import Foundation
-import XCTest
-
-class CodigoTests: XCTestCase {
-```
-
 # --asserts--
 
-`sumSquareDifference(10)` deve retornar 2640.
+A diferença do quadrado da soma para n=10 deve ser igual a 2640
 
 ```swift
-    func test1() {
-        XCTAssertEqual(sumSquareDifference(10), 2640, "--err-t1--")
-    }
+tryCatch(sumSquareDifference(10) == 2640)
 ```
 
-`sumSquareDifference(20)` deve retornar 41230.
+A diferença do quadrado da soma para n=20 deve ser igual a 41230
 
 ```swift
-    func test2() {
-        XCTAssertEqual(sumSquareDifference(20), 41230, "--err-t2--")
-    }
+tryCatch(sumSquareDifference(20) == 41230)
 ```
 
-`sumSquareDifference(100)` deve retornar 25164150.
+A diferença do quadrado da soma para n=100 deve ser igual a 25164150
 
 ```swift
-    func test3() {
-        XCTAssertEqual(sumSquareDifference(100), 25164150, "--err-t3--")
-    }
+tryCatch(sumSquareDifference(100) == 25164150)
 ```
 
 # --after-asserts--
 
 ```swift
-}
-
-extension CodigoTests {
-    static var allTests : [(String, (CodigoTests) -> () throws -> Void)] {
-        return [
-            ("test1", test1),
-            ("test2", test2),
-            ("test3", test3),
-        ]
-    }
-}
-
-XCTMain([testCase(CodigoTests.allTests)])
+print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 ```
-
 # --solutions--
 
 ```swift
