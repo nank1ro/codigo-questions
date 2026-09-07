@@ -58,5 +58,37 @@
     "difficulty": 3,
     "name": "Année bissextile",
     "isPro": true
+  },
+  "10001st_prime": {
+    "difficulty": 1,
+    "name": "Le 10001e nombre premier"
+  },
+  "largest_palindrome_product": {
+    "difficulty": 2,
+    "name": "Plus grand produit palindrome"
+  },
+  "largest_prime_factor": {
+    "difficulty": 2,
+    "name": "Plus grand facteur premier"
+  },
+  "largest_product_in_a_series": {
+    "difficulty": 2,
+    "name": "Plus grand produit dans une série"
+  },
+  "smallest_multiple": {
+    "difficulty": 1,
+    "name": "Plus petit multiple commun"
+  },
+  "special_pythagorean_triplet": {
+    "difficulty": 2,
+    "name": "Triplet pythagoricien spécial"
+  },
+  "sum_square_difference": {
+    "difficulty": 1,
+    "name": "Différence somme des carrés"
+  },
+  "summation_of_primes": {
+    "difficulty": 2,
+    "name": "Somme des nombres premiers"
   }
 }
