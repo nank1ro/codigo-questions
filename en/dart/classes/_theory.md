@@ -10,12 +10,12 @@ By convention, class names use **PascalCase** (each word starts with a capital l
 
 ---
 
-A class can have **instance variables** (also called fields) that hold data for each object. You declare them inside the class body:
+A class can have **instance variables** (also called fields) that hold data for each object. You declare them inside the class body, giving each one an initial value:
 
 ```dart
 class Animal {
-  String name;
-  int age;
+  String name = '';
+  int age = 0;
 }
 ```
 
@@ -29,11 +29,11 @@ A **constructor** is a special method that runs when you create (instantiate) an
 class Animal {
   String name;
 
-  Animal(String name) {
-    this.name = name;
-  }
+  Animal(this.name);
 }
 ```
+
+A parameter written as `this.name` stores the value passed to the constructor directly into the field `name` of the new object. A field set this way does not need an initial value.
 
 You create an object using the `new` keyword (optional in Dart) or just the class name:
 
@@ -43,12 +43,12 @@ var dog = Animal('Rex');
 
 ---
 
-Dart offers a shorthand syntax for constructors that automatically assigns parameters to instance variables. Instead of:
+The `this.x` parameter you saw in the previous exercise is a shorthand. The long form assigns each parameter to its field inside the constructor body (`this.x` is the field, `x` is the parameter):
 
 ```dart
 class Point {
-  int x;
-  int y;
+  int x = 0;
+  int y = 0;
 
   Point(int x, int y) {
     this.x = x;
@@ -57,7 +57,7 @@ class Point {
 }
 ```
 
-You can write:
+The same class can be written as:
 
 ```dart
 class Point {
@@ -90,19 +90,21 @@ You call a method on an object using dot notation: `dog.speak()`.
 
 ---
 
-`this` refers to the **current instance** of the class. It is used to distinguish between instance variables and parameters that have the same name:
+`this` refers to the **current instance** of the class, that is, the object a method was called on. Inside a method you can use it to access the object's own fields:
 
 ```dart
 class Circle {
   double radius;
 
-  Circle(double radius) {
-    this.radius = radius;
+  Circle(this.radius);
+
+  double diameter() {
+    return this.radius * 2;
   }
 }
 ```
 
-Here `this.radius` refers to the field, while `radius` (without `this`) refers to the constructor parameter.
+Here `this.radius` reads the `radius` field of the circle on which `diameter()` was called. When there is no other variable with the same name, `this.` can be omitted: `radius * 2` works the same.
 
 ---
 
@@ -121,7 +123,7 @@ class Point {
 }
 ```
 
-You can then create an object at the origin with: `var p = Point.origin();`
+The part after the colon is the **initializer list**: it assigns the fields before the constructor body runs. You can then create an object at the origin with: `var p = Point.origin();`
 
 ---
 
@@ -138,6 +140,12 @@ class Circle {
 ```
 
 You access a getter like a field: `circle.area` (no parentheses).
+
+The arrow `=> expr` is a shorthand for a body that only returns a value: `{ return expr; }`. It works for getters and for any function or method:
+
+```dart
+double half(double n) => n / 2;
+```
 
 ---
 
@@ -164,25 +172,21 @@ The field name is often prefixed with `_` to mark it as private.
 
 ```dart
 class Animal {
-  String name;
-  Animal(this.name);
+  String name = 'animal';
 
   void speak() {
-    print('...');
+    print('$name makes a sound.');
   }
 }
 
 class Dog extends Animal {
-  Dog(String name) : super(name);
-
-  @override
-  void speak() {
-    print('Woof!');
+  void fetch() {
+    print('$name fetches the ball.');
   }
 }
 ```
 
-`Dog` inherits `name` from `Animal` and overrides `speak`.
+`Dog` inherits `name` and `speak()` from `Animal` and adds its own method `fetch()`. A class that declares no constructor gets a default one with no parameters, so you can write `var dog = Dog();` and then call both `dog.speak()` and `dog.fetch()`.
 
 ---
 
@@ -253,9 +257,11 @@ class MathHelper {
   static double circleArea(double r) => pi * r * r;
 }
 
-// access without creating an object:
-print(MathHelper.pi);
-print(MathHelper.circleArea(5));
+void main() {
+  // access without creating an object:
+  print(MathHelper.pi);
+  print(MathHelper.circleArea(5));
+}
 ```
 
 Static fields and methods are shared by all instances.

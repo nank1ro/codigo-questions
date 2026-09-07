@@ -10,12 +10,12 @@ Zgodnie z konwencją nazwy klas używają notacji **PascalCase** (każde słowo 
 
 ---
 
-Klasa może mieć **zmienne instancji** (zwane też polami), które przechowują dane każdego obiektu. Deklaruje się je wewnątrz ciała klasy:
+Klasa może mieć **zmienne instancji** (zwane też polami), które przechowują dane każdego obiektu. Deklaruje się je wewnątrz ciała klasy, nadając każdemu wartość początkową:
 
 ```dart
 class Animal {
-  String name;
-  int age;
+  String name = '';
+  int age = 0;
 }
 ```
 
@@ -29,11 +29,11 @@ Każdy obiekt stworzony z tej klasy będzie miał własne pola `name` i `age`.
 class Animal {
   String name;
 
-  Animal(String name) {
-    this.name = name;
-  }
+  Animal(this.name);
 }
 ```
+
+Parametr zapisany jako `this.name` zapisuje wartość przekazaną do konstruktora bezpośrednio w polu `name` nowego obiektu. Pole ustawiane w ten sposób nie wymaga wartości początkowej.
 
 Obiekt tworzy się za pomocą słowa kluczowego `new` (opcjonalnego w Darcie) lub bezpośrednio nazwy klasy:
 
@@ -43,12 +43,12 @@ var dog = Animal('Rex');
 
 ---
 
-Dart oferuje skróconą składnię konstruktorów, która automatycznie przypisuje parametry do zmiennych instancji. Zamiast:
+Parametr `this.x`, który widziałeś w poprzednim ćwiczeniu, to skrót. Dłuższa forma przypisuje każdy parametr do jego pola w ciele konstruktora (`this.x` to pole, `x` to parametr):
 
 ```dart
 class Point {
-  int x;
-  int y;
+  int x = 0;
+  int y = 0;
 
   Point(int x, int y) {
     this.x = x;
@@ -57,7 +57,7 @@ class Point {
 }
 ```
 
-Można napisać:
+Tę samą klasę można zapisać jako:
 
 ```dart
 class Point {
@@ -90,19 +90,21 @@ Metodę wywołuje się na obiekcie za pomocą notacji kropkowej: `dog.speak()`.
 
 ---
 
-`this` odnosi się do **bieżącej instancji** klasy. Używa się go, aby odróżnić zmienne instancji od parametrów o tej samej nazwie:
+`this` odnosi się do **bieżącej instancji** klasy, czyli obiektu, na którym wywołano metodę. Wewnątrz metody można go użyć, aby uzyskać dostęp do pól tego obiektu:
 
 ```dart
 class Circle {
   double radius;
 
-  Circle(double radius) {
-    this.radius = radius;
+  Circle(this.radius);
+
+  double diameter() {
+    return this.radius * 2;
   }
 }
 ```
 
-Tutaj `this.radius` odnosi się do pola, a `radius` (bez `this`) do parametru konstruktora.
+Tutaj `this.radius` odczytuje pole `radius` okręgu, na którym wywołano `diameter()`. Gdy nie ma innej zmiennej o tej samej nazwie, `this.` można pominąć: `radius * 2` działa tak samo.
 
 ---
 
@@ -121,7 +123,7 @@ class Point {
 }
 ```
 
-Obiekt w początku układu współrzędnych tworzy się wówczas za pomocą: `var p = Point.origin();`
+Część po dwukropku to **lista inicjalizacyjna**: przypisuje pola, zanim wykona się ciało konstruktora. Obiekt w początku układu współrzędnych tworzy się wówczas za pomocą: `var p = Point.origin();`
 
 ---
 
@@ -138,6 +140,12 @@ class Circle {
 ```
 
 Do gettera odwołuje się jak do pola: `circle.area` (bez nawiasów).
+
+Strzałka `=> expr` to skrót dla ciała, które tylko zwraca wartość: `{ return expr; }`. Działa dla getterów oraz dla dowolnej funkcji lub metody:
+
+```dart
+double half(double n) => n / 2;
+```
 
 ---
 
@@ -164,25 +172,21 @@ Nazwa pola jest często poprzedzona znakiem `_`, co oznacza, że jest prywatna.
 
 ```dart
 class Animal {
-  String name;
-  Animal(this.name);
+  String name = 'animal';
 
   void speak() {
-    print('...');
+    print('$name makes a sound.');
   }
 }
 
 class Dog extends Animal {
-  Dog(String name) : super(name);
-
-  @override
-  void speak() {
-    print('Woof!');
+  void fetch() {
+    print('$name fetches the ball.');
   }
 }
 ```
 
-`Dog` dziedziczy `name` od `Animal` i nadpisuje metodę `speak`.
+`Dog` dziedziczy `name` i `speak()` od `Animal` i dodaje własną metodę `fetch()`. Klasa, która nie deklaruje konstruktora, otrzymuje domyślny konstruktor bez parametrów, więc można napisać `var dog = Dog();`, a następnie wywołać zarówno `dog.speak()`, jak i `dog.fetch()`.
 
 ---
 
@@ -253,9 +257,11 @@ class MathHelper {
   static double circleArea(double r) => pi * r * r;
 }
 
-// dostęp bez tworzenia obiektu:
-print(MathHelper.pi);
-print(MathHelper.circleArea(5));
+void main() {
+  // dostęp bez tworzenia obiektu:
+  print(MathHelper.pi);
+  print(MathHelper.circleArea(5));
+}
 ```
 
 Statyczne pola i metody są współdzielone przez wszystkie instancje.

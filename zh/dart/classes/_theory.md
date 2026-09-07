@@ -10,12 +10,12 @@ class Animal {
 
 ---
 
-类可以拥有**实例变量**（也称为字段），用于保存每个对象的数据。在类体内部声明它们：
+类可以拥有**实例变量**（也称为字段），用于保存每个对象的数据。在类体内部声明它们，并为每个字段赋予初始值：
 
 ```dart
 class Animal {
-  String name;
-  int age;
+  String name = '';
+  int age = 0;
 }
 ```
 
@@ -29,11 +29,11 @@ class Animal {
 class Animal {
   String name;
 
-  Animal(String name) {
-    this.name = name;
-  }
+  Animal(this.name);
 }
 ```
+
+写作 `this.name` 的参数会把传给构造函数的值直接存入新对象的字段 `name`。以这种方式设置的字段不需要初始值。
 
 使用 `new` 关键字（在 Dart 中可省略）或直接用类名创建对象：
 
@@ -43,12 +43,12 @@ var dog = Animal('Rex');
 
 ---
 
-Dart 提供了一种构造函数简写语法，可以自动将参数赋值给实例变量。代替以下写法：
+上一题中看到的 `this.x` 参数是一种简写。完整写法在构造函数体内把每个参数赋值给对应字段（`this.x` 是字段，`x` 是参数）：
 
 ```dart
 class Point {
-  int x;
-  int y;
+  int x = 0;
+  int y = 0;
 
   Point(int x, int y) {
     this.x = x;
@@ -57,7 +57,7 @@ class Point {
 }
 ```
 
-可以写成：
+同一个类可以写成：
 
 ```dart
 class Point {
@@ -90,19 +90,21 @@ class Animal {
 
 ---
 
-`this` 指向类的**当前实例**。它用于区分实例变量和同名参数：
+`this` 指向类的**当前实例**，即调用方法的那个对象。在方法内部可以用它访问对象自己的字段：
 
 ```dart
 class Circle {
   double radius;
 
-  Circle(double radius) {
-    this.radius = radius;
+  Circle(this.radius);
+
+  double diameter() {
+    return this.radius * 2;
   }
 }
 ```
 
-此处 `this.radius` 指字段，而 `radius`（不带 `this`）指构造函数参数。
+此处 `this.radius` 读取调用 `diameter()` 的那个圆的 `radius` 字段。当没有其他同名变量时，`this.` 可以省略：`radius * 2` 效果相同。
 
 ---
 
@@ -121,7 +123,7 @@ class Point {
 }
 ```
 
-然后可以用 `var p = Point.origin();` 创建原点处的对象。
+冒号后面的部分是**初始化列表**：它在构造函数体运行之前为字段赋值。然后可以用 `var p = Point.origin();` 创建原点处的对象。
 
 ---
 
@@ -138,6 +140,12 @@ class Circle {
 ```
 
 像访问字段一样访问 getter：`circle.area`（无括号）。
+
+箭头 `=> expr` 是只返回一个值的函数体 `{ return expr; }` 的简写。它适用于 getter 以及任何函数或方法：
+
+```dart
+double half(double n) => n / 2;
+```
 
 ---
 
@@ -164,25 +172,21 @@ class Temperature {
 
 ```dart
 class Animal {
-  String name;
-  Animal(this.name);
+  String name = 'animal';
 
   void speak() {
-    print('...');
+    print('$name makes a sound.');
   }
 }
 
 class Dog extends Animal {
-  Dog(String name) : super(name);
-
-  @override
-  void speak() {
-    print('Woof!');
+  void fetch() {
+    print('$name fetches the ball.');
   }
 }
 ```
 
-`Dog` 从 `Animal` 继承 `name` 并重写 `speak` 方法。
+`Dog` 从 `Animal` 继承 `name` 和 `speak()`，并添加了自己的方法 `fetch()`。没有声明构造函数的类会获得一个无参数的默认构造函数，因此可以写 `var dog = Dog();`，然后同时调用 `dog.speak()` 和 `dog.fetch()`。
 
 ---
 
@@ -253,9 +257,11 @@ class MathHelper {
   static double circleArea(double r) => pi * r * r;
 }
 
-// 无需创建对象即可访问：
-print(MathHelper.pi);
-print(MathHelper.circleArea(5));
+void main() {
+  // 无需创建对象即可访问：
+  print(MathHelper.pi);
+  print(MathHelper.circleArea(5));
+}
 ```
 
 静态字段和方法由所有实例共享。
