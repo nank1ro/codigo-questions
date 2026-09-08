@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Enumerationen",
         "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Pfeilfunktionen",
+        "description": "Lerne, wie man kurze anonyme Funktionen schreibt"
     }
 }

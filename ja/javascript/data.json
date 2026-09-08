@@ -88,5 +88,10 @@
         "order": 18,
         "title": "列挙型",
         "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "アロー関数",
+        "description": "短い匿名関数を書く方法を学ぶ"
     }
 }

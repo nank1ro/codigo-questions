@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Enumerazioni",
         "description": "Impara a creare un tipo comune per un gruppo di valori correlati"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Funzioni Freccia",
+        "description": "Impara a scrivere funzioni anonime brevi"
     }
 }

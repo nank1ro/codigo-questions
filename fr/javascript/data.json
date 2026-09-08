@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Énumérations",
         "description": "Apprenez comment créer un type commun pour un groupe de valeurs connexes"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Fonctions fléchées",
+        "description": "Apprenez à écrire des fonctions anonymes courtes"
     }
 }
