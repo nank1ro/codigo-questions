@@ -93,5 +93,10 @@
         "order": 19,
         "title": "セット",
         "description": "順序を持たないコレクションに一意な要素を格納する方法を学ぶ"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "列挙型",
+        "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
     }
 }

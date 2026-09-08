@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Conjuntos",
         "description": "Aprenda como armazenar elementos únicos em uma coleção não ordenada"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "Enumerações",
+        "description": "Aprenda como criar um tipo comum para um grupo de valores relacionados"
     }
 }
