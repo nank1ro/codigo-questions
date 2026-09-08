@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Enumeraciones",
         "description": "Aprende cómo definir constantes enteras con nombre usando enum"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "Operadores de Comparación y Lógicos",
+        "description": "Aprende evaluación de cortocircuito, precedencia de operadores y bool"
     }
 }

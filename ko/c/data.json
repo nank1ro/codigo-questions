@@ -68,5 +68,10 @@
         "order": 14,
         "title": "열거형",
         "description": "enum으로 이름이 있는 정수 상수를 정의하는 방법을 배웁니다"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "비교 및 논리 연산자",
+        "description": "단락 평가, 연산자 우선순위, bool을 배웁니다"
     }
 }

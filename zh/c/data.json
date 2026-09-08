@@ -68,5 +68,10 @@
         "order": 14,
         "title": "枚举",
         "description": "学习如何使用 enum 定义命名的整数常量"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "比较和逻辑运算符",
+        "description": "学习短路求值、运算符优先级和 bool 类型"
     }
 }

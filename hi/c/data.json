@@ -68,5 +68,10 @@
         "order": 14,
         "title": "एनम",
         "description": "enum के साथ नामित पूर्णांक स्थिरांक परिभाषित करना सीखें"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "तुलना और तार्किक ऑपरेटर",
+        "description": "Short-circuit evaluation, ऑपरेटर प्राथमिकता और bool सीखें"
     }
 }
