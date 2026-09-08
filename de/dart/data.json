@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Maps",
     "description": "Lerne, wie man Schlüssel-Wert-Paare in einer Map speichert"
+  },
+  "sets": {
+    "order": 17,
+    "title": "Mengen",
+    "description": "Lerne, wie man eindeutige Werte in einem Set speichert"
   }
 }
