@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Enumerations",
         "description": "Learn how to create a common type for a group of related values"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Arrow Functions",
+        "description": "Learn how to write short anonymous functions"
     }
 }

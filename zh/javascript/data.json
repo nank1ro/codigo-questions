@@ -88,5 +88,10 @@
         "order": 18,
         "title": "枚举",
         "description": "学习如何为一组相关的值创建一个通用类型"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "箭头函数",
+        "description": "学习如何编写简短的匿名函数"
     }
 }

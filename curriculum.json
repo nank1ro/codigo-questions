@@ -251,6 +251,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -291,7 +296,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -859,6 +864,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -899,7 +909,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -1467,6 +1477,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -1507,7 +1522,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -2075,6 +2090,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -2115,7 +2135,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -2683,6 +2703,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -2723,7 +2748,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -3291,6 +3316,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -3331,7 +3361,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -3899,6 +3929,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -3939,7 +3974,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -4507,6 +4542,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -4547,7 +4587,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -5115,6 +5155,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -5155,7 +5200,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -5723,6 +5768,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -5763,7 +5813,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -6331,6 +6381,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -6371,7 +6426,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
@@ -6939,6 +6994,11 @@
           "totalExercises": 10
         },
         {
+          "name": "lambda",
+          "trainUntil": 13,
+          "totalExercises": 16
+        },
+        {
           "name": "maps",
           "trainUntil": 12,
           "totalExercises": 16
@@ -6979,7 +7039,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 335
+      "totalExercises": 351
     },
     {
       "name": "kotlin",
