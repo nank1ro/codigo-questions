@@ -78,5 +78,10 @@
     "order": 16,
     "title": "字符串",
     "description": "学习如何使用 String 方法处理文本"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "枚举",
+    "description": "学习如何为一组相关的值创建一个共同的类型"
   }
 }

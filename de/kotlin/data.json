@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Strings",
     "description": "Lerne, wie man Text mit String-Methoden bearbeitet"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Aufzählungen",
+    "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
   }
 }

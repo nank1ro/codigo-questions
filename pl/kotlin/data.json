@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Ciągi znaków",
     "description": "Naucz się pracować z tekstem za pomocą metod String"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Enumeracje",
+    "description": "Naucz się tworzyć wspólny typ dla grupy powiązanych wartości"
   }
 }

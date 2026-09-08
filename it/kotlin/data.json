@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Stringhe",
     "description": "Impara a lavorare con il testo usando i metodi delle stringhe"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Enumerazioni",
+    "description": "Impara a creare un tipo comune per un gruppo di valori correlati"
   }
 }

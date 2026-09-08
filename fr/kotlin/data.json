@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Chaînes de caractères",
     "description": "Apprenez à manipuler du texte avec les méthodes de chaînes"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Énumérations",
+    "description": "Apprenez comment créer un type commun pour un groupe de valeurs connexes"
   }
 }

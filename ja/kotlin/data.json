@@ -78,5 +78,10 @@
     "order": 16,
     "title": "文字列",
     "description": "String メソッドを使ってテキストを扱う方法を学ぶ"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "列挙型",
+    "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
   }
 }
