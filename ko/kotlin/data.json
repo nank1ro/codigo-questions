@@ -68,5 +68,10 @@
     "order": 13,
     "title": "함수",
     "description": "함수 만들기와 사용법 배우기"
+  },
+  "maps": {
+    "order": 15,
+    "title": "맵",
+    "description": "Map에 키-값 쌍을 저장하는 방법을 배웁니다"
   }
 }

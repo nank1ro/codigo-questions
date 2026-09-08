@@ -68,5 +68,10 @@
     "order": 13,
     "title": "फंक्शन",
     "description": "फंक्शन बनाना और उपयोग करना सीखें"
+  },
+  "maps": {
+    "order": 15,
+    "title": "मैप्स",
+    "description": "एक Map में key-value जोड़े संग्रहीत करना सीखें"
   }
 }

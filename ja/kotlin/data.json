@@ -68,5 +68,10 @@
     "order": 13,
     "title": "関数",
     "description": "関数の作成と使い方を学ぶ"
+  },
+  "maps": {
+    "order": 15,
+    "title": "マップ",
+    "description": "キーと値のペアをMapに格納する方法を学ぶ"
   }
 }

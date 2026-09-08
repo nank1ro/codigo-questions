@@ -68,5 +68,10 @@
     "order": 13,
     "title": "Funzioni",
     "description": "Impara a creare e utilizzare le funzioni"
+  },
+  "maps": {
+    "order": 15,
+    "title": "Mappe",
+    "description": "Impara a memorizzare coppie chiave-valore in una mappa"
   }
 }
