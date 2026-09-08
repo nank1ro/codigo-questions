@@ -73,5 +73,10 @@
         "order": 15,
         "title": "比较和逻辑运算符",
         "description": "学习短路求值、运算符优先级和 bool 类型"
+    },
+    "types": {
+        "order": 16,
+        "title": "类型",
+        "description": "学习基本数据类型以及如何在它们之间转换"
     }
 }

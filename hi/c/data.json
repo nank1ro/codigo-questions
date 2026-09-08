@@ -73,5 +73,10 @@
         "order": 15,
         "title": "तुलना और तार्किक ऑपरेटर",
         "description": "Short-circuit evaluation, ऑपरेटर प्राथमिकता और bool सीखें"
+    },
+    "types": {
+        "order": 16,
+        "title": "टाइप",
+        "description": "बुनियादी डेटा टाइप और उनके बीच रूपांतरण करना सीखें"
     }
 }

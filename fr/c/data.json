@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Opérateurs de comparaison et logiques",
         "description": "Apprenez l'évaluation en court-circuit, la priorité des opérateurs et bool"
+    },
+    "types": {
+        "order": 16,
+        "title": "Types",
+        "description": "Apprenez les types de données de base et comment convertir entre eux"
     }
 }

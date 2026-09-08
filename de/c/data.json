@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Vergleichs- und logische Operatoren",
         "description": "Lerne Kurzschlussauswertung, Operatorrangfolge und bool"
+    },
+    "types": {
+        "order": 16,
+        "title": "Typen",
+        "description": "Lerne, wie man die grundlegenden Datentypen verwendet und zwischen ihnen umwandelt"
     }
 }

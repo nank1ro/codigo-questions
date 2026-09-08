@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Operadores de Comparación y Lógicos",
         "description": "Aprende evaluación de cortocircuito, precedencia de operadores y bool"
+    },
+    "types": {
+        "order": 16,
+        "title": "Tipos",
+        "description": "Aprende sobre los tipos de datos básicos y cómo convertir entre ellos"
     }
 }

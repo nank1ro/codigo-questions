@@ -73,5 +73,10 @@
         "order": 15,
         "title": "비교 및 논리 연산자",
         "description": "단락 평가, 연산자 우선순위, bool을 배웁니다"
+    },
+    "types": {
+        "order": 16,
+        "title": "타입",
+        "description": "기본 데이터 타입과 그 사이를 변환하는 방법을 배웁니다"
     }
 }
