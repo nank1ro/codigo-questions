@@ -78,5 +78,10 @@
         "order": 16,
         "title": "타입",
         "description": "기본 데이터 타입과 그 사이를 변환하는 방법을 배웁니다"
+    },
+    "comments": {
+        "order": 17,
+        "title": "주석",
+        "description": "코드를 문서화하는 방법을 배웁니다"
     }
 }

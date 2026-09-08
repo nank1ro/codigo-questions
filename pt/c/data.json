@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Tipos",
         "description": "Aprenda os tipos de dados básicos e como converter entre eles"
+    },
+    "comments": {
+        "order": 17,
+        "title": "Comentários",
+        "description": "Aprenda como documentar seu código"
     }
 }

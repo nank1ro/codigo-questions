@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Typy",
         "description": "Poznaj podstawowe typy danych i sposoby konwersji między nimi"
+    },
+    "comments": {
+        "order": 17,
+        "title": "Komentarze",
+        "description": "Naucz się dokumentować swój kod"
     }
 }

@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Types",
         "description": "Learn about the basic data types and how to convert between them"
+    },
+    "comments": {
+        "order": 17,
+        "title": "Comments",
+        "description": "Learn how to document your code"
     }
 }

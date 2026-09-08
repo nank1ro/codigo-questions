@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Typen",
         "description": "Lerne, wie man die grundlegenden Datentypen verwendet und zwischen ihnen umwandelt"
+    },
+    "comments": {
+        "order": 17,
+        "title": "Kommentare",
+        "description": "Lerne, wie man seinen Code dokumentiert"
     }
 }
