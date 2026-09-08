@@ -98,5 +98,10 @@
         "order": 20,
         "title": "型",
         "description": "基本的なデータ型と、それらの間で変換する方法を学ぶ"
+    },
+    "extensions": {
+        "order": 21,
+        "title": "拡張",
+        "description": "既存の型に新しい機能を追加する方法を学ぶ"
     }
 }
