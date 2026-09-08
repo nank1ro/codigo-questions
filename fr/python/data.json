@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Sets",
         "description": "Apprenez comment stocker des éléments uniques dans une collection non ordonnée"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "Énumérations",
+        "description": "Apprenez comment créer un type commun pour un groupe de valeurs liées entre elles"
     }
 }

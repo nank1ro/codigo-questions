@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Sets",
         "description": "Learn how to store unique elements into an unordered collection"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "Enumerations",
+        "description": "Learn how to create a common type for a group of related values"
     }
 }

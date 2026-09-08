@@ -93,5 +93,10 @@
         "order": 19,
         "title": "集合",
         "description": "学习如何在无序集合中存储唯一元素"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "枚举",
+        "description": "学习如何为一组相关的值创建一个公共类型"
     }
 }

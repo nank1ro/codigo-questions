@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Sets",
         "description": "Lerne, wie man eindeutige Elemente in einer ungeordneten Sammlung speichert"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "Enumerationen",
+        "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
     }
 }

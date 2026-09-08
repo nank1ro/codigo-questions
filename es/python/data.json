@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Sets",
         "description": "Aprende cómo almacenar elementos únicos en una colección desordenada"
+    },
+    "enumerations": {
+        "order": 20,
+        "title": "Enumeraciones",
+        "description": "Aprende cómo crear un tipo común para un grupo de valores relacionados"
     }
 }
