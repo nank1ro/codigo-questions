@@ -88,5 +88,10 @@
     "order": 18,
     "title": "문자열",
     "description": "텍스트를 만들고 다루는 방법 배우기"
+  },
+  "enumerations": {
+    "order": 19,
+    "title": "열거형",
+    "description": "관련된 값의 그룹에 대한 공통 타입을 만드는 방법 배우기"
   }
 }

@@ -88,5 +88,10 @@
     "order": 18,
     "title": "文字列",
     "description": "テキストを作成・操作する方法を学ぶ"
+  },
+  "enumerations": {
+    "order": 19,
+    "title": "列挙型",
+    "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
   }
 }

@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Strings",
     "description": "Learn how to create and manipulate text"
+  },
+  "enumerations": {
+    "order": 19,
+    "title": "Enumerations",
+    "description": "Learn how to create a common type for a group of related values"
   }
 }

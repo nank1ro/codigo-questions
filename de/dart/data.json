@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Strings",
     "description": "Lerne, wie man Texte erstellt und bearbeitet"
+  },
+  "enumerations": {
+    "order": 19,
+    "title": "Aufzählungen",
+    "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
   }
 }
