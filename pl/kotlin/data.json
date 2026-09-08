@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Tablice",
     "description": "Naucz się przechowywać różne wartości w jednej zmiennej"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "Nullowalność",
+    "description": "Naucz się obsługiwać wartości, które mogą być null"
   }
 }

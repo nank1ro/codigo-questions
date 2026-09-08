@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Tableaux",
     "description": "Apprenez comment stocker différentes valeurs dans une variable"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "Nullabilité",
+    "description": "Apprenez comment gérer les valeurs qui peuvent être null"
   }
 }

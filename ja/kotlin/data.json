@@ -89,5 +89,10 @@
     "order": 18,
     "title": "配列",
     "description": "1つの変数に異なる値を格納する方法を学ぶ"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "Null安全性",
+    "description": "null の可能性がある値を扱う方法を学ぶ"
   }
 }
