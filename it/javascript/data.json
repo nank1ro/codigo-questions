@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Classi",
         "description": "Impara la programmazione ad oggetti"
+    },
+    "strings": {
+        "order": 15,
+        "title": "Stringhe",
+        "description": "Impara a lavorare con il testo usando i metodi delle stringhe"
     }
 }

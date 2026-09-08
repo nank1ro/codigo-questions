@@ -68,5 +68,10 @@
         "order": 14,
         "title": "クラス",
         "description": "オブジェクト指向プログラミングを学ぶ"
+    },
+    "strings": {
+        "order": 15,
+        "title": "文字列",
+        "description": "文字列メソッドを使ってテキストを扱う方法を学ぶ"
     }
 }

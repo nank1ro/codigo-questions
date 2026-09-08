@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Classes",
         "description": "Aprenda programação orientada a objetos"
+    },
+    "strings": {
+        "order": 15,
+        "title": "Strings",
+        "description": "Aprenda como trabalhar com texto usando métodos de string"
     }
 }

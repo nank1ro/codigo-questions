@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Klasy",
         "description": "Naucz się programowania obiektowego"
+    },
+    "strings": {
+        "order": 15,
+        "title": "Łańcuchy znaków",
+        "description": "Naucz się pracować z tekstem za pomocą metod łańcuchów znaków"
     }
 }

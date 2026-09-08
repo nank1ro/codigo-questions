@@ -68,5 +68,10 @@
         "order": 14,
         "title": "클래스",
         "description": "객체 지향 프로그래밍을 배웁니다"
+    },
+    "strings": {
+        "order": 15,
+        "title": "문자열",
+        "description": "문자열 메서드를 사용해 텍스트를 다루는 방법을 배웁니다"
     }
 }
