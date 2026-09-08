@@ -78,5 +78,10 @@
     "order": 16,
     "title": "映射",
     "description": "学习如何在 Map 中存储键值对"
+  },
+  "sets": {
+    "order": 17,
+    "title": "集合",
+    "description": "学习如何在 Set 中存储唯一的值"
   }
 }
