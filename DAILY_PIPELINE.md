@@ -1,5 +1,39 @@
 # Daily Exercise Generation Pipeline
 
+## TL;DR (current tooling, Sept 2026)
+
+The pipeline below is implemented as a saved Claude Code workflow: `.claude/workflows/new-argument.js`.
+Run it from a Claude Code session in this repo (opt in with "use a workflow" / "ultracode"):
+
+```
+Workflow name: new-argument
+args: [{ "language": "kotlin", "argument": "maps", "title": "Maps",
+         "description": "Learn how to store key-value pairs in a Map", "count": 18,
+         "assetFrom": "dictionaries", "notes": "concepts to cover, in order" }, ...]
+```
+
+Per topic it runs: Write (author en/ in `/tmp/codigo-new/<language>-<argument>`, own branch) →
+Review (independent content review) → Fix → Translate (3 Sonnet agents, 11 locales) → Verify
+(validator, tester, `scripts/check_outputs.py`, `scripts/check_locales.py`, regenerate) → Ship
+(agent-commit, push, `gh pr create`). Several topics run in parallel.
+
+Prerequisites: codecompiler running (`cd /Users/ale/github/codecompiler && HTTP_SERVER_PORT=8080 go run ./cmd/httpserver`)
+and `tester/.env` in the main checkout (see `tester/README.md`).
+
+To merge a resulting PR: `scripts/merge_pr.sh <worktree-name> <pr-number>` (set `WORKTREE=` when the
+worktree is not under `/tmp/codigo-fix/`). It rebases onto main, merges per-locale `data.json`
+entries from both sides, regenerates `curriculum.json`/`_theory.md`, pushes, waits for CI and
+squash-merges. Merge PRs one at a time (they all touch `curriculum.json`).
+
+Local checks that CI does not run:
+- `scripts/check_outputs.py 'en/<lang>/<arg>/*.md'` runs type 2/4 solutions locally and compares stdout with `--output--`.
+- `scripts/check_locales.py WORKTREE` (or a git ref) verifies every locale's code sections are byte-identical to en.
+- `tester/` executes type-1 solutions through codecompiler.
+
+Assets: no new icons are available; new arguments must reuse `assets/arguments/*.svg` (use `assetFrom`
+to copy an existing icon under the new argument name).
+
+
 ## Context
 
 Automated daily pipeline that generates new exercises for a language+argument, validates them, translates to all 12 locales, and opens a PR. Designed to be re-run daily. Can process multiple arguments/challenges in parallel.
