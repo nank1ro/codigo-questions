@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Map",
         "description": "Naucz się przechowywać pary klucz-wartość za pomocą Map"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Naucz się przechowywać unikalne wartości w Set"
     }
 }

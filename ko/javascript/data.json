@@ -78,5 +78,10 @@
         "order": 16,
         "title": "맵",
         "description": "맵에 키-값 쌍을 저장하는 방법 배우기"
+    },
+    "sets": {
+        "order": 17,
+        "title": "세트",
+        "description": "Set에 고유한 값을 저장하는 방법 배우기"
     }
 }

@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Mappe",
         "description": "Impara a memorizzare coppie chiave-valore in una mappa"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Set",
+        "description": "Impara a memorizzare valori unici in un Set"
     }
 }

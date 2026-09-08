@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Maps",
         "description": "Apprenez à stocker des paires clé-valeur dans une Map"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Apprenez à stocker des valeurs uniques dans un Set"
     }
 }
