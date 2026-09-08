@@ -93,5 +93,10 @@
     "order": 19,
     "title": "Nullability",
     "description": "Lerne, wie man mit Werten umgeht, die null sein können"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "Lambdas",
+    "description": "Lerne, wie man anonyme Funktionen schreibt"
   }
 }

@@ -94,5 +94,10 @@
     "order": 19,
     "title": "Null安全性",
     "description": "null の可能性がある値を扱う方法を学ぶ"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "ラムダ",
+    "description": "無名関数の書き方を学ぶ"
   }
 }
