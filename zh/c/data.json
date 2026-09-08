@@ -78,5 +78,10 @@
         "order": 16,
         "title": "类型",
         "description": "学习基本数据类型以及如何在它们之间转换"
+    },
+    "comments": {
+        "order": 17,
+        "title": "注释",
+        "description": "学习如何为代码编写文档"
     }
 }

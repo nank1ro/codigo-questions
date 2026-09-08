@@ -78,5 +78,10 @@
         "order": 16,
         "title": "型",
         "description": "基本的なデータ型とそれらを変換する方法を学ぶ"
+    },
+    "comments": {
+        "order": 17,
+        "title": "コメント",
+        "description": "コードにコメントを書く方法を学ぶ"
     }
 }
