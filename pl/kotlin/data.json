@@ -68,5 +68,10 @@
     "order": 13,
     "title": "Funkcje",
     "description": "Naucz się tworzyć i używać funkcji"
+  },
+  "maps": {
+    "order": 15,
+    "title": "Mapy",
+    "description": "Naucz się przechowywać pary klucz-wartość w Map"
   }
 }

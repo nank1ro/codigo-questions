@@ -68,5 +68,10 @@
     "order": 13,
     "title": "Funções",
     "description": "Aprenda a criar e usar funções"
+  },
+  "maps": {
+    "order": 15,
+    "title": "Mapas",
+    "description": "Aprenda como armazenar pares chave-valor em um Map"
   }
 }
