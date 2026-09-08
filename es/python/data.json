@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Clases",
         "description": "Aprende programación orientada a objetos"
+    },
+    "lambda": {
+        "order": 16,
+        "title": "Funciones lambda",
+        "description": "Aprende cómo escribir pequeñas funciones anónimas con lambda"
     }
 }

@@ -73,5 +73,10 @@
         "order": 15,
         "title": "类",
         "description": "学习面向对象编程"
+    },
+    "lambda": {
+        "order": 16,
+        "title": "Lambda 函数",
+        "description": "学习如何使用 lambda 编写小型匿名函数"
     }
 }

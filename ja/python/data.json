@@ -73,5 +73,10 @@
         "order": 15,
         "title": "クラス",
         "description": "オブジェクト指向プログラミングを学ぶ"
+    },
+    "lambda": {
+        "order": 16,
+        "title": "lambda関数",
+        "description": "lambdaを使って小さな無名関数を書く方法を学ぶ"
     }
 }
