@@ -73,5 +73,10 @@
     "order": 15,
     "title": "Klassen",
     "description": "Lerne, wie man Klassen erstellt und verwendet"
+  },
+  "maps": {
+    "order": 16,
+    "title": "Maps",
+    "description": "Lerne, wie man Schlüssel-Wert-Paare in einer Map speichert"
   }
 }

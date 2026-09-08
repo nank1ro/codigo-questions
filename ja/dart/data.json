@@ -73,5 +73,10 @@
     "order": 15,
     "title": "クラス",
     "description": "クラスの作成と使い方を学ぶ"
+  },
+  "maps": {
+    "order": 16,
+    "title": "マップ",
+    "description": "キーと値のペアをマップに格納する方法を学ぶ"
   }
 }

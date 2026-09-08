@@ -73,5 +73,10 @@
     "order": 15,
     "title": "Classi",
     "description": "Impara a creare e utilizzare le classi"
+  },
+  "maps": {
+    "order": 16,
+    "title": "Mappe",
+    "description": "Impara a memorizzare coppie chiave-valore in una mappa"
   }
 }
