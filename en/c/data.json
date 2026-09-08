@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Enumerations",
         "description": "Learn how to define named integer constants with enum"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "Comparison and Logical Operators",
+        "description": "Learn short-circuit evaluation, operator precedence and bool"
     }
 }

@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Enumerazioni",
         "description": "Impara a definire costanti intere con nome usando enum"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "Operatori di Confronto e Logici",
+        "description": "Impara la valutazione a corto circuito, la precedenza degli operatori e bool"
     }
 }

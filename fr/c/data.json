@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Énumérations",
         "description": "Apprenez comment définir des constantes entières nommées avec enum"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "Opérateurs de comparaison et logiques",
+        "description": "Apprenez l'évaluation en court-circuit, la priorité des opérateurs et bool"
     }
 }

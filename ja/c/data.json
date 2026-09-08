@@ -68,5 +68,10 @@
         "order": 14,
         "title": "列挙型",
         "description": "enumで名前付き整数定数を定義する方法を学ぶ"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "比較演算子と論理演算子",
+        "description": "短絡評価、演算子の優先順位、boolを学ぶ"
     }
 }

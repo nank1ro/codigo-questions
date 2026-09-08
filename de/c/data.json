@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Aufzählungen",
         "description": "Lerne, wie man benannte Ganzzahlkonstanten mit enum definiert"
+    },
+    "comparisonLogicalOperators": {
+        "order": 15,
+        "title": "Vergleichs- und logische Operatoren",
+        "description": "Lerne Kurzschlussauswertung, Operatorrangfolge und bool"
     }
 }
