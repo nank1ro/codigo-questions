@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Comentários",
         "description": "Aprenda como documentar seu código"
+    },
+    "structs": {
+        "order": 18,
+        "title": "Structs",
+        "description": "Aprenda como agrupar valores relacionados em um único tipo"
     }
 }

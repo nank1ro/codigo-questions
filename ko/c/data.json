@@ -83,5 +83,10 @@
         "order": 17,
         "title": "주석",
         "description": "코드를 문서화하는 방법을 배웁니다"
+    },
+    "structs": {
+        "order": 18,
+        "title": "구조체",
+        "description": "관련된 값들을 하나의 타입으로 묶는 방법을 배웁니다"
     }
 }

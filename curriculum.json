@@ -74,6 +74,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -89,7 +94,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -697,6 +702,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -712,7 +722,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -1320,6 +1330,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1335,7 +1350,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -1943,6 +1958,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1958,7 +1978,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -2566,6 +2586,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2581,7 +2606,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -3189,6 +3214,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3204,7 +3234,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -3812,6 +3842,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3827,7 +3862,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -4435,6 +4470,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4450,7 +4490,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -5058,6 +5098,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5073,7 +5118,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -5681,6 +5726,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5696,7 +5746,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -6304,6 +6354,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6319,7 +6374,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",
@@ -6927,6 +6982,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6942,7 +7002,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 315
+      "totalExercises": 331
     },
     {
       "name": "dart",

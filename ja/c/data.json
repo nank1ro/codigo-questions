@@ -83,5 +83,10 @@
         "order": 17,
         "title": "コメント",
         "description": "コードにコメントを書く方法を学ぶ"
+    },
+    "structs": {
+        "order": 18,
+        "title": "構造体",
+        "description": "関連する値を1つの型にまとめる方法を学ぶ"
     }
 }

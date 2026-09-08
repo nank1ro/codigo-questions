@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Comments",
         "description": "Learn how to document your code"
+    },
+    "structs": {
+        "order": 18,
+        "title": "Structs",
+        "description": "Learn how to group related values into one type"
     }
 }
