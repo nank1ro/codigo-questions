@@ -38,15 +38,15 @@ Exercise format: read CLAUDE.md in the worktree root. Key rules:
 - Type 4 (sort items): one fenced block per row in '# --answers--'; '# --solutions--' holds ONE fenced block with the whole program (rows joined by newlines); extra fenced blocks in the same section are alternative valid orderings. If several top-level orderings are valid, either list them all or constrain the instructions ("define the function before main").
 - '# --output--' for type 2/4 must be exactly what the solution prints.
 - Every concept an exercise uses must be introduced in a '# --description--' of that exercise or an earlier one in the same folder (descriptions are concatenated into _theory.md, which only includes the leading run of consecutive exercises that have descriptions, so give the first ~5 exercises descriptions and any later exercise that introduces something new).
-- Mix: roughly 45% type 1, 25% type 2, 15% type 3, 15% type 4; progress from basic to advanced; short, concrete instructions; code must compile under the current toolchain (Dart 3 null safety, Kotlin 2, Swift 5, C11, Python 3, Node 22).`
+- Mix: roughly 45% type 1, 25% type 2, 15% type 3, 15% type 4; progress from basic to advanced; short, concrete instructions; code must compile and run on the production codecompiler versions: C = GCC 13.3.0 (C11/C17), Dart 3.13.3 (null safety), JavaScript = Node.js 26.8.1, Kotlin 2.4.20 on Java 17 (JVM 17 APIs only), Python 3.14.7, Swift 6.3.3 (Swift 6 language mode: strict concurrency, so avoid global mutable state accessed from closures that trip Sendable checks). Target exactly these versions (production is being upgraded to them); never use anything deprecated or removed there, and do not lean on features newer than these.`
 
 const CHECKS = (s) => `
-Checks (run from the worktree root; codecompiler must be running on localhost:8080):
+Checks (run from the worktree root; the production-version codecompiler Docker container must be running: 'docker start codecompiler-8081' (image codecompiler:main, built from the codecompiler repo main branch with GCC 13.3.0, Dart 3.13.3, Node 26.8.1, Kotlin 2.4.20/Java 17, Python 3.14.7, Swift 6.3.3) and tester/.env must contain CODECOMPILER_URL=http://localhost:8081/hereford_rpc; never test against a host-native server):
   cp ${MAIN}/tester/.env tester/.env
   for d in validator tester json_creator theory_creator; do (cd $d && dart pub get >/dev/null); done
   (cd validator && dart test lib/validator.dart --reporter=failures-only --chain-stack-traces --fail-fast 2>&1 | tail -20)
   (cd tester && dart run bin/tester.dart -p 'en/${s.language}/${s.argument}/*.md' -t 1 2>&1 | tail -40)
-  python3 scripts/check_outputs.py 'en/${s.language}/${s.argument}/*.md'
+  scripts/check_outputs_docker.sh 'en/${s.language}/${s.argument}/*.md'   # runs check_outputs.py inside the codecompiler-8081 container so type-2/4 outputs use the production toolchains
   python3 scripts/check_locales.py WORKTREE`
 
 const WRITE_SCHEMA = {
