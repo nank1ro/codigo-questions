@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Optionals",
         "description": "Lerne, wie man fehlende Werte mit Optionals behandelt"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Lerne, wie man einzigartige Werte in einem Set speichert"
     }
 }

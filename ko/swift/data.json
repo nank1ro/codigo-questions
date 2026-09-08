@@ -78,5 +78,10 @@
         "order": 16,
         "title": "옵셔널",
         "description": "옵셔널로 값이 없는 상황을 처리하는 방법을 배웁니다"
+    },
+    "sets": {
+        "order": 17,
+        "title": "세트",
+        "description": "Set으로 고유한 값을 저장하는 방법을 배웁니다"
     }
 }

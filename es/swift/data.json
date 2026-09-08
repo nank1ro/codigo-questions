@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Opcionales",
         "description": "Aprende cómo manejar valores ausentes con opcionales"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Aprende cómo almacenar valores únicos en un Set"
     }
 }

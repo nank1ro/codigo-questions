@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Optionals",
         "description": "Learn how to handle missing values with optionals"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Learn how to store unique values in a Set"
     }
 }

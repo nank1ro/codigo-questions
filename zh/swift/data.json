@@ -78,5 +78,10 @@
         "order": 16,
         "title": "可选值",
         "description": "学习如何使用可选值处理缺失的数据"
+    },
+    "sets": {
+        "order": 17,
+        "title": "集合",
+        "description": "学习如何在集合中存储唯一的值"
     }
 }
