@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Chaînes de caractères",
         "description": "Apprenez comment créer et manipuler du texte"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Sets",
+        "description": "Apprenez comment stocker des éléments uniques dans une collection non ordonnée"
     }
 }

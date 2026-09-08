@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Zeichenketten",
         "description": "Lerne, wie man Text erstellt und bearbeitet"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Sets",
+        "description": "Lerne, wie man eindeutige Elemente in einer ungeordneten Sammlung speichert"
     }
 }

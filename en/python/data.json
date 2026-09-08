@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Strings",
         "description": "Learn how to create and manipulate text"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Sets",
+        "description": "Learn how to store unique elements into an unordered collection"
     }
 }

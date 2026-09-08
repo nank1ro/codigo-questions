@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Stringhe",
         "description": "Impara a creare e manipolare il testo"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Sets",
+        "description": "Impara a memorizzare elementi unici in una collezione non ordinata"
     }
 }

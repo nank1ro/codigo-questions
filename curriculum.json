@@ -438,6 +438,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -453,7 +458,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -991,6 +996,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -1006,7 +1016,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -1544,6 +1554,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -1559,7 +1574,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -2097,6 +2112,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -2112,7 +2132,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -2650,6 +2670,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -2665,7 +2690,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -3203,6 +3228,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -3218,7 +3248,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -3756,6 +3786,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -3771,7 +3806,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -4309,6 +4344,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -4324,7 +4364,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -4862,6 +4902,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -4877,7 +4922,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -5415,6 +5460,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -5430,7 +5480,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -5968,6 +6018,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -5983,7 +6038,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",
@@ -6521,6 +6576,11 @@
           "totalExercises": 23
         },
         {
+          "name": "sets",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "strings",
           "trainUntil": 18,
           "totalExercises": 18
@@ -6536,7 +6596,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 344
+      "totalExercises": 360
     },
     {
       "name": "swift",

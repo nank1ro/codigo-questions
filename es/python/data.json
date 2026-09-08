@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Cadenas de texto",
         "description": "Aprende cómo crear y manipular texto"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Sets",
+        "description": "Aprende cómo almacenar elementos únicos en una colección desordenada"
     }
 }
