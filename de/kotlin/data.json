@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Aufzählungen",
     "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "Arrays",
+    "description": "Lerne, wie man verschiedene Werte in einer Variable speichert"
   }
 }

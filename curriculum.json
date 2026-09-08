@@ -292,6 +292,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -372,7 +377,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -870,6 +875,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -950,7 +960,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -1448,6 +1458,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -1528,7 +1543,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -2026,6 +2041,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -2106,7 +2126,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -2604,6 +2624,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -2684,7 +2709,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -3182,6 +3207,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -3262,7 +3292,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -3760,6 +3790,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -3840,7 +3875,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -4338,6 +4373,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -4418,7 +4458,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -4916,6 +4956,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -4996,7 +5041,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -5494,6 +5539,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -5574,7 +5624,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -6072,6 +6122,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -6152,7 +6207,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",
@@ -6650,6 +6705,11 @@
           "totalExercises": 17
         },
         {
+          "name": "arrays",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "assignmentOperators",
           "trainUntil": 6,
           "totalExercises": 17
@@ -6730,7 +6790,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 386
+      "totalExercises": 402
     },
     {
       "name": "python",

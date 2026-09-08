@@ -83,5 +83,10 @@
     "order": 17,
     "title": "枚举",
     "description": "学习如何为一组相关的值创建一个共同的类型"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "数组",
+    "description": "学习如何在一个变量中存储不同的值"
   }
 }

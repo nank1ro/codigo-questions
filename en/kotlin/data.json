@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Enumerations",
     "description": "Learn how to create a common type for a group of related values"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "Arrays",
+    "description": "Learn how to store different values into one variable"
   }
 }
