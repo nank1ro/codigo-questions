@@ -373,6 +373,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -403,7 +408,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -866,6 +871,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -896,7 +906,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -1359,6 +1369,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -1389,7 +1404,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -1852,6 +1867,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -1882,7 +1902,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -2345,6 +2365,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -2375,7 +2400,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -2838,6 +2863,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -2868,7 +2898,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -3331,6 +3361,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -3361,7 +3396,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -3824,6 +3859,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -3854,7 +3894,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -4317,6 +4357,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -4347,7 +4392,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -4810,6 +4855,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -4840,7 +4890,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -5303,6 +5353,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -5333,7 +5388,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",
@@ -5796,6 +5851,11 @@
           "totalExercises": 14
         },
         {
+          "name": "listComprehension",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lists",
           "trainUntil": 13,
           "totalExercises": 17
@@ -5826,7 +5886,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 310
+      "totalExercises": 326
     },
     {
       "name": "swift",

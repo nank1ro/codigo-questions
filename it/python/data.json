@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Funzioni lambda",
         "description": "Impara a scrivere piccole funzioni anonime con lambda"
+    },
+    "listComprehension": {
+        "order": 17,
+        "title": "List Comprehension",
+        "description": "Impara a costruire liste in una singola espressione"
     }
 }

@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Лямбда-функции",
         "description": "Узнайте, как писать небольшие анонимные функции с помощью lambda"
+    },
+    "listComprehension": {
+        "order": 17,
+        "title": "List comprehension",
+        "description": "Узнайте, как строить списки в одном выражении"
     }
 }
