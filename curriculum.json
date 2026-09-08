@@ -211,6 +211,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -226,7 +231,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -689,6 +694,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -704,7 +714,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -1167,6 +1177,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -1182,7 +1197,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -1645,6 +1660,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -1660,7 +1680,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -2123,6 +2143,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -2138,7 +2163,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -2601,6 +2626,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -2616,7 +2646,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -3079,6 +3109,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -3094,7 +3129,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -3557,6 +3592,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -3572,7 +3612,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -4035,6 +4075,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -4050,7 +4095,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -4513,6 +4558,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -4528,7 +4578,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -4991,6 +5041,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -5006,7 +5061,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",
@@ -5469,6 +5524,11 @@
           "totalExercises": 10
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 20
+        },
+        {
           "name": "templateLiterals",
           "trainUntil": 7,
           "totalExercises": 23
@@ -5484,7 +5544,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 269
+      "totalExercises": 289
     },
     {
       "name": "kotlin",

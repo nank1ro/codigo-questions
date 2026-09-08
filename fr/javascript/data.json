@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Classes",
         "description": "Apprenez la programmation orientée objet"
+    },
+    "strings": {
+        "order": 15,
+        "title": "Chaînes de caractères",
+        "description": "Apprenez à manipuler du texte avec les méthodes de chaînes"
     }
 }

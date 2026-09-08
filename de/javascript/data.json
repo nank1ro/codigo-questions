@@ -68,5 +68,10 @@
         "order": 14,
         "title": "Klassen",
         "description": "Lerne objektorientierte Programmierung"
+    },
+    "strings": {
+        "order": 15,
+        "title": "Strings",
+        "description": "Lerne, wie man Text mit String-Methoden bearbeitet"
     }
 }

@@ -68,5 +68,10 @@
         "order": 14,
         "title": "类",
         "description": "学习面向对象编程"
+    },
+    "strings": {
+        "order": 15,
+        "title": "字符串",
+        "description": "学习如何使用字符串方法处理文本"
     }
 }
