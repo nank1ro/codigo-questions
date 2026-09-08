@@ -93,5 +93,10 @@
     "order": 19,
     "title": "枚举",
     "description": "学习如何为一组相关的值创建一个共同的类型"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "匿名函数",
+    "description": "学习如何编写没有名字的函数"
   }
 }

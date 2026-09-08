@@ -93,5 +93,10 @@
     "order": 19,
     "title": "Enumerazioni",
     "description": "Impara a creare un tipo comune per un gruppo di valori correlati"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "Funzioni anonime",
+    "description": "Impara a scrivere funzioni senza nome"
   }
 }

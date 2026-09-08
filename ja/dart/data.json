@@ -93,5 +93,10 @@
     "order": 19,
     "title": "列挙型",
     "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "無名関数",
+    "description": "名前のない関数を書く方法を学ぶ"
   }
 }

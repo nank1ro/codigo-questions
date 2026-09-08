@@ -93,5 +93,10 @@
     "order": 19,
     "title": "Aufzählungen",
     "description": "Lerne, wie man einen gemeinsamen Typ für eine Gruppe verwandter Werte erstellt"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "Anonyme Funktionen",
+    "description": "Lerne, wie man Funktionen ohne Namen schreibt"
   }
 }
