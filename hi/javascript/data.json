@@ -93,5 +93,10 @@
         "order": 19,
         "title": "एरो फंक्शन्स",
         "description": "छोटे अनाम फंक्शन्स लिखना सीखें"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "नलेबिलिटी",
+        "description": "`null` या `undefined` हो सकने वाले मानों को संभालना सीखें"
     }
 }

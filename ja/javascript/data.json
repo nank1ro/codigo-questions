@@ -93,5 +93,10 @@
         "order": 19,
         "title": "アロー関数",
         "description": "短い匿名関数を書く方法を学ぶ"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "null可能性",
+        "description": "nullまたはundefinedの可能性がある値を扱う方法を学ぶ"
     }
 }

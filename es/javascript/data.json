@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Funciones Flecha",
         "description": "Aprende cómo escribir funciones anónimas cortas"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "Nulabilidad",
+        "description": "Aprende cómo manejar valores que pueden ser null o undefined"
     }
 }

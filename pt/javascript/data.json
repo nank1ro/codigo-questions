@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Arrow Functions",
         "description": "Aprenda como escrever funções anônimas curtas"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "Nullability",
+        "description": "Aprenda como lidar com valores que podem ser null ou undefined"
     }
 }
