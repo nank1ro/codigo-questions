@@ -88,5 +88,10 @@
         "order": 18,
         "title": "文字列",
         "description": "文字列を作成し、操作する方法を学ぶ"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "クロージャ",
+        "description": "無名関数の書き方を学ぶ"
     }
 }

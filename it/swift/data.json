@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Stringhe",
         "description": "Impara a creare e manipolare il testo"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Closures",
+        "description": "Impara a scrivere funzioni anonime"
     }
 }

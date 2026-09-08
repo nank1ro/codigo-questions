@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Ciągi znaków",
         "description": "Naucz się tworzyć i manipulować tekstem"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Domknięcia",
+        "description": "Naucz się pisać funkcje anonimowe"
     }
 }
