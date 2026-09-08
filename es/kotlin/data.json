@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Cadenas",
     "description": "Aprende cómo trabajar con texto usando métodos de cadenas"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Enumeraciones",
+    "description": "Aprende cómo crear un tipo común para un grupo de valores relacionados"
   }
 }

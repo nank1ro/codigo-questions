@@ -78,5 +78,10 @@
     "order": 16,
     "title": "Strings",
     "description": "Aprenda como trabalhar com texto usando métodos de String"
+  },
+  "enumerations": {
+    "order": 17,
+    "title": "Enumerações",
+    "description": "Aprenda a criar um tipo comum para um grupo de valores relacionados"
   }
 }
