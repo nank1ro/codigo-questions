@@ -73,5 +73,10 @@
     "order": 15,
     "title": "Maps",
     "description": "Learn how to store key-value pairs in a Map"
+  },
+  "strings": {
+    "order": 16,
+    "title": "Strings",
+    "description": "Learn how to work with text using String methods"
   }
 }

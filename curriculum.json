@@ -312,6 +312,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -322,7 +327,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -820,6 +825,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -830,7 +840,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -1328,6 +1338,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -1338,7 +1353,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -1836,6 +1851,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -1846,7 +1866,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -2344,6 +2364,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -2354,7 +2379,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -2852,6 +2877,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -2862,7 +2892,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -3360,6 +3390,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -3370,7 +3405,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -3868,6 +3903,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -3878,7 +3918,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -4376,6 +4416,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -4386,7 +4431,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -4884,6 +4929,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -4894,7 +4944,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -5392,6 +5442,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -5402,7 +5457,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
@@ -5900,6 +5955,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -5910,7 +5970,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 352
+      "totalExercises": 370
     },
     {
       "name": "python",
