@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Klassen",
         "description": "Lerne objektorientierte Programmierung"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "Optionals",
+        "description": "Lerne, wie man fehlende Werte mit Optionals behandelt"
     }
 }

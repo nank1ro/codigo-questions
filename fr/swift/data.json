@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Classes",
         "description": "Apprenez la programmation orientée objet"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "Optionnels",
+        "description": "Apprenez à gérer les valeurs manquantes avec les types optionnels"
     }
 }

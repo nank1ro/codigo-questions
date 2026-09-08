@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Klasy",
         "description": "Naucz się programowania obiektowego"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "Opcjonały",
+        "description": "Naucz się obsługiwać brakujące wartości za pomocą opcjonałów"
     }
 }

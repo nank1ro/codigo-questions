@@ -73,5 +73,10 @@
         "order": 15,
         "title": "クラス",
         "description": "オブジェクト指向プログラミングを学ぶ"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "オプショナル",
+        "description": "オプショナルを使って欠けている値を扱う方法を学ぶ"
     }
 }
