@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Strings",
         "description": "Lerne, wie man Text mit String-Methoden bearbeitet"
+    },
+    "maps": {
+        "order": 16,
+        "title": "Maps",
+        "description": "Lerne, wie man Schlüssel-Wert-Paare in einer Map speichert"
     }
 }
