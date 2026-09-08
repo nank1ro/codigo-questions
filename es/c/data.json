@@ -58,5 +58,10 @@
         "order": 12,
         "title": "Funciones",
         "description": "Aprende cómo dividir código por tareas específicas"
+    },
+    "strings": {
+        "order": 13,
+        "title": "Cadenas",
+        "description": "Aprende cómo trabajar con texto usando arrays de caracteres y string.h"
     }
 }

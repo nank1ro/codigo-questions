@@ -58,5 +58,10 @@
         "order": 12,
         "title": "Funktionen",
         "description": "Lerne, wie man Code in spezifische Aufgaben aufteilt"
+    },
+    "strings": {
+        "order": 13,
+        "title": "Zeichenketten",
+        "description": "Lerne, wie man mit Text mithilfe von char-Arrays und string.h arbeitet"
     }
 }

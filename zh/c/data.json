@@ -58,5 +58,10 @@
         "order": 12,
         "title": "函数",
         "description": "学习如何按特定任务划分代码"
+    },
+    "strings": {
+        "order": 13,
+        "title": "字符串",
+        "description": "学习如何使用字符数组和 string.h 处理文本"
     }
 }

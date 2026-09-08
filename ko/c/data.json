@@ -58,5 +58,10 @@
         "order": 12,
         "title": "함수",
         "description": "특정 작업별로 코드를 분리하는 방법을 배웁니다"
+    },
+    "strings": {
+        "order": 13,
+        "title": "문자열",
+        "description": "char 배열과 string.h를 사용하여 문자열을 다루는 방법을 배웁니다"
     }
 }

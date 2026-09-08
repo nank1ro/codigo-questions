@@ -58,5 +58,10 @@
         "order": 12,
         "title": "Functions",
         "description": "Learn how to divide code by specific tasks"
+    },
+    "strings": {
+        "order": 13,
+        "title": "Strings",
+        "description": "Learn how to work with text using char arrays and string.h"
     }
 }

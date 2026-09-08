@@ -58,5 +58,10 @@
         "order": 12,
         "title": "Funkcje",
         "description": "Naucz się dzielić kod na konkretne zadania"
+    },
+    "strings": {
+        "order": 13,
+        "title": "Ciągi znaków",
+        "description": "Naucz się pracować z tekstem za pomocą tablic znaków i string.h"
     }
 }
