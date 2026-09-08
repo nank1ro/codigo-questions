@@ -93,5 +93,10 @@
     "order": 19,
     "title": "可空性",
     "description": "学习如何处理可能为 null 的值"
+  },
+  "lambda": {
+    "order": 20,
+    "title": "Lambda",
+    "description": "学习如何编写匿名函数"
   }
 }
