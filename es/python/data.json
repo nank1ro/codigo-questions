@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Enumeraciones",
         "description": "Aprende cómo crear un tipo común para un grupo de valores relacionados"
+    },
+    "types": {
+        "order": 21,
+        "title": "Tipos",
+        "description": "Aprende sobre los tipos de datos básicos y cómo convertir entre ellos"
     }
 }
