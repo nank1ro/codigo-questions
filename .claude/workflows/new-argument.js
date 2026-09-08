@@ -135,16 +135,9 @@ All must pass again (validator, tester for type 1, check_outputs). Return a shor
 }
 
 function translatePrompt(s, group) {
-  return `You are a translator for the Codigo exercise repo. Work ONLY inside ${wt(s)} (cd there). No git commands that change state. Write only under these locale folders: ${group.join(', ')}.
-${FORMAT_RULES}
-Source of truth: en/${s.language}/${s.argument}/*.md (numbered files only, ignore _theory.md) and the "${s.argument}" entry in en/${s.language}/data.json.
-
-For EACH locale in ${group.join(', ')}:
-- Create <locale>/${s.language}/${s.argument}/<n>.md for every en file, a faithful translation. Frontmatter, seed, type-2 answers, before-seed/after-seed, before-asserts, assert CODE blocks, after-asserts, solutions and output must be BYTE-IDENTICAL to en (code comments stay in English). Translate description, instructions, the prose line above each assert code block, type-3 answers and type-3 solutions (the translated solution must equal one translated answer exactly). Keep markdown structure, section order, code spans, '[/]' placeholders, '--err-tN--' markers and blank-line layout identical to en. Translate complete sentences; no English words left behind.
-- Add the "${s.argument}" entry to <locale>/${s.language}/data.json with the same order and a translated title/description (match the style of the neighbouring entries in that file; keep the JSON formatting of the file).
-- Match the tone and terminology used by existing translations in <locale>/${s.language}/.
-
-Verify: python3 scripts/check_locales.py WORKTREE must print no DIFF/MISSING line for your locales; also 'ls <locale>/${s.language}/${s.argument}/*.md | wc -l' must equal en's count for each of your locales. Return locales handled, file counts, and anything unresolved.`
+  return `Translation is done by GLM through OpenCode; you only drive the script. From ${wt(s)} run, one after another (each takes several minutes; wait for it):
+${group.map((l) => `sh ${MAIN}/scripts/translate_glm.sh ${s.language} ${s.argument} ${l}`).join('\n')}
+Each run ends by printing either "ok <locale> (<n> files)" or DIFF/MISSING lines for that locale. If a locale prints DIFF/MISSING lines, run its command once more. Do not edit any file yourself. Return one line per locale with its final printed result.`
 }
 
 function verifyPrompt(s) {
@@ -180,7 +173,7 @@ const results = await pipeline(
     log(`${s.language}/${s.argument}: ${findings.length} review findings`)
     return agent(fixPrompt(s, findings), { label: `fix:${s.language}-${s.argument}`, phase: 'Fix' }).then(() => w)
   },
-  (w, s) => parallel(LOCALE_GROUPS.map((g) => () => agent(translatePrompt(s, g), { label: `translate:${s.language}-${s.argument}:${g[0]}`, phase: 'Translate', model: 'sonnet' }))).then(() => w),
+  (w, s) => parallel(LOCALE_GROUPS.map((g) => () => agent(translatePrompt(s, g), { label: `translate:${s.language}-${s.argument}:${g[0]}`, phase: 'Translate', model: 'haiku' }))).then(() => w),
   (w, s) => agent(verifyPrompt(s), { label: `verify:${s.language}-${s.argument}`, phase: 'Verify', model: 'opus', schema: REPORT_SCHEMA }),
   (report, s) => agent(shipPrompt(s, report), { label: `ship:${s.language}-${s.argument}`, phase: 'Ship', model: 'sonnet', schema: SHIP_SCHEMA })
     .then((ship) => ({ language: s.language, argument: s.argument, worktree: wt(s), report, ship })),
