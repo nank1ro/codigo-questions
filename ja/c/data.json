@@ -58,5 +58,10 @@
         "order": 12,
         "title": "関数",
         "description": "特定のタスクごとにコードを分割する方法を学ぶ"
+    },
+    "strings": {
+        "order": 13,
+        "title": "文字列",
+        "description": "char配列とstring.hを使って文字列を扱う方法を学ぶ"
     }
 }
