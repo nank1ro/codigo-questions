@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Insiemi",
     "description": "Impara a memorizzare valori unici in un Set"
+  },
+  "strings": {
+    "order": 18,
+    "title": "Strings",
+    "description": "Impara a creare e manipolare il testo"
   }
 }

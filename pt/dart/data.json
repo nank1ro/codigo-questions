@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Conjuntos",
     "description": "Aprenda a armazenar valores únicos em um Set"
+  },
+  "strings": {
+    "order": 18,
+    "title": "Strings",
+    "description": "Aprenda a criar e manipular texto"
   }
 }
