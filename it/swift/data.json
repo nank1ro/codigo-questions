@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Sets",
         "description": "Impara a salvare valori univoci in un Set"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Stringhe",
+        "description": "Impara a creare e manipolare il testo"
     }
 }

@@ -83,5 +83,10 @@
         "order": 17,
         "title": "세트",
         "description": "Set으로 고유한 값을 저장하는 방법을 배웁니다"
+    },
+    "strings": {
+        "order": 18,
+        "title": "문자열",
+        "description": "문자열을 생성하고 다루는 방법을 배웁니다"
     }
 }

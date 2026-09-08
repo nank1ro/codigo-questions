@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Sets",
         "description": "Lerne, wie man einzigartige Werte in einem Set speichert"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Strings",
+        "description": "Lerne, wie man Text erstellt und bearbeitet"
     }
 }
