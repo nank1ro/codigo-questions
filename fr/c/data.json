@@ -63,5 +63,10 @@
         "order": 13,
         "title": "Chaînes",
         "description": "Apprenez comment travailler avec du texte à l'aide de tableaux de caractères et de string.h"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Énumérations",
+        "description": "Apprenez comment définir des constantes entières nommées avec enum"
     }
 }

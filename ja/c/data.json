@@ -63,5 +63,10 @@
         "order": 13,
         "title": "文字列",
         "description": "char配列とstring.hを使って文字列を扱う方法を学ぶ"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "列挙型",
+        "description": "enumで名前付き整数定数を定義する方法を学ぶ"
     }
 }

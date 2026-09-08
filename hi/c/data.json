@@ -63,5 +63,10 @@
         "order": 13,
         "title": "स्ट्रिंग्स",
         "description": "char ऐरे और string.h का उपयोग करके टेक्स्ट के साथ काम करना सीखें"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "एनम",
+        "description": "enum के साथ नामित पूर्णांक स्थिरांक परिभाषित करना सीखें"
     }
 }

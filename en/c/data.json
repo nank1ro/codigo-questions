@@ -63,5 +63,10 @@
         "order": 13,
         "title": "Strings",
         "description": "Learn how to work with text using char arrays and string.h"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Enumerations",
+        "description": "Learn how to define named integer constants with enum"
     }
 }

@@ -63,5 +63,10 @@
         "order": 13,
         "title": "문자열",
         "description": "char 배열과 string.h를 사용하여 문자열을 다루는 방법을 배웁니다"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "열거형",
+        "description": "enum으로 이름이 있는 정수 상수를 정의하는 방법을 배웁니다"
     }
 }
