@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Funkcje lambda",
         "description": "Naucz się pisać małe anonimowe funkcje za pomocą lambda"
+    },
+    "listComprehension": {
+        "order": 17,
+        "title": "List comprehension",
+        "description": "Naucz się budować listy w jednym wyrażeniu"
     }
 }

@@ -78,5 +78,10 @@
         "order": 16,
         "title": "lambda関数",
         "description": "lambdaを使って小さな無名関数を書く方法を学ぶ"
+    },
+    "listComprehension": {
+        "order": 17,
+        "title": "リスト内包表記",
+        "description": "1つの式でリストを構築する方法を学ぶ"
     }
 }

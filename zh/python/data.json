@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Lambda 函数",
         "description": "学习如何使用 lambda 编写小型匿名函数"
+    },
+    "listComprehension": {
+        "order": 17,
+        "title": "List comprehension",
+        "description": "学习如何用一个表达式构建列表"
     }
 }
