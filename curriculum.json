@@ -150,6 +150,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -165,7 +170,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -683,6 +688,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -698,7 +708,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -1216,6 +1226,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -1231,7 +1246,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -1749,6 +1764,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -1764,7 +1784,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -2282,6 +2302,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -2297,7 +2322,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -2815,6 +2840,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -2830,7 +2860,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -3348,6 +3378,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -3363,7 +3398,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -3881,6 +3916,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -3896,7 +3936,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -4414,6 +4454,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -4429,7 +4474,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -4947,6 +4992,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -4962,7 +5012,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -5480,6 +5530,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -5495,7 +5550,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",
@@ -6013,6 +6068,11 @@
           "totalExercises": 25
         },
         {
+          "name": "strings",
+          "trainUntil": 15,
+          "totalExercises": 18
+        },
+        {
           "name": "types",
           "trainUntil": 10,
           "totalExercises": 24
@@ -6028,7 +6088,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 313
+      "totalExercises": 331
     },
     {
       "name": "javascript",

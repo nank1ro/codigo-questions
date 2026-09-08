@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Zbiory",
     "description": "Naucz się przechowywać unikalne wartości w Set"
+  },
+  "strings": {
+    "order": 18,
+    "title": "Ciągi znaków",
+    "description": "Naucz się tworzyć i manipulować tekstem"
   }
 }
