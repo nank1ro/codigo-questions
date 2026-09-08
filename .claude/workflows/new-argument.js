@@ -137,7 +137,7 @@ All must pass again (validator, tester for type 1, check_outputs). Return a shor
 function translatePrompt(s, group) {
   return `Translation is done by GLM through OpenCode; you only drive the script. From ${wt(s)} run, one after another (each takes several minutes; wait for it):
 ${group.map((l) => `sh ${MAIN}/scripts/translate_glm.sh ${s.language} ${s.argument} ${l}`).join('\n')}
-Each run ends by printing either "ok <locale> (<n> files)" or DIFF/MISSING lines for that locale. If a locale prints DIFF/MISSING lines, run its command once more. Do not edit any file yourself. Return one line per locale with its final printed result.`
+Each run ends by printing either "ok <locale> (<n> files)" or, after its own retry, the remaining DIFF/MISSING lines for that locale. Do not edit any file yourself. Return one line per locale with its final printed result.`
 }
 
 function verifyPrompt(s) {
