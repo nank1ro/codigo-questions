@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Map",
         "description": "Узнайте, как хранить пары ключ-значение в Map"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Научитесь хранить уникальные значения в Set"
     }
 }

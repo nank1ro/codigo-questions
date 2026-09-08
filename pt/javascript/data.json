@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Map",
         "description": "Aprenda como armazenar pares chave-valor em um Map"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Aprenda a armazenar valores únicos em um Set"
     }
 }
