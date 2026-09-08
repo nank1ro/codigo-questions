@@ -73,5 +73,10 @@
     "order": 15,
     "title": "맵",
     "description": "Map에 키-값 쌍을 저장하는 방법을 배웁니다"
+  },
+  "strings": {
+    "order": 16,
+    "title": "문자열",
+    "description": "String 메서드로 텍스트를 다루는 방법을 배웁니다"
   }
 }

@@ -73,5 +73,10 @@
     "order": 15,
     "title": "Mapas",
     "description": "Aprende a almacenar pares clave-valor en un mapa"
+  },
+  "strings": {
+    "order": 16,
+    "title": "Cadenas",
+    "description": "Aprende cómo trabajar con texto usando métodos de cadenas"
   }
 }

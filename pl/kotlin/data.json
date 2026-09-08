@@ -73,5 +73,10 @@
     "order": 15,
     "title": "Mapy",
     "description": "Naucz się przechowywać pary klucz-wartość w Map"
+  },
+  "strings": {
+    "order": 16,
+    "title": "Ciągi znaków",
+    "description": "Naucz się pracować z tekstem za pomocą metod String"
   }
 }

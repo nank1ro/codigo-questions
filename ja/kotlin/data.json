@@ -73,5 +73,10 @@
     "order": 15,
     "title": "マップ",
     "description": "キーと値のペアをMapに格納する方法を学ぶ"
+  },
+  "strings": {
+    "order": 16,
+    "title": "文字列",
+    "description": "String メソッドを使ってテキストを扱う方法を学ぶ"
   }
 }

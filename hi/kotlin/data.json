@@ -73,5 +73,10 @@
     "order": 15,
     "title": "मैप्स",
     "description": "एक Map में key-value जोड़े संग्रहीत करना सीखें"
+  },
+  "strings": {
+    "order": 16,
+    "title": "स्ट्रिंग",
+    "description": "String मेथड का उपयोग करके टेक्स्ट के साथ काम करना सीखें"
   }
 }
