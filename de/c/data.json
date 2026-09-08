@@ -63,5 +63,10 @@
         "order": 13,
         "title": "Zeichenketten",
         "description": "Lerne, wie man mit Text mithilfe von char-Arrays und string.h arbeitet"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Aufzählungen",
+        "description": "Lerne, wie man benannte Ganzzahlkonstanten mit enum definiert"
     }
 }

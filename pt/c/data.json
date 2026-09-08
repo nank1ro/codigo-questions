@@ -63,5 +63,10 @@
         "order": 13,
         "title": "Strings",
         "description": "Aprenda como trabalhar com texto usando arrays de caracteres e string.h"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Enumerações",
+        "description": "Aprenda como definir constantes inteiras nomeadas com enum"
     }
 }

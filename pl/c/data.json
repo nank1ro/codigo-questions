@@ -63,5 +63,10 @@
         "order": 13,
         "title": "Ciągi znaków",
         "description": "Naucz się pracować z tekstem za pomocą tablic znaków i string.h"
+    },
+    "enumerations": {
+        "order": 14,
+        "title": "Wyliczenia",
+        "description": "Naucz się definiować nazwane stałe całkowite za pomocą enum"
     }
 }
