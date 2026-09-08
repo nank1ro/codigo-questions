@@ -83,5 +83,10 @@
         "order": 17,
         "title": "List Comprehension",
         "description": "Lerne, wie man Listen in einem einzigen Ausdruck erstellt"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Zeichenketten",
+        "description": "Lerne, wie man Text erstellt und bearbeitet"
     }
 }

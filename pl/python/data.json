@@ -83,5 +83,10 @@
         "order": 17,
         "title": "List comprehension",
         "description": "Naucz się budować listy w jednym wyrażeniu"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Ciągi znaków",
+        "description": "Naucz się tworzyć i przetwarzać tekst"
     }
 }

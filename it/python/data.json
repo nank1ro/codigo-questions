@@ -83,5 +83,10 @@
         "order": 17,
         "title": "List Comprehension",
         "description": "Impara a costruire liste in una singola espressione"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Stringhe",
+        "description": "Impara a creare e manipolare il testo"
     }
 }
