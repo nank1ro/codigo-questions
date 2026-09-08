@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Classi",
         "description": "Impara la programmazione ad oggetti"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "Optional",
+        "description": "Impara a gestire i valori mancanti con gli Optional"
     }
 }

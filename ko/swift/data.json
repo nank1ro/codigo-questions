@@ -73,5 +73,10 @@
         "order": 15,
         "title": "클래스",
         "description": "객체 지향 프로그래밍을 배웁니다"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "옵셔널",
+        "description": "옵셔널로 값이 없는 상황을 처리하는 방법을 배웁니다"
     }
 }

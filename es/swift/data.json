@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Clases",
         "description": "Aprende programación orientada a objetos"
+    },
+    "nullability": {
+        "order": 16,
+        "title": "Opcionales",
+        "description": "Aprende cómo manejar valores ausentes con opcionales"
     }
 }
