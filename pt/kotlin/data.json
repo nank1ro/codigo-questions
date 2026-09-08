@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Enumerações",
     "description": "Aprenda a criar um tipo comum para um grupo de valores relacionados"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "Arrays",
+    "description": "Aprenda como armazenar diferentes valores em uma variável"
   }
 }

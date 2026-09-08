@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Énumérations",
     "description": "Apprenez comment créer un type commun pour un groupe de valeurs connexes"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "Tableaux",
+    "description": "Apprenez comment stocker différentes valeurs dans une variable"
   }
 }

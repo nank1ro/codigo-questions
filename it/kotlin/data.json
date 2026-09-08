@@ -83,5 +83,10 @@
     "order": 17,
     "title": "Enumerazioni",
     "description": "Impara a creare un tipo comune per un gruppo di valori correlati"
+  },
+  "arrays": {
+    "order": 18,
+    "title": "Array",
+    "description": "Impara a memorizzare diversi valori in un'unica variabile"
   }
 }
