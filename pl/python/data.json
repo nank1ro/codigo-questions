@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Ciągi znaków",
         "description": "Naucz się tworzyć i przetwarzać tekst"
+    },
+    "sets": {
+        "order": 19,
+        "title": "Zbiory",
+        "description": "Naucz się przechowywać unikalne elementy w nieuporządkowanej kolekcji"
     }
 }
