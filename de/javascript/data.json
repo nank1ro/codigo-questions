@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Pfeilfunktionen",
         "description": "Lerne, wie man kurze anonyme Funktionen schreibt"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "Nullability",
+        "description": "Lerne, wie man mit Werten umgeht, die null oder undefined sein können"
     }
 }

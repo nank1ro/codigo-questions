@@ -93,5 +93,10 @@
         "order": 19,
         "title": "화살표 함수",
         "description": "짧은 익명 함수를 작성하는 방법을 배웁니다"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "널 가능성",
+        "description": "null 또는 undefined일 수 있는 값을 다루는 방법을 배웁니다"
     }
 }

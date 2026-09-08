@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Стрелочные функции",
         "description": "Узнайте, как писать короткие анонимные функции"
+    },
+    "nullability": {
+        "order": 20,
+        "title": "Работа с null и undefined",
+        "description": "Узнайте, как обрабатывать значения, которые могут быть null или undefined"
     }
 }
