@@ -83,5 +83,10 @@
         "order": 17,
         "title": "セット",
         "description": "セットに一意の値を格納する方法を学ぶ"
+    },
+    "enumerations": {
+        "order": 18,
+        "title": "列挙型",
+        "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
     }
 }

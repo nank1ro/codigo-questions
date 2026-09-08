@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Sets",
         "description": "Learn how to store unique values in a Set"
+    },
+    "enumerations": {
+        "order": 18,
+        "title": "Enumerations",
+        "description": "Learn how to create a common type for a group of related values"
     }
 }

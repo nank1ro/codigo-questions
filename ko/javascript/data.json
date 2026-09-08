@@ -83,5 +83,10 @@
         "order": 17,
         "title": "세트",
         "description": "Set에 고유한 값을 저장하는 방법 배우기"
+    },
+    "enumerations": {
+        "order": 18,
+        "title": "열거형",
+        "description": "관련된 값의 그룹에 대한 공통 타입을 만드는 방법을 배웁니다"
     }
 }

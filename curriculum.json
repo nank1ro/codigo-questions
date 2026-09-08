@@ -221,6 +221,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -271,7 +276,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -789,6 +794,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -839,7 +849,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -1357,6 +1367,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -1407,7 +1422,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -1925,6 +1940,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -1975,7 +1995,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -2493,6 +2513,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -2543,7 +2568,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -3061,6 +3086,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -3111,7 +3141,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -3629,6 +3659,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -3679,7 +3714,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -4197,6 +4232,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -4247,7 +4287,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -4765,6 +4805,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -4815,7 +4860,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -5333,6 +5378,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -5383,7 +5433,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -5901,6 +5951,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -5951,7 +6006,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
@@ -6469,6 +6524,11 @@
           "totalExercises": 45
         },
         {
+          "name": "enumerations",
+          "trainUntil": 10,
+          "totalExercises": 14
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 13
@@ -6519,7 +6579,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 321
+      "totalExercises": 335
     },
     {
       "name": "kotlin",
