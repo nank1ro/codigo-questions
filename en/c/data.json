@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Comparison and Logical Operators",
         "description": "Learn short-circuit evaluation, operator precedence and bool"
+    },
+    "types": {
+        "order": 16,
+        "title": "Types",
+        "description": "Learn about the basic data types and how to convert between them"
     }
 }

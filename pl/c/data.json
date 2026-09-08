@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Operatory porównania i logiczne",
         "description": "Naucz się oceny skróconej, pierwszeństwa operatorów i typu bool"
+    },
+    "types": {
+        "order": 16,
+        "title": "Typy",
+        "description": "Poznaj podstawowe typy danych i sposoby konwersji między nimi"
     }
 }
