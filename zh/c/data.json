@@ -83,5 +83,10 @@
         "order": 17,
         "title": "注释",
         "description": "学习如何为代码编写文档"
+    },
+    "structs": {
+        "order": 18,
+        "title": "结构体",
+        "description": "学习如何把相关的值组合成一个类型"
     }
 }

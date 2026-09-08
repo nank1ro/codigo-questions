@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Komentarze",
         "description": "Naucz się dokumentować swój kod"
+    },
+    "structs": {
+        "order": 18,
+        "title": "Struktury",
+        "description": "Naucz się grupować powiązane wartości w jeden typ"
     }
 }
