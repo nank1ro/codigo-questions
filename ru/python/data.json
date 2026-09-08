@@ -83,5 +83,10 @@
         "order": 17,
         "title": "List comprehension",
         "description": "Узнайте, как строить списки в одном выражении"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Строки",
+        "description": "Узнайте, как создавать и обрабатывать текст"
     }
 }

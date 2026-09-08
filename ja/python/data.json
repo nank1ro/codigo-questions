@@ -83,5 +83,10 @@
         "order": 17,
         "title": "リスト内包表記",
         "description": "1つの式でリストを構築する方法を学ぶ"
+    },
+    "strings": {
+        "order": 18,
+        "title": "文字列",
+        "description": "テキストを作成し操作する方法を学ぶ"
     }
 }

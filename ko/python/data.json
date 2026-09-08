@@ -83,5 +83,10 @@
         "order": 17,
         "title": "리스트 컴프리헨션",
         "description": "하나의 표현식으로 리스트를 만드는 방법을 배웁니다"
+    },
+    "strings": {
+        "order": 18,
+        "title": "문자열",
+        "description": "텍스트를 만들고 다루는 방법을 배웁니다"
     }
 }
