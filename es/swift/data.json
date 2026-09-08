@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Sets",
         "description": "Aprende cómo almacenar valores únicos en un Set"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Cadenas",
+        "description": "Aprende cómo crear y manipular texto"
     }
 }

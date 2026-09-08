@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Sets",
         "description": "Learn how to store unique values in a Set"
+    },
+    "strings": {
+        "order": 18,
+        "title": "Strings",
+        "description": "Learn how to create and manipulate text"
     }
 }

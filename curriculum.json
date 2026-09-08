@@ -514,6 +514,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -524,7 +529,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "en": [
@@ -1042,6 +1047,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -1052,7 +1062,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "es": [
@@ -1570,6 +1580,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -1580,7 +1595,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "fr": [
@@ -2098,6 +2113,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -2108,7 +2128,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "hi": [
@@ -2626,6 +2646,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -2636,7 +2661,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "it": [
@@ -3154,6 +3179,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -3164,7 +3194,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "ja": [
@@ -3682,6 +3712,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -3692,7 +3727,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "ko": [
@@ -4210,6 +4245,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -4220,7 +4260,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "pl": [
@@ -4738,6 +4778,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -4748,7 +4793,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "pt": [
@@ -5266,6 +5311,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -5276,7 +5326,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "ru": [
@@ -5794,6 +5844,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -5804,7 +5859,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ],
   "zh": [
@@ -6322,6 +6377,11 @@
           "totalExercises": 24
         },
         {
+          "name": "strings",
+          "trainUntil": 18,
+          "totalExercises": 18
+        },
+        {
           "name": "variables",
           "trainUntil": 6,
           "totalExercises": 24
@@ -6332,7 +6392,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 328
+      "totalExercises": 346
     }
   ]
 }
