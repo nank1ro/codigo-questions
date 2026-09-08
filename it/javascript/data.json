@@ -83,5 +83,10 @@
         "order": 17,
         "title": "Set",
         "description": "Impara a memorizzare valori unici in un Set"
+    },
+    "enumerations": {
+        "order": 18,
+        "title": "Enumerazioni",
+        "description": "Impara a creare un tipo comune per un gruppo di valori correlati"
     }
 }
