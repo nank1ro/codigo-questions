@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Enumerations",
         "description": "Learn how to create a common type for a group of related values"
+    },
+    "types": {
+        "order": 21,
+        "title": "Types",
+        "description": "Learn about the basic data types and how to convert between them"
     }
 }
