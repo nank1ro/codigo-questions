@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Łańcuchy znaków",
         "description": "Naucz się pracować z tekstem za pomocą metod łańcuchów znaków"
+    },
+    "maps": {
+        "order": 16,
+        "title": "Map",
+        "description": "Naucz się przechowywać pary klucz-wartość za pomocą Map"
     }
 }

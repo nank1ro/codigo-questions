@@ -73,5 +73,10 @@
         "order": 15,
         "title": "字符串",
         "description": "学习如何使用字符串方法处理文本"
+    },
+    "maps": {
+        "order": 16,
+        "title": "Map",
+        "description": "学习如何在 Map 中存储键值对"
     }
 }

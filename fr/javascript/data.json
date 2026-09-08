@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Chaînes de caractères",
         "description": "Apprenez à manipuler du texte avec les méthodes de chaînes"
+    },
+    "maps": {
+        "order": 16,
+        "title": "Maps",
+        "description": "Apprenez à stocker des paires clé-valeur dans une Map"
     }
 }

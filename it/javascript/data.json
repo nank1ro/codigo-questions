@@ -73,5 +73,10 @@
         "order": 15,
         "title": "Stringhe",
         "description": "Impara a lavorare con il testo usando i metodi delle stringhe"
+    },
+    "maps": {
+        "order": 16,
+        "title": "Mappe",
+        "description": "Impara a memorizzare coppie chiave-valore in una mappa"
     }
 }
