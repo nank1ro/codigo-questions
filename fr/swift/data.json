@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Fermetures",
         "description": "Apprenez à écrire des fonctions anonymes"
+    },
+    "types": {
+        "order": 20,
+        "title": "Types",
+        "description": "Apprenez les types de données de base et comment convertir entre eux"
     }
 }

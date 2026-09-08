@@ -93,5 +93,10 @@
         "order": 19,
         "title": "クロージャ",
         "description": "無名関数の書き方を学ぶ"
+    },
+    "types": {
+        "order": 20,
+        "title": "型",
+        "description": "基本的なデータ型と、それらの間で変換する方法を学ぶ"
     }
 }

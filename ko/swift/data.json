@@ -93,5 +93,10 @@
         "order": 19,
         "title": "클로저",
         "description": "익명 함수를 작성하는 방법을 배웁니다"
+    },
+    "types": {
+        "order": 20,
+        "title": "타입",
+        "description": "기본 데이터 타입과 타입 간 변환 방법을 배웁니다"
     }
 }

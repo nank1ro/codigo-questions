@@ -93,5 +93,10 @@
         "order": 19,
         "title": "闭包",
         "description": "学习如何编写匿名函数"
+    },
+    "types": {
+        "order": 20,
+        "title": "类型",
+        "description": "学习基本数据类型以及如何在它们之间进行转换"
     }
 }

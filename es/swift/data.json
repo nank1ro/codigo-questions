@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Cierres",
         "description": "Aprende cómo escribir funciones anónimas"
+    },
+    "types": {
+        "order": 20,
+        "title": "Tipos",
+        "description": "Aprende sobre los tipos de datos básicos y cómo convertir entre ellos"
     }
 }

@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Closures",
         "description": "Learn how to write anonymous functions"
+    },
+    "types": {
+        "order": 20,
+        "title": "Types",
+        "description": "Learn about the basic data types and how to convert between them"
     }
 }

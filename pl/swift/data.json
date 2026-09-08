@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Domknięcia",
         "description": "Naucz się pisać funkcje anonimowe"
+    },
+    "types": {
+        "order": 20,
+        "title": "Typy",
+        "description": "Naucz się podstawowych typów danych i konwertowania między nimi"
     }
 }
