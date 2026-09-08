@@ -98,5 +98,10 @@
     "order": 20,
     "title": "無名関数",
     "description": "名前のない関数を書く方法を学ぶ"
+  },
+  "nullability": {
+    "order": 21,
+    "title": "Nullability",
+    "description": "nullになりうる値の扱い方を学ぶ"
   }
 }

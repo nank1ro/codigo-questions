@@ -98,5 +98,10 @@
     "order": 20,
     "title": "Funkcje anonimowe",
     "description": "Naucz się pisać funkcje bez nazwy"
+  },
+  "nullability": {
+    "order": 21,
+    "title": "Nullowalność",
+    "description": "Naucz się obsługiwać wartości, które mogą być null"
   }
 }
