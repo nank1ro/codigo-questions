@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Opcjonały",
         "description": "Naucz się obsługiwać brakujące wartości za pomocą opcjonałów"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Zbiory",
+        "description": "Naucz się przechowywać unikalne wartości w zbiorze"
     }
 }

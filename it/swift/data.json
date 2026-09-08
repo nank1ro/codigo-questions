@@ -78,5 +78,10 @@
         "order": 16,
         "title": "Optional",
         "description": "Impara a gestire i valori mancanti con gli Optional"
+    },
+    "sets": {
+        "order": 17,
+        "title": "Sets",
+        "description": "Impara a salvare valori univoci in un Set"
     }
 }
