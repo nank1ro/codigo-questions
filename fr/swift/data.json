@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Chaînes de caractères",
         "description": "Apprenez à créer et manipuler du texte"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "Fermetures",
+        "description": "Apprenez à écrire des fonctions anonymes"
     }
 }

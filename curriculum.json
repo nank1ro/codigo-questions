@@ -519,6 +519,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -554,7 +559,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "en": [
@@ -1077,6 +1082,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -1112,7 +1122,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "es": [
@@ -1635,6 +1645,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -1670,7 +1685,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "fr": [
@@ -2193,6 +2208,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -2228,7 +2248,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "hi": [
@@ -2751,6 +2771,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -2786,7 +2811,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "it": [
@@ -3309,6 +3334,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -3344,7 +3374,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "ja": [
@@ -3867,6 +3897,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -3902,7 +3937,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "ko": [
@@ -4425,6 +4460,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -4460,7 +4500,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "pl": [
@@ -4983,6 +5023,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -5018,7 +5063,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "pt": [
@@ -5541,6 +5586,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -5576,7 +5626,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "ru": [
@@ -6099,6 +6149,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -6134,7 +6189,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ],
   "zh": [
@@ -6657,6 +6712,11 @@
           "totalExercises": 12
         },
         {
+          "name": "lambda",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "nullability",
           "trainUntil": 18,
           "totalExercises": 18
@@ -6692,7 +6752,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 346
+      "totalExercises": 362
     }
   ]
 }

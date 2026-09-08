@@ -88,5 +88,10 @@
         "order": 18,
         "title": "字符串",
         "description": "学习如何创建和处理文本"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "闭包",
+        "description": "学习如何编写匿名函数"
     }
 }

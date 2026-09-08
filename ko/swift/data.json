@@ -88,5 +88,10 @@
         "order": 18,
         "title": "문자열",
         "description": "문자열을 생성하고 다루는 방법을 배웁니다"
+    },
+    "lambda": {
+        "order": 19,
+        "title": "클로저",
+        "description": "익명 함수를 작성하는 방법을 배웁니다"
     }
 }
