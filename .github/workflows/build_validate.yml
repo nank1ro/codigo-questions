@@ -17,7 +17,7 @@ jobs:
   validate_exercises:
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.head_ref }}
+      group: ${{ github.head_ref || github.ref }}
       cancel-in-progress: true
     defaults:
       run:
@@ -52,7 +52,7 @@ jobs:
     needs: validate_exercises
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.head_ref }}
+      group: ${{ github.head_ref || github.ref }}
       cancel-in-progress: true
     defaults:
       run:
@@ -87,7 +87,7 @@ jobs:
     needs: build_curriculum
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.head_ref }}
+      group: ${{ github.head_ref || github.ref }}
       cancel-in-progress: true
     defaults:
       run:
