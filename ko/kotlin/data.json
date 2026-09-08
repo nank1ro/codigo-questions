@@ -90,4 +90,10 @@
     "title": "배열",
     "description": "하나의 변수에 여러 값을 저장하는 방법을 배웁니다"
   }
+,
+  "nullability": {
+    "order": 19,
+    "title": "널 가능성",
+    "description": "null일 수 있는 값을 다루는 방법을 배웁니다"
+  }
 }

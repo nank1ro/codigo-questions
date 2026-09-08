@@ -357,6 +357,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -387,7 +392,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -955,6 +960,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -985,7 +995,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -1553,6 +1563,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -1583,7 +1598,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -2151,6 +2166,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -2181,7 +2201,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -2749,6 +2769,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -2779,7 +2804,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -3347,6 +3372,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -3377,7 +3407,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -3945,6 +3975,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -3975,7 +4010,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -4543,6 +4578,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -4573,7 +4613,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -5141,6 +5181,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -5171,7 +5216,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -5739,6 +5784,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -5769,7 +5819,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -6337,6 +6387,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -6367,7 +6422,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",
@@ -6935,6 +6990,11 @@
           "totalExercises": 18
         },
         {
+          "name": "nullability",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 2,
           "totalExercises": 11
@@ -6965,7 +7025,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 402
+      "totalExercises": 418
     },
     {
       "name": "python",

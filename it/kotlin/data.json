@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Array",
     "description": "Impara a memorizzare diversi valori in un'unica variabile"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "Nullabilità",
+    "description": "Impara a gestire i valori che possono essere null"
   }
 }

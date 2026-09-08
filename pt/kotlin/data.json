@@ -88,5 +88,10 @@
     "order": 18,
     "title": "Arrays",
     "description": "Aprenda como armazenar diferentes valores em uma variável"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "Nulabilidade",
+    "description": "Aprenda como lidar com valores que podem ser nulos"
   }
 }

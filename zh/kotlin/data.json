@@ -88,5 +88,10 @@
     "order": 18,
     "title": "数组",
     "description": "学习如何在一个变量中存储不同的值"
+  },
+  "nullability": {
+    "order": 19,
+    "title": "可空性",
+    "description": "学习如何处理可能为 null 的值"
   }
 }
