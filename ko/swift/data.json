@@ -98,5 +98,10 @@
         "order": 20,
         "title": "타입",
         "description": "기본 데이터 타입과 타입 간 변환 방법을 배웁니다"
+    },
+    "extensions": {
+        "order": 21,
+        "title": "확장",
+        "description": "기존 타입에 새로운 기능을 추가하는 방법을 배우세요"
     }
 }

@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Tipos",
         "description": "Aprende sobre los tipos de datos básicos y cómo convertir entre ellos"
+    },
+    "extensions": {
+        "order": 21,
+        "title": "Extensiones",
+        "description": "Aprende cómo añadir funcionalidad nueva a tipos existentes"
     }
 }

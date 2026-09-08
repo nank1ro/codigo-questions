@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Typy",
         "description": "Naucz się podstawowych typów danych i konwertowania między nimi"
+    },
+    "extensions": {
+        "order": 21,
+        "title": "Rozszerzenia",
+        "description": "Naucz się dodawać nową funkcjonalność do istniejących typów"
     }
 }
