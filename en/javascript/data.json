@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Nullability",
         "description": "Learn how to handle values that may be null or undefined"
+    },
+    "types": {
+        "order": 21,
+        "title": "Types",
+        "description": "Learn about the basic data types and how to convert between them"
     }
 }
