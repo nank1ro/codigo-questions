@@ -93,5 +93,10 @@
         "order": 19,
         "title": "포인터",
         "description": "메모리 주소를 다루는 방법을 배웁니다"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "문자열 형식화",
+        "description": "printf, sprintf, snprintf로 형식이 지정된 문자열을 구축하는 방법을 배웁니다"
     }
 }

@@ -93,5 +93,10 @@
         "order": 19,
         "title": "पॉइंटर",
         "description": "मेमोरी एड्रेस के साथ काम करना सीखें"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "स्ट्रिंग फ़ॉर्मेटिंग",
+        "description": "printf, sprintf और snprintf के साथ स्वरूपित स्ट्रिंग बनाने का तरीका जानें"
     }
 }
