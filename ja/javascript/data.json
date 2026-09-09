@@ -103,5 +103,10 @@
         "order": 21,
         "title": "型",
         "description": "基本的なデータ型とその変換方法を学ぶ"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "高階関数",
+        "description": "map、filter、reduce、クロージャで関数を渡したり返したりする方法を学ぶ"
     }
 }

@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Types",
         "description": "Learn about the basic data types and how to convert between them"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Higher-Order Functions",
+        "description": "Learn how to pass and return functions with map, filter, reduce and closures"
     }
 }

@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Types",
         "description": "Apprenez les types de données de base et comment convertir entre eux"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Fonctions d'ordre supérieur",
+        "description": "Apprenez à passer et à retourner des fonctions avec map, filter, reduce et les fermetures"
     }
 }
