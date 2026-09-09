@@ -382,6 +382,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -447,7 +452,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -1075,6 +1080,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -1140,7 +1150,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -1768,6 +1778,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -1833,7 +1848,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -2461,6 +2476,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -2526,7 +2546,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -3154,6 +3174,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -3219,7 +3244,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -3847,6 +3872,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -3912,7 +3942,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -4540,6 +4570,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -4605,7 +4640,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -5233,6 +5268,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -5298,7 +5338,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -5926,6 +5966,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -5991,7 +6036,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -6619,6 +6664,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -6684,7 +6734,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -7312,6 +7362,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -7377,7 +7432,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",
@@ -8005,6 +8060,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 9,
           "totalExercises": 34
@@ -8070,7 +8130,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 450
+      "totalExercises": 466
     },
     {
       "name": "python",

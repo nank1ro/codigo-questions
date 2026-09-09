@@ -83,29 +83,30 @@
     "order": 17,
     "title": "열거형",
     "description": "관련된 값의 그룹에 대한 공통 타입을 만드는 방법을 배웁니다"
-  }
-,
+  },
   "arrays": {
     "order": 18,
     "title": "배열",
     "description": "하나의 변수에 여러 값을 저장하는 방법을 배웁니다"
-  }
-,
+  },
   "nullability": {
     "order": 19,
     "title": "널 가능성",
     "description": "null일 수 있는 값을 다루는 방법을 배웁니다"
-  }
-,
+  },
   "lambda": {
     "order": 20,
     "title": "람다",
     "description": "익명 함수를 작성하는 방법을 배웁니다"
-  }
-,
+  },
   "types": {
     "order": 21,
     "title": "타입",
     "description": "기본 데이터 타입과 타입 간에 변환하는 방법을 배웁니다"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "확장",
+    "description": "확장을 사용하여 기존 타입에 함수와 프로퍼티를 추가하는 방법을 학습합니다"
   }
 }

@@ -103,5 +103,10 @@
     "order": 21,
     "title": "Typen",
     "description": "Lerne, wie man die grundlegenden Datentypen verwendet und zwischen ihnen umwandelt"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "Erweiterungen",
+    "description": "Lernen Sie, wie Sie bestehenden Typen mit Erweiterungen Funktionen und Eigenschaften hinzufügen"
   }
 }

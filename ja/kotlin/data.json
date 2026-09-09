@@ -83,8 +83,7 @@
     "order": 17,
     "title": "列挙型",
     "description": "関連する値のグループに共通の型を作成する方法を学ぶ"
-  }
-,
+  },
   "arrays": {
     "order": 18,
     "title": "配列",
@@ -104,5 +103,10 @@
     "order": 21,
     "title": "型",
     "description": "基本的なデータ型とその変換方法を学ぶ"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "拡張関数",
+    "description": "拡張機能を使って既存の型に関数とプロパティを追加する方法を学ぶ"
   }
 }
