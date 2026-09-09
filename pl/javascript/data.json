@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Typy",
         "description": "Naucz się podstawowych typów danych i jak konwertować między nimi"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Funkcje wyższego rzędu",
+        "description": "Poznaj jak przekazywać i zwracać funkcje za pomocą map, filter, reduce i closures"
     }
 }

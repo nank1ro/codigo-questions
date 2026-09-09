@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Datentypen",
         "description": "Lerne die grundlegenden Datentypen kennen und wie man zwischen ihnen umwandelt"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Funktionen höherer Ordnung",
+        "description": "Lerne, wie man Funktionen mit map, filter, reduce und Closures übergibt und zurückgibt"
     }
 }
