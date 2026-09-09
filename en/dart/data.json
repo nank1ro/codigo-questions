@@ -103,5 +103,10 @@
     "order": 21,
     "title": "Nullability",
     "description": "Learn how to handle values that may be null"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "Extensions",
+    "description": "Learn how to add new functionality to existing types"
   }
 }
