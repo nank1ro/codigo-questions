@@ -103,5 +103,10 @@
     "order": 21,
     "title": "类型",
     "description": "学习基本数据类型以及如何在它们之间进行转换"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "扩展",
+    "description": "学习如何使用扩展为现有类型添加函数和属性"
   }
 }

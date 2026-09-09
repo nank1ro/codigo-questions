@@ -103,5 +103,10 @@
     "order": 21,
     "title": "Types",
     "description": "Learn about the basic data types and how to convert between them"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "Extensions",
+    "description": "Learn how to add functions and properties to existing types with extensions"
   }
 }
