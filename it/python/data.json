@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Tipi",
         "description": "Impara i tipi di dati di base e come convertirli tra loro"
+    },
+    "nullability": {
+        "order": 22,
+        "title": "None",
+        "description": "Impara a gestire l'assenza di un valore"
     }
 }
