@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Pointeurs",
         "description": "Apprenez comment travailler avec les adresses mémoire"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Interpolation de chaînes",
+        "description": "Apprenez à créer des chaînes formatées avec printf, sprintf et snprintf"
     }
 }

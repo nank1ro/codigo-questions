@@ -93,5 +93,10 @@
         "order": 19,
         "title": "ポインタ",
         "description": "メモリアドレスを扱う方法を学ぶ"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "文字列フォーマット",
+        "description": "printf、sprintf、snprintfで書式付き文字列を構築する方法を学ぶ"
     }
 }

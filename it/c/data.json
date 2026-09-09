@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Puntatori",
         "description": "Impara a lavorare con gli indirizzi di memoria"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Interpolazione di stringhe",
+        "description": "Impara come creare stringhe formattate con printf, sprintf e snprintf"
     }
 }

@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Zeiger",
         "description": "Lerne, wie man mit Speicheradressen arbeitet"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "String-Formatierung",
+        "description": "Lerne, wie man formatierte Strings mit printf, sprintf und snprintf erstellt"
     }
 }

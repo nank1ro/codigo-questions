@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Pointers",
         "description": "Learn how to work with memory addresses"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "String Formatting",
+        "description": "Learn how to build formatted strings with printf, sprintf and snprintf"
     }
 }

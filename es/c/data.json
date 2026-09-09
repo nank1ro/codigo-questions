@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Punteros",
         "description": "Aprende cómo trabajar con direcciones de memoria"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Interpolación de cadenas",
+        "description": "Aprende cómo crear cadenas formateadas con printf, sprintf y snprintf"
     }
 }

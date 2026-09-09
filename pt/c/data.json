@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Ponteiros",
         "description": "Aprenda como trabalhar com endereços de memória"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Formatação de Strings",
+        "description": "Aprenda como construir strings formatadas com printf, sprintf e snprintf"
     }
 }

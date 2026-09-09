@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Указатели",
         "description": "Узнайте, как работать с адресами памяти"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Форматирование строк",
+        "description": "Научитесь строить форматированные строки с помощью printf, sprintf и snprintf"
     }
 }

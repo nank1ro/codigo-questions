@@ -93,5 +93,10 @@
         "order": 19,
         "title": "Wskaźniki",
         "description": "Naucz się pracować z adresami pamięci"
+    },
+    "stringInterpolation": {
+        "order": 20,
+        "title": "Formatowanie łańcuchów",
+        "description": "Naucz się budować sformatowane łańcuchy za pomocą printf, sprintf i snprintf"
     }
 }
