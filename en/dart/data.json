@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Extensions",
     "description": "Learn how to add new functionality to existing types"
+  },
+  "streams": {
+    "order": 23,
+    "title": "Streams",
+    "description": "Learn how to produce and consume asynchronous sequences of values with Stream"
   }
 }
