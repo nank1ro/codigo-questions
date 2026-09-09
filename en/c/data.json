@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Structs",
         "description": "Learn how to group related values into one type"
+    },
+    "pointers": {
+        "order": 19,
+        "title": "Pointers",
+        "description": "Learn how to work with memory addresses"
     }
 }

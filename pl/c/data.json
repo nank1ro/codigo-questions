@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Struktury",
         "description": "Naucz się grupować powiązane wartości w jeden typ"
+    },
+    "pointers": {
+        "order": 19,
+        "title": "Wskaźniki",
+        "description": "Naucz się pracować z adresami pamięci"
     }
 }

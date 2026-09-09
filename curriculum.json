@@ -64,6 +64,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -94,7 +99,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -712,6 +717,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -742,7 +752,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -1360,6 +1370,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1390,7 +1405,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -2008,6 +2023,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2038,7 +2058,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -2656,6 +2676,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2686,7 +2711,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -3304,6 +3329,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3334,7 +3364,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -3952,6 +3982,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3982,7 +4017,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -4600,6 +4635,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4630,7 +4670,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -5248,6 +5288,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5278,7 +5323,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -5896,6 +5941,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5926,7 +5976,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -6544,6 +6594,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -6574,7 +6629,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",
@@ -7192,6 +7247,11 @@
           "totalExercises": 10
         },
         {
+          "name": "pointers",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -7222,7 +7282,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 331
+      "totalExercises": 347
     },
     {
       "name": "dart",

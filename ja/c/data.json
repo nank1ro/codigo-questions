@@ -88,5 +88,10 @@
         "order": 18,
         "title": "構造体",
         "description": "関連する値を1つの型にまとめる方法を学ぶ"
+    },
+    "pointers": {
+        "order": 19,
+        "title": "ポインタ",
+        "description": "メモリアドレスを扱う方法を学ぶ"
     }
 }
