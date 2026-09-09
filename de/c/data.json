@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Structs",
         "description": "Lerne, wie man zusammengehörige Werte zu einem Typ gruppiert"
+    },
+    "pointers": {
+        "order": 19,
+        "title": "Zeiger",
+        "description": "Lerne, wie man mit Speicheradressen arbeitet"
     }
 }

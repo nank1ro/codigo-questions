@@ -88,5 +88,10 @@
         "order": 18,
         "title": "Struct",
         "description": "Impara a raggruppare valori correlati in un unico tipo"
+    },
+    "pointers": {
+        "order": 19,
+        "title": "Puntatori",
+        "description": "Impara a lavorare con gli indirizzi di memoria"
     }
 }
