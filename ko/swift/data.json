@@ -108,5 +108,10 @@
         "order": 22,
         "title": "고차 함수",
         "description": "함수로 컬렉션을 변환하는 방법을 배웁니다"
+    },
+    "comments": {
+        "order": 23,
+        "title": "주석",
+        "description": "한줄, 여러줄, 설명서 주석을 작성하는 방법을 배웁니다"
     }
 }

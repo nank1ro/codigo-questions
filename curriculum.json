@@ -589,6 +589,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -674,7 +679,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "en": [
@@ -1267,6 +1272,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1352,7 +1362,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "es": [
@@ -1945,6 +1955,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2030,7 +2045,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "fr": [
@@ -2623,6 +2638,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2708,7 +2728,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "hi": [
@@ -3301,6 +3321,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3386,7 +3411,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "it": [
@@ -3979,6 +4004,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4064,7 +4094,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "ja": [
@@ -4657,6 +4687,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4742,7 +4777,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "ko": [
@@ -5335,6 +5370,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5420,7 +5460,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "pl": [
@@ -6013,6 +6053,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -6098,7 +6143,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "pt": [
@@ -6691,6 +6736,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -6776,7 +6826,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "ru": [
@@ -7369,6 +7419,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -7454,7 +7509,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ],
   "zh": [
@@ -8047,6 +8102,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -8132,7 +8192,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 410
+      "totalExercises": 426
     }
   ]
 }
