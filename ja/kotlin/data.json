@@ -99,5 +99,10 @@
     "order": 20,
     "title": "ラムダ",
     "description": "無名関数の書き方を学ぶ"
+  },
+  "types": {
+    "order": 21,
+    "title": "型",
+    "description": "基本的なデータ型とその変換方法を学ぶ"
   }
 }
