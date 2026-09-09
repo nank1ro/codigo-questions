@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "値が存在しない場合の扱い方を学ぶ"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "高階関数",
+        "description": "map、filter、sorted、functoolsを使って関数を値として渡す方法を学ぶ"
     }
 }

@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "मान की अनुपस्थिति को संभालना सीखें"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "हायर-ऑर्डर फ़ंक्शन",
+        "description": "map, filter, sorted और functools के साथ फ़ंक्शन को मान की तरह पास करना सीखें"
     }
 }
