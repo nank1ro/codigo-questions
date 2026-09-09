@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Nullowalność",
         "description": "Naucz się obsługiwać wartości, które mogą być null lub undefined"
+    },
+    "types": {
+        "order": 21,
+        "title": "Typy",
+        "description": "Naucz się podstawowych typów danych i jak konwertować między nimi"
     }
 }

@@ -98,5 +98,10 @@
         "order": 20,
         "title": "널 가능성",
         "description": "null 또는 undefined일 수 있는 값을 다루는 방법을 배웁니다"
+    },
+    "types": {
+        "order": 21,
+        "title": "타입",
+        "description": "기본 데이터 타입과 타입 간의 변환 방법을 배웁니다"
     }
 }

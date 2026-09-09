@@ -98,5 +98,10 @@
         "order": 20,
         "title": "null可能性",
         "description": "nullまたはundefinedの可能性がある値を扱う方法を学ぶ"
+    },
+    "types": {
+        "order": 21,
+        "title": "型",
+        "description": "基本的なデータ型とその変換方法を学ぶ"
     }
 }
