@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Typy",
         "description": "Poznaj podstawowe typy danych i sposoby konwersji między nimi"
+    },
+    "nullability": {
+        "order": 22,
+        "title": "None",
+        "description": "Naucz się obsługiwać brak wartości"
     }
 }

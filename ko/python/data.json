@@ -103,5 +103,10 @@
         "order": 21,
         "title": "타입",
         "description": "기본 데이터 타입과 타입 사이의 변환 방법을 배웁니다"
+    },
+    "nullability": {
+        "order": 22,
+        "title": "None",
+        "description": "값이 없음을 다루는 방법을 배웁니다"
     }
 }

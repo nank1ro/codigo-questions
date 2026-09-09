@@ -508,6 +508,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -543,7 +548,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -1171,6 +1176,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -1206,7 +1216,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -1834,6 +1844,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -1869,7 +1884,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -2497,6 +2512,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -2532,7 +2552,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -3160,6 +3180,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -3195,7 +3220,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -3823,6 +3848,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -3858,7 +3888,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -4486,6 +4516,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -4521,7 +4556,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -5149,6 +5184,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -5184,7 +5224,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -5812,6 +5852,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -5847,7 +5892,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -6475,6 +6520,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -6510,7 +6560,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -7138,6 +7188,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -7173,7 +7228,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",
@@ -7801,6 +7856,11 @@
           "totalExercises": 12
         },
         {
+          "name": "nullability",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "output",
           "trainUntil": 1,
           "totalExercises": 10
@@ -7836,7 +7896,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 392
+      "totalExercises": 408
     },
     {
       "name": "swift",

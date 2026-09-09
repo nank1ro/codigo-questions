@@ -103,5 +103,10 @@
         "order": 21,
         "title": "型",
         "description": "基本的なデータ型とその間の変換方法を学ぶ"
+    },
+    "nullability": {
+        "order": 22,
+        "title": "None",
+        "description": "値が存在しない場合の扱い方を学ぶ"
     }
 }

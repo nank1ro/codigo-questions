@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Typen",
         "description": "Lerne die grundlegenden Datentypen kennen und wie man zwischen ihnen umwandelt"
+    },
+    "nullability": {
+        "order": 22,
+        "title": "None",
+        "description": "Lerne, wie man mit dem Fehlen eines Wertes umgeht"
     }
 }
