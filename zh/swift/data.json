@@ -108,5 +108,10 @@
         "order": 22,
         "title": "高阶函数",
         "description": "学习如何使用函数转换集合"
+    },
+    "comments": {
+        "order": 23,
+        "title": "注释",
+        "description": "学习如何编写单行注释、多行注释和文档注释"
     }
 }

@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Funktionen höherer Ordnung",
         "description": "Lerne, wie man Sammlungen mit Funktionen transformiert"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Kommentare",
+        "description": "Lerne, wie man einzeilige, mehrzeilige und Dokumentationskommentare schreibt"
     }
 }

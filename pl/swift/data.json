@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Funkcje wyższego rzędu",
         "description": "Naucz się przekształcać kolekcje za pomocą funkcji"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Komentarze",
+        "description": "Naucz się pisać komentarze jednoliniowe, wieloliniowe i dokumentacyjne"
     }
 }

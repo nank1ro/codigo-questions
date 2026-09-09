@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Fonctions d'ordre supérieur",
         "description": "Apprenez comment transformer des collections avec des fonctions"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Commentaires",
+        "description": "Apprenez à écrire des commentaires sur une seule ligne, multilignes et de documentation"
     }
 }
