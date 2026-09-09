@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "Apprenez comment gérer l'absence d'une valeur"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "Fonctions d'Ordre Supérieur",
+        "description": "Apprenez comment passer des fonctions comme valeurs avec map, filter, sorted et functools"
     }
 }

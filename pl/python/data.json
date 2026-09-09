@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "Naucz się obsługiwać brak wartości"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "Funkcje wyższego rzędu",
+        "description": "Naucz się przekazywać funkcje jako wartości za pomocą map, filter, sorted i functools"
     }
 }

@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "값이 없음을 다루는 방법을 배웁니다"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "고차 함수",
+        "description": "map, filter, sorted와 functools로 함수를 값처럼 전달하는 방법을 배웁니다"
     }
 }

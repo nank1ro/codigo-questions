@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "Узнайте, как обрабатывать отсутствие значения"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "Функции высшего порядка",
+        "description": "Научитесь передавать функции как значения с помощью map, filter, sorted и functools"
     }
 }

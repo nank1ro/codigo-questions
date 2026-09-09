@@ -108,5 +108,10 @@
         "order": 22,
         "title": "None",
         "description": "学习如何处理值的缺失"
+    },
+    "higher_order_methods": {
+        "order": 23,
+        "title": "高阶函数",
+        "description": "学习如何使用 map、filter、sorted 和 functools 把函数作为值传递"
     }
 }
