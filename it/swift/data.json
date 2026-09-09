@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Extensions",
         "description": "Impara come aggiungere nuove funzionalità a tipi esistenti"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Funzioni di Ordine Superiore",
+        "description": "Impara a trasformare le collezioni con le funzioni"
     }
 }

@@ -103,5 +103,10 @@
         "order": 21,
         "title": "확장",
         "description": "기존 타입에 새로운 기능을 추가하는 방법을 배우세요"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "고차 함수",
+        "description": "함수로 컬렉션을 변환하는 방법을 배웁니다"
     }
 }
