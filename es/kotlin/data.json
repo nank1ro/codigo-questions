@@ -98,5 +98,10 @@
     "order": 20,
     "title": "Lambdas",
     "description": "Aprende cómo escribir funciones anónimas"
+  },
+  "types": {
+    "order": 21,
+    "title": "Tipos",
+    "description": "Aprende sobre los tipos de datos básicos y cómo convertir entre ellos"
   }
 }

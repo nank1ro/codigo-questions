@@ -98,5 +98,10 @@
     "order": 20,
     "title": "Lambdy",
     "description": "Naucz się pisać funkcje anonimowe"
+  },
+  "types": {
+    "order": 21,
+    "title": "Typy",
+    "description": "Naucz się podstawowych typów danych i konwertowania między nimi"
   }
 }
