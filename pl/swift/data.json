@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Rozszerzenia",
         "description": "Naucz się dodawać nową funkcjonalność do istniejących typów"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "Funkcje wyższego rzędu",
+        "description": "Naucz się przekształcać kolekcje za pomocą funkcji"
     }
 }

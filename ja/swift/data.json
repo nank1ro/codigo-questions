@@ -103,5 +103,10 @@
         "order": 21,
         "title": "拡張",
         "description": "既存の型に新しい機能を追加する方法を学ぶ"
+    },
+    "higher_order_methods": {
+        "order": 22,
+        "title": "高階関数",
+        "description": "関数を使ってコレクションを変換する方法を学ぶ"
     }
 }
