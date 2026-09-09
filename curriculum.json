@@ -145,6 +145,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -210,7 +215,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -798,6 +803,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -863,7 +873,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -1451,6 +1461,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -1516,7 +1531,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -2104,6 +2119,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -2169,7 +2189,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -2757,6 +2777,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -2822,7 +2847,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -3410,6 +3435,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -3475,7 +3505,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -4063,6 +4093,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -4128,7 +4163,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -4716,6 +4751,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -4781,7 +4821,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -5369,6 +5409,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -5434,7 +5479,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -6022,6 +6067,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -6087,7 +6137,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -6675,6 +6725,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -6740,7 +6795,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",
@@ -7328,6 +7383,11 @@
           "totalExercises": 16
         },
         {
+          "name": "extensions",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "forLoops",
           "trainUntil": 5,
           "totalExercises": 18
@@ -7393,7 +7453,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "javascript",

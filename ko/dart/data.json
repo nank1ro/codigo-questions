@@ -103,5 +103,10 @@
     "order": 21,
     "title": "Nullability",
     "description": "null일 수 있는 값을 다루는 방법 배우기"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "확장",
+    "description": "기존 타입에 새 기능을 추가하는 방법 배우기"
   }
 }

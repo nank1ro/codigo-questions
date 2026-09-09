@@ -103,5 +103,10 @@
     "order": 21,
     "title": "可空性",
     "description": "学习如何处理可能为 null 的值"
+  },
+  "extensions": {
+    "order": 22,
+    "title": "扩展",
+    "description": "学习如何为现有类型添加新功能"
   }
 }
