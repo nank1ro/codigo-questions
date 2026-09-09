@@ -108,5 +108,10 @@
     "order": 22,
     "title": "扩展",
     "description": "学习如何为现有类型添加新功能"
+  },
+  "streams": {
+    "order": 23,
+    "title": "Streams",
+    "description": "学习如何使用 Stream 生成和消费异步值序列"
   }
 }

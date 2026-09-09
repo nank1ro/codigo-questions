@@ -108,5 +108,10 @@
     "order": 22,
     "title": "확장",
     "description": "기존 타입에 새 기능을 추가하는 방법 배우기"
+  },
+  "streams": {
+    "order": 23,
+    "title": "스트림",
+    "description": "Stream을 사용하여 비동기 값의 시퀀스를 생성하고 소비하는 방법을 배우십시오"
   }
 }

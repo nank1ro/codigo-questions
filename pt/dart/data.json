@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Extensions",
     "description": "Aprenda a adicionar novas funcionalidades a tipos existentes"
+  },
+  "streams": {
+    "order": 23,
+    "title": "Streams",
+    "description": "Aprenda como produzir e consumir sequências assíncronas de valores com Stream"
   }
 }
