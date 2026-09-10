@@ -108,5 +108,10 @@
     "order": 22,
     "title": "확장",
     "description": "확장을 사용하여 기존 타입에 함수와 프로퍼티를 추가하는 방법을 학습합니다"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "고차 메서드",
+    "description": "map, filter, reduce 등을 사용하여 컬렉션을 변환 및 집계하기"
   }
 }

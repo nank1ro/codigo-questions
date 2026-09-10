@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Extensões",
     "description": "Aprenda como adicionar funções e propriedades a tipos existentes com extensões"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "Métodos de Ordem Superior",
+    "description": "Transforme e agregue coleções com map, filter, reduce e outros"
   }
 }

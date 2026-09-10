@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Extensions",
     "description": "Learn how to add functions and properties to existing types with extensions"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "Higher-Order Methods",
+    "description": "Transform and aggregate collections with map, filter, reduce and friends"
   }
 }

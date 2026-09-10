@@ -417,6 +417,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -472,7 +477,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -1145,6 +1150,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1200,7 +1210,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -1873,6 +1883,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1928,7 +1943,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -2601,6 +2616,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2656,7 +2676,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -3329,6 +3349,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3384,7 +3409,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -4057,6 +4082,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4112,7 +4142,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -4785,6 +4815,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4840,7 +4875,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -5513,6 +5548,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5568,7 +5608,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -6241,6 +6281,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6296,7 +6341,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -6969,6 +7014,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7024,7 +7074,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -7697,6 +7747,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7752,7 +7807,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
@@ -8425,6 +8480,11 @@
           "totalExercises": 15
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "lambda",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8480,7 +8540,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 466
+      "totalExercises": 482
     },
     {
       "name": "python",
