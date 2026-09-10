@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Interpolazione di stringhe",
         "description": "Impara come creare stringhe formattate con printf, sprintf e snprintf"
+    },
+    "relationalBooleanOperators": {
+        "order": 21,
+        "title": "Operatori Relazionali e Booleani",
+        "description": "Confronta valori e combina condizioni con operatori relazionali e logici"
     }
 }

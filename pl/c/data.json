@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Formatowanie łańcuchów",
         "description": "Naucz się budować sformatowane łańcuchy za pomocą printf, sprintf i snprintf"
+    },
+    "relationalBooleanOperators": {
+        "order": 21,
+        "title": "Operatory relacyjne i logiczne",
+        "description": "Porównuj wartości i łącz warunki za pomocą operatorów relacyjnych i logicznych"
     }
 }

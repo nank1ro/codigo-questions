@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Interpolación de cadenas",
         "description": "Aprende cómo crear cadenas formateadas con printf, sprintf y snprintf"
+    },
+    "relationalBooleanOperators": {
+        "order": 21,
+        "title": "Operadores Relacionales y Booleanos",
+        "description": "Compara valores y combina condiciones con operadores relacionales y lógicos"
     }
 }

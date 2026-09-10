@@ -74,6 +74,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -104,7 +109,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -782,6 +787,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -812,7 +822,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -1490,6 +1500,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1520,7 +1535,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -2198,6 +2213,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2228,7 +2248,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -2906,6 +2926,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2936,7 +2961,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -3614,6 +3639,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3644,7 +3674,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -4322,6 +4352,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4352,7 +4387,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -5030,6 +5065,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5060,7 +5100,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -5738,6 +5778,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5768,7 +5813,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -6446,6 +6491,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6476,7 +6526,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -7154,6 +7204,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7184,7 +7239,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",
@@ -7862,6 +7917,11 @@
           "totalExercises": 23
         },
         {
+          "name": "relationalBooleanOperators",
+          "trainUntil": 14,
+          "totalExercises": 16
+        },
+        {
           "name": "stringInterpolation",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7892,7 +7952,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 363
+      "totalExercises": 379
     },
     {
       "name": "dart",

@@ -98,5 +98,10 @@
         "order": 20,
         "title": "문자열 형식화",
         "description": "printf, sprintf, snprintf로 형식이 지정된 문자열을 구축하는 방법을 배웁니다"
+    },
+    "relationalBooleanOperators": {
+        "order": 21,
+        "title": "관계 및 불리언 연산자",
+        "description": "관계 연산자와 논리 연산자로 값을 비교하고 조건을 결합하는 방법을 배웁니다"
     }
 }
