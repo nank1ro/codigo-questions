@@ -108,5 +108,10 @@
         "order": 22,
         "title": "高階関数",
         "description": "map、filter、reduce、クロージャで関数を渡したり返したりする方法を学ぶ"
+    },
+    "comments": {
+        "order": 23,
+        "title": "コメント",
+        "description": "単一行、複数行、JSDocコメントでコードをドキュメント化する"
     }
 }

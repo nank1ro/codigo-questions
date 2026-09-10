@@ -108,5 +108,10 @@
         "order": 22,
         "title": "고차 함수",
         "description": "map, filter, reduce와 클로저로 함수를 전달하고 반환하는 방법을 배우기"
+    },
+    "comments": {
+        "order": 23,
+        "title": "주석",
+        "description": "단일 라인, 다중 라인 및 JSDoc 주석으로 코드를 문서화하기"
     }
 }
