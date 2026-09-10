@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Funções de Ordem Superior",
         "description": "Aprenda como passar e retornar funções com map, filter, reduce e closures"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Comentários",
+        "description": "Documente o código com comentários de uma linha, múltiplas linhas e JSDoc"
     }
 }

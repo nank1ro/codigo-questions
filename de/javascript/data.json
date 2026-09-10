@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Funktionen höherer Ordnung",
         "description": "Lerne, wie man Funktionen mit map, filter, reduce und Closures übergibt und zurückgibt"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Kommentare",
+        "description": "Dokumentiere Code mit einzeiligen, mehrzeiligen und JSDoc-Kommentaren"
     }
 }

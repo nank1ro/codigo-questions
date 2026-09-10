@@ -108,5 +108,10 @@
         "order": 22,
         "title": "Funkcje wyższego rzędu",
         "description": "Poznaj jak przekazywać i zwracać funkcje za pomocą map, filter, reduce i closures"
+    },
+    "comments": {
+        "order": 23,
+        "title": "Komentarze",
+        "description": "Dokumentuj kod za pomocą komentarzy jednolinijkowych, wielolinijkowych i JSDoc"
     }
 }
