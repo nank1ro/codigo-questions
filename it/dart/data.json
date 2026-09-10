@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Stream",
     "description": "Impara a produrre e consumare sequenze asincrone di valori con Stream"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "Scrivi codice asincrono con Future, async e await"
   }
 }

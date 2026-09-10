@@ -113,5 +113,10 @@
     "order": 23,
     "title": "स्ट्रीम्स",
     "description": "Stream का उपयोग करके मूल्यों के अतुल्यकालिक अनुक्रमों को उत्पन्न और उपभोग करने का तरीका जानें"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "Future, async और await के साथ एसिंक्रोनस कोड लिखो"
   }
 }
