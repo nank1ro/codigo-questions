@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Formatação de Strings",
         "description": "Aprenda como construir strings formatadas com printf, sprintf e snprintf"
+    },
+    "relationalBooleanOperators": {
+        "order": 21,
+        "title": "Operadores Relacionais e Booleanos",
+        "description": "Compare valores e combine condições com operadores relacionais e lógicos"
     }
 }
