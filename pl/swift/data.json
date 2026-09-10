@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Komentarze",
         "description": "Naucz się pisać komentarze jednoliniowe, wieloliniowe i dokumentacyjne"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "Formatowane ciągi znaków",
+        "description": "Formatuj liczby, dopełnianie i tekst za pomocą String(format:) i interpolacji"
     }
 }

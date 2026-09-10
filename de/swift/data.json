@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Kommentare",
         "description": "Lerne, wie man einzeilige, mehrzeilige und Dokumentationskommentare schreibt"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "Formatierte Strings",
+        "description": "Lerne, wie man Zahlen, Auffüllung und Text mit String(format:) und Interpolation formatiert"
     }
 }

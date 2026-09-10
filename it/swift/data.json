@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Commenti",
         "description": "Impara a scrivere commenti su una riga, su più righe e di documentazione"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "Stringhe Formattate",
+        "description": "Formatta numeri, riempimento e testo con String(format:) e l'interpolazione"
     }
 }

@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Comments",
         "description": "Learn how to write single-line, multi-line and documentation comments"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "Formatted Strings",
+        "description": "Format numbers, padding and text with String(format:) and interpolation"
     }
 }
