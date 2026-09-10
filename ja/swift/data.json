@@ -113,5 +113,10 @@
         "order": 23,
         "title": "コメント",
         "description": "1行コメント、複数行コメント、ドキュメンテーションコメントの書き方を学ぶ"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "フォーマット文字列",
+        "description": "String(format:)と補間で数値、パディング、テキストを書式設定する方法を学ぶ"
     }
 }

@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Commentaires",
         "description": "Apprenez à écrire des commentaires sur une seule ligne, multilignes et de documentation"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "Chaînes formatées",
+        "description": "Formatez des nombres, du remplissage et du texte avec String(format:) et l'interpolation"
     }
 }

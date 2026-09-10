@@ -113,5 +113,10 @@
         "order": 23,
         "title": "注释",
         "description": "学习如何编写单行注释、多行注释和文档注释"
+    },
+    "formattedStrings": {
+        "order": 24,
+        "title": "格式化字符串",
+        "description": "使用 String(format:) 和插值格式化数字、填充和文本"
     }
 }
