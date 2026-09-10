@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Funzioni di Ordine Superiore",
         "description": "Impara a passare funzioni come valori con map, filter, sorted e functools"
+    },
+    "comparisonLogicalOperators": {
+        "order": 24,
+        "title": "Operatori di Confronto e Logici",
+        "description": "Confronta valori e combina condizioni con gli operatori di confronto e logici"
     }
 }
