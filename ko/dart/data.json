@@ -113,5 +113,10 @@
     "order": 23,
     "title": "스트림",
     "description": "Stream을 사용하여 비동기 값의 시퀀스를 생성하고 소비하는 방법을 배우십시오"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "Future, async, await로 비동기 코드 작성하기"
   }
 }

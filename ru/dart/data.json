@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Streams",
     "description": "Узнайте, как производить и потреблять асинхронные последовательности значений с помощью Stream"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "Пишите асинхронный код с Future, async и await"
   }
 }

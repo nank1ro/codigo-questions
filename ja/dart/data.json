@@ -113,5 +113,10 @@
     "order": 23,
     "title": "ストリーム",
     "description": "Stream を使用して非同期の値のシーケンスを生成・消費する方法を学ぶ"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "Future、async、await で非同期コードを書く"
   }
 }

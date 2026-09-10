@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Streams",
     "description": "学习如何使用 Stream 生成和消费异步值序列"
+  },
+  "futures": {
+    "order": 24,
+    "title": "Futures",
+    "description": "使用 Future、async 和 await 编写异步代码"
   }
 }
