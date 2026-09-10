@@ -113,5 +113,10 @@
         "order": 23,
         "title": "고차 함수",
         "description": "map, filter, sorted와 functools로 함수를 값처럼 전달하는 방법을 배웁니다"
+    },
+    "comparisonLogicalOperators": {
+        "order": 24,
+        "title": "비교 연산자와 논리 연산자",
+        "description": "비교 연산자와 논리 연산자로 값을 비교하고 조건을 결합하는 방법을 배웁니다"
     }
 }

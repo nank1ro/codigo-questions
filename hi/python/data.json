@@ -113,5 +113,10 @@
         "order": 23,
         "title": "हायर-ऑर्डर फ़ंक्शन",
         "description": "map, filter, sorted और functools के साथ फ़ंक्शन को मान की तरह पास करना सीखें"
+    },
+    "comparisonLogicalOperators": {
+        "order": 24,
+        "title": "तुलना और लॉजिकल ऑपरेटर",
+        "description": "तुलना और लॉजिकल ऑपरेटरों से मानों की तुलना करें और शर्तों को जोड़ें"
     }
 }

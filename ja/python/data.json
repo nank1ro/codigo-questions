@@ -113,5 +113,10 @@
         "order": 23,
         "title": "高階関数",
         "description": "map、filter、sorted、functoolsを使って関数を値として渡す方法を学ぶ"
+    },
+    "comparisonLogicalOperators": {
+        "order": 24,
+        "title": "比較演算子と論理演算子",
+        "description": "比較演算子と論理演算子で値を比較し、条件を組み合わせる方法を学ぶ"
     }
 }

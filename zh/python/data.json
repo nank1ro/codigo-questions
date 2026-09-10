@@ -113,5 +113,10 @@
         "order": 23,
         "title": "高阶函数",
         "description": "学习如何使用 map、filter、sorted 和 functools 把函数作为值传递"
+    },
+    "comparisonLogicalOperators": {
+        "order": 24,
+        "title": "比较运算符和逻辑运算符",
+        "description": "学习用比较运算符和逻辑运算符比较值并组合条件"
     }
 }
