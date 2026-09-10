@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Rozszerzenia",
     "description": "Naucz się jak dodawać funkcje i właściwości do istniejących typów za pomocą rozszerzeń"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "Metody wyższego rzędu",
+    "description": "Transformuj i agreguj kolekcje za pomocą map, filter, reduce i innych"
   }
 }

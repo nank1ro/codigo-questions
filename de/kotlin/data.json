@@ -108,5 +108,10 @@
     "order": 22,
     "title": "Erweiterungen",
     "description": "Lernen Sie, wie Sie bestehenden Typen mit Erweiterungen Funktionen und Eigenschaften hinzufügen"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "Methoden höherer Ordnung",
+    "description": "Sammlungen mit map, filter, reduce und Co. transformieren und aggregieren"
   }
 }

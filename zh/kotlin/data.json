@@ -108,5 +108,10 @@
     "order": 22,
     "title": "扩展",
     "description": "学习如何使用扩展为现有类型添加函数和属性"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "高阶方法",
+    "description": "使用 map、filter、reduce 等方法转换和聚合集合"
   }
 }

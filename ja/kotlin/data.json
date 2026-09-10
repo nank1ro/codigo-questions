@@ -108,5 +108,10 @@
     "order": 22,
     "title": "拡張関数",
     "description": "拡張機能を使って既存の型に関数とプロパティを追加する方法を学ぶ"
+  },
+  "higher_order_methods": {
+    "order": 23,
+    "title": "高階メソッド",
+    "description": "map、filter、reduceなどを使ってコレクションを変換および集約する"
   }
 }
