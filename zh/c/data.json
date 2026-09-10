@@ -98,10 +98,5 @@
         "order": 20,
         "title": "字符串格式化",
         "description": "学习如何用 printf、sprintf 和 snprintf 构建格式化字符串"
-    },
-    "relationalBooleanOperators": {
-        "order": 21,
-        "title": "关系和布尔运算符",
-        "description": "使用关系运算符和逻辑运算符比较值并组合条件"
     }
 }

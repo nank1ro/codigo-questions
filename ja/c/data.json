@@ -98,10 +98,5 @@
         "order": 20,
         "title": "文字列フォーマット",
         "description": "printf、sprintf、snprintfで書式付き文字列を構築する方法を学ぶ"
-    },
-    "relationalBooleanOperators": {
-        "order": 21,
-        "title": "関係演算子とブール演算子",
-        "description": "関係演算子と論理演算子を使って値を比較し、条件を組み合わせる方法を学ぶ"
     }
 }

@@ -98,10 +98,5 @@
         "order": 20,
         "title": "String Formatting",
         "description": "Learn how to build formatted strings with printf, sprintf and snprintf"
-    },
-    "relationalBooleanOperators": {
-        "order": 21,
-        "title": "Relational and Boolean Operators",
-        "description": "Compare values and combine conditions with relational and logical operators"
     }
 }
