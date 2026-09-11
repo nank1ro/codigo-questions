@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Operatori di Confronto e Logici",
         "description": "Confronta valori e combina condizioni con gli operatori di confronto e logici"
+    },
+    "futures": {
+        "order": 25,
+        "title": "Async e Await",
+        "description": "Esegui codice asincrono con asyncio, funzioni async e await"
     }
 }

@@ -118,5 +118,10 @@
         "order": 24,
         "title": "비교 연산자와 논리 연산자",
         "description": "비교 연산자와 논리 연산자로 값을 비교하고 조건을 결합하는 방법을 배웁니다"
+    },
+    "futures": {
+        "order": 25,
+        "title": "async와 await",
+        "description": "asyncio, async 함수와 await로 비동기 코드를 실행합니다"
     }
 }
