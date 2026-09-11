@@ -98,5 +98,10 @@
         "order": 20,
         "title": "文字列フォーマット",
         "description": "printf、sprintf、snprintfで書式付き文字列を構築する方法を学ぶ"
+    },
+    "lists": {
+        "order": 21,
+        "title": "リンクリスト",
+        "description": "構造体、ポインタ、mallocを使って片方向リンクリストを構築し、走査する方法を学ぶ"
     }
 }

@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Formatação de Strings",
         "description": "Aprenda como construir strings formatadas com printf, sprintf e snprintf"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Listas Ligadas",
+        "description": "Construa e percorra listas ligadas simples com structs, ponteiros e malloc"
     }
 }

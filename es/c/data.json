@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Interpolación de cadenas",
         "description": "Aprende cómo crear cadenas formateadas con printf, sprintf y snprintf"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Listas Enlazadas",
+        "description": "Construye y recorre listas enlazadas simples con structs, punteros y malloc"
     }
 }

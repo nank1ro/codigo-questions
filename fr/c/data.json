@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Interpolation de chaînes",
         "description": "Apprenez à créer des chaînes formatées avec printf, sprintf et snprintf"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Listes chaînées",
+        "description": "Construisez et parcourez des listes chaînées simples avec des structs, des pointeurs et malloc"
     }
 }
