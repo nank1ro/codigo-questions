@@ -113,5 +113,10 @@
         "order": 23,
         "title": "コメント",
         "description": "単一行、複数行、JSDocコメントでコードをドキュメント化する"
+    },
+    "futures": {
+        "order": 24,
+        "title": "Promise",
+        "description": "プロミスとasync/awaitで非同期の結果を扱う方法を学ぶ"
     }
 }

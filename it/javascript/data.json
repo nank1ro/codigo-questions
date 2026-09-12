@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Commenti",
         "description": "Documenta il codice con commenti su una riga, su più righe e JSDoc"
+    },
+    "futures": {
+        "order": 24,
+        "title": "Promesse",
+        "description": "Gestisci i risultati asincroni con promesse e async/await"
     }
 }

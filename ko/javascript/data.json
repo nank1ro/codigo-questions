@@ -113,5 +113,10 @@
         "order": 23,
         "title": "주석",
         "description": "단일 라인, 다중 라인 및 JSDoc 주석으로 코드를 문서화하기"
+    },
+    "futures": {
+        "order": 24,
+        "title": "프로미스",
+        "description": "프로미스와 async/await로 비동기 결과를 다루는 방법을 배웁니다"
     }
 }
