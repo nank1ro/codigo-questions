@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Metodi di Ordine Superiore",
     "description": "Trasforma e aggrega collezioni con map, filter, reduce e simili"
+  },
+  "regex": {
+    "order": 24,
+    "title": "Espressioni regolari",
+    "description": "Trova e trasforma il testo con le espressioni regolari"
   }
 }

@@ -113,5 +113,10 @@
     "order": 23,
     "title": "高階メソッド",
     "description": "map、filter、reduceなどを使ってコレクションを変換および集約する"
+  },
+  "regex": {
+    "order": 24,
+    "title": "正規表現",
+    "description": "正規表現を使ってテキストを検索および変換する"
   }
 }

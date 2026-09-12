@@ -113,5 +113,10 @@
     "order": 23,
     "title": "高阶方法",
     "description": "使用 map、filter、reduce 等方法转换和聚合集合"
+  },
+  "regex": {
+    "order": 24,
+    "title": "正则表达式",
+    "description": "使用正则表达式匹配和转换文本"
   }
 }

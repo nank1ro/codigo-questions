@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Higher-Order Methods",
     "description": "Transform and aggregate collections with map, filter, reduce and friends"
+  },
+  "regex": {
+    "order": 24,
+    "title": "Regular expressions",
+    "description": "Match and transform text with regular expressions"
   }
 }

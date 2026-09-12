@@ -113,5 +113,10 @@
     "order": 23,
     "title": "Methoden höherer Ordnung",
     "description": "Sammlungen mit map, filter, reduce und Co. transformieren und aggregieren"
+  },
+  "regex": {
+    "order": 24,
+    "title": "Reguläre Ausdrücke",
+    "description": "Text mit regulären Ausdrücken matchen und transformieren"
   }
 }
