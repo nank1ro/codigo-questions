@@ -118,5 +118,10 @@
         "order": 24,
         "title": "格式化字符串",
         "description": "使用 String(format:) 和插值格式化数字、填充和文本"
+    },
+    "structs": {
+        "order": 25,
+        "title": "结构体",
+        "description": "学习如何用结构体对值进行建模"
     }
 }

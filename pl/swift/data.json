@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Formatowane ciągi znaków",
         "description": "Formatuj liczby, dopełnianie i tekst za pomocą String(format:) i interpolacji"
+    },
+    "structs": {
+        "order": 25,
+        "title": "Struktury",
+        "description": "Naucz się modelować wartości za pomocą struktur"
     }
 }

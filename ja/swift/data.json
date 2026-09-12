@@ -118,5 +118,10 @@
         "order": 24,
         "title": "フォーマット文字列",
         "description": "String(format:)と補間で数値、パディング、テキストを書式設定する方法を学ぶ"
+    },
+    "structs": {
+        "order": 25,
+        "title": "構造体",
+        "description": "構造体で値をモデル化する方法を学ぶ"
     }
 }

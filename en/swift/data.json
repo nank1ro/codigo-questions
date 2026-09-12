@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Formatted Strings",
         "description": "Format numbers, padding and text with String(format:) and interpolation"
+    },
+    "structs": {
+        "order": 25,
+        "title": "Structs",
+        "description": "Model values with structs"
     }
 }
