@@ -113,5 +113,10 @@
     "order": 23,
     "title": "고차 메서드",
     "description": "map, filter, reduce 등을 사용하여 컬렉션을 변환 및 집계하기"
+  },
+  "regex": {
+    "order": 24,
+    "title": "정규 표현식",
+    "description": "정규 표현식으로 텍스트를 매치하고 변환하기"
   }
 }

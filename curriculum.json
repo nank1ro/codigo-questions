@@ -447,6 +447,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -477,7 +482,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -1190,6 +1195,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -1220,7 +1230,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -1933,6 +1943,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -1963,7 +1978,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -2676,6 +2691,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -2706,7 +2726,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -3419,6 +3439,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -3449,7 +3474,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -4162,6 +4187,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -4192,7 +4222,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -4905,6 +4935,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -4935,7 +4970,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -5648,6 +5683,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -5678,7 +5718,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -6391,6 +6431,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -6421,7 +6466,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -7134,6 +7179,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -7164,7 +7214,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -7877,6 +7927,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -7907,7 +7962,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
@@ -8620,6 +8675,11 @@
           "totalExercises": 11
         },
         {
+          "name": "regex",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "sets",
           "trainUntil": 7,
           "totalExercises": 17
@@ -8650,7 +8710,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 482
+      "totalExercises": 498
     },
     {
       "name": "python",
