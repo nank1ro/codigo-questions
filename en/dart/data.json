@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Futures",
     "description": "Write asynchronous code with Future, async and await"
+  },
+  "mixins": {
+    "order": 25,
+    "title": "Mixins",
+    "description": "Share behaviour between classes with mixins"
   }
 }
