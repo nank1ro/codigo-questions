@@ -98,5 +98,10 @@
         "order": 20,
         "title": "Interpolazione di stringhe",
         "description": "Impara come creare stringhe formattate con printf, sprintf e snprintf"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Liste concatenate",
+        "description": "Costruisci e attraversa liste concatenate semplici con struct, puntatori e malloc"
     }
 }

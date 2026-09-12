@@ -98,5 +98,10 @@
         "order": 20,
         "title": "String Formatting",
         "description": "Learn how to build formatted strings with printf, sprintf and snprintf"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Linked Lists",
+        "description": "Build and traverse singly linked lists with structs, pointers and malloc"
     }
 }

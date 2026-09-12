@@ -98,5 +98,10 @@
         "order": 20,
         "title": "字符串格式化",
         "description": "学习如何用 printf、sprintf 和 snprintf 构建格式化字符串"
+    },
+    "lists": {
+        "order": 21,
+        "title": "链表",
+        "description": "学习如何用结构体、指针和 malloc 构建并遍历单链表"
     }
 }

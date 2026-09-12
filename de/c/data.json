@@ -98,5 +98,10 @@
         "order": 20,
         "title": "String-Formatierung",
         "description": "Lerne, wie man formatierte Strings mit printf, sprintf und snprintf erstellt"
+    },
+    "lists": {
+        "order": 21,
+        "title": "Verkettete Listen",
+        "description": "Lerne, einfach verkettete Listen mit structs, Zeigern und malloc aufzubauen und zu durchlaufen"
     }
 }
