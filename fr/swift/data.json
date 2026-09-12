@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Chaînes formatées",
         "description": "Formatez des nombres, du remplissage et du texte avec String(format:) et l'interpolation"
+    },
+    "structs": {
+        "order": 25,
+        "title": "Structs",
+        "description": "Apprenez à modéliser des valeurs avec des structs"
     }
 }

@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Cadenas formateadas",
         "description": "Formatea números, relleno y texto con String(format:) e interpolación"
+    },
+    "structs": {
+        "order": 25,
+        "title": "Estructuras",
+        "description": "Modela valores con estructuras"
     }
 }

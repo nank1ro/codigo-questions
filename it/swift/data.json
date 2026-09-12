@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Stringhe Formattate",
         "description": "Formatta numeri, riempimento e testo con String(format:) e l'interpolazione"
+    },
+    "structs": {
+        "order": 25,
+        "title": "Structs",
+        "description": "Impara a modellare valori con le struct"
     }
 }

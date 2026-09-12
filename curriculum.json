@@ -719,6 +719,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -734,7 +739,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "en": [
@@ -1457,6 +1462,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1472,7 +1482,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "es": [
@@ -2195,6 +2205,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2210,7 +2225,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "fr": [
@@ -2933,6 +2948,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2948,7 +2968,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "hi": [
@@ -3671,6 +3691,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3686,7 +3711,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "it": [
@@ -4409,6 +4434,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4424,7 +4454,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "ja": [
@@ -5147,6 +5177,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5162,7 +5197,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "ko": [
@@ -5885,6 +5920,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5900,7 +5940,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "pl": [
@@ -6623,6 +6663,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6638,7 +6683,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "pt": [
@@ -7361,6 +7406,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7376,7 +7426,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "ru": [
@@ -8099,6 +8149,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8114,7 +8169,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ],
   "zh": [
@@ -8837,6 +8892,11 @@
           "totalExercises": 18
         },
         {
+          "name": "structs",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "types",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8852,7 +8912,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 442
+      "totalExercises": 458
     }
   ]
 }

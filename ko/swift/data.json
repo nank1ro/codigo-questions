@@ -118,5 +118,10 @@
         "order": 24,
         "title": "문자열 포맷팅",
         "description": "String(format:)과 보간으로 숫자, 패딩, 텍스트를 포맷하는 방법을 배웁니다"
+    },
+    "structs": {
+        "order": 25,
+        "title": "구조체",
+        "description": "구조체로 값을 모델링하는 방법을 배웁니다"
     }
 }
