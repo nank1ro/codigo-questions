@@ -113,5 +113,10 @@
         "order": 23,
         "title": "Komentarze",
         "description": "Dokumentuj kod za pomocą komentarzy jednolinijkowych, wielolinijkowych i JSDoc"
+    },
+    "futures": {
+        "order": 24,
+        "title": "Obietnice",
+        "description": "Obsługuj wyniki asynchroniczne za pomocą obietnic i async/await"
     }
 }

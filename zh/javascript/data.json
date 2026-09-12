@@ -113,5 +113,10 @@
         "order": 23,
         "title": "注释",
         "description": "使用单行注释、多行注释和 JSDoc 注释来记录代码"
+    },
+    "futures": {
+        "order": 24,
+        "title": "Promise",
+        "description": "学习如何使用 Promise 和 async/await 处理异步结果"
     }
 }
