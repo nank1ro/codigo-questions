@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Futures",
     "description": "Future, async और await के साथ एसिंक्रोनस कोड लिखो"
+  },
+  "mixins": {
+    "order": 25,
+    "title": "मिक्सिन",
+    "description": "मिक्सिन के साथ क्लासों के बीच व्यवहार साझा करना सीखें"
   }
 }

@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Futures",
     "description": "Future、async、await で非同期コードを書く"
+  },
+  "mixins": {
+    "order": 25,
+    "title": "ミックスイン",
+    "description": "ミックスインでクラス間の振る舞いを共有する"
   }
 }

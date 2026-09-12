@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Futures",
     "description": "Future, async, await로 비동기 코드 작성하기"
+  },
+  "mixins": {
+    "order": 25,
+    "title": "믹스인",
+    "description": "믹스인으로 클래스 간에 동작을 공유하는 방법 배우기"
   }
 }

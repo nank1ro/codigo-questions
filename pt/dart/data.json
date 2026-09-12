@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Futures",
     "description": "Escreva código assíncrono com Future, async e await"
+  },
+  "mixins": {
+    "order": 25,
+    "title": "Mixins",
+    "description": "Compartilhe comportamento entre classes com mixins"
   }
 }
