@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Operatory Porównania i Logiczne",
         "description": "Porównuj wartości i łącz warunki za pomocą operatorów porównania i logicznych"
+    },
+    "futures": {
+        "order": 25,
+        "title": "Async i Await",
+        "description": "Wykonuj kod asynchronicznie za pomocą asyncio, funkcji asynchronicznych i await"
     }
 }

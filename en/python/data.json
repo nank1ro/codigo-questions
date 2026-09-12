@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Comparison and Logical Operators",
         "description": "Compare values and combine conditions with comparison and logical operators"
+    },
+    "futures": {
+        "order": 25,
+        "title": "Async and Await",
+        "description": "Run asynchronous code with asyncio, async functions and await"
     }
 }

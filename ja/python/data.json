@@ -118,5 +118,10 @@
         "order": 24,
         "title": "比較演算子と論理演算子",
         "description": "比較演算子と論理演算子で値を比較し、条件を組み合わせる方法を学ぶ"
+    },
+    "futures": {
+        "order": 25,
+        "title": "asyncとawait",
+        "description": "asyncio、async関数、awaitを使って非同期コードを実行する方法を学ぶ"
     }
 }

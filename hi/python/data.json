@@ -118,5 +118,10 @@
         "order": 24,
         "title": "तुलना और लॉजिकल ऑपरेटर",
         "description": "तुलना और लॉजिकल ऑपरेटरों से मानों की तुलना करें और शर्तों को जोड़ें"
+    },
+    "futures": {
+        "order": 25,
+        "title": "Async और Await",
+        "description": "asyncio, async फ़ंक्शन और await के साथ एसिंक्रोनस कोड चलाएँ"
     }
 }
