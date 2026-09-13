@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Espressioni Regolari",
         "description": "Trova e trasforma il testo con le espressioni regolari"
+    },
+    "comments": {
+        "order": 27,
+        "title": "Commenti",
+        "description": "Documenta il codice con i commenti"
     }
 }
