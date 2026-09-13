@@ -118,5 +118,10 @@
         "order": 24,
         "title": "프로미스",
         "description": "프로미스와 async/await로 비동기 결과를 다루는 방법을 배웁니다"
+    },
+    "regex": {
+        "order": 25,
+        "title": "정규 표현식",
+        "description": "정규 표현식으로 텍스트를 매칭하고 변환하는 방법을 배웁니다"
     }
 }

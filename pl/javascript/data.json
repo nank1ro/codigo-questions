@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Obietnice",
         "description": "Obsługuj wyniki asynchroniczne za pomocą obietnic i async/await"
+    },
+    "regex": {
+        "order": 25,
+        "title": "Wyrażenia regularne",
+        "description": "Dopasowuj i przekształcaj tekst za pomocą wyrażeń regularnych"
     }
 }

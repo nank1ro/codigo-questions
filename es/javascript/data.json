@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Promesas",
         "description": "Maneja resultados asincrónicos con promesas y async/await"
+    },
+    "regex": {
+        "order": 25,
+        "title": "Expresiones regulares",
+        "description": "Coincide y transforma texto con expresiones regulares"
     }
 }
