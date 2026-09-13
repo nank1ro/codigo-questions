@@ -123,5 +123,10 @@
         "order": 25,
         "title": "正規表現",
         "description": "正規表現でテキストをマッチして変換する方法を学ぶ"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "高度なクラス",
+        "description": "継承、静的メンバー、プライベートフィールドでクラスを拡張する"
     }
 }

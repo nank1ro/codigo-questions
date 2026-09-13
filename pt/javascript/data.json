@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Expressões Regulares",
         "description": "Corresponda e transforme texto com expressões regulares"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "Classes Avançadas",
+        "description": "Estenda classes com herança, membros estáticos e campos privados"
     }
 }

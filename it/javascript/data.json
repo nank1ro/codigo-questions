@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Espressioni regolari",
         "description": "Trova corrispondenze e trasforma il testo con le espressioni regolari"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "Classi avanzate",
+        "description": "Estendi le classi con ereditarietà, membri statici e campi privati"
     }
 }

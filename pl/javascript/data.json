@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Wyrażenia regularne",
         "description": "Dopasowuj i przekształcaj tekst za pomocą wyrażeń regularnych"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "Zaawansowane klasy",
+        "description": "Rozszerzaj klasy o dziedziczenie, składowe statyczne i pola prywatne"
     }
 }
