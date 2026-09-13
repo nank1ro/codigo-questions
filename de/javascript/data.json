@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Reguläre Ausdrücke",
         "description": "Finde und forme Text mit regulären Ausdrücken"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "Fortgeschrittene Klassen",
+        "description": "Erweitere Klassen mit Vererbung, statischen Mitgliedern und privaten Feldern"
     }
 }

@@ -123,5 +123,10 @@
         "order": 25,
         "title": "정규 표현식",
         "description": "정규 표현식으로 텍스트를 매칭하고 변환하는 방법을 배웁니다"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "고급 클래스",
+        "description": "상속, 정적 멤버와 비공개 필드로 클래스를 확장하는 방법을 배웁니다"
     }
 }

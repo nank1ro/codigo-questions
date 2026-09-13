@@ -123,5 +123,10 @@
         "order": 25,
         "title": "正则表达式",
         "description": "学习如何使用正则表达式匹配和转换文本"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "高级类",
+        "description": "使用继承、静态成员和私有字段扩展类"
     }
 }

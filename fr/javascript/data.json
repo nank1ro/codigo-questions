@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Expressions régulières",
         "description": "Recherchez et transformez du texte avec les expressions régulières"
+    },
+    "advanced_classes": {
+        "order": 26,
+        "title": "Classes avancées",
+        "description": "Étendez les classes avec l'héritage, les membres statiques et les champs privés"
     }
 }
