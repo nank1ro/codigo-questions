@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Async et Await",
         "description": "Gérez les résultats asynchrones avec async et await"
+    },
+    "regex": {
+        "order": 27,
+        "title": "Expressions régulières",
+        "description": "Recherchez et transformez du texte avec des expressions régulières"
     }
 }

@@ -128,5 +128,10 @@
         "order": 26,
         "title": "async 和 await",
         "description": "使用 async 和 await 处理异步结果"
+    },
+    "regex": {
+        "order": 27,
+        "title": "正则表达式",
+        "description": "使用正则表达式匹配和转换文本"
     }
 }
