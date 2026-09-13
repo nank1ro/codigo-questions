@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Structs",
         "description": "Lerne, wie man Werte mit Structs modelliert"
+    },
+    "futures": {
+        "order": 26,
+        "title": "Async und Await",
+        "description": "Lerne, wie man asynchrone Ergebnisse mit async und await behandelt"
     }
 }

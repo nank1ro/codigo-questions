@@ -123,5 +123,10 @@
         "order": 25,
         "title": "结构体",
         "description": "学习如何用结构体对值进行建模"
+    },
+    "futures": {
+        "order": 26,
+        "title": "async 和 await",
+        "description": "使用 async 和 await 处理异步结果"
     }
 }
