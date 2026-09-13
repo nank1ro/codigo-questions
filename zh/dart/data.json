@@ -123,5 +123,10 @@
     "order": 25,
     "title": "Mixins",
     "description": "使用 mixin 在类之间共享行为"
+  },
+  "isolates": {
+    "order": 26,
+    "title": "Isolates",
+    "description": "使用 isolate 并行运行代码"
   }
 }
