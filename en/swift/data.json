@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Structs",
         "description": "Model values with structs"
+    },
+    "futures": {
+        "order": 26,
+        "title": "Async and Await",
+        "description": "Handle asynchronous results with async and await"
     }
 }

@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Structs",
         "description": "Modele valores com structs"
+    },
+    "futures": {
+        "order": 26,
+        "title": "Async e Await",
+        "description": "Lide com resultados assíncronos com async e await"
     }
 }

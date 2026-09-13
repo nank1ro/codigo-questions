@@ -123,5 +123,10 @@
         "order": 25,
         "title": "구조체",
         "description": "구조체로 값을 모델링하는 방법을 배웁니다"
+    },
+    "futures": {
+        "order": 26,
+        "title": "async와 await",
+        "description": "async와 await로 비동기 결과를 다루는 방법을 배웁니다"
     }
 }
