@@ -123,5 +123,10 @@
     "order": 25,
     "title": "주석",
     "description": "주석으로 코드를 문서화하기"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "고급 클래스",
+    "description": "data, sealed, companion 클래스로 데이터를 모델링하기"
   }
 }

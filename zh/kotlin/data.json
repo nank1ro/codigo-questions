@@ -123,5 +123,10 @@
     "order": 25,
     "title": "注释",
     "description": "学习如何用注释为代码添加文档"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "高级类",
+    "description": "使用 data、sealed 和 companion 类为数据建模"
   }
 }

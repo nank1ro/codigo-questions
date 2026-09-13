@@ -123,5 +123,10 @@
     "order": 25,
     "title": "Comments",
     "description": "Document code with comments"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "Advanced classes",
+    "description": "Model data with data, sealed and companion classes"
   }
 }

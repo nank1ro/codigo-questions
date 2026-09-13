@@ -123,5 +123,10 @@
     "order": 25,
     "title": "कमेंट्स",
     "description": "कमेंट्स के साथ कोड को डॉक्युमेंट करना सीखें"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "एडवांस्ड क्लासेस",
+    "description": "`data`, `sealed` और `companion` क्लासेस के साथ डेटा मॉडल करना सीखें"
   }
 }
