@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Expressions régulières",
         "description": "Trouvez et transformez du texte avec des expressions régulières"
+    },
+    "comments": {
+        "order": 27,
+        "title": "Commentaires",
+        "description": "Documentez le code avec des commentaires"
     }
 }

@@ -128,5 +128,10 @@
         "order": 26,
         "title": "正则表达式",
         "description": "学习使用正则表达式匹配和转换文本"
+    },
+    "comments": {
+        "order": 27,
+        "title": "注释",
+        "description": "学习使用注释为代码编写文档"
     }
 }

@@ -128,5 +128,10 @@
         "order": 26,
         "title": "정규 표현식",
         "description": "정규 표현식으로 텍스트를 찾고 변환합니다"
+    },
+    "comments": {
+        "order": 27,
+        "title": "주석",
+        "description": "주석으로 코드를 문서화합니다"
     }
 }

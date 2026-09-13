@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Reguläre Ausdrücke",
         "description": "Finde und wandle Text mit regulären Ausdrücken"
+    },
+    "comments": {
+        "order": 27,
+        "title": "Kommentare",
+        "description": "Code mit Kommentaren dokumentieren"
     }
 }

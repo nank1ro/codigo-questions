@@ -548,6 +548,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -658,7 +663,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -1351,6 +1356,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -1461,7 +1471,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -2154,6 +2164,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -2264,7 +2279,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -2957,6 +2972,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -3067,7 +3087,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -3760,6 +3780,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -3870,7 +3895,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -4563,6 +4588,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -4673,7 +4703,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -5366,6 +5396,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -5476,7 +5511,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -6169,6 +6204,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -6279,7 +6319,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -6972,6 +7012,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -7082,7 +7127,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -7775,6 +7820,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -7885,7 +7935,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -8578,6 +8628,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -8688,7 +8743,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
@@ -9381,6 +9436,11 @@
           "totalExercises": 12
         },
         {
+          "name": "comments",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "comparisonLogicalOperators",
           "trainUntil": 13,
           "totalExercises": 16
@@ -9491,7 +9551,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 472
+      "totalExercises": 488
     },
     {
       "name": "swift",
