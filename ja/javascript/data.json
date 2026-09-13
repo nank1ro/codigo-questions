@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Promise",
         "description": "プロミスとasync/awaitで非同期の結果を扱う方法を学ぶ"
+    },
+    "regex": {
+        "order": 25,
+        "title": "正規表現",
+        "description": "正規表現でテキストをマッチして変換する方法を学ぶ"
     }
 }

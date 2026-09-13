@@ -118,5 +118,10 @@
         "order": 24,
         "title": "Promise",
         "description": "学习如何使用 Promise 和 async/await 处理异步结果"
+    },
+    "regex": {
+        "order": 25,
+        "title": "正则表达式",
+        "description": "学习如何使用正则表达式匹配和转换文本"
     }
 }
