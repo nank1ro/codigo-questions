@@ -118,5 +118,10 @@
     "order": 24,
     "title": "正規表現",
     "description": "正規表現を使ってテキストを検索および変換する"
+  },
+  "comments": {
+    "order": 25,
+    "title": "コメント",
+    "description": "コメントを使ってコードをドキュメント化する"
   }
 }

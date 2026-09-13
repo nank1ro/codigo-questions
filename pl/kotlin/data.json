@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Wyrażenia regularne",
     "description": "Dopasowuj i przekształcaj tekst za pomocą wyrażeń regularnych"
+  },
+  "comments": {
+    "order": 25,
+    "title": "Komentarze",
+    "description": "Dokumentuj kod za pomocą komentarzy"
   }
 }

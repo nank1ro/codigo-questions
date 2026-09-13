@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Reguläre Ausdrücke",
     "description": "Text mit regulären Ausdrücken matchen und transformieren"
+  },
+  "comments": {
+    "order": 25,
+    "title": "Kommentare",
+    "description": "Code mit Kommentaren dokumentieren"
   }
 }

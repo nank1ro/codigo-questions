@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Expressões regulares",
     "description": "Corresponda e transforme texto com expressões regulares"
+  },
+  "comments": {
+    "order": 25,
+    "title": "Comentários",
+    "description": "Documente o código com comentários"
   }
 }

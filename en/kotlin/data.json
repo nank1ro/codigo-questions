@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Regular expressions",
     "description": "Match and transform text with regular expressions"
+  },
+  "comments": {
+    "order": 25,
+    "title": "Comments",
+    "description": "Document code with comments"
   }
 }

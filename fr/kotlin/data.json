@@ -118,5 +118,10 @@
     "order": 24,
     "title": "Expressions régulières",
     "description": "Trouvez et transformez du texte avec des expressions régulières"
+  },
+  "comments": {
+    "order": 25,
+    "title": "Commentaires",
+    "description": "Documentez le code avec des commentaires"
   }
 }
