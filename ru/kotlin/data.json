@@ -123,5 +123,10 @@
     "order": 25,
     "title": "Комментарии",
     "description": "Документируйте код с помощью комментариев"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "Продвинутые классы",
+    "description": "Моделируйте данные с помощью data-, sealed- и companion-классов"
   }
 }

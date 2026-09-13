@@ -382,6 +382,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -507,7 +512,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -1165,6 +1170,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -1290,7 +1300,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -1948,6 +1958,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -2073,7 +2088,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -2731,6 +2746,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -2856,7 +2876,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -3514,6 +3534,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -3639,7 +3664,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -4297,6 +4322,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -4422,7 +4452,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -5080,6 +5110,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -5205,7 +5240,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -5863,6 +5898,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -5988,7 +6028,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -6646,6 +6686,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -6771,7 +6816,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -7429,6 +7474,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -7554,7 +7604,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -8212,6 +8262,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -8337,7 +8392,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",
@@ -8995,6 +9050,11 @@
       "name": "kotlin",
       "arguments": [
         {
+          "name": "advanced_classes",
+          "trainUntil": 11,
+          "totalExercises": 16
+        },
+        {
           "name": "arithmeticOperators",
           "trainUntil": 5,
           "totalExercises": 17
@@ -9120,7 +9180,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 514
+      "totalExercises": 530
     },
     {
       "name": "python",

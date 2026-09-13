@@ -123,5 +123,10 @@
     "order": 25,
     "title": "コメント",
     "description": "コメントを使ってコードをドキュメント化する"
+  },
+  "advanced_classes": {
+    "order": 26,
+    "title": "高度なクラス",
+    "description": "data class、sealedクラス、companion objectでデータをモデル化する"
   }
 }
