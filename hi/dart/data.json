@@ -128,5 +128,10 @@
     "order": 26,
     "title": "आइसोलेट्स",
     "description": "आइसोलेट्स के साथ कोड को समानांतर चलाना सीखें"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "हायर-ऑर्डर मेथड",
+    "description": "map, where और fold के साथ संग्रहों को बदलना सीखें"
   }
 }

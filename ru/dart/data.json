@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Изоляты",
     "description": "Запускайте код параллельно с помощью изолятов"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "Методы высшего порядка",
+    "description": "Преобразуйте коллекции с помощью map, where и fold"
   }
 }

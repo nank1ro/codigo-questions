@@ -175,6 +175,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -245,7 +250,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -963,6 +968,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1033,7 +1043,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -1751,6 +1761,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1821,7 +1836,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -2539,6 +2554,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2609,7 +2629,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -3327,6 +3347,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3397,7 +3422,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -4115,6 +4140,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4185,7 +4215,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -4903,6 +4933,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4973,7 +5008,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -5691,6 +5726,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5761,7 +5801,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -6479,6 +6519,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6549,7 +6594,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -7267,6 +7312,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7337,7 +7387,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -8055,6 +8105,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8125,7 +8180,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",
@@ -8843,6 +8898,11 @@
           "totalExercises": 16
         },
         {
+          "name": "higher_order_methods",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "isolates",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8913,7 +8973,7 @@
           "totalExercises": 22
         }
       ],
-      "totalExercises": 459
+      "totalExercises": 475
     },
     {
       "name": "javascript",

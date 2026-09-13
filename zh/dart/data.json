@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Isolates",
     "description": "使用 isolate 并行运行代码"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "高阶方法",
+    "description": "用 map、where 和 fold 转换集合"
   }
 }

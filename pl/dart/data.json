@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Izolaty",
     "description": "Uruchamiaj kod równolegle za pomocą izolatów"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "Metody wyższego rzędu",
+    "description": "Przekształcaj kolekcje za pomocą map, where i fold"
   }
 }
