@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Isolates",
     "description": "Führe Code parallel mit Isolates aus"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "Methoden höherer Ordnung",
+    "description": "Transformiere Collections mit map, where und fold"
   }
 }

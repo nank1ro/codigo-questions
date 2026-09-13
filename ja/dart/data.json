@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Isolate",
     "description": "isolate でコードを並列に実行する"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "高階メソッド",
+    "description": "map、where、fold でコレクションを変換する"
   }
 }

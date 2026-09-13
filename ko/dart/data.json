@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Isolates",
     "description": "isolate로 코드를 병렬로 실행하기"
+  },
+  "higher_order_methods": {
+    "order": 27,
+    "title": "고차 메서드",
+    "description": "map, where, fold로 컬렉션 변환하기"
   }
 }
