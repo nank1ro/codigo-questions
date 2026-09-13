@@ -123,5 +123,10 @@
         "order": 25,
         "title": "async와 await",
         "description": "asyncio, async 함수와 await로 비동기 코드를 실행합니다"
+    },
+    "regex": {
+        "order": 26,
+        "title": "정규 표현식",
+        "description": "정규 표현식으로 텍스트를 찾고 변환합니다"
     }
 }

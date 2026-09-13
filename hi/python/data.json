@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Async और Await",
         "description": "asyncio, async फ़ंक्शन और await के साथ एसिंक्रोनस कोड चलाएँ"
+    },
+    "regex": {
+        "order": 26,
+        "title": "रेगुलर एक्सप्रेशन",
+        "description": "रेगुलर एक्सप्रेशन के साथ टेक्स्ट मैच करें और बदलें"
     }
 }

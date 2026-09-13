@@ -123,5 +123,10 @@
         "order": 25,
         "title": "异步和 Await",
         "description": "学习使用 asyncio、async 函数和 await 运行异步代码"
+    },
+    "regex": {
+        "order": 26,
+        "title": "正则表达式",
+        "description": "学习使用正则表达式匹配和转换文本"
     }
 }

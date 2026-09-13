@@ -593,6 +593,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -623,7 +628,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -1351,6 +1356,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -1381,7 +1391,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -2109,6 +2119,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2139,7 +2154,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -2867,6 +2882,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -2897,7 +2917,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -3625,6 +3645,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -3655,7 +3680,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -4383,6 +4408,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -4413,7 +4443,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -5141,6 +5171,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5171,7 +5206,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -5899,6 +5934,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -5929,7 +5969,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -6657,6 +6697,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -6687,7 +6732,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -7415,6 +7460,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -7445,7 +7495,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -8173,6 +8223,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -8203,7 +8258,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
@@ -8931,6 +8986,11 @@
           "totalExercises": 10
         },
         {
+          "name": "regex",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "relationBooleanOperators",
           "trainUntil": 9,
           "totalExercises": 23
@@ -8961,7 +9021,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 456
+      "totalExercises": 472
     },
     {
       "name": "swift",
