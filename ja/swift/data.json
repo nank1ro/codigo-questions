@@ -128,5 +128,10 @@
         "order": 26,
         "title": "asyncとawait",
         "description": "asyncとawaitを使って非同期の結果を扱う方法を学ぶ"
+    },
+    "regex": {
+        "order": 27,
+        "title": "正規表現",
+        "description": "正規表現でテキストを検索して変換する方法を学ぶ"
     }
 }
