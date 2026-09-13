@@ -123,5 +123,10 @@
     "order": 25,
     "title": "Mixiny",
     "description": "Udostępniaj zachowanie między klasami za pomocą mixinów"
+  },
+  "isolates": {
+    "order": 26,
+    "title": "Izolaty",
+    "description": "Uruchamiaj kod równolegle za pomocą izolatów"
   }
 }

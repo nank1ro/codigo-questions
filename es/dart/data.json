@@ -123,5 +123,10 @@
     "order": 25,
     "title": "Mixins",
     "description": "Comparte comportamiento entre clases con mixins"
+  },
+  "isolates": {
+    "order": 26,
+    "title": "Isolates",
+    "description": "Ejecuta código en paralelo con isolates"
   }
 }

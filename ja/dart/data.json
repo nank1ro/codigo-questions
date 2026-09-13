@@ -123,5 +123,10 @@
     "order": 25,
     "title": "ミックスイン",
     "description": "ミックスインでクラス間の振る舞いを共有する"
+  },
+  "isolates": {
+    "order": 26,
+    "title": "Isolate",
+    "description": "isolate でコードを並列に実行する"
   }
 }
