@@ -123,5 +123,10 @@
         "order": 25,
         "title": "asyncとawait",
         "description": "asyncio、async関数、awaitを使って非同期コードを実行する方法を学ぶ"
+    },
+    "regex": {
+        "order": 26,
+        "title": "正規表現",
+        "description": "正規表現を使ってテキストをマッチし変換する方法を学ぶ"
     }
 }

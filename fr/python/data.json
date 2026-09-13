@@ -123,5 +123,10 @@
         "order": 25,
         "title": "Async et Await",
         "description": "Exécutez du code asynchrone avec asyncio, les fonctions async et await"
+    },
+    "regex": {
+        "order": 26,
+        "title": "Expressions régulières",
+        "description": "Trouvez et transformez du texte avec des expressions régulières"
     }
 }
