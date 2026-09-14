@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Classi avanzate",
         "description": "Estendi le classi con ereditarietà, membri statici e campi privati"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Destrutturazione",
+        "description": "Estrai valori da array e oggetti in variabili"
     }
 }

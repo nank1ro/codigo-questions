@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Classes avancées",
         "description": "Étendez les classes avec l'héritage, les membres statiques et les champs privés"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Déstructuration",
+        "description": "Déballez les valeurs des tableaux et des objets dans des variables"
     }
 }

@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Fortgeschrittene Klassen",
         "description": "Erweitere Klassen mit Vererbung, statischen Mitgliedern und privaten Feldern"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Destrukturierung",
+        "description": "Entpacke Werte aus Arrays und Objekten in Variablen"
     }
 }

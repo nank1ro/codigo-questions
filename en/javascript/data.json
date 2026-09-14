@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Advanced classes",
         "description": "Extend classes with inheritance, statics and private fields"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Destructuring",
+        "description": "Unpack values from arrays and objects into variables"
     }
 }

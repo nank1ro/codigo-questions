@@ -128,5 +128,10 @@
         "order": 26,
         "title": "高级类",
         "description": "使用继承、静态成员和私有字段扩展类"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "解构",
+        "description": "学习如何把数组和对象中的值解包到变量中"
     }
 }
