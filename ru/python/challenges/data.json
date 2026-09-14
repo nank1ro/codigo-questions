@@ -106,5 +106,9 @@
   "pangram": {
     "difficulty": 1,
     "name": "Панграмма"
+  },
+  "bubble_sort": {
+    "difficulty": 2,
+    "name": "Сортировка пузырьком"
   }
 }

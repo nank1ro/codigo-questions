@@ -106,5 +106,9 @@
   "pangram": {
     "difficulty": 1,
     "name": "全字母句"
+  },
+  "bubble_sort": {
+    "difficulty": 2,
+    "name": "冒泡排序"
   }
 }
