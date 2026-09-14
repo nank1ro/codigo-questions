@@ -98,5 +98,9 @@
   "binary_search": {
     "difficulty": 2,
     "name": "이진 탐색"
+  },
+  "luhn": {
+    "difficulty": 2,
+    "name": "Luhn 체크섬"
   }
 }

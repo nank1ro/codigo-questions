@@ -98,5 +98,9 @@
   "binary_search": {
     "difficulty": 2,
     "name": "Búsqueda binaria"
+  },
+  "luhn": {
+    "difficulty": 2,
+    "name": "Suma de verificación de Luhn"
   }
 }

@@ -98,5 +98,9 @@
   "binary_search": {
     "difficulty": 2,
     "name": "二分查找"
+  },
+  "luhn": {
+    "difficulty": 2,
+    "name": "Luhn 校验和"
   }
 }
