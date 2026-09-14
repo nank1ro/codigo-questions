@@ -103,5 +103,10 @@
         "order": 21,
         "title": "リンクリスト",
         "description": "構造体、ポインタ、mallocを使って片方向リンクリストを構築し、走査する方法を学ぶ"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "ビット演算子",
+        "description": "AND、OR、XOR、NOT、シフトを使って個々のビットを操作する方法を学ぶ"
     }
 }

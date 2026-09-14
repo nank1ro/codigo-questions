@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Listes chaînées",
         "description": "Construisez et parcourez des listes chaînées simples avec des structs, des pointeurs et malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Opérateurs bit à bit",
+        "description": "Travaillez sur les bits individuels avec AND, OR, XOR, NOT et les décalages"
     }
 }

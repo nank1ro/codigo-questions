@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Listy wiązane",
         "description": "Naucz się budować i przechodzić jednokierunkowe listy wiązane za pomocą struktur, wskaźników i malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Operatory bitowe",
+        "description": "Naucz się pracować z pojedynczymi bitami za pomocą AND, OR, XOR, NOT i przesunięć"
     }
 }

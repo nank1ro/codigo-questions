@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Linked Lists",
         "description": "Build and traverse singly linked lists with structs, pointers and malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Bitwise Operators",
+        "description": "Work with individual bits using AND, OR, XOR, NOT and shifts"
     }
 }

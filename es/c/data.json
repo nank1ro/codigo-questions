@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Listas Enlazadas",
         "description": "Construye y recorre listas enlazadas simples con structs, punteros y malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Operadores Bit a Bit",
+        "description": "Trabaja con bits individuales usando AND, OR, XOR, NOT y desplazamientos"
     }
 }

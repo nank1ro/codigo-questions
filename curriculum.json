@@ -19,6 +19,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -109,7 +114,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -832,6 +837,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -922,7 +932,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -1645,6 +1655,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -1735,7 +1750,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -2458,6 +2473,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -2548,7 +2568,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -3271,6 +3291,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -3361,7 +3386,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -4084,6 +4109,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -4174,7 +4204,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -4897,6 +4927,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -4987,7 +5022,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -5710,6 +5745,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -5800,7 +5840,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -6523,6 +6563,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -6613,7 +6658,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -7336,6 +7381,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -7426,7 +7476,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -8149,6 +8199,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -8239,7 +8294,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
@@ -8962,6 +9017,11 @@
           "totalExercises": 16
         },
         {
+          "name": "bitwiseOperators",
+          "trainUntil": 16,
+          "totalExercises": 16
+        },
+        {
           "name": "booleans",
           "trainUntil": 3,
           "totalExercises": 13
@@ -9052,7 +9112,7 @@
           "totalExercises": 40
         }
       ],
-      "totalExercises": 379
+      "totalExercises": 395
     },
     {
       "name": "dart",
