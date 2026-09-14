@@ -106,5 +106,9 @@
   "pangram": {
     "difficulty": 1,
     "name": "팬그램"
+  },
+  "bubble_sort": {
+    "difficulty": 2,
+    "name": "버블 정렬"
   }
 }

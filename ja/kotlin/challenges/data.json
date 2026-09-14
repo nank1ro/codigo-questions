@@ -106,5 +106,9 @@
   "pangram": {
     "difficulty": 1,
     "name": "パングラム"
+  },
+  "bubble_sort": {
+    "difficulty": 2,
+    "name": "バブルソート"
   }
 }
