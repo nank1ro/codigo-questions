@@ -48,14 +48,14 @@ Dartは `=>` 構文を使った**アロー関数**をサポートしています
 
 ```dart
 // 通常の関数
-int double(int n) {
+int twice(int n) {
   return n * 2;
 }
 ```
 
 ```dart
 // アロー関数 — 同じ結果
-int double(int n) => n * 2;
+int twice(int n) => n * 2;
 ```
 
 アロー関数はコードをより簡潔にします。`=>` は波括弧と `return` キーワードの両方を置き換えます。

@@ -239,11 +239,11 @@ Posto tudo junto, um programa com `Isolate.run` se lê como código sequencial c
 ```dart
 import 'dart:isolate';
 
-int double(int n) => n * 2;
+int twice(int n) => n * 2;
 
 Future<void> main() async {
   print('start');
-  final result = await Isolate.run(() => double(4));
+  final result = await Isolate.run(() => twice(4));
   print(result);
 }
 // start
