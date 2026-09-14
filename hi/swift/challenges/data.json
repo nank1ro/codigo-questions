@@ -90,6 +90,10 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "अभाज्य संख्याओं का योग"
+  },
+  "binary_search": {
+    "difficulty": 2,
+    "name": "बाइनरी सर्च"
   }
 ,
   "collatz_conjecture": {

@@ -94,5 +94,9 @@
   "collatz_conjecture": {
     "difficulty": 1,
     "name": "考拉兹猜想"
+  },
+  "binary_search": {
+    "difficulty": 2,
+    "name": "二分查找"
   }
 }

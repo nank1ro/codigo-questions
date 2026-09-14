@@ -94,5 +94,9 @@
   "collatz_conjecture": {
     "difficulty": 1,
     "name": "Collatz conjecture"
+  },
+  "binary_search": {
+    "difficulty": 2,
+    "name": "Binary search"
   }
 }
