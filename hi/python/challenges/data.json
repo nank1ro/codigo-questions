@@ -90,6 +90,10 @@
     "difficulty": 3,
     "name": "लीप वर्ष",
     "isPro": true
+  },
+  "binary_search": {
+    "difficulty": 2,
+    "name": "बाइनरी सर्च"
   }
 ,
   "collatz_conjecture": {

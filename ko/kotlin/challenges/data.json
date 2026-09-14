@@ -94,5 +94,9 @@
   "collatz_conjecture": {
     "difficulty": 1,
     "name": "콜라츠 추측"
+  },
+  "binary_search": {
+    "difficulty": 2,
+    "name": "이진 탐색"
   }
 }
