@@ -102,5 +102,9 @@
   "luhn": {
     "difficulty": 2,
     "name": "Luhn 체크섬"
+  },
+  "pangram": {
+    "difficulty": 1,
+    "name": "팬그램"
   }
 }

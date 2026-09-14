@@ -102,5 +102,9 @@
   "luhn": {
     "difficulty": 2,
     "name": "लूह्न चेकसम"
+  },
+  "pangram": {
+    "difficulty": 1,
+    "name": "पैनग्राम"
   }
 }

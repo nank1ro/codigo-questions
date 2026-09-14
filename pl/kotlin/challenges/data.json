@@ -102,5 +102,9 @@
   "luhn": {
     "difficulty": 2,
     "name": "Suma kontrolna Luhna"
+  },
+  "pangram": {
+    "difficulty": 1,
+    "name": "Pangram"
   }
 }
