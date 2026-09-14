@@ -133,5 +133,10 @@
     "order": 27,
     "title": "高階メソッド",
     "description": "map、where、fold でコレクションを変換する"
+  },
+  "generics": {
+    "order": 28,
+    "title": "ジェネリクス",
+    "description": "どんな型でも動くクラスと関数を書く"
   }
 }

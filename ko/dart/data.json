@@ -133,5 +133,10 @@
     "order": 27,
     "title": "고차 메서드",
     "description": "map, where, fold로 컬렉션 변환하기"
+  },
+  "generics": {
+    "order": 28,
+    "title": "제네릭",
+    "description": "어떤 타입으로도 동작하는 클래스와 함수 작성하기"
   }
 }

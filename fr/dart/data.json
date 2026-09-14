@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Méthodes d'ordre supérieur",
     "description": "Transformez des collections avec map, where et fold"
+  },
+  "generics": {
+    "order": 28,
+    "title": "Génériques",
+    "description": "Écrivez des classes et des fonctions qui fonctionnent avec n'importe quel type"
   }
 }
