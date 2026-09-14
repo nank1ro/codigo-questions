@@ -94,10 +94,13 @@
   "binary_search": {
     "difficulty": 2,
     "name": "बाइनरी सर्च"
-  }
-,
+  },
   "collatz_conjecture": {
     "difficulty": 1,
     "name": "कोलैट्ज़ अनुमान"
+  },
+  "luhn": {
+    "difficulty": 2,
+    "name": "लूह्न चेकसम"
   }
 }
