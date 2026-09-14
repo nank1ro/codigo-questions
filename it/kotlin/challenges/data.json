@@ -90,5 +90,9 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "Somma dei numeri primi"
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Congettura di Collatz"
   }
 }

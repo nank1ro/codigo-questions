@@ -1,0 +1,118 @@
+---
+language: javascript
+exerciseType: 1
+difficulty: 1
+title: Conjetura de Collatz
+---
+
+# --description--
+
+La conjetura de Collatz parte de cualquier entero positivo `n` y repite una única regla sencilla: si `n` es par, se reduce a la mitad; si `n` es impar, se sustituye por `3n + 1`. Tarde o temprano la sucesión llega a 1.
+
+Por ejemplo, empezando en 16 la sucesión es `16 -> 8 -> 4 -> 2 -> 1`, así que se necesitan 4 pasos.
+
+Nadie ha demostrado jamás que esto ocurra siempre, pero se cumple para todos los números probados hasta ahora.
+
+# --instructions--
+
+Escribe una función `collatzSteps` que reciba un entero positivo `n` y devuelva el número de pasos necesarios para llegar a 1.
+
+`collatzSteps(1)` es 0, porque 1 ya es el final de la sucesión. `collatzSteps(12)` es 9, y `collatzSteps(27)` es 111.
+
+# --before-seed--
+
+```javascript
+// DO NOT EDIT FROM HERE
+var _testFailedCount = 0;
+var _testCount = 0;
+var assert = require('assert')
+const tryCatch = (...args) => {
+  _testCount++
+  try { assert(...args) }
+  catch (e) {
+    _testFailedCount++
+    console.log(`Test Case '--err-t${_testCount}--' failed`);
+  }
+};
+// DO NOT EDIT UNTIL HERE
+```
+
+# --seed--
+
+```javascript
+function collatzSteps(n) {
+
+}
+```
+
+# --asserts--
+
+`collatzSteps(1)` debe devolver 0, porque 1 ya es el final de la sucesión.
+
+```javascript
+tryCatch(collatzSteps(1) === 0);
+```
+
+`collatzSteps(2)` debe devolver 1.
+
+```javascript
+tryCatch(collatzSteps(2) === 1);
+```
+
+`collatzSteps(6)` debe devolver 8.
+
+```javascript
+tryCatch(collatzSteps(6) === 8);
+```
+
+`collatzSteps(7)` debe devolver 16.
+
+```javascript
+tryCatch(collatzSteps(7) === 16);
+```
+
+`collatzSteps(16)` debe devolver 4.
+
+```javascript
+tryCatch(collatzSteps(16) === 4);
+```
+
+`collatzSteps(12)` debe devolver 9.
+
+```javascript
+tryCatch(collatzSteps(12) === 9);
+```
+
+`collatzSteps(27)` debe devolver 111.
+
+```javascript
+tryCatch(collatzSteps(27) === 111);
+```
+
+`collatzSteps(97)` debe devolver 118.
+
+```javascript
+tryCatch(collatzSteps(97) === 118);
+```
+
+# --after-asserts--
+
+```javascript
+// DO NOT EDIT FROM HERE 
+console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
+// DO NOT EDIT UNTIL HERE
+```
+
+# --solutions--
+
+```javascript
+function collatzSteps(n) {
+  let value = n;
+  let steps = 0;
+  while (value !== 1) {
+    value = value % 2 === 0 ? value / 2 : 3 * value + 1;
+    steps++;
+  }
+  return steps;
+}
+```

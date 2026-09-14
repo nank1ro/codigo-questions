@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "闰年",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "考拉兹猜想"
   }
 }

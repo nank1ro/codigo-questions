@@ -91,4 +91,9 @@
     "name": "लीप वर्ष",
     "isPro": true
   }
+,
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "कोलैट्ज़ अनुमान"
+  }
 }

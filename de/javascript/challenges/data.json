@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "Schaltjahr",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Collatz-Vermutung"
   }
 }

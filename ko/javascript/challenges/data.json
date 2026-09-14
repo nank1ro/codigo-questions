@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "윤년",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "콜라츠 추측"
   }
 }

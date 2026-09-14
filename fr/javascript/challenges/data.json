@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "Année bissextile",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Conjecture de Collatz"
   }
 }
