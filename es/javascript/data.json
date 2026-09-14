@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Clases avanzadas",
         "description": "Extiende clases con herencia, statics y campos privados"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Destructuración",
+        "description": "Desempaqueta valores de arrays y objetos en variables"
     }
 }

@@ -128,5 +128,10 @@
         "order": 26,
         "title": "Zaawansowane klasy",
         "description": "Rozszerzaj klasy o dziedziczenie, składowe statyczne i pola prywatne"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "Destrukturyzacja",
+        "description": "Rozpakowuj wartości z tablic i obiektów do zmiennych"
     }
 }

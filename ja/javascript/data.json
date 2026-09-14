@@ -128,5 +128,10 @@
         "order": 26,
         "title": "高度なクラス",
         "description": "継承、静的メンバー、プライベートフィールドでクラスを拡張する"
+    },
+    "destructuring": {
+        "order": 27,
+        "title": "分割代入",
+        "description": "配列やオブジェクトから値を変数に展開する"
     }
 }
