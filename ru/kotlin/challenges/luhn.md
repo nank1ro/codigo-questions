@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Luhn checksum
+title: Контрольная сумма Луна
 ---
 
 # --description--

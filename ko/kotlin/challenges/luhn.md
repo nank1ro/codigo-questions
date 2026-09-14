@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Luhn checksum
+title: Luhn 체크섬
 ---
 
 # --description--
