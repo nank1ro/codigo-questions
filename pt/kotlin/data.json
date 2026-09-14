@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Classes avançadas",
     "description": "Modele dados com classes data, sealed e companion"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "Funções de escopo",
+    "description": "Use let, run, with, apply e also para trabalhar dentro do contexto de um objeto"
   }
 }

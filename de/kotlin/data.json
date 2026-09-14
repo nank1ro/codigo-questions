@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Fortgeschrittene Klassen",
     "description": "Daten mit data-, sealed- und companion-Klassen modellieren"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "Scope-Funktionen",
+    "description": "Mit let, run, with, apply und also im Kontext eines Objekts arbeiten"
   }
 }

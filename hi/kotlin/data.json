@@ -128,5 +128,10 @@
     "order": 26,
     "title": "एडवांस्ड क्लासेस",
     "description": "`data`, `sealed` और `companion` क्लासेस के साथ डेटा मॉडल करना सीखें"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "स्कोप फंक्शन",
+    "description": "किसी ऑब्जेक्ट के संदर्भ के अंदर काम करने के लिए let, run, with, apply और also का उपयोग करें"
   }
 }

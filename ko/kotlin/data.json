@@ -128,5 +128,10 @@
     "order": 26,
     "title": "고급 클래스",
     "description": "data, sealed, companion 클래스로 데이터를 모델링하기"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "스코프 함수",
+    "description": "let, run, with, apply, also를 사용하여 객체의 컨텍스트 안에서 작업하기"
   }
 }
