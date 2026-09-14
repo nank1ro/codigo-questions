@@ -133,5 +133,10 @@
         "order": 27,
         "title": "주석",
         "description": "주석으로 코드를 문서화합니다"
+    },
+    "errorHandling": {
+        "order": 28,
+        "title": "오류와 예외",
+        "description": "오류를 처리하기 위해 예외를 잡고, 발생시키고, 정의하는 방법을 배웁니다"
     }
 }
