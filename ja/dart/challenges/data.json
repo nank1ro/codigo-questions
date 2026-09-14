@@ -90,5 +90,9 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "素数の総和"
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "コラッツの予想"
   }
 }

@@ -90,5 +90,9 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "Suma liczb pierwszych"
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Hipoteza Collatza"
   }
 }

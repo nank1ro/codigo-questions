@@ -90,5 +90,9 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "Summation of primes"
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Collatz conjecture"
   }
 }

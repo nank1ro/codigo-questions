@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "Ano Bissexto",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Conjectura de Collatz"
   }
 }

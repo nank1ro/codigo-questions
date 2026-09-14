@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "うるう年",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "コラッツの予想"
   }
 }

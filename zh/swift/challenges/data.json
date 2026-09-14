@@ -90,5 +90,9 @@
   "summation_of_primes": {
     "difficulty": 2,
     "name": "质数求和"
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "考拉兹猜想"
   }
 }

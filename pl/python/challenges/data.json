@@ -90,5 +90,9 @@
     "difficulty": 3,
     "name": "Rok przestępny",
     "isPro": true
+  },
+  "collatz_conjecture": {
+    "difficulty": 1,
+    "name": "Hipoteza Collatza"
   }
 }
