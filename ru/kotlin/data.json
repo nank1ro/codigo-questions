@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Продвинутые классы",
     "description": "Моделируйте данные с помощью data-, sealed- и companion-классов"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "Функции области видимости",
+    "description": "Используйте let, run, with, apply и also, чтобы работать внутри контекста объекта"
   }
 }

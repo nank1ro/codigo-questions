@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Classi avanzate",
     "description": "Modella i dati con data class, classi sealed e companion object"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "Scope Functions",
+    "description": "Usa let, run, with, apply e also per lavorare nel contesto di un oggetto"
   }
 }

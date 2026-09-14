@@ -128,5 +128,10 @@
     "order": 26,
     "title": "Advanced classes",
     "description": "Model data with data, sealed and companion classes"
+  },
+  "scopeFunctions": {
+    "order": 27,
+    "title": "Scope Functions",
+    "description": "Use let, run, with, apply and also to work inside an object's context"
   }
 }
