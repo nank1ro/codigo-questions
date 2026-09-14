@@ -41,7 +41,7 @@ Future<void> main() async {
       // Get the language directory.
       final languageDir = Directory('${langDir.path}/$language');
 
-      await _validateDataJson(directory: languageDir);
+      await _validateDataJson(directory: languageDir, parser: parser);
 
       await _validateLanguageAssets(
         assetsDir: argumentAssetsDir,
@@ -982,17 +982,22 @@ But the file `$fileName` is not in order.
   }
 }
 
-Future<Iterable<String>> _getArgumentsInPath(String path) async {
+Future<Map<String, dynamic>> _getDataJson(String path) async {
   final dataFile = File('$path/data.json');
 
   final jsonString = await dataFile.readAsString();
-  final json = jsonDecode(jsonString) as Map<String, dynamic>;
+  return jsonDecode(jsonString) as Map<String, dynamic>;
+}
+
+Future<Iterable<String>> _getArgumentsInPath(String path) async {
+  final json = await _getDataJson(path);
 
   return json.keys;
 }
 
 Future<void> _validateDataJson({
   required Directory directory,
+  required MDParserBLoC parser,
 }) async {
   final subDirectories =
       directory.listSync(followLinks: false).whereType<Directory>();
@@ -1000,8 +1005,9 @@ Future<void> _validateDataJson({
   for (final dir in subDirectories) {
     final argumentOfDir = getFileNameWithoutExtension(dir.path);
     if (argumentOfDir == 'challenges') {
-      final challenges = await _getArgumentsInPath(dir.path);
-      final files = dir.listSync(followLinks: false).where(isExerciseFile);
+      final data = await _getDataJson(dir.path);
+      final challenges = data.keys;
+      final files = dir.listSync(followLinks: false).where(isChallengeFile);
       for (final file in files) {
         final challengeName = getFileNameWithoutExtension(file.path);
         _testHandler('''
@@ -1017,6 +1023,25 @@ The challenge `$challengeName` has not been declared in the `data.json` file.
             ),
           );
         });
+
+        if (data[challengeName] is Map) {
+          final name = (data[challengeName] as Map)['name'];
+          _testHandler('''
+Verify that the challenge title matches the data.json name''', () async {
+            final exerciseModel = await parser.parse(file: file as File);
+            final title = exerciseModel.frontMatterModel.title;
+            expect(
+              title,
+              equals(name),
+              reason: _fancyLogger(
+                message: '''
+The title `$title` in `${getFileName(file.path)}` does not match the name `$name` declared for `$challengeName` in `data.json`. The frontmatter `title` and the `data.json` `name` must be kept in sync.
+''',
+                exercisePath: dir.path,
+              ),
+            );
+          });
+        }
       }
     } else {
       final arguments = await _getArgumentsInPath(directory.path);

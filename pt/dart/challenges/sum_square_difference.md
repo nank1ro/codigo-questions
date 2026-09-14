@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: Diferença Soma-Quadrado
 ---
 
 # --description--

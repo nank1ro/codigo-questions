@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: एकरमैन फ़ंक्शन
+title: एकरमन फंक्शन
 ---
 
 # --description--

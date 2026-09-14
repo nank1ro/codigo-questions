@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 합의 제곱과 제곱의 합의 차
 ---
 
 # --description--

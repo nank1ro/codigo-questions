@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: "ATM"
+title: "एटीएम"
 ---
 
 # --description--

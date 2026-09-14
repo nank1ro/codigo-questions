@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: Numeri di Fibonacci pari
 ---
 
 # --description--

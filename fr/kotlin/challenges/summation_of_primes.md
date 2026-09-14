@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Somme des nombres premiers
 ---
 
 # --description--

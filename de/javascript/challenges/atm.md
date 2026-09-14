@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: ATM
+title: Geldautomat
 ---
 
 # --description--

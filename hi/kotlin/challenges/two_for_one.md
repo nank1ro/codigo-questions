@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: दो में से एक
+title: एक के बदले दो
 ---
 
 # --description--

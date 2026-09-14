@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 第10001个质数
 ---
 
 # --description--

@@ -1,7 +1,7 @@
 ---
 language: python
 exerciseType: 1
-title: 100 doors
+title: 100 Türen
 difficulty: 1
 ---
 

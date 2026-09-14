@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Plus grand produit palindrome
 ---
 
 # --description--

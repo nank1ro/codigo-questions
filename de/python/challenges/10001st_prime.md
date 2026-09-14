@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001. Primzahl
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 最大回文乘积
 ---
 
 # --description--

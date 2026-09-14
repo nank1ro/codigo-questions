@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Größter Primfaktor
 ---
 
 # --description--

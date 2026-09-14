@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Кратные 3 или 5
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: c
 exerciseType: 1
 difficulty: 1
-title: Two for one
+title: Zwei für einen
 ---
 
 # --description--

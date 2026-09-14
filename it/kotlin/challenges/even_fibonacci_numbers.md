@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: I numeri pari di Fibonacci
 ---
 
 # --description--

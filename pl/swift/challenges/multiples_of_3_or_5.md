@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Wielokrotności 3 lub 5
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 특별한 피타고라스 삼조수
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特殊勾股数组
 ---
 
 # --description--

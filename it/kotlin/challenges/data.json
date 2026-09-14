@@ -1,7 +1,7 @@
 {
   "addition": {
     "difficulty": 1,
-    "name": "Addition"
+    "name": "Addizione"
   },
   "atm": {
     "difficulty": 1,
@@ -13,19 +13,19 @@
   },
   "raindrops": {
     "difficulty": 1,
-    "name": "Raindrops"
+    "name": "Gocce di pioggia"
   },
   "sum_digits": {
     "difficulty": 1,
-    "name": "Sum of digits"
+    "name": "Somma cifre"
   },
   "two_for_one": {
     "difficulty": 1,
-    "name": "Two for one"
+    "name": "Due per uno"
   },
   "100_doors": {
     "difficulty": 1,
-    "name": "100 doors"
+    "name": "100 porte"
   },
   "ackermann_function": {
     "difficulty": 1,
