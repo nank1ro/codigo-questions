@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Multiples de 3 ou 5
 ---
 
 # --description--

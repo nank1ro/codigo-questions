@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: 가장 큰 회문 곱
 ---
 
 # --description--

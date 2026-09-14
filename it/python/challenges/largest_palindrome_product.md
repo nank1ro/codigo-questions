@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: Il più grande palindromo di un prodotto
 ---
 
 # --description--

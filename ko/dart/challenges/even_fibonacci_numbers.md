@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: 짝수 피보나치 수
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Addizione
+title: Somma
 ---
 
 # --description--

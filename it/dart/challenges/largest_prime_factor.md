@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Fattore primo più grande
 ---
 
 # --description--

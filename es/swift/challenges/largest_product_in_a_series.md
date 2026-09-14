@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Mayor producto en una serie
 ---
 
 # --description--

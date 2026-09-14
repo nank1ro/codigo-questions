@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: 最小公倍数
 ---
 
 # --description--

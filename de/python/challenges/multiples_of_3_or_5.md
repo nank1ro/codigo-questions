@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: Vielfache von 3 oder 5
 ---
 
 # --description--

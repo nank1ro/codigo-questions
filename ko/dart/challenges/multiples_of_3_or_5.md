@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 또는 5의 배수
 ---
 
 # --description--

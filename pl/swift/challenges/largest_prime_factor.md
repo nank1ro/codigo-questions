@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Largest prime factor
+title: Największy czynnik pierwszy
 ---
 
 # --description--

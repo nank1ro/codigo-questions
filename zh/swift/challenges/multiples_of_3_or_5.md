@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Multiples of 3 or 5
+title: 3 或 5 的倍数
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: Le 10001e nombre premier
 ---
 
 # --description--

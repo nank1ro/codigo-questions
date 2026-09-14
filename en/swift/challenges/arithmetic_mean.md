@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Aritmetic mean
+title: Arithmetic mean
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Even Fibonacci numbers
+title: 偶数斐波那契数
 ---
 
 # --description--

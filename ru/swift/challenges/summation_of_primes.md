@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: Сумма простых чисел
 ---
 
 # --description--

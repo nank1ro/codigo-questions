@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: 연속된 숫자의 가장 큰 곱
 ---
 
 # --description--

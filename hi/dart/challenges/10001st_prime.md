@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: 10001वीं अभाज्य संख्या
 ---
 
 # --description--

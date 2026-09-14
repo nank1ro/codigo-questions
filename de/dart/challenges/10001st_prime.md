@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: Die 10001. Primzahl
 ---
 
 # --description--

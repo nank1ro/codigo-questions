@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: 10001st prime
+title: Le 10001ème nombre premier
 ---
 
 # --description--

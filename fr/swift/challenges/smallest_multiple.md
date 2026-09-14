@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: Plus petit multiple commun
 ---
 
 # --description--

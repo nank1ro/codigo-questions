@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Summation of primes
+title: 质数之和
 ---
 
 # --description--

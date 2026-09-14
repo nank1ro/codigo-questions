@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: Differenza quadrato-somma
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 1
-title: Sum square difference
+title: 平方差之和
 ---
 
 # --description--

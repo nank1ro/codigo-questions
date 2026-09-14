@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 1
-title: Ackermann फ़ंक्शन
+title: एकरमन फंक्शन
 ---
 
 # --description--

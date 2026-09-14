@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Größtes Produkt in einer Serie
 ---
 
 # --description--

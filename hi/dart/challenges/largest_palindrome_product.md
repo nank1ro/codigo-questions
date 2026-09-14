@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Largest palindrome product
+title: सबसे बड़ा पैलिंड्रोम गुणनफल
 ---
 
 # --description--

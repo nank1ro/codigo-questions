@@ -2,7 +2,7 @@
 language: kotlin
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Prodotto più grande in una serie
 ---
 
 # --description--

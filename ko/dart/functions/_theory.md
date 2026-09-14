@@ -48,14 +48,14 @@ Dart는 `=>` 구문을 사용한 **화살표 함수**를 지원합니다. 함수
 
 ```dart
 // 일반 함수
-int double(int n) {
+int twice(int n) {
   return n * 2;
 }
 ```
 
 ```dart
 // 화살표 함수 — 동일한 결과
-int double(int n) => n * 2;
+int twice(int n) => n * 2;
 ```
 
 화살표 함수는 코드를 더 간결하게 만듭니다. `=>`는 중괄호와 `return` 키워드를 모두 대체합니다.

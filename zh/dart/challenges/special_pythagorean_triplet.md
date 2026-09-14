@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: 特殊毕达哥拉斯三元组
 ---
 
 # --description--

@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 1
-title: Smallest multiple
+title: सबसे छोटा गुणज
 ---
 
 # --description--

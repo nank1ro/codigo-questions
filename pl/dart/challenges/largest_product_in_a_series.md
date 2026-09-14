@@ -2,7 +2,7 @@
 language: dart
 exerciseType: 1
 difficulty: 2
-title: Largest product in a series
+title: Największy iloczyn w ciągu
 ---
 
 # --description--

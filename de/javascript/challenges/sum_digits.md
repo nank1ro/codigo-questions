@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Sum of digits
+title: Summe der Ziffern
 ---
 
 # --description--

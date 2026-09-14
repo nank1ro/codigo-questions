@@ -2,7 +2,7 @@
 language: swift
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Szczególna trójka pitagorejska
 ---
 
 # --description--

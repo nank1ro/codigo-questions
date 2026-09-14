@@ -2,7 +2,7 @@
 language: python
 exerciseType: 1
 difficulty: 2
-title: Special pythagorean triplet
+title: Speciale tripletta pitagorica
 ---
 
 # --description--
