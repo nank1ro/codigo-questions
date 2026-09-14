@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Regular expressions",
         "description": "Match and transform text with regular expressions"
+    },
+    "protocols": {
+        "order": 28,
+        "title": "Protocols",
+        "description": "Define requirements that types can adopt and extend"
     }
 }

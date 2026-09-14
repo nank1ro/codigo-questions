@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Wyrażenia regularne",
         "description": "Dopasowuj i przekształcaj tekst za pomocą wyrażeń regularnych"
+    },
+    "protocols": {
+        "order": 28,
+        "title": "Protokoły",
+        "description": "Definiuj wymagania, które typy mogą przyjmować i rozszerzać"
     }
 }

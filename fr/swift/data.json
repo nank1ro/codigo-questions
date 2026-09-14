@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Expressions régulières",
         "description": "Recherchez et transformez du texte avec des expressions régulières"
+    },
+    "protocols": {
+        "order": 28,
+        "title": "Protocoles",
+        "description": "Définissez les exigences que les types peuvent adopter et étendre"
     }
 }
