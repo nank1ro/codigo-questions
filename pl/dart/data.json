@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Metody wyższego rzędu",
     "description": "Przekształcaj kolekcje za pomocą map, where i fold"
+  },
+  "generics": {
+    "order": 28,
+    "title": "Generyki",
+    "description": "Pisz klasy i funkcje, które działają z dowolnym typem"
   }
 }

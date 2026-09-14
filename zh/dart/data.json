@@ -133,5 +133,10 @@
     "order": 27,
     "title": "高阶方法",
     "description": "用 map、where 和 fold 转换集合"
+  },
+  "generics": {
+    "order": 28,
+    "title": "泛型",
+    "description": "编写可用于任何类型的类和函数"
   }
 }
