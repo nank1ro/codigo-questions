@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Komentarze",
         "description": "Dokumentuj kod za pomocą komentarzy"
+    },
+    "errorHandling": {
+        "order": 28,
+        "title": "Błędy i wyjątki",
+        "description": "Przechwytuj, zgłaszaj i definiuj wyjątki, aby obsługiwać błędy"
     }
 }

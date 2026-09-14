@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Kommentare",
         "description": "Code mit Kommentaren dokumentieren"
+    },
+    "errorHandling": {
+        "order": 28,
+        "title": "Fehler und Ausnahmen",
+        "description": "Fange Ausnahmen ab, löse sie aus und definiere eigene, um Fehler zu behandeln"
     }
 }

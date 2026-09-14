@@ -133,5 +133,10 @@
         "order": 27,
         "title": "注释",
         "description": "学习使用注释为代码编写文档"
+    },
+    "errorHandling": {
+        "order": 28,
+        "title": "错误和异常",
+        "description": "学习通过捕获、引发和定义异常来处理错误"
     }
 }
