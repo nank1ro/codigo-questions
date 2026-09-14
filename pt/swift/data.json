@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Expressões Regulares",
         "description": "Corresponda e transforme texto com expressões regulares"
+    },
+    "protocols": {
+        "order": 28,
+        "title": "Protocolos",
+        "description": "Defina requisitos que tipos podem adotar e estender"
     }
 }

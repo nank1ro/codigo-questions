@@ -133,5 +133,10 @@
         "order": 27,
         "title": "Reguläre Ausdrücke",
         "description": "Lerne, wie man Text mit regulären Ausdrücken trifft und umwandelt"
+    },
+    "protocols": {
+        "order": 28,
+        "title": "Protokolle",
+        "description": "Lerne, wie man Anforderungen definiert, die Typen annehmen und erweitern können"
     }
 }

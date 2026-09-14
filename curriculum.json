@@ -779,6 +779,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -819,7 +824,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "en": [
@@ -1602,6 +1607,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -1642,7 +1652,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "es": [
@@ -2425,6 +2435,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -2465,7 +2480,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "fr": [
@@ -3248,6 +3263,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -3288,7 +3308,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "hi": [
@@ -4071,6 +4091,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -4111,7 +4136,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "it": [
@@ -4894,6 +4919,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -4934,7 +4964,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "ja": [
@@ -5717,6 +5747,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -5757,7 +5792,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "ko": [
@@ -6540,6 +6575,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -6580,7 +6620,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "pl": [
@@ -7363,6 +7403,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -7403,7 +7448,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "pt": [
@@ -8186,6 +8231,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -8226,7 +8276,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "ru": [
@@ -9009,6 +9059,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -9049,7 +9104,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ],
   "zh": [
@@ -9832,6 +9887,11 @@
           "totalExercises": 10
         },
         {
+          "name": "protocols",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "regex",
           "trainUntil": 15,
           "totalExercises": 16
@@ -9872,7 +9932,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 490
+      "totalExercises": 506
     }
   ]
 }
