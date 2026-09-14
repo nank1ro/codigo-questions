@@ -103,5 +103,10 @@
         "order": 21,
         "title": "链表",
         "description": "学习如何用结构体、指针和 malloc 构建并遍历单链表"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "位运算符",
+        "description": "使用与、或、异或、取反和移位操作单个比特位"
     }
 }

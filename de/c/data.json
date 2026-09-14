@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Verkettete Listen",
         "description": "Lerne, einfach verkettete Listen mit structs, Zeigern und malloc aufzubauen und zu durchlaufen"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Bitweise Operatoren",
+        "description": "Lerne, mit AND, OR, XOR, NOT und Shifts einzelne Bits zu bearbeiten"
     }
 }

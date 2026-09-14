@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Liste concatenate",
         "description": "Costruisci e attraversa liste concatenate semplici con struct, puntatori e malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Operatori bit a bit",
+        "description": "Lavora con i singoli bit usando AND, OR, XOR, NOT e gli scorrimenti"
     }
 }

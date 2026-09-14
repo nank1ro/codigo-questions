@@ -103,5 +103,10 @@
         "order": 21,
         "title": "Listas Ligadas",
         "description": "Construa e percorra listas ligadas simples com structs, ponteiros e malloc"
+    },
+    "bitwiseOperators": {
+        "order": 22,
+        "title": "Operadores Bit a Bit",
+        "description": "Trabalhe com bits individuais usando AND, OR, XOR, NOT e deslocamentos"
     }
 }
