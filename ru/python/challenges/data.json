@@ -102,5 +102,9 @@
   "luhn": {
     "difficulty": 2,
     "name": "Контрольная сумма Луна"
+  },
+  "pangram": {
+    "difficulty": 1,
+    "name": "Панграмма"
   }
 }

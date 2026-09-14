@@ -102,5 +102,9 @@
   "luhn": {
     "difficulty": 2,
     "name": "Luhnチェックサム"
+  },
+  "pangram": {
+    "difficulty": 1,
+    "name": "パングラム"
   }
 }
