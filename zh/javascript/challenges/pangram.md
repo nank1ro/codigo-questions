@@ -2,7 +2,7 @@
 language: javascript
 exerciseType: 1
 difficulty: 1
-title: Pangram
+title: 全字母句
 ---
 
 # --description--
