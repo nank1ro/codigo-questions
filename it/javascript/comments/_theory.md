@@ -2,7 +2,7 @@ Un **commento** è una nota scritta dentro il codice sorgente per chi lo legge. 
 
 Il commento più semplice è il **commento su una riga**: inizia con `//` e arriva fino alla fine della riga.
 ```javascript
-// Greets the user
+// Saluta l'utente
 console.log("Hello");
 ```
 Usa i commenti per spiegare a cosa serve una parte di codice, o perché è stata scritta in quel modo. Nota che, a differenza di altri linguaggi, `#` **non** inizia un commento in JavaScript.
@@ -11,7 +11,7 @@ Usa i commenti per spiegare a cosa serve una parte di codice, o perché è stata
 
 Un commento non ha bisogno di una riga tutta sua: può seguire il codice sulla stessa riga. Questo è un **commento in linea** (o commento finale), ed è un buon posto per una breve nota su quella specifica istruzione:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // rinuncia dopo tre tentativi
 ```
 Tutto ciò che va da `//` alla fine della riga viene ignorato, mentre il codice che lo precede viene eseguito normalmente.
 
@@ -23,7 +23,7 @@ Questo rende `//` un modo rapido per disattivare una riga di codice senza cancel
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // stampa 10
 ```
 La seconda riga ora è un commento, quindi `total` resta `10`. Togliendo il `//` la riga torna a vivere.
 
@@ -47,7 +47,7 @@ Qualunque tipo di commento tu usi, la regola è la stessa: il testo al suo inter
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// stampa solo a
 ```
 Quando non sei sicuro di cosa stampi un programma, cancella mentalmente ogni commento e leggi quello che resta.
 
@@ -55,8 +55,8 @@ Quando non sei sicuro di cosa stampi un programma, cancella mentalmente ogni com
 
 A differenza di `//`, che si ferma alla fine della riga, un commento `/*` si ferma solo al `*/`. Se dimentichi di chiuderlo, JavaScript considera tutto il codice successivo come parte del commento e segnala un errore di sintassi:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* in centimetri
+console.log(width); // ancora dentro il commento: SyntaxError, il commento non viene mai chiuso
 ```
 Sia `//` sia `/* */` funzionano come commenti in linea, ma con `/*` assicurati sempre che il `*/` ci sia.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // stampa 100
 ```
 Poiché le righe dentro al blocco vengono ignorate, `total` non cambia mai. Ricorda che questo funziona solo se nessuna di quelle righe contiene un `*/`.
 
@@ -158,12 +158,12 @@ JavaScript ignora questa riga esattamente come un commento, ma solo quando è la
 
 Un buon commento spiega **perché** il codice fa qualcosa, non **cosa** fa. Il codice mostra già cosa succede; ripeterlo a parole aggiunge rumore e diventa obsoleto non appena il codice cambia:
 ```javascript
-// set timeout to 30
+// imposta il timeout a 30
 const timeout = 30;
 ```
 Il motivo dietro quel numero è ciò che chi legge non può indovinare:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// il server chiude le connessioni inattive dopo 35 secondi, quindi fermati prima
 const timeout = 30;
 ```
 Se un commento si limita a ripetere la riga sottostante, eliminalo o sostituiscilo con il motivo.
@@ -176,8 +176,8 @@ Alcuni commenti seguono una convenzione che gli editor riconoscono. I **marcator
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: leggi il limite dalle impostazioni
+// FIXME: si blocca quando la lista è vuota
 ```
 Per JavaScript sono commenti ordinari; gli editor li elencano così il lavoro in sospeso è facile da trovare. Un `TODO` di solito sta accanto a un segnaposto che tiene in piedi il codice finché non viene scritta l'implementazione vera. Quando completi il lavoro, sostituisci il segnaposto ed elimina il marcatore nella stessa modifica: un `TODO` obsoleto è fuorviante.
 

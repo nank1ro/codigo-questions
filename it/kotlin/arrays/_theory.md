@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// stampa x, poi y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 Anche quando un array è dichiarato con `val`, i suoi **elementi** possono essere sostituiti assegnando un valore a un indice:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums è ora [10, 2, 3]
 ```
 Per visitare ogni elemento puoi usare un ciclo `for` o `forEach`:
 ```kotlin
@@ -83,8 +83,8 @@ Gli array possono essere ordinati **sul posto** oppure copiati in una nuova coll
 - `sorted()`, `sortedDescending()` e `reversed()` lasciano l'array invariato e restituiscono una nuova `List`
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums è ora [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums è ancora [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ La differenza principale tra un array e una `MutableList` è che un array ha una
 Espressioni come `nums + 4` non fanno crescere `nums`, ma costruiscono un array completamente nuovo:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok, nums è [9, 2, 3]
+val bigger = nums + 4    // nuovo array [9, 2, 3, 4], nums ha ancora 3 elementi
 ```
 Preferisci una `MutableList` quando il numero di elementi cambia nel tempo, e un array quando è noto in anticipo o quando ti serve la performance dei tipi primitivi.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// stampano entrambi 0 -> cat, poi 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, le liste confrontano i loro elementi
 ```
 
 ---

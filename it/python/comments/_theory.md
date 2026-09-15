@@ -2,7 +2,7 @@ Un **commento** è una nota scritta dentro il codice sorgente per le persone che
 
 L'unico tipo di commento che Python possiede è il **commento su singola riga**: inizia con `#` e prosegue fino alla fine della riga.
 ```python
-# Greets the user
+# Saluta l'utente
 print("Hello")
 ```
 Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato scritto in quel modo.
@@ -11,7 +11,7 @@ Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato 
 
 Un commento non ha bisogno di una riga tutta per sé: può seguire il codice sulla stessa riga. Questo è un **commento in linea**, ed è un buon posto per una breve nota su quella specifica istruzione:
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # rinuncia dopo tre tentativi
 ```
 Tutto ciò che va da `#` alla fine della riga viene ignorato, mentre il codice prima di esso viene eseguito come al solito.
 
@@ -25,7 +25,7 @@ Questo fa di `#` un modo rapido per disattivare una riga di codice senza elimina
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # stampa 10
 ```
 La seconda riga ora è un commento, quindi `total` resta `10`. Togliendo il `#` la riga torna in vita.
 
@@ -37,8 +37,8 @@ Molti linguaggi hanno un secondo tipo di commento, un **commento a blocco** che 
 
 Quando una spiegazione ha bisogno di più di una riga, metti un `#` davanti a ogni riga:
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# Stampa il banner di benvenuto.
+# Chiamata una volta all'avvio dell'app.
 print("Welcome!")
 ```
 Lo stesso trucco commenta più righe di codice in una volta: un `#` per riga. Qualsiasi editor sa aggiungere o rimuovere quei `#` per un'intera selezione con una singola scorciatoia, quindi costa meno di quanto sembri.
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # Restituisce il saluto per name.
 ```
 Quando una funzione non ha una docstring, `__doc__` è `None`. Questo è ciò che stampa `help(greet)`, e ciò che mostra un editor quando passi con il mouse sopra il nome.
 
@@ -121,7 +121,7 @@ Un **commento** è per chi **legge** il codice: perché questa riga è scritta i
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # il server chiude le connessioni inattive dopo 35 secondi
     return 30
 ```
 Quindi: la documentazione della funzione va nella docstring, le note sull'implementazione vanno nei commenti.
@@ -151,7 +151,7 @@ Alcuni commenti seguono una convenzione che gli editor capiscono. I **marcatori*
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: leggi il limite dalle impostazioni
 ```
 Per Python sono commenti ordinari; gli editor li raccolgono in un pannello dedicato, così il lavoro in sospeso è facile da trovare. Un `TODO` di solito sta accanto a un segnaposto che mantiene il programma in esecuzione finché il vero codice non viene scritto.
 
@@ -162,7 +162,7 @@ Quando finisci il lavoro, sostituisci il segnaposto ed elimina il marcatore nell
 Un commento posto sopra una funzione per dire cosa fa la funzione si trova nel posto sbagliato. La docstring è il posto giusto per questo: è allegata alla funzione, `help()` la trova e gli editor la mostrano, mentre un commento `#` sopra il `def` è invisibile a tutti quanti.
 
 ```python
-# adds a and b
+# somma a e b
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ Il primo `#` fa parte del testo, il secondo invece avvia un vero commento. Lo st
 
 Un buon commento spiega **perché** il codice fa qualcosa, non **cosa** fa. Il codice mostra già cosa succede; ripeterlo a parole aggiunge rumore e diventa superato appena il codice cambia:
 ```python
-# set timeout to 30
+# imposta il timeout a 30
 timeout = 30
 ```
 Il motivo dietro al numero è ciò che un lettore non può indovinare:
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# il server chiude le connessioni inattive dopo 35 secondi, quindi fermati prima
 timeout = 30
 ```
 Se un commento si limita a ripetere la riga sotto di sé, eliminalo o sostituiscilo con il motivo. I migliori commenti sono quelli che dicono qualcosa che il codice non può dire.

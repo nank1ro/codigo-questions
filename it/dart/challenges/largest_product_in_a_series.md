@@ -16,7 +16,7 @@ Scrivi una funzione che trovi le `n` cifre adiacenti nel numero di 1000 cifre (c
 Esempio di chiamata alla funzione:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// stampa 5832
 ```
 
 # --seed--

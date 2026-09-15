@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// stampa 5
 ```
 Una **funzione freccia** è un modo più breve di scrivere la stessa cosa: elimina la parola chiave `function` e metti una "freccia grassa" `=>` tra la lista dei parametri e il corpo:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// stampa 5
 ```
 Le funzioni freccia sono di solito memorizzate in una `const`, così il nome non può essere riassegnato per errore, e si chiamano esattamente come qualsiasi altra funzione.
 
@@ -23,13 +23,13 @@ Quando il corpo è una **singola espressione**, puoi eliminare le parentesi graf
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// stampa 5
 ```
 Quando c'è **esattamente un parametro**, puoi eliminare anche le parentesi tonde attorno ad esso:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// stampa 8
 ```
 Con zero parametri o con due o più, le parentesi sono obbligatorie: `() => 42` e `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ C'è una trappola con il return implicito. Una funzione freccia il cui corpo ini
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// stampa undefined
 ```
 Qui `{ name: name }` è un blocco che contiene l'etichetta `name:` seguita dall'espressione `name`. Non viene restituito nulla, quindi la chiamata dà `undefined`.
 Per restituire un oggetto letterale su una sola riga, racchiudilo tra **parentesi** in modo che JavaScript lo tratti come un'espressione:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// stampa { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ Racchiudere l'oggetto letterale tra parentesi è il modo standard di costruire o
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// stampa 30
 ```
 Una funzione freccia senza parametri inizia con una coppia di parentesi vuote `()`:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// stampa {}
 ```
 
 ---
@@ -71,9 +71,9 @@ Le funzioni freccia danno il meglio come **callback**: funzioni passate come arg
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// stampa [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// stampa [ 3, 4 ]
 ```
 Entrambi restituiscono un nuovo array e lasciano intatto l'originale, quindi puoi concatenarli: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ Altri due metodi degli array accettano un callback.
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// stampa 1, 2 e 3 su tre righe
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// stampa 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// stampa [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// stampa 70
 ```
 
 ---
@@ -111,9 +111,9 @@ Un **valore predefinito** viene usato quando l'argomento è omesso o è `undefin
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// stampa Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// stampa Hello, Ana!
 ```
 Nota che un parametro con un valore predefinito ha sempre bisogno delle parentesi, anche quando è l'unico: `name = "World" => ...` è un errore di sintassi.
 
@@ -123,7 +123,7 @@ Un **parametro rest** `...name` raccoglie un numero qualsiasi di argomenti in un
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// stampa 3
 ```
 Anche le funzioni normali hanno un oggetto nascosto `arguments`, simile a un array, che contiene tutti gli argomenti ricevuti. Le funzioni freccia **no**: dentro una freccia, `arguments` si riferisce agli `arguments` della funzione circostante oppure non esiste affatto. Ogni volta che ti servono "tutti gli argomenti" in una funzione freccia, usa un parametro rest.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// stampa 1
 console.log(next());
-// prints 2
+// stampa 2
 ```
 Nessun altro può leggere o azzerare `count`: vive solo dentro la funzione restituita. Una seconda chiamata a `makeCounter()` crea un contatore indipendente con il proprio `count`.
 
@@ -154,8 +154,8 @@ Dato che una funzione è un valore, una funzione freccia può **restituire un'al
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// stampa 15
 console.log(makeAdder(1)(5));
-// prints 6
+// stampa 6
 ```
 Leggila da sinistra a destra: `makeAdder` prende `amount` e restituisce `(n) => n + amount`, una funzione freccia che cattura `amount` tramite una closure. `makeAdder(1)(5)` chiama immediatamente la funzione restituita.

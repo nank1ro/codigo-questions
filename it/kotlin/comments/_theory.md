@@ -2,7 +2,7 @@ Un **commento** è una nota scritta dentro il codice sorgente per le persone che
 
 Il commento più semplice è il **commento su una riga**: inizia con `//` e continua fino alla fine della riga.
 ```kotlin
-// Greets the user
+// Saluta l'utente
 println("Hello")
 ```
 Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato scritto in quel modo.
@@ -11,7 +11,7 @@ Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato 
 
 Un commento non ha bisogno di una riga tutta per sé: può seguire il codice sulla stessa riga. Questo è un **commento a fine riga**, ed è un buon posto per una breve nota su quella specifica istruzione:
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // rinuncia dopo tre tentativi
 ```
 Tutto ciò che va da `//` alla fine della riga viene ignorato, mentre il codice che lo precede viene eseguito come di consueto.
 
@@ -23,7 +23,7 @@ Questo rende `//` un modo rapido per disattivare una riga di codice senza elimin
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // stampa 10
 ```
 La seconda riga ora è un commento, quindi `total` rimane `10`. Togliendo il `//` la riga torna in vita.
 
@@ -45,8 +45,8 @@ Un commento a blocco può anche essere breve e stare su una sola riga: `/* like 
 
 A differenza di `//`, che si ferma alla fine della riga, un commento `/*` si ferma solo al `*/`. Se dimentichi di chiuderlo, il compilatore tratta tutto il codice successivo come parte del commento e segnala un errore:
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* in centimetri
+println(width) // ancora dentro il commento: errore, il commento non viene mai chiuso
 ```
 Sia `//` che `/* */` funzionano come commenti a fine riga, ma con `/*` assicurati sempre che il `*/` sia presente.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // stampa 100
 ```
 Grazie all'annidamento, questo funziona anche quando una di quelle righe contiene già un commento `/* */`.
 
@@ -159,7 +159,7 @@ Alcuni commenti seguono una convenzione che gli editor capiscono. I **marker** p
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: leggi il limite dalle impostazioni
 ```
 Per il compilatore sono commenti ordinari; IntelliJ IDEA li raccoglie in una finestra dedicata, così il lavoro in sospeso è facile da trovare. Un `TODO` di solito sta accanto a un segnaposto che mantiene il codice compilabile finché non viene scritta l'implementazione vera e propria. Quando completi il lavoro, sostituisci il segnaposto e rimuovi il marker nella stessa modifica, così il commento non mente mai sullo stato del codice.
 
@@ -171,12 +171,12 @@ Un `FIXME` è diverso da un `TODO`: il codice esiste già, ma si sa che è sbagl
 
 Un buon commento spiega **perché** il codice fa qualcosa, non **cosa** fa. Il codice mostra già cosa succede; ripeterlo a parole aggiunge solo rumore e diventa obsoleto appena il codice cambia:
 ```kotlin
-// set timeout to 30
+// imposta il timeout a 30
 val timeout = 30
 ```
 Il motivo che sta dietro al numero è ciò che un lettore non può indovinare:
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// il server chiude le connessioni inattive dopo 35 secondi, quindi fermati prima
 val timeout = 30
 ```
 Se un commento si limita a ripetere la riga sotto di sé, eliminalo o sostituiscilo con il motivo. I commenti migliori sono quelli che dicono qualcosa che il codice non può dire.

@@ -79,7 +79,7 @@ Nota che `int(3.9)` non arrotonda: scarta la parte decimale.
 Una conversione può fallire. `int("abc")` non può produrre un numero, quindi solleva un `ValueError` e il programma si ferma:
 ```python
 int("abc")   # ValueError: invalid literal for int() with base 10: 'abc'
-int("3.5")   # ValueError as well: "3.5" is not a whole number
+int("3.5")   # ValueError anche: "3.5" non è un numero intero
 ```
 Per far continuare il programma puoi intercettare l'errore con `try` / `except`: il codice nel blocco `try` viene eseguito, e se solleva l'errore indicato viene eseguito invece il blocco `except`:
 ```python

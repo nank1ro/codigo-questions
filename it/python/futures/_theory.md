@@ -49,7 +49,7 @@ Chiamare una funzione coroutine non basta per eseguirla. La chiamata costruisce 
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # non viene stampato nulla
 ```
 Python lo segnala persino con un avviso: `RuntimeWarning: coroutine 'hello' was never awaited`. Un `await` dimenticato è il bug asincrono più comune: il codice sembra chiamato ma non viene mai eseguito, e ogni variabile che dovrebbe contenere il suo risultato contiene invece un oggetto coroutine.
 
@@ -60,7 +60,7 @@ Le coroutine si chiamano tra loro con `await`. Una coroutine può attendere qual
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # simula una ricerca lenta
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # stampa una riga vuota
 ```
 Un'eccezione che nessuno cattura si propaga attraverso ogni `await` fino a `asyncio.run`, che la rilancia nel codice sincrono, esattamente come un normale stack di chiamate.
 

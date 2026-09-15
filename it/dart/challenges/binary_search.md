@@ -20,7 +20,7 @@ La lista non contiene mai duplicati, quindi l'indice è sempre unico. La lista p
 Esempio di chiamata di funzione:
 ```dart
 print(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// stampa 2
 ```
 
 # --seed--

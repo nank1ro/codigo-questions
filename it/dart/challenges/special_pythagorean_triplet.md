@@ -18,7 +18,7 @@ Scrivi una funzione che trovi la terna pitagorica in cui a + b + c è uguale a `
 Esempio di chiamata alla funzione:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// stampa 60
 ```
 
 # --seed--

@@ -13,7 +13,7 @@ L'**operatore di assegnazione di addizione** `+=` aggiunge un valore a una varia
 
 ```dart
 int score = 10;
-score += 5; // score is now 15
+score += 5; // score ora è 15
 ```
 
 Questo è un'abbreviazione per `score = score + 5`.
@@ -24,7 +24,7 @@ L'**operatore di assegnazione di sottrazione** `-=` sottrae un valore da una var
 
 ```dart
 int lives = 3;
-lives -= 1; // lives is now 2
+lives -= 1; // lives ora è 2
 ```
 
 Questo è un'abbreviazione per `lives = lives - 1`.
@@ -35,7 +35,7 @@ L'**operatore di assegnazione di moltiplicazione** `*=` moltiplica una variabile
 
 ```dart
 int side = 4;
-side *= 3; // side is now 12
+side *= 3; // side ora è 12
 ```
 
 Questo è un'abbreviazione per `side = side * 3`.

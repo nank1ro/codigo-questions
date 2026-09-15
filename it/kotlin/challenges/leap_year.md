@@ -18,7 +18,7 @@ Restituisci `true` se è un anno bisestile, `false` altrimenti.
 Esempio di chiamata di funzione:
 ```kotlin
 println(leapYear(2000))
-// prints true
+// stampa true
 ```
 
 # --seed--

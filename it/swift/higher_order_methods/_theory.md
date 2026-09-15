@@ -139,7 +139,7 @@ Dentro la closure `$0` è l'elemento della prima sequenza e `$1` quello della se
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// stampa 1 e 3
 ```
 Usa `forEach` per un breve effetto collaterale su ogni elemento, e `for-in` quando ti serve fermarti in anticipo.
 

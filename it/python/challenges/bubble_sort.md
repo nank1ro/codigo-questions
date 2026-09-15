@@ -20,7 +20,7 @@ La tua funzione deve funzionare anche con un array vuoto, un array con un solo e
 Esempio di chiamata di funzione:
 ```python
 print(bubble_sort([3, 1, 2]))
-# prints [1, 2, 3]
+# stampa [1, 2, 3]
 ```
 
 # --seed--

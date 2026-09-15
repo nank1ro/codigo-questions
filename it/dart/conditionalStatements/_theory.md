@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// stampa: Cold
 ```
 
 Esattamente uno dei due rami viene sempre eseguito.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// stampa: B
 ```
 
 ---

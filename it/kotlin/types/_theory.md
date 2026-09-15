@@ -42,8 +42,8 @@ Un letterale decimale non viene mai dedotto come `Float`: `val ratio = 0.5` è u
 Un `Int` può contenere numeri interi fino a circa due miliardi, più precisamente fino a `Int.MAX_VALUE`, che è `2147483647`.
 Un letterale intero troppo grande per un `Int` viene automaticamente dedotto come un `Long`, e puoi forzare un `Long` per qualsiasi letterale con il suffisso `L`:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, troppo grande per un Int
+val small = 3L        // Long, grazie al suffisso
 ```
 Allo stesso modo il suffisso `f` trasforma un letterale decimale in un `Float`: `val ratio = 0.5f`.
 I numeri lunghi sono difficili da leggere, quindi Kotlin ti permette di inserire underscore `_` in qualsiasi punto tra le cifre; vengono ignorati dal compilatore:
@@ -58,8 +58,8 @@ println(million) // 1000000
 Kotlin non converte mai da solo tra tipi numerici quando assegni un valore, nemmeno da un tipo più piccolo a uno più grande: memorizzare un `Int` in una variabile `Long` o `Double` è un errore di compilazione.
 ```kotlin
 val count = 3
-val total: Long = count      // error: Int is not a Long
-val price: Double = count    // error: Int is not a Double
+val total: Long = count      // errore: Int non è un Long
+val price: Double = count    // errore: Int non è un Double
 ```
 Ogni tipo numerico ha **funzioni di conversione** che creano un nuovo valore del tipo di cui hai bisogno: `toInt()`, `toLong()`, `toDouble()`, `toFloat()` e, per ottenere testo, `toString()`.
 ```kotlin
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, non è un numero intero
+println(" 42".toIntOrNull())  // null, gli spazi non sono consentiti
 println("abc".toIntOrNull())  // null
 ```
 Per il testo decimale usa `toDoubleOrNull()`, che accetta `"3.5"` e restituisce un `Double?` allo stesso modo.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 Una volta superato un controllo, il compilatore esegue uno **smart cast** del valore: dentro l'`if` (o il ramo del `when`) puoi usarlo come quel tipo, senza bisogno di conversioni:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value è un Int qui
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

@@ -20,7 +20,7 @@ L'array non contiene mai duplicati, quindi l'indice √® sempre unico. L'array pu√
 Esempio di chiamata di funzione:
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// stampa 2
 ```
 
 # --seed--

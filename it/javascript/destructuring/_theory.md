@@ -9,7 +9,7 @@ Il **destructuring** fa lo stesso lavoro in una riga. A sinistra di `=` scrivi u
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// stampa 3 7
 ```
 Il pattern non deve coprire tutto l'array: gli elementi in più vengono semplicemente ignorati, e un nome senza un elemento corrispondente diventa `undefined`.
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// stampa 5
 ```
 Nell'array originale non viene copiato né modificato nulla, il pattern si limita a leggerlo.
 
@@ -33,7 +33,7 @@ A volte conta solo un elemento nascosto nell'array. Puoi lasciare una posizione 
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// stampa 64
 ```
 Conta le virgole, non i nomi: ogni virgola sposta il pattern in avanti di una posizione, che ci sia un nome prima o no.
 
@@ -44,7 +44,7 @@ Un array non è sempre lungo quanto il pattern si aspetta. Scrivere `= value` do
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// stampa 1920 1080
 ```
 Il valore predefinito viene valutato solo quando serve, quindi può essere persino una chiamata di funzione, e si può dare un valore predefinito a qualsiasi posizione, non solo all'ultima.
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// stampa 2 1
 ```
 Il lato destro viene costruito prima, quindi entrambi i vecchi valori sono già al sicuro nell'array temporaneo quando avviene l'assegnamento. Attento al punto e virgola nella riga precedente: altrimenti una riga che inizia con `[` verrebbe letta come un indice di ciò che la precede.
 
@@ -67,7 +67,7 @@ Anche gli oggetti possono essere destrutturati, con le graffe al posto delle qua
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// stampa Ada 36
 ```
 Scambiare `age` e `name` nel pattern non cambia nulla, e le chiavi che il pattern non menziona vengono semplicemente lasciate dov'è. Un nome senza una chiave corrispondente diventa `undefined`.
 
@@ -78,7 +78,7 @@ I pattern degli oggetti si combinano con i valori predefiniti esattamente come q
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// stampa dark en
 ```
 Siccome l'intero pattern è una sola istruzione, una funzione può estrarre tutto ciò che le serve dal suo argomento nella primissima riga.
 
@@ -89,7 +89,7 @@ Un pattern di oggetto nomia le sue variabili come le chiavi, il che è scomodo q
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// stampa Ada 1815
 ```
 Leggilo come "prendi `n`, chiamalo `name`". I due punti non dichiarano un tipo, e `n` in sé non viene mai creata come variabile: l'unica variabile creata è `name`. Un nome rinominato può comunque ricevere un valore predefinito, scritto dopo: `{ n: name = "unknown" }`.
 
@@ -99,7 +99,7 @@ I valori predefiniti hanno una regola che sorprende tutti: valgono **solo** per 
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// stampa 0
 ```
 `null` si comporta qui come `0`, anche se spesso significa "nessun valore" in una risposta di un'API. Quando anche `null` deve essere sostituito, destruttura prima e ripiega dopo con `??`.
 
@@ -110,7 +110,7 @@ Quando una chiave contiene un altro oggetto o un array, il pattern può semplice
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// stampa London
 ```
 Attenzione a ciò che quella riga crea: `address: { city }` significa "entra in `address`", non "dammi `address`", quindi solo `city` diventa una variabile. Per ottenere entrambi, cita la chiave due volte: `const { address, address: { city } } = user;`. I pattern di array e di oggetto si annidano liberamente uno dentro l'altro, come in `{ tags: [first] }`.
 
@@ -121,7 +121,7 @@ Prendere la testa di un array e conservarne la coda è un'esigenza così comune 
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// stampa a [ 'b', 'c' ]
 ```
 Un elemento rest deve stare per ultimo nel pattern e non può avere un valore predefinito: quando non resta nulla, è semplicemente un array vuoto.
 
@@ -132,7 +132,7 @@ Anche i pattern di oggetto hanno un rest, e lì raccoglie in un nuovo oggetto tu
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// stampa { name: 'Ada', city: 'London' }
 ```
 È il modo più breve per costruire una copia di un oggetto senza una delle sue chiavi: l'originale non viene mai toccato e l'oggetto rest è nuovo e contiene i valori rimanenti.
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// stampa 12
 ```
 Dentro il corpo non esiste alcuna variabile oggetto, solo `width` e `height`. Chi chiama passa un unico oggetto, ma la firma documenta esattamente quali chiavi la funzione legge, e le chiavi possono arrivare in qualsiasi ordine.
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// stampa guest/false
 ```
 Leggi la riga dall'esterno verso l'interno: `= {}` fornisce un oggetto vuoto quando l'argomento manca, e poi ogni valore predefinito interno riempie la propria chiave.
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// stampa ada is 36
+// stampa bob is 41
 ```
 È il modo leggibile per percorrere un oggetto: niente indici, niente accessi, solo i due nomi che ti interessano. `Object.keys` e `Object.values` danno un solo lato ciascuno, `Object.entries` li dà entrambi.
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// stampa Post [js] +2
 ```
 Mantieni la leggibilità: un pattern che non sta più in un paio di righe di solito è il segno che la funzione sta chiedendo troppo.

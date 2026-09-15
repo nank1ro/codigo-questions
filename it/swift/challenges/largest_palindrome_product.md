@@ -16,7 +16,7 @@ Scrivi una funzione che trova il palindromo più grande ottenuto dal prodotto di
 Esempio di chiamata alla funzione:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// stampa 9009
 ```
 
 # --before-seed--

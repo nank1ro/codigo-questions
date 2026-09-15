@@ -41,7 +41,7 @@ int a = 10;
 int b = 4;
 double result = a / b; // 2.5
 
-double exact = 10 / 2; // 5.0  (not 5!)
+double exact = 10 / 2; // 5.0  (non 5!)
 ```
 
 Usa sempre una variabile `double` per memorizzare il risultato di `/`.
@@ -53,7 +53,7 @@ L'**operatore di divisione intera** `~/` divide due numeri e **tronca** il risul
 ```dart
 int a = 10;
 int b = 3;
-int result = a ~/ b; // 3  (not 3.333...)
+int result = a ~/ b; // 3  (non 3.333...)
 ```
 
 Usa `~/` quando hai bisogno di un quoziente intero senza resto.

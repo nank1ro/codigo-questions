@@ -29,7 +29,7 @@ Scrivi una funzione `isValid` che riceve una stringa e restituisce `true` quando
 Esempio di chiamata di funzione:
 ```swift
 print(isValid("095 245 88"))
-// prints true
+// stampa true
 ```
 
 # --before-seed--

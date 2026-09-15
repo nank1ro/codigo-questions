@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca il palindromo più grande formato come prodo
 Esempio di chiamata alla funzione:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// stampa 9009
 ```
 
 # --seed--

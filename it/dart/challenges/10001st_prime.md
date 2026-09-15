@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca l'`n`-esimo numero primo.
 Esempio di chiamata alla funzione:
 ```dart
 print(nthPrime(6));
-// prints 13
+// stampa 13
 ```
 
 # --seed--

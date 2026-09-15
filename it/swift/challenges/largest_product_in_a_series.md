@@ -16,7 +16,7 @@ Scrivi una funzione che trova le n cifre adiacenti del numero da 1000 cifre con 
 Esempio di chiamata alla funzione:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// stampa 5832
 ```
 
 # --before-seed--

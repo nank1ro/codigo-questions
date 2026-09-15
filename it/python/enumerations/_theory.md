@@ -154,7 +154,7 @@ Se due membri condividono lo stesso valore, il secondo non è un nuovo membro ma
 ```python
 class Status(Enum):
     ACTIVE = 1
-    ENABLED = 1  # alias of ACTIVE
+    ENABLED = 1  # alias di ACTIVE
 
 print(Status.ENABLED)  # Status.ACTIVE
 print(len(Status))     # 1
@@ -167,7 +167,7 @@ from enum import Enum, unique
 @unique
 class Status(Enum):
     ACTIVE = 1
-    ENABLED = 1  # ValueError: duplicate values found
+    ENABLED = 1  # ValueError: valori duplicati trovati
 ```
 
 ---

@@ -42,9 +42,9 @@ Un set `var` può essere modificato con `insert(_:)` e `remove(_:)`:
 ```swift
 var numbers: Set<Int> = [1, 2]
 numbers.insert(3) // {1, 2, 3}
-numbers.insert(2) // 2 is already there: nothing changes
+numbers.insert(2) // 2 è già presente: nulla cambia
 numbers.remove(1) // {2, 3}
-numbers.remove(9) // 9 is not there: nothing changes
+numbers.remove(9) // 9 non è presente: nulla cambia
 ```
 Inserire un valore già presente non ha alcun effetto, e rimuovere un valore assente non causa un errore.
 `remove(_:)` restituisce il valore rimosso come optional (`nil` quando non è stato rimosso nulla), così puoi verificare se la rimozione è effettivamente avvenuta.
@@ -57,6 +57,6 @@ Quando l'ordine è importante, chiama prima `sorted()`: restituisce un nuovo **a
 ```swift
 let numbers: Set<Int> = [3, 1, 2]
 for number in numbers.sorted() {
-    print(number) // 1, 2, 3 on separate lines
+    print(number) // 1, 2, 3 su righe separate
 }
 ```

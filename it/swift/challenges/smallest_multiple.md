@@ -16,7 +16,7 @@ Scrivi una funzione che restituisce il numero positivo più piccolo che sia divi
 Esempio di chiamata alla funzione:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// stampa 2520
 ```
 
 # --before-seed--

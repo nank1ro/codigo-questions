@@ -16,7 +16,7 @@ Scrivi una funzione che restituisce l'n-esimo numero primo.
 Esempio di chiamata alla funzione:
 ```swift
 print(nthPrime(6))
-// prints 13
+// stampa 13
 ```
 
 # --before-seed--

@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// stampa red
 ```
 Per convenzione l'oggetto viene dichiarato con `const`, il suo nome inizia con una lettera maiuscola e i nomi dei membri sono scritti in `UPPER_CASE`, esattamente come le altre costanti.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// stampa done
 ```
 Una volta congelato, l'oggetto non può nemmeno ricevere nuove proprietà, e `Object.isFrozen(obj)` ti dice se un oggetto è stato congelato:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// stampa true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// stampa s
 console.log(Size.MEDIUM);
-// prints undefined
+// stampa undefined
 ```
 In entrambi i casi l'enumerazione mantiene i valori che hai definito, che è esattamente ciò che vuoi da un insieme di costanti.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// stampa true
 ```
 Il compromesso è la leggibilità: stampare `Priority.HIGH` mostra `3`, che ti dice molto meno di quanto farebbe la stringa `"high"`.
 
@@ -70,14 +70,14 @@ Poiché un'enumerazione è solo un oggetto, i soliti strumenti per gli oggetti t
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// stampa [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// stampa [ 'red', 'blue' ]
 ```
 Combinare `Object.values()` con il metodo dell'array `includes()` è il modo standard per verificare se un valore arbitrario, ad esempio uno letto da un input dell'utente, è un membro valido:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// stampa true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// stampa false
 ```

@@ -217,7 +217,7 @@ struct Ticket: Priced {
     var price = 12
 }
 
-print(Ticket().price) // 12, not 0
+print(Ticket().price) // 12, non 0
 ```
 Il default riempie solo i vuoti che il tipo lascia aperti.
 
