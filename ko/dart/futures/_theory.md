@@ -65,12 +65,12 @@ future의 두 방향을 머릿속에서 분명히 구분하세요:
 
 ```dart
 Future<int> count() async {
-  return 3;                 // int, wrapped into Future<int>
+  return 3;                 // int, Future<int>로 감싸짐
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>, int로 언래핑됨
+  Future<int> f = count();  // await 없음: 여전히 Future<int>
 }
 ```
 
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // 두 타이머가 지금 시작됨
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // 한 번만 기다림, 총 약 20ms
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // 여기서 throw됨, loadTwice도 실패
+  return n * 2;             // 절대 실행되지 않음
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // 호출자가 원래 오류를 봄
   }
 }
 ```

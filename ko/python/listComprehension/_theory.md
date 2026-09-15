@@ -154,5 +154,5 @@ print(unique)  # {1, 2, 3}
 컴프리헨션은 또한 lambda를 사용한 `map()`과 `filter()`의 대부분의 용도를 대체합니다.
 ```python
 doubled = list(map(lambda n: n * 2, nums))
-doubled = [n * 2 for n in nums]  # same result, easier to read
+doubled = [n * 2 for n in nums]  # 결과는 같지만 더 읽기 쉬움
 ```

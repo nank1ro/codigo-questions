@@ -5,7 +5,7 @@
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // 반복될 코드
 }
 ```
 불리언 표현식은 루프의 시작 시 한 번 평가되고
@@ -46,7 +46,7 @@ while (counter < 100) { // [2]
 _while_을 사용하는 두 번째 방법이 있는데, `do` 키워드와 함께 사용합니다.
 ```kotlin
 do {
-  // Code to be repeated
+  // 반복될 코드
 } while (Boolean-expression)
 ```
 보시다시피 `do-while`은 `while` 루프와 매우 유사하지만, 한 가지 중요한 차이점이 있습니다:
@@ -71,7 +71,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// 1, 3을 출력합니다
 ```
 
 보시다시피 __[1]__에서 `i`가 _2_와 같을 때, 다음 단계로 건너뛰고 _continue_합니다. 실제로 숫자 2는 출력되지 않습니다.
@@ -86,7 +86,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// 1을 출력합니다
 ```
 
 보시다시피 __[1]__에서 `i`가 _2_와 같을 때, 루프를 _break_합니다. 실제로 숫자 2와 3은 출력되지 않습니다.

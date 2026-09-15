@@ -41,7 +41,7 @@ int a = 10;
 int b = 4;
 double result = a / b; // 2.5
 
-double exact = 10 / 2; // 5.0  (not 5!)
+double exact = 10 / 2; // 5.0  (5가 아님!)
 ```
 
 `/`의 결과를 저장하려면 항상 `double` 변수를 사용하십시오.
@@ -53,7 +53,7 @@ double exact = 10 / 2; // 5.0  (not 5!)
 ```dart
 int a = 10;
 int b = 3;
-int result = a ~/ b; // 3  (not 3.333...)
+int result = a ~/ b; // 3  (3.333...이 아님)
 ```
 
 나머지 없이 정수 몫이 필요할 때 `~/`을 사용하십시오.

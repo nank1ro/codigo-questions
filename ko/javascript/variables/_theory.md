@@ -12,7 +12,7 @@ var x = 1;
 변수 `x`를 출력하면 숫자 `1`을 돌려받습니다:
 ```javascript
 console.log(x);
-// prints 1
+// 1 출력
 ```
 
 ---
@@ -21,9 +21,9 @@ console.log(x);
 `=`를 사용하여 `x`에 새로운 값을 할당할 수 있습니다.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // 1 출력
 x = 2;
-console.log(x); // prints 2
+console.log(x); // 2 출력
 ```
 
 ---
@@ -33,7 +33,7 @@ console.log(x); // prints 2
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // 5 출력
 ```
 
 ---
@@ -42,9 +42,9 @@ console.log(y); // prints 5
 여기서 `x` 변수를 두 번 출력하여 값이 어떻게 업데이트되는지 확인할 수 있습니다.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // 5 출력
 x = 10;
-console.log(x); // prints 10
+console.log(x); // 10 출력
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 JavaScript에서 문자열 변수는 큰따옴표와 작은따옴표 모두를 사용하여 선언할 수 있습니다:
 ```javascript
 let x = "May";
-// both are the same string
+// 둘 다 같은 문자열
 let y = 'May';
 console.log(x === y);
-// prints true
+// true 출력
 ```
 
 ---

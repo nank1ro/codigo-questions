@@ -17,7 +17,7 @@ title: 산술 평균
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
-// prints 2.0
+// 2.0을 출력합니다
 ```
 
 # --seed--

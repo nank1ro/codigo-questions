@@ -16,7 +16,7 @@ title: 10001번째 소수
 함수 호출 예시:
 ```dart
 print(nthPrime(6));
-// prints 13
+// 출력: 13
 ```
 
 # --seed--

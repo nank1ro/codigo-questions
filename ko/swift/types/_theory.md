@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 추론된 타입과 다른 타입을 원하면 어노테이션을 추가합니다. 정수 리터럴은 `Double`이나 `Float` 상수에 저장할 수 있고, 한 문자 리터럴은 `Character` 상수에 저장할 수 있습니다:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, Int가 아님
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, 정수가 아님
+print(Int(" 42"))  // nil, 공백은 허용되지 않음
 print(Int("abc"))  // nil
 ```
 소수 텍스트에는 `Double(text)`을 사용하세요. 같은 방식으로 `Double?`을 반환합니다: `Double("3.5")`는 `Optional(3.5)`입니다.
@@ -166,7 +166,7 @@ for c in "a1" {
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, 정수도 유효한 Double임
 ```
 마지막 줄에 주목하세요: `Int`가 받아들이는 텍스트는 `Double`도 모두 받아들이므로, 둘을 구별하려면 먼저 `Int`로 확인해야 합니다.
 
@@ -180,7 +180,7 @@ let items: [Any] = [1, "two", true]
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // 1에 대해서만 실행됨
     }
 }
 ```

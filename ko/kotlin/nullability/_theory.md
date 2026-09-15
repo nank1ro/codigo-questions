@@ -7,7 +7,7 @@ var city: String = null // error: Null can not be a value of a non-null type Str
 `String?`은 `String` 또는 `null`을 담습니다:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // 허용됨
 println(city) // null
 ```
 `String`과 `String?`은 서로 다른 두 타입입니다: `String`은 없을 수 없고, `String?`은 없을 수 있습니다.
@@ -47,12 +47,12 @@ println(none?.length)   // null
 **엘비스(Elvis) 연산자** `?:`가 바로 그 일을 합니다: `null`이 아닐 때는 왼쪽을 반환하고, 그렇지 않으면 오른쪽의 값을 반환합니다:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown은 "Guest"와 같은 String입니다
 ```
 왼쪽이 `null`일 때만 오른쪽이 사용되므로, 기본값이 널이 아닐 때 결과도 널이 아닙니다.
 `?:`는 `?.`와 잘 어울려서 안전 호출을 다시 평범한 값으로 되돌려 줍니다:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len은 Int이며, name이 null이면 0입니다
 ```
 
 ---
@@ -62,7 +62,7 @@ val len = name?.length ?: 0 // len is an Int, 0 when name is null
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim()과 uppercase()는 실행되지 않습니다
 ```
 `?:`로 끝나는 연쇄는 한 줄에서 널이 아닌 결과를 줍니다:
 ```kotlin
@@ -103,7 +103,7 @@ println(none!!.length) // NullPointerException
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // 여기서 name은 String입니다
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ fun greet(name: String?): String {
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // 여기서부터 name은 String입니다
 }
 ```
 스마트 캐스트는 검사와 사용 사이에 값이 바뀔 수 없는 `val` 변수와 함수 매개변수에 동작합니다.
@@ -123,9 +123,9 @@ fun greet(name: String?): String {
 안전 호출과 결합하면 `?.let`은 값이 `null`이 **아닐 때만** 블록을 실행하고, 블록 안에서 `it`은 널이 아닙니다:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // Sending to ada@example.com를 출력합니다
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // 아무 일도 일어나지 않습니다
 ```
 블록 안에서만 값이 필요할 때 `if (x != null) { ... }`의 간결한 대안이 됩니다.
 
@@ -213,7 +213,7 @@ println(none.orDash()) // -
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // 여기서 first는 Char입니다
 }
 ```
 지금까지 본 모든 도구는 서로 잘 어울립니다: 널 가능 매개변수와 반환 타입은 값이 *어디에서* 없을 수 있는지 나타내고, `?.`, `?:`, `let`, 스마트 캐스트, `toIntOrNull`은 한 번도 크래시되지 않고 그것을 처리합니다.

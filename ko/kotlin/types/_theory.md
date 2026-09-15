@@ -42,8 +42,8 @@ println(price::class.simpleName) // Double
 `Int`는 약 20억까지의 정수를 담을 수 있으며, 더 정확히는 `2147483647`인 `Int.MAX_VALUE`까지 담을 수 있습니다.
 `Int`에는 너무 큰 정수 리터럴은 자동으로 `Long`으로 추론되고, 접미사 `L`을 붙여 어떤 리터럴이든 `Long`으로 강제할 수 있습니다:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, Int에 담기에는 너무 큽니다
+val small = 3L        // Long, 접미사 덕분입니다
 ```
 같은 방식으로 접미사 `f`는 소수 리터럴을 `Float`로 만듭니다: `val ratio = 0.5f`.
 긴 숫자는 읽기 어렵기 때문에, Kotlin은 숫자 사이 어디든 밑줄 `_`을 넣을 수 있게 해주며, 컴파일러는 이를 무시합니다:
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, 정수가 아닙니다
+println(" 42".toIntOrNull())  // null, 공백은 허용되지 않습니다
 println("abc".toIntOrNull())  // null
 ```
 소수 텍스트에는 `toDoubleOrNull()`을 사용하세요. 이 함수는 같은 방식으로 `"3.5"`를 받아들여 `Double?`을 반환합니다.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 검사를 통과하면 컴파일러가 값을 **스마트 캐스트**합니다: `if` 안(또는 `when` 분기 안)에서는 변환 없이 그 타입으로 사용할 수 있습니다:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, 여기서 value는 Int입니다
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

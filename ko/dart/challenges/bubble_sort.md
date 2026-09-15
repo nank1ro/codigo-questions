@@ -20,7 +20,7 @@ title: 버블 정렬
 함수 호출 예시:
 ```dart
 print(bubbleSort([3, 1, 2]));
-// prints [1, 2, 3]
+// 출력: [1, 2, 3]
 ```
 
 # --seed--

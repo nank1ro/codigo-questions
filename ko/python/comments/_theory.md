@@ -2,7 +2,7 @@
 
 Python에 있는 유일한 주석은 **한 줄 주석**입니다: `#`으로 시작해서 줄의 끝까지 이어집니다.
 ```python
-# Greets the user
+# 사용자에게 인사함
 print("Hello")
 ```
 주석을 사용해 어떤 코드가 무슨 일을 하는지, 또는 왜 그렇게 작성했는지 설명하세요.
@@ -11,7 +11,7 @@ print("Hello")
 
 주석은 꼭 자기 줄을 가질 필요가 없습니다: 같은 줄에서 코드 뒤에 붙을 수 있습니다. 이것을 **인라인 주석**이라고 하며, 그 문장에 대한 짧은 메모를 남기기 좋은 자리입니다:
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # 세 번 시도한 후 포기
 ```
 `#`부터 줄의 끝까지는 모두 무시되고, 그 앞의 코드는 평소처럼 실행됩니다.
 
@@ -25,7 +25,7 @@ Python은 주석을 완전히 버리기 때문에, 주석을 추가하거나 삭
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # 10 출력
 ```
 두 번째 줄은 이제 주석이므로 `total`은 `10`으로 유지됩니다. `#`을 제거하면 그 줄이 다시 살아납니다.
 
@@ -37,8 +37,8 @@ print(total)  # prints 10
 
 설명이 여러 줄에 걸쳐야 한다면, 모든 줄 앞에 `#`을 붙이세요:
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# 환영 배너를 출력합니다.
+# 앱이 시작될 때 한 번 호출됩니다.
 print("Welcome!")
 ```
 같은 요령으로 여러 줄의 코드를 한 번에 주석 처리할 수 있습니다: 줄마다 `#`을 하나씩 붙이는 것이죠. 모든 에디터는 단축키 하나로 선택한 영역 전체에 `#`을 추가하거나 제거할 수 있으므로, 생각보다 비용이 들지 않습니다.
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # name에 대한 인사말을 반환합니다.
 ```
 함수에 docstring이 없으면 `__doc__`은 `None`입니다. `help(greet)`가 출력하는 내용이자, 이름 위에 마우스를 올렸을 때 에디터가 보여 주는 내용입니다.
 
@@ -121,7 +121,7 @@ docstring과 `#` 주석은 비슷해 보이지만 서로 다른 질문에 답합
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # 서버는 35초 후 유휴 연결을 끊음
     return 30
 ```
 정리하면: 함수의 문서는 docstring에 들어가고, 구현에 대한 메모는 주석에 들어갑니다.
@@ -151,7 +151,7 @@ docstring은 다른 모든 문보다 위인 **본문의 첫 번째 줄**이어�
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: 설정에서 한도를 읽어오기
 ```
 Python에게 이것들은 평범한 주석이지만, 에디터는 전용 패널에 모아 주므로 남은 작업을 쉽게 찾을 수 있습니다. `TODO`는 보통 실제 코드가 작성될 때까지 프로그램이 돌아가게 유지하는 자리 표시자 옆에 놓입니다.
 
@@ -162,7 +162,7 @@ Python에게 이것들은 평범한 주석이지만, 에디터는 전용 패널�
 함수가 무엇을 하는지 설명하려고 함수 위에 놓인 주석은 잘못된 자리에 있는 것입니다. 그 역할은 docstring의 몫입니다: docstring은 함수에 붙어 있고 `help()`가 찾아 주며 에디터가 보여 주지만, `def` 위의 `#` 주석은 이들 모두에게 보이지 않습니다.
 
 ```python
-# adds a and b
+# a와 b를 더함
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ print("black is #000000")  # a hex colour
 
 좋은 주석은 코드가 **무엇을** 하는지가 아니라 **왜** 그렇게 하는지를 설명합니다. 코드는 이미 무슨 일이 일어나는지 보여 줍니다. 그것을 말로 반복하면 소음이 더해질 뿐이고, 코드가 바뀌는 순간 낡아 버립니다:
 ```python
-# set timeout to 30
+# timeout을 30으로 설정
 timeout = 30
 ```
 그 숫자 뒤에 숨은 이유가 바로 읽는 사람이 추측할 수 없는 부분입니다:
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# 서버는 35초 후 유휴 연결을 끊으므로 더 일찍 멈춤
 timeout = 30
 ```
 주석이 아래 줄을 그저 다시 말할 뿐이라면, 삭제하거나 이유로 바꾸세요. 최고의 주석은 코드가 말할 수 없는 것을 말하는 주석입니다.

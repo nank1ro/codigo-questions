@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// "Hello!" 출력
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)" 출력
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ console.log(sayHello("Smith", true));
 기본값이 정의되어 있으면 함수를 호출할 때 해당 매개변수를 생략할 수 있습니다
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // 여기서 작업 수행
 }
 ```
 
@@ -54,7 +54,7 @@ __나머지 매개변수__ 구문을 사용하면 불특정 다수의 인수를 
 
 함수에서 함수가 하는 일을 설명하는 _선택적 주석_을 추가할 수 있습니다:
 ```javascript
-// Prints 'Hello World' to the console.
+// 'Hello World'를 콘솔에 출력합니다.
 function helloWorld() {
     console.log("Hello, World!");
 }

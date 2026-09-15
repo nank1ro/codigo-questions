@@ -16,7 +16,7 @@ title: 수열에서 가장 큰 곱
 함수 호출 예시:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// 5832를 출력
 ```
 
 # --before-seed--

@@ -2,7 +2,7 @@
 Dart에서는 `+` 기호(연결)를 사용하여 두 개 이상의 문자열을 함께 표시할 수 있습니다. 예를 들면:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// 출력: "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ print("Hello " + "Dart!");
 `${}` 안에 조건식을 넣을 수도 있습니다. 예를 들면:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// 출력: The answer is correct
 ```
 
 ---

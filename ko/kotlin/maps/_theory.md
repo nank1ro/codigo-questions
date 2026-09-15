@@ -5,7 +5,7 @@ map 안에서 키는 고유하지만, 값은 중복될 수 있습니다.
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// {Italy=Rome, France=Paris}를 출력합니다
 ```
 여기서 `"Italy"`와 `"France"`가 키이고, `"Rome"`과 `"Paris"`가 각각의 값입니다.
 
@@ -38,10 +38,10 @@ println(ages.getOrDefault("Zoe", 0))   // 0
 `mapOf`로 만든 map은 읽기 전용입니다. 항목을 추가하거나 변경하려면 `MutableMap`을 반환하는 `mutableMapOf`를 사용합니다:
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // 새 항목을 추가합니다
+ages["Alice"] = 31 // 기존 항목을 갱신합니다
 println(ages)
-// prints {Alice=31, Bob=25}
+// {Alice=31, Bob=25}를 출력합니다
 ```
 `map[key] = value`로 대입하면 키가 새로운 경우 쌍이 추가되고, 키가 이미 존재하면 값이 교체됩니다. 같은 동작을 하는 `ages.put("Bob", 25)`를 호출할 수도 있습니다.
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// 출력합니다
 // Alice is 30
 // Bob is 25
 ```

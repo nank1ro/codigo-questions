@@ -26,7 +26,7 @@ val greet: (String) -> Unit = { name -> println("Hi, $name") }
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // 반환됩니다
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 람다에 정확히 **하나의** 매개변수만 있다면 매개변수 선언을 생략할 수 있습니다: Kotlin이 자동으로 `it`이라는 이름을 붙여 줍니다.
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // 마찬가지입니다
 ```
 `it`은 매개변수를 명시적으로 선언하지 않았을 때만 존재하며, 매개변수가 하나인 람다에서만 사용할 수 있습니다.
 짧은 람다를 간결하게 유지해 주지만, 본문이 길어지면 실제 이름을 쓰는 것이 더 명확합니다.
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // 마찬가지이며, 트레일링 람다를 사용합니다
 ```
 함수 매개변수를 **마지막**에 두어야 호출자가 trailing 람다 문법을 사용할 수 있습니다.
 
@@ -160,7 +160,7 @@ println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], 마찬가지입니다
 ```
 멤버 함수는 타입을 통해 참조합니다. 예를 들어 `String::uppercase`처럼 참조합니다:
 ```kotlin

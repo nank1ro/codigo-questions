@@ -27,7 +27,7 @@ Luhn 알고리즘은 신용카드 번호와 같은 식별 번호를 검증하는
 함수 호출 예시:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# True 출력
 ```
 
 # --seed--

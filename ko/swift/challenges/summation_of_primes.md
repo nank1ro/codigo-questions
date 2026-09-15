@@ -16,7 +16,7 @@ title: 소수의 합
 함수 호출 예시:
 ```swift
 print(primeSummation(10))
-// prints 17
+// 17을 출력
 ```
 
 # --before-seed--

@@ -139,7 +139,7 @@ print(pairs) // ["Ann is 31", "Bob is 27"]
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// 1과 3을 출력
 ```
 모든 요소에 짧은 부수 효과를 적용할 때는 `forEach`를, 조기에 멈춰야 할 때는 `for-in`을 사용하세요.
 

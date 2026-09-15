@@ -12,7 +12,7 @@ val b = "cat".toRegex()
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false, 그 글자는 숫자가 아닙니다
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches`는 너무 엄격할 때가 많습니다. 보통은 패턴이 텍스트 **어딘가에** 나타나는지만 알면 되니까요. 그때 쓰는 것이 `containsMatchIn`입니다:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false, 문자열 전체가 숫자가 아닙니다
+println(digits.containsMatchIn("order 42"))  // true, "42"가 그 안에 있습니다
 ```
 `\d` 외에도 늘 사용하게 될 축약 표현이 두 가지 더 있습니다. `\w`는 단어 문자(글자, 숫자 또는 `_`)이고 `\s`는 공백 문자입니다. 둘 다 **수량자**로 반복할 수 있습니다:
 - `+` 하나 이상
@@ -31,7 +31,7 @@ println(digits.containsMatchIn("order 42"))  // true, "42" is in there
 
 백슬래시를 매번 두 배로 쓰면 번거롭기 때문에, 패턴은 보통 삼중 따옴표로 쓴 **raw 문자열**로 작성합니다. 여기서는 `\`가 그냥 문자입니다:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // Regex("\\d+")와 같습니다
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0`은 매치 전체입니다. 대체 문자열에 문자 그대로의 `$`가 필요하면 `\$`로 이스케이프하세요.
 `replace`는 **모든** 매치를 다시 쓰므로, 완전한 문자열만 다시 쓰고 싶다면 **앵커**인 `^`(텍스트의 시작)와 `$`(텍스트의 끝)로 패턴을 고정하세요:
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two, 아무것도 바뀌지 않습니다
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 `. * + ? ( ) [ ] { } | ^ $ \` 문자들은 패턴 안에서 특별한 의미를 가집니다. 가장 까다로운 것은 `.`인데, 점이 아니라 **임의의** 문자에 일치합니다. 문자 자체를 뜻하려면 백슬래시로 이스케이프하세요:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true, 점(.)이 x와 일치합니다
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 찾으려는 텍스트가 변수에서 나오고 문자 그대로 다뤄져야 한다면, `Regex.escape`로 라이브러리에 이스케이프를 맡기세요:
@@ -180,7 +180,7 @@ println(value) // local
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true, 숫자가 허용되지 않습니다
 ```
 문자 클래스는 단일 문자 사이에서만 선택합니다. 완전한 대안들 사이에서 선택하려면 `|`를 사용하세요. 보통은 패턴의 나머지 부분을 삼키지 않도록 그룹으로 감쌉니다:
 ```kotlin

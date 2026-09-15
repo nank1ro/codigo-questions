@@ -4,7 +4,7 @@
 
 ```dart
 extension ExtensionName on Type {
-  // new methods and getters
+  // 새 메서드와 getter
 }
 ```
 
@@ -48,7 +48,7 @@ print((-3).doubled()); // -6
 
 ```dart
 extension Sizes on String {
-  bool get isLong => length > 10;      // same as this.length
+  bool get isLong => length > 10;      // this.length와 동일
   String get firstChar => this[0];
 }
 
@@ -192,7 +192,7 @@ extension Shorter on String {
 }
 
 void main() {
-  print('four'.length); // 4, String's own length is used
+  print('four'.length); // 4, String 자신의 length가 사용됨
 }
 ```
 

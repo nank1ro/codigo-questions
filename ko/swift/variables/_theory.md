@@ -11,7 +11,7 @@ var x = 1
 이렇게 하면 `x`라는 이름의 변수에 값 `1`을 할당한 것입니다.
 변수 `x`를 출력하면 숫자 `1`이 반환됩니다:
 ```swift
-print(x) // prints 1
+print(x) // 1을 출력
 ```
 
 ---
@@ -20,9 +20,9 @@ print(x) // prints 1
 `=`를 사용하고 새로운 값을 지정하여 `x`를 업데이트할 수 있습니다.
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // 1을 출력
 x = 2
-print(x) // prints 2
+print(x) // 2를 출력
 ```
 
 ---
@@ -31,7 +31,7 @@ print(x) // prints 2
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // 5를 출력
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 변수를 업데이트하면 이전 값을 잊어버립니다. 여기서 `x` 변수를 두 번 출력하고 값이 어떻게 업데이트되는지 확인할 수 있습니다.
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // 5를 출력
 x = 10
-print(x) // prints 10
+print(x) // 10을 출력
 ```
 
 ---

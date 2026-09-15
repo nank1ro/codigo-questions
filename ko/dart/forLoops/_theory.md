@@ -2,7 +2,7 @@
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // 본문
 }
 ```
 
@@ -56,7 +56,7 @@ for (var fruit in fruits) {
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // 5에서 멈춤
   print(i);
 }
 ```

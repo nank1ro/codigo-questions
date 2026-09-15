@@ -23,13 +23,13 @@ list_name[index]
 리스트 인덱스에 접근하는 방법은 다음과 같습니다:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # 값 "Jeremiah"를 가져옴
 ```
 값을 할당하는 방법은 다음과 같습니다:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # 새 값 "Jordan"을 가져옴
 ```
 
 ---
@@ -69,9 +69,9 @@ Python에서 이런 방식으로 리스트의 일부를 지정하면, 첫 번째
 문자열도 리스트와 정확히 같은 방식으로 슬라이싱할 수 있습니다! 사실, 문자열을 문자의 리스트로 생각할 수 있습니다: 각 문자는 인덱스 `0`부터 시작하는 리스트의 순차적인 항목입니다.
 ```python
 list_name[:2]
-# Grabs the first two items
+# 처음 두 개의 항목을 가져옴
 list_name[3:]
-# Grabs the fourth through last items
+# 네 번째부터 마지막까지의 항목을 가져옴
 ```
 리스트(또는 문자열)의 맨 처음이나 맨 마지막 항목이 슬라이스에 포함되는 경우, 해당 항목의 인덱스는 생략할 수 있습니다.
 

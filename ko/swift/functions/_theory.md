@@ -5,7 +5,7 @@ Swift에서는 `func` 키워드 뒤에 함수 이름을 사용합니다:
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // "Hello!"를 출력
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)"를 출력
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ print(sayHello(name: "Smith", newUser: true))
 기본 값이 정의되어 있으면 함수를 호출할 때 해당 매개변수를 생략할 수 있습니다
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // 여기서 작업을 수행
 }
 ```
 
@@ -62,7 +62,7 @@ _가변 매개변수_는 지정된 타입의 값을 0개 이상 받습니다.
 
 함수에 함수가 하는 일을 설명하는 _선택적 주석_을 추가할 수 있습니다:
 ```swift
-/// Prints 'Hello World' to the console.
+/// 콘솔에 'Hello World'를 출력한다.
 func helloWorld() {
     print("Hello, World!")
 }

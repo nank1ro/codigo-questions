@@ -20,7 +20,7 @@ title: 합의 제곱과 제곱의 합의 차
 함수 호출 예시:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// 출력: 2640
 ```
 
 # --seed--

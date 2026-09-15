@@ -16,7 +16,7 @@ title: 짝수 피보나치 수
 함수 호출 예시:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// 출력: 10
 ```
 
 # --seed--

@@ -23,7 +23,7 @@ James는 ATM에서 N달러를 인출하려고 합니다.
 함수 호출 예시:
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// 출력: 9.5
 ```
 
 # --seed--

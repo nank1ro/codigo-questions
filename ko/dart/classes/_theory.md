@@ -232,7 +232,7 @@ class Circle extends Shape {
 
 ```dart
 abstract class Shape {
-  double area(); // abstract method — no body
+  double area(); // 추상 메서드 — 본문 없음
 }
 
 class Circle extends Shape {
@@ -258,7 +258,7 @@ class MathHelper {
 }
 
 void main() {
-  // access without creating an object:
+  // 객체를 만들지 않고 접근:
   print(MathHelper.pi);
   print(MathHelper.circleArea(5));
 }

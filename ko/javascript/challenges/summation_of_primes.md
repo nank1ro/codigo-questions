@@ -84,9 +84,9 @@ class PrimeSeive {
 
     for (let i = 0; i <= sqrtUpper; i++) {
       if (seive[i]) {
-        // Mark value in seive array
+        // seive 배열에 값 표시
         const prime = 2 * i + 3;
-        // Mark all multiples of this number as false (not prime)
+        // 이 숫자의 배수를 모두 false로 표시합니다(소수 아님)
         const primeSqaredIndex = 2 * i ** 2 + 6 * i + 3;
         for (let j = primeSqaredIndex; j < upper; j += prime) {
           seive[j] = false;

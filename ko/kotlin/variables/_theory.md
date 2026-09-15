@@ -11,7 +11,7 @@ var x = 1
 이렇게 하면 `x`라는 이름의 변수에 값 `1`을 할당하게 됩니다.
 변수 `x`를 출력하면 숫자 `1`이 반환됩니다:
 ```kotlin
-println(x) // prints 1
+println(x) // 1을 출력합니다
 ```
 
 ---
@@ -20,9 +20,9 @@ println(x) // prints 1
 `=`를 사용하여 `x`에 새로운 값을 할당함으로써 업데이트할 수 있습니다.
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // 1을 출력합니다
 x = 2
-println(x) // prints 2
+println(x) // 2를 출력합니다
 ```
 
 ---
@@ -31,7 +31,7 @@ println(x) // prints 2
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // 5를 출력합니다
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 변수를 업데이트하면 이전 값을 잃게 됩니다. 여기서 `x` 변수를 두 번 출력하여 값이 어떻게 업데이트되는지 확인할 수 있습니다.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // 5를 출력합니다
 x = 10
-println(x) // prints 10
+println(x) // 10을 출력합니다
 ```
 
 ---

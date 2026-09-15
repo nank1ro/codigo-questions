@@ -27,7 +27,7 @@ Luhn 알고리즘은 신용카드 번호와 같은 식별 번호를 검증하는
 함수 호출 예시:
 ```kotlin
 println(isValid("095 245 88"))
-// prints true
+// true를 출력합니다
 ```
 
 # --seed--

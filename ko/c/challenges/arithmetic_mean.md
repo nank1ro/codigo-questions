@@ -17,7 +17,7 @@ title: 산술 평균
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// 2.0 출력
 ```
 
 # --before-seed--

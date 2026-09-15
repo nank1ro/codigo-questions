@@ -11,7 +11,7 @@ var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 
 키를 사용하여 딕셔너리 값에 접근하는 것은 인덱스로 배열 값에 접근하는 것과 같습니다:
 ```swift
-// gets the age value from the user dictionary
+// user 딕셔너리에서 age 값을 가져옴
 user['age']
 ```
 
@@ -34,7 +34,7 @@ dictName[newKeyName] = newValue
 딕셔너리는 변경 가능하므로, 다양한 방법으로 변경할 수 있습니다. `removeValue(forKey:)` 메서드를 사용하여 딕셔너리에서 항목을 제거할 수 있습니다:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // 키가 존재하면 삭제된 값을 출력
 }
 ```
 이 코드는 딕셔너리에서 키 `keyName`과 그에 연결된 값을 제거합니다.
@@ -73,5 +73,5 @@ for (key, value) in dictName {
 키에 `nil` 값을 할당하여 요소를 제거할 수도 있습니다
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName이 dictName 딕셔너리에서 삭제됨
 ```

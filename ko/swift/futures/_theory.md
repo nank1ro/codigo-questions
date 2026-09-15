@@ -10,7 +10,7 @@ func fetchNumber() async -> Int {
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// 42를 출력
 ```
 Swift 스크립트에서는 최상위 레벨이 이미 `await`를 지원하므로, 별도의 설정 없이도 비동기 함수를 직접 호출할 수 있습니다. `async`나 `await`를 잊으면 조용한 버그가 아니라 컴파일 오류가 됩니다.
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// 10.0을 출력
 ```
 반환된 값은 래퍼가 아니라 평범한 `Double`입니다: `await`가 끝나면 그 값을 평소와 똑같이 다룹니다.
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// 15를 출력
 ```
 `await`는 비동기 컨텍스트 안에서만 허용됩니다: `async` 함수 또는 스크립트의 최상위 레벨입니다. 평범한, `async`가 아닌 함수는 아무것도 `await`할 수 없습니다.
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// could not load를 출력
 ```
 키워드의 순서는 정해져 있습니다: `try`가 먼저 오고, 그다음 `await`가 옵니다.
 
@@ -144,7 +144,7 @@ let job = Task {
 결과는 나중에 **`.value`**로 읽으며, 이는 await됩니다:
 ```swift
 print(await job.value)
-// prints 42
+// 42를 출력
 ```
 핸들의 타입은 무엇을 만들어내고 무엇을 던질 수 있는지 말해줍니다: `Task<Int, Never>`는 `Int`를 반환하고 결코 오류를 던지지 않는 작업입니다. `async let`과 달리 `Task`는 평범한, 비동기가 아닌 코드에서 만들 수 있습니다.
 

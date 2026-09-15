@@ -22,7 +22,7 @@ title: 콜라츠 추측
 함수 호출 예시:
 ```swift
 print(collatzSteps(16))
-// prints 4
+// 4를 출력
 ```
 
 # --before-seed--

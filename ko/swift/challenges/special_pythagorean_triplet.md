@@ -16,7 +16,7 @@ a + b + c = n을 만족하는 피타고라스 삼원수의 곱 a × b × c를 �
 함수 호출 예시:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// 60을 출력
 ```
 
 # --before-seed--

@@ -18,7 +18,7 @@ a + b + c가 `n`과 같은 피타고라스 삼조수를 찾아 곱 a × b × c�
 함수 호출 예시:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// 출력: 60
 ```
 
 # --seed--

@@ -3,7 +3,7 @@
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// 5 출력
 ```
 공백과 문장 부호도 문자로 계산됩니다.
 
@@ -14,14 +14,14 @@ console.log(greeting.length);
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// h 출력
 console.log(word.charAt(1));
-// prints e
+// e 출력
 ```
 마지막 문자는 인덱스 `length - 1`에 있습니다:
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// o 출력
 ```
 
 ---
@@ -30,9 +30,9 @@ console.log(word[word.length - 1]);
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// HELLO 출력
 console.log(word.toLowerCase());
-// prints hello
+// hello 출력
 ```
 두 메서드 모두 인자를 받지 않으므로 괄호를 잊지 마세요.
 
@@ -46,11 +46,11 @@ console.log(word.toLowerCase());
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// true 출력
 console.log(file.startsWith("ph"));
-// prints true
+// true 출력
 console.log(file.endsWith(".jpg"));
-// prints false
+// false 출력
 ```
 비교는 대소문자를 구분합니다: `"Hello".includes("h")`는 `false`입니다.
 
@@ -61,9 +61,9 @@ console.log(file.endsWith(".jpg"));
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// 2 출력
 console.log(word.indexOf("z"));
-// prints -1
+// -1 출력
 ```
 
 ---
@@ -72,9 +72,9 @@ console.log(word.indexOf("z"));
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// Java 출력
 console.log(word.slice(4));
-// prints Script
+// Script 출력
 ```
 `end`를 생략하면 문자열 끝까지 잘라냅니다.
 음수 인덱스는 끝에서부터 셉니다: `word.slice(-3)`은 `"ipt"`입니다.
@@ -87,5 +87,5 @@ console.log(word.slice(4));
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// 45 출력
 ```

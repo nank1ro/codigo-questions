@@ -25,7 +25,7 @@ James는 ATM에서 N달러를 인출하고 싶습니다.
 함수 호출 예시:
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// 9,5를 출력
 ```
 
 # --before-seed--

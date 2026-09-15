@@ -23,7 +23,7 @@ ATM은 N이 5의 배수이고, James의 계좌에 인출 거래를 수행하기�
 함수 호출 예시:
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// 9.5를 출력합니다
 ```
 
 # --seed--

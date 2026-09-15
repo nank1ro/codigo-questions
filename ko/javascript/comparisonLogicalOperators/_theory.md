@@ -2,9 +2,9 @@
 이 연산자는 두 표현식이 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 == 2);
-// prints true
+// true 출력
 console.log(2 == 3);
-// prints false
+// false 출력
 ```
 
 ---
@@ -13,9 +13,9 @@ console.log(2 == 3);
 이 연산자는 두 표현식이 같지 **않은지** 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 != 2);
-// prints false
+// false 출력
 console.log(2 != 3);
-// prints true
+// true 출력
 ```
 이것은 *동등* 연산자와 정확히 반대입니다
 
@@ -25,9 +25,9 @@ console.log(2 != 3);
 이 연산자는 하나의 표현식이 다른 표현식보다 큰지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 > 2);
-// prints false
+// false 출력
 console.log(3 > 2);
-// prints true
+// true 출력
 ```
 
 ---
@@ -36,9 +36,9 @@ console.log(3 > 2);
 이 연산자는 하나의 표현식이 다른 표현식보다 작은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 < 2);
-// prints false
+// false 출력
 console.log(2 < 3);
-// prints true
+// true 출력
 ```
 
 ---
@@ -47,11 +47,11 @@ console.log(2 < 3);
 이 연산자는 하나의 표현식이 다른 표현식보다 크거나 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 >= 2);
-// prints true
+// true 출력
 console.log(3 >= 2);
-// prints true
+// true 출력
 console.log(3 >= 4);
-// prints false
+// false 출력
 ```
 
 ---
@@ -60,11 +60,11 @@ console.log(3 >= 4);
 이 연산자는 하나의 표현식이 다른 표현식보다 작거나 같은지 여부를 나타내는 **불리언** (`true` 또는 `false`)을 반환합니다. 예를 들면:
 ```javascript
 console.log(2 <= 2);
-// prints true
+// true 출력
 console.log(3 <= 2);
-// prints false
+// false 출력
 console.log(3 <= 4);
-// prints true
+// true 출력
 ```
 
 ---
@@ -73,9 +73,9 @@ console.log(3 <= 4);
 이 연산자는 *false*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *true*이면 마지막 피연산자를 반환합니다.
 ```javascript
 console.log(2 == 2 && 2 == 3);
-// prints false
+// false 출력
 console.log(1 == 1 && 1 == 1.0);
-// prints true
+// true 출력
 ```
 
 ---
@@ -84,9 +84,9 @@ console.log(1 == 1 && 1 == 1.0);
 이 연산자는 *true*로 평가되는 첫 번째 피연산자를 반환하거나, 모두 *false*이면 마지막 피연산자를 반환합니다.
 ```javascript
 console.log(2 == 2 || 2 == 3);
-// prints true
+// true 출력
 console.log(1 == 2 || 1 == 3);
-// prints false
+// false 출력
 ```
 
 ---
@@ -95,9 +95,9 @@ console.log(1 == 2 || 1 == 3);
 이 연산자는 표현식의 논리 상태를 반전시킨 불리언을 반환합니다.
 ```javascript
 console.log(!true);
-// prints false
+// false 출력
 console.log(!false);
-// prints true
+// true 출력
 console.log(!(2 == 2));
-// prints false
+// false 출력
 ```

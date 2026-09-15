@@ -16,7 +16,7 @@ title: 소수의 합
 함수 호출 예시:
 ```dart
 print(primeSummation(10));
-// prints 17
+// 출력: 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ void main() {
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // 에라토스테네스의 체
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

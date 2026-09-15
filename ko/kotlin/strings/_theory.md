@@ -91,7 +91,7 @@ println(parts.joinToString("/")) // a/b/c
 for (part in "a-b".split("-")) {
     println(part)
 }
-// prints a, then b
+// a, 그다음 b를 출력합니다
 ```
 
 ---

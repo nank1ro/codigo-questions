@@ -16,7 +16,7 @@ title: 가장 큰 소인수
 함수 호출 예시:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// 29를 출력
 ```
 
 # --before-seed--

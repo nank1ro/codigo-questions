@@ -18,7 +18,7 @@ title: 윤년
 함수 호출 예시:
 ```dart
 print(leapYear(2000));
-// prints true
+// 출력: true
 ```
 
 # --seed--

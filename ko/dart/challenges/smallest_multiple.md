@@ -16,7 +16,7 @@ title: 최소공배수
 함수 호출 예시:
 ```dart
 print(smallestMultiple(10));
-// prints 2520
+// 출력: 2520
 ```
 
 # --seed--

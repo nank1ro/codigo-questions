@@ -16,7 +16,7 @@ title: 제곱의 합과 합의 제곱의 차이
 함수 호출 예시:
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// 2640을 출력
 ```
 
 # --before-seed--

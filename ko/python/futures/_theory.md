@@ -49,7 +49,7 @@ asyncio.run(countdown())
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # 아무것도 출력되지 않음
 ```
 Python은 이에 대해 `RuntimeWarning: coroutine 'hello' was never awaited` 경고까지 내줍니다. 잊어버린 `await`는 가장 흔한 비동기 버그입니다: 코드는 호출된 것처럼 보이지만 실행되지 않고, 결과를 담아야 할 변수에는 대신 코루틴 객체가 들어갑니다.
 
@@ -60,7 +60,7 @@ Python은 이에 대해 `RuntimeWarning: coroutine 'hello' was never awaited` �
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # 느린 조회를 시뮬레이션함
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # 빈 줄 출력
 ```
 아무도 잡지 않은 예외는 모든 `await`를 타고 `asyncio.run`까지 전파되어 동기 코드에서 다시 발생합니다. 보통의 호출 스택과 똑같습니다.
 

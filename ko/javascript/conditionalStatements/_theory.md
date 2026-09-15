@@ -4,7 +4,7 @@
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 밖에서 놀기
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 밖에서 놀기
 }
 ```
 `if` 문은 조건이 `true`일 때만 코드 블록을 실행한다는 것을 확인했습니다.
@@ -28,9 +28,9 @@ JavaScript에서는 `else` 문을 사용할 수 있습니다:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 밖에서 놀기
 } else {
-    // stay home
+    // 집에 있기
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// 10 출력
 ```
 위 코드의 단축 코드는 다음과 같습니다:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// 10 출력
 ```
 조건 `a < b`가 참이었기 때문에 `c`는 `a`와 같은 값으로 설정됩니다
 

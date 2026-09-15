@@ -20,7 +20,7 @@ title: 이진 탐색
 함수 호출 예시:
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// 2를 출력합니다
 ```
 
 # --before-seed--

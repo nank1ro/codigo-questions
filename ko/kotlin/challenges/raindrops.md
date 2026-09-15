@@ -28,7 +28,7 @@ title: 빗방울
 함수 호출 예시:
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// "Plong"을 출력합니다
 ```
 
 # --seed--

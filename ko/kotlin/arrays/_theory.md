@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// x, 그다음 y를 출력합니다
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 배열이 `val`로 선언되어 있어도, 인덱스에 값을 대입하여 **요소**를 교체할 수 있습니다:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums는 이제 [10, 2, 3]입니다
 ```
 모든 요소를 순회하려면 `for` 루프나 `forEach`를 사용할 수 있습니다:
 ```kotlin
@@ -83,8 +83,8 @@ println(nums.contentToString())   // [1, 2, 3]
 - `sorted()`, `sortedDescending()`, `reversed()`는 배열을 그대로 두고 새로운 `List`를 반환합니다
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums는 이제 [1, 2, 3]입니다
+println(nums.reversed())    // [3, 2, 1], nums는 여전히 [1, 2, 3]입니다
 ```
 
 ---
@@ -106,8 +106,8 @@ println(nums.count())   // 3
 `nums + 4`와 같은 표현식은 `nums`를 늘리는 것이 아니라 완전히 새로운 배열을 만듭니다:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok, nums는 [9, 2, 3]입니다
+val bigger = nums + 4    // new array [9, 2, 3, 4], nums는 여전히 요소가 3개입니다
 ```
 요소의 개수가 시간에 따라 바뀐다면 `MutableList`를, 개수를 미리 알고 있거나 기본 타입 성능이 필요하다면 배열을 선호하세요.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// 둘 다 0 -> cat, 그다음 1 -> dog를 출력합니다
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, 리스트는 요소를 비교합니다
 ```
 
 ---

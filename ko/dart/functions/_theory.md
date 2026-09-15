@@ -11,7 +11,7 @@ void sayHello() {
 함수를 호출하려면 이름 뒤에 `()`를 작성합니다：
 
 ```dart
-sayHello(); // prints Hello!
+sayHello(); // 출력: Hello!
 ```
 
 ---
@@ -36,7 +36,7 @@ int square(int n) {
 }
 
 void main() {
-  print(square(4)); // prints 16
+  print(square(4)); // 출력: 16
 }
 ```
 
@@ -71,7 +71,7 @@ void printInfo({required String name, int age = 0}) {
 
 void main() {
   printInfo(name: "Alice", age: 30);
-  // prints Alice is 30 years old
+  // 출력: Alice is 30 years old
 }
 ```
 

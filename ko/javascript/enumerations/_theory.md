@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// red 출력
 ```
 관례상 이 객체는 `const`로 선언하고, 이름은 대문자로 시작하며, 멤버 이름은 다른 상수와 마찬가지로 `UPPER_CASE`로 작성합니다.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// done 출력
 ```
 한 번 동결된 객체는 새로운 프로퍼티도 받을 수 없으며, `Object.isFrozen(obj)`로 객체가 동결되었는지 확인할 수 있습니다:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// true 출력
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// s 출력
 console.log(Size.MEDIUM);
-// prints undefined
+// undefined 출력
 ```
 어느 쪽이든 열거형은 여러분이 정의한 값을 그대로 유지하며, 이는 상수 집합에 정확히 바라는 동작입니다.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// true 출력
 ```
 그 대가는 가독성입니다. `Priority.HIGH`를 출력하면 `3`이 표시되는데, 이는 문자열 `"high"`보다 훨씬 적은 정보를 전달합니다.
 
@@ -70,14 +70,14 @@ console.log(Priority.HIGH > Priority.LOW);
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// [ 'RED', 'BLUE' ] 출력
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// [ 'red', 'blue' ] 출력
 ```
 `Object.values()`와 배열 메서드 `includes()`를 함께 사용하는 것은, 예를 들어 사용자 입력에서 읽은 값처럼 임의의 값이 유효한 멤버인지 확인하는 표준적인 방법입니다:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// true 출력
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// false 출력
 ```

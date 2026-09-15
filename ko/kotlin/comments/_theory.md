@@ -2,7 +2,7 @@
 
 가장 간단한 주석은 **한 줄 주석(single-line comment)**입니다: `//`로 시작하여 줄 끝까지 이어집니다.
 ```kotlin
-// Greets the user
+// 사용자에게 인사합니다
 println("Hello")
 ```
 주석을 사용하여 코드가 어떤 용도인지, 왜 그렇게 작성했는지 설명하세요.
@@ -11,7 +11,7 @@ println("Hello")
 
 주석이 꼭 자기 줄을 가질 필요는 없습니다: 같은 줄에서 코드 뒤에 이어붙일 수도 있습니다. 이를 **후행 주석(trailing comment)**이라고 하며, 해당 명령문에 대한 짧은 메모를 남기기에 좋은 자리입니다:
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // 세 번 시도한 뒤 포기합니다
 ```
 `//`부터 줄 끝까지의 모든 내용은 무시되고, 그 앞의 코드는 평소처럼 실행됩니다.
 
@@ -23,7 +23,7 @@ val retries = 3 // give up after three attempts
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // 10을 출력합니다
 ```
 두 번째 줄은 이제 주석이므로 `total`은 `10`을 유지합니다. `//`를 제거하면 그 줄은 다시 살아납니다.
 
@@ -45,8 +45,8 @@ println("Welcome!")
 
 줄 끝에서 멈추는 `//`와 달리, `/*` 주석은 `*/`에서만 멈춥니다. 닫는 것을 잊으면 컴파일러는 이후의 모든 코드를 주석의 일부로 취급하고 오류를 보고합니다:
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* 센티미터 단위
+println(width) // 아직 주석 안입니다: 오류, 주석이 닫히지 않습니다
 ```
 `//`와 `/* */` 모두 후행 주석으로 쓸 수 있지만, `/*`를 사용할 때는 항상 `*/`가 있는지 확인하세요.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // 100을 출력합니다
 ```
 중첩 덕분에 그 줄 중 하나에 이미 `/* */` 주석이 있어도 잘 동작합니다.
 
@@ -159,7 +159,7 @@ println("50 // 2") // prints 50 // 2
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: 설정에서 한도를 읽어오기
 ```
 컴파일러에게 이들은 평범한 주석이지만, IntelliJ IDEA는 전용 도구 창에 모아 두어 남은 작업을 쉽게 찾게 해 줍니다. `TODO`는 보통 실제 구현이 작성될 때까지 코드가 컴파일된 상태로 유지되게 해 주는 자리표시자 옆에 놓입니다. 작업을 완료하면 같은 변경에서 자리표시자를 교체하고 마커를 제거하여, 주석이 코드의 상태에 대해 거짓말을 하지 않도록 하세요.
 
@@ -171,12 +171,12 @@ val limit = 10
 
 좋은 주석은 코드가 **무엇**을 하는지가 아니라 **왜** 그러는지를 설명합니다. 코드는 이미 무슨 일이 일어나는지 보여주므로, 그것을 말로 반복하면 잡음만 더해지고 코드가 바뀌는 순간 낡아 버립니다:
 ```kotlin
-// set timeout to 30
+// timeout을 30으로 설정합니다
 val timeout = 30
 ```
 그 숫자 뒤에 있는 이유가야말로 읽는 사람이 추측할 수 없는 것입니다:
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// 서버가 35초 후 유휴 연결을 끊으므로 더 일찍 멈춥니다
 val timeout = 30
 ```
 주석이 아랫줄을 그저 다시 말할 뿐이라면 삭제하거나 이유로 바꾸세요. 최고의 주석은 코드가 말할 수 없는 것을 말하는 주석입니다.

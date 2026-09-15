@@ -18,7 +18,7 @@ N의 모든 자릿수의 합을 계산하는 프로그램을 작성하십시오
 함수 호출 예시:
 ```swift
 print(sumDigits(28))
-// prints 10
+// 10을 출력
 ```
 
 # --before-seed--
