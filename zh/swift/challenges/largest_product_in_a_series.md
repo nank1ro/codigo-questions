@@ -16,7 +16,7 @@ title: 数列中的最大乘积
 函数调用示例：
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// 输出 5832
 ```
 
 # --before-seed--

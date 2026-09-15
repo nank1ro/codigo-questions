@@ -21,7 +21,7 @@ title: 二分查找
 ```c
 int numbers[] = {1, 3, 5, 7};
 printf("%d\n", binarySearch(numbers, 4, 5));
-// prints 2
+// 打印 2
 ```
 
 # --before-seed--

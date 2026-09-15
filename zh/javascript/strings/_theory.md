@@ -3,7 +3,7 @@
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// 打印 5
 ```
 空格和标点符号也算作字符。
 
@@ -14,14 +14,14 @@ console.log(greeting.length);
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// 打印 h
 console.log(word.charAt(1));
-// prints e
+// 打印 e
 ```
 最后一个字符的索引是 `length - 1`：
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// 打印 o
 ```
 
 ---
@@ -30,9 +30,9 @@ console.log(word[word.length - 1]);
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// 打印 HELLO
 console.log(word.toLowerCase());
-// prints hello
+// 打印 hello
 ```
 这两个方法都不需要参数，但别忘了括号。
 
@@ -46,11 +46,11 @@ console.log(word.toLowerCase());
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// 打印 true
 console.log(file.startsWith("ph"));
-// prints true
+// 打印 true
 console.log(file.endsWith(".jpg"));
-// prints false
+// 打印 false
 ```
 比较是区分大小写的：`"Hello".includes("h")` 为 `false`。
 
@@ -61,9 +61,9 @@ console.log(file.endsWith(".jpg"));
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// 打印 2
 console.log(word.indexOf("z"));
-// prints -1
+// 打印 -1
 ```
 
 ---
@@ -72,9 +72,9 @@ console.log(word.indexOf("z"));
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// 打印 Java
 console.log(word.slice(4));
-// prints Script
+// 打印 Script
 ```
 如果省略 `end`，截取会一直到字符串末尾。
 负数索引从末尾开始计数：`word.slice(-3)` 为 `"ipt"`。
@@ -87,5 +87,5 @@ console.log(word.slice(4));
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// 打印 45
 ```

@@ -22,7 +22,7 @@ title: 考拉兹猜想
 函数调用示例：
 ```swift
 print(collatzSteps(16))
-// prints 4
+// 输出 4
 ```
 
 # --before-seed--

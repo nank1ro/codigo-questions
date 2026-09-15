@@ -91,7 +91,7 @@ println(parts.joinToString("/")) // a/b/c
 for (part in "a-b".split("-")) {
     println(part)
 }
-// prints a, then b
+// 先打印 a,再打印 b
 ```
 
 ---

@@ -15,7 +15,7 @@ val setName = setOf<itemsType>(item1, item2)
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// 打印 [1, 2]
 ```
 
 在 __[1]__ 处，我们尝试创建一个包含两次数字 __1__ 的集合，但如你所见，每个元素必须是唯一的，第二个 __1__ 会被自动丢弃。
@@ -38,7 +38,7 @@ __[1]__ 会抛出错误，因为 `Set` 是_只读的_。
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// 打印 [1, 2, 3, 4]
 ```
 
 ---
@@ -47,8 +47,8 @@ println(numbers)
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // 打印 true
+println(numbers.contains(5)) // 打印 false
 ```
 
 如上所示，`in` 和 `contains` 返回一个 `Bool` 值，表示传入的元素是否存在于集合中。

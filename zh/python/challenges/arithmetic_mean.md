@@ -16,7 +16,7 @@ difficulty: 1
 函数调用示例：
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# 打印 2
 ```
 
 # --seed--

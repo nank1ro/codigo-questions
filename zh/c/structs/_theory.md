@@ -12,7 +12,7 @@ struct Point p = {3, 4}; // x is 3, y is 4
 ```
 成员通过**点**运算符 `.` 来读写：
 ```c
-printf("%d\n", p.x); // prints "3"
+printf("%d\n", p.x); // 打印 "3"
 p.y = 10;
 ```
 
@@ -67,7 +67,7 @@ typedef struct {
 内部结构体用它自己的一对大括号初始化，其成员通过链式使用点运算符来访问：
 ```c
 Segment s = {{1, 2}, {5, 2}};
-printf("%d\n", s.end.x); // prints "5"
+printf("%d\n", s.end.x); // 打印 "5"
 ```
 
 ---
@@ -101,7 +101,7 @@ int count_free(Item items[], int size) {
 当结构体**按值**传递给函数时，函数收到的是它的一个**副本**。修改参数的成员只会改变这个副本，调用者的变量保持原样：
 ```c
 void reset(Point p) {
-    p.x = 0; // changes the copy
+    p.x = 0; // 改变副本
 }
 ```
 要让函数修改调用者的结构体，需要用 `&` 传递它的**地址**，并把参数声明为**指针** `Point *p`。指针指向的是原始变量，而不是副本：

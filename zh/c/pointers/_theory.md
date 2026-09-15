@@ -1,12 +1,12 @@
 每个变量都存放在内存中的某个位置，这个位置有一个编号，称为它的**地址**（address）。`&` 运算符读作"取地址"，给出变量的地址：
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // 打印类似 0x7ffd5c3e9a4c 这样的内容
 ```
 `%p` 说明符用来打印地址；具体数值每次运行都不一样，因此程序绝不会依赖它。
 地址存储在**指针**（pointer）变量中。声明指针时，先写它所指向的类型，再跟一个 `*`：
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p 是指向 int 的指针，持有 x 的地址
 ```
 这时就说 `p` **指向** `x`。两个指针持有相同地址时即相等，因此 `p == &x` 为真。
 
@@ -16,7 +16,7 @@ int *p = &x; // p is a pointer to int, and it holds the address of x
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // 打印 "42"
 ```
 `*p` 的意思是"`p` 所指向的值"，它和 `x` 本身一样是一个 `int`。同一个符号 `*` 有两种角色：在声明 `int *p` 中表示"这是一个指针"，在表达式 `*p` 中则顺着指针找到值。
 
@@ -27,7 +27,7 @@ printf("%d\n", *p); // prints "42"
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // 打印 "10"
 ```
 `x` 和 `*p` 是同一块内存的两个名字。不带 `*` 给 `p` 赋值，改变的则是指针所持有的**地址**，而不是存储在该地址中的值。
 
@@ -51,7 +51,7 @@ if (p != NULL) {
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price 现在是 19.0
 ```
 指针必须与它所指向变量的类型一致；`int *p = &price;` 会被编译器拒绝。`NULL` 是唯一能赋给任何类型指针的值。
 
@@ -62,7 +62,7 @@ double *p = &price;
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // 打印 "A"
 ```
 通过指针读和写可以随意混用：`*p = *p + 1` 会把 `'A'` 变成 `'B'`。
 
@@ -70,9 +70,9 @@ printf("%c\n", grade); // prints "A"
 
 指针存储的是地址，而在同一台机器上，无论其中存储什么类型，所有地址的大小都相同。因此 `char *`、`int *` 和 `double *` 的 `sizeof` 结果相同：在 64 位系统上是 `8` 字节，在 32 位系统上是 `4` 字节：
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // 打印 "8"（64 位系统上）
+printf("%zu\n", sizeof(double)); // 打印 "8"
+printf("%zu\n", sizeof(char));   // 打印 "1"
 ```
 不要把指针本身的大小与它所指向内容的大小混为一谈：`sizeof(p)` 是地址的大小，`sizeof(*p)` 是值的大小。
 
@@ -81,7 +81,7 @@ printf("%zu\n", sizeof(char));   // prints "1"
 数组名在表达式中使用时给出其**首个元素**的地址，因此可以直接赋给指针：
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // 相当于 &numbers[0]
 ```
 给指针加一个整数会使它向前移动相应数量的**元素**，而不是字节：`p + 1` 是 `numbers[1]` 的地址，`*(p + 1)` 是 `20`。编译器会按类型大小对步长进行缩放。
 索引也适用于指针：`p[i]` 定义为 `*(p + i)`，所以 `p[2]` 是 `30`。这称为**指针算术**（pointer arithmetic）。
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter 现在是 0
 ```
 经典的例子是交换两个变量：在覆写其中一个之前，需要先用一个临时副本保存另一个值。
 
@@ -159,8 +159,8 @@ Player *first_active(Player players[], int size) {
 
 `const` 保护的是值还是指针，取决于它写在哪里：
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // 指向常量的指针：*p 不能被修改，p 可以指向别处
+int *const q = &a; // 常量指针：q 始终指向 a，但 *q 可以被修改
 ```
 声明要从右往左读：`p` 是指向常量 `int` 的指针；`q` 是指向 `int` 的常量指针。指向 const 的指针是常见的方式，用来承诺函数只**读取**它收到的内容，例如 `int sum(const int *values, int size)`。普通变量也可以传给它；这一承诺只限制函数能做什么。
 

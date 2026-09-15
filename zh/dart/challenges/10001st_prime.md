@@ -16,7 +16,7 @@ title: 第10001个质数
 函数调用示例：
 ```dart
 print(nthPrime(6));
-// prints 13
+// 打印 13
 ```
 
 # --seed--

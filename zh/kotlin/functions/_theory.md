@@ -7,7 +7,7 @@ fun greet() {
 ```
 要调用（执行）函数，使用函数名加括号：
 ```kotlin
-greet() // prints Hello!
+greet() // 打印 Hello!
 ```
 不返回值的函数会隐式返回 `Unit`。
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 `return` 关键字将值传回调用方：
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // 打印 42
 ```
 返回类型必须与返回的值的类型一致。
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 调用函数时传入实参：
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // 打印 Hello, Alice!
 ```
 参数使你能编写可与不同值一起使用的可复用代码。
 
@@ -48,8 +48,8 @@ Kotlin 支持参数默认值。如果调用方没有提供实参，则使用默�
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // 打印 Hello, World!
+greet("Alice")  // 打印 Hello, Alice!
 ```
 默认值使参数变为可选，减少了对重载函数的需求。
 
@@ -72,8 +72,8 @@ fun square(n: Int) = n * n
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // 打印 true
+println(isEven(7)) // 打印 false
 ```
 `Boolean` 函数返回 `true` 或 `false`。
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// 打印 My name is Bob and I am 30 years old.
 ```
 命名参数允许使用参数名以任意顺序传值：
 ```kotlin

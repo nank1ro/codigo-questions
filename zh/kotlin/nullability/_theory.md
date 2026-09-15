@@ -7,7 +7,7 @@ var city: String = null // error: Null can not be a value of a non-null type Str
 `String?` 既可以持有 `String`，也可以持有 `null`：
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // 允许
 println(city) // null
 ```
 `String` 和 `String?` 是两个不同的类型：`String` 永远不会缺失，`String?` 则可能会。
@@ -17,9 +17,9 @@ println(city) // null
 `String` 和 `String?` 之间的区别是由**编译器**检查的，而不是在运行时。
 把 `null` 赋给非空类型，或者在需要非空值的地方传入可空值，都是编译错误，因此程序根本不会启动：
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // 无法编译
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // 无法编译:String? 不是 String
 ```
 这正是 Kotlin 避免其他语言中常见“空指针”崩溃的方式：值只可能在你用 `?` 显式声明的地方缺失。
 
@@ -47,12 +47,12 @@ println(none?.length)   // null
 **Elvis 运算符** `?:` 正好做到这一点：当左侧不为 `null` 时它返回左侧，否则返回右侧的值：
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown 是一个等于 "Guest" 的 String
 ```
 由于右侧只在左侧为 `null` 时才被使用，所以当默认值非空时，结果也是非空的。
 `?:` 与 `?.` 配合得很好，可以把安全调用变回一个普通值：
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len 是 Int,当 name 为 null 时为 0
 ```
 
 ---
@@ -62,7 +62,7 @@ val len = name?.length ?: 0 // len is an Int, 0 when name is null
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null,trim() 和 uppercase() 都不会执行
 ```
 以 `?:` 结尾的链可以在一行内给你一个非空的结果：
 ```kotlin
@@ -103,7 +103,7 @@ println(none!!.length) // NullPointerException
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // 这里 name 是 String
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ fun greet(name: String?): String {
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // 从这里开始 name 是 String
 }
 ```
 智能转换适用于 `val` 变量和函数参数，因为它们的值在检查和使用之间不会改变。
@@ -123,9 +123,9 @@ fun greet(name: String?): String {
 与安全调用结合后，`?.let` **只**在值不为 `null` 时才运行代码块，并且在代码块内部 `it` 是非空的：
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // 打印 Sending to ada@example.com
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // 什么都不会发生
 ```
 当你只需要在代码块内部使用该值时，它是 `if (x != null) { ... }` 的一种简洁替代方式。
 
@@ -213,7 +213,7 @@ println(none.orDash()) // -
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // 这里 first 是 Char
 }
 ```
 你见过的所有工具都能很好地组合：可空参数和可空返回类型描述了值*可能在哪里*缺失，而 `?.`、`?:`、`let`、智能转换和 `toIntOrNull` 则可以处理它而不会崩溃。

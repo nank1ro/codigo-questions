@@ -6,7 +6,7 @@
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// 打印 "8"
 ```
 位模式通常写成十六进制字面量，比如 `0x0C`，因为每个十六进制数字恰好对应四个位。做位运算时始终使用 `unsigned` 类型，并用 `%u` 打印它们。
 
@@ -19,7 +19,7 @@ printf("%u\n", 12u & 10u);
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// 打印 "14"
 ```
 `|` 是把两个位模式合并成一个的常用方法。
 
@@ -32,7 +32,7 @@ printf("%u\n", 12u | 10u);
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// 打印 "6"
 ```
 由此可得一个有用的性质：对同一个值应用两次 XOR 会得到原来的值。
 
@@ -42,7 +42,7 @@ printf("%u\n", 12u ^ 10u);
 一个 `unsigned int` 持有 32 个位，所以 `~0x0Fu` 会翻转全部 32 个位，得到一个非常大的数。要只保留你关心的那个字节，可以把 `~` 和 `& 0xFF` 结合使用：
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// 打印 "240"
 ```
 `~` 的优先级比 `&` 高，所以它先被应用。
 不要把 `~` 和逻辑 `!` 混淆：`!` 看的是整个值并给出 `0` 或 `1`，而 `~` 改写每一个位。
@@ -55,7 +55,7 @@ printf("%u\n", ~0x0Fu & 0xFFu);
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// 打印 "12"
 ```
 左移 `n` 位相当于把值乘以 2 的 `n` 次方。
 两种错误会让 C 程序变成未定义行为：对负值做左移，以及移动的位数等于或超过类型的宽度（`unsigned int` 为 32）。使用**无符号**值可以让你避开前一种。
@@ -68,7 +68,7 @@ printf("%u\n", 3u << 2);
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// 打印 "3"
 ```
 右移 `n` 位相当于把无符号值除以 2 的 `n` 次方，并丢弃余数。
 对*负*值做右移是不可移植的，这是把位运算保持在 `unsigned` 类型上的又一个理由。
@@ -78,11 +78,11 @@ printf("%u\n", 12u >> 2);
 每个二元位运算符都有一个**复合赋值**形式，可以原地更新变量：`&=`、`|=`、`^=`、`<<=` 和 `>>=`。
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // 相当于 x = x & 10;
+x |= 1;   // 相当于 x = x | 1;
+x ^= 3;   // 相当于 x = x ^ 3;
+x <<= 1;  // 相当于 x = x << 1;
+x >>= 2;  // 相当于 x = x >> 2;
 ```
 它们比重复写变量名更易读，也是修改标志变量各位的常用方式。
 
@@ -95,7 +95,7 @@ x >>= 2;  // same as x = x >> 2;
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// 打印 "11"
 ```
 `0x0F` 保留最低的四个位，称为低**半字节**（nibble），`0xFF` 保留最低的八个位，即一个完整的字节。
 
@@ -107,7 +107,7 @@ printf("%u\n", 0xABu & 0x0Fu);
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// 打印 "6"
 ```
 如果该位本来就开着，值不会改变，这使得置位操作可以安全地重复。
 
@@ -118,7 +118,7 @@ printf("%u\n", value);
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// 打印 "5"
 ```
 `~(1u << 1)` 是一个除第 `1` 位外每一位都开着的值，所以 AND 运算会保持其他位原样不动。
 
@@ -129,7 +129,7 @@ printf("%u\n", value);
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// 打印 "7"
 ```
 由于 XOR 会自我抵消，第二次翻转同一个位会得到原来的值。
 
@@ -138,8 +138,8 @@ printf("%u\n", value);
 要**测试**单个位，用掩码对值做 AND 运算，并检查结果是否不同于 `0`：
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // 打印 "1"
+printf("%d\n", (value & (1u << 2)) != 0); // 打印 "0"
 ```
 AND 的结果并不是 `1`：它要么是 `0`，要么是掩码本身（对第 `3` 位来说是 `8`）。这就是为什么要把结果与 `!= 0` 比较，而不是直接把它当作答案。
 
@@ -150,7 +150,7 @@ AND 的结果并不是 `1`：它要么是 `0`，要么是掩码本身（对第 `
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// 打印 "1"
 ```
 One `unsigned int` can therefore carry 32 independent yes/no answers.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// 打印 "0101"
 ```
 Shifting the value down by `i` brings bit `i` into the rightmost place, where `& 1u` isolates it.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count 为 2
 ```
 The loop always ends, because an unsigned value shifted right enough times becomes `0`.
 
@@ -186,6 +186,6 @@ Several small numbers are often packed inside one larger value. To read one of t
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// 打印 "18"，即 0x12 字节
 ```
 Shifting first and masking afterwards is the order to remember: the mask always describes the field once it has reached the bottom.

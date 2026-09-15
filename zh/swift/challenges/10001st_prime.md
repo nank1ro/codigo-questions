@@ -16,7 +16,7 @@ title: 第 10001 个质数
 函数调用示例：
 ```swift
 print(nthPrime(6))
-// prints 13
+// 输出 13
 ```
 
 # --before-seed--

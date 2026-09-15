@@ -12,7 +12,7 @@ val b = "cat".toRegex()
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false,该字符不是数字
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches` 通常过于严格：通常你只想知道模式是否出现在文本的**某个地方**。这就是 `containsMatchIn`：
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false,整个字符串不全是数字
+println(digits.containsMatchIn("order 42"))  // true,"42" 在其中
 ```
 除了 `\d`，还有两个你会经常用到的简写：`\w` 表示单词字符（字母、数字或 `_`），`\s` 表示空白字符。它们每一个都可以用**量词**重复：
 - `+` 一个或多个
@@ -31,7 +31,7 @@ println(digits.containsMatchIn("order 42"))  // true, "42" is in there
 
 把每个反斜杠都加倍会变得很混乱，所以模式通常写成三引号的**原始字符串**，其中 `\` 只是一个普通字符：
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // 与 Regex("\\d+") 相同
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0` 是整个匹配。如果你需要在替换中出现字面意义上的 `$`，把它转义为 `\$`。
 `replace` 重写**每一个**匹配，所以当只想重写完整的字符串时，用**锚点** `^`（文本开头）和 `$`（文本结尾）来固定模式：
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two,没有任何替换发生
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 字符 `. * + ? ( ) [ ] { } | ^ $ \` 在模式中有特殊含义。其中最狡猾的是 `.`，它匹配**任意**字符，而不是一个点。要表示字符本身，用反斜杠转义它：
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true,点号匹配了 x
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 当要查找的文本来自变量且必须按字面处理时，让库用 `Regex.escape` 来做转义：
@@ -180,7 +180,7 @@ println(value) // local
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true,没有数字被允许
 ```
 字符类只能在单个字符之间选择。要在整个备选项之间选择，使用 `|`，通常把它包在一个组里，以免它吞掉模式的其余部分：
 ```kotlin

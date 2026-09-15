@@ -20,7 +20,7 @@ title: 冒泡排序
 函数调用示例：
 ```swift
 print(bubbleSort([3, 1, 2]))
-// prints [1, 2, 3]
+// 输出 [1, 2, 3]
 ```
 
 # --before-seed--

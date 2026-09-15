@@ -5,7 +5,7 @@
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// 打印 {Italy=Rome, France=Paris}
 ```
 这里 `"Italy"` 和 `"France"` 是键，`"Rome"` 和 `"Paris"` 是它们的值。
 
@@ -38,10 +38,10 @@ println(ages.getOrDefault("Zoe", 0))   // 0
 用 `mapOf` 创建的 map 是只读的。要添加或修改条目，请使用返回 `MutableMap` 的 `mutableMapOf`：
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // 新增一个条目
+ages["Alice"] = 31 // 更新已有的那个
 println(ages)
-// prints {Alice=31, Bob=25}
+// 打印 {Alice=31, Bob=25}
 ```
 使用 `map[key] = value` 赋值时，如果键是新的就会添加这个对，如果键已经存在就会替换其值。你也可以调用 `ages.put("Bob", 25)`，效果相同。
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// 打印
 // Alice is 30
 // Bob is 25
 ```

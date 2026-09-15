@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// 打印 HI!!
 ```
 注意 `shout` 是**不带括号**传入的：`twice(shout, "hi")` 交出的是函数本身，而 `twice(shout("hi"), "hi")` 会先调用 `shout` 并传入它的结果，即字符串 `"HI!"`，而字符串是不能被调用的。
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// 打印 a 和 b，共两行
 ```
 回调每次接收一个元素。它可以像上面那样内联写成箭头函数，也可以是存在变量里的任何函数。接下来你会遇到的内置数组方法，内部正是这样工作的。
 
@@ -32,9 +32,9 @@ each(["a", "b"], (letter) => console.log(letter));
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// 打印 5 和 10，共两行
 console.log(doubled);
-// prints [ 10, 20 ]
+// 打印 [ 10, 20 ]
 ```
 一个常见错误是保存 `forEach` 的结果，或者在它后面继续链式调用其他方法：没有东西可以链式调用，因为它返回 `undefined`。经验法则：需要新值时用 `map`，只需要*做*某件事时用 `forEach`。
 
@@ -46,9 +46,9 @@ console.log(doubled);
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// 打印 [ 8, 5 ]
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// 打印 16
 ```
 因为 `filter` 和 `map` 都返回数组，你可以把它们链起来，并以 `reduce` 收尾：`numbers.filter(...).map(...).reduce(...)`。
 
@@ -61,9 +61,9 @@ console.log(numbers.reduce((sum, n) => sum + n, 0));
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// 打印 45
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// 打印 true false
 ```
 三者一旦得出答案就会停止，因此绝不会检查多于必要数量的元素。
 
@@ -73,9 +73,9 @@ console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
 没有比较函数时，`sort()` 会把每个元素转换成**字符串**并逐字符比较，所以 `10` 排在 `9` 前面，因为 `"1"` 小于 `"9"`：
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// 打印 [ 1, 10, 9 ]
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// 打印 [ 1, 9, 10 ]
 ```
 因为 `sort` 会修改数组，当你还需要原始顺序时请排序一个副本：`[...numbers].sort(...)`。对字符串使用 `(a, b) => a.localeCompare(b)` 作为比较函数，它会按字母顺序排列文本。
 
@@ -86,7 +86,7 @@ console.log([10, 9, 1].sort((a, b) => a - b));
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// 打印 [ 'a', 'b' ]
 ```
 排序副本使 `items` 保持其原始顺序。
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// 打印 15
 console.log(makeMultiplier(10)(5));
-// prints 50
+// 打印 50
 ```
 每次调用 `makeMultiplier` 都会创建一个拥有自己 `factor` 的新函数。这就是从一个模板构建一族相似函数的方法。同样的写法也可以用箭头函数：`const makeMultiplier = (factor) => (n) => n * factor;`。
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// 打印 2
 ```
 除了通过这两个函数，外部没有人能读取或重置 `count`：这个变量是**私有的**。再次调用 `makeCounter()` 会创建一个完全独立的 `count`。
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// 打印 HI
 ```
 顺序很重要：`compose(f, g)` 先运行 `g`，再运行 `f`。用这种方式把小函数粘合起来构建程序，称为**函数组合**。
 
@@ -146,7 +146,7 @@ console.log(clean("  hi  "));
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// 打印 [ 'tree' ]
 ```
 通用的 `not(predicate)` 可以对任何谓词做这件事：它返回一个新函数，用同样的参数调用 `predicate`，并用 `!` 取反结果。`filter`、`find`、`some` 和 `every` 的谓词都把元素作为第一个参数，所以包装器只需要转发这一个值。
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// 打印 { yes: 2, no: 1 }
 ```
 `acc[vote] ?? 0` 读取当前计数，当该键还不存在时读取到 `0`。
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// 打印 42
 ```
 固定 `this` 对方法很重要。当一个方法被从它的对象中取出并单独调用时，`this` 不再指向该对象，于是 `this.name` 变成 `undefined`。`bind` 会把它锁定到该对象上：
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// 打印 Hi undefined
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// 打印 Hi Ana
 ```
 原函数永远不会被改变：`bind` 总是构建一个新函数，它的 `name` 是原名称加上前缀 `bound `。
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// 打印 ready ready 1
 ```
 包装器需要两个私有变量：`fn` 是否已经运行过，以及保存下来的结果。两者都存在于闭包中，对外部不可见。要把包装器的所有参数转发给 `fn`，用剩余参数 `(...args)` 声明包装器，并调用 `fn(...args)`。
 
@@ -220,6 +220,6 @@ console.log(init(), init(), calls);
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// 打印 { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
 ```
 对每个元素，先计算键，如果该键的数组还不存在就创建它（`acc[key] ?? []`），把元素放进去，然后返回累加器。因为 `keyFn` 由调用方选择，同一个函数既能按首字母给单词分组，也能按城市给人分组，或按奇偶给数字分组。

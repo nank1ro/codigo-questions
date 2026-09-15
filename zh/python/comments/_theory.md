@@ -2,7 +2,7 @@
 
 Python 唯一的注释形式是**单行注释**：它以 `#` 开头，并一直延续到行尾。
 ```python
-# Greets the user
+# 问候用户
 print("Hello")
 ```
 请使用注释来解释某段代码的用途，或者说明代码为什么要这样编写。
@@ -11,7 +11,7 @@ print("Hello")
 
 注释不必独占一行：它可以跟在同一行的代码后面。这就是**行内注释**，它适合用来写一条关于该语句的简短说明：
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # 三次尝试后放弃
 ```
 从 `#` 到行尾的所有内容都会被忽略，而它前面的代码照常运行。
 
@@ -25,7 +25,7 @@ Python 的风格指南 **PEP 8** 对此有一些空格要求：代码与 `#` 之
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # 打印 10
 ```
 现在第二行是注释，因此 `total` 保持为 `10`。删掉 `#` 就能让这一行重新生效。
 
@@ -37,8 +37,8 @@ print(total)  # prints 10
 
 当说明需要多行时，在每一行前面都加上 `#`：
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# 打印欢迎横幅。
+# 在应用启动时调用一次。
 print("Welcome!")
 ```
 同样的技巧可以一次注释掉多行代码：每行一个 `#`。每个编辑器都能用一个快捷键为整个选中区域添加或移除这些 `#`，所以实际操作比看起来轻松。
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # 返回对 name 的问候语。
 ```
 当函数没有 docstring 时，`__doc__` 为 `None`。`help(greet)` 打印的就是它，鼠标悬停在函数名上时编辑器显示的也是它。
 
@@ -121,7 +121,7 @@ docstring 和 `#` 注释看起来相似，但回答的是不同的问题。
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # 服务器会在 35 秒后断开空闲连接
     return 30
 ```
 所以：函数的文档写进 docstring，关于实现的说明写进注释。
@@ -151,7 +151,7 @@ docstring 必须是**函数体的第一行**，位于其他所有语句之上。
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: 从设置中读取限制
 ```
 对 Python 来说它们只是普通注释；编辑器会把它们收集到一个专门的面板中，因此待办的工作很容易找到。`TODO` 通常与一个占位实现放在一起，在真正的代码写出来之前，占位实现能让程序继续运行。
 
@@ -162,7 +162,7 @@ limit = 10
 把说明函数用途的注释放在函数上方是错误的位置。docstring 才是合适的地方：它依附于函数，`help()` 能找到它，编辑器也能显示它，而 `def` 上方的 `#` 注释对它们全都不可见。
 
 ```python
-# adds a and b
+# 将 a 和 b 相加
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ print("black is #000000")  # a hex colour
 
 好的注释解释代码**为什么**这样做，而不是它**做了什么**。代码本身已经展示了会发生什么；用文字重复一遍只会增加噪音，而且代码一改就会过时：
 ```python
-# set timeout to 30
+# 将 timeout 设置为 30
 timeout = 30
 ```
 数字背后的原因才是读者猜不到的：
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# 服务器会在 35 秒后断开空闲连接，所以要提前停止
 timeout = 30
 ```
 如果一条注释只是复述它下面那一行，就删掉它，或者换成原因。最好的注释说的是代码本身说不出来的东西。

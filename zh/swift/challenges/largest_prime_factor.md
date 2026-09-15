@@ -16,7 +16,7 @@ title: 最大质因数
 函数调用示例：
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// 输出 29
 ```
 
 # --before-seed--

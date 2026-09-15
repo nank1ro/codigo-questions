@@ -32,7 +32,7 @@ switch color {
     case .green:
         print("Green")
 }
-// prints "Red"
+// 输出 "Red"
 ```
 请注意，如果你不需要为每个枚举成员都提供一个 `case`，可以提供一个 `default` 分支来覆盖未明确处理的成员
 
@@ -48,5 +48,5 @@ enum Colors: CaseIterable {
 for color in Colors.allCases {
     print(color)
 }
-// prints blue, red, green
+// 输出 blue, red, green
 ```

@@ -27,7 +27,7 @@ total += 2
 因此以下两种写法完全相同
 ```swift
 var num = num - 5
-// is equal to
+// 等价于
 num -= 5
 ```
 
@@ -38,7 +38,7 @@ num -= 5
 因此以下两种写法完全相同
 ```swift
 var num = num * 5
-// is equal to
+// 等价于
 num *= 5
 ```
 
@@ -49,7 +49,7 @@ num *= 5
 因此以下两种写法完全相同
 ```swift
 num = num / 5
-// is equal to
+// 等价于
 num /= 5
 ```
 
@@ -60,6 +60,6 @@ num /= 5
 因此以下两种写法完全相同
 ```swift
 num = num % 5
-// is equal to
+// 等价于
 num %= 5
 ```

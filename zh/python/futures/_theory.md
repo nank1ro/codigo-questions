@@ -49,7 +49,7 @@ asyncio.run(countdown())
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # 不会打印任何内容
 ```
 Python 甚至会对此发出警告：`RuntimeWarning: coroutine 'hello' was never awaited`。忘记 `await` 是最常见的异步错误：代码看起来被调用了，却从未执行，而本应保存其结果的变量保存的却是一个协程对象。
 
@@ -60,7 +60,7 @@ Python 甚至会对此发出警告：`RuntimeWarning: coroutine 'hello' was neve
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # 模拟一次缓慢的查找
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # 打印一个空行
 ```
 没有人捕获的异常会穿过每一个 `await` 一路传播到 `asyncio.run`，后者在同步代码中把它重新抛出，与普通的调用栈完全一样。
 

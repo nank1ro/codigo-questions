@@ -20,7 +20,7 @@ title: 冒泡排序
 函数调用示例：
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// 打印 [ 1, 2, 3 ]
 ```
 
 # --before-seed--

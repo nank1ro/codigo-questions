@@ -27,7 +27,7 @@ Luhn 算法是一种简单的校验和，用于验证身份识别号码，例如
 函数调用示例：
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# 打印 True
 ```
 
 # --seed--

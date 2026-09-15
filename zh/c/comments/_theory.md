@@ -2,7 +2,7 @@
 
 最常见的是**单行注释**：从 `//` 到该行末尾的所有内容都会被忽略。
 ```c
-// Greet the user
+// 问候用户
 printf("Hello\n");
 ```
 程序运行时第一行什么也不做；只有 `printf` 会产生输出。
@@ -15,7 +15,7 @@ printf("Hello\n");
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // 打印 "10"
 ```
 第二行现在是注释，所以 `total` 保持为 `10`。删掉 `//` 就能让这一行重新生效。
 
@@ -49,7 +49,7 @@ printf("Welcome!\n");
 
 注释不必独占一行：它可以跟在同一行的代码后面。这称为**尾随注释**，它适合用来写关于那条特定语句的简短说明：
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // 三次尝试后放弃
 ```
 `//` 和 `/* */` 都可以用作尾随注释，但要小心 `/*`：由于它只在 `*/` 处停止，行尾一个未闭合的 `/*` 会吞掉后面的所有行，程序将无法编译。
 
@@ -83,8 +83,8 @@ int area = width /* cm */ * height /* cm */;
 - `FIXME` 标记已知有误、必须修正的代码
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: 在使用输入之前先验证它
+// FIXME: 列表为空时崩溃
 ```
 编辑器和工具可以列出这些标记，因此待办的工作很容易找到。工作完成后，删除标记：过期的 `TODO` 会产生误导。
 
@@ -92,12 +92,12 @@ int area = width /* cm */ * height /* cm */;
 
 好的注释解释代码**为什么**这么做，而不是它**做了什么**。代码本身已经展示了发生了什么；用文字重复它只会增加噪音，而且一旦代码改动就会过时：
 ```c
-// multiply price by 90 and divide by 100
+// 把 price 乘以 90 再除以 100
 return price * 90 / 100;
 ```
 数字背后的原因才是读者无法猜到的：
 ```c
-// launch discount: members get 10% off until the end of June
+// 首发优惠：会员在 6 月底前享受 10% 的折扣
 return price * 90 / 100;
 ```
 如果一条注释只是复述了它下面的那一行，就删掉它，或者换成原因。

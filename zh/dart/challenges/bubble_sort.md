@@ -20,7 +20,7 @@ title: 冒泡排序
 函数调用示例：
 ```dart
 print(bubbleSort([3, 1, 2]));
-// prints [1, 2, 3]
+// 打印 [1, 2, 3]
 ```
 
 # --seed--

@@ -65,12 +65,12 @@ Future<int> slowDouble(int n) async {
 
 ```dart
 Future<int> count() async {
-  return 3;                 // int, wrapped into Future<int>
+  return 3;                 // int，被包装进 Future<int>
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>，解包为 int
+  Future<int> f = count();  // 没有 await：仍然是 Future<int>
 }
 ```
 
@@ -138,7 +138,7 @@ future 也可以以**错误**完成。当 `async` 函数抛出异常时，异常
 ```dart
 Future<int> parseLater(String s) async {
   await Future.delayed(const Duration(milliseconds: 5));
-  return int.parse(s); // throws FormatException for 'abc'
+  return int.parse(s); // 对 'abc' 抛出 FormatException
 }
 
 Future<int> orZero(String s) async {
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // 两个计时器现在都开始
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // 只等待一次，总共约 20 毫秒
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // 在这里抛出异常，loadTwice 也会失败
+  return n * 2;             // 永远不会运行
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // 调用者会看到原始错误
   }
 }
 ```

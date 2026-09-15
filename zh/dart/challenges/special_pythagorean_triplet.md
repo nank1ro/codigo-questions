@@ -18,7 +18,7 @@ title: 特殊毕达哥拉斯三元组
 函数调用示例：
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// 打印 60
 ```
 
 # --seed--

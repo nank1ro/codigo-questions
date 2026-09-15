@@ -64,8 +64,8 @@ print(numbers.every((n) => n > 2)); // false
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // 还没有计算任何东西
+print(doubled.first);                      // 只计算了 2
 ```
 
 `toList()` 才是**物化**这个序列的操作：它从头到尾遍历一遍，把每个结果存进一个真正的 `List`。
@@ -183,7 +183,7 @@ print(numbers); // [1, 2, 3]
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2]，未改变
 ```
 
 `sort` 还接受一个**比较器**：一个接收两个元素的函数，当第一个排在第二个前面时返回负数，相等时返回 `0`，否则返回正数。`compareTo` 产出的正是这样的值，所以按任意键排序只要一行：
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // 由 Strings 得到的 String
+final letters = words.fold(0, (acc, w) => acc + w.length); // 由 Strings 得到的 int
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

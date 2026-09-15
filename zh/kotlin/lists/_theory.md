@@ -24,7 +24,7 @@ __[1]__ 会抛出错误，因为 `List` 是_只读的_。
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// 打印 [1, 3, 5, 7]
 ```
 
 ---
@@ -47,15 +47,15 @@ listName[index]
 你已经看到了如何像这样访问列表索引：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// 打印值 "Jeremiah"
 println(names[0])
 ```
 以下是赋值的方式：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// 赋新值 "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// 打印值 "Jordan"
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ println(names[0])
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// 打印 true
 ```
 
 ---
@@ -83,7 +83,7 @@ println(names.contains("Scarlett"))
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// 打印 [a, b, c]
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// 打印 [a, b, c, d, e]
 ```
 
 ---
@@ -106,7 +106,7 @@ println(letters)
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// 打印 [2, 3]
 ```
 __[1]__：首先，我们创建一个名为 `numbers` 的_只读_列表。
 __[2]__：然后，我们使用 `slice` 函数获取列表的一个子部分，并将其存储在 slice 列表中。
@@ -130,7 +130,7 @@ var listName: List<Any> = listOf("one", 2, true)
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// 打印 1
 ```
 
 `indexOfFirst` 方法接受一个__谓词__函数，该函数会对列表中的每个元素进行求值，直到为 true，然后返回该元素的_索引_。
@@ -139,7 +139,7 @@ println(names.indexOfFirst { it == "Zac"})
 我们还可以使用 `add(index, element)` 方法在可修改列表的特定索引处插入元素：
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// 打印 [Trevor, Ali, Zac, Glenn]
 ```
 上面的代码在索引 `1` 处插入了 `"Ali"`，这会将该索引之后的所有元素向后移动 1 个位置。
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// 打印 1, 2, 3
 ```
 `for` 关键字后面跟着一个变量名，它将依次被赋予列表中每个元素的值。

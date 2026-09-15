@@ -10,7 +10,7 @@ int age = 30;
 double height = 1.75;
 char initial = 'A';
 printf("%d %f %c\n", age, height, initial);
-// prints "30 1.750000 A"
+// 打印 "30 1.750000 A"
 ```
 对某个类型使用错误的说明符会打印出乱码，所以要始终匹配正确。
 
@@ -35,8 +35,8 @@ double half(double x) {
 `%f` 会打印六位小数，但这很少是你想要的。在 `%` 和 `f` 之间加上精度，就可以选择显示多少位小数：`%.2f` 打印两位小数，`%.1f` 打印一位，并且数值会被**四舍五入**，而不是被截断：
 ```c
 double price = 9.987;
-printf("%.2f\n", price); // prints "9.99"
-printf("%.1f\n", price); // prints "10.0"
+printf("%.2f\n", price); // 打印 "9.99"
+printf("%.1f\n", price); // 打印 "10.0"
 ```
 `float` 使用和 `double` 相同的说明符打印：传给 `printf` 时它会自动转换为 `double`。
 
@@ -46,8 +46,8 @@ printf("%.1f\n", price); // prints "10.0"
 当**两个**操作数都是整数时，结果也是整数，小数部分会被舍弃：`7 / 2` 是 `3`，而不是 `3.5`。
 当**至少一个**操作数是浮点值时，除法会保留小数部分：`7 / 2.0` 是 `3.5`。
 ```c
-printf("%d\n", 7 / 2);     // prints "3"
-printf("%f\n", 7 / 2.0);   // prints "3.500000"
+printf("%d\n", 7 / 2);     // 打印 "3"
+printf("%f\n", 7 / 2.0);   // 打印 "3.500000"
 ```
 把字面量写成 `2.0` 而不是 `2`，是强制进行浮点除法最简单的方法。
 
@@ -93,7 +93,7 @@ double avg = (double) total / count; // 3.5
 同一个值既可以用 `%c` 作为字符打印，也可以用 `%d` 作为数字打印：
 ```c
 char c = 'A';
-printf("%c %d\n", c, c); // prints "A 65"
+printf("%c %d\n", c, c); // 打印 "A 65"
 ```
 
 ---
@@ -115,7 +115,7 @@ char upper = 'g' - 32; // 'G'
 ```c
 long population = 8000000000L;
 unsigned int count = 40U;
-printf("%ld %u\n", population, count); // prints "8000000000 40"
+printf("%ld %u\n", population, count); // 打印 "8000000000 40"
 ```
 `%ld` 打印 `long`，`%u` 打印 `unsigned int`，`%lu` 打印 `unsigned long`。在大多数系统上，普通的 `int` 最多能容纳约 20 亿，所以 `5000000000` 放不下。
 
@@ -123,7 +123,7 @@ printf("%ld %u\n", population, count); // prints "8000000000 40"
 
 `sizeof` 运算符能告诉你一个类型或变量占用多少**字节**。它的结果类型是 `size_t`，用 `%zu` 打印：
 ```c
-printf("%zu\n", sizeof(int));  // prints "4" on most systems
+printf("%zu\n", sizeof(int));  // 打印 "4"（在大多数系统上）
 ```
 标准只保证 `sizeof(char)` 为 `1`，并且 `short <= int <= long`，但在典型的 64 位系统上，各类型的大小分别是：`char` 1，`short` 2，`int` 4，`long` 8，`float` 4，`double` 8。
 `sizeof` 常用于在不硬编码数字的情况下检查一个变量占用了多少内存。
@@ -134,11 +134,11 @@ printf("%zu\n", sizeof(int));  // prints "4" on most systems
 ```c
 #include <limits.h>
 
-printf("%d\n", INT_MAX); // prints "2147483647" on most systems
+printf("%d\n", INT_MAX); // 打印 "2147483647"（在大多数系统上）
 ```
 对有符号类型超过 `INT_MAX` 是**未定义行为**：程序可能会环绕、崩溃，或者做任何其他事情。在计算之前先检查：
 ```c
-if (a <= INT_MAX - b) { /* a + b is safe */ }
+if (a <= INT_MAX - b) { /* a + b 是安全的 */ }
 ```
 注意这里的检查用的是减法而不是加法，因为 `a + b` 本身可能已经溢出。
 
@@ -149,7 +149,7 @@ if (a <= INT_MAX - b) { /* a + b is safe */ }
 ```c
 unsigned int n = UINT_MAX;
 n = n + 1;
-printf("%u\n", n); // prints "0"
+printf("%u\n", n); // 打印 "0"
 ```
 这就是为什么一个把 `unsigned` 变量递减"直到变为负数"的循环永远不会停止：unsigned 的值永远不会小于 `0`。
 
@@ -160,8 +160,8 @@ printf("%u\n", n); // prints "0"
 ```c
 #include <stdbool.h>
 
-bool b = 0.5;  // true, because 0.5 is not zero
-int n = 0.5;   // 0, because the decimals are truncated
+bool b = 0.5;  // true，因为 0.5 不是零
+int n = 0.5;   // 0，因为小数部分被截断
 ```
 像 `x != 0` 这样的比较已经产生了与 `bool` 兼容的结果，而返回 `bool` 的函数则表明它回答的是一个是/否问题。
 
@@ -172,7 +172,7 @@ int n = 0.5;   // 0, because the decimals are truncated
 在运算**之前**把一个操作数转换为更大的类型：
 ```c
 int n = 100000;
-long big = (long) n * n; // 10000000000, computed as long
+long big = (long) n * n; // 10000000000，以 long 类型计算得出
 ```
 同样的规则也解释了为什么 `(double) total / count` 能正常工作：类型转换改变了操作数的类型，除法随之进行。
 

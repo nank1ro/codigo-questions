@@ -79,7 +79,7 @@ print(int(3.9))       # 3
 转换可能失败。`int("abc")` 无法得到一个数字，因此会抛出 `ValueError`，程序随之停止：
 ```python
 int("abc")   # ValueError: invalid literal for int() with base 10: 'abc'
-int("3.5")   # ValueError as well: "3.5" is not a whole number
+int("3.5")   # 同样是 ValueError："3.5" 不是整数
 ```
 为了让程序继续运行，你可以用 `try` / `except` 捕获错误：`try` 块中的代码会执行，如果它抛出了指定的错误，就转而执行 `except` 块：
 ```python

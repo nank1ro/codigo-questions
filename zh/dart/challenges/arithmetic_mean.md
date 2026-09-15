@@ -16,7 +16,7 @@ title: 算术平均值
 函数调用示例：
 ```dart
 print(mean([1, 2, 3]));
-// prints 2.0
+// 打印 2.0
 ```
 
 # --seed--

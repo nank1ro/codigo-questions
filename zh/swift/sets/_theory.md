@@ -42,9 +42,9 @@ print(primes.contains(6)) // false
 ```swift
 var numbers: Set<Int> = [1, 2]
 numbers.insert(3) // {1, 2, 3}
-numbers.insert(2) // 2 is already there: nothing changes
+numbers.insert(2) // 2 已经存在：没有变化
 numbers.remove(1) // {2, 3}
-numbers.remove(9) // 9 is not there: nothing changes
+numbers.remove(9) // 9 不存在：没有变化
 ```
 插入一个已经存在的值不会有任何效果，删除一个不存在的值也不会引发错误。
 `remove(_:)` 会把被删除的值作为可选值返回（如果没有删除任何内容则为 `nil`），这样你就可以检查删除是否真的发生了。
@@ -57,6 +57,6 @@ numbers.remove(9) // 9 is not there: nothing changes
 ```swift
 let numbers: Set<Int> = [3, 1, 2]
 for number in numbers.sorted() {
-    print(number) // 1, 2, 3 on separate lines
+    print(number) // 1, 2, 3 各占一行
 }
 ```

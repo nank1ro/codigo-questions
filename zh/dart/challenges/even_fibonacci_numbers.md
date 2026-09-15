@@ -16,7 +16,7 @@ title: 偶数斐波那契数
 函数调用示例：
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// 打印 10
 ```
 
 # --seed--

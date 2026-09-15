@@ -16,7 +16,7 @@ title: 质数求和
 函数调用示例：
 ```swift
 print(primeSummation(10))
-// prints 17
+// 输出 17
 ```
 
 # --before-seed--

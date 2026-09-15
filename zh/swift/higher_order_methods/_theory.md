@@ -139,7 +139,7 @@ print(pairs) // ["Ann is 31", "Bob is 27"]
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// 输出 1 和 3
 ```
 当需要对每个元素做一个简短的副作用时使用 `forEach`，当需要提前停止时使用 `for-in`。
 

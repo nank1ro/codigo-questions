@@ -28,7 +28,7 @@ title: 雨滴
 函数调用示例：
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// 打印 "Plong"
 ```
 
 # --seed--

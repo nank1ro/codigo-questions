@@ -16,7 +16,7 @@ title: 特殊勾股数组
 函数调用示例：
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// 输出 60
 ```
 
 # --before-seed--

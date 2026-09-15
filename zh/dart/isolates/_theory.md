@@ -52,8 +52,8 @@ Future<int> lengthInIsolate(String text) {
 `Isolate.run` 给你的是**并行**：第二个 isolate 在第二个处理器核心上，与第一个在同一瞬间运行自己的代码。这是用于计算的正确工具。
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // 等待：没有核心繁忙
+await Isolate.run(() => hugeCalculation());       // 计算：另一个核心正忙
 ```
 
 等待一个缓慢的计算毫无帮助：`await bigSum()` 仍然在当前 isolate 上运行 `bigSum`，并阻塞它直到最后一行。只有第二个 isolate 才能把那份工作移走。
@@ -258,7 +258,7 @@ Future<void> main() async {
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // 副本会增长
 print(numbers);                           // [1, 2, 3]
 ```
 

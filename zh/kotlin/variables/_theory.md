@@ -11,7 +11,7 @@ var x = 1
 这样我们就将值 `1` 赋给了名为 `x` 的变量。
 如果我们打印变量 `x`，我们会得到数字 `1`：
 ```kotlin
-println(x) // prints 1
+println(x) // 打印 1
 ```
 
 ---
@@ -20,9 +20,9 @@ println(x) // prints 1
 我们可以使用 `=` 来更新 `x` 并给它一个新值。
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // 打印 1
 x = 2
-println(x) // prints 2
+println(x) // 打印 2
 ```
 
 ---
@@ -31,7 +31,7 @@ println(x) // prints 2
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // 打印 5
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 当我们更新一个变量时，它会忘记之前的值。在这里我们可以打印 `x` 变量两次，看看它的值是如何更新的。
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // 打印 5
 x = 10
-println(x) // prints 10
+println(x) // 打印 10
 ```
 
 ---

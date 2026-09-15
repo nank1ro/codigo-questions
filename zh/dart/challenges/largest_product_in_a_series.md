@@ -16,7 +16,7 @@ title: 数列中的最大乘积
 函数调用示例：
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// 打印 5832
 ```
 
 # --seed--

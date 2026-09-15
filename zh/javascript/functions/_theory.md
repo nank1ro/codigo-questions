@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// 打印 "Hello!"
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// 打印 "Hello Smith! Welcome on board :)"
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ console.log(sayHello("Smith", true));
 如果定义了默认值，调用函数时可以省略该参数
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // 在这里做点什么
 }
 ```
 
@@ -54,7 +54,7 @@ __剩余参数__语法允许我们将不定数量的参数表示为一个数组�
 
 在函数中，我们可以添加一个_可选注释_来解释函数的作用：
 ```javascript
-// Prints 'Hello World' to the console.
+// 将 'Hello World' 打印到控制台。
 function helloWorld() {
     console.log("Hello, World!");
 }

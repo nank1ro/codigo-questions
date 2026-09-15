@@ -39,7 +39,7 @@ if user is not None:
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # 会打印出来，因为 0 也是一个真实的值！
 ```
 当"没有值"和"值为空"必须区别对待时，先检查 `is None`，再检查真假性：
 ```python
@@ -125,7 +125,7 @@ print(name or "anonymous")  # Ada
 ```python
 timeout = 0
 seconds = timeout if timeout is not None else 30
-print(seconds)  # 0, not 30
+print(seconds)  # 0，而不是 30
 ```
 
 ---

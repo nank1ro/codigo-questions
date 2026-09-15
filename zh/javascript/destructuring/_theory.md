@@ -9,7 +9,7 @@ const y = point[1];
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// 打印 3 7
 ```
 模式不必覆盖整个数组：多余的元素会被直接忽略，而没有匹配元素的名字则会变成 `undefined`。
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// 打印 5
 ```
 原始数组中不会有任何东西被复制或修改，模式只是从它那里读取。
 
@@ -33,7 +33,7 @@ console.log(middle([0, 10]));
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// 打印 64
 ```
 数逗号，而不是数名字：每个逗号都会让模式向前移动一个位置，无论它前面有没有名字。
 
@@ -44,7 +44,7 @@ console.log(blue);
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// 打印 1920 1080
 ```
 默认值只在需要时才会被求值，因此它甚至可以是一次函数调用，而且任何位置都可以有默认值，不只是最后一个。
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// 打印 2 1
 ```
 右边会先被构建，所以当赋值发生时，两个旧值已经安全地待在临时数组里了。注意上一行的分号：否则，以 `[` 开头的一行会被当成对前面内容的索引。
 
@@ -67,7 +67,7 @@ console.log(a, b);
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// 打印 Ada 36
 ```
 在模式中调换 `age` 和 `name` 的顺序不会有任何影响，而模式没有提到的键则会被直接留下。没有匹配键的名字会变成 `undefined`。
 
@@ -78,7 +78,7 @@ console.log(name, age);
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// 打印 dark en
 ```
 由于整个模式就是一条语句，函数可以在它的第一行就从参数中解出它需要的一切。
 
@@ -89,7 +89,7 @@ console.log(theme, lang);
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// 打印 Ada 1815
 ```
 把它读作“取出 `n`，叫它 `name`”。冒号并不声明类型，而且 `n` 本身永远不会被创建为变量，只有 `name` 会。被重命名的名字仍然可以有默认值，写在它的后面：`{ n: name = "unknown" }`。
 
@@ -99,7 +99,7 @@ console.log(name, born);
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// 打印 0
 ```
 `null` 在这里的行为和 `0` 一样，尽管在 API 响应中它通常表示“没有值”。当 `null` 也必须被替换时，先解构，之后再用 `??` 回退。
 
@@ -110,7 +110,7 @@ console.log(count);
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// 打印 London
 ```
 注意这一行创建的是什么：`address: { city }` 的意思是“进入 `address`”，而不是“把 `address` 给我”，所以只有 `city` 会成为变量。要两者都拿到，把这个键提到两次即可：`const { address, address: { city } } = user;`。数组模式和对象模式可以自由地互相嵌套，比如 `{ tags: [first] }`。
 
@@ -121,7 +121,7 @@ console.log(city);
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// 打印 a [ 'b', 'c' ]
 ```
 剩余元素必须放在模式的最后，并且不能有默认值：当没有剩余的东西时，它就是一个空数组。
 
@@ -132,7 +132,7 @@ console.log(next, waiting);
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// 打印 { name: 'Ada', city: 'London' }
 ```
 这是构建一个去掉某个键的对象副本的最短方式：原始对象永远不会被改动，剩余对象是一个保存着其余值的新对象。
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// 打印 12
 ```
 在函数体内部完全没有对象变量，只有 `width` 和 `height`。调用者传入一个对象，但签名清楚地记录了函数读取的是哪些键，而且这些键可以以任意顺序到达。
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// 打印 guest/false
 ```
 由外向内读这一行：`= {}` 在参数缺失时提供一个空对象，然后每个内部默认值再填上各自的键。
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// 打印 ada is 36
+// 打印 bob is 41
 ```
 这是遍历对象最可读的方式：没有索引，没有查找，只有你在乎的那两个名字。`Object.keys` 和 `Object.values` 各自只给出其中一面，`Object.entries` 则两者都给。
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// 打印 Post [js] +2
 ```
 保持可读性：一个不再能放在几行之内的模式，通常说明这个函数想要的东西太多了。

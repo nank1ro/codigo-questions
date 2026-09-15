@@ -12,7 +12,7 @@ var x = 1;
 如果我们打印变量 `x`，我们会得到数字 `1`：
 ```javascript
 console.log(x);
-// prints 1
+// 打印 1
 ```
 
 ---
@@ -21,9 +21,9 @@ console.log(x);
 我们可以使用 `=` 来更新 `x` 并给它一个新的值。
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // 打印 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // 打印 2
 ```
 
 ---
@@ -33,7 +33,7 @@ console.log(x); // prints 2
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // 打印 5
 ```
 
 ---
@@ -42,9 +42,9 @@ console.log(y); // prints 5
 在这里，我们可以打印两次变量 `x`，看看它的值是如何更新的。
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // 打印 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // 打印 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 在 JavaScript 中，字符串变量可以使用双引号和单引号来声明：
 ```javascript
 let x = "May";
-// both are the same string
+// 两者是相同的字符串
 let y = 'May';
 console.log(x === y);
-// prints true
+// 打印 true
 ```
 
 ---

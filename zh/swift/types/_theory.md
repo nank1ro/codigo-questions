@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 当你想要与推断出的类型不同的类型时，就添加注解。整数字面量可以存储在 `Double` 或 `Float` 常量中，单字符字面量可以存储在 `Character` 常量中：
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0，不是 Int
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil，不是整数
+print(Int(" 42"))  // nil，不允许有空格
 print(Int("abc"))  // nil
 ```
 对于小数文本，请使用 `Double(text)`，它同样返回 `Double?`：`Double("3.5")` 是 `Optional(3.5)`。
@@ -166,7 +166,7 @@ for c in "a1" {
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true，整数也是合法的 Double
 ```
 注意最后一行：`Int` 接受的每段文本 `Double` 也接受，所以当你想区分它们时要先检查 `Int`。
 
@@ -180,7 +180,7 @@ let items: [Any] = [1, "two", true]
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // 只对 1 运行
     }
 }
 ```

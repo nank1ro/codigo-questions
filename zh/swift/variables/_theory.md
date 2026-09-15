@@ -11,7 +11,7 @@ var x = 1
 这样我们就将值 `1` 赋给了名为 `x` 的变量。
 如果我们打印变量 `x`，我们会得到数字 `1`：
 ```swift
-print(x) // prints 1
+print(x) // 输出 1
 ```
 
 ---
@@ -20,9 +20,9 @@ print(x) // prints 1
 我们可以使用 `=` 来更新 `x` 并给它一个新值。
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // 输出 1
 x = 2
-print(x) // prints 2
+print(x) // 输出 2
 ```
 
 ---
@@ -31,7 +31,7 @@ print(x) // prints 2
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // 输出 5
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 当我们更新一个变量时，它会忘记之前的值。在这里我们可以两次显示变量 `x`，并看到它的值是如何更新的。
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // 输出 5
 x = 10
-print(x) // prints 10
+print(x) // 输出 10
 ```
 
 ---

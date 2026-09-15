@@ -22,7 +22,7 @@ for (item in collection) {
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// 打印 1, 2, 3
 ```
 
 输出显示索引 `i` 接收了从 _1_ 到 _3_ 范围内的每个值。
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* 打印
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ for (i in 3..1) println(i)
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// 打印 3, 2, 1
 ```
 
 `downTo` 产生一个递减范围。
@@ -78,7 +78,7 @@ for (i in 3 downTo 1) println(i)
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// 打印 1, 3, 5, 7, 9
 ```
 
 如你所见，代码块以 _2_ 而不是 _1_ 的步长运行，完全改变了我们的输出。
@@ -88,7 +88,7 @@ for (i in 1..10 step 2) {
 你也可以生成一个 _字符_ 范围。
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// 打印 abcdefghijklmnopqrstuvwxyz
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 你可以遍历一个 __String__。
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// 打印 bdc
 ```
 
 在上面的示例中，我们打印了每个字符 + 1，所以 `'a'` 变成了 `'b'`，`'b'` 变成了 `'c'`，以此类推。
@@ -113,7 +113,7 @@ for (char in 'abc') print(char + 1)
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// 打印 repeat 3 times
 ```
 
 你甚至可以通过以下方式访问索引
@@ -121,19 +121,19 @@ repeat(3) {
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// 打印 0, 1, 2
 ```
 
 ---
 
 在 Kotlin 中，我们也可以使用 `for-in` 来遍历可迭代集合，对每个元素调用给定的闭包：
 ```kotlin
-// this is a list, we'll see about that soon
+// 这是一个列表,我们很快就会讲到
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// 打印 (2, 4, 6, 8, 10)
 ```
 
 ---
@@ -142,7 +142,7 @@ for (num in numbers) {
 它按照与 `for-in` 循环相同的顺序，对序列中的每个元素调用给定的闭包：
 
 ```kotlin
-// this is a list, we'll see about that soon
+// 这是一个列表,我们很快就会讲到
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

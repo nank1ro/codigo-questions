@@ -3,7 +3,7 @@
 它用于将两个数字相加，例如：
 ```javascript
 console.log(5 + 3);
-// prints 8
+// 打印 8
 ```
 
 ---
@@ -12,7 +12,7 @@ console.log(5 + 3);
 它用于将一个数字从另一个数字中减去，例如：
 ```javascript
 console.log(5 - 3);
-// prints 2
+// 打印 2
 ```
 
 ---
@@ -21,7 +21,7 @@ console.log(5 - 3);
 它用于将两个数字相乘，例如：
 ```javascript
 console.log(5 * 3);
-// prints 15
+// 打印 15
 ```
 
 ---
@@ -30,7 +30,7 @@ console.log(5 * 3);
 它用于将两个数字相除，例如：
 ```javascript
 console.log(10 / 5);
-// prints 2
+// 打印 2
 ```
 
 ---
@@ -39,11 +39,11 @@ console.log(10 / 5);
 它用于求两个数字相除后的余数，例如：
 ```javascript
 console.log(5 % 2);
-// prints 1
+// 打印 1
 ```
 结果为 1，因为 5 除以 2 的商为 2，余数为 1
 ```javascript
 console.log(9 % 3);
-// prints 0
+// 打印 0
 ```
 这个结果为 0，因为 9 除以 3 的商为 3，余数为 0

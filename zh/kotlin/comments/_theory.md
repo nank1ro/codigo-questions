@@ -2,7 +2,7 @@
 
 最简单的注释是**单行注释**：它以 `//` 开头，一直延伸到行尾。
 ```kotlin
-// Greets the user
+// 问候用户
 println("Hello")
 ```
 使用注释来解释一段代码的用途，或者解释代码为什么这样编写。
@@ -11,7 +11,7 @@ println("Hello")
 
 注释不必独占一行：它可以跟在同一行代码的后面。这就是**尾随注释**，适合用来写一句关于这条特定语句的简短说明：
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // 尝试三次后放弃
 ```
 从 `//` 到行尾的所有内容都会被忽略，而它前面的代码照常运行。
 
@@ -23,7 +23,7 @@ val retries = 3 // give up after three attempts
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // 打印 10
 ```
 第二行现在是注释，因此 `total` 保持为 `10`。删掉 `//` 就能让这行代码重新生效。
 
@@ -45,8 +45,8 @@ println("Welcome!")
 
 `//` 在行尾结束，而 `/*` 注释只在 `*/` 处结束。如果你忘记闭合它，编译器会把后面的所有代码都当作注释的一部分，并报错：
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* 单位为厘米
+println(width) // 仍在注释内部:错误,该注释永远不会被闭合
 ```
 `//` 和 `/* */` 都可以用作尾随注释，但使用 `/*` 时一定要确保有对应的 `*/`。
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // 打印 100
 ```
 得益于嵌套，即使其中一行已经包含 `/* */` 注释，这种方法也同样有效。
 
@@ -159,7 +159,7 @@ println("50 // 2") // prints 50 // 2
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: 从设置中读取限制值
 ```
 对编译器来说它们只是普通注释；IntelliJ IDEA 会把它们收集到一个专门的工具窗口中，让待办工作一目了然。`TODO` 通常挨着一个占位实现，让代码在真正的实现编写完成之前保持可编译。完成工作后，请在同一次修改中替换占位实现并删除标记，这样注释就永远不会与代码的实际状态不符。
 
@@ -171,12 +171,12 @@ val limit = 10
 
 好的注释解释代码**为什么**这样做，而不是它**做了什么**。代码本身已经展示了会发生什么；用文字重复只会增加噪音，而且代码一改就过时：
 ```kotlin
-// set timeout to 30
+// 把 timeout 设为 30
 val timeout = 30
 ```
 数字背后的原因才是读者无法猜到的：
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// 服务器会在 35 秒后断开空闲连接,所以要提前停止
 val timeout = 30
 ```
 如果一条注释只是复述了下面那行代码，就删掉它，或者换成原因。最好的注释是说出代码本身说不出的东西。

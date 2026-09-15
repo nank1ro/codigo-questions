@@ -16,7 +16,7 @@ title: 3或5的倍数
 函数调用示例：
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// 打印 23
 ```
 
 # --seed--

@@ -27,7 +27,7 @@ Luhn 算法是一种简单的校验和，用于验证身份识别号码，例如
 函数调用示例：
 ```c
 printf("%d\n", is_valid("095 245 88"));
-// prints true
+// 打印 true
 ```
 
 # --before-seed--

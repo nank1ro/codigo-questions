@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// 打印 true
 console.log(colors.has("green"));
-// prints false
+// 打印 false
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// 打印 2
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// 打印 1
 ```
 
 ---
@@ -46,13 +46,13 @@ letters.add("a").add("b");
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// 打印 3
 ```
 **展开**运算符 `...` 反过来使用，可以把 set 再转换回数组：
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// 打印 [ 1, 2, 3 ]
 ```
 `Array.from(distinct)` 的效果是一样的。
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// 打印 3
+// 打印 1
+// 打印 2
 ```
 set 也有一个 `forEach()` 方法，会为每个值调用一次函数：
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// 打印 30
+// 打印 10
+// 打印 20
 ```
