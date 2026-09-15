@@ -16,7 +16,7 @@ La somme des nombres premiers inférieurs à 10 est 2 + 3 + 5 + 7 = 17.
 Exemple d'appel de fonction :
 ```swift
 print(primeSummation(10))
-// prints 17
+// affiche 17
 ```
 
 # --before-seed--

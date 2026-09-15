@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// affiche x, puis y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 Même lorsqu'un tableau est déclaré avec `val`, ses **éléments** peuvent être remplacés en assignant à un index :
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums vaut maintenant [10, 2, 3]
 ```
 Pour visiter chaque élément, vous pouvez utiliser une boucle `for` ou `forEach` :
 ```kotlin
@@ -83,8 +83,8 @@ Les tableaux peuvent être triés **sur place** ou copiés dans une nouvelle col
 - `sorted()`, `sortedDescending()` et `reversed()` laissent le tableau inchangé et retournent une nouvelle `List`
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums vaut maintenant [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums vaut toujours [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ La principale différence entre un tableau et une `MutableList` est qu'un tablea
 Des expressions comme `nums + 4` ne font pas grandir `nums`, elles construisent un tout nouveau tableau :
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok, nums vaut [9, 2, 3]
+val bigger = nums + 4    // nouveau tableau [9, 2, 3, 4], nums a toujours 3 éléments
 ```
 Préférez une `MutableList` quand le nombre d'éléments change au fil du temps, et un tableau quand il est connu à l'avance ou quand vous avez besoin des performances des types primitifs.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// affichent tous les deux 0 -> cat, puis 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, les listes comparent leurs éléments
 ```
 
 ---

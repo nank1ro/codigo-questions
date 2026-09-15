@@ -4,7 +4,7 @@ En programmation, nous pouvons sauvegarder une variable booléenne `niceWeather`
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // jouer dehors
 }
 ```
 
@@ -14,7 +14,7 @@ Continuons avec l'exemple précédent.
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // jouer dehors
 }
 ```
 Nous avons vu que la déclaration `if` exécute le bloc de code seulement si la condition est `true`.
@@ -28,9 +28,9 @@ En Kotlin, nous pouvons utiliser la déclaration `else`, comme :
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // jouer dehors
 } else {
-    // stay home
+    // rester à la maison
 }
 ```
 

@@ -10,7 +10,7 @@ L'appel est différent lui aussi : tu dois écrire **`await`** devant l'appel. `
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// affiche 42
 ```
 Dans un script Swift, le niveau supérieur prend déjà en charge `await`, tu peux donc appeler des fonctions asynchrones directement, sans aucune configuration supplémentaire. Oublier `async` ou `await` est une erreur de compilation, pas un bug silencieux.
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// affiche 10.0
 ```
 La valeur renvoyée est un `Double` normal, pas un emballage : une fois que `await` a terminé, tu travailles avec exactement comme d'habitude.
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// affiche 15
 ```
 `await` n'est autorisé que dans un contexte asynchrone : une fonction `async`, ou le niveau supérieur d'un script. Une fonction ordinaire, non `async`, ne peut pas faire de `await`.
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// affiche could not load
 ```
 L'ordre des mots-clés est fixe : `try` vient en premier, puis `await`.
 
@@ -144,7 +144,7 @@ let job = Task {
 Le résultat se lit plus tard avec **`.value`**, qui est attendu :
 ```swift
 print(await job.value)
-// prints 42
+// affiche 42
 ```
 Le type de la référence dit ce qu'elle produit et ce qu'elle peut lever : `Task<Int, Never>` est une tâche qui renvoie un `Int` et ne lève jamais d'erreur. Contrairement à `async let`, une `Task` peut être créée depuis du code ordinaire, non asynchrone.
 

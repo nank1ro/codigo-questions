@@ -16,7 +16,7 @@ La somme des carrés des dix premiers nombres naturels est 1² + 2² + ... + 10�
 Exemple d'appel de fonction :
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// affiche 2640
 ```
 
 # --before-seed--

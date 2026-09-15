@@ -18,7 +18,7 @@ Par exemple, 3² + 4² = 9 + 16 = 25 = 5². Il existe exactement un triplet pyth
 Exemple d'appel de fonction :
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// affiche 60
 ```
 
 # --seed--

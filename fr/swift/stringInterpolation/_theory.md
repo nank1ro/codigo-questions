@@ -1,6 +1,6 @@
 En Swift, nous pouvons utiliser le signe `+` pour afficher deux chaînes ou plus ensemble, comme :
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // affiche "Hello Swift!"
 ```
 
 ---

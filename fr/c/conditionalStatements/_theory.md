@@ -4,7 +4,7 @@ En programmation, nous pouvons sauvegarder une variable booléenne `nice_weather
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // joue dehors
 }
 ```
 
@@ -14,7 +14,7 @@ Continuons avec l'exemple précédent.
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // joue dehors
 }
 ```
 Nous avons vu que la déclaration `if` exécute le bloc de code seulement si la condition est `true`.
@@ -28,9 +28,9 @@ En C, nous pouvons utiliser la déclaration `else`, comme ceci :
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // joue dehors
 } else {
-    // stay home
+    // reste à la maison
 }
 ```
 

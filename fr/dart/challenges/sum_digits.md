@@ -17,7 +17,7 @@ Return the sum of digits of `N`.
 Exemple d'appel de fonction :
 ```dart
 print(sumDigits(28))
-// prints 10
+// affiche 10
 ```
 
 # --seed--

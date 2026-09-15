@@ -28,7 +28,7 @@ Les règles des gouttes de pluie sont que si un nombre donné :
 Exemple d'appel de fonction :
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// affiche "Plong"
 ```
 
 # --seed--

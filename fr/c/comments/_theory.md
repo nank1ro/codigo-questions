@@ -2,7 +2,7 @@ Un **commentaire** est du texte à l'intérieur de votre code source qui est des
 
 Le type le plus courant est le **commentaire sur une seule ligne** : tout ce qui se trouve de `//` jusqu'à la fin de cette ligne est ignoré.
 ```c
-// Greet the user
+// Salue l'utilisateur
 printf("Hello\n");
 ```
 La première ligne ne fait rien lorsque le programme s'exécute ; seul le `printf` produit une sortie.
@@ -15,7 +15,7 @@ Cela fait de `//` un moyen rapide de désactiver une ligne de code sans la suppr
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // affiche "10"
 ```
 La deuxième ligne est maintenant un commentaire, donc `total` reste `10`. En retirant le `//`, la ligne revient à la vie.
 
@@ -49,7 +49,7 @@ Cela compte lorsque vous voulez mettre en commentaire un bloc qui contient déj�
 
 Un commentaire n'a pas besoin de sa propre ligne : il peut suivre le code sur la même ligne. C'est un **commentaire en fin de ligne**, et c'est un bon endroit pour une courte note sur cette instruction spécifique :
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // abandonne après trois tentatives
 ```
 `//` et `/* */` fonctionnent tous les deux comme commentaires en fin de ligne, mais attention avec `/*` : puisqu'il s'arrête seulement au `*/`, un `/*` non fermé à la fin d'une ligne avale les lignes qui suivent, et le programme ne compile plus.
 
@@ -83,8 +83,8 @@ Les programmeurs utilisent quelques mots-clés conventionnels au début d'un com
 - `FIXME` marque du code qui est connu pour être faux et qui doit être corrigé
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: valide l'entrée avant de l'utiliser
+// FIXME: plante quand la liste est vide
 ```
 Les éditeurs et les outils peuvent lister ces marqueurs, donc le travail en attente est facile à trouver. Une fois le travail fait, supprimez le marqueur : un `TODO` périmé est trompeur.
 
@@ -92,12 +92,12 @@ Les éditeurs et les outils peuvent lister ces marqueurs, donc le travail en att
 
 Un bon commentaire explique **pourquoi** le code fait quelque chose, pas **ce qu'**il fait. Le code montre déjà ce qui se passe ; le répéter avec des mots ajoute du bruit et devient obsolète dès que le code change :
 ```c
-// multiply price by 90 and divide by 100
+// multiplie le prix par 90 et divise par 100
 return price * 90 / 100;
 ```
 La raison derrière les nombres est ce qu'un lecteur ne peut pas deviner :
 ```c
-// launch discount: members get 10% off until the end of June
+// remise de lancement : les membres bénéficient de 10 % de réduction jusqu'à fin juin
 return price * 90 / 100;
 ```
 Si un commentaire ne fait que répéter la ligne en dessous, supprimez-le ou remplacez-le par la raison.

@@ -22,7 +22,7 @@ Personne n'a jamais prouvé que cela se produit toujours, mais c'est vrai pour t
 Exemple d'appel de fonction :
 ```dart
 print(collatzSteps(16));
-// prints 4
+// affiche 4
 ```
 
 # --seed--

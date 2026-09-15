@@ -4,7 +4,7 @@ En programmation, nous pouvons sauvegarder une variable booléenne `niceWeather`
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // joue dehors
 }
 ```
 
@@ -14,7 +14,7 @@ Continuons avec l'exemple précédent.
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // joue dehors
 }
 ```
 Nous avons vu que l'instruction `if` exécute le bloc de code seulement si la condition est `true`.
@@ -28,9 +28,9 @@ En JavaScript nous pouvons utiliser l'instruction `else`, comme :
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // joue dehors
 } else {
-    // stay home
+    // reste à la maison
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// affiche 10
 ```
 Le code abrégé pour le code ci-dessus est :
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// affiche 10
 ```
 `c` est défini égal à `a`, parce que la condition `a < b` était true
 

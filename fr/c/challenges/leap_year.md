@@ -18,7 +18,7 @@ Retournez `true` si c'est une année bissextile, `false` sinon.
 Exemple d'appel de fonction :
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// affiche true
 ```
 
 # --before-seed--

@@ -40,9 +40,9 @@ Par défaut, un motif peut correspondre n'importe où dans le texte. Les **ancre
 - `$` signifie « la fin du texte »
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, le texte commence par sw
+print("myswift".contains(#/^sw/#)) // false, sw n'est pas au début
+print("swift".contains(#/ft$/#))  // true, le texte se termine par ft
 ```
 Les ancres correspondent à une position, pas à un caractère, donc elles n'ajoutent rien au contenu de la correspondance.
 

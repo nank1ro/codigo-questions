@@ -42,8 +42,8 @@ Un littéral décimal n'est jamais inféré comme `Float` : `val ratio = 0.5` es
 Un `Int` peut contenir des nombres entiers jusqu'à environ deux milliards, plus précisément jusqu'à `Int.MAX_VALUE`, qui vaut `2147483647`.
 Un littéral entier trop grand pour un `Int` est automatiquement inféré comme un `Long`, et vous pouvez forcer un `Long` pour n'importe quel littéral avec le suffixe `L` :
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, trop grand pour un Int
+val small = 3L        // Long, grâce au suffixe
 ```
 De la même manière, le suffixe `f` transforme un littéral décimal en `Float` : `val ratio = 0.5f`.
 Les grands nombres sont difficiles à lire, donc Kotlin vous permet de placer des tirets bas `_` n'importe où entre les chiffres ; ils sont ignorés par le compilateur :
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, pas un nombre entier
+println(" 42".toIntOrNull())  // null, les espaces ne sont pas autorisés
 println("abc".toIntOrNull())  // null
 ```
 Pour un texte décimal, utilisez `toDoubleOrNull()`, qui accepte `"3.5"` et retourne un `Double?` de la même manière.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 Une fois qu'une vérification a réussi, le compilateur effectue un **smart cast** de la valeur : à l'intérieur du `if` (ou de la branche du `when`) vous pouvez l'utiliser comme ce type, sans aucune conversion nécessaire :
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value est un Int ici
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

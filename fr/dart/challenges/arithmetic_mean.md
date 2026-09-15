@@ -16,7 +16,7 @@ Write a function that returns the mean of a numeric vector.
 Exemple d'appel de fonction :
 ```dart
 print(mean([1, 2, 3]));
-// prints 2.0
+// affiche 2.0
 ```
 
 # --seed--

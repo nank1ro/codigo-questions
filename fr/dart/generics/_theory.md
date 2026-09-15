@@ -11,7 +11,7 @@ L'avantage, c'est que le compilateur sait ce qu'elle contient :
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // correct : first est un String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart possède aussi le type `dynamic`, qui signifie « tout est permis ». Une `
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // accepté
+print(things.first.toUpperCase()); // accepté
 ```
 
 Le hic, c'est que rien n'est vérifié pendant que vous écrivez le code. Chaque appel sur une valeur `dynamic` est résolu pendant l'exécution du programme, si bien qu'une faute de frappe comme `things.first.toUpperCse()` se compile sans broncher et explose devant un utilisateur.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, inféré depuis l'argument
+print(a.value + 1);      // 8, le compilateur sait que value est un int
 ```
 
 La lettre n'a pas d'importance : `T` est une convention pour « type », rien de plus.
@@ -78,14 +78,14 @@ Une fonction peut être générique à elle seule, sans vivre dans une classe g�
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, T est String ici
+print(firstOf([10, 20]));        // 10, T est int ici
 ```
 
 Un seul corps de fonction, vérifié une fois, réutilisé pour chaque type. L'argument de type est généralement déduit des arguments, mais il peut être écrit explicitement quand l'inférence n'a rien à se mettre sous la dent :
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // lève une exception, mais le type est clair
 ```
 
 Les méthodes à l'intérieur d'une classe suivent exactement la même règle.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 Avec la sécurité null complète, le point d'interrogation peut se placer à deux endroits différents, et ils ont deux sens différents :
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // une boîte qui existe et contient un int nullable
+Box<int>? b = null;      // pas de boîte du tout, mais s'il y en a une, elle contient un int
 ```
 
 Dans `Box<int?>`, c'est l'**argument de type** qui est nullable, donc `a.value` est de type `int?` et peut valoir `null`, alors que `a` lui-même existe toujours. Dans `Box<int>?`, c'est la **variable** qui est nullable, donc `b` peut valoir `null` et il faut `b?.value` ou `b!.value` pour accéder à son contenu.
@@ -146,10 +146,10 @@ La différence importe dès que vous utilisez la valeur. Sur une `Box<int?>`, vo
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, la boîte est là, son contenu est null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, la boîte elle-même est absente
 ```
 
 Écrire `b.value` sur une `Box<int>?` ne compile pas du tout : Dart refuse de lire un champ de quelque chose qui n'existe peut-être pas.
@@ -187,7 +187,7 @@ Sans la borne, `a > b` ne compilerait pas : l'opérateur de comparaison appartie
 Une borne peut mentionner le paramètre de type lui-même. `Comparable<T>` est l'interface de tout ce qui sait se comparer à ses semblables, via `compareTo` :
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // négatif : fig arrive en premier
 print('kiwi'.compareTo('fig')); // positive
 print('fig'.compareTo('fig'));  // zero
 ```

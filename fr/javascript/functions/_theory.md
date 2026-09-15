@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// affiche "Hello!"
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// affiche "Hello Smith! Welcome on board :)"
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ Vous pouvez définir une valeur _par défaut_ pour n'importe quel paramètre dan
 Si une valeur par défaut est définie, vous pouvez omettre ce paramètre lors de l'appel de la fonction
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // fais des trucs ici
 }
 ```
 
@@ -54,7 +54,7 @@ Par exemple, un paramètre rest avec un nom de `numbers` est mis à disposition 
 
 Dans les fonctions, nous pouvons ajouter un _commentaire optionnel_ qui explique ce que fait la fonction :
 ```javascript
-// Prints 'Hello World' to the console.
+// Affiche 'Hello World' dans la console.
 function helloWorld() {
     console.log("Hello, World!");
 }

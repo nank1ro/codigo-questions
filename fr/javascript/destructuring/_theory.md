@@ -9,7 +9,7 @@ La **déstructuration** fait le même travail en une ligne. À gauche du `=`, vo
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// affiche 3 7
 ```
 Le motif n'a pas besoin de couvrir tout le tableau : les éléments en trop sont simplement ignorés, et un nom sans élément correspondant devient `undefined`.
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// affiche 5
 ```
 Rien n'est copié ni modifié dans le tableau d'origine, le motif ne fait qu'y lire.
 
@@ -33,7 +33,7 @@ Parfois, un seul élément au plus profond du tableau compte. Vous pouvez laisse
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// affiche 64
 ```
 Comptez les virgules, pas les noms : chaque virgule fait avancer le motif d'une position, qu'un nom se trouve ou non devant elle.
 
@@ -44,7 +44,7 @@ Un tableau n'est pas toujours aussi long que le motif ne l'attend. Écrire `= va
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// affiche 1920 1080
 ```
 La valeur par défaut n'est évaluée que lorsqu'elle est nécessaire, elle peut donc même être un appel de fonction, et une valeur par défaut peut être donnée à n'importe quelle position, pas seulement à la dernière.
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// affiche 2 1
 ```
 Le côté droit est construit en premier, donc les deux anciennes valeurs sont déjà en sécurité dans le tableau temporaire quand l'affectation a lieu. Attention au point-virgule de la ligne précédente : une ligne qui commence par `[` serait sinon lue comme un index de ce qui précède.
 
@@ -67,7 +67,7 @@ Les objets peuvent aussi être déstructurés, avec des accolades au lieu de cro
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// affiche Ada 36
 ```
 Permuter `age` et `name` dans le motif ne change rien, et les clés que le motif ne mentionne pas sont simplement laissées de côté. Un nom sans clé correspondante devient `undefined`.
 
@@ -78,7 +78,7 @@ Les motifs d'objets et les valeurs par défaut se combinent exactement comme ceu
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// affiche dark en
 ```
 Puisque le motif entier ne fait qu'une instruction, une fonction peut déballer tout ce dont elle a besoin depuis son argument dès sa toute première ligne.
 
@@ -89,7 +89,7 @@ Un motif d'objet nomme ses variables d'après les clés, ce qui est gênant quan
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// affiche Ada 1815
 ```
 Lisez-le comme « prends `n`, appelle-le `name` ». Les deux-points ne déclarent pas un type, et `n` lui-même n'est jamais créé comme variable, seul `name` l'est. Un nom renommé peut toujours recevoir une valeur par défaut, écrite après lui : `{ n: name = "unknown" }`.
 
@@ -99,7 +99,7 @@ Les valeurs par défaut ont une règle qui surprend tout le monde : elles ne s'a
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// affiche 0
 ```
 `null` se comporte ici de la même façon que `0`, même s'il signifie souvent « aucune valeur » dans une réponse d'API. Quand `null` doit aussi être remplacé, déstructurez d'abord et retombez ensuite sur une valeur avec `??`.
 
@@ -110,7 +110,7 @@ Là où une clé contient un autre objet ou un tableau, le motif peut simplement
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// affiche London
 ```
 Attention à ce que cette ligne crée : `address: { city }` signifie « va dans `address` », pas « donne-moi `address` », donc seul `city` devient une variable. Pour obtenir les deux, mentionnez la clé deux fois : `const { address, address: { city } } = user;`. Les motifs de tableaux et d'objets s'imbriquent librement l'un dans l'autre, comme dans `{ tags: [first] }`.
 
@@ -121,7 +121,7 @@ Prendre la tête d'un tableau et garder la queue est un besoin si courant que le
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// affiche a [ 'b', 'c' ]
 ```
 Un élément rest doit venir en dernier dans le motif et ne peut pas avoir de valeur par défaut : quand il ne reste rien, c'est simplement un tableau vide.
 
@@ -132,7 +132,7 @@ Les motifs d'objets ont aussi un rest, et là il rassemble toutes les clés que 
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// affiche { name: 'Ada', city: 'London' }
 ```
 C'est la façon la plus courte de construire une copie d'un objet sans une de ses clés : l'original n'est jamais touché, et l'objet rest est neuf et contient les valeurs restantes.
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// affiche 12
 ```
 Dans le corps, il n'y a pas du tout de variable objet, seulement `width` et `height`. L'appelant passe un seul objet, mais la signature documente exactement quelles clés la fonction lit, et les clés peuvent arriver dans n'importe quel ordre.
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// affiche guest/false
 ```
 Lisez la ligne de l'extérieur vers l'intérieur : `= {}` fournit un objet vide quand l'argument est absent, et chaque valeur par défaut interne remplit ensuite sa propre clé.
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// affiche ada is 36
+// affiche bob is 41
 ```
 C'est la façon lisible de parcourir un objet : pas d'index, pas de recherche, juste les deux noms qui vous importent. `Object.keys` et `Object.values` ne donnent chacun qu'un seul côté, `Object.entries` donne les deux.
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// affiche Post [js] +2
 ```
 Gardez-le lisible : un motif qui ne tient plus sur quelques lignes est généralement le signe que la fonction en demande trop.

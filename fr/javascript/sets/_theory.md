@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// affiche true
 console.log(colors.has("green"));
-// prints false
+// affiche false
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// affiche 2
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// affiche 1
 ```
 
 ---
@@ -46,13 +46,13 @@ Vous pouvez construire un set en une seule fois en passant un tableau à `new Se
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// affiche 3
 ```
 L'opérateur **spread** `...` fonctionne dans l'autre sens et retransforme un set en tableau :
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// affiche [ 1, 2, 3 ]
 ```
 `Array.from(distinct)` fait la même chose.
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// affiche 3
+// affiche 1
+// affiche 2
 ```
 Les sets ont aussi une méthode `forEach()` qui appelle une fonction pour chaque valeur :
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// affiche 30
+// affiche 10
+// affiche 20
 ```

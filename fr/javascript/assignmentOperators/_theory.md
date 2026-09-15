@@ -27,7 +27,7 @@ La fonctionnalité est la même, la seule différence est qu'elle effectue la so
 Donc les éléments suivants sont exactement les mêmes
 ```javascript
 var num = num - 5;
-// is equal to
+// est égal à
 num -= 5;
 ```
 
@@ -38,7 +38,7 @@ Il multiplie la variable par une valeur et assigne le résultat à cette variabl
 Donc les éléments suivants sont exactement les mêmes
 ```javascript
 var num = num * 5;
-// is equal to
+// est égal à
 num *= 5;
 ```
 
@@ -49,7 +49,7 @@ Il divise la variable par une valeur et assigne le résultat à cette variable.
 Donc les éléments suivants sont exactement les mêmes
 ```javascript
 num = num / 5;
-// is equal to
+// est égal à
 num /= 5;
 ```
 
@@ -60,6 +60,6 @@ Il calcule le reste de la variable et d'une valeur et assigne le résultat à ce
 Donc les éléments suivants sont exactement les mêmes
 ```javascript
 num = num % 5;
-// is equal to
+// est égal à
 num %= 5;
 ```

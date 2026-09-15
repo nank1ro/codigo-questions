@@ -139,7 +139,7 @@ Dans la fermeture, `$0` est l'élément de la première séquence et `$1` celui 
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// affiche 1 and 3
 ```
 Utilise `forEach` pour un court effet de bord sur chaque élément, et `for-in` quand tu dois t'arrêter plus tôt.
 

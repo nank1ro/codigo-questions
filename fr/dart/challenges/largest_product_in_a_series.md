@@ -16,7 +16,7 @@ Les quatre chiffres adjacents dans le nombre de 1000 chiffres qui ont le plus gr
 Exemple d'appel de fonction :
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// affiche 5832
 ```
 
 # --seed--

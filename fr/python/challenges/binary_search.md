@@ -20,7 +20,7 @@ La liste ne contient jamais de doublons, l'index est donc toujours unique. La li
 Exemple d'appel de fonction :
 ```python
 print(binary_search([1, 3, 5, 7], 5))
-# prints 2
+# affiche 2
 ```
 
 # --seed--

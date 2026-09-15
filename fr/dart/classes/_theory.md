@@ -2,7 +2,7 @@ Une **classe** est un plan pour créer des objets. En Dart, on définit une clas
 
 ```dart
 class Animal {
-  // fields and methods go here
+  // champs et méthodes ici
 }
 ```
 
@@ -232,7 +232,7 @@ Une **classe abstraite** est une classe qui ne peut pas être instanciée direct
 
 ```dart
 abstract class Shape {
-  double area(); // abstract method — no body
+  double area(); // méthode abstraite — pas de corps
 }
 
 class Circle extends Shape {
@@ -258,7 +258,7 @@ class MathHelper {
 }
 
 void main() {
-  // access without creating an object:
+  // accès sans créer d'objet :
   print(MathHelper.pi);
   print(MathHelper.circleArea(5));
 }

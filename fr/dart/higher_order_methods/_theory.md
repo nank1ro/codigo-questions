@@ -64,8 +64,8 @@ Sur une collection vide, `any` vaut `false` et `every` vaut `true` : il n'y a au
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // rien n'est encore calculé
+print(doubled.first);                      // ne calcule que 2
 ```
 
 C'est `toList()` qui **matérialise** la séquence : il la parcourt du début à la fin et stocke chaque résultat dans une véritable `List`.
@@ -183,7 +183,7 @@ Comme elle retourne `void`, vous ne pouvez pas du tout utiliser le résultat : `
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2], inchangée
 ```
 
 `sort` accepte aussi un **comparateur** : une fonction de deux éléments retournant un nombre négatif quand le premier vient avant le second, `0` quand ils sont égaux, et un nombre positif sinon. `compareTo` produit exactement cela, donc trier selon n'importe quelle clé tient en une ligne :
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // String à partir de Strings
+final letters = words.fold(0, (acc, w) => acc + w.length); // int à partir de Strings
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

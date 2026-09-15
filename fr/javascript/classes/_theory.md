@@ -12,7 +12,7 @@ Les _classes_ sont des constructions polyvalentes et flexibles qui deviennent le
 Une classe de base n'est composée que du mot-clé `class` et de son nom, par exemple :
 ```javascript
 class ClassName {
-    // class definition
+    // définition de la classe
 }
 ```
 

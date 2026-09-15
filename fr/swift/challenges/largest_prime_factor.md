@@ -16,7 +16,7 @@ Les facteurs premiers de 13195 sont 5, 7, 13 et 29. Le plus grand facteur premie
 Exemple d'appel de fonction :
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// affiche 29
 ```
 
 # --before-seed--

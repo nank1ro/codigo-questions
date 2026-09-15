@@ -16,7 +16,7 @@ title: Plus petit multiple commun
 Exemple d'appel de fonction :
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// affiche 2520
 ```
 
 # --before-seed--

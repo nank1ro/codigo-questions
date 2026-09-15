@@ -16,7 +16,7 @@ En listant les six premiers nombres premiers : 2, 3, 5, 7, 11 et 13, on constate
 Exemple d'appel de fonction :
 ```swift
 print(nthPrime(6))
-// prints 13
+// affiche 13
 ```
 
 # --before-seed--

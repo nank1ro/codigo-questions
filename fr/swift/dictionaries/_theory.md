@@ -11,7 +11,7 @@ La clé `key1` pointe vers la valeur `1`, `key2` vers `2`, et ainsi de suite.
 
 L'accès aux valeurs du dictionnaire par clé est tout comme l'accès aux valeurs du tableau par index :
 ```swift
-// gets the age value from the user dictionary
+// récupère la valeur de l'âge dans le dictionnaire user
 user['age']
 ```
 
@@ -34,7 +34,7 @@ Chaque paire compte une seule fois, même si la valeur est un tableau. (C'est vr
 Parce que les dictionnaires sont mutables, ils peuvent être modifiés de plusieurs façons. Les éléments peuvent être supprimés d'un dictionnaire avec la méthode `removeValue(forKey:)` :
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // affiche la valeur supprimée, si la clé existe
 }
 ```
 will remove the key `keyName` and its associated value from the dictionary.
@@ -73,5 +73,5 @@ Précédemment, nous avons vu comment supprimer une _paire clé-valeur_ du dicti
 Nous pouvons également supprimer un élément en assignant à la clé la valeur `nil`
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName a été supprimée du dictionnaire dictName
 ```

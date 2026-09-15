@@ -20,9 +20,9 @@ Les variables sont appelées de cette manière car la valeur qu'elles stockent p
 Nous pouvons mettre à jour `x` en utilisant `=` et en lui donnant une nouvelle valeur.
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // affiche 1
 x = 2
-println(x) // prints 2
+println(x) // affiche 2
 ```
 
 ---
@@ -31,7 +31,7 @@ Nous pouvons également donner aux variables les valeurs d'autres variables. Ici
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // affiche 5
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 Quand nous mettons à jour une variable, elle oublie sa valeur précédente. Ici, nous pouvons afficher la variable `x` deux fois et voir comment sa valeur se met à jour.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // affiche 5
 x = 10
-println(x) // prints 10
+println(x) // affiche 10
 ```
 
 ---

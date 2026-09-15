@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// affiche red
 ```
 Par convention, l'objet est déclaré avec `const`, son nom commence par une majuscule et les noms des membres sont écrits en `UPPER_CASE`, exactement comme les autres constantes.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// affiche done
 ```
 Une fois gelé, l'objet ne peut plus non plus recevoir de nouvelles propriétés, et `Object.isFrozen(obj)` vous indique si un objet a été gelé :
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// affiche true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// affiche s
 console.log(Size.MEDIUM);
-// prints undefined
+// affiche undefined
 ```
 Dans les deux cas, l'énumération conserve les valeurs que vous avez définies, ce qui est exactement ce que l'on attend d'un ensemble de constantes.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// affiche true
 ```
 Le compromis est la lisibilité : afficher `Priority.HIGH` montre `3`, ce qui vous en dit beaucoup moins que la chaîne `"high"`.
 
@@ -70,14 +70,14 @@ Comme une énumération est simplement un objet, les outils habituels des objets
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// affiche [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// affiche [ 'red', 'blue' ]
 ```
 Combiner `Object.values()` avec la méthode de tableau `includes()` est le moyen standard de vérifier si une valeur arbitraire, par exemple une valeur lue depuis une saisie utilisateur, est un membre valide :
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// affiche true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// affiche false
 ```

@@ -20,7 +20,7 @@ Le tableau ne contient jamais de doublons, l'index est donc toujours unique. Le 
 Exemple d'appel de fonction :
 ```javascript
 console.log(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// affiche 2
 ```
 
 # --before-seed--

@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// affiche : Cold
 ```
 
 Exactement l'une des deux branches s'exécute toujours.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// affiche : B
 ```
 
 ---

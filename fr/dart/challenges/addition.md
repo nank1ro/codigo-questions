@@ -16,7 +16,7 @@ title: Addition
 Exemple d'appel de fonction :
 ```dart
 print(addition(1, 2));
-// prints 3
+// affiche 3
 ```
 
 # --seed--

@@ -18,7 +18,7 @@ En considérant les termes de la suite de Fibonacci dont les valeurs ne dépasse
 Exemple d'appel de fonction :
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// affiche 10
 ```
 
 # --before-seed--

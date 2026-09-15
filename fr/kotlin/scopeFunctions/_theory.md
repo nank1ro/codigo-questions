@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` ne se limite pas aux objets que vous venez de créer : il fonctionne sur n'importe quel objet et, comme il redonne l'objet, vous pouvez utiliser l'expression entière partout où l'objet est attendu.
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // modifie box et le renvoie
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 Le bloc est un bloc de code ordinaire, il peut donc contenir autant d'instructions que nécessaire.

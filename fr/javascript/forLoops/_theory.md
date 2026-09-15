@@ -34,7 +34,7 @@ Elle compte à quelle répétition de la boucle nous en sommes actuellement.
 En JavaScript, nous avons aussi la boucle `forEach`.
 En fait, `forEach` appelle la fermeture donnée sur chaque élément de la séquence dans le même ordre qu'une boucle `for` :
 ```javascript
-// this is an array, we'll see about that soon
+// ceci est un tableau, on verra ça bientôt
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```

@@ -8,7 +8,7 @@ void say_hello() {
 
 int main() {
     say_hello();
-    // prints "Hello!"
+    // affiche "Hello!"
     return 0;
 }
 ```
@@ -36,7 +36,7 @@ void say_hello(char *name, bool new_user) {
 }
 
 int main() {
-    // prints "Hello Tom"
+    // affiche "Hello Tom"
     say_hello("Tom", true);
     return 0;
 };

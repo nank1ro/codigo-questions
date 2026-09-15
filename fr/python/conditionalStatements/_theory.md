@@ -4,7 +4,7 @@ En programmation, nous pouvons enregistrer une variable booléenne `nice_weather
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # jouer dehors
 ```
 
 ---
@@ -13,7 +13,7 @@ Continuons avec l'exemple précédent.
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # jouer dehors
 ```
 Nous avons vu que la déclaration `if` exécute le bloc de code uniquement si la condition est `True`.
 Une autre chose importante à considérer est représentée par les **deux-points** `:` et l'**indentation**, qui indiquent le début d'un bloc de code.
@@ -30,9 +30,9 @@ En Python, nous pouvons utiliser la déclaration `else`, comme :
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # jouer dehors
 else:
-    # stay home
+    # rester à la maison
 ```
 
 ---

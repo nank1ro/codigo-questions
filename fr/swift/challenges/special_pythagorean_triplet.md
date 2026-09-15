@@ -16,7 +16,7 @@ Un triplet pythagoricien est un ensemble de trois nombres naturels, a < b < c, p
 Exemple d'appel de fonction :
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// affiche 60
 ```
 
 # --before-seed--

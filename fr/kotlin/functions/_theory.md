@@ -7,7 +7,7 @@ fun greet() {
 ```
 Pour appeler (exécuter) une fonction, utilisez son nom suivi de parenthèses :
 ```kotlin
-greet() // prints Hello!
+greet() // affiche Hello!
 ```
 Une fonction qui ne retourne pas de valeur retourne implicitement `Unit`.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 Le mot-clé `return` renvoie une valeur à l'appelant :
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // affiche 42
 ```
 Le type de retour doit correspondre au type de la valeur retournée.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 Vous passez des arguments lors de l'appel de la fonction :
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // affiche Hello, Alice!
 ```
 Les paramètres permettent d'écrire du code réutilisable qui fonctionne avec différentes valeurs.
 
@@ -48,8 +48,8 @@ Kotlin prend en charge les valeurs de paramètres par défaut. Si un appelant ne
 fun greet(name: String = "World") {
     println("Hello, \$name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // affiche Hello, World!
+greet("Alice")  // affiche Hello, Alice!
 ```
 Les valeurs par défaut rendent les paramètres optionnels, réduisant le besoin de fonctions surchargées.
 
@@ -72,8 +72,8 @@ Les fonctions peuvent retourner des valeurs `Boolean`, ce qui est utile pour vé
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // affiche true
+println(isEven(7)) // affiche false
 ```
 Une fonction `Boolean` retourne soit `true` soit `false`.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is \$name and I am \$age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// affiche My name is Bob and I am 30 years old.
 ```
 Les arguments nommés vous permettent de passer des valeurs dans n'importe quel ordre en utilisant le nom du paramètre :
 ```kotlin

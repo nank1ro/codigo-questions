@@ -16,7 +16,7 @@ Un nombre palindromique se lit de la même façon dans les deux sens. Le plus gr
 Exemple d'appel de fonction :
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// affiche 9009
 ```
 
 # --seed--

@@ -2,7 +2,7 @@ Une _interpolation_ de chaîne est un moyen programmatique de générer une cha�
 En Dart, nous pouvons utiliser le signe `+` (concaténation) pour afficher deux ou plusieurs chaînes ensemble, comme :
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// affiche "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ Nous pouvons utiliser des accolades pour insérer des valeurs autant de fois que
 À l'intérieur de `${}`, nous pouvons également mettre des conditions, par exemple :
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// affiche The answer is correct
 ```
 
 ---
