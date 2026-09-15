@@ -16,7 +16,7 @@ Escribe una función que devuelva la suma de todos los múltiplos de 3 o 5 menor
 Ejemplo de llamada a la función:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// imprime 23
 ```
 
 # --seed--

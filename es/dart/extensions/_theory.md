@@ -4,7 +4,7 @@ Una **extensión** lo resuelve: añade nuevos miembros a un tipo **existente**, 
 
 ```dart
 extension ExtensionName on Type {
-  // new methods and getters
+  // nuevos métodos y getters
 }
 ```
 
@@ -48,7 +48,7 @@ Una extensión también puede declarar **getters**, que se leen como propiedades
 
 ```dart
 extension Sizes on String {
-  bool get isLong => length > 10;      // same as this.length
+  bool get isLong => length > 10;      // igual que this.length
   String get firstChar => this[0];
 }
 
@@ -192,7 +192,7 @@ extension Shorter on String {
 }
 
 void main() {
-  print('four'.length); // 4, String's own length is used
+  print('four'.length); // 4, se usa el propio length de String
 }
 ```
 

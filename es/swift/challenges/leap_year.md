@@ -18,7 +18,7 @@ Devuelve `true` si es un año bisiesto, `false` en caso contrario.
 Ejemplo de llamada de función:
 ```swift
 print(leapYear(2000))
-// prints true
+// imprime true
 ```
 
 # --before-seed--

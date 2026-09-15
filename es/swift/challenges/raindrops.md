@@ -30,7 +30,7 @@ Escribe una función que devuelva la cadena correcta, ejemplos:
 Ejemplo de llamada de función:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// imprime "Plong"
 ```
 
 # --before-seed--

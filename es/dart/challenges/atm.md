@@ -23,7 +23,7 @@ Si no hay suficiente dinero en la cuenta para completar la transacción, devuelv
 Ejemplo de llamada de función:
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// imprime 9.5
 ```
 
 # --seed--

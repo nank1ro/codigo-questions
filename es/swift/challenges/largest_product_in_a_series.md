@@ -16,7 +16,7 @@ Escribe una función que encuentre los n dígitos adyacentes del número de 1000
 Ejemplo de llamada a la función:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// imprime 5832
 ```
 
 # --before-seed--

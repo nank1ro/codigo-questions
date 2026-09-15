@@ -2,7 +2,7 @@ Un **comentario** es una nota escrita dentro del código fuente para las persona
 
 El comentario más simple es el **comentario de una línea**: empieza con `//` y se extiende hasta el final de la línea.
 ```swift
-// Greets the user
+// Saluda al usuario
 print("Hello")
 ```
 Usa los comentarios para explicar para qué sirve un fragmento de código, o por qué se escribió de esa manera.
@@ -11,7 +11,7 @@ Usa los comentarios para explicar para qué sirve un fragmento de código, o por
 
 Un comentario no necesita su propia línea: puede ir después del código en la misma línea. Esto es un **comentario al final de la línea**, y es un buen lugar para una nota breve sobre esa instrucción concreta:
 ```swift
-let retries = 3 // give up after three attempts
+let retries = 3 // abandona después de tres intentos
 ```
 Todo lo que va desde `//` hasta el final de la línea se ignora, mientras que el código anterior se ejecuta como de costumbre.
 
@@ -23,7 +23,7 @@ Esto hace de `//` una forma rápida de desactivar una línea de código sin borr
 ```swift
 var total = 10
 // total = total + 5
-print(total) // prints 10
+print(total) // imprime 10
 ```
 La segunda línea ahora es un comentario, así que `total` se queda en `10`. Quitar el `//` devuelve la línea a la vida.
 
@@ -45,8 +45,8 @@ Un comentario de bloque también puede ser corto y quedarse en una sola línea: 
 
 A diferencia de `//`, que se detiene al final de la línea, un comentario `/*` solo se detiene en el `*/`. Si olvidas cerrarlo, el compilador trata todo el código siguiente como parte del comentario y reporta un error:
 ```swift
-let width = 10 /* in centimetres
-print(width) // still inside the comment: error, the comment is never closed
+let width = 10 /* en centímetros
+print(width) // todavía dentro del comentario: error, el comentario nunca se cierra
 ```
 Tanto `//` como `/* */` funcionan como comentarios al final de la línea, pero con `/*` asegúrate siempre de que el `*/` está presente.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-print(total) // prints 100
+print(total) // imprime 100
 ```
 Gracias al anidamiento, esto funciona incluso cuando una de esas líneas ya contiene un comentario `/* */`.
 
@@ -90,7 +90,7 @@ Quien llame a `toSeconds` puede leer la cabecera en lugar del cuerpo. Mantén la
 
 Swift tiene un tercer tipo de comentario, el **comentario de documentación**: un comentario de una sola línea que empieza con `///` (tres barras) y se coloca justo encima de una función, un tipo o una propiedad.
 ```swift
-/// Returns the greeting for `name`.
+/// Devuelve el saludo para `name`.
 func greet(_ name: String) -> String {
     return "Hi, \(name)!"
 }
@@ -101,7 +101,7 @@ Para el compilador es solo un comentario, pero herramientas como Xcode lo leen y
 
 La primera línea de un comentario de documentación es el **resumen**: una frase corta que dice qué hace la función. Escríbela en tercera persona, como si describieras a la función: "Devuelve...", "Suma...", "Comprueba...".
 ```swift
-/// Returns `true` when `n` is divisible by two.
+/// Devuelve `true` cuando `n` es divisible por dos.
 func isEven(_ n: Int) -> Bool {
     return n % 2 == 0
 }
@@ -127,9 +127,9 @@ func greet(_ name: String) -> String {
 
 Después del resumen, un comentario de documentación puede describir los parámetros y el valor de retorno con elementos de lista especiales de Markdown que Xcode reconoce:
 ```swift
-/// Returns the number of seconds in the given minutes.
-/// - Parameter minutes: a whole number of minutes, never negative
-/// - Returns: `minutes` multiplied by sixty
+/// Devuelve el número de segundos en los minutos dados.
+/// - Parameter minutes: un número entero de minutos, nunca negativo
+/// - Returns: `minutes` multiplicado por sesenta
 func toSeconds(_ minutes: Int) -> Int {
     return minutes * 60
 }
@@ -144,10 +144,10 @@ Algunos comentarios siguen una convención que los editores entienden. En Swift 
 - `// FIXME: ...` señala código que se sabe que está mal y debe corregirse
 
 ```swift
-// MARK: - Setup
+// MARK: - Configuración
 let limit = 10
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: lee el límite desde la configuración
+// FIXME: falla cuando la lista está vacía
 ```
 Para el compilador son comentarios ordinarios; Xcode los lista para que el trabajo pendiente sea fácil de encontrar. Cuando el trabajo esté hecho, borra el marcador: un `TODO` obsoleto induce a error.
 
@@ -163,12 +163,12 @@ Un `FIXME` es diferente de un `TODO`: el código ya existe, pero se sabe que est
 
 Un buen comentario explica **por qué** el código hace algo, no **qué** hace. El código ya muestra qué ocurre; repetirlo con palabras solo añade ruido y queda obsoleto en cuanto cambia el código:
 ```swift
-// set timeout to 30
+// establece timeout en 30
 let timeout = 30
 ```
 La razón que hay detrás del número es lo que el lector no puede adivinar:
 ```swift
-// the server drops idle connections after 35 seconds, so stop earlier
+// el servidor cierra las conexiones inactivas tras 35 segundos, así que detente antes
 let timeout = 30
 ```
 Si un comentario solo repite la línea que tiene debajo, bórralo o reemplázalo por la razón.

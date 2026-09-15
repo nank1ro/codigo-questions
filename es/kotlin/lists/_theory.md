@@ -24,7 +24,7 @@ Para crear una lista modificable usa la palabra clave `mutableListOf`
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// imprime [1, 3, 5, 7]
 ```
 
 ---
@@ -47,15 +47,15 @@ Un índice de lista se puede usar tanto para acceder como para asignar valores.
 Viste cómo acceder a un índice de lista así:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// Imprime el valor "Jeremiah"
 println(names[0])
 ```
 Así es como funciona una asignación:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// Asigna el nuevo valor "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// Imprime el valor "Jordan"
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ Por ejemplo, si tienes una lista de nombres, puedes usar el método `contains` p
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// imprime true
 ```
 
 ---
@@ -83,7 +83,7 @@ Para añadir un elemento a una lista mutable usamos la función `add` o el atajo
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// imprime [a, b, c]
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// imprime [a, b, c, d, e]
 ```
 
 ---
@@ -106,7 +106,7 @@ Considera el siguiente código:
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// imprime [2, 3]
 ```
 __[1]__: primero, creamos una lista de _solo lectura_ llamada `numbers`.
 __[2]__: luego, tomamos una subsección de la lista usando la función `slice` y la almacenamos en la lista slice.
@@ -130,7 +130,7 @@ En Kotlin podemos usar el método `indexOfFirst`:
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// imprime 1
 ```
 
 El método `indexOfFirst` toma una función __predicado__ que será evaluada para cada elemento en la lista hasta que sea verdadera, devolviendo el _índice_ del elemento.
@@ -139,7 +139,7 @@ El código anterior imprime el primer índice que contiene la cadena `"Zac"`, `1
 También podemos insertar elementos en una lista modificable en un índice específico, usando el método `add(index, element)`:
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// imprime [Trevor, Ali, Zac, Glenn]
 ```
 El código anterior inserta `"Ali"` en el índice `1`, lo que mueve todo lo que viene después de este índice, un lugar hacia abajo
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// imprime 1, 2, 3
 ```
 Un nombre de variable sigue a la palabra clave `for`, se le asignará el valor de cada elemento de la lista a su vez.

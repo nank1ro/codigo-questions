@@ -16,7 +16,7 @@ Escribe una función que encuentre los `n` dígitos adyacentes en el número de 
 Ejemplo de llamada a la función:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// imprime 5832
 ```
 
 # --seed--

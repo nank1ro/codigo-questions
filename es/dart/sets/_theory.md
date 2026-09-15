@@ -33,7 +33,7 @@ El método `.add(value)` inserta un único valor. Devuelve `true` si el valor fu
 ```dart
 var tags = {'dart'};
 tags.add('web');    // true
-tags.add('dart');   // false, already there
+tags.add('dart');   // false, ya estaba ahí
 tags.addAll(['web', 'mobile']);
 print(tags); // {dart, web, mobile}
 ```

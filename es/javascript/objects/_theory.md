@@ -11,7 +11,7 @@ La clave `key1` apunta al valor `1`, `key2` a `2`, y así sucesivamente.
 
 Acceder a los valores del diccionario por clave es igual que acceder a los valores del array por índice:
 ```javascript
-// gets the age value from the user dictionary
+// obtiene el valor age del diccionario user
 user['age'];
 ```
 

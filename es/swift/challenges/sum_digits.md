@@ -18,7 +18,7 @@ Devuelve la suma de los dígitos de `N`.
 Ejemplo de llamada de función:
 ```swift
 print(sumDigits(28))
-// prints 10
+// imprime 10
 ```
 
 # --before-seed--

@@ -16,7 +16,7 @@ Escribe una función que encuentre la diferencia entre el cuadrado de la suma y 
 Ejemplo de llamada a la función:
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// imprime 2640
 ```
 
 # --before-seed--

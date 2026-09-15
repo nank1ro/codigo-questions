@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// imprime 10
 ```
 El código abreviado para el código anterior es:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// imprime 10
 ```
 `c` se establece igual a `a`, porque la condición `a < b` era true
 

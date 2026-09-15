@@ -7,7 +7,7 @@ fun greet() {
 ```
 Para llamar (ejecutar) una función, usa su nombre seguido de paréntesis:
 ```kotlin
-greet() // prints Hello!
+greet() // imprime Hello!
 ```
 Una función que no devuelve un valor devuelve implícitamente `Unit`.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 La palabra clave `return` envía un valor de vuelta al llamador:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // imprime 42
 ```
 El tipo de retorno debe coincidir con el tipo del valor que devuelves.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 Se pasan argumentos al llamar a la función:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // imprime Hello, Alice!
 ```
 Los parámetros permiten escribir código reutilizable que trabaja con diferentes valores.
 
@@ -48,8 +48,8 @@ Kotlin admite valores de parámetros predeterminados. Si un llamador no proporci
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // imprime Hello, World!
+greet("Alice")  // imprime Hello, Alice!
 ```
 Los valores predeterminados hacen que los parámetros sean opcionales, reduciendo la necesidad de funciones sobrecargadas.
 
@@ -72,8 +72,8 @@ Las funciones pueden devolver valores `Boolean`, lo cual es útil para verificar
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // imprime true
+println(isEven(7)) // imprime false
 ```
 Una función `Boolean` devuelve `true` o `false`.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// imprime My name is Bob and I am 30 years old.
 ```
 Los argumentos con nombre permiten pasar valores en cualquier orden usando el nombre del parámetro:
 ```kotlin

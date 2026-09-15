@@ -12,7 +12,7 @@ Las _clases_ son construcciones de propósito general y flexibles que se convier
 Una clase básica consta solo de la palabra clave `class` y su nombre, por ejemplo:
 ```javascript
 class ClassName {
-    // class definition
+    // definición de la clase
 }
 ```
 

@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// imprime: Cold
 ```
 
 Exactamente una de las dos ramas siempre se ejecuta.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// imprime: B
 ```
 
 ---
@@ -61,7 +61,7 @@ El **operador ternario** `condition ? expr1 : expr2` es una forma compacta de es
 ```dart
 int x = 10;
 String label = x > 0 ? 'positive' : 'non-positive';
-print(label); // positive
+print(label); // positivo
 ```
 
 Si la condición es `true`, se usa `expr1`; de lo contrario, se usa `expr2`.

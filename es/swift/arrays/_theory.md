@@ -25,15 +25,15 @@ Puede usarse para acceder así como para asignar valores.
 Viste cómo acceder a un índice de array así:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// Imprime el valor "Jeremiah"
 print(names[0])
 ```
 Así es como funciona una asignación:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// Asigna el nuevo valor "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// Imprime el valor "Jordan"
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ Para agregar un elemento a un array utilizamos la función `append`:
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// Imprime ["a", "b", "c"]
 ```
 
 ---
@@ -62,7 +62,7 @@ Considera el siguiente código:
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// imprime [2, 3]
 ```
 Primero, creamos un array llamado `numbers`.
 Luego, tomamos una subsección del array y la almacenamos en el array slice.
@@ -73,9 +73,9 @@ En Swift podemos incluir el último índice usando `...`, pero también podemos 
 
 ¡En Swift podemos dividir un array como queramos!
 ```swift
-// Grabs the first two items
+// Obtén los primeros dos elementos
 listName[..<2]
-// Grabs the fourth through last items
+// Obtén desde el cuarto hasta el último elemento
 listName[3...]
 ```
 Si tu división de array incluye el primer o último elemento en un array, el índice de ese elemento no tiene que incluirse
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// imprime 1
 ```
 El código anterior imprime el primer índice que contiene la cadena `"Zac"`, `1` en este caso.
 También podemos insertar elementos en un array en un índice específico, usando el método `insert()`:
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// imprime ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 El código anterior inserta `"Ali"` en el índice `1`, lo que mueve todo después de este índice una posición hacia abajo
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3
+// imprime 1, 2, 3
 ```
 Un nombre de variable sigue a la palabra clave `for`, se le asignará el valor de cada elemento del array a su vez.
 

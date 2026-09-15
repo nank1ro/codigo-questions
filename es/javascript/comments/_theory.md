@@ -2,7 +2,7 @@ Un **comentario** es una nota escrita dentro del código fuente para quienes lo 
 
 El comentario más simple es el **comentario de una línea**: empieza con `//` y llega hasta el final de la línea.
 ```javascript
-// Greets the user
+// Saluda al usuario
 console.log("Hello");
 ```
 Usa los comentarios para explicar para qué sirve un fragmento de código, o por qué se escribió de esa manera. Ten en cuenta que, a diferencia de otros lenguajes, `#` **no** inicia un comentario en JavaScript.
@@ -11,7 +11,7 @@ Usa los comentarios para explicar para qué sirve un fragmento de código, o por
 
 Un comentario no necesita una línea propia: puede seguir al código en la misma línea. Este es un **comentario en línea** (o comentario final), y es un buen lugar para una nota breve sobre esa instrucción concreta:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // se rinde después de tres intentos
 ```
 Todo lo que va desde `//` hasta el final de la línea se ignora, mientras que el código anterior se ejecuta con normalidad.
 
@@ -23,7 +23,7 @@ Esto convierte a `//` en una forma rápida de desactivar una línea de código s
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // imprime 10
 ```
 La segunda línea ahora es un comentario, así que `total` sigue siendo `10`. Quitar el `//` devuelve la línea a la vida.
 
@@ -47,7 +47,7 @@ Sea cual sea el tipo de comentario que uses, la regla es la misma: el texto que 
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// imprime solo a
 ```
 Cuando no estés seguro de lo que imprime un programa, borra mentalmente todos los comentarios y lee lo que queda.
 
@@ -55,8 +55,8 @@ Cuando no estés seguro de lo que imprime un programa, borra mentalmente todos l
 
 A diferencia de `//`, que se detiene al final de la línea, un comentario `/*` solo se detiene en el `*/`. Si olvidas cerrarlo, JavaScript trata todo el código siguiente como parte del comentario e informa de un error de sintaxis:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* en centímetros
+console.log(width); // todavía dentro del comentario: SyntaxError, el comentario nunca se cierra
 ```
 Tanto `//` como `/* */` funcionan como comentarios en línea, pero con `/*` asegúrate siempre de que el `*/` esté ahí.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // imprime 100
 ```
 Como las líneas de dentro del bloque se ignoran, `total` nunca cambia. Recuerda que esto solo funciona si ninguna de esas líneas contiene un `*/`.
 
@@ -158,12 +158,12 @@ JavaScript ignora esta línea exactamente igual que un comentario, pero solo cua
 
 Un buen comentario explica **por qué** el código hace algo, no **qué** hace. El código ya muestra lo que ocurre; repetirlo con palabras añade ruido y queda obsoleto en cuanto el código cambia:
 ```javascript
-// set timeout to 30
+// establece timeout en 30
 const timeout = 30;
 ```
 La razón que hay detrás del número es lo que quien lee no puede adivinar:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// el servidor descarta las conexiones inactivas después de 35 segundos, así que detente antes
 const timeout = 30;
 ```
 Si un comentario solo repite la línea que tiene debajo, bórralo o sustitúyelo por la razón.
@@ -176,8 +176,8 @@ Algunos comentarios siguen una convención que los editores entienden. Los **mar
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: lee el límite desde la configuración
+// FIXME: falla cuando la lista está vacía
 ```
 Para JavaScript son comentarios corrientes; los editores los listan para que el trabajo pendiente sea fácil de encontrar. Un `TODO` suele estar junto a un marcador de posición que mantiene el código funcionando hasta que se escribe la implementación real. Cuando termines el trabajo, sustituye el marcador de posición y elimina la marca en el mismo cambio: un `TODO` obsoleto induce a error.
 

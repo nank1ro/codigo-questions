@@ -7,7 +7,7 @@ Para permitir un valor faltante declaras un tipo **nullable** añadiendo un sign
 Un `String?` contiene un `String` o `null`:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // permitido
 println(city) // null
 ```
 `String` y `String?` son dos tipos distintos: un `String` nunca falta, un `String?` puede faltar.
@@ -17,7 +17,7 @@ println(city) // null
 La diferencia entre `String` y `String?` la comprueba el **compilador**, no en tiempo de ejecución.
 Asignar `null` a un tipo no nulo, o pasar un valor nullable donde se espera uno no nulo, es un error de compilación, así que el programa ni siquiera llega a arrancar:
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // no compila
 val maybe: String? = "hi"
 val sure: String = maybe       // does not compile: String? is not a String
 ```
@@ -47,12 +47,12 @@ Muy a menudo todo lo que quieres de un valor nullable es el valor en sí o un va
 El **operador Elvis** `?:` hace exactamente eso: devuelve el lado izquierdo cuando no es `null`; en caso contrario, el valor de su derecha:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown es un String igual a "Guest"
 ```
 Como el lado derecho solo se usa cuando el izquierdo es `null`, el resultado es no nulo cuando el valor predeterminado lo es.
 `?:` se combina muy bien con `?.` para convertir una llamada segura de nuevo en un valor simple:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len es un Int, 0 cuando name es null
 ```
 
 ---
@@ -62,7 +62,7 @@ Las llamadas seguras se pueden **encadenar**: en cuanto un eslabón es `null`, e
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() y uppercase() nunca se ejecutan
 ```
 Una cadena que termina en `?:` te da un resultado no nulo en una sola línea:
 ```kotlin
@@ -103,7 +103,7 @@ Cuando compruebas si un valor es `null` con `if`, el compilador lo recuerda: den
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name es un String aquí
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ Lo mismo ocurre tras una salida anticipada:
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name es un String de aquí en adelante
 }
 ```
 Las conversiones inteligentes funcionan con variables `val` y parámetros de función, cuyo valor no puede cambiar entre la comprobación y el uso.
@@ -123,9 +123,9 @@ Las conversiones inteligentes funcionan con variables `val` y parámetros de fun
 Combinado con una llamada segura, `?.let` ejecuta el bloque **solo** cuando el valor no es `null`, y dentro del bloque `it` es no nulo:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // imprime Sending to ada@example.com
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // no pasa nada
 ```
 Es una alternativa compacta a `if (x != null) { ... }` cuando solo necesitas el valor dentro del bloque.
 
@@ -213,7 +213,7 @@ El lado derecho de `?:` puede ser cualquier expresión, incluido `return`. Esto 
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first es un Char aquí
 }
 ```
 Todas las herramientas que has visto se combinan bien: los parámetros nullable y los tipos de retorno describen *dónde* puede faltar un valor, y `?.`, `?:`, `let`, las conversiones inteligentes y `toIntOrNull` lo gestionan sin fallar jamás.

@@ -20,7 +20,7 @@ Tu función también debe funcionar con un array vacío, un array con un solo el
 Ejemplo de llamada de función:
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// imprime [ 1, 2, 3 ]
 ```
 
 # --before-seed--

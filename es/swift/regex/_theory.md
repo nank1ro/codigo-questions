@@ -40,9 +40,9 @@ Por defecto un patrón puede coincidir en cualquier lugar dentro del texto. Los 
 - `$` significa "el final del texto"
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, el texto empieza con sw
+print("myswift".contains(#/^sw/#)) // false, sw no está al inicio
+print("swift".contains(#/ft$/#))  // true, el texto termina con ft
 ```
 Los anclajes coinciden con una posición, no con un carácter, así que no añaden nada a lo que contiene la coincidencia.
 

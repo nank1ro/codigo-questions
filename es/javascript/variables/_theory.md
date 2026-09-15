@@ -12,7 +12,7 @@ De esta manera hemos asignado el valor `1` a la variable llamada `x`.
 Si imprimimos la variable `x` obtenemos el número `1`:
 ```javascript
 console.log(x);
-// prints 1
+// imprime 1
 ```
 
 ---
@@ -21,9 +21,9 @@ Las variables se llaman así porque el valor que almacenan puede cambiar.
 Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // imprime 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // imprime 2
 ```
 
 ---
@@ -33,7 +33,7 @@ Aquí, podemos asignar a la variable `y` el valor de `x`
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // imprime 5
 ```
 
 ---
@@ -42,9 +42,9 @@ Cuando actualizamos una variable, olvida su valor anterior.
 Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // imprime 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // imprime 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 En JavaScript las variables de cadena se pueden declarar usando tanto comillas dobles como simples:
 ```javascript
 let x = "May";
-// both are the same string
+// ambas son la misma cadena
 let y = 'May';
 console.log(x === y);
-// prints true
+// imprime true
 ```
 
 ---

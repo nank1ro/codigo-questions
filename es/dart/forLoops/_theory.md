@@ -2,7 +2,7 @@ Un bucle `for` repite un bloque de código un número fijo de veces. La sintaxis
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // cuerpo
 }
 ```
 
@@ -56,7 +56,7 @@ La instrucción `break` sale de un bucle de inmediato cuando se cumple una condi
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // se detiene en 5
   print(i);
 }
 ```

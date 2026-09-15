@@ -18,7 +18,7 @@ Devuelve `true` si es un año bisiesto, `false` de lo contrario.
 Example of function call:
 ```dart
 print(leapYear(2000));
-// prints true
+// imprime true
 ```
 
 # --seed--

@@ -12,7 +12,7 @@ La pregunta más simple que puedes hacer es `matches`, que es `true` solo cuando
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false, la letra no es un dígito
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches` suele ser demasiado estricto: normalmente solo quieres saber si el patrón aparece en **algún lugar** del texto. Eso es `containsMatchIn`:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false, toda la cadena no son dígitos
+println(digits.containsMatchIn("order 42"))  // true, "42" está ahí
 ```
 Junto a `\d` hay dos abreviaturas más que usarás constantemente: `\w` es un carácter de palabra (letra, dígito o `_`) y `\s` es un carácter de espacio en blanco. Cada una de ellas se puede repetir con un **cuantificador**:
 - `+` uno o más
@@ -31,7 +31,7 @@ Junto a `\d` hay dos abreviaturas más que usarás constantemente: `\w` es un ca
 
 Duplicar cada barra invertida resulta molesto, así que los patrones se suelen escribir como **cadenas crudas** con comillas triples, donde `\` es solo un carácter:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // igual que Regex("\\d+")
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0` es la coincidencia completa. Si necesitas un `$` literal en el reemplazo, escápalo como `\$`.
 `replace` reescribe **todas** las coincidencias, así que cuando solo se debe reescribir una cadena completa, fija el patrón con las **anclas** `^` (inicio del texto) y `$` (fin del texto):
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two, no se reemplaza nada
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 Los caracteres `. * + ? ( ) [ ] { } | ^ $ \` tienen un significado especial dentro de un patrón. El más traicionero es `.`, que coincide con **cualquier** carácter, no con un punto. Para referirse al carácter en sí, escápalo con una barra invertida:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true, el punto coincide con la x
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 Cuando el texto a buscar viene de una variable y debe tomarse literalmente, deja que la biblioteca haga el escapado con `Regex.escape`:
@@ -180,7 +180,7 @@ Los corchetes definen una **clase de caracteres**: un carácter del conjunto lis
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true, no se permite ningún dígito
 ```
 Una clase solo elige entre caracteres individuales. Para elegir entre alternativas completas, usa `|`, normalmente envuelto en un grupo para que no se trague el resto del patrón:
 ```kotlin

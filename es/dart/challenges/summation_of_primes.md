@@ -16,7 +16,7 @@ Escribe una función que devuelva la suma de todos los números primos menores q
 Ejemplo de llamada a la función:
 ```dart
 print(primeSummation(10));
-// prints 17
+// imprime 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ La suma de todos los números primos menores de 100000 debe ser igual a 45439653
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // Criba de Eratóstenes
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

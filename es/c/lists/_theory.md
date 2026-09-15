@@ -9,7 +9,7 @@ Los nodos se enlazan guardando la dirección de uno en el `next` de otro, y los 
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // imprime "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ Añadir un nodo al **principio** lo crea, hace que apunte a la cabeza actual y l
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // la lista ahora es 8, 7
 ```
 Insertar en una lista vacía funciona igual: el nodo nuevo apunta a `NULL` y se convierte en toda la lista.
 

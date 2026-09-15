@@ -49,7 +49,7 @@ Llamar a una función corrutina no es suficiente para ejecutarla. La llamada sol
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # no se imprime nada
 ```
 Python incluso lo advierte: `RuntimeWarning: coroutine 'hello' was never awaited`. Un `await` olvidado es el error asíncrono más común: el código parece llamado pero nunca se ejecuta, y cualquier variable que debería contener su resultado contiene en su lugar un objeto corrutina.
 
@@ -60,7 +60,7 @@ Las corrutinas se llaman entre sí con `await`. Una corrutina puede esperar con 
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # simula una búsqueda lenta
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # imprime una línea vacía
 ```
 Una excepción que nadie captura se propaga a través de cada `await` hasta `asyncio.run`, que vuelve a lanzarla en el código síncrono, exactamente como una pila de llamadas normal.
 
