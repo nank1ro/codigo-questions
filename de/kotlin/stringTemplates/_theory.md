@@ -2,7 +2,7 @@ Ein String _template_ ist eine programmgesteuerte Möglichkeit, einen String zu 
 In Kotlin können wir das `+` Zeichen (Konkatenation) verwenden, um zwei oder mehr Strings zusammen anzuzeigen, wie:
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// gibt "Hello Kotlin!" aus
 ```
 
 ---
@@ -36,7 +36,7 @@ Wir können geschweifte Klammern verwenden, um Werte so oft wie wir möchten in 
 Innerhalb der `${}` können wir auch Bedingungen einfügen, zum Beispiel:
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// gibt Correct aus
 ```
 
 ---

@@ -52,7 +52,7 @@ In diesem Fall ist der Wert `through` enthalten
 In Swift haben wir auch die `forEach`-Schleife.
 Tatsächlich ruft `forEach` den angegebenen Abschluss für jedes Element in der Sequenz in derselben Reihenfolge wie eine `for-in`-Schleife auf:
 ```swift
-// this is an array, we'll see about that soon
+// das ist ein Array, dazu kommen wir gleich
 let numbers: [Int] = [1, 3, 5, 7, 9]
 numbers.forEach { num in
     print(num)

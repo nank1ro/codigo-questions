@@ -28,7 +28,7 @@ Schreiben Sie eine Funktion, die den richtigen String zurückgibt, Beispiele:
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// gibt "Plong" aus
 ```
 
 # --seed--

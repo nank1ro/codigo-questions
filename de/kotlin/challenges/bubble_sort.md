@@ -20,7 +20,7 @@ Ihre Funktion muss auch mit einem leeren Array, einem Array mit einem einzigen E
 Beispiel eines Funktionsaufrufs:
 ```kotlin
 println(bubbleSort(listOf(3, 1, 2)))
-// prints [1, 2, 3]
+// gibt [1, 2, 3] aus
 ```
 
 # --seed--

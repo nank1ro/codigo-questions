@@ -7,7 +7,7 @@ Um einen fehlenden Wert zuzulassen, deklarieren Sie einen **Nullable-Typ**, inde
 Ein `String?` enthält entweder einen `String` oder `null`:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // erlaubt
 println(city) // null
 ```
 `String` und `String?` sind zwei verschiedene Typen: Ein `String` fehlt nie, ein `String?` kann es.
@@ -17,9 +17,9 @@ println(city) // null
 Der Unterschied zwischen `String` und `String?` wird vom **Compiler** geprüft, nicht zur Laufzeit.
 Weisen Sie `null` einem Non-Null-Typ zu oder übergeben Sie einen Nullable-Wert, wo ein Non-Null-Wert erwartet wird, entsteht ein Kompilierungsfehler, sodass das Programm gar nicht erst startet:
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // kompiliert nicht
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // kompiliert nicht: String? ist kein String
 ```
 So vermeidet Kotlin die in anderen Sprachen verbreiteten Abstürze durch „Nullzeiger“: Ein Wert kann nur dort fehlen, wo Sie ihn ausdrücklich mit `?` deklariert haben.
 
@@ -47,12 +47,12 @@ Sehr oft möchte man von einem Nullable-Wert nur den Wert selbst oder einen Stan
 Der **Elvis-Operator** `?:` macht genau das: Er gibt die linke Seite zurück, wenn sie nicht `null` ist, andernfalls den Wert auf seiner rechten Seite:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown ist ein String gleich "Guest"
 ```
 Da die rechte Seite nur verwendet wird, wenn die linke `null` ist, ist das Ergebnis non-null, wenn der Standardwert es ist.
 `?:` lässt sich gut mit `?.` kombinieren, um einen Safe-Call wieder in einen einfachen Wert umzuwandeln:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len ist ein Int, 0 wenn name null ist
 ```
 
 ---
@@ -62,7 +62,7 @@ Safe-Calls können **verkettet** werden: Sobald ein Glied der Kette `null` ist, 
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() und uppercase() werden nie ausgeführt
 ```
 Eine Kette, die mit `?:` endet, liefert Ihnen in einer Zeile ein non-null Ergebnis:
 ```kotlin
@@ -103,7 +103,7 @@ Wenn Sie einen Wert mit `if` auf `null` prüfen, merkt sich der Compiler das: In
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name ist hier ein String
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ Dasselbe geschieht nach einem frühen Absprung:
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name ist ab hier ein String
 }
 ```
 Smart-Casts funktionieren bei `val`-Variablen und Funktionsparametern, deren Wert sich zwischen der Prüfung und der Verwendung nicht ändern kann.
@@ -123,9 +123,9 @@ Smart-Casts funktionieren bei `val`-Variablen und Funktionsparametern, deren Wer
 Kombiniert mit einem Safe-Call führt `?.let` den Block **nur** aus, wenn der Wert nicht `null` ist, und innerhalb des Blocks ist `it` non-null:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // gibt Sending to ada@example.com aus
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // passiert nichts
 ```
 Er ist eine kompakte Alternative zu `if (x != null) { ... }`, wenn Sie den Wert nur innerhalb des Blocks benötigen.
 
@@ -213,7 +213,7 @@ Die rechte Seite von `?:` kann ein beliebiger Ausdruck sein, auch `return`. So l
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first ist hier ein Char
 }
 ```
 Alle Werkzeuge, die Sie kennengelernt haben, lassen sich gut kombinieren: Nullable-Parameter und Rückgabetypen beschreiben, *wo* ein Wert fehlen kann, und `?.`, `?:`, `let`, Smart-Casts und `toIntOrNull` behandeln ihn, ohne dass das Programm jemals abstürzt.

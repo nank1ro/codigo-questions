@@ -27,7 +27,7 @@ Schreiben Sie eine Funktion `isValid`, die einen String entgegennimmt und `true`
 Beispiel eines Funktionsaufrufs:
 ```javascript
 console.log(isValid("095 245 88"));
-// prints true
+// gibt true aus
 ```
 
 # --before-seed--

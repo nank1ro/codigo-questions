@@ -64,8 +64,8 @@ Auf einer leeren Collection ist `any` `false` und `every` ist `true`: Es gibt ke
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // noch nichts berechnet
+print(doubled.first);                      // berechnet nur 2
 ```
 
 `toList()` ist das, was die Sequenz **materialisiert**: Es durchläuft sie von Anfang bis Ende und speichert jedes Ergebnis in einer echten `List`.
@@ -183,7 +183,7 @@ Weil es `void` zurückgibt, kannst du das Ergebnis gar nicht verwenden: `final s
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2], unverändert
 ```
 
 `sort` akzeptiert auch einen **Comparator**: eine Funktion mit zwei Elementen, die eine negative Zahl zurückgibt, wenn das erste vor dem zweiten kommt, `0`, wenn sie gleich sind, und sonst eine positive Zahl. `compareTo` erzeugt genau das, daher ist das Ordnen nach einem beliebigen Schlüssel ein Einzeiler:
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // String aus Strings
+final letters = words.fold(0, (acc, w) => acc + w.length); // int aus Strings
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

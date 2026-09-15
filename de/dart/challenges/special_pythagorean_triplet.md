@@ -18,7 +18,7 @@ Schreibe eine Funktion, die das pythagoreische Tripel findet, bei dem a + b + c 
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// gibt 60 aus
 ```
 
 # --seed--

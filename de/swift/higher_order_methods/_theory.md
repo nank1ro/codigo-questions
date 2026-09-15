@@ -139,7 +139,7 @@ Innerhalb der Closure ist `$0` das Element aus der ersten Sequenz und `$1` das a
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// gibt 1 und 3 aus
 ```
 Verwende `forEach` für einen kurzen Seiteneffekt auf jedem Element und `for-in`, wenn du vorzeitig stoppen musst.
 

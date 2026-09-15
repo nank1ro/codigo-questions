@@ -10,7 +10,7 @@ Auch der Aufruf ist anders: Du musst **`await`** vor den Aufruf schreiben. `awai
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// gibt 42 aus
 ```
 In einem Swift-Skript unterstützt die oberste Ebene bereits `await`, daher kannst du asynchrone Funktionen direkt aufrufen, ohne jeden zusätzlichen Aufwand. Vergisst du `async` oder `await`, ist das ein Kompilierfehler und kein stiller Bug.
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// gibt 10.0 aus
 ```
 Der zurückgegebene Wert ist ein normales `Double`, kein Wrapper: Sobald `await` abgeschlossen ist, arbeitest du damit genau wie gewohnt.
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// gibt 15 aus
 ```
 `await` ist nur innerhalb eines asynchronen Kontexts erlaubt: einer `async`-Funktion oder der obersten Ebene eines Skripts. Eine gewöhnliche Funktion ohne `async` kann kein `await` verwenden.
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// gibt could not load aus
 ```
 Die Reihenfolge der Schlüsselwörter ist festgelegt: `try` kommt zuerst, dann `await`.
 
@@ -144,7 +144,7 @@ let job = Task {
 Das Ergebnis wird später mit **`.value`** gelesen, wobei darauf gewartet wird:
 ```swift
 print(await job.value)
-// prints 42
+// gibt 42 aus
 ```
 Der Typ des Handles sagt, was er erzeugt und was er werfen kann: `Task<Int, Never>` ist ein Task, der ein `Int` zurückgibt und nie wirft. Anders als `async let` kann ein `Task` auch aus gewöhnlichem, nicht-asynchronem Code erstellt werden.
 

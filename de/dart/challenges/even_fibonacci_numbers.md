@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die Summe aller geradzahligen Fibonacci-Glieder zur√
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// gibt 10 aus
 ```
 
 # --seed--

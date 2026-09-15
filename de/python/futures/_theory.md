@@ -49,7 +49,7 @@ Eine Coroutine-Funktion aufzurufen reicht nicht aus, um sie auszuführen. Der Au
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # es wird nichts ausgegeben
 ```
 Python warnt sogar davor: `RuntimeWarning: coroutine 'hello' was never awaited`. Ein vergessenes `await` ist der häufigste asynchrone Fehler: Der Code sieht aufgerufen aus, wird aber nie ausgeführt, und jede Variable, die sein Ergebnis halten sollte, enthält stattdessen ein Coroutine-Objekt.
 
@@ -60,7 +60,7 @@ Coroutinen rufen einander mit `await` auf. Eine Coroutine kann jede andere Corou
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # simuliert eine langsame Abfrage
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # gibt eine leere Zeile aus
 ```
 Eine Ausnahme, die niemand abfängt, breitet sich durch jedes `await` bis zu `asyncio.run` aus, das sie im synchronen Code erneut auslöst, genau wie ein normaler Aufrufstapel.
 

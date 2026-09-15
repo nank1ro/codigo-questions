@@ -27,7 +27,7 @@ Die Funktionalität ist gleich, der einzige Unterschied ist, dass sie die Subtra
 Die folgenden sind genau gleich
 ```swift
 var num = num - 5
-// is equal to
+// ist gleich wie
 num -= 5
 ```
 
@@ -38,7 +38,7 @@ Er multipliziert die Variable mit einem Wert und weist das Ergebnis dieser Varia
 Die folgenden sind genau gleich
 ```swift
 var num = num * 5
-// is equal to
+// ist gleich wie
 num *= 5
 ```
 
@@ -49,7 +49,7 @@ Er teilt die Variable durch einen Wert und weist das Ergebnis dieser Variablen z
 Die folgenden sind genau gleich
 ```swift
 num = num / 5
-// is equal to
+// ist gleich wie
 num /= 5
 ```
 
@@ -60,6 +60,6 @@ Er berechnet den Rest zwischen der Variablen und einem Wert und weist das Ergebn
 Die folgenden sind genau gleich
 ```swift
 num = num % 5
-// is equal to
+// ist gleich wie
 num %= 5
 ```

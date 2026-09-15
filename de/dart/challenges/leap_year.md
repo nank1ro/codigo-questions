@@ -18,7 +18,7 @@ Geben Sie `true` zurück, wenn es ein Schaltjahr ist, `false` andernfalls.
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(leapYear(2000));
-// prints true
+// gibt true aus
 ```
 
 # --seed--

@@ -5,7 +5,7 @@ Dies wiederholt einen Block, solange der steuernde _boolesche Ausdruck_ wahr ist
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // Zu wiederholender Code
 }
 ```
 Der boolesche Ausdruck wird einmal am Anfang der Schleife und vor jeder weiteren Iteration durch den Block bewertet.
@@ -45,7 +45,7 @@ Die Ausgabe des obigen Codes ist _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_,
 Es gibt eine zweite Möglichkeit, _while_ in Verbindung mit dem `do`-Schlüsselwort zu verwenden.
 ```kotlin
 do {
-  // Code to be repeated
+  // Zu wiederholender Code
 } while (Boolean-expression)
 ```
 Wie Sie sehen, ist die `do-while`-Schleife der `while`-Schleife sehr ähnlich, mit einem wichtigen Unterschied:
@@ -70,7 +70,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// gibt 1, 3 aus
 ```
 
 Wie Sie sehen können, überspringen wir bei __[1]__, wenn `i` gleich _2_ ist, und _continue_ zum nächsten Schritt. Tatsächlich wird die Zahl 2 niemals gedruckt.
@@ -85,7 +85,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// gibt 1 aus
 ```
 
 Wie Sie sehen können, beenden wir bei __[1]__, wenn `i` gleich _2_ ist, die Schleife. Tatsächlich werden die Zahlen 2 und 3 niemals gedruckt.

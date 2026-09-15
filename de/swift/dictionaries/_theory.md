@@ -11,7 +11,7 @@ Der Schlüssel `key1` verweist auf den Wert `1`, `key2` auf `2` usw.
 
 Der Zugriff auf Wörterbuch-Werte nach Schlüssel ist genauso wie der Zugriff auf Array-Werte nach Index:
 ```swift
-// gets the age value from the user dictionary
+// ruft den Wert für das Alter aus dem Wörterbuch user ab
 user['age']
 ```
 
@@ -34,7 +34,7 @@ Jedes Paar zählt nur einmal, auch wenn der Wert ein Array ist. (Das ist richtig
 Da Wörterbücher veränderbar sind, können sie auf vielfältige Weise geändert werden. Elemente können mit der Methode `removeValue(forKey:)` aus einem Wörterbuch entfernt werden:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // gibt den entfernten Wert aus, falls der Schlüssel existiert
 }
 ```
 entfernt den Schlüssel `keyName` und seinen zugehörigen Wert aus dem Wörterbuch.
@@ -73,5 +73,5 @@ Früher haben wir gesehen, wie man ein _Schlüssel-Wert-Paar_ aus dem Wörterbuc
 Wir können ein Element auch durch Zuweisung des Wertes `nil` zum Schlüssel entfernen
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName wurde aus dem Wörterbuch dictName entfernt
 ```

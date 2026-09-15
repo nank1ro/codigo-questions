@@ -16,7 +16,7 @@ Schreiben Sie eine Funktion, die den Durchschnitt eines numerischen Vektors zur√
 Beispiel f√ºr einen Funktionsaufruf:
 ```swift
 print(mean([1, 2, 3]))
-// prints 2.0
+// gibt 2.0 aus
 ```
 
 # --before-seed--

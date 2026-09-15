@@ -11,7 +11,7 @@ Der Schlüssel `key1` verweist auf den Wert `1`, `key2` auf `2`, usw.
 
 Der Zugriff auf Wörterbuch-Werte nach Schlüssel funktioniert genauso wie der Zugriff auf Array-Werte nach Index:
 ```javascript
-// gets the age value from the user dictionary
+// holt den Alterswert aus dem Benutzer-Wörterbuch
 user['age'];
 ```
 

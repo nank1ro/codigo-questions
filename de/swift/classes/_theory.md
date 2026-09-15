@@ -12,10 +12,10 @@ _Strukturen_ und _Klassen_ sind universelle, flexible Konstrukte, die die Bauste
 Eine grundlegende Klasse|Struktur besteht nur aus dem Schlüsselwort `class` oder `struct` und ihrem Namen, zum Beispiel:
 ```swift
 class ClassName {
-    // class definition
+    // Klassendefinition
 }
 struct ClassName {
-    // structure definition
+    // Strukturdefinition
 }
 ```
 

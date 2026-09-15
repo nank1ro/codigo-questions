@@ -16,7 +16,7 @@ Schreibe eine Funktion, die das größte Palindrom zurückgibt, das als Produkt 
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// gibt 9009 aus
 ```
 
 # --seed--

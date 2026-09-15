@@ -6,7 +6,7 @@ Jede Ganzzahl wird im Speicher als Reihe von **Bits** gespeichert, jedes davon e
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// gibt "8" aus
 ```
 Bitmuster schreibt man üblicherweise als hexadezimale Literale wie `0x0C`, weil jede Hexziffer genau vier Bits darstellt. Verwende für die Bitarbeit immer `unsigned`-Typen und gib sie mit `%u` aus.
 
@@ -19,7 +19,7 @@ Der **Oder**-Operator `|` vergleicht die beiden Werte Bit für Bit und behält e
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// gibt "14" aus
 ```
 `|` ist die übliche Art, zwei Bitmuster zu einem zu verschmelzen.
 
@@ -32,7 +32,7 @@ Der **XOR**-Operator `^` (exklusives Oder) behält nur dort eine `1`, wo die bei
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// gibt "6" aus
 ```
 Daraus folgt eine nützliche Eigenschaft: Wendet man dasselbe XOR zweimal an, erhält man den ursprünglichen Wert zurück.
 
@@ -42,7 +42,7 @@ Der **Nicht**-Operator `~` nimmt einen einzelnen Operanden und dreht jedes seine
 Ein `unsigned int` enthält 32 Bits, daher dreht `~0x0Fu` alle 32 um und erzeugt eine sehr große Zahl. Um nur das Byte zu behalten, das dich interessiert, kombiniere `~` mit `& 0xFF`:
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// gibt "240" aus
 ```
 `~` bindet stärker als `&`, wird also zuerst angewendet.
 Verwechsle `~` nicht mit dem logischen `!`: `!` betrachtet den gesamten Wert und liefert `0` oder `1`, während `~` jedes Bit umschreibt.
@@ -55,7 +55,7 @@ Der **Links-Shift**-Operator `<<` verschiebt jedes Bit um eine Anzahl von Stelle
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// gibt "12" aus
 ```
 Verschiebt man um `n` nach links, multipliziert das den Wert mit 2 hoch `n`.
 Zwei Fehler machen ein C-Programm undefiniert: das Links-Schieben eines negativen Werts und das Verschieben um einen Betrag, der gleich oder größer als die Breite des Typs ist (32 bei `unsigned int`). Mit **unsigned**-Werten zu arbeiten bewahrt dich vor dem ersten.
@@ -68,7 +68,7 @@ Der **Rechts-Shift**-Operator `>>` verschiebt jedes Bit nach rechts; die Bits, d
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// gibt "3" aus
 ```
 Verschiebt man einen unsigned-Wert um `n` nach rechts, teilt das ihn durch 2 hoch `n` und verwirft den Rest.
 Das Rechts-Schieben eines *negativen* Werts ist nicht portabel, was ein weiterer Grund ist, die Bitarbeit auf `unsigned`-Typen zu betreiben.
@@ -78,11 +78,11 @@ Das Rechts-Schieben eines *negativen* Werts ist nicht portabel, was ein weiterer
 Jeder binäre bitweise Operator hat eine Form als **zusammengesetzte Zuweisung**, die eine Variable an Ort und Stelle aktualisiert: `&=`, `|=`, `^=`, `<<=` und `>>=`.
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // dasselbe wie x = x & 10;
+x |= 1;   // dasselbe wie x = x | 1;
+x ^= 3;   // dasselbe wie x = x ^ 3;
+x <<= 1;  // dasselbe wie x = x << 1;
+x >>= 2;  // dasselbe wie x = x >> 2;
 ```
 Sie sind besser lesbar, als den Variablennamen zu wiederholen, und sind die übliche Art, die Bits einer Flag-Variablen zu ändern.
 
@@ -95,7 +95,7 @@ Eine **Maske** ist ein Wert, dessen Bits den Teil eines anderen Werts auswählen
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// gibt "11" aus
 ```
 `0x0F` behält die unteren vier Bits, das sogenannte untere **Nibble**, und `0xFF` behält die unteren acht Bits, ein ganzes Byte.
 
@@ -107,7 +107,7 @@ Um ein einzelnes Bit zu **setzen**, es also einzuschalten, ohne die anderen anzu
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// gibt "6" aus
 ```
 War das Bit bereits an, ändert sich der Wert nicht, was das Setzen eines Bits sicher wiederholbar macht.
 
@@ -118,7 +118,7 @@ Um ein einzelnes Bit zu **löschen**, es also auszuschalten, verknüpfst du den 
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// gibt "5" aus
 ```
 `~(1u << 1)` ist ein Wert, bei dem jedes Bit an ist außer Bit `1`, daher lässt das Und alles andere unangetastet.
 
@@ -129,7 +129,7 @@ Um ein einzelnes Bit zu **toggeln**, es also zu kippen, egal wie sein aktueller 
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// gibt "7" aus
 ```
 Weil XOR sich selbst rückgängig macht, liefert das erneute Toggeln desselben Bits wieder den ursprünglichen Wert.
 
@@ -138,8 +138,8 @@ Weil XOR sich selbst rückgängig macht, liefert das erneute Toggeln desselben B
 Um ein einzelnes Bit zu **testen**, verknüpfst du den Wert per Und mit der Maske und prüfst, ob das Ergebnis von `0` verschieden ist:
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // gibt "1" aus
+printf("%d\n", (value & (1u << 2)) != 0); // gibt "0" aus
 ```
 Das Und ergibt keine `1`: Es ergibt entweder `0` oder die Maske selbst, was bei Bit `3` die `8` ist. Deshalb wird das Ergebnis mit `!= 0` verglichen, statt es als schlichte Antwort zu verwenden.
 
@@ -150,7 +150,7 @@ Das Und ergibt keine `1`: Es ergibt entweder `0` oder die Maske selbst, was bei 
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// gibt "1" aus
 ```
 Ein einzelnes `unsigned int` kann daher 32 unabhängige Ja/Nein-Antworten tragen.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// gibt "0101" aus
 ```
 Verschiebt man den Wert um `i` nach rechts, bringt das Bit `i` an die rechte Stelle, wo `& 1u` es isoliert.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count ist 2
 ```
 Die Schleife endet immer, denn ein unsigned-Wert wird zu `0`, wenn man ihn oft genug nach rechts verschiebt.
 
@@ -186,6 +186,6 @@ Mehrere kleine Zahlen werden oft in einen größeren Wert gepackt. Um eine davon
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// gibt "18" aus, das 0x12-Byte
 ```
 Erst verschieben, dann maskieren – diese Reihenfolge gilt es zu merken: Die Maske beschreibt das Feld immer erst, wenn es unten angekommen ist.

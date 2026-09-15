@@ -14,8 +14,8 @@ Der Gegenwert von `true` ist `false`.
 
 Boolesche Werte können auch negiert werden, indem man das `!`-Zeichen davor verwendet, z. B.:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // gibt false aus
+println(!false) // gibt true aus
 ```
 
 ---
@@ -26,10 +26,10 @@ Wir können auch boolesche Ausdrücke mit den Operatoren `&&` (_und_) und `||` (
 - `||` (_oder_): Ergibt „wahr", wenn entweder der Ausdruck auf der linken oder rechten Seite des Operators wahr ist, oder wenn beide wahr sind.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // gibt true aus
+println(true && false) // gibt false aus
+println(false && false) // gibt false aus
+println(true || true) // gibt true aus
+println(true || false) // gibt true aus
+println(false || false) // gibt false aus
 ```

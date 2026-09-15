@@ -20,7 +20,7 @@ Die Liste enthält niemals Duplikate, der Index ist also immer eindeutig. Die Li
 Beispiel für einen Funktionsaufruf:
 ```dart
 print(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// gibt 2 aus
 ```
 
 # --seed--

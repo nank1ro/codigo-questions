@@ -77,6 +77,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12, ohne Klammern
 ```
 Berechnete Eigenschaften sind nicht Teil des memberwise initializers, da es nichts zu speichern gibt. Verwende eine, wenn der Wert aus den anderen abgeleitet ist, und eine Methode, wenn die Arbeit Parameter benötigt.

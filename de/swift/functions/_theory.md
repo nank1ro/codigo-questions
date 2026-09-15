@@ -5,7 +5,7 @@ In Swift verwenden wir das Schlüsselwort `func` gefolgt vom Namen der Funktion:
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // gibt "Hello!" aus
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// gibt "Hello Smith! Welcome on board :)" aus
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ Sie können einen _Standardwert_ für jeden Parameter in einer Funktion definier
 Wenn ein Standardwert definiert ist, können Sie diesen Parameter beim Aufrufen der Funktion weglassen
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // hier etwas tun
 }
 ```
 
@@ -62,7 +62,7 @@ Beispielsweise wird ein variadischer Parameter mit dem Namen `numbers` und dem T
 
 In Funktionen können wir einen _optionalen Kommentar_ hinzufügen, der erklärt, was die Funktion tut:
 ```swift
-/// Prints 'Hello World' to the console.
+/// Gibt 'Hello World' auf der Konsole aus.
 func helloWorld() {
     print("Hello, World!")
 }

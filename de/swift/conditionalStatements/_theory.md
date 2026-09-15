@@ -4,7 +4,7 @@ In der Programmierung können wir eine boolean-Variable `niceWeather` speichern 
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // draußen spielen
 }
 ```
 
@@ -14,7 +14,7 @@ Lassen Sie uns mit dem vorherigen Beispiel fortfahren.
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // draußen spielen
 }
 ```
 Wir haben gesehen, dass die `if`-Aussage den Code-Block nur ausführt, wenn die Bedingung `true` ist.
@@ -28,9 +28,9 @@ In Swift können wir die `else`-Aussage verwenden, wie:
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // draußen spielen
 } else {
-    // stay home
+    // zu Hause bleiben
 }
 ```
 

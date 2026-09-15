@@ -41,7 +41,7 @@ int a = 10;
 int b = 4;
 double result = a / b; // 2.5
 
-double exact = 10 / 2; // 5.0  (not 5!)
+double exact = 10 / 2; // 5.0  (nicht 5!)
 ```
 
 Verwende immer eine `double`-Variable, um das Ergebnis von `/` zu speichern.
@@ -53,7 +53,7 @@ Der **Ganzzahldivisionsoperator** `~/` teilt zwei Zahlen und **truncates** das E
 ```dart
 int a = 10;
 int b = 3;
-int result = a ~/ b; // 3  (not 3.333...)
+int result = a ~/ b; // 3  (nicht 3.333...)
 ```
 
 Verwende `~/`, wenn du einen ganzzahligen Quotienten ohne Rest brauchst.

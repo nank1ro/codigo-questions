@@ -26,7 +26,7 @@ Der Rumpf eines Lambdas kann sich über mehrere Zeilen erstrecken. Es gibt kein 
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // zurückgegeben
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 Wenn ein Lambda genau **einen** Parameter hat, können Sie auf dessen Deklaration verzichten: Kotlin nennt ihn für Sie `it`.
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // das Gleiche
 ```
 `it` existiert nur, wenn der Parameter nicht explizit deklariert ist, und nur für Lambdas mit einem einzigen Parameter.
 Es hält kurze Lambdas kompakt, aber bei längeren Rümpfen ist ein echter Name klarer.
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // das Gleiche, mit einem Trailing-Lambda
 ```
 Dass der Funktionsparameter **zuletzt** steht, ist genau das, was den Aufrufern die Trailing-Lambda-Syntax ermöglicht.
 
@@ -160,7 +160,7 @@ Wenn die Funktion, die Sie benötigen, bereits existiert, müssen Sie sie nicht 
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], das Gleiche
 ```
 Member-Funktionen werden über ihren Typ referenziert, wie `String::uppercase`:
 ```kotlin

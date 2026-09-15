@@ -22,7 +22,7 @@ Schreiben Sie eine Funktion `collatzSteps`, die eine positive ganze Zahl `n` nim
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(collatzSteps(16))
-// prints 4
+// gibt 4 aus
 ```
 
 # --before-seed--

@@ -16,7 +16,7 @@ Schreibe eine Funktion, die das größte Palindrom findet, das aus dem Produkt z
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// gibt 9009 aus
 ```
 
 # --before-seed--

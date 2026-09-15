@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// gibt Max makes a sound aus
 ```
 Wenn eine Kindklasse ihren eigenen Konstruktor deklariert, ist der Aufruf von `super(...)` darin **verpflichtend**: Ohne ihn wird das Objekt nie initialisiert und JavaScript wirft einen `ReferenceError`. Eine Kindklasse ohne eigenen Konstruktor ist kein Problem, denn JavaScript schreibt einen, der jedes Argument an die Elternklasse weiterleitet.
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// gibt Woof aus
 ```
 Beim Überschreiben wird die Version der Elternklasse nicht gelöscht, sie wird nur verdeckt. Innerhalb der Methode der Kindklasse erreichst du sie weiterhin über `super.methodName(...)`, sodass du das Verhalten der Elternklasse erweitern kannst, statt es zu ersetzen:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// gibt Woof! aus
 ```
 Beachte den Unterschied: `super(...)` ruft den **Konstruktor** der Elternklasse auf, `super.name(...)` ruft eine **Methode** der Elternklasse auf.
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// gibt 0 aus
 ```
 Felder werden jeder neuen Instanz zugewiesen, bevor der Konstruktor-Körper läuft, sodass sich der Konstruktor bereits auf sie verlassen kann. Ein Feld ohne Wert ist trotzdem deklariert, es startet nur als `undefined`:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// gibt 8 aus
 ```
 Eine statische Methode wird über den Klassennamen aufgerufen, nie über eine Instanz: `new MathUtils().double(4)` wirft einen `TypeError`, weil Instanzen keine statischen Mitglieder erhalten. Innerhalb einer statischen Methode verweist `this` auf die Klasse, sodass eine statische Methode eine andere mit `this.otherStatic(...)` aufrufen kann.
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// gibt 3.14 aus
 ```
 Weil es nur eine Kopie gibt, ändert jede Instanz, die sie aktualisiert, denselben Wert. Innerhalb eines Konstruktors greifst du über den Klassennamen darauf zu, `Circle.PI`, und nicht über `this`: `this.PI` würde auf der Instanz nach einer Eigenschaft suchen, nichts finden und dir `undefined` geben.
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// gibt 120 aus
 ```
 Eine Fabrik kann aufgerufen werden, bevor irgendeine Instanz existiert, was einer normalen Methode nicht möglich wäre.
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// gibt 12 aus
 ```
 `r.area` führt die Methode aus und liefert ihr Ergebnis zurück, es ist also eine Zahl. Zusätzliche Klammern würden dann versuchen, diese Zahl aufzurufen, was fehlschlägt.
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// gibt 3 aus, der Setter hat 50 abgelehnt
 ```
 Ein Getter und ein Setter mit demselben Namen bilden zusammen eine Eigenschaft, daher können sie nicht zusätzlich ein normales Feld sein: Der gespeicherte Wert lebt unter einem anderen Namen, üblicherweise derselbe Name mit einem vorangestellten Unterstrich.
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// gibt 1234 aus
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// gibt $7 aus
 ```
 So hältst du Hilfsschritte aus der API heraus: Der Aufrufer sieht `print`, nicht das Formatierungsdetail dahinter. Private Felder und private Methoden geben einer Klasse zusammen ein klares Innen und Außen.
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// gibt $7 aus
 ```
 Dieselbe Methode wird von der String-Verkettung und von `String(value)` benutzt. Wenn du auch eine sinnvolle **Zahl** willst, definiere `[Symbol.toPrimitive](hint)`, das `"string"`, `"number"` oder `"default"` erhält und entscheidet, was zurückgegeben wird; wenn es existiert, hat es Vorrang vor `toString`.
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// gibt [ 'a', 'b' ] aus
 ```
 Das `*` vor dem Namen macht daraus einen **Generator**: eine Funktion, die Werte einzeln mit `yield` herausgibt und dazwischen pausiert. Das ist der kürzeste Weg, das Iterationsprotokoll zu erfüllen, und er funktioniert auch für Werte, die berechnet statt gespeichert werden.

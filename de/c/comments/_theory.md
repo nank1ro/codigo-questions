@@ -2,7 +2,7 @@ Ein **Kommentar** ist Text in deinem Quellcode, der für Menschen gedacht ist, n
 
 Die häufigste Art ist der **einzeilige Kommentar**: Alles von `//` bis zum Ende dieser Zeile wird ignoriert.
 ```c
-// Greet the user
+// Begrüße den Benutzer
 printf("Hello\n");
 ```
 Die erste Zeile tut nichts, wenn das Programm läuft; nur das `printf` erzeugt eine Ausgabe.
@@ -15,7 +15,7 @@ Das macht `//` zu einem schnellen Weg, eine Codezeile abzuschalten, ohne sie zu 
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // gibt "10" aus
 ```
 Die zweite Zeile ist jetzt ein Kommentar, also bleibt `total` `10`. Das Entfernen des `//` bringt die Zeile wieder zum Leben.
 
@@ -49,7 +49,7 @@ Das wird wichtig, wenn du einen Block auskommentieren willst, der bereits einen 
 
 Ein Kommentar braucht keine eigene Zeile: Er kann dem Code in derselben Zeile folgen. Das ist ein **nachgestellter Kommentar**, und er ist ein guter Platz für eine kurze Notiz zu genau dieser Anweisung:
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // gib nach drei Versuchen auf
 ```
 Sowohl `//` als auch `/* */` funktionieren als nachgestellte Kommentare, aber sei vorsichtig mit `/*`: Da er erst beim `*/` stoppt, verschluckt ein ungeschlossenes `/*` am Ende einer Zeile die Zeilen danach, und das Programm kompiliert nicht mehr.
 
@@ -83,8 +83,8 @@ Programmierer verwenden einige konventionelle Schlüsselwörter am Anfang eines 
 - `FIXME` markiert Code, von dem bekannt ist, dass er falsch ist, und der korrigiert werden muss
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: validiere die Eingabe, bevor du sie verwendest
+// FIXME: stürzt ab, wenn die Liste leer ist
 ```
 Editoren und Tools können diese Markierungen auflisten, sodass die offene Arbeit leicht zu finden ist. Sobald die Arbeit erledigt ist, lösche die Markierung: Ein veraltetes `TODO` ist irreführend.
 
@@ -92,12 +92,12 @@ Editoren und Tools können diese Markierungen auflisten, sodass die offene Arbei
 
 Ein guter Kommentar erklärt, **warum** der Code etwas tut, nicht **was** er tut. Der Code zeigt bereits, was passiert; ihn in Worten zu wiederholen fügt nur Rauschen hinzu und wird unzutreffend, sobald sich der Code ändert:
 ```c
-// multiply price by 90 and divide by 100
+// multipliziere price mit 90 und teile durch 100
 return price * 90 / 100;
 ```
 Der Grund hinter den Zahlen ist das, was ein Leser nicht erraten kann:
 ```c
-// launch discount: members get 10% off until the end of June
+// Einführungsrabatt: Mitglieder erhalten bis Ende Juni 10 % Rabatt
 return price * 90 / 100;
 ```
 Wenn ein Kommentar nur die Zeile unter ihm wiederholt, lösche ihn oder ersetze ihn durch den Grund.

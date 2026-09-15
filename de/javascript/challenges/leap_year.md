@@ -18,7 +18,7 @@ Geben Sie `true` zurück, wenn es ein Schaltjahr ist, `false` sonst.
 Beispiel für einen Funktionsaufruf:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// gibt true aus
 ```
 
 # --before-seed--

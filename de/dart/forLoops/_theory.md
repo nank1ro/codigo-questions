@@ -2,7 +2,7 @@ Eine `for`-Schleife wiederholt einen Codeblock eine festgelegte Anzahl von Malen
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // Rumpf
 }
 ```
 
@@ -56,7 +56,7 @@ Die `break`-Anweisung beendet eine Schleife sofort, wenn eine Bedingung erfüllt
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // stoppt bei 5
   print(i);
 }
 ```

@@ -16,7 +16,7 @@ Schreibe eine Funktion, die den größten Primfaktor von `number` zurückgibt.
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(largestPrimeFactor(13195));
-// prints 29
+// gibt 29 aus
 ```
 
 # --seed--

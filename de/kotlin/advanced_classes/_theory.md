@@ -50,8 +50,8 @@ data class User(val id: Int, val name: String)
 
 val a = User(1, "Ann")
 val b = User(1, "Ann")
-println(a == b)  // true, same data
-println(a === b) // false, two different objects
+println(a == b)  // true, dieselben Daten
+println(a === b) // false, zwei verschiedene Objekte
 println(a === a) // true
 ```
 

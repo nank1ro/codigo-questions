@@ -1,6 +1,6 @@
 In Swift können wir das `+`-Zeichen verwenden, um zwei oder mehr Strings zusammen anzuzeigen, wie hier:
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // gibt "Hello Swift!" aus
 ```
 
 ---

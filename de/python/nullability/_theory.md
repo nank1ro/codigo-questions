@@ -39,7 +39,7 @@ Da es nur ein `None` gibt, ist `is None` immer korrekt und etwas schneller, wäh
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # ausgegeben, aber 0 ist ein echter Wert!
 ```
 Wenn "kein Wert" und "leerer Wert" unterschiedlich behandelt werden müssen, prüfe zuerst `is None` und dann den Wahrheitswert:
 ```python

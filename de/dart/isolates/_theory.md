@@ -52,8 +52,8 @@ Unterwegs ist der eingefangene `text` auf dem Hinweg und das resultierende `int`
 `Isolate.run` liefert dir **Parallelität**: ein zweites Isolate auf einem zweiten Prozessorkern, das seinen eigenen Code zum selben Zeitpunkt wie das erste ausführt. Das ist das richtige Werkzeug zum Rechnen.
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // wartet: kein Kern ist beschäftigt
+await Isolate.run(() => hugeCalculation());       // wird berechnet: ein anderer Kern ist beschäftigt
 ```
 
 Eine langsame Berechnung zu awaiten hilft überhaupt nicht: `await bigSum()` führt `bigSum` weiterhin im aktuellen Isolate aus und blockiert es bis zur letzten Zeile. Nur ein zweites Isolate verlagert diese Arbeit weg.
@@ -258,7 +258,7 @@ Die Konsequenz ist die Regel, die Isolates sicher macht: Nach dem Senden halten 
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // die Kopie wächst
 print(numbers);                           // [1, 2, 3]
 ```
 

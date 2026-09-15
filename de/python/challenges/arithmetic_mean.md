@@ -16,7 +16,7 @@ Schreiben Sie eine Funktion, die den Mittelwert eines numerischen Vektors zurüc
 Example of function call:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# gibt 2 aus
 ```
 
 # --seed--

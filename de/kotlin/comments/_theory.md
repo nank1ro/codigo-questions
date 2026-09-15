@@ -2,7 +2,7 @@ Ein **Kommentar** ist eine Notiz im Quellcode für die Menschen, die ihn lesen. 
 
 Der einfachste Kommentar ist der **einzeilige Kommentar**: er beginnt mit `//` und reicht bis zum Ende der Zeile.
 ```kotlin
-// Greets the user
+// Begrüßt den Benutzer
 println("Hello")
 ```
 Verwende Kommentare, um zu erklären, wofür ein Stück Code gedacht ist oder warum es so geschrieben wurde.
@@ -11,7 +11,7 @@ Verwende Kommentare, um zu erklären, wofür ein Stück Code gedacht ist oder wa
 
 Ein Kommentar braucht keine eigene Zeile: er kann dem Code in derselben Zeile folgen. Das ist ein **Kommentar am Zeilenende**, ein guter Platz für eine kurze Notiz zu genau dieser Anweisung:
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // nach drei Versuchen aufgeben
 ```
 Alles von `//` bis zum Ende der Zeile wird ignoriert, während der Code davor wie üblich läuft.
 
@@ -23,7 +23,7 @@ Deshalb ist `//` ein schneller Weg, eine Codezeile abzuschalten, ohne sie zu lö
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // gibt 10 aus
 ```
 Die zweite Zeile ist jetzt ein Kommentar, `total` bleibt also `10`. Entfernt man das `//`, lebt die Zeile wieder auf.
 
@@ -45,8 +45,8 @@ Ein Blockkommentar kann auch kurz sein und in einer Zeile bleiben: `/* like this
 
 Anders als `//`, das am Ende der Zeile stoppt, stoppt ein `/*`-Kommentar erst beim `*/`. Vergisst du ihn zu schließen, behandelt der Compiler den gesamten folgenden Code als Teil des Kommentars und meldet einen Fehler:
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* in Zentimetern
+println(width) // noch innerhalb des Kommentars: Fehler, der Kommentar wird nie geschlossen
 ```
 Sowohl `//` als auch `/* */` funktionieren als Kommentar am Zeilenende, aber bei `/*` vergewissere dich immer, dass das `*/` vorhanden ist.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // gibt 100 aus
 ```
 Dank der Schachtelung funktioniert das sogar, wenn eine dieser Zeilen bereits einen `/* */`-Kommentar enthält.
 
@@ -159,7 +159,7 @@ Manche Kommentare folgen einer Konvention, die Editoren verstehen. Die häufigst
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: das Limit aus den Einstellungen lesen
 ```
 Für den Compiler sind sie ganz normale Kommentare; IntelliJ IDEA sammelt sie in einem eigenen Tool-Fenster, damit offene Arbeit leicht zu finden ist. Ein `TODO` steht meist neben einem Platzhalter, der den Code kompilierfähig hält, bis die echte Implementierung geschrieben ist. Wenn du die Arbeit abschließt, ersetze den Platzhalter und entferne den Marker in derselben Änderung, damit der Kommentar nie etwas über den Zustand des Codes vortäuscht.
 
@@ -171,12 +171,12 @@ Ein `FIXME` ist etwas anderes als ein `TODO`: der Code existiert bereits, aber e
 
 Ein guter Kommentar erklärt, **warum** der Code etwas tut, nicht **was** er tut. Der Code zeigt bereits, was passiert; es in Worten zu wiederholen fügt nur Rauschen hinzu und veraltet, sobald sich der Code ändert:
 ```kotlin
-// set timeout to 30
+// timeout auf 30 setzen
 val timeout = 30
 ```
 Der Grund hinter der Zahl ist das, was man als Leser nicht erraten kann:
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// der Server trennt inaktive Verbindungen nach 35 Sekunden, also lieber früher aufhören
 val timeout = 30
 ```
 Wiederholt ein Kommentar nur die Zeile unter ihm, lösche ihn oder ersetze ihn durch den Grund. Die besten Kommentare sind die, die etwas sagen, das der Code nicht sagen kann.

@@ -7,7 +7,7 @@ fun greet() {
 ```
 Um eine Funktion aufzurufen (auszuführen), verwendet man ihren Namen gefolgt von Klammern:
 ```kotlin
-greet() // prints Hello!
+greet() // gibt Hello! aus
 ```
 Eine Funktion, die keinen Wert zurückgibt, gibt implizit `Unit` zurück.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 Das Schlüsselwort `return` sendet einen Wert zurück an den Aufrufer:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // gibt 42 aus
 ```
 Der Rückgabetyp muss mit dem Typ des zurückgegebenen Wertes übereinstimmen.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 Beim Aufruf der Funktion übergibt man Argumente:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // gibt Hello, Alice! aus
 ```
 Parameter ermöglichen wiederverwendbaren Code, der mit verschiedenen Werten arbeitet.
 
@@ -48,8 +48,8 @@ Kotlin unterstützt Standardparameterwerte. Wenn ein Aufrufer kein Argument angi
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // gibt Hello, World! aus
+greet("Alice")  // gibt Hello, Alice! aus
 ```
 Standardwerte machen Parameter optional und reduzieren die Notwendigkeit von überladenen Funktionen.
 
@@ -72,8 +72,8 @@ Funktionen können `Boolean`-Werte zurückgeben, was nützlich ist, um Bedingung
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // gibt true aus
+println(isEven(7)) // gibt false aus
 ```
 Eine `Boolean`-Funktion gibt entweder `true` oder `false` zurück.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// gibt My name is Bob and I am 30 years old. aus
 ```
 Benannte Argumente ermöglichen es, Werte in beliebiger Reihenfolge mit dem Parameternamen zu übergeben:
 ```kotlin

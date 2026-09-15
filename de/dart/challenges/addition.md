@@ -16,7 +16,7 @@ Schreiben Sie eine Funktion, die die Summe von zwei Zahlen zurückgibt.
 Example of function call:
 ```dart
 print(addition(1, 2));
-// prints 3
+// gibt 3 aus
 ```
 
 # --seed--

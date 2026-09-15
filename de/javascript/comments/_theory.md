@@ -2,7 +2,7 @@ Ein **Kommentar** ist eine Notiz, die im Quellcode für die Menschen steht, die 
 
 Der einfachste Kommentar ist der **einzeilige Kommentar**: Er beginnt mit `//` und läuft bis zum Ende der Zeile.
 ```javascript
-// Greets the user
+// Begrüßt den Benutzer
 console.log("Hello");
 ```
 Verwende Kommentare, um zu erklären, wofür ein Stück Code da ist oder warum es so geschrieben wurde. Beachte, dass `#` in JavaScript, anders als in manchen anderen Sprachen, **keinen** Kommentar beginnt.
@@ -11,7 +11,7 @@ Verwende Kommentare, um zu erklären, wofür ein Stück Code da ist oder warum e
 
 Ein Kommentar braucht keine eigene Zeile: Er kann dem Code in derselben Zeile folgen. Das ist ein **Inline-Kommentar** (oder nachgestellter Kommentar), und er ist ein guter Platz für eine kurze Notiz zu genau dieser Anweisung:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // nach drei Versuchen aufgeben
 ```
 Alles von `//` bis zum Zeilenende wird ignoriert, während der Code davor wie gewohnt ausgeführt wird.
 
@@ -23,7 +23,7 @@ Damit ist `//` ein schneller Weg, eine Codezeile abzuschalten, ohne sie zu lösc
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // gibt 10 aus
 ```
 Die zweite Zeile ist jetzt ein Kommentar, also bleibt `total` bei `10`. Entfernt man das `//`, erwacht die Zeile wieder zum Leben.
 
@@ -47,7 +47,7 @@ Welche Art von Kommentar du auch verwendest, die Regel ist dieselbe: Der Text da
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// gibt nur a aus
 ```
 Wenn du dir nicht sicher bist, was ein Programm ausgibt, streiche gedanklich jeden Kommentar und lies, was übrig bleibt.
 
@@ -55,8 +55,8 @@ Wenn du dir nicht sicher bist, was ein Programm ausgibt, streiche gedanklich jed
 
 Anders als `//`, das am Zeilenende aufhört, endet ein `/*`-Kommentar erst beim `*/`. Wenn du vergisst, ihn zu schließen, behandelt JavaScript den gesamten folgenden Code als Teil des Kommentars und meldet einen Syntaxfehler:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* in Zentimetern
+console.log(width); // noch innerhalb des Kommentars: SyntaxError, der Kommentar wird nie geschlossen
 ```
 Sowohl `//` als auch `/* */` funktionieren als Inline-Kommentare, aber bei `/*` musst du immer sicherstellen, dass das `*/` da ist.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // gibt 100 aus
 ```
 Da die Zeilen im Block ignoriert werden, ändert sich `total` nie. Denk daran, dass das nur funktioniert, wenn keine dieser Zeilen ein `*/` enthält.
 
@@ -158,12 +158,12 @@ JavaScript ignoriert diese Zeile genau wie einen Kommentar, aber nur, wenn sie d
 
 Ein guter Kommentar erklärt, **warum** der Code etwas tut, nicht **was** er tut. Der Code zeigt schon, was passiert; es in Worten zu wiederholen erzeugt nur Rauschen und veraltet, sobald sich der Code ändert:
 ```javascript
-// set timeout to 30
+// setzt timeout auf 30
 const timeout = 30;
 ```
 Der Grund hinter der Zahl ist das, was ein Leser nicht erraten kann:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// der Server trennt inaktive Verbindungen nach 35 Sekunden, also früher aufhören
 const timeout = 30;
 ```
 Wenn ein Kommentar nur die Zeile darunter wiederholt, lösche ihn oder ersetze ihn durch den Grund.
@@ -176,8 +176,8 @@ Manche Kommentare folgen einer Konvention, die Editoren verstehen. Die häufigst
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: die Grenze aus den Einstellungen lesen
+// FIXME: stürzt ab, wenn die Liste leer ist
 ```
 Für JavaScript sind das ganz gewöhnliche Kommentare; Editoren listen sie auf, damit offene Arbeit leicht zu finden ist. Ein `TODO` steht meist neben einem Platzhalter, der den Code am Laufen hält, bis die echte Implementierung geschrieben ist. Wenn du die Arbeit erledigt hast, ersetze den Platzhalter und entferne den Marker in derselben Änderung: Ein veraltetes `TODO` führt in die Irre.
 

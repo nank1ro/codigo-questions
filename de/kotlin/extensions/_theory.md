@@ -177,7 +177,7 @@ Eine Erweiterungsfunktion mit genau **einem** Parameter kann als `infix` markier
 infix fun Int.percentOf(total: Int): Int = total * this / 100
 
 println(20 percentOf 50)   // 10
-println(20.percentOf(50))  // 10, the normal call still works
+println(20.percentOf(50))  // 10, der normale Aufruf funktioniert weiterhin
 ```
 Kotlin nutzt das auch für einige eingebaute Funktionen: `1 to "one"` baut ein `Pair`, und `1 until 5` baut einen Bereich.
 

@@ -12,7 +12,7 @@ Der Schlüssel `key1` verweist auf den Wert `1`, `key2` auf `2` und so weiter.
 Der Zugriff auf Dictionary-Werte nach Schlüssel ist genau wie der Zugriff auf Listenwerte nach Index:
 ```python
 user['age']
-# gets the age value from the user dictionary
+# holt den Alterswert aus dem user-Dictionary
 ```
 
 ---

@@ -21,7 +21,7 @@ Das Array enthält niemals Duplikate, der Index ist also immer eindeutig. Das Ar
 Beispiel für einen Funktionsaufruf:
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// gibt 2 aus
 ```
 
 # --before-seed--

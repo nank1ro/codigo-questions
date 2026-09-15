@@ -154,5 +154,5 @@ Wenn du mehrere Anweisungen, mehr als zwei verschachtelte `for`, oder eine schwe
 Eine Comprehension ersetzt außerdem die meisten Verwendungen von `map()` und `filter()` mit lambdas:
 ```python
 doubled = list(map(lambda n: n * 2, nums))
-doubled = [n * 2 for n in nums]  # same result, easier to read
+doubled = [n * 2 for n in nums]  # gleiches Ergebnis, leichter zu lesen
 ```

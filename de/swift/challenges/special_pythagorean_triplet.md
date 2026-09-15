@@ -16,7 +16,7 @@ Schreibe eine Funktion, die das Produkt a × b × c des pythagoreischen Tripels 
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// gibt 60 aus
 ```
 
 # --before-seed--

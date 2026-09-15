@@ -27,7 +27,7 @@ Schreiben Sie eine Funktion `is_valid`, die einen String entgegennimmt und `True
 Beispiel eines Funktionsaufrufs:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# gibt True aus
 ```
 
 # --seed--
