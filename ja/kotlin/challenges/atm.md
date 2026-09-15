@@ -23,7 +23,7 @@ ATMは、Nが5の倍数であり、かつジェームズの口座に引き出し
 関数呼び出しの例：
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// 9.5 を出力
 ```
 
 # --seed--

@@ -139,7 +139,7 @@ print(pairs) // ["Ann is 31", "Bob is 27"]
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// 1 と 3 を出力
 ```
 すべての要素に対する短い副作用には`forEach`を、早く停止する必要があるときには`for-in`を使いましょう。
 

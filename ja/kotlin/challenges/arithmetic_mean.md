@@ -17,7 +17,7 @@ title: 算術平均
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
-// prints 2.0
+// 2.0 を出力
 ```
 
 # --seed--

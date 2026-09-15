@@ -16,7 +16,7 @@ title: 素数の総和
 関数呼び出しの例:
 ```swift
 print(primeSummation(10))
-// prints 17
+// 17 を出力
 ```
 
 # --before-seed--

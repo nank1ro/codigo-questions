@@ -5,7 +5,7 @@ let ages = new Map();
 ages.set("Ann", 30);
 ages.set("Bob", 25);
 console.log(ages.get("Ann"));
-// prints 30
+// 30 を出力
 ```
 すでに存在するキーで`set()`を呼び出すと、その値が置き換えられます。
 
@@ -21,10 +21,10 @@ let stock = new Map();
 stock.set("apple", 3);
 stock.set("pear", 5);
 console.log(stock.has("apple"));
-// prints true
+// true を出力
 stock.delete("pear");
 console.log(stock.size);
-// prints 1
+// 1 を出力
 ```
 `size`はメソッドではなくプロパティなので、括弧がないことに注意してください。
 
@@ -35,7 +35,7 @@ console.log(stock.size);
 let ages = new Map();
 ages.set("Ann", 30);
 console.log(ages.get("Zed"));
-// prints undefined
+// undefined を出力
 ```
 だからこそ`has()`が存在します：存在しないキーと、値がたまたま`undefined`であるキーを区別できます。
 `set()`はマップ自身を返すので、呼び出しを連結できます：
@@ -52,11 +52,11 @@ let lookup = new Map();
 lookup.set(1, "number one");
 lookup.set("1", "string one");
 console.log(lookup.size);
-// prints 2
+// 2 を出力
 let alice = { name: "Alice" };
 lookup.set(alice, "an object key");
 console.log(lookup.get(alice));
-// prints an object key
+// an object key を出力
 ```
 オブジェクトのキーは同一性で比較されるため、まったく同じオブジェクトだけが値を取り戻せます。
 
@@ -71,8 +71,8 @@ stock.set("pear", 5);
 for (const [name, qty] of stock.entries()) {
   console.log(`${name}: ${qty}`);
 }
-// prints apple: 3
-// prints pear: 5
+// apple: 3 を出力
+// pear: 5 を出力
 ```
 マップを直接ループする`for (const [name, qty] of stock)`も、まったく同じことをします。
 
@@ -86,13 +86,13 @@ prices.set("cake", 4);
 for (const name of prices.keys()) {
   console.log(name);
 }
-// prints tea
-// prints cake
+// tea を出力
+// cake を出力
 for (const price of prices.values()) {
   console.log(price);
 }
-// prints 2
-// prints 4
+// 2 を出力
+// 4 を出力
 ```
 
 ---
@@ -102,12 +102,12 @@ for (const price of prices.values()) {
 let pairs = [["red", "#f00"], ["blue", "#00f"]];
 let colors = new Map(pairs);
 console.log(colors.size);
-// prints 2
+// 2 を出力
 ```
 `Object.entries(obj)`はまさにそのようなペアの配列を返すので、オブジェクトをマップに変換する最も手早い方法です：
 ```javascript
 let user = { name: "Ann", age: 30 };
 let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
-// prints 30
+// 30 を出力
 ```

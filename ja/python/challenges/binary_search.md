@@ -20,7 +20,7 @@ title: 二分探索
 関数呼び出しの例：
 ```python
 print(binary_search([1, 3, 5, 7], 5))
-# prints 2
+# 2を出力する
 ```
 
 # --seed--

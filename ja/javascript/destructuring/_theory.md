@@ -9,7 +9,7 @@ const y = point[1];
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// 3 7 を出力
 ```
 パターンが配列全体をカバーする必要はありません。余分な要素は単に無視され、対応する要素のない名前は `undefined` になります。
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// 5 を出力
 ```
 元の配列はコピーも変更もされず、パターンはそこから読み取るだけです。
 
@@ -33,7 +33,7 @@ console.log(middle([0, 10]));
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// 64 を出力
 ```
 数えるのは名前ではなくカンマです。各カンマは、手前に名前があるかどうかにかかわらず、パターンを 1 位置前に進めます。
 
@@ -44,7 +44,7 @@ console.log(blue);
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// 1920 1080 を出力
 ```
 デフォルト値は必要なときにだけ評価されるので、関数呼び出しであってもかまいません。また、デフォルト値は最後の位置だけでなく任意の位置に付けられます。
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// 2 1 を出力
 ```
 右辺が先に作られるので、代入が行われるときには両方の古い値がすでに一時配列の中に安全に収まっています。前の行のセミコロンに注意してください。そうしないと、`[` で始まる行は直前のものに対するインデックスとして読まれてしまいます。
 
@@ -67,7 +67,7 @@ console.log(a, b);
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// Ada 36 を出力
 ```
 パターン内で `age` と `name` を入れ替えても結果は変わらず、パターンが言及しないキーは単にそのまま残されます。対応するキーのない名前は `undefined` になります。
 
@@ -78,7 +78,7 @@ console.log(name, age);
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// dark en を出力
 ```
 パターン全体が 1 つの文なので、関数は最初の行で引数から必要なものをすべて展開できます。
 
@@ -89,7 +89,7 @@ console.log(theme, lang);
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// Ada 1815 を出力
 ```
 「`n` を取り、それを `name` と呼ぶ」と読みます。コロンは型を宣言するものではなく、`n` 自身は変数として作られず、作られるのは `name` だけです。名前を変更した変数にもデフォルト値を後ろに書いて付けられます: `{ n: name = "unknown" }`。
 
@@ -99,7 +99,7 @@ console.log(name, born);
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// 0 を出力
 ```
 `null` は API レスポンスではよく「値なし」を意味しますが、ここでは `0` と同じように振る舞います。`null` も置き換えたい場合は、まず分割代入し、その後で `??` によるフォールバックを使ってください。
 
@@ -110,7 +110,7 @@ console.log(count);
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// London を出力
 ```
 その行が何を作るかに注意してください。`address: { city }` は「`address` の中に入る」ことを意味し、「`address` を渡して」ではないので、変数になるのは `city` だけです。両方を得るにはキーを 2 回書きます: `const { address, address: { city } } = user;`。配列とオブジェクトのパターンは、`{ tags: [first] }` のように互いに自由に入れ子にできます。
 
@@ -121,7 +121,7 @@ console.log(city);
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// a [ 'b', 'c' ] を出力
 ```
 rest 要素はパターンの最後に来なければならず、デフォルト値を持てません。何も残っていないときは単に空の配列になります。
 
@@ -132,7 +132,7 @@ rest 要素はパターンの最後に来なければならず、デフォルト
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// { name: 'Ada', city: 'London' } を出力
 ```
 これは、あるキーを除いたオブジェクトのコピーを作る最も短い方法です。元のオブジェクトは決して変更されず、rest オブジェクトは残りの値を保持する新しいオブジェクトになります。
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// 12 を出力
 ```
 本体の中にはオブジェクト変数はまったくなく、`width` と `height` だけがあります。呼び出し側は 1 つのオブジェクトを渡しますが、シグネチャは関数がどのキーを読むかを正確に文書化し、キーはどんな順序で到達してもかまいません。
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// guest/false を出力
 ```
 この行は外側から読みます。`= {}` は引数がないときに空のオブジェクトを供給し、その後、内側の各デフォルト値がそれぞれのキーを埋めます。
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// ada is 36 を出力
+// bob is 41 を出力
 ```
 これはオブジェクトをたどる読みやすい方法です。インデックスもルックアップもなく、関心のある 2 つの名前だけがあります。`Object.keys` と `Object.values` はそれぞれ片側だけを返し、`Object.entries` は両方を返します。
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// Post [js] +2 を出力
 ```
 読みやすさを保ってください。2、3 行に収まらなくなったパターンは、通常、関数が要求しすぎているサインです。

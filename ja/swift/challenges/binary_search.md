@@ -21,7 +21,7 @@ title: 二分探索
 関数呼び出しの例:
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// 2 を出力
 ```
 
 # --before-seed--

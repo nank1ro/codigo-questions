@@ -11,7 +11,7 @@ var x = 1
 このようにして、`x`という名前の変数に値`1`を代入しました。
 変数`x`を出力すると、数値`1`が返されます：
 ```swift
-print(x) // prints 1
+print(x) // 1 を出力
 ```
 
 ---
@@ -20,9 +20,9 @@ print(x) // prints 1
 `=`を使用して新しい値を与えることで、`x`を更新できます。
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // 1 を出力
 x = 2
-print(x) // prints 2
+print(x) // 2 を出力
 ```
 
 ---
@@ -31,7 +31,7 @@ print(x) // prints 2
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // 5 を出力
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 変数を更新すると、以前の値は失われます。ここでは、`x`変数を2回表示して、値がどのように更新されるかを確認できます。
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // 5 を出力
 x = 10
-print(x) // prints 10
+print(x) // 10 を出力
 ```
 
 ---

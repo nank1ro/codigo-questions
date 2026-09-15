@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// HI!! を出力
 ```
 `shout` は**括弧なし**で渡されていることに注目してください。`twice(shout, "hi")` は関数そのものを渡しますが、`twice(shout("hi"), "hi")` は先に `shout` を呼び出し、その結果である文字列 `"HI!"` を渡すことになり、これは呼び出せません。
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// aとbを2行に出力
 ```
 コールバックは要素を 1 つずつ受け取ります。上のようにその場で書いたアロー関数でも、変数に入れた任意の関数でもかまいません。次に学ぶ組み込みの配列メソッドも、内部ではまさにこのように動いています。
 
@@ -32,9 +32,9 @@ each(["a", "b"], (letter) => console.log(letter));
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// 5と10を2行に出力
 console.log(doubled);
-// prints [ 10, 20 ]
+// [ 10, 20 ] を出力
 ```
 よくある間違いは、`forEach` の結果を保存したり、その後ろに別のメソッドをつなげたりすることです。`undefined` を返すので、つなげるものがありません。目安として、新しい値が必要なら `map`、何かを*する*だけなら `forEach` を使います。
 
@@ -46,9 +46,9 @@ console.log(doubled);
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// [ 8, 5 ] を出力
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// 16 を出力
 ```
 `filter` と `map` は配列を返すので、つなげて最後に `reduce` で締めくくれます。`numbers.filter(...).map(...).reduce(...)` のようにです。
 
@@ -61,9 +61,9 @@ console.log(numbers.reduce((sum, n) => sum + n, 0));
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// 45 を出力
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// true false を出力
 ```
 3 つとも答えが決まった時点で止まるので、必要以上の要素を見ることはありません。
 
@@ -73,9 +73,9 @@ console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
 比較関数がないと、`sort()` は各要素を**文字列**に変換して 1 文字ずつ比較するので、`"1"` は `"9"` より小さく、`10` が `9` より前に来ます。
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// [ 1, 10, 9 ] を出力
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// [ 1, 9, 10 ] を出力
 ```
 `sort` は配列を変更するので、元の順序も必要なときはコピーを並べ替えてください。`[...numbers].sort(...)` のようにします。文字列には比較関数として `(a, b) => a.localeCompare(b)` を使うと、テキストをアルファベット順に並べられます。
 
@@ -86,7 +86,7 @@ console.log([10, 9, 1].sort((a, b) => a - b));
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] を出力
 ```
 コピーを並べ替えれば `items` は元の順序のまま残ります。
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// 15 を出力
 console.log(makeMultiplier(10)(5));
-// prints 50
+// 50 を出力
 ```
 `makeMultiplier` を呼び出すたびに、それぞれ独自の `factor` を持つ新しい関数が作られます。こうして 1 つのひな形から似た関数の一群を作れます。同じものはアロー関数でも書けます。`const makeMultiplier = (factor) => (n) => n * factor;` のようにです。
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// 2 を出力
 ```
 それら 2 つの関数を通す以外に、外部から `count` を読んだりリセットしたりすることは誰にもできません。この変数は**プライベート**です。`makeCounter()` を 2 回目に呼び出すと、まったく別の `count` が作られます。
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// HI を出力
 ```
 順序が重要です。`compose(f, g)` は先に `g`、次に `f` を実行します。このように小さな関数をつなぎ合わせてプログラムを組み立てることを**関数合成**と呼びます。
 
@@ -146,7 +146,7 @@ console.log(clean("  hi  "));
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// [ 'tree' ] を出力
 ```
 汎用の `not(predicate)` は、どんな述語に対してもこれを行います。同じ引数で `predicate` を呼び出し、結果を `!` で反転する新しい関数を返します。`filter`、`find`、`some`、`every` の述語は要素を第 1 引数として受け取るので、ラッパーはその 1 つの値だけを渡せば十分です。
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// { yes: 2, no: 1 } を出力
 ```
 `acc[vote] ?? 0` は現在のカウントを読み取り、そのキーがまだ存在しない場合は `0` を読み取ります。
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// 42 を出力
 ```
 `this` を固定することはメソッドで重要です。メソッドをオブジェクトから取り出して単独で呼び出すと、`this` はもうそのオブジェクトを指さないので、`this.name` は `undefined` になります。`bind` はそれをオブジェクトに固定します。
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// Hi undefined を出力
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// Hi Ana を出力
 ```
 元の関数は決して変更されません。`bind` は常に新しい関数を作り、その `name` は元の名前の前に `bound ` が付いたものになります。
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// ready ready 1 を出力
 ```
 ラッパーには 2 つのプライベート変数が必要です。`fn` をすでに実行したかどうかと、保存した結果です。どちらもクロージャの中にあり、外からは見えません。ラッパーのすべての引数を `fn` に渡すには、残余引数 `(...args)` を使ってラッパーを宣言し、`fn(...args)` を呼び出します。
 
@@ -220,6 +220,6 @@ console.log(init(), init(), calls);
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// { h: [ 'hi', 'hey' ], y: [ 'yo' ] } を出力
 ```
 各要素についてキーを求め、そのキーの配列がまだなければ作り（`acc[key] ?? []`）、要素を追加してアキュムレータを返します。`keyFn` は呼び出す側が選ぶので、同じ関数で単語を頭文字ごとに、人を都市ごとに、数値を偶奇ごとにグループ分けできます。

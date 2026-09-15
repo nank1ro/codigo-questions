@@ -1,6 +1,6 @@
 Swiftでは、`+`記号を使って2つ以上の文字列を一緒に表示できます。例えば：
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // "Hello Swift!" を出力
 ```
 
 ---

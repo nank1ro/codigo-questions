@@ -1,12 +1,12 @@
 すべての変数はメモリのどこかに存在し、その場所には**アドレス**と呼ばれる番号が付いています。`&`演算子は「〜のアドレス」と読み、変数のアドレスを返します:
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // 0x7ffd5c3e9a4c のような値を出力する
 ```
 `%p`指定子はアドレスを出力します。正確な値は実行のたびに変わるため、プログラムがその値に依存することはありません。
 アドレスは**ポインタ**変数に格納されます。ポインタは、指す先の型の後に`*`を付けて宣言します:
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p は int へのポインタで、x のアドレスを保持する
 ```
 `p`は`x`を**指している**と言います。同じアドレスを保持する2つのポインタは等しいので、`p == &x`は真になります。
 
@@ -16,7 +16,7 @@ int *p = &x; // p is a pointer to int, and it holds the address of x
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // "42" を出力する
 ```
 `*p`は「`p`が指している値」を意味し、`x`自身と同じく`int`です。同じ記号`*`には2つの役割があります。宣言`int *p`では「これはポインタである」ことを表し、式`*p`ではポインタをたどって値に到達します。
 
@@ -27,7 +27,7 @@ printf("%d\n", *p); // prints "42"
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // "10" を出力する
 ```
 `x`と`*p`は同じメモリに対する2つの名前です。`*`を付けずに`p`に代入すると、そこに格納された値ではなく、ポインタが保持する**どのアドレスか**が変わります。
 
@@ -51,7 +51,7 @@ if (p != NULL) {
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price は今 19.0
 ```
 ポインタは指す変数の型と一致しなければならず、`int *p = &price;`はコンパイラに拒否されます。`NULL`は任意の型のポインタに代入できる唯一の値です。
 
@@ -62,7 +62,7 @@ double *p = &price;
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // "A" を出力する
 ```
 ポインタを通じた読み書きは自由に組み合わせられます: `*p = *p + 1`は`'A'`を`'B'`に変えます。
 
@@ -70,9 +70,9 @@ printf("%c\n", grade); // prints "A"
 
 ポインタはアドレスを格納するものであり、同じマシン上ではそこにどんな型が格納されていても、すべてのアドレスは同じサイズを持ちます。したがってポインタの`sizeof`は`char *`、`int *`、`double *`のいずれでも同じで、64ビットシステムでは`8`バイト、32ビットでは`4`バイトです:
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // 64ビット環境では "8" を出力する
+printf("%zu\n", sizeof(double)); // "8" を出力する
+printf("%zu\n", sizeof(char));   // "1" を出力する
 ```
 ポインタのサイズと、ポインタが指すもののサイズを混同しないでください: `sizeof(p)`はアドレスのサイズ、`sizeof(*p)`は値のサイズです。
 
@@ -81,7 +81,7 @@ printf("%zu\n", sizeof(char));   // prints "1"
 式の中で使われた配列名は**先頭要素**のアドレスを表すので、ポインタに直接代入できます:
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // &numbers[0] と同じ
 ```
 ポインタに整数を加えると、バイトではなくその数だけ**要素**分前進します: `p + 1`は`numbers[1]`のアドレス、`*(p + 1)`は`20`です。コンパイラはステップを型のサイズに応じて拡大します。
 インデックスによるアクセスはポインタにも機能します: `p[i]`は`*(p + i)`と定義されるので、`p[2]`は`30`です。これは**ポインタ演算**と呼ばれます。
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter は今 0
 ```
 古典的な例は2つの変数の入れ替えです。片方を上書きする間、もう片方の値の一時コピーが必要になります。
 
@@ -159,8 +159,8 @@ Player *first_active(Player players[], int size) {
 
 `const`は書く位置によって、値を保護するか、ポインタを保護するかが決まります:
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // 定数へのポインタ: *p は変更できないが、p は別の場所を指せる
+int *const q = &a; // 定数ポインタ: q は常に a を指すが、*q は変更できる
 ```
 宣言は右から左に読みます: `p`は定数の`int`へのポインタ、`q`は`int`への定数ポインタです。constへのポインタは、`int sum(const int *values, int size)`のように、関数が受け取ったものを**読むだけ**であると約束する一般的な方法です。通常の変数も渡せます。この約束が制限するのは関数ができることだけです。
 

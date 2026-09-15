@@ -49,7 +49,7 @@ asyncio.run(countdown())
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # 何も出力されない
 ```
 Python は `RuntimeWarning: coroutine 'hello' was never awaited` という警告まで出します。忘れられた `await` は最もよくある非同期のバグです：コードは呼び出されたように見えるのに決して実行されず、結果を受け取るはずの変数には代わりにコルーチンオブジェクトが入ります。
 
@@ -60,7 +60,7 @@ Python は `RuntimeWarning: coroutine 'hello' was never awaited` という警告
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # 遅い検索をシミュレートする
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # 空行を出力する
 ```
 誰にも捕捉されない例外は、すべての `await` を通って `asyncio.run` まで伝わり、同期コードの中で再スローされます。通常のコールスタックと全く同じです。
 

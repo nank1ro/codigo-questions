@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 推論された型とは異なる型にしたい場合は、アノテーションを追加します。整数リテラルは`Double`や`Float`の定数に格納でき、1文字のリテラルは`Character`の定数に格納できます:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0、Int ではない
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil、整数ではない
+print(Int(" 42"))  // nil、スペースは許可されない
 print(Int("abc"))  // nil
 ```
 小数のテキストには`Double(text)`を使います。これも同じように`Double?`を返します。`Double("3.5")`は`Optional(3.5)`です。
@@ -166,7 +166,7 @@ for c in "a1" {
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true、整数も有効な Double である
 ```
 最後の行に注目してください。`Int`が受け付けるテキストはすべて`Double`でも受け付けられるため、両者を区別したい場合は先に`Int`をチェックします。
 
@@ -180,7 +180,7 @@ let items: [Any] = [1, "two", true]
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // 1 に対してのみ実行される
     }
 }
 ```

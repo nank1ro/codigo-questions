@@ -2,7 +2,7 @@
 
 Pythonにあるコメントは**1行コメント**だけです。`#`で始まり、行の終わりまで続きます。
 ```python
-# Greets the user
+# ユーザーに挨拶する
 print("Hello")
 ```
 コメントは、コードが何のためのものか、なぜそのように書かれたのかを説明するために使います。
@@ -11,7 +11,7 @@ print("Hello")
 
 コメントは独立した行である必要はありません。コードと同じ行に続けることができます。これは**行内コメント**と呼ばれ、その行の処理についての短いメモを書くのに適した場所です：
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # 3回試したら諦める
 ```
 `#`から行の終わりまではすべて無視されますが、その前のコードは通常どおり実行されます。
 
@@ -25,7 +25,7 @@ Pythonはコメントを完全に取り除くので、コメントを追加し�
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # 10を出力する
 ```
 2行目は今やコメントなので、`total` は `10` のままです。`#` を取り除けば、その行は再び有効になります。
 
@@ -37,8 +37,8 @@ print(total)  # prints 10
 
 説明が複数行にわたるときは、すべての行の先頭に `#` を付けます：
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# ウェルカムバナーを出力する。
+# アプリの起動時に一度だけ呼び出される。
 print("Welcome!")
 ```
 同じやり方で、複数行のコードを一度にコメントアウトできます。1行に1つの `#` です。どのエディタでも、選択した範囲全体に `#` を付けたり外したりするショートカットが1つあるので、見た目ほど手間ではありません。
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # name への挨拶を返す。
 ```
 関数にdocstringがないとき、`__doc__` は `None` です。`help(greet)` が表示するもの、そして名前の上にカーソルを合わせたときにエディタが表示するものは、これです。
 
@@ -121,7 +121,7 @@ docstringと `#` コメントは似ていますが、答える疑問が異なり
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # サーバーは35秒アイドルだと接続を切る
     return 30
 ```
 つまり、関数のドキュメントはdocstringに、実装に関するメモはコメントに書きます。
@@ -151,7 +151,7 @@ docstringは本体の**最初の行**でなければならず、他のどの文�
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: 設定から上限を読み込む
 ```
 Pythonにとってこれらは普通のコメントですが、エディタは専用のパネルにそれらを集めるので、残されている作業を見つけやすくなります。`TODO` は通常、実際のコードが書かれるまでプログラムを動かし続けるプレースホルダーのそばに置かれます。
 
@@ -162,7 +162,7 @@ Pythonにとってこれらは普通のコメントですが、エディタは�
 関数が何をするかを説明するために関数の上に置かれたコメントは、間違った場所にあります。そのための場所はdocstringです。docstringは関数に紐付けられ、`help()` はそれを見つけ、エディタはそれを表示します。一方、`def` の上にある `#` コメントは、そのどれからも見えません。
 
 ```python
-# adds a and b
+# a と b を足す
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ print("black is #000000")  # a hex colour
 
 良いコメントは、コードが**何を**するかではなく、**なぜ**それをするのかを説明します。コードはすでに何が起こるかを示しています。それを言葉で繰り返すのはノイズを加えるだけで、コードが変わるとすぐに古くなってしまいます：
 ```python
-# set timeout to 30
+# timeout を30に設定
 timeout = 30
 ```
 その数字の裏にある理由こそ、読む人には推測できないものです：
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# サーバーは35秒アイドルだと接続を切るので、早めに止める
 timeout = 30
 ```
 コメントが下の行を言い換えているだけなら、削除するか理由に置き換えてください。最良のコメントは、コードでは語れないことを語るものです。

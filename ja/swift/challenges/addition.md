@@ -17,7 +17,7 @@ title: 足し算
 関数呼び出しの例:
 ```swift
 print(addition(1, 2))
-// prints 3
+// 3 を出力
 ```
 
 # --before-seed--

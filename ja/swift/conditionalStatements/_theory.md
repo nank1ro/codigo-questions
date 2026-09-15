@@ -4,7 +4,7 @@
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 
@@ -14,7 +14,7 @@ if niceWeather {
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 `if` 文は条件が `true` の場合にのみコードブロックを実行することがわかりました。
@@ -28,9 +28,9 @@ Swiftでは `else` 文を次のように使用できます：
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // 外で遊ぶ
 } else {
-    // stay home
+    // 家にいる
 }
 ```
 

@@ -16,7 +16,7 @@ title: 足し算
 関数呼び出しの例：
 ```dart
 print(addition(1, 2));
-// prints 3
+// 出力: 3
 ```
 
 # --seed--

@@ -16,7 +16,7 @@ difficulty: 1
 関数呼び出しの例：
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# 2を出力する
 ```
 
 # --seed--

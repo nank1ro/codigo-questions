@@ -14,8 +14,8 @@ Kotlinでは任意の式を評価し、`true`または`false`の2つの答えの
 
 ブール値は、その前に`!`を付けることで否定することもできます。例:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // false を出力
+println(!false) // true を出力
 ```
 
 ---
@@ -26,10 +26,10 @@ println(!false) // prints true
 - `||`（_or_）: 演算子の左右のいずれか、または両方の式がtrueの場合にtrueを返します。
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // true を出力
+println(true && false) // false を出力
+println(false && false) // false を出力
+println(true || true) // true を出力
+println(true || false) // true を出力
+println(false || false) // false を出力
 ```

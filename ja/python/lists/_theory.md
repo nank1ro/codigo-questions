@@ -23,13 +23,13 @@ list_name[index]
 リストのインデックスにアクセスする方法は次のとおりです：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # 値 "Jeremiah" を取得する
 ```
 代入はこのように行います：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # 新しい値 "Jordan" を取得する
 ```
 
 ---
@@ -69,9 +69,9 @@ Pythonでは、このようにリストの一部分を指定する場合、最�
 文字列もリストとまったく同じようにスライスできます！実際、文字列は文字のリストと考えることができます：各文字はインデックス`0`から始まるリスト内の連続した要素です。
 ```python
 list_name[:2]
-# Grabs the first two items
+# 最初の2つの項目を取り出す
 list_name[3:]
-# Grabs the fourth through last items
+# 4番目から最後までの項目を取り出す
 ```
 リストスライスにリスト（または文字列）の最初または最後の要素が含まれる場合、その要素のインデックスを省略できます。
 

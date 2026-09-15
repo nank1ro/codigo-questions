@@ -1,6 +1,6 @@
 JavaScriptでは、`+`記号を使って2つ以上の文字列を一緒に表示できます。例えば:
 ```javascript
-console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
+console.log("Hello " + "JavaScript!") // "Hello JavaScript!" を出力
 ```
 
 ---

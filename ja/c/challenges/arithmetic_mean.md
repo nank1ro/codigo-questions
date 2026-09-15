@@ -17,7 +17,7 @@ title: 算術平均
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// 2.0 を出力する
 ```
 
 # --before-seed--

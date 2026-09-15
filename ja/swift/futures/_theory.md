@@ -10,7 +10,7 @@ func fetchNumber() async -> Int {
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// 42 を出力
 ```
 Swiftスクリプトではトップレベルがすでに`await`をサポートしているので、追加のセットアップなしで非同期関数を直接呼び出せます。`async`や`await`を忘れるのはコンパイルエラーであり、見つけにくいバグにはなりません。
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// 10.0 を出力
 ```
 返される値はラッパーではなく普通の`Double`です。`await`が完了すれば、いつも通りに扱えます。
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// 15 を出力
 ```
 `await`は非同期コンテキストの中でのみ許可されます。つまり`async`関数の中か、スクリプトのトップレベルです。普通の非`async`関数は何も`await`できません。
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// could not load を出力
 ```
 キーワードの順序は決まっています。まず`try`、次に`await`です。
 
@@ -144,7 +144,7 @@ let job = Task {
 結果は後で**`.value`**で読み取ります。これはawaitされます:
 ```swift
 print(await job.value)
-// prints 42
+// 42 を出力
 ```
 ハンドルの型は、何を生成し何をスローしうるかを表します。`Task<Int, Never>`は`Int`を返し、決してスローしないタスクです。`async let`と異なり、`Task`は普通の非同期でないコードから作成できます。
 

@@ -41,7 +41,7 @@ int a = 10;
 int b = 4;
 double result = a / b; // 2.5
 
-double exact = 10 / 2; // 5.0  (not 5!)
+double exact = 10 / 2; // 5.0  (5ではない!)
 ```
 
 `/` の結果を格納するには常に `double` 変数を使用してください。
@@ -53,7 +53,7 @@ double exact = 10 / 2; // 5.0  (not 5!)
 ```dart
 int a = 10;
 int b = 3;
-int result = a ~/ b; // 3  (not 3.333...)
+int result = a ~/ b; // 3  (3.333...ではない)
 ```
 
 余りのない整数商が必要な場合は `~/` を使用してください。

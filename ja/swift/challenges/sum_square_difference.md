@@ -16,7 +16,7 @@ title: 二乗の和と和の二乗の差
 関数呼び出しの例:
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// 2640 を出力
 ```
 
 # --before-seed--

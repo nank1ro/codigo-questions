@@ -24,7 +24,7 @@ __[1]__ `List`は_読み取り専用_なので、エラーがスローされま�
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// [1, 3, 5, 7] を出力
 ```
 
 ---
@@ -47,15 +47,15 @@ listName[index]
 リストのインデックスへのアクセス方法は次のとおりです：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// 値 "Jeremiah" を出力
 println(names[0])
 ```
 代入は次のように行います：
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// 新しい値 "Jordan" を代入
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// 値 "Jordan" を出力
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ println(names[0])
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// true を出力
 ```
 
 ---
@@ -83,7 +83,7 @@ println(names.contains("Scarlett"))
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// [a, b, c] を出力
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// [a, b, c, d, e] を出力
 ```
 
 ---
@@ -106,7 +106,7 @@ println(letters)
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// [2, 3] を出力
 ```
 __[1]__：まず、`numbers`という_読み取り専用_リストを作成します。
 __[2]__：次に、`slice`関数を使用してリストの一部を取得し、sliceリストに格納します。
@@ -130,7 +130,7 @@ Kotlinでは`indexOfFirst`メソッドを使用できます：
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// 1 を出力
 ```
 
 `indexOfFirst`メソッドは__述語__関数を受け取り、リスト内の各アイテムに対してtrueになるまで評価され、その要素の_インデックス_を返します。
@@ -139,7 +139,7 @@ println(names.indexOfFirst { it == "Zac"})
 また、`add(index, element)`メソッドを使用して、変更可能なリストの特定のインデックスにアイテムを挿入することもできます：
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// [Trevor, Ali, Zac, Glenn] を出力
 ```
 上記のコードはインデックス`1`に`"Ali"`を挿入し、このインデックス以降のすべての要素を1つ下にずらします
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// 1, 2, 3 を出力
 ```
 `for`キーワードの後に変数名が続き、リストの各アイテムの値が順番に割り当てられます。

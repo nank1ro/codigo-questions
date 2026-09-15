@@ -16,7 +16,7 @@ title: 最大回文積
 関数呼び出しの例:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// 出力: 9009
 ```
 
 # --seed--

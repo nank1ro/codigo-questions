@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// 出力: Cold
 ```
 
 二つの分岐のうち必ずどちらか一方が実行されます。
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// 出力: B
 ```
 
 ---

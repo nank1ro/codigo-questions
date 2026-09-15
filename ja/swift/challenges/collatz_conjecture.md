@@ -22,7 +22,7 @@ title: コラッツの予想
 関数呼び出しの例：
 ```swift
 print(collatzSteps(16))
-// prints 4
+// 4 を出力
 ```
 
 # --before-seed--

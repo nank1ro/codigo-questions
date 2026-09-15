@@ -78,7 +78,7 @@ if __name__ == "__main__":
 ```python
 def smallest_multiple(n):
   def gcd(a, b):
-    return a if b == 0 else gcd(b, a % b) # Euclidean algorithm
+    return a if b == 0 else gcd(b, a % b) # ユークリッドの互除法
 
   def lcm(a, b):
     return a * b / gcd(a, b)

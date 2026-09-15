@@ -64,8 +64,8 @@ print(numbers.every((n) => n > 2)); // false
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // まだ何も計算されていない
+print(doubled.first);                      // 2だけを計算する
 ```
 
 `toList()` がシーケンスを**実体化**します：最初から最後までたどり、すべての結果を実際の `List` に格納します。
@@ -183,7 +183,7 @@ print(numbers); // [1, 2, 3]
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2]、変更なし
 ```
 
 `sort` は**コンパレータ**も受け取れます：2つの要素を取り、最初の要素が2番目より先に来るなら負の数、等しければ `0`、そうでなければ正の数を返す関数です。`compareTo` はまさにそれを返すため、任意のキーでの並べ替えは1行で書けます：
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // StringsからのString
+final letters = words.fold(0, (acc, w) => acc + w.length); // StringsからのInt
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

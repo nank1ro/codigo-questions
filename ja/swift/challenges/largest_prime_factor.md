@@ -16,7 +16,7 @@ title: 最大の素因数
 関数呼び出しの例:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// 29 を出力
 ```
 
 # --before-seed--

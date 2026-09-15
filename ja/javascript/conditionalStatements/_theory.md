@@ -4,7 +4,7 @@
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 `if`文は条件が`true`の場合にのみコードブロックを実行することがわかりました。
@@ -28,9 +28,9 @@ JavaScriptでは`else`文を使うことができます:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 } else {
-    // stay home
+    // 家にいる
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// 10 を出力
 ```
 上記のコードの省略形は次の通りです:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// 10 を出力
 ```
 条件`a < b`がtrueだったため、`c`には`a`が代入されます
 

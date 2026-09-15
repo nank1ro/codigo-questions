@@ -16,7 +16,7 @@ n桁の数同士の積で作れる最大の回文数を求める関数を書い�
 関数呼び出しの例:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// 9009 を出力
 ```
 
 # --before-seed--

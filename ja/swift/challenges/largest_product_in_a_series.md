@@ -16,7 +16,7 @@ title: 数列の最大積
 関数呼び出しの例:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// 5832 を出力
 ```
 
 # --before-seed--

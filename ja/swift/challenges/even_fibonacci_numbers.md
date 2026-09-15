@@ -18,7 +18,7 @@ title: 偶数フィボナッチ数
 関数呼び出しの例:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// 10 を出力
 ```
 
 # --before-seed--

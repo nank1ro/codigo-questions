@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// "Hello!" を出力
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)" を出力
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ console.log(sayHello("Smith", true));
 デフォルト値が定義されている場合、関数を呼び出す際にそのパラメータを省略できます
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // ここで何か処理をする
 }
 ```
 
@@ -54,7 +54,7 @@ __残余パラメータ__構文を使うと、不定数の引数を配列とし�
 
 関数には、関数の動作を説明する_オプションのコメント_を追加できます：
 ```javascript
-// Prints 'Hello World' to the console.
+// コンソールに 'Hello World' を出力する。
 function helloWorld() {
     console.log("Hello, World!");
 }

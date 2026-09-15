@@ -20,7 +20,7 @@ title: バブルソート
 関数呼び出しの例:
 ```dart
 print(bubbleSort([3, 1, 2]));
-// prints [1, 2, 3]
+// 出力: [1, 2, 3]
 ```
 
 # --seed--

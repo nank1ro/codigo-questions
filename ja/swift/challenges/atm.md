@@ -25,7 +25,7 @@ ATMは、Nが5の倍数であり、ジェームズの口座に引き出し取引
 関数呼び出しの例:
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// 9,5 を出力
 ```
 
 # --before-seed--

@@ -16,7 +16,7 @@ n番目の素数を返す関数を書いてください。
 関数呼び出しの例:
 ```swift
 print(nthPrime(6))
-// prints 13
+// 13 を出力
 ```
 
 # --before-seed--

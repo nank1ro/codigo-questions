@@ -7,7 +7,7 @@ var city: String = null // error: Null can not be a value of a non-null type Str
 `String?`は`String`または`null`のどちらかを保持します：
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // 許可される
 println(city) // null
 ```
 `String`と`String?`は2つの異なる型です：`String`は決して欠けることがなく、`String?`は欠ける可能性があります。
@@ -17,9 +17,9 @@ println(city) // null
 `String`と`String?`の違いは、実行時ではなく**コンパイラ**によってチェックされます。
 非null型に`null`を代入することや、非nullの値が期待される場所にnull許容の値を渡すことはコンパイルエラーになるため、プログラムはそもそも開始されません：
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // コンパイルできない
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // コンパイルできない: String? は String ではない
 ```
 これにより、Kotlinは他の言語でよくある「ヌルポインタ」クラッシュを回避できます。値が欠けているのは、`?`で明示的に宣言した場所だけです。
 
@@ -47,12 +47,12 @@ println(none?.length)   // null
 **エルビス演算子**`?:`はまさにそれを行います：左側が`null`でない場合は左側を返し、そうでなければ右側の値を返します：
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown は "Guest" に等しい String
 ```
 右側は左側が`null`の場合にのみ使用されるため、デフォルトが非nullであれば結果も非nullになります。
 `?:`は`?.`と組み合わせると、セーフコールを通常の値に戻すのに便利です：
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len は Int、name が null なら 0
 ```
 
 ---
@@ -62,7 +62,7 @@ val len = name?.length ?: 0 // len is an Int, 0 when name is null
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null、trim() と uppercase() は実行されない
 ```
 `?:`で終わるチェーンは、1行で非nullの結果を得ることができます：
 ```kotlin
@@ -103,7 +103,7 @@ println(none!!.length) // NullPointerException
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name はここでは String
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ fun greet(name: String?): String {
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name はここから String
 }
 ```
 スマートキャストは、チェックと使用の間で値が変わらない`val`変数と関数のパラメータに対して機能します。
@@ -123,9 +123,9 @@ fun greet(name: String?): String {
 セーフコールと組み合わせると、`?.let`は値が`null`でない場合に**のみ**ブロックを実行し、ブロック内の`it`は非nullになります：
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // Sending to ada@example.com を出力
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // 何も起こらない
 ```
 ブロック内で値が必要なだけの場合、`if (x != null) { ... }`のコンパクトな代替手段になります。
 
@@ -213,7 +213,7 @@ println(none.orDash()) // -
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first はここでは Char
 }
 ```
 これまでに見たすべてのツールは上手く組み合わさります：null許容のパラメータと戻り値の型は値が*どこで*欠ける可能性があるかを表し、`?.`、`?:`、`let`、スマートキャスト、`toIntOrNull`は決してクラッシュすることなくそれを処理します。

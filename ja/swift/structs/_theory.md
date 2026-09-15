@@ -77,6 +77,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12、括弧なし
 ```
 計算プロパティは何も格納しないため、メンバーワイズイニシャライザには含まれません。値が他の値から導かれるときは計算プロパティを、処理にパラメータが必要なときはメソッドを使います。

@@ -16,7 +16,7 @@ title: 最小公倍数
 関数呼び出しの例:
 ```dart
 print(smallestMultiple(10));
-// prints 2520
+// 出力: 2520
 ```
 
 # --seed--

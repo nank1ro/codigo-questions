@@ -5,7 +5,7 @@ Swiftでは、`func`キーワードの後に関数名を書いて関数を定義
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // "Hello!" を出力
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)" を出力
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ print(sayHello(name: "Smith", newUser: true))
 デフォルト値が定義されている場合、関数を呼び出すときにそのパラメータを省略できます
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // ここで処理を行う
 }
 ```
 
@@ -62,7 +62,7 @@ _可変長パラメータ_は、指定された型の0個以上の値を受け�
 
 関数には、関数の動作を説明する_オプションのコメント_を追加できます:
 ```swift
-/// Prints 'Hello World' to the console.
+/// 'Hello World' をコンソールに出力する。
 func helloWorld() {
     print("Hello, World!")
 }

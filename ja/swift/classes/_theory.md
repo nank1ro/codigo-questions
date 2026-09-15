@@ -12,10 +12,10 @@ _構造体_と_クラス_は、プログラムコードの構成要素となる�
 基本的なクラスや構造体は、`class`または`struct`キーワードとその名前だけで構成されます。例えば:
 ```swift
 class ClassName {
-    // class definition
+    // クラス定義
 }
 struct ClassName {
-    // structure definition
+    // 構造体定義
 }
 ```
 

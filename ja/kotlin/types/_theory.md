@@ -42,8 +42,8 @@ println(price::class.simpleName) // Double
 `Int`は約20億までの整数を格納できます。正確には`2147483647`である`Int.MAX_VALUE`までです。
 `Int`には大きすぎる整数リテラルは自動的に`Long`と推論され、接尾辞`L`を付ければ任意のリテラルを`Long`にできます：
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long、Int には大きすぎる
+val small = 3L        // Long、サフィックスのおかげで
 ```
 同様に、接尾辞`f`を付けると小数リテラルが`Float`になります。`val ratio = 0.5f`のようになります。
 桁数の多い数値は読みにくいため、Kotlinでは桁と桁の間の任意の場所にアンダースコア`_`を置けます。アンダースコアはコンパイラに無視されます：
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null、整数ではない
+println(" 42".toIntOrNull())  // null、空白は許可されない
 println("abc".toIntOrNull())  // null
 ```
 小数のテキストには`toDoubleOrNull()`を使います。これは`"3.5"`を受け入れ、同じように`Double?`を返します。
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 チェックが通ると、コンパイラは値を**スマートキャスト**します。`if`の中（または`when`の分岐の中）では、変換なしでその型として使えます：
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43、ここでは value は Int
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

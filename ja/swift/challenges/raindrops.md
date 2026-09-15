@@ -30,7 +30,7 @@ title: 雨粒
 関数呼び出しの例:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// "Plong" を出力
 ```
 
 # --before-seed--

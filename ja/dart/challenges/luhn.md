@@ -27,7 +27,7 @@ Luhnアルゴリズムは、クレジットカード番号などの識別番号�
 関数呼び出しの例：
 ```dart
 print(isValid("095 245 88"));
-// prints true
+// 出力: true
 ```
 
 # --seed--

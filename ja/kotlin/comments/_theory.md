@@ -2,7 +2,7 @@
 
 最もシンプルなコメントは**1行コメント**です。`//`で始まり、行の終わりまで続きます。
 ```kotlin
-// Greets the user
+// ユーザーに挨拶する
 println("Hello")
 ```
 コメントは、コードが何のためのものか、なぜそのように書かれたのかを説明するために使います。
@@ -11,7 +11,7 @@ println("Hello")
 
 コメントは独立した行である必要はなく、同じ行のコードの後ろに置けます。これは**行末コメント**と呼ばれ、その文についての短いメモを書くのに適した場所です:
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // 3回試したら諦める
 ```
 `//`から行の終わりまではすべて無視され、手前のコードは通常どおり実行されます。
 
@@ -23,7 +23,7 @@ val retries = 3 // give up after three attempts
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // 10 を出力
 ```
 2行目は今やコメントなので、`total` は `10` のままです。`//` を取り除けば、その行は再び有効になります。
 
@@ -45,8 +45,8 @@ println("Welcome!")
 
 `//`は行の終わりで止まりますが、`/*` コメントは `*/` に達するまで止まりません。閉じるのを忘れると、コンパイラはその後のすべてのコードをコメントの一部として扱い、エラーを報告します:
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* センチメートル単位
+println(width) // まだコメントの中: エラー、コメントが閉じられていない
 ```
 `//`と `/* */` はどちらも行末コメントとして使えますが、`/*` の場合は `*/` があることを必ず確認してください。
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // 100 を出力
 ```
 ネストのおかげで、その中の行にすでに `/* */` コメントが含まれていても機能します。
 
@@ -159,7 +159,7 @@ println("50 // 2") // prints 50 // 2
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: 設定から limit を読み込む
 ```
 コンパイラにとってそれらは普通のコメントですが、IntelliJ IDEAは専用のツールウィンドウに集めるので、残っている作業を見つけやすくなります。`TODO` は通常、本物の実装が書かれるまでコードをコンパイル可能に保つプレースホルダーの隣に置かれます。作業を終えたら、同じ変更の中でプレースホルダーを置き換え、マーカーを取り除いてください。そうすれば、コメントがコードの状態について嘘をつくことはありません。
 
@@ -171,12 +171,12 @@ val limit = 10
 
 良いコメントは、コードが**何を**しているのかではなく、**なぜ**そうしているのかを説明します。コードは何が起きるかをすでに示しています。それを言葉で繰り返すのはノイズを増やすだけで、コードが変わるとすぐに古くなります:
 ```kotlin
-// set timeout to 30
+// timeout を 30 に設定する
 val timeout = 30
 ```
 その数の背後にある理由こそ、読む人には推測できないものです:
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// サーバーは35秒後にアイドル接続を切断するため、それより早く止める
 val timeout = 30
 ```
 コメントがその下の行を言い換えているだけなら、削除するか理由に置き換えてください。最良のコメントは、コードでは語れないことを語るものです。

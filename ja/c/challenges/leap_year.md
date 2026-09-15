@@ -18,7 +18,7 @@ title: うるう年
 関数呼び出しの例:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// true を出力する
 ```
 
 # --before-seed--

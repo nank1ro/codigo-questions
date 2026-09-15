@@ -16,7 +16,7 @@ title: 連続する数字の最大積
 関数呼び出しの例:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// 出力: 5832
 ```
 
 # --seed--

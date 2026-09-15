@@ -18,7 +18,7 @@ title: うるう年
 関数呼び出しの例：
 ```dart
 print(leapYear(2000));
-// prints true
+// 出力: true
 ```
 
 # --seed--

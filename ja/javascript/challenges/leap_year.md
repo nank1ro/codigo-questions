@@ -18,7 +18,7 @@ title: うるう年
 関数呼び出しの例：
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// true を出力
 ```
 
 # --before-seed--
