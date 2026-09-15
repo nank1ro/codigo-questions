@@ -84,9 +84,9 @@ class PrimeSeive {
 
     for (let i = 0; i <= sqrtUpper; i++) {
       if (seive[i]) {
-        // Mark value in seive array
+        // Marca o valor no array seive
         const prime = 2 * i + 3;
-        // Mark all multiples of this number as false (not prime)
+        // Marca todos os múltiplos deste número como false (não primo)
         const primeSqaredIndex = 2 * i ** 2 + 6 * i + 3;
         for (let j = primeSqaredIndex; j < upper; j += prime) {
           seive[j] = false;

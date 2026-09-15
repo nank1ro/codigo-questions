@@ -154,5 +154,5 @@ Se você precisar de várias instruções, mais de dois `for` aninhados, ou a li
 Uma comprehension também substitui a maioria dos usos de `map()` e `filter()` com lambdas:
 ```python
 doubled = list(map(lambda n: n * 2, nums))
-doubled = [n * 2 for n in nums]  # same result, easier to read
+doubled = [n * 2 for n in nums]  # mesmo resultado, mais fácil de ler
 ```

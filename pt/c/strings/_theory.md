@@ -7,7 +7,7 @@ O compilador conta os caracteres e adiciona o `'\0'` no final para você.
 Para exibir uma string, use o especificador `%s`:
 ```c
 printf("%s\n", name);
-// prints "Codigo"
+// imprime "Codigo"
 ```
 
 ---
@@ -15,7 +15,7 @@ printf("%s\n", name);
 O terminador nulo ocupa espaço em memória: o literal `"hi"` ocupa 3 bytes, `'h'`, `'i'` e `'\0'`.
 Quando você mesmo declara o tamanho, sempre deixe espaço para ele:
 ```c
-char word[6] = "hello"; // 5 letters + '\0'
+char word[6] = "hello"; // 5 letras + '\0'
 ```
 Sem o terminador, o C não tem como saber onde a string termina.
 
@@ -39,7 +39,7 @@ word[5]; // 'g'
 ```
 Um único caractere é exibido com `%c`. Os caracteres também podem ser substituídos:
 ```c
-word[0] = 'K'; // word is now "Koding"
+word[0] = 'K'; // word agora é "Koding"
 ```
 
 ---
@@ -56,7 +56,7 @@ for (int i = 0; text[i] != '\0'; i++) {
 Um array não pode receber uma atribuição com `=` após sua declaração:
 ```c
 char copy[20];
-copy = "Codigo"; // error
+copy = "Codigo"; // erro
 ```
 Para copiar uma string, use `strcpy(destination, source)` de `string.h`.
 O destino deve ser grande o suficiente para conter todos os caracteres mais o `'\0'`.
@@ -67,7 +67,7 @@ O destino deve ser grande o suficiente para conter todos os caracteres mais o `'
 ```c
 char text[20] = "Hello";
 strcat(text, " World");
-// text is now "Hello World"
+// text agora é "Hello World"
 ```
 Assim como em `strcpy`, o array de destino deve ter espaço suficiente para o resultado.
 
@@ -77,7 +77,7 @@ Duas strings não podem ser comparadas com `==`: isso compararia seus endereços
 Use `strcmp(first, second)`, que retorna `0` quando as duas strings contêm exatamente os mesmos caracteres:
 ```c
 strcmp("cat", "cat"); // 0
-strcmp("cat", "dog"); // not 0
+strcmp("cat", "dog"); // não 0
 ```
 
 ---
@@ -85,8 +85,8 @@ strcmp("cat", "dog"); // not 0
 `strcmp` compara as strings caractere por caractere usando seus códigos de caractere.
 O resultado é negativo quando a primeira string vem antes da segunda, positivo quando vem depois, e `0` quando são iguais:
 ```c
-strcmp("a", "b"); // negative
-strcmp("b", "a"); // positive
+strcmp("a", "b"); // negativo
+strcmp("b", "a"); // positivo
 ```
 
 ---
@@ -96,7 +96,7 @@ Se `source` for mais longa que `n`, nenhum `'\0'` é escrito: você precisa term
 ```c
 char prefix[10];
 strncpy(prefix, "Codigo", 3);
-prefix[3] = '\0'; // prefix is "Cod"
+prefix[3] = '\0'; // prefix é "Cod"
 ```
 
 ---
@@ -120,7 +120,7 @@ text[i] = toupper(text[i]);
 `sprintf` funciona como `printf`, mas escreve o texto formatado em um array de caracteres em vez de exibi-lo na tela:
 ```c
 char buffer[30];
-sprintf(buffer, "%d items", 3); // buffer is "3 items"
+sprintf(buffer, "%d items", 3); // buffer é "3 items"
 ```
 O buffer deve ser grande o suficiente para todo o texto e seu `'\0'`.
 

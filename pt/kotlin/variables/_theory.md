@@ -11,7 +11,7 @@ var x = 1
 Dessa forma, atribuímos o valor `1` à variável chamada `x`.
 Se imprimirmos a variável `x`, obtemos o número `1`:
 ```kotlin
-println(x) // prints 1
+println(x) // imprime 1
 ```
 
 ---
@@ -20,9 +20,9 @@ Variáveis são chamadas assim porque o valor que armazenam pode mudar.
 Podemos atualizar `x` usando `=` e atribuindo um novo valor.
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // imprime 1
 x = 2
-println(x) // prints 2
+println(x) // imprime 2
 ```
 
 ---
@@ -31,7 +31,7 @@ Também podemos atribuir a variáveis os valores de outras variáveis. Aqui, pod
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // imprime 5
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 Quando atualizamos uma variável, ela esquece seu valor anterior. Aqui podemos exibir a variável `x` duas vezes e ver como seu valor é atualizado.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // imprime 5
 x = 10
-println(x) // prints 10
+println(x) // imprime 10
 ```
 
 ---

@@ -12,7 +12,7 @@ struct Point p = {3, 4}; // x is 3, y is 4
 ```
 Os membros são lidos e escritos com o operador **ponto** `.`:
 ```c
-printf("%d\n", p.x); // prints "3"
+printf("%d\n", p.x); // imprime "3"
 p.y = 10;
 ```
 
@@ -67,7 +67,7 @@ typedef struct {
 A struct interna é inicializada com seu próprio par de chaves, e seus membros são acessados encadeando o operador ponto:
 ```c
 Segment s = {{1, 2}, {5, 2}};
-printf("%d\n", s.end.x); // prints "5"
+printf("%d\n", s.end.x); // imprime "5"
 ```
 
 ---
@@ -101,7 +101,7 @@ int count_free(Item items[], int size) {
 Quando uma struct é passada para uma função **por valor**, a função recebe uma **cópia** dela. Alterar um membro do parâmetro altera apenas a cópia, e a variável de quem chamou permanece como estava:
 ```c
 void reset(Point p) {
-    p.x = 0; // changes the copy
+    p.x = 0; // muda a cópia
 }
 ```
 Para permitir que uma função modifique a struct de quem chamou, passe seu **endereço** com `&` e declare o parâmetro como um **ponteiro**, `Point *p`. O ponteiro se refere à variável original em vez de uma cópia:

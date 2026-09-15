@@ -9,7 +9,7 @@ Os nós são ligados armazenando o endereço de um no `next` do outro, e os memb
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // imprime "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ Adicionar um nó no **início** o cria, faz ele apontar para a cabeça atual e o
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // a lista agora é 8, 7
 ```
 Inserir em uma lista vazia funciona da mesma forma: o novo nó aponta para `NULL` e se torna a lista inteira.
 

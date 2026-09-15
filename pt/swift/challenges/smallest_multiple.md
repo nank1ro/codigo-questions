@@ -16,7 +16,7 @@ Escreva uma função que retorne o menor número positivo que é divisível por 
 Exemplo de chamada da função:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// imprime 2520
 ```
 
 # --before-seed--

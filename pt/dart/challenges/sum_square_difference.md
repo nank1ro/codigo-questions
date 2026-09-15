@@ -20,7 +20,7 @@ Escreva uma função que retorna a diferença entre o quadrado da soma e a soma 
 Exemplo de chamada de função:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// imprime 2640
 ```
 
 # --seed--

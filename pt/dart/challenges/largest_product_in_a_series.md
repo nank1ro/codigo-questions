@@ -16,7 +16,7 @@ Escreva uma função que encontra os `n` dígitos adjacentes no número de 1000 
 Exemplo de chamada de função:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// imprime 5832
 ```
 
 # --seed--

@@ -6,7 +6,7 @@ Os **operadores bit a bit** trabalham nesses bits individuais em vez de no núme
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// imprime "8"
 ```
 Padrões de bits geralmente são escritos como literais hexadecimais como `0x0C`, porque cada dígito hexadecimal representa exatamente quatro bits. Sempre use tipos `unsigned` para trabalhar com bits e exiba-os com `%u`.
 
@@ -19,7 +19,7 @@ O operador **OR** `|` compara os dois valores bit por bit e mantém um `1` onde 
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// imprime "14"
 ```
 `|` é a maneira usual de mesclar dois padrões de bits em um só.
 
@@ -32,7 +32,7 @@ O operador **XOR** `^` (ou exclusivo) mantém um `1` apenas onde os dois bits s�
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// imprime "6"
 ```
 Uma propriedade útil decorre disso: aplicar o mesmo XOR duas vezes devolve o valor original.
 
@@ -42,7 +42,7 @@ O operador **NOT** `~` recebe um único operando e inverte todos os seus bits: c
 Um `unsigned int` possui 32 bits, então `~0x0Fu` inverte todos os 32 e produz um número muito grande. Para manter apenas o byte de que você precisa, combine `~` com `& 0xFF`:
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// imprime "240"
 ```
 `~` tem precedência maior que `&`, então é aplicado primeiro.
 Não confunda `~` com o `!` lógico: `!` olha para o valor como um todo e responde `0` ou `1`, enquanto `~` reescreve cada bit.
@@ -55,7 +55,7 @@ O operador **left shift** `<<` move cada bit um número de casas para a esquerda
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// imprime "12"
 ```
 Deslocar à esquerda por `n` multiplica o valor por 2 elevado a `n`.
 Dois erros tornam um programa C indefinido: deslocar à esquerda um valor negativo e deslocar por uma quantidade igual ou maior que a largura do tipo (32 para `unsigned int`). Trabalhar com valores **unsigned** mantém você longe do primeiro.
@@ -68,7 +68,7 @@ O operador **right shift** `>>` move cada bit para a direita; os bits que caem n
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// imprime "3"
 ```
 Deslocar à direita por `n` divide um valor unsigned por 2 elevado a `n`, descartando o resto.
 Deslocar à direita um valor *negativo* não é portátil, o que é mais uma razão para manter o trabalho com bits em tipos `unsigned`.
@@ -78,11 +78,11 @@ Deslocar à direita um valor *negativo* não é portátil, o que é mais uma raz
 Cada operador bit a bit binário tem uma forma de **atribuição composta** que atualiza uma variável no próprio lugar: `&=`, `|=`, `^=`, `<<=` e `>>=`.
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // é igual a x = x & 10;
+x |= 1;   // é igual a x = x | 1;
+x ^= 3;   // é igual a x = x ^ 3;
+x <<= 1;  // é igual a x = x << 1;
+x >>= 2;  // é igual a x = x >> 2;
 ```
 Eles ficam mais legíveis do que repetir o nome da variável e são a maneira usual de alterar os bits de uma variável de flags.
 
@@ -95,7 +95,7 @@ Uma **máscara** é um valor cujos bits selecionam a parte de outro valor de que
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// imprime "11"
 ```
 `0x0F` mantém os quatro bits mais baixos, chamados de **nibble** baixo, e `0xFF` mantém os oito bits mais baixos, um byte inteiro.
 
@@ -107,7 +107,7 @@ Para **definir** um único bit, ou seja, ligá-lo sem tocar nos outros, faça o 
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// imprime "6"
 ```
 Se o bit já estava ligado, o valor não muda, o que torna seguro repetir a definição de um bit.
 
@@ -118,7 +118,7 @@ Para **limpar** um único bit, ou seja, desligá-lo, faça o AND do valor com o 
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// imprime "5"
 ```
 `~(1u << 1)` é um valor com todos os bits ligados, exceto o bit `1`, então o AND mantém todo o resto intacto.
 
@@ -129,7 +129,7 @@ Para **alternar** um único bit, ou seja, invertê-lo independentemente do seu e
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// imprime "7"
 ```
 Como o XOR se desfaz a si mesmo, alternar o mesmo bit uma segunda vez devolve o valor original.
 
@@ -138,8 +138,8 @@ Como o XOR se desfaz a si mesmo, alternar o mesmo bit uma segunda vez devolve o 
 Para **testar** um único bit, faça o AND do valor com a máscara e verifique se o resultado é diferente de `0`:
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // imprime "1"
+printf("%d\n", (value & (1u << 2)) != 0); // imprime "0"
 ```
 O AND não produz `1`: ele produz `0` ou a própria máscara, que para o bit `3` é `8`. É por isso que o resultado é comparado com `!= 0` em vez de ser usado como resposta direta.
 
@@ -150,7 +150,7 @@ O AND não produz `1`: ele produz `0` ou a própria máscara, que para o bit `3`
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// imprime "1"
 ```
 Um único `unsigned int` pode, portanto, carregar 32 respostas sim/não independentes.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// imprime "0101"
 ```
 Deslocar o valor para baixo por `i` traz o bit `i` para a posição mais à direita, onde `& 1u` o isola.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count é 2
 ```
 O loop sempre termina, porque um valor unsigned deslocado à direita tempo suficiente se torna `0`.
 
@@ -186,6 +186,6 @@ Vários números pequenos geralmente são empacotados dentro de um valor maior. 
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// imprime "18", o byte 0x12
 ```
 Deslocar primeiro e aplicar a máscara depois é a ordem a lembrar: a máscara sempre descreve o campo depois que ele chegou ao fundo.

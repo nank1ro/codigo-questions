@@ -4,7 +4,7 @@ Em programacao, podemos salvar uma variavel booleana `nice_weather` e executar a
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # brincar lá fora
 ```
 
 ---
@@ -13,7 +13,7 @@ Vamos continuar com o exemplo anterior.
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # brincar lá fora
 ```
 Vimos que a instrucao `if` executa o bloco de codigo apenas se a condicao for `True`.
 Outra coisa importante a considerar e representada pelos **dois pontos** `:` e pela **indentacao**, que indicam o inicio de um bloco de codigo.
@@ -30,9 +30,9 @@ Em Python podemos usar a instrucao `else`, assim:
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # brincar lá fora
 else:
-    # stay home
+    # ficar em casa
 ```
 
 ---

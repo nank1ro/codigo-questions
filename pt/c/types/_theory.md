@@ -10,7 +10,7 @@ int age = 30;
 double height = 1.75;
 char initial = 'A';
 printf("%d %f %c\n", age, height, initial);
-// prints "30 1.750000 A"
+// imprime "30 1.750000 A"
 ```
 Usar o especificador errado para um tipo imprime lixo, então sempre combine-os corretamente.
 
@@ -35,8 +35,8 @@ double half(double x) {
 `%f` imprime seis casas decimais, o que raramente é o que você quer. Coloque uma precisão entre `%` e `f` para escolher quantas casas decimais mostrar: `%.2f` imprime duas casas decimais, `%.1f` imprime uma, e o valor é **arredondado**, não cortado:
 ```c
 double price = 9.987;
-printf("%.2f\n", price); // prints "9.99"
-printf("%.1f\n", price); // prints "10.0"
+printf("%.2f\n", price); // imprime "9.99"
+printf("%.1f\n", price); // imprime "10.0"
 ```
 Um `float` é impresso com os mesmos especificadores que um `double`: quando passado para `printf`, ele é convertido automaticamente para `double`.
 
@@ -46,8 +46,8 @@ O resultado de `/` depende dos tipos de seus operandos.
 Quando **ambos** os operandos são inteiros, o resultado é um inteiro e a parte decimal é descartada: `7 / 2` é `3`, não `3.5`.
 Quando **pelo menos um** operando é um valor de ponto flutuante, a divisão mantém as casas decimais: `7 / 2.0` é `3.5`.
 ```c
-printf("%d\n", 7 / 2);     // prints "3"
-printf("%f\n", 7 / 2.0);   // prints "3.500000"
+printf("%d\n", 7 / 2);     // imprime "3"
+printf("%f\n", 7 / 2.0);   // imprime "3.500000"
 ```
 Escrever o literal como `2.0` em vez de `2` é a forma mais simples de forçar uma divisão de ponto flutuante.
 
@@ -93,7 +93,7 @@ Um `char` é, na verdade, um pequeno inteiro: ele armazena o **código ASCII** d
 O mesmo valor pode ser impresso como um caractere com `%c` ou como um número com `%d`:
 ```c
 char c = 'A';
-printf("%c %d\n", c, c); // prints "A 65"
+printf("%c %d\n", c, c); // imprime "A 65"
 ```
 
 ---
@@ -115,7 +115,7 @@ Um literal que deve ser `long` recebe o sufixo `L`, um `unsigned` recebe o sufix
 ```c
 long population = 8000000000L;
 unsigned int count = 40U;
-printf("%ld %u\n", population, count); // prints "8000000000 40"
+printf("%ld %u\n", population, count); // imprime "8000000000 40"
 ```
 `%ld` imprime um `long`, `%u` um `unsigned int` e `%lu` um `unsigned long`. Um `int` simples, na maioria dos sistemas, comporta valores de até cerca de 2 bilhões, então `5000000000` não cabe nele.
 
@@ -123,7 +123,7 @@ printf("%ld %u\n", population, count); // prints "8000000000 40"
 
 O operador `sizeof` informa quantos **bytes** um tipo ou uma variável ocupa. Seu resultado tem o tipo `size_t`, que é impresso com `%zu`:
 ```c
-printf("%zu\n", sizeof(int));  // prints "4" on most systems
+printf("%zu\n", sizeof(int));  // imprime "4" na maioria dos sistemas
 ```
 O padrão garante apenas que `sizeof(char)` é `1` e que `short <= int <= long`, mas em um sistema típico de 64 bits os tamanhos são: `char` 1, `short` 2, `int` 4, `long` 8, `float` 4, `double` 8.
 `sizeof` é frequentemente usado para verificar quanta memória uma variável ocupa sem fixar o número no código.
@@ -134,11 +134,11 @@ Todo tipo inteiro tem um intervalo limitado, e o cabeçalho `limits.h` dá um no
 ```c
 #include <limits.h>
 
-printf("%d\n", INT_MAX); // prints "2147483647" on most systems
+printf("%d\n", INT_MAX); // imprime "2147483647" na maioria dos sistemas
 ```
 Ultrapassar `INT_MAX` com um tipo com sinal é **comportamento indefinido**: o programa pode dar a volta, travar, ou fazer qualquer outra coisa. Verifique antes de calcular:
 ```c
-if (a <= INT_MAX - b) { /* a + b is safe */ }
+if (a <= INT_MAX - b) { /* a + b é seguro */ }
 ```
 Observe que a verificação subtrai em vez de somar, porque o próprio `a + b` já poderia estourar.
 
@@ -149,7 +149,7 @@ Somar `1` a `UINT_MAX` dá `0`, e subtrair `1` de `0` dá `UINT_MAX` (`429496729
 ```c
 unsigned int n = UINT_MAX;
 n = n + 1;
-printf("%u\n", n); // prints "0"
+printf("%u\n", n); // imprime "0"
 ```
 É por isso que um loop que decrementa uma variável `unsigned` "até ficar negativa" nunca para: um valor unsigned nunca fica abaixo de `0`.
 
@@ -160,8 +160,8 @@ Um `bool` é um tipo inteiro com apenas dois valores, então converter qualquer 
 ```c
 #include <stdbool.h>
 
-bool b = 0.5;  // true, because 0.5 is not zero
-int n = 0.5;   // 0, because the decimals are truncated
+bool b = 0.5;  // true, porque 0.5 não é zero
+int n = 0.5;   // 0, porque os decimais são truncados
 ```
 Comparações como `x != 0` já produzem um resultado compatível com `bool`, e uma função que retorna `bool` documenta que ela responde a uma pergunta de sim ou não.
 
@@ -172,7 +172,7 @@ Assim, `long big = n * n;` com um `n` do tipo `int` multiplica dois valores `int
 Faça o cast de um operando **antes** da operação para calcular no tipo mais amplo:
 ```c
 int n = 100000;
-long big = (long) n * n; // 10000000000, computed as long
+long big = (long) n * n; // 10000000000, calculado como long
 ```
 A mesma regra explica por que `(double) total / count` funciona: o cast muda o tipo do operando, e a divisão segue esse tipo.
 

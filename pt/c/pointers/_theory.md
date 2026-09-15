@@ -1,12 +1,12 @@
 Toda variável vive em algum lugar da memória, e esse lugar tem um número chamado **endereço**. O operador `&`, lido como "endereço de", dá o endereço de uma variável:
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // imprime algo como 0x7ffd5c3e9a4c
 ```
 O especificador `%p` imprime um endereço; o número exato muda de uma execução para outra, então programas nunca dependem dele.
 Um endereço é armazenado em uma variável **ponteiro**. Um ponteiro é declarado com o tipo para o qual ele aponta seguido de `*`:
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p é um ponteiro para int, e guarda o endereço de x
 ```
 Diz-se que `p` agora **aponta para** `x`. Dois ponteiros são iguais quando guardam o mesmo endereço, então `p == &x` é verdadeiro.
 
@@ -16,7 +16,7 @@ Um ponteiro por si só é apenas um endereço. Para ler o valor armazenado naque
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // imprime "42"
 ```
 `*p` significa "o valor para o qual `p` aponta", e é um `int` como o próprio `x`. O mesmo símbolo `*` tem dois papéis: em uma declaração `int *p` ele diz "isto é um ponteiro", em uma expressão `*p` ele segue o ponteiro até o valor.
 
@@ -27,7 +27,7 @@ Um ponteiro desreferenciado também pode ser **atribuído**. Escrever em `*p` ar
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // imprime "10"
 ```
 `x` e `*p` são dois nomes para a mesma memória. Atribuir a `p` sem o `*` mudaria, em vez disso, **qual endereço** o ponteiro guarda, não o valor armazenado nele.
 
@@ -51,7 +51,7 @@ Um ponteiro pode apontar para qualquer tipo: `double *`, `char *`, `bool *` e as
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price agora é 19.0
 ```
 Um ponteiro deve corresponder ao tipo da variável para a qual aponta; `int *p = &price;` é rejeitado pelo compilador. `NULL` é o único valor que serve para um ponteiro de qualquer tipo.
 
@@ -62,7 +62,7 @@ Um ponteiro para `char` funciona como qualquer outro ponteiro: ele guarda o ende
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // imprime "A"
 ```
 Ler por meio de um ponteiro e escrever por meio dele podem ser misturados livremente: `*p = *p + 1` transforma `'A'` em `'B'`.
 
@@ -70,9 +70,9 @@ Ler por meio de um ponteiro e escrever por meio dele podem ser misturados livrem
 
 Um ponteiro armazena um endereço, e todo endereço tem o mesmo tamanho em uma determinada máquina, não importa qual tipo esteja armazenado nele. O `sizeof` de um ponteiro é, portanto, o mesmo para `char *`, `int *` e `double *`: `8` bytes em um sistema de 64 bits, `4` em um de 32 bits:
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // imprime "8" em 64 bits
+printf("%zu\n", sizeof(double)); // imprime "8"
+printf("%zu\n", sizeof(char));   // imprime "1"
 ```
 Não confunda o tamanho do ponteiro com o tamanho daquilo para o que ele aponta: `sizeof(p)` é o tamanho do endereço, `sizeof(*p)` é o tamanho do valor.
 
@@ -81,7 +81,7 @@ Não confunda o tamanho do ponteiro com o tamanho daquilo para o que ele aponta:
 Um nome de array usado em uma expressão dá o endereço de seu **primeiro elemento**, então ele pode ser atribuído a um ponteiro diretamente:
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // é igual a &numbers[0]
 ```
 Somar um inteiro a um ponteiro o move para frente por esse número de **elementos**, não bytes: `p + 1` é o endereço de `numbers[1]`, e `*(p + 1)` é `20`. O compilador escala o passo pelo tamanho do tipo.
 A indexação funciona em ponteiros também: `p[i]` é definido como `*(p + i)`, então `p[2]` é `30`. Isso é chamado de **aritmética de ponteiros**.
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter agora é 0
 ```
 O exemplo clássico é trocar duas variáveis, o que precisa de uma cópia temporária de um valor enquanto o outro é sobrescrito.
 
@@ -159,8 +159,8 @@ Quem chama então lê os membros por meio do ponteiro retornado com `->`, depois
 
 `const` pode proteger tanto o valor quanto o ponteiro, dependendo de onde é escrito:
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // ponteiro para const: *p não pode ser alterado, p pode apontar para outro lugar
+int *const q = &a; // ponteiro constante: q sempre aponta para a, mas *q pode ser alterado
 ```
 Leia a declaração da direita para a esquerda: `p` é um ponteiro para um `int` constante; `q` é um ponteiro constante para um `int`. Um ponteiro para const é a maneira usual de prometer que uma função apenas **lê** o que recebe, como em `int sum(const int *values, int size)`. Uma variável normal pode ser passada para ela; a promessa limita apenas o que a função pode fazer.
 

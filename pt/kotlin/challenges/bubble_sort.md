@@ -20,7 +20,7 @@ A sua função também deve funcionar com um array vazio, um array com um único
 Exemplo de chamada de função:
 ```kotlin
 println(bubbleSort(listOf(3, 1, 2)))
-// prints [1, 2, 3]
+// imprime [1, 2, 3]
 ```
 
 # --seed--

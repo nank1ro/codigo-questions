@@ -64,8 +64,8 @@ Em uma coleção vazia `any` é `false` e `every` é `true`: não há elemento p
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // nada calculado ainda
+print(doubled.first);                      // calcula apenas 2
 ```
 
 `toList()` é o que **materializa** a sequência: ele a percorre do começo ao fim e armazena cada resultado em uma `List` de verdade.
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // String a partir de Strings
+final letters = words.fold(0, (acc, w) => acc + w.length); // int a partir de Strings
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

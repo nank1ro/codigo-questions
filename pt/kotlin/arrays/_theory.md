@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// imprime x, depois y
 ```
 
 ---
@@ -84,7 +84,7 @@ Arrays podem ser ordenados **no local** (in place) ou copiados para uma nova col
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
 nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums ainda é [1, 2, 3]
 ```
 
 ---
@@ -107,7 +107,7 @@ Expressões como `nums + 4` não fazem `nums` crescer, elas constroem um array t
 ```kotlin
 val nums = arrayOf(1, 2, 3)
 nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+val bigger = nums + 4    // novo array [9, 2, 3, 4], nums ainda tem 3 elementos
 ```
 Prefira uma `MutableList` quando o número de elementos muda ao longo do tempo, e um array quando ele é conhecido de antemão ou quando você precisa de desempenho com tipos primitivos.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// ambos imprimem 0 -> cat, depois 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, listas comparam seus elementos
 ```
 
 ---

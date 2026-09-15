@@ -52,7 +52,7 @@ Neste caso, o valor `through` e incluido
 Em Swift tambem temos o loop `forEach`.
 Na verdade, `forEach` chama a closure fornecida em cada elemento da sequencia na mesma ordem que um loop `for-in`:
 ```swift
-// this is an array, we'll see about that soon
+// isso é um array, veremos isso em breve
 let numbers: [Int] = [1, 3, 5, 7, 9]
 numbers.forEach { num in
     print(num)

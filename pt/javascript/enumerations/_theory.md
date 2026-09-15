@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// imprime red
 ```
 Por convenção, o objeto é declarado com `const`, seu nome começa com letra maiúscula e os nomes dos membros são escritos em `UPPER_CASE`, exatamente como as outras constantes.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// imprime done
 ```
 Uma vez congelado, o objeto também não pode receber novas propriedades, e `Object.isFrozen(obj)` informa se um objeto foi congelado:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// imprime true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// imprime s
 console.log(Size.MEDIUM);
-// prints undefined
+// imprime undefined
 ```
 De qualquer forma, a enumeração mantém os valores que você definiu, que é exatamente o que se espera de um conjunto de constantes.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// imprime true
 ```
 A contrapartida é a legibilidade: imprimir `Priority.HIGH` mostra `3`, o que informa muito menos do que a string `"high"` informaria.
 
@@ -70,14 +70,14 @@ Como uma enumeração é apenas um objeto, os utilitários de objeto de sempre p
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// imprime [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// imprime [ 'red', 'blue' ]
 ```
 Combinar `Object.values()` com o método de array `includes()` é a forma padrão de verificar se um valor arbitrário, por exemplo um lido da entrada do usuário, é um membro válido:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// imprime true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// imprime false
 ```

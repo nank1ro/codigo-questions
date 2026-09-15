@@ -49,7 +49,7 @@ Chamar uma função corrotina não é suficiente para executá-la. A chamada ape
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # nada é impresso
 ```
 Python até emite um aviso sobre isso: `RuntimeWarning: coroutine 'hello' was never awaited`. Um `await` esquecido é o bug assíncrono mais comum: o código parece chamado, mas nunca executa, e qualquer variável que deveria guardar o seu resultado guarda em vez disso um objeto de corrotina.
 
@@ -60,7 +60,7 @@ Corrotinas chamam umas às outras com `await`. Uma corrotina pode aguardar qualq
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # simula uma busca lenta
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # imprime uma linha vazia
 ```
 Uma exceção que ninguém captura se propaga por cada `await` até o `asyncio.run`, que a relança no código síncrono, exatamente como uma pilha de chamadas normal.
 

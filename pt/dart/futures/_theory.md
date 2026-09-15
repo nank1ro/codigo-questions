@@ -69,8 +69,8 @@ Future<int> count() async {
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>, desembrulhado para int
+  Future<int> f = count();  // sem await: ainda é um Future<int>
 }
 ```
 
@@ -138,7 +138,7 @@ Um future também pode concluir com um **erro**. Quando uma função `async` lan
 ```dart
 Future<int> parseLater(String s) async {
   await Future.delayed(const Duration(milliseconds: 5));
-  return int.parse(s); // throws FormatException for 'abc'
+  return int.parse(s); // lança FormatException para 'abc'
 }
 
 Future<int> orZero(String s) async {
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // os dois timers começam agora
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // espera uma vez, cerca de 20 ms no total
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // lança aqui, loadTwice também falha
+  return n * 2;             // nunca roda
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // quem chamou vê o erro original
   }
 }
 ```

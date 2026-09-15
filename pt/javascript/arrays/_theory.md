@@ -23,15 +23,15 @@ Ele pode ser usado para acessar e também para atribuir valores.
 Você viu como acessar um índice de array assim:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// Imprime o valor "Jeremiah"
 console.log(names[0]);
 ```
 É assim que uma atribuição funciona:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// Atribui o novo valor "Jordan"
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// Imprime o valor "Jordan"
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ Para adicionar um item a um array usamos a função `push`:
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// Imprime ["a", "b", "c"]
 ```
 
 ---
@@ -60,7 +60,7 @@ Considere o seguinte código:
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// imprime [2, 3]
 ```
 Primeiro, criamos um array chamado `numbers`.
 Depois, pegamos uma subseção do array e a armazenamos no array slice.
@@ -71,9 +71,9 @@ Tenha em mente que o índice da direita é excluído
 
 Em JavaScript podemos fatiar um array como quisermos!
 ```javascript
-// Grabs the first two items
+// Pega os dois primeiros itens
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// Pega do quarto item até o último
 listName.slice(3);
 ```
 Se o seu fatiamento de array incluir o primeiro ou o último item de um array, o índice desse item não precisa ser incluído
@@ -94,13 +94,13 @@ Em JavaScript podemos usar o método `indexOf()`:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// imprime 1
 ```
 O código acima imprime o primeiro índice que contém a string `"Zac"`, `1` neste caso.
 Também podemos inserir itens em um array em um índice específico, usando o método `splice()`:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// imprime ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 O código acima insere `"Ali"` no índice `1`, o que move tudo, após esse índice, uma posição para baixo.
 O segundo valor `0` significa _deleteCount_ (contagem de exclusões); neste caso, não excluímos nenhum item do array; mas se tivéssemos especificado `1`, o valor `Zac` teria sido removido do array
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// imprime 1, 2, 3
 ```
 Um nome de variável segue a palavra-chave `for`, ele receberá o valor de cada item do array por vez.

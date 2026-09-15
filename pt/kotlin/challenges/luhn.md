@@ -27,7 +27,7 @@ Escreva uma função `isValid` que recebe uma string e retorna `true` quando o n
 Exemplo de chamada de função:
 ```kotlin
 println(isValid("095 245 88"))
-// prints true
+// imprime true
 ```
 
 # --seed--

@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// imprime Max makes a sound
 ```
 Quando uma filha declara o seu próprio construtor, chamar `super(...)` nele é **obrigatório**: sem isso o objeto nunca é inicializado e o JavaScript lança um `ReferenceError`. Uma filha sem construtor algum não tem problema, porque o JavaScript escreve um que repassa todos os argumentos ao pai.
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// imprime Woof
 ```
 A sobrescrita não apaga a versão do pai, apenas a esconde. Dentro do método da filha, `super.methodName(...)` ainda alcança a versão do pai, o que permite estender o comportamento do pai em vez de substituí-lo:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// imprime Woof!
 ```
 Note a diferença: `super(...)` chama o **construtor** do pai, `super.name(...)` chama um **método** do pai.
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// imprime 0
 ```
 Os campos são atribuídos a cada nova instância antes de o corpo do construtor executar, então o construtor já pode contar com eles. Um campo sem valor ainda é declarado, apenas começa como `undefined`:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// imprime 8
 ```
 Um método estático é chamado no nome da classe, nunca em uma instância: `new MathUtils().double(4)` lança um `TypeError`, porque as instâncias não recebem membros estáticos. Dentro de um método estático, `this` se refere à classe, então um estático pode chamar outro com `this.otherStatic(...)`.
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// imprime 3.14
 ```
 Como há apenas uma cópia, toda instância que a atualiza atualiza o mesmo valor. Dentro de um construtor, você a acessa por meio do nome da classe, `Circle.PI`, e não por meio de `this`: `this.PI` procuraria uma propriedade na instância, não encontraria nada e lhe daria `undefined`.
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// imprime 120
 ```
 Uma fábrica pode ser chamada antes que qualquer instância exista, o que um método normal não poderia.
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// imprime 12
 ```
 `r.area` executa o método e devolve o seu resultado, então é um número. Adicionar parênteses tentaria chamar esse número, o que falha.
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// imprime 3, o setter rejeitou 50
 ```
 Um getter e um setter com o mesmo nome formam uma única propriedade, então eles não podem também ser um campo normal: o valor armazenado vive sob um nome diferente, por convenção o mesmo nome com um sublinhado na frente.
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// imprime 1234
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// imprime $7
 ```
 É assim que você mantém os passos auxiliares fora da API: quem chama vê `print`, não o detalhe de formatação por trás dele. Campos privados e métodos privados, juntos, dão a uma classe um dentro e um fora bem definidos.
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// imprime $7
 ```
 O mesmo método é usado pela concatenação de strings e por `String(value)`. Se você também quiser um **número** sensato, defina `[Symbol.toPrimitive](hint)`, que recebe `"string"`, `"number"` ou `"default"` e decide o que retornar; quando existe, ele vence o `toString`.
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// imprime [ 'a', 'b' ]
 ```
 O `*` na frente do nome o torna um **generator**: uma função que entrega valores um de cada vez com `yield` e pausa entre eles. Essa é a maneira mais curta de satisfazer o protocolo de iteração, e ela funciona para valores que são computados em vez de armazenados.

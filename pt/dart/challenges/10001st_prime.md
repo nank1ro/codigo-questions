@@ -16,7 +16,7 @@ Escreva uma função que retorna o `n`-ésimo número primo.
 Exemplo de chamada de função:
 ```dart
 print(nthPrime(6));
-// prints 13
+// imprime 13
 ```
 
 # --seed--

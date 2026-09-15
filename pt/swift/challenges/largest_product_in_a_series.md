@@ -16,7 +16,7 @@ Escreva uma função que encontre os n dígitos adjacentes no número de 1000 d�
 Exemplo de chamada da função:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// imprime 5832
 ```
 
 # --before-seed--

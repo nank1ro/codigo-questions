@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, não é um número inteiro
+print(Int(" 42"))  // nil, espaços não são permitidos
 print(Int("abc"))  // nil
 ```
 Para texto decimal use `Double(text)`, que retorna um `Double?` da mesma forma: `Double("3.5")` é `Optional(3.5)`.
@@ -166,7 +166,7 @@ Como `Int(text)` e `Double(text)` retornam `nil` em caso de falha, comparar o re
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, um número inteiro também é um Double válido
 ```
 Note a última linha: todo texto aceito pelo `Int` também é aceito pelo `Double`, então verifique primeiro o `Int` quando quiser distingui-los.
 
@@ -180,7 +180,7 @@ Cada elemento ainda lembra seu tipo real, que o `type(of:)` revela. Para trabalh
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // executa apenas para 1
     }
 }
 ```
