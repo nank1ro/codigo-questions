@@ -39,7 +39,7 @@ Como solo hay un `None`, `is None` siempre es correcto y algo más rápido, mien
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # impreso, pero 0 es un valor real!
 ```
 Cuando "sin valor" y "valor vacío" deben tratarse de forma distinta, comprueba primero `is None` y después la veracidad:
 ```python
@@ -125,7 +125,7 @@ Cuando `0` o `""` deben conservarse y solo `None` debe reemplazarse, el respaldo
 ```python
 timeout = 0
 seconds = timeout if timeout is not None else 30
-print(seconds)  # 0, not 30
+print(seconds)  # 0, no 30
 ```
 
 ---

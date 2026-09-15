@@ -16,7 +16,7 @@ Escribe una función que devuelva el mayor factor primo del número dado.
 Ejemplo de llamada a la función:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// imprime 29
 ```
 
 # --before-seed--

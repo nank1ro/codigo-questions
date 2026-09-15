@@ -5,7 +5,7 @@ let ages = new Map();
 ages.set("Ann", 30);
 ages.set("Bob", 25);
 console.log(ages.get("Ann"));
-// prints 30
+// imprime 30
 ```
 Llamar a `set()` con una clave que ya existe reemplaza su valor.
 
@@ -21,10 +21,10 @@ let stock = new Map();
 stock.set("apple", 3);
 stock.set("pear", 5);
 console.log(stock.has("apple"));
-// prints true
+// imprime true
 stock.delete("pear");
 console.log(stock.size);
-// prints 1
+// imprime 1
 ```
 Ten en cuenta que `size` es una propiedad, no un método, así que no lleva paréntesis.
 
@@ -35,7 +35,7 @@ Preguntarle a un map por una clave que no contiene no es un error: `get()` simpl
 let ages = new Map();
 ages.set("Ann", 30);
 console.log(ages.get("Zed"));
-// prints undefined
+// imprime undefined
 ```
 Por eso existe `has()`: te permite distinguir una clave ausente de una clave cuyo valor resulta ser `undefined`.
 `set()` devuelve el propio map, así que las llamadas se pueden encadenar:
@@ -52,11 +52,11 @@ let lookup = new Map();
 lookup.set(1, "number one");
 lookup.set("1", "string one");
 console.log(lookup.size);
-// prints 2
+// imprime 2
 let alice = { name: "Alice" };
 lookup.set(alice, "an object key");
 console.log(lookup.get(alice));
-// prints an object key
+// imprime una clave de objeto
 ```
 Las claves de objeto se comparan por identidad: solo el mismísimo objeto recupera el valor.
 
@@ -71,8 +71,8 @@ stock.set("pear", 5);
 for (const [name, qty] of stock.entries()) {
   console.log(`${name}: ${qty}`);
 }
-// prints apple: 3
-// prints pear: 5
+// imprime apple: 3
+// imprime pear: 5
 ```
 Recorrer el map directamente, `for (const [name, qty] of stock)`, hace exactamente lo mismo.
 
@@ -86,13 +86,13 @@ prices.set("cake", 4);
 for (const name of prices.keys()) {
   console.log(name);
 }
-// prints tea
-// prints cake
+// imprime tea
+// imprime cake
 for (const price of prices.values()) {
   console.log(price);
 }
-// prints 2
-// prints 4
+// imprime 2
+// imprime 4
 ```
 
 ---
@@ -102,12 +102,12 @@ En lugar de llamar a `set()` muchas veces, puedes construir un map de una vez pa
 let pairs = [["red", "#f00"], ["blue", "#00f"]];
 let colors = new Map(pairs);
 console.log(colors.size);
-// prints 2
+// imprime 2
 ```
 Como `Object.entries(obj)` devuelve exactamente ese array de pares, es la forma más rápida de convertir un objeto en un map:
 ```javascript
 let user = { name: "Ann", age: 30 };
 let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
-// prints 30
+// imprime 30
 ```

@@ -23,13 +23,13 @@ El segundo elemento en una lista está en el índice 1: `list_name[1]`.
 Viste cómo acceder a un índice de lista así:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # Obtiene el valor "Jeremiah"
 ```
 Así es como funciona una asignación:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # Obtiene el nuevo valor "Jordan"
 ```
 
 ---
@@ -69,9 +69,9 @@ En Python, cuando especificamos una parte de una lista de esta manera, incluimos
 ¡Puedes dividir una cadena exactamente como una lista! De hecho, puedes pensar en las cadenas como listas de caracteres: cada carácter es un elemento secuencial en la lista, comenzando desde el índice `0`.
 ```python
 list_name[:2]
-# Grabs the first two items
+# Toma los primeros dos elementos
 list_name[3:]
-# Grabs the fourth through last items
+# Toma del cuarto elemento hasta el último
 ```
 Si tu porción de lista incluye el primer o último elemento en una lista (o una cadena), el índice de ese elemento no tiene que incluirse.
 

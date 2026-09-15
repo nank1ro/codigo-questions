@@ -14,8 +14,8 @@ El valor opuesto de `true` es `false`
 
 Los valores booleanos también pueden ser negados usando `!` antes de ellos, por ejemplo:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // imprime false
+println(!false) // imprime true
 ```
 
 ---
@@ -26,10 +26,10 @@ También podemos crear expresiones booleanas usando `&&` (_y_) y `||` (_o_):
 - `||` (_o_): Produce verdadero si la expresión a la izquierda o a la derecha del operador es verdadera, o si ambas son verdaderas.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // imprime true
+println(true && false) // imprime false
+println(false && false) // imprime false
+println(true || true) // imprime true
+println(true || false) // imprime true
+println(false || false) // imprime false
 ```

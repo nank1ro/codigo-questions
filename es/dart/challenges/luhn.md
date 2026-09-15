@@ -27,7 +27,7 @@ Escribe una función `isValid` que tome una cadena y devuelva `true` cuando el n
 Ejemplo de llamada de función:
 ```dart
 print(isValid("095 245 88"));
-// prints true
+// imprime true
 ```
 
 # --seed--

@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` no se limita a los objetos que acabas de crear: funciona con cualquier objeto y, como devuelve el objeto, puedes usar la expresión completa donde sea que se espere ese objeto.
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // cambia box y lo devuelve
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 El bloque es un bloque de código normal, así que puede contener tantas sentencias como necesites.

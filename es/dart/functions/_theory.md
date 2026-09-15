@@ -11,7 +11,7 @@ void sayHello() {
 Se llama a la función escribiendo su nombre seguido de `()`:
 
 ```dart
-sayHello(); // prints Hello!
+sayHello(); // imprime Hello!
 ```
 
 ---
@@ -36,7 +36,7 @@ int square(int n) {
 }
 
 void main() {
-  print(square(4)); // prints 16
+  print(square(4)); // imprime 16
 }
 ```
 
@@ -71,7 +71,7 @@ void printInfo({required String name, int age = 0}) {
 
 void main() {
   printInfo(name: "Alice", age: 30);
-  // prints Alice is 30 years old
+  // imprime Alice is 30 years old
 }
 ```
 

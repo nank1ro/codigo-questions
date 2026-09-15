@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// imprime 5
 ```
 Una **función flecha** es una forma más corta de escribir lo mismo: elimina la palabra clave `function` y pon una "flecha gruesa" `=>` entre la lista de parámetros y el cuerpo:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// imprime 5
 ```
 Las funciones flecha suelen almacenarse en una `const`, así el nombre no puede ser reasignado por error, y se llaman exactamente igual que cualquier otra función.
 
@@ -23,13 +23,13 @@ Cuando el cuerpo es una **única expresión**, puedes omitir las llaves y la pal
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// imprime 5
 ```
 Cuando hay **exactamente un parámetro**, también puedes omitir los paréntesis a su alrededor:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// imprime 8
 ```
 Con cero parámetros o con dos o más, los paréntesis son obligatorios: `() => 42` y `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ Hay una trampa con el retorno implícito. Una función flecha cuyo cuerpo empiez
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// imprime undefined
 ```
 Aquí `{ name: name }` es un bloque que contiene la etiqueta `name:` seguida de la expresión `name`. No se devuelve nada, así que la llamada da `undefined`.
 Para devolver un objeto literal en una sola línea, rodéalo con **paréntesis** para que JavaScript lo trate como una expresión:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// imprime { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ Rodear el objeto literal con paréntesis es la forma estándar de construir obje
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// imprime 30
 ```
 Una función flecha sin parámetros empieza con un par vacío de paréntesis `()`:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// imprime {}
 ```
 
 ---
@@ -71,9 +71,9 @@ Las funciones flecha brillan de verdad como **callbacks**: funciones pasadas com
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// imprime [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// imprime [ 3, 4 ]
 ```
 Ambos devuelven un nuevo array y dejan el original intacto, así que puedes encadenarlos: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ Dos métodos de array más toman un callback.
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// imprime 1, 2 y 3 en tres líneas
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// imprime 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// imprime [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// imprime 70
 ```
 
 ---
@@ -111,9 +111,9 @@ Un **valor por defecto** se usa cuando el argumento se omite o es `undefined`:
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// imprime Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// imprime Hello, Ana!
 ```
 Ten en cuenta que un parámetro con un valor por defecto siempre necesita los paréntesis, incluso cuando es el único: `name = "World" => ...` es un error de sintaxis.
 
@@ -123,7 +123,7 @@ Un **parámetro rest** `...name` recopila cualquier cantidad de argumentos en un
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// imprime 3
 ```
 Las funciones regulares también tienen un oculto objeto similar a un array llamado `arguments` que contiene todos los argumentos que recibieron. Las funciones flecha **no**: dentro de una flecha, `arguments` se refiere al `arguments` de la función que la rodea o no existe en absoluto. Siempre que necesites "todos los argumentos" en una función flecha, usa un parámetro rest.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// imprime 1
 console.log(next());
-// prints 2
+// imprime 2
 ```
 Nadie más puede leer o reiniciar `count`: vive solo dentro de la función devuelta. Una segunda llamada a `makeCounter()` crea un contador independiente con su propio `count`.
 
@@ -154,8 +154,8 @@ Como una función es un valor, una función flecha puede **devolver otra funció
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// imprime 15
 console.log(makeAdder(1)(5));
-// prints 6
+// imprime 6
 ```
 Léela de izquierda a derecha: `makeAdder` toma `amount` y devuelve `(n) => n + amount`, una función flecha que captura `amount` mediante una clausura. `makeAdder(1)(5)` llama a la función devuelta inmediatamente.

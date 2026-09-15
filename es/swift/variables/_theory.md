@@ -11,7 +11,7 @@ var x = 1
 De esta manera hemos asignado el valor `1` a la variable llamada `x`.
 Si imprimimos la variable `x` obtenemos el número `1`:
 ```swift
-print(x) // prints 1
+print(x) // imprime 1
 ```
 
 ---
@@ -20,9 +20,9 @@ Las variables se llaman así porque el valor que almacenan puede cambiar.
 Podemos actualizar `x` usando `=` y dándole un nuevo valor.
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // imprime 1
 x = 2
-print(x) // prints 2
+print(x) // imprime 2
 ```
 
 ---
@@ -31,7 +31,7 @@ También podemos darles a las variables los valores de otras variables. Aquí, p
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // imprime 5
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 Cuando actualizamos una variable, olvida su valor anterior. Aquí podemos mostrar la variable `x` dos veces y ver cómo se actualiza su valor.
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // imprime 5
 x = 10
-print(x) // prints 10
+print(x) // imprime 10
 ```
 
 ---

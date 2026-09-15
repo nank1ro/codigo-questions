@@ -20,7 +20,7 @@ La lista nunca contiene duplicados, por lo que el índice siempre es único. La 
 Ejemplo de llamada de función:
 ```python
 print(binary_search([1, 3, 5, 7], 5))
-# prints 2
+# imprime 2
 ```
 
 # --seed--

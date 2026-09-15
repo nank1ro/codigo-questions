@@ -84,7 +84,7 @@ Como un set está desordenado, los elementos pueden salir en **cualquier orden**
 Cuando necesites un orden predecible, pasa el set a `sorted()`, que devuelve una **lista** ordenada de sus elementos:
 ```python
 for color in sorted({"red", "blue"}):
-    print(color)  # blue, then red
+    print(color)  # azul, luego rojo
 ```
 
 ---

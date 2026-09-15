@@ -27,7 +27,7 @@ Escribe una función `is_valid` que tome una cadena y devuelva `True` cuando el 
 Ejemplo de llamada de función:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# imprime True
 ```
 
 # --seed--

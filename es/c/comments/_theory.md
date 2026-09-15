@@ -2,7 +2,7 @@ Un **comentario** es texto dentro de tu código fuente destinado a las personas,
 
 El tipo más común es el **comentario de una sola línea**: todo lo que va desde `//` hasta el final de esa línea se ignora.
 ```c
-// Greet the user
+// Saluda al usuario
 printf("Hello\n");
 ```
 La primera línea no hace nada cuando se ejecuta el programa; solo el `printf` produce una salida.
@@ -15,7 +15,7 @@ Esto hace de `//` una forma rápida de desactivar una línea de código sin borr
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // imprime "10"
 ```
 La segunda línea ahora es un comentario, así que `total` se queda en `10`. Al quitar el `//`, la línea vuelve a la vida.
 
@@ -49,7 +49,7 @@ Esto importa cuando quieres comentar un bloque que ya contiene un comentario `/*
 
 Un comentario no necesita su propia línea: puede seguir al código en la misma línea. Esto es un **comentario al final de la línea**, y es un buen lugar para una nota corta sobre esa sentencia concreta:
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // ríndete después de tres intentos
 ```
 Tanto `//` como `/* */` funcionan como comentarios al final de la línea, pero ten cuidado con `/*`: como solo se detiene en `*/`, un `/*` sin cerrar al final de una línea se traga las líneas que siguen y el programa ya no compila.
 
@@ -83,8 +83,8 @@ Los programadores usan algunas palabras clave convencionales al principio de un 
 - `FIXME` marca código que se sabe que está mal y debe corregirse
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: valida la entrada antes de usarla
+// FIXME: falla cuando la lista está vacía
 ```
 Los editores y las herramientas pueden listar estos marcadores, así que el trabajo pendiente es fácil de encontrar. Una vez hecho el trabajo, borra el marcador: un `TODO` obsoleto induce a error.
 
@@ -92,12 +92,12 @@ Los editores y las herramientas pueden listar estos marcadores, así que el trab
 
 Un buen comentario explica **por qué** el código hace algo, no **qué** hace. El código ya muestra lo que ocurre; repetirlo con palabras añade ruido y queda obsoleto en cuanto cambia el código:
 ```c
-// multiply price by 90 and divide by 100
+// multiplica el precio por 90 y divide entre 100
 return price * 90 / 100;
 ```
 El motivo detrás de los números es lo que un lector no puede adivinar:
 ```c
-// launch discount: members get 10% off until the end of June
+// descuento de lanzamiento: los miembros obtienen 10% de descuento hasta finales de junio
 return price * 90 / 100;
 ```
 Si un comentario solo repite la línea de abajo, bórralo o reemplázalo por el motivo.

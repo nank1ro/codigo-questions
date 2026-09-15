@@ -2,7 +2,7 @@ Una _interpolación_ de String es una forma programática de generar una String.
 En Dart podemos usar el signo `+` (concatenación) para mostrar dos o más strings juntos, como:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// imprime "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ Podemos usar llaves para insertar valores tan a menudo como queramos usando la i
 Dentro de `${}` también podemos poner condiciones, por ejemplo:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// imprime The answer is correct
 ```
 
 ---

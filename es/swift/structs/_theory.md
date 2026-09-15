@@ -77,6 +77,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12, sin paréntesis
 ```
 Las propiedades calculadas no forman parte del inicializador miembro, ya que no hay nada que almacenar. Usa una cuando el valor se deriva de los otros, y un método cuando el trabajo necesita parámetros.

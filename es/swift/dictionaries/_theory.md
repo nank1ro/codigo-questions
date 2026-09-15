@@ -11,7 +11,7 @@ La clave `key1` apunta al valor `1`, `key2` a `2`, y así sucesivamente.
 
 Acceder a valores de diccionario por clave es como acceder a valores de array por índice:
 ```swift
-// gets the age value from the user dictionary
+// obtiene el valor de la edad del diccionario user
 user['age']
 ```
 
@@ -34,7 +34,7 @@ Cada par cuenta solo una vez, incluso si el valor es un array. (¡Así es: ¡tam
 Porque los diccionarios son mutables, pueden ser cambiados de muchas formas. Los elementos pueden ser removidos de un diccionario con el método `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // imprime el valor eliminado, si la clave existe
 }
 ```
 eliminará la clave `keyName` y su valor asociado del diccionario.
@@ -73,5 +73,5 @@ Anteriormente vimos cómo eliminar un _par clave-valor_ del diccionario con el m
 También podemos eliminar un elemento asignando a la clave el valor `nil`
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName ha sido eliminado del diccionario dictName
 ```

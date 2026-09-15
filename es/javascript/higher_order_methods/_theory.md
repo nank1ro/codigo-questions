@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// imprime HI!!
 ```
 Fíjate en que `shout` se pasa **sin paréntesis**: `twice(shout, "hi")` entrega la función en sí, mientras que `twice(shout("hi"), "hi")` llamaría primero a `shout` y pasaría su resultado, la cadena `"HI!"`, que no se puede llamar.
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// imprime a y b en dos líneas
 ```
 El callback recibe un elemento cada vez. Puede ser una función flecha escrita en línea, como arriba, o cualquier función guardada en una variable. Así es exactamente como funcionan por dentro los métodos de array que verás a continuación.
 
@@ -32,9 +32,9 @@ El método integrado `map` hace lo que hace `transform`: llama al callback para 
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// imprime 5 y 10 en dos líneas
 console.log(doubled);
-// prints [ 10, 20 ]
+// imprime [ 10, 20 ]
 ```
 Un error habitual es guardar el resultado de `forEach` o encadenar otro método después: no hay nada que encadenar, porque devuelve `undefined`. Regla práctica: usa `map` cuando necesitas los nuevos valores, `forEach` cuando solo necesitas *hacer* algo.
 
@@ -46,9 +46,9 @@ Otros dos métodos de orden superior cubren casi todas las necesidades del día 
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// imprime [ 8, 5 ]
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// imprime 16
 ```
 Como `filter` y `map` devuelven arrays, puedes encadenarlos y terminar con `reduce`: `numbers.filter(...).map(...).reduce(...)`.
 
@@ -61,9 +61,9 @@ Tres métodos responden preguntas sobre un array con un predicado:
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// imprime 45
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// imprime true false
 ```
 Los tres se detienen en cuanto se conoce la respuesta, así que nunca miran más elementos de los necesarios.
 
@@ -73,9 +73,9 @@ Los tres se detienen en cuanto se conoce la respuesta, así que nunca miran más
 Sin comparador, `sort()` convierte cada elemento en una **cadena** y los compara carácter a carácter, así que `10` va antes que `9` porque `"1"` es menor que `"9"`:
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// imprime [ 1, 10, 9 ]
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// imprime [ 1, 9, 10 ]
 ```
 Como `sort` modifica el array, ordena una copia cuando también necesitas el orden original: `[...numbers].sort(...)`. Para cadenas usa `(a, b) => a.localeCompare(b)` como comparador, que ordena el texto alfabéticamente.
 
@@ -86,7 +86,7 @@ El comparador puede mirar cualquier parte de los elementos, así que un array de
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// imprime [ 'a', 'b' ]
 ```
 Ordenar la copia deja `items` en su orden original.
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// imprime 15
 console.log(makeMultiplier(10)(5));
-// prints 50
+// imprime 50
 ```
 Cada llamada a `makeMultiplier` crea una nueva función con su propio `factor`. Así se construye una familia de funciones parecidas a partir de una sola plantilla. Lo mismo se puede escribir con funciones flecha: `const makeMultiplier = (factor) => (n) => n * factor;`.
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// imprime 2
 ```
 Nadie puede leer ni reiniciar `count` desde fuera salvo a través de esas dos funciones: la variable es **privada**. Una segunda llamada a `makeCounter()` crea un `count` completamente separado.
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// imprime HI
 ```
 El orden importa: `compose(f, g)` ejecuta primero `g` y luego `f`. Construir programas pegando funciones pequeñas de esta forma se llama **composición de funciones**.
 
@@ -146,7 +146,7 @@ Una función que devuelve una función también es la forma natural de **adaptar
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// imprime [ 'tree' ]
 ```
 Un `not(predicate)` general haría esto para cualquier predicado: devuelve una nueva función que llama a `predicate` con el mismo argumento e invierte el resultado con `!`. Los predicados de `filter`, `find`, `some` y `every` reciben el elemento como primer argumento, así que el envoltorio solo necesita reenviar ese valor.
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// imprime { yes: 2, no: 1 }
 ```
 `acc[vote] ?? 0` lee el recuento actual, o `0` cuando esa clave todavía no existe.
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// imprime 42
 ```
 Fijar `this` importa en los métodos. Cuando un método se copia fuera de su objeto y se llama por su cuenta, `this` ya no se refiere al objeto, así que `this.name` pasa a ser `undefined`. `bind` lo fija al objeto:
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// imprime Hi undefined
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// imprime Hi Ana
 ```
 La función original nunca cambia: `bind` siempre construye una nueva, cuyo `name` es el nombre original precedido por `bound `.
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// imprime ready ready 1
 ```
 El envoltorio necesita dos variables privadas: si `fn` ya se ejecutó y el resultado guardado. Ambas viven en la closure, invisibles desde fuera. Para reenviar a `fn` todos los argumentos del envoltorio, declara el envoltorio con un parámetro rest `(...args)` y llama a `fn(...args)`.
 
@@ -220,6 +220,6 @@ Todo se junta en `groupBy(items, keyFn)`: una función de orden superior que rec
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// imprime { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
 ```
 Para cada elemento, calcula la clave, crea el array de esa clave si todavía no existe (`acc[key] ?? []`), añade el elemento y devuelve el acumulador. Como quien llama elige `keyFn`, la misma función agrupa palabras por inicial, personas por ciudad o números por paridad.

@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// imprime red
 ```
 Por convención, el objeto se declara con `const`, su nombre empieza con mayúscula y los nombres de los miembros se escriben en `UPPER_CASE`, igual que otras constantes.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// imprime done
 ```
 Una vez congelado, el objeto tampoco puede recibir nuevas propiedades, y `Object.isFrozen(obj)` te dice si un objeto ha sido congelado:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// imprime true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// imprime s
 console.log(Size.MEDIUM);
-// prints undefined
+// imprime undefined
 ```
 De cualquier forma, la enumeración conserva los valores que definiste, que es exactamente lo que quieres de un conjunto de constantes.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// imprime true
 ```
 La contrapartida es la legibilidad: imprimir `Priority.HIGH` muestra `3`, lo que te dice mucho menos que la cadena `"high"`.
 
@@ -70,14 +70,14 @@ Como una enumeración es solo un objeto, los ayudantes de objeto habituales te p
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// imprime [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// imprime [ 'red', 'blue' ]
 ```
 Combinar `Object.values()` con el método de array `includes()` es la forma estándar de comprobar si un valor arbitrario, por ejemplo uno leído de una entrada de usuario, es un miembro válido:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// imprime true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// imprime false
 ```

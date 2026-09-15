@@ -16,7 +16,7 @@ Escribe una función que devuelva el palíndromo más grande formado como produc
 Ejemplo de llamada a la función:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// imprime 9009
 ```
 
 # --seed--

@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// imprime Max makes a sound
 ```
 Cuando una hija declara su propio constructor, llamar a `super(...)` dentro de él es **obligatorio**: sin él el objeto nunca se inicializa y JavaScript lanza un `ReferenceError`. Una hija sin constructor alguno está bien, porque JavaScript escribe uno que reenvía cada argumento al padre.
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// imprime Woof
 ```
 La sobrescritura no elimina la versión del padre, solo la oculta. Dentro del método de la hija, `super.methodName(...)` todavía la alcanza, lo que te permite extender el comportamiento del padre en lugar de reemplazarlo:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// imprime Woof!
 ```
 Fíjate en la diferencia: `super(...)` llama al **constructor** del padre, `super.name(...)` llama a un **método** del padre.
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// imprime 0
 ```
 Los campos se asignan a cada nueva instancia antes de que el cuerpo del constructor se ejecute, así que el constructor ya puede confiar en ellos. Un campo sin valor igualmente queda declarado, solo que empieza como `undefined`:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// imprime 8
 ```
 Un método estático se llama sobre el nombre de la clase, nunca sobre una instancia: `new MathUtils().double(4)` lanza un `TypeError`, porque las instancias no reciben los miembros estáticos. Dentro de un método estático `this` se refiere a la clase, así que un estático puede llamar a otro con `this.otherStatic(...)`.
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// imprime 3.14
 ```
 Como solo hay una copia, cada instancia que la actualiza actualiza el mismo valor. Dentro de un constructor la accedes a través del nombre de la clase, `Circle.PI`, y no a través de `this`: `this.PI` buscaría una propiedad en la instancia, no encontraría nada y te daría `undefined`.
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// imprime 120
 ```
 Una fábrica puede llamarse antes de que exista cualquier instancia, algo que un método normal no puede hacer.
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// imprime 12
 ```
 `r.area` ejecuta el método y devuelve su resultado, así que es un número. Añadir paréntesis intentaría entonces llamar a ese número, lo que falla.
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// imprime 3, el setter rechazó 50
 ```
 Un getter y un setter con el mismo nombre forman una sola propiedad, así que no pueden ser además un campo normal: el valor almacenado vive bajo un nombre distinto, por convención el mismo nombre con un guion bajo delante.
 
@@ -205,9 +205,9 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// imprime 1234
 console.log(s.#code);
-// SyntaxError: the field is not accessible here
+// SyntaxError: el campo no es accesible aquí
 ```
 Dos detalles hacen tropezar con facilidad. El `#` es parte del nombre, así que siempre escribes `this.#code`, nunca `this.code`. Y un campo privado no aparece en `Object.keys` ni en el `console.log` de la instancia.
 
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// imprime $7
 ```
 Así mantienes los pasos auxiliares fuera de la API: quien llama ve `print`, no el detalle de formato que hay detrás. Los campos privados y los métodos privados juntos le dan a una clase un interior y un exterior bien definidos.
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// imprime $7
 ```
 El mismo método lo usan la concatenación de strings y `String(value)`. Si además quieres un **número** razonable, define `[Symbol.toPrimitive](hint)`, que recibe `"string"`, `"number"` o `"default"` y decide qué devolver; cuando existe gana sobre `toString`.
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// imprime [ 'a', 'b' ]
 ```
 El `*` delante del nombre lo convierte en un **generador**: una función que entrega valores de uno en uno con `yield` y hace una pausa entre ellos. Esa es la forma más corta de satisfacer el protocolo de iteración, y funciona para valores que se calculan en lugar de almacenarse.

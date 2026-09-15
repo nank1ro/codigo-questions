@@ -20,7 +20,7 @@ Escribe una función que devuelva la diferencia entre el cuadrado de la suma y l
 Ejemplo de llamada a la función:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// imprime 2640
 ```
 
 # --seed--

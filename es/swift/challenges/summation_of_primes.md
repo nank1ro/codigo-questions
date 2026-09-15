@@ -16,7 +16,7 @@ Escribe una función que encuentre la suma de todos los números primos menores 
 Ejemplo de llamada a la función:
 ```swift
 print(primeSummation(10))
-// prints 17
+// imprime 17
 ```
 
 # --before-seed--

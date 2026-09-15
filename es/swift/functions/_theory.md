@@ -5,7 +5,7 @@ En Swift usamos la palabra clave `func` seguida del nombre de la función:
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // imprime "Hello!"
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// imprime "Hello Smith! Welcome on board :)"
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ Puedes definir un valor _predeterminado_ para cualquier parámetro en una funci�
 Si se define un valor predeterminado, puedes omitir ese parámetro al llamar a la función
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // haz algo aquí
 }
 ```
 
@@ -62,7 +62,7 @@ Por ejemplo, un parámetro variádico con un nombre de `numbers` y un tipo de `D
 
 En las funciones podemos agregar un _comentario opcional_ que explique qué hace la función:
 ```swift
-/// Prints 'Hello World' to the console.
+/// Imprime 'Hello World' en la consola.
 func helloWorld() {
     print("Hello, World!")
 }

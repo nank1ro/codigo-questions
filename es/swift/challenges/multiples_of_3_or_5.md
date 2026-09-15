@@ -16,7 +16,7 @@ Escribe una función que encuentre la suma de todos los múltiplos de 3 o 5 meno
 Ejemplo de llamada a la función:
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// imprime 23
 ```
 
 # --before-seed--

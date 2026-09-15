@@ -20,7 +20,7 @@ El array nunca contiene duplicados, por lo que el índice siempre es único. El 
 Ejemplo de llamada de función:
 ```javascript
 console.log(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// imprime 2
 ```
 
 # --before-seed--

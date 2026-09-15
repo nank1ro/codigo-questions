@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0, b tiene su propio count
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // esta es la única forma de usarlo
 ```
 
 El nombre sigue funcionando como tipo, así que `Team() is Scored` y `Scored s = Team();` son ambos válidos. Un mixin no tiene constructor, así que un campo no anulable debe inicializarse donde se declara (o marcarse `late`), como `int score = 0;` arriba.
@@ -82,7 +82,7 @@ Un mixin puede declarar un miembro **sin cuerpo**. Ese miembro es abstracto: el 
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // sin cuerpo: la clase lo proporciona
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B, el último mixin de la lista
+  print(Second().who()); // A, el último mixin de la lista
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // format viene de Starred
+class Simple with Starred, Plain {} // format viene de Plain
 ```
 
 Los miembros que solo un mixin declara nunca compiten: están disponibles sea cual sea el orden. Lee `with X, Y` como "empieza desde `X`, luego deja que `Y` lo sobrescriba".
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // funciona: es una clase
+class Record extends Serializable {} // funciona: es una clase
+class Row with Serializable {}       // funciona: es un mixin
 ```
 
 Una `mixin class` paga esa flexibilidad con dos restricciones: debe extender `Object`, así que no puede tener cláusula `extends` propia, y no debe declarar un constructor, porque un mixin nunca ejecuta uno.

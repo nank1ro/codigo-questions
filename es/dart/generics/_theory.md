@@ -11,7 +11,7 @@ La recompensa es que el compilador sabe qué hay dentro:
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // bien: first es un String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart también tiene el tipo `dynamic`, que significa que "todo vale". Una `List<
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // aceptado
+print(things.first.toUpperCase()); // aceptado
 ```
 
 La trampa es que nada se comprueba mientras escribes el código. Cada llamada sobre un valor `dynamic` se resuelve mientras el programa se ejecuta, así que un error tipográfico como `things.first.toUpperCse()` compila felizmente y revienta delante de un usuario.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, inferido a partir del argumento
+print(a.value + 1);      // 8, el compilador sabe que value es int
 ```
 
 La letra no importa: `T` es una convención para "tipo", nada más.
@@ -78,14 +78,14 @@ Una función puede ser genérica por sí sola, sin vivir dentro de una clase gen
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, T es String aquí
+print(firstOf([10, 20]));        // 10, T es int aquí
 ```
 
 Un solo cuerpo de función, comprobado una vez, reutilizado para cada tipo. El argumento de tipo normalmente se deduce de los argumentos, pero puede escribirse explícitamente cuando la inferencia no tiene nada en que basarse:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // lanza, pero el tipo está claro
 ```
 
 Los métodos dentro de una clase siguen exactamente la misma regla.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 Con la seguridad nula sólida el signo de interrogación puede aparecer en dos lugares distintos, y significan dos cosas distintas:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // una caja que existe y contiene un int nullable
+Box<int>? b = null;      // ninguna caja en absoluto, pero si hay una, contiene un int
 ```
 
 En `Box<int?>` el **argumento de tipo** es nullable, así que `a.value` tiene tipo `int?` y puede ser `null`, mientras que `a` en sí siempre está ahí. En `Box<int>?` la **variable** es nullable, así que `b` puede ser `null` y necesitas `b?.value` o `b!.value` para llegar a su interior.
@@ -146,10 +146,10 @@ La diferencia importa en cuanto usas el valor. Sobre un `Box<int?>` accedes al c
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, la caja está ahí, su contenido es null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, la caja en sí falta
 ```
 
 Escribir `b.value` sobre un `Box<int>?` no compila en absoluto: Dart se niega a leer un campo de algo que puede no existir.
@@ -187,9 +187,9 @@ Sin la cota, `a > b` no compilaría: el operador de comparación pertenece a `nu
 Una cota puede mencionar al propio parámetro de tipo. `Comparable<T>` es la interfaz de todo lo que sabe compararse consigo mismo con otros de su mismo tipo, mediante `compareTo`:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
-print('kiwi'.compareTo('fig')); // positive
-print('fig'.compareTo('fig'));  // zero
+print('fig'.compareTo('kiwi')); // negativo: fig va primero
+print('kiwi'.compareTo('fig')); // positivo
+print('fig'.compareTo('fig'));  // cero
 ```
 
 Así que `T extends Comparable<T>` se lee como "cualquier tipo que pueda compararse consigo mismo", que es justo lo que necesita una función de ordenamiento o de máximo:

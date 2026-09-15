@@ -18,7 +18,7 @@ Devuelve `true` si es un año bisiesto, `false` en caso contrario.
 Ejemplo de llamada a la función:
 ```kotlin
 println(leapYear(2000))
-// prints true
+// imprime true
 ```
 
 # --seed--

@@ -28,7 +28,7 @@ Escribe una función que devuelva la cadena correcta, ejemplos:
 Example of function call:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// imprime "Plong"
 ```
 
 # --seed--

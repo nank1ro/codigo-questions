@@ -17,7 +17,7 @@ Devuelve la suma de dígitos de `N`.
 Ejemplo de llamada a la función:
 ```kotlin
 println(sumDigits(28))
-// prints 10
+// imprime 10
 ```
 
 # --seed--
