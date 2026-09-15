@@ -12,7 +12,7 @@ val b = "cat".toRegex()
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false, буква — не цифра
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches` часто слишком строг: обычно нужно лишь узнать, встречается ли шаблон **где-либо** в тексте. Для этого есть `containsMatchIn`:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false, вся строка — не цифры
+println(digits.containsMatchIn("order 42"))  // true, "42" там есть
 ```
 Помимо `\d`, есть ещё два сокращения, которые вы будете использовать постоянно: `\w` — это символ слова (буква, цифра или `_`), а `\s` — пробельный символ. Каждый из них можно повторить с помощью **квантификатора**:
 - `+` — один или несколько
@@ -31,7 +31,7 @@ println(digits.containsMatchIn("order 42"))  // true, "42" is in there
 
 Удваивать каждый обратный слеш утомительно, поэтому шаблоны обычно записывают как **сырые строки** в тройных кавычках, где `\` — просто символ:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // то же, что Regex("\\d+")
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0` — это всё совпадение целиком. Если в замене нужен литеральный `$`, экранируйте его как `\$`.
 `replace` переписывает **каждое** совпадение, поэтому если переписать нужно только полную строку, закрепите шаблон **якорями** `^` (начало текста) и `$` (конец текста):
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two, ничего не заменяется
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 Символы `. * + ? ( ) [ ] { } | ^ $ \` имеют особое значение внутри шаблона. Самый коварный из них — `.`, который совпадает с **любым** символом, а не с точкой. Чтобы обозначить сам символ, экранируйте его обратным слешем:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true, точка соответствует x
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 Когда искомый текст приходит из переменной и должен пониматься буквально, доверьте экранирование библиотеке с помощью `Regex.escape`:
@@ -180,7 +180,7 @@ println(value) // local
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true, цифр нет
 ```
 Класс выбирает только между отдельными символами. Чтобы выбирать между целыми альтернативами, используйте `|`, обычно завёрнутый в группу, чтобы он не поглотил остальную часть шаблона:
 ```kotlin

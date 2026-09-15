@@ -27,7 +27,7 @@ title: Контрольная сумма Луна
 Пример вызова функции:
 ```javascript
 console.log(isValid("095 245 88"));
-// prints true
+// выводит true
 ```
 
 # --before-seed--

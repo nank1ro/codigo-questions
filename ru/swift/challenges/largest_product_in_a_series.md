@@ -16,7 +16,7 @@ title: Наибольшее произведение в ряду
 Пример вызова функции:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// выводит 5832
 ```
 
 # --before-seed--

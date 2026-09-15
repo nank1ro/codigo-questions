@@ -28,7 +28,7 @@ title: Капли дождя
 Пример вызова функции:
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// выводит "Plong"
 ```
 
 # --seed--

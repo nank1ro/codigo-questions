@@ -16,7 +16,7 @@ title: Разность суммы квадратов
 Пример вызова функции:
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// выводит 2640
 ```
 
 # --before-seed--

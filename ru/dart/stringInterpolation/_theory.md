@@ -2,7 +2,7 @@ _Интерполяция_ строк — это программный спос
 В Dart мы можем использовать знак `+` (конкатенация) для отображения двух или более строк вместе, например:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// выводит "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ print("Hello " + "Dart!");
 Внутри `${}` мы также можем размещать условия, например:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// выводит The answer is correct
 ```
 
 ---

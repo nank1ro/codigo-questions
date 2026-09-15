@@ -16,7 +16,7 @@ title: Сумма простых чисел
 Пример вызова функции:
 ```dart
 print(primeSummation(10));
-// prints 17
+// выводит 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ void main() {
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // Решето Эратосфена
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

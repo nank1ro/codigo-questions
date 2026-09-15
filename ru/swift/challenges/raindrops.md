@@ -30,7 +30,7 @@ title: Капли дождя
 Пример вызова функции:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// выводит "Plong"
 ```
 
 # --before-seed--

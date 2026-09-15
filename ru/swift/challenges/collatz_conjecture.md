@@ -22,7 +22,7 @@ title: Гипотеза Коллатца
 Пример вызова функции:
 ```swift
 print(collatzSteps(16))
-// prints 4
+// выводит 4
 ```
 
 # --before-seed--

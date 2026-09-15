@@ -5,7 +5,7 @@
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // выводит "Hello!"
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// выводит "Hello Smith! Welcome on board :)"
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ print(sayHello(name: "Smith", newUser: true))
 Если значение по умолчанию определено, вы можете опустить этот параметр при вызове функции
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // делать что-то здесь
 }
 ```
 
@@ -62,7 +62,7 @@ _Вариативный параметр_ принимает ноль или б�
 
 В функциях мы можем добавить _необязательный комментарий_, который объясняет, что делает функция:
 ```swift
-/// Prints 'Hello World' to the console.
+/// Выводит 'Hello World' на консоль.
 func helloWorld() {
     print("Hello, World!")
 }

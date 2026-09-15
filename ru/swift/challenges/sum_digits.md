@@ -18,7 +18,7 @@ title: Сумма цифр
 Пример вызова функции:
 ```swift
 print(sumDigits(28))
-// prints 10
+// выводит 10
 ```
 
 # --before-seed--

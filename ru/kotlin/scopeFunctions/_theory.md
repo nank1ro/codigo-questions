@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` не ограничен объектами, которые вы только что создали: он работает с любым объектом, и поскольку он возвращает объект обратно, всё выражение можно использовать везде, где ожидается этот объект.
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // изменяет box и возвращает его
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 Блок — это обычный блок кода, поэтому он может содержать столько инструкций, сколько нужно.

@@ -11,7 +11,7 @@ List<int> scores = [10, 20];
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // хорошо: first — это String
 ```
 
 ---
@@ -39,8 +39,8 @@ counts['fig'] = 3;
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // принято
+print(things.first.toUpperCase()); // принято
 ```
 
 Загвоздка в том, что ничего не проверяется, пока вы пишете код. Каждый вызов на значении `dynamic` разрешается во время работы программы, поэтому опечатка вроде `things.first.toUpperCse()` спокойно компилируется и приводит к падению перед глазами пользователя.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, выведенный из аргумента
+print(a.value + 1);      // 8, компилятор знает, что value — это int
 ```
 
 Конкретная буква не важна: `T` — лишь соглашение для «type», и не более того.
@@ -78,14 +78,14 @@ print(a.value + 1);      // 8, the compiler knows value is an int
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, здесь T — String
+print(firstOf([10, 20]));        // 10, здесь T — int
 ```
 
 Одно тело функции, проверенное один раз, переиспользуется для каждого типа. Аргумент типа обычно выводится из аргументов, но его можно указать явно, когда выведению не на что опереться:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // выбрасывает исключение, но тип понятен
 ```
 
 Методы внутри класса следуют ровно тому же правилу.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 При надёжной null safety вопросительный знак может стоять в двух разных местах, и означают они разное:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // коробка, которая существует и содержит nullable int
+Box<int>? b = null;      // коробки вообще нет, но если бы была, она хранила бы int
 ```
 
 В `Box<int?>` допускает null **аргумент типа**, поэтому `a.value` имеет тип `int?` и может быть `null`, тогда как сама `a` всегда существует. В `Box<int>?` допускает null **переменная**, поэтому `b` может быть `null`, и чтобы добраться до её содержимого, нужны `b?.value` или `b!.value`.
@@ -146,10 +146,10 @@ Box<int>? b = null;      // no box at all, but if there is one it holds an int
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, коробка есть, её содержимое — null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, самой коробки нет
 ```
 
 Запись `b.value` у `Box<int>?` вообще не компилируется: Dart отказывается читать поле того, чего может не существовать.
@@ -187,9 +187,9 @@ num biggerOf<T extends num>(T a, T b) => a > b ? a : b;
 Ограничение может упоминать сам параметр типа. `Comparable<T>` — интерфейс всего, что умеет сравнивать себя с себе подобными с помощью `compareTo`:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
-print('kiwi'.compareTo('fig')); // positive
-print('fig'.compareTo('fig'));  // zero
+print('fig'.compareTo('kiwi')); // отрицательно: fig идёт первым
+print('kiwi'.compareTo('fig')); // положительно
+print('fig'.compareTo('fig'));  // ноль
 ```
 
 Поэтому `T extends Comparable<T>` читается как «любой тип, который можно сравнить с самим собой» — именно это нужно функции сортировки или поиска максимума:

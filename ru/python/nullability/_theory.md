@@ -39,7 +39,7 @@ if user is not None:
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # выведено, но 0 — реальное значение!
 ```
 Когда "нет значения" и "пустое значение" должны обрабатываться по-разному, сначала проверьте `is None`, а затем истинность:
 ```python

@@ -18,7 +18,7 @@ title: Високосный год
 Пример вызова функции:
 ```kotlin
 println(leapYear(2000))
-// prints true
+// выводит true
 ```
 
 # --seed--

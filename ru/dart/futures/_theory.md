@@ -65,12 +65,12 @@ Future<int> slowDouble(int n) async {
 
 ```dart
 Future<int> count() async {
-  return 3;                 // int, wrapped into Future<int>
+  return 3;                 // int, обёрнутый в Future<int>
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>, развёрнутый в int
+  Future<int> f = count();  // без await: всё ещё Future<int>
 }
 ```
 
@@ -138,7 +138,7 @@ Future может завершиться и **ошибкой**. Когда `asyn
 ```dart
 Future<int> parseLater(String s) async {
   await Future.delayed(const Duration(milliseconds: 5));
-  return int.parse(s); // throws FormatException for 'abc'
+  return int.parse(s); // выбрасывает FormatException для 'abc'
 }
 
 Future<int> orZero(String s) async {
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // оба таймера запускаются сейчас
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // ждёт один раз, всего около 20 мс
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // выбрасывает исключение здесь, loadTwice тоже завершается ошибкой
+  return n * 2;             // никогда не выполняется
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // вызывающий код видит исходную ошибку
   }
 }
 ```

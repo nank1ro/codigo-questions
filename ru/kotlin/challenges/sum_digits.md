@@ -17,7 +17,7 @@ title: Сумма цифр
 Пример вызова функции:
 ```kotlin
 println(sumDigits(28))
-// prints 10
+// выводит 10
 ```
 
 # --seed--

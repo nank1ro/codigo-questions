@@ -4,7 +4,7 @@
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // играть на улице
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // играть на улице
 }
 ```
 Мы видели, что оператор `if` выполняет блок кода только если условие равно `true`.
@@ -28,9 +28,9 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // играть на улице
 } else {
-    // stay home
+    // остаться дома
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// выводит 10
 ```
 Сокращённый код для приведённого выше:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// выводит 10
 ```
 `c` присваивается значение `a`, потому что условие `a < b` было истинным
 

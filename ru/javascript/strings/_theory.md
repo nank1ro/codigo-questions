@@ -3,7 +3,7 @@
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// выводит 5
 ```
 Пробелы и знаки препинания тоже считаются символами.
 
@@ -14,14 +14,14 @@ console.log(greeting.length);
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// выводит h
 console.log(word.charAt(1));
-// prints e
+// выводит e
 ```
 Последний символ находится по индексу `length - 1`:
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// выводит o
 ```
 
 ---
@@ -30,9 +30,9 @@ console.log(word[word.length - 1]);
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// выводит HELLO
 console.log(word.toLowerCase());
-// prints hello
+// выводит hello
 ```
 Оба метода не принимают аргументов, поэтому не забывайте про скобки.
 
@@ -46,11 +46,11 @@ console.log(word.toLowerCase());
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// выводит true
 console.log(file.startsWith("ph"));
-// prints true
+// выводит true
 console.log(file.endsWith(".jpg"));
-// prints false
+// выводит false
 ```
 Сравнение чувствительно к регистру: `"Hello".includes("h")` — это `false`.
 
@@ -61,9 +61,9 @@ console.log(file.endsWith(".jpg"));
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// выводит 2
 console.log(word.indexOf("z"));
-// prints -1
+// выводит -1
 ```
 
 ---
@@ -72,9 +72,9 @@ console.log(word.indexOf("z"));
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// выводит Java
 console.log(word.slice(4));
-// prints Script
+// выводит Script
 ```
 Если опустить `end`, срез идёт до конца строки.
 Отрицательный индекс отсчитывается с конца: `word.slice(-3)` — это `"ipt"`.
@@ -87,5 +87,5 @@ console.log(word.slice(4));
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// выводит 45
 ```

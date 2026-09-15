@@ -16,7 +16,7 @@ title: Кратные 3 или 5
 Пример вызова функции:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// выводит 23
 ```
 
 # --seed--

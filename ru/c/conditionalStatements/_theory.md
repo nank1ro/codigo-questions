@@ -4,7 +4,7 @@
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // играть на улице
 }
 ```
 
@@ -14,7 +14,7 @@ if (nice_weather) {
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // играть на улице
 }
 ```
 Мы увидели, что оператор `if` выполняет блок кода только если условие равно `true`.
@@ -28,9 +28,9 @@ if (nice_weather) {
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // играть на улице
 } else {
-    // stay home
+    // остаться дома
 }
 ```
 

@@ -22,7 +22,7 @@ for (item in collection) {
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// выводит 1, 2, 3
 ```
 
 Вывод показывает, что индекс `i` получает каждое значение из диапазона от _1_ до _3_.
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* выводит
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ for (i in 3..1) println(i)
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// выводит 3, 2, 1
 ```
 
 `downTo` создаёт убывающий диапазон.
@@ -78,7 +78,7 @@ _Шаг_ диапазона по умолчанию равен __1__, но вы 
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// выводит 1, 3, 5, 7, 9
 ```
 
 Как видите, блок кода выполняется с шагом _2_ вместо _1_, что полностью меняет вывод.
@@ -88,7 +88,7 @@ for (i in 1..10 step 2) {
 Вы также можете создать диапазон _символов_.
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// выводит abcdefghijklmnopqrstuvwxyz
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 Вы можете перебирать __строку__.
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// выводит bdc
 ```
 
 В примере выше мы вывели каждый символ + 1, поэтому `'a'` становится `'b'`, `'b'` становится `'c'` и так далее.
@@ -113,7 +113,7 @@ for (char in 'abc') print(char + 1)
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// выводит repeat 3 раза
 ```
 
 Вы даже можете получить доступ к индексу с помощью
@@ -121,19 +121,19 @@ repeat(3) {
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// выводит 0, 1, 2
 ```
 
 ---
 
 В Kotlin мы также можем использовать `for-in` для итерируемых коллекций, вызывая данное замыкание для каждого элемента:
 ```kotlin
-// this is a list, we'll see about that soon
+// это список — скоро подробнее об этом
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// выводит (2, 4, 6, 8, 10)
 ```
 
 ---
@@ -142,7 +142,7 @@ for (num in numbers) {
 Он вызывает данное замыкание для каждого элемента последовательности в том же порядке, что и цикл `for-in`:
 
 ```kotlin
-// this is a list, we'll see about that soon
+// это список — скоро подробнее об этом
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// выводит: Cold
 ```
 
 Всегда выполняется ровно одна из двух ветвей.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// выводит: B
 ```
 
 ---
@@ -61,7 +61,7 @@ if (score >= 90) {
 ```dart
 int x = 10;
 String label = x > 0 ? 'positive' : 'non-positive';
-print(label); // positive
+print(label); // положительно
 ```
 
 Если условие равно `true`, используется `expr1`; в противном случае используется `expr2`.

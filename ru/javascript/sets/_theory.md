@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// выводит true
 console.log(colors.has("green"));
-// prints false
+// выводит false
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// выводит 2
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// выводит 1
 ```
 
 ---
@@ -46,13 +46,13 @@ letters.add("a").add("b");
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// выводит 3
 ```
 Оператор **расширения** `...` работает в обратную сторону и превращает set обратно в массив:
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// выводит [ 1, 2, 3 ]
 ```
 `Array.from(distinct)` делает то же самое.
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// выводит 3
+// выводит 1
+// выводит 2
 ```
 У sets также есть метод `forEach()`, который вызывает функцию для каждого значения:
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// выводит 30
+// выводит 10
+// выводит 20
 ```

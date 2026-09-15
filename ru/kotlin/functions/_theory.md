@@ -7,7 +7,7 @@ fun greet() {
 ```
 Чтобы вызвать (выполнить) функцию, используйте её имя с круглыми скобками:
 ```kotlin
-greet() // prints Hello!
+greet() // выводит Hello!
 ```
 Функция, которая не возвращает значение, неявно возвращает `Unit`.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 Ключевое слово `return` передаёт значение обратно вызывающему коду:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // выводит 42
 ```
 Тип возвращаемого значения должен соответствовать типу возвращаемого значения функции.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 Аргументы передаются при вызове функции:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // выводит Hello, Alice!
 ```
 Параметры позволяют писать многократно используемый код, работающий с разными значениями.
 
@@ -48,8 +48,8 @@ Kotlin поддерживает значения параметров по ум�
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // выводит Hello, World!
+greet("Alice")  // выводит Hello, Alice!
 ```
 Значения по умолчанию делают параметры необязательными, сокращая необходимость в перегрузке функций.
 
@@ -72,8 +72,8 @@ fun square(n: Int) = n * n
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // выводит true
+println(isEven(7)) // выводит false
 ```
 Функция `Boolean` возвращает `true` или `false`.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// выводит My name is Bob and I am 30 years old.
 ```
 Именованные аргументы позволяют передавать значения в любом порядке, используя имя параметра:
 ```kotlin

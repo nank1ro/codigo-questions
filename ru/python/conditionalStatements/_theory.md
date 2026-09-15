@@ -4,7 +4,7 @@
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # играть на улице
 ```
 
 ---
@@ -13,7 +13,7 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # играть на улице
 ```
 Мы видели, что оператор `if` выполняет блок кода только если условие равно `True`.
 Ещё один важный момент — это **двоеточие** `:` и **отступы**, которые обозначают начало блока кода.
@@ -30,9 +30,9 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # играть на улице
 else:
-    # stay home
+    # остаться дома
 ```
 
 ---

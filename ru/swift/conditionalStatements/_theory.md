@@ -4,7 +4,7 @@
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // играем на улице
 }
 ```
 
@@ -14,7 +14,7 @@ if niceWeather {
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // играем на улице
 }
 ```
 Мы видели, что оператор `if` выполняет блок кода только если условие равно `true`.
@@ -28,9 +28,9 @@ if niceWeather {
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // играем на улице
 } else {
-    // stay home
+    // остаёмся дома
 }
 ```
 

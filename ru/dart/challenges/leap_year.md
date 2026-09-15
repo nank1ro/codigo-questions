@@ -18,7 +18,7 @@ title: Високосный год
 Пример вызова функции:
 ```dart
 print(leapYear(2000));
-// prints true
+// выводит true
 ```
 
 # --seed--

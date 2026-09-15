@@ -20,7 +20,7 @@ title: Сортировка пузырьком
 Пример вызова функции:
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// выводит [ 1, 2, 3 ]
 ```
 
 # --before-seed--

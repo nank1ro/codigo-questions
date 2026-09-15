@@ -20,7 +20,7 @@ title: Двоичный поиск
 Пример вызова функции:
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// выводит 2
 ```
 
 # --seed--

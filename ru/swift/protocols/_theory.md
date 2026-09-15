@@ -217,7 +217,7 @@ struct Ticket: Priced {
     var price = 12
 }
 
-print(Ticket().price) // 12, not 0
+print(Ticket().price) // 12, а не 0
 ```
 Реализация по умолчанию лишь заполняет пробелы, которые тип оставляет открытыми.
 

@@ -28,7 +28,7 @@ title: Капли дождя
 Пример вызова функции:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// выводит "Plong"
 ```
 
 # --seed--

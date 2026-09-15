@@ -16,7 +16,7 @@ title: Среднее арифметическое
 Пример вызова функции:
 ```javascript
 console.log(mean([1, 2, 3]));
-// prints 2.0
+// выводит 2.0
 ```
 
 # --before-seed--

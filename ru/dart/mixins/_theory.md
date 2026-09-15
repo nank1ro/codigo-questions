@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0, у b свой собственный count
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // это единственный способ его использовать
 ```
 
 Имя при этом по-прежнему работает как тип, поэтому `Team() is Scored` и `Scored s = Team();` вполне допустимы. У миксина нет конструктора, поэтому non-nullable поле должно инициализироваться в месте объявления (или быть помечено `late`), как `int score = 0;` выше.
@@ -82,7 +82,7 @@ class Team with Scored {}      // this is the only way to use it
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // без тела: класс предоставляет его
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B, последний миксин в списке
+  print(Second().who()); // A, последний миксин в списке
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // формат берётся из Starred
+class Simple with Starred, Plain {} // формат берётся из Plain
 ```
 
 Члены, которые объявляет только один миксин, никогда не конкурируют: они доступны при любом порядке. Читай `with X, Y` как «начни с `X`, затем позволь `Y` переопределить его».
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // работает: это класс
+class Record extends Serializable {} // работает: это класс
+class Row with Serializable {}       // работает: это миксин
 ```
 
 `mixin class` платит за эту гибкость двумя ограничениями: он должен наследовать `Object`, поэтому не может иметь собственного условия `extends`, и не должен объявлять конструктор, потому что миксин никогда не запускает конструкторы.

@@ -16,7 +16,7 @@ title: Наибольшее произведение в последовател
 Пример вызова функции:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// выводит 5832
 ```
 
 # --seed--

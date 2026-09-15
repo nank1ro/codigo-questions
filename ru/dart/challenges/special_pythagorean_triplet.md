@@ -18,7 +18,7 @@ title: Особая пифагорова тройка
 Пример вызова функции:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// выводит 60
 ```
 
 # --seed--

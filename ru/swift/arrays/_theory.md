@@ -25,15 +25,15 @@ arrayName[index]
 Вы видели, как получить доступ к индексу массива вот так:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// Выводит значение "Jeremiah"
 print(names[0])
 ```
 А вот как работает присвоение:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// Присваиваем новое значение "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// Выводит значение "Jordan"
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ print(names[0])
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// Выводит ["a", "b", "c"]
 ```
 
 ---
@@ -62,7 +62,7 @@ print(letters)
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// выводит [2, 3]
 ```
 Сначала мы создаём массив `numbers`.
 Затем мы берём подмножество массива и сохраняем его в массив slice.
@@ -73,9 +73,9 @@ print(slice)
 
 В Swift мы можем делать срезы массива как угодно!
 ```swift
-// Grabs the first two items
+// Берём первые два элемента
 listName[..<2]
-// Grabs the fourth through last items
+// Берём элементы с четвёртого до последнего
 listName[3...]
 ```
 Если срез массива включает самый первый или последний элемент, индекс для этого элемента можно не указывать
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// выводит 1
 ```
 Код выше выводит первый индекс, содержащий строку `"Zac"`, в данном случае `1`.
 Мы также можем вставлять элементы в массив по определённому индексу с помощью метода `insert()`:
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// выводит ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 Код выше вставляет `"Ali"` по индексу `1`, что сдвигает все элементы после этого индекса на 1 позицию вниз
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3 
+// выводит 1, 2, 3 
 ```
 После ключевого слова `for` следует имя переменной, которой поочерёдно будет присваиваться значение каждого элемента массива.
 

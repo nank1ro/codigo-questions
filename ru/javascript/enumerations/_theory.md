@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// выводит red
 ```
 По соглашению объект объявляется с помощью `const`, его имя начинается с заглавной буквы, а имена членов записываются в формате `UPPER_CASE`, точно так же, как и другие константы.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// выводит done
 ```
 После заморозки объект также не может получить новые свойства, а `Object.isFrozen(obj)` сообщает, был ли объект заморожен:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// выводит true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// выводит s
 console.log(Size.MEDIUM);
-// prints undefined
+// выводит undefined
 ```
 В любом случае перечисление сохраняет заданные вами значения, а это именно то, что нужно от набора констант.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// выводит true
 ```
 Компромисс — читаемость: вывод `Priority.HIGH` показывает `3`, что говорит гораздо меньше, чем сказала бы строка `"high"`.
 
@@ -70,14 +70,14 @@ console.log(Priority.HIGH > Priority.LOW);
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// выводит [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// выводит [ 'red', 'blue' ]
 ```
 Сочетание `Object.values()` с методом массива `includes()` — стандартный способ проверить, является ли произвольное значение, например считанное из пользовательского ввода, допустимым членом:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// выводит true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// выводит false
 ```

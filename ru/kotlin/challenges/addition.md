@@ -16,7 +16,7 @@ title: Сложение
 Пример вызова функции:
 ```kotlin
 println(addition(1, 2))
-// prints 3
+// выводит 3
 ```
 
 # --seed--

@@ -40,9 +40,9 @@ print("hello".contains(#/\w+\s\w+/#))       // false
 - `$` означает «конец текста»
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, текст начинается с sw
+print("myswift".contains(#/^sw/#)) // false, sw не в начале
+print("swift".contains(#/ft$/#))  // true, текст заканчивается на ft
 ```
 Якоря соответствуют позиции, а не символу, поэтому они ничего не добавляют к содержимому совпадения.
 
