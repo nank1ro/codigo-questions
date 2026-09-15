@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 を出力
 ```
 **アロー関数**は同じものをより短く書く方法です。`function`キーワードを省き、パラメータリストと本体の間に「ファットアロー」`=>`を置きます：
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 を出力
 ```
 アロー関数は通常`const`に格納されるため、名前が誤って再代入されることはなく、他の関数とまったく同じように呼び出されます。
 
@@ -23,13 +23,13 @@ console.log(add(2, 3));
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// 5 を出力
 ```
 **パラメータが1つだけ**の場合は、その周りの括弧も省略できます：
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// 8 を出力
 ```
 パラメータが0個、または2個以上の場合は括弧が必要です：`() => 42`と`(a, b) => a + b`。
 
@@ -39,14 +39,14 @@ console.log(double(4));
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// undefined を出力
 ```
 ここで`{ name: name }`は、ラベル`name:`とその後の式`name`を含むブロックです。何も返されないため、呼び出しは`undefined`になります。
 1行でオブジェクトリテラルを返すには、**括弧**で囲んでJavaScriptに式として扱わせます：
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// { name: 'Ana' } を出力
 ```
 
 ---
@@ -55,13 +55,13 @@ console.log(make("Ana"));
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// 30 を出力
 ```
 パラメータを持たないアロー関数は、空の括弧`()`で始まります：
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// {} を出力
 ```
 
 ---
@@ -71,9 +71,9 @@ console.log(empty());
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// [ 10, 20, 30, 40 ] を出力
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// [ 3, 4 ] を出力
 ```
 どちらも新しい配列を返し、元の配列はそのままなので、`numbers.filter(...).map(...)`のようにチェーンできます。
 
@@ -85,10 +85,10 @@ console.log(numbers.filter((n) => n > 2));
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// 1、2、3を3行に出力
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// 6 を出力
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// [ 50, 70, 90 ] を出力
 console.log(scores.find((s) => s > 60));
-// prints 70
+// 70 を出力
 ```
 
 ---
@@ -111,9 +111,9 @@ console.log(scores.find((s) => s > 60));
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// Hello, World! を出力
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// Hello, Ana! を出力
 ```
 デフォルト値を持つパラメータは、それが唯一のパラメータであっても必ず括弧が必要です：`name = "World" => ...`は構文エラーです。
 
@@ -123,7 +123,7 @@ console.log(greet("Ana"));
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// 3 を出力
 ```
 通常の関数には、受け取ったすべての引数を保持する隠れた配列風の`arguments`オブジェクトもあります。アロー関数には**ありません**。アロー関数の中では、`arguments`は外側の関数の`arguments`を参照するか、まったく存在しません。アロー関数で「すべての引数」が必要なときは、レストパラメータを使いましょう。
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// 1 を出力
 console.log(next());
-// prints 2
+// 2 を出力
 ```
 他の誰も`count`を読んだりリセットしたりできません。`count`は返された関数の中にだけ存在します。2回目の`makeCounter()`の呼び出しは、独自の`count`を持つ独立したカウンターを作ります。
 
@@ -154,8 +154,8 @@ console.log(next());
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// 15 を出力
 console.log(makeAdder(1)(5));
-// prints 6
+// 6 を出力
 ```
 左から右に読みます。`makeAdder`は`amount`を受け取り、`(n) => n + amount`（クロージャを通して`amount`をキャプチャするアロー関数）を返します。`makeAdder(1)(5)`は返された関数をすぐに呼び出します。

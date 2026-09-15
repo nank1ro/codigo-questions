@@ -154,5 +154,5 @@ print(unique)  # {1, 2, 3}
 内包表記はまた、lambdaを使った `map()` や `filter()` のほとんどの用途を置き換えます。
 ```python
 doubled = list(map(lambda n: n * 2, nums))
-doubled = [n * 2 for n in nums]  # same result, easier to read
+doubled = [n * 2 for n in nums]  # 結果は同じで、読みやすい
 ```

@@ -3,16 +3,16 @@ JavaScriptには「ここには値がない」ことを表す方法が2つあり
 ```javascript
 let city;
 console.log(city);
-// prints undefined
+// undefined を出力
 const user = { name: "Ana" };
 console.log(user.age);
-// prints undefined
+// undefined を出力
 ```
 `null`は「空であることを、自分はわかっている」と意図的にあなたが代入する値です:
 ```javascript
 let owner = null;
 console.log(owner);
-// prints null
+// null を出力
 ```
 つまり`undefined`は通常、何かが欠けていることを言語が伝えているものであり、`null`はプログラマーが何かを意図的に空にしていることを示すものです。
 
@@ -25,7 +25,7 @@ function greet(name) {
   console.log(name);
 }
 greet();
-// prints undefined
+// undefined を出力
 ```
 関数が**`return`なしで**(または`return;`のみで)終わると、呼び出しの結果は`undefined`になります:
 ```javascript
@@ -34,7 +34,7 @@ function log(message) {
 }
 const result = log("hi");
 console.log(result);
-// prints hi, then undefined
+// hiを出力、続いてundefined
 ```
 `null`を明示的に渡すことは引数を省略することと同じではないことに注意してください: `greet(null)`は`null`を出力します。`null`は関数に渡された実際の値だからです。
 
@@ -44,12 +44,12 @@ console.log(result);
 ```javascript
 let city;
 console.log(typeof city);
-// prints undefined
+// undefined を出力
 ```
 しかし`null`に対しては`"object"`と答えます。これはJavaScriptの最初のバージョンからのバグで、あまりに多くのコードがそれに依存しているため修正されることはありませんでした:
 ```javascript
 console.log(typeof null);
-// prints object
+// object を出力
 ```
 したがって`typeof`は`undefined`を検出する確実な方法ですが、`null`の検出には使えません。`null`を調べるには、直接比較します: `value === null`。
 
@@ -59,16 +59,16 @@ console.log(typeof null);
 **緩い**等価演算子`==`は両者を同じものとして扱い、`0`、`""`、`false`を含む他のどの値とも異なるものとみなします:
 ```javascript
 console.log(null == undefined);
-// prints true
+// true を出力
 console.log(null == 0, undefined == "");
-// prints false false
+// false false を出力
 ```
 **厳密**等価演算子`===`は型も比較しますが、`null`と`undefined`は型が異なります:
 ```javascript
 console.log(null === undefined);
-// prints false
+// false を出力
 console.log(null === null);
-// prints true
+// true を出力
 ```
 
 ---
@@ -83,9 +83,9 @@ function show(value) {
   return "present";
 }
 console.log(show(null), show(undefined));
-// prints missing missing
+// missing missing を出力
 console.log(show(0), show(""));
-// prints present present
+// present present を出力
 ```
 これは`===`よりも`==`が好まれる唯一のケースです: `value === null || value === undefined`と書いてもまったく同じ働きをしますが、より長くなるだけです。
 `0`、`""`、`false`などの値は`null`では*ありません*: それらはたまたまfalsyな実際の値です。
@@ -101,9 +101,9 @@ console.log(user.address.city);
 `user.address`は`undefined`であり、`undefined`にはプロパティがありません。**オプショナルチェーン**演算子`?.`がこれを解決します: 左側の値が`null`または`undefined`の場合、式全体がそこで止まり、スローする代わりに`undefined`と評価されます:
 ```javascript
 console.log(user.address?.city);
-// prints undefined
+// undefined を出力
 console.log(user.name?.length);
-// prints 3
+// 3 を出力
 ```
 左側に値がある場合、`?.`は通常の`.`とまったく同じように動作します。いくつでも連鎖できます: `user.address?.street?.name`は、どこかのリンクが欠けている時点で`undefined`を返します。
 
@@ -114,16 +114,16 @@ console.log(user.name?.length);
 ```javascript
 const post = { tags: ["js", "node"] };
 console.log(post.tags?.[0]);
-// prints js
+// js を出力
 const empty = {};
 console.log(empty.tags?.[0]);
-// prints undefined
+// undefined を出力
 ```
 `?.()`は関数が存在する場合にのみ呼び出します。これはオプションのコールバックに便利です:
 ```javascript
 const task = { name: "build" };
 task.onDone?.();
-// nothing happens, no error
+// 何も起きない、エラーもない
 ```
 どの形式でも、チェックは`?.`の**直前の**値に適用されます: `post?.tags?.[0]`は`post`自体が`null`や`undefined`でも安全です。
 
@@ -135,12 +135,12 @@ task.onDone?.();
 ```javascript
 const count = 0;
 console.log(count || 10);
-// prints 10
+// 10 を出力
 console.log(count ?? 10);
-// prints 0
+// 0 を出力
 let name;
 console.log(name ?? "Guest");
-// prints Guest
+// Guest を出力
 ```
 `0`、`""`、`false`が保持すべき正当な値である場合は`??`を使い、すべてのfalsyな値を本当に置き換えたい場合は`||`を使ってください。
 
@@ -156,7 +156,7 @@ const options = { retries: 0 };
 options.retries ??= 3;
 options.timeout ??= 1000;
 console.log(options);
-// prints { retries: 0, timeout: 1000 }
+// { retries: 0, timeout: 1000 } を出力
 ```
 `retries`は`0`がnullishではないため`0`のままです; `timeout`は存在しなかったので`1000`を受け取ります。同じ考え方は`||`に対する`||=`にも存在し、こちらはすべてのfalsyな値を上書きします。
 
@@ -168,11 +168,11 @@ function repeat(text, times = 2) {
   return text.repeat(times);
 }
 console.log(repeat("ab"));
-// prints abab
+// abab を出力
 console.log(repeat("ab", undefined));
-// prints abab
+// abab を出力
 console.log(repeat("ab", null));
-// prints an empty string, because null is converted to 0
+// 空の文字列を出力、nullは0に変換されるため
 ```
 デフォルト引数は`undefined`のルールに従いますが、`??`は`null`と`undefined`の両方をカバーします: 関数がどのように呼ばれるかに合わせて選んでください。
 
@@ -196,12 +196,12 @@ function cityOf(user) {
 const products = [{ name: "pen", price: 2 }];
 const found = products.find((p) => p.name === "ink");
 console.log(found);
-// prints undefined
+// undefined を出力
 ```
 ここで`found.price`を読むとスローしてしまうため、`?.`と`??`は`find`の自然な相棒です:
 ```javascript
 console.log(products.find((p) => p.name === "ink")?.price ?? "no price");
-// prints no price
+// no price を出力
 ```
 
 ---
@@ -211,12 +211,12 @@ JSONには`null`という値はありますが`undefined`はありません。�
 ```javascript
 const user = { name: "Ana", nickname: undefined, email: null };
 console.log(JSON.stringify(user));
-// prints {"name":"Ana","email":null}
+// {"name":"Ana","email":null} を出力
 ```
 配列の中では位置を消すことができないため、そこでは`undefined`は`null`になります:
 ```javascript
 console.log(JSON.stringify([1, undefined, 3]));
-// prints [1,null,3]
+// [1,null,3] を出力
 ```
 
 ---
@@ -226,8 +226,8 @@ console.log(JSON.stringify([1, undefined, 3]));
 ```javascript
 const config = { debug: undefined };
 console.log(config.debug === undefined, config.level === undefined);
-// prints true true
+// true true を出力
 console.log(Object.hasOwn(config, "debug"), Object.hasOwn(config, "level"));
-// prints true false
+// true false を出力
 ```
 「自身の」とは、オブジェクト自体に宣言されたことを意味します: `toString`のような継承されたメンバーはすべてのオブジェクトで利用できますが、`Object.hasOwn(config, "toString")`は`false`です。

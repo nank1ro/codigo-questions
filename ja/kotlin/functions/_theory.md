@@ -7,7 +7,7 @@ fun greet() {
 ```
 関数を呼び出す（実行する）には、名前の後に括弧を付けます:
 ```kotlin
-greet() // prints Hello!
+greet() // Hello! を出力
 ```
 値を返さない関数は暗黙的に `Unit` を返します。
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 `return` キーワードは呼び出し元に値を返します:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // 42 を出力
 ```
 戻り値の型は返す値の型と一致しなければなりません。
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 関数を呼び出すときに引数を渡します:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // Hello, Alice! を出力
 ```
 パラメータを使うと、異なる値に対して動作する再利用可能なコードを書くことができます。
 
@@ -48,8 +48,8 @@ Kotlinはデフォルトパラメータ値をサポートしています。呼�
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // Hello, World! を出力
+greet("Alice")  // Hello, Alice! を出力
 ```
 デフォルト値によりパラメータをオプションにできるため、オーバーロードされた関数の必要性が減ります。
 
@@ -72,8 +72,8 @@ fun square(n: Int) = n * n
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // true を出力
+println(isEven(7)) // false を出力
 ```
 `Boolean` 関数は `true` または `false` を返します。
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// My name is Bob and I am 30 years old. を出力
 ```
 名前付き引数を使うと、パラメータ名を使って任意の順序で値を渡すことができます:
 ```kotlin

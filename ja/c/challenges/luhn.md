@@ -27,7 +27,7 @@ Luhnアルゴリズムは、クレジットカード番号などの識別番号�
 関数呼び出しの例：
 ```c
 printf("%d\n", is_valid("095 245 88"));
-// prints true
+// true を出力する
 ```
 
 # --before-seed--

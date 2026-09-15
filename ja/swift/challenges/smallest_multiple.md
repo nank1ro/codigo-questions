@@ -16,7 +16,7 @@ title: 最小公倍数
 関数呼び出しの例:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// 2520 を出力
 ```
 
 # --before-seed--

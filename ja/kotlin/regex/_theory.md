@@ -12,7 +12,7 @@ val b = "cat".toRegex()
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false、その文字は数字ではない
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches`はしばしば厳しすぎます。通常は、パターンがテキストの**どこかに**現れているかどうかを知りたいだけです。それが`containsMatchIn`です:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false、文字列全体が数字ではない
+println(digits.containsMatchIn("order 42"))  // true、"42" が含まれている
 ```
 `\d`のほかに、頻繁に使う2つの省略記法があります。`\w`は単語文字（英字、数字、`_`）、`\s`は空白文字です。それぞれに**量指定子**で繰り返しを指定できます:
 - `+` 1個以上
@@ -31,7 +31,7 @@ println(digits.containsMatchIn("order 42"))  // true, "42" is in there
 
 すべてのバックスラッシュを2重にするのは読みにくいので、パターンは通常、三重引用符の**raw文字列**で書きます。そこでは`\`は単なる1文字です:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // Regex("\\d+") と同じ
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0`は一致全体です。置換の中でリテラルの`$`が必要なときは、`\$`とエスケープします。
 `replace`は**すべての**一致を書き換えるので、完全な文字列だけを書き換えたいときは、**アンカー**の`^`（テキストの先頭）と`$`（テキストの末尾）でパターンを固定します:
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two、何も置換されない
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 `. * + ? ( ) [ ] { } | ^ $ \` の各文字は、パターンの中では特別な意味を持ちます。最も落とし穴になりやすいのは`.`で、ドットではなく**任意の**1文字に一致します。文字そのものを表したいときは、バックスラッシュでエスケープします:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true、ドットが x にマッチする
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 探すテキストが変数から来ていて、リテラルとして扱う必要があるときは、`Regex.escape`でエスケープをライブラリに任せます:
@@ -180,7 +180,7 @@ println(value) // local
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true、数字は許可されない
 ```
 文字クラスで選べるのは1文字だけです。完全な選択肢の中から選ぶには`|`を使います。通常はグループで囲み、パターンの残りの部分を飲み込まないようにします:
 ```kotlin

@@ -16,7 +16,7 @@ title: 算術平均
 関数呼び出しの例:
 ```swift
 print(mean([1, 2, 3]))
-// prints 2.0
+// 2.0 を出力
 ```
 
 # --before-seed--

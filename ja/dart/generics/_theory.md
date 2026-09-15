@@ -11,7 +11,7 @@ List<int> scores = [10, 20];
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // OK: firstはString
 ```
 
 ---
@@ -39,8 +39,8 @@ Dartには `dynamic` という型もあります。これは「何でもあり�
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // 受け入れられる
+print(things.first.toUpperCase()); // 受け入れられる
 ```
 
 落とし穴は、コードを書いている間は何もチェックされないことです。`dynamic` の値に対するすべての呼び出しはプログラムの実行中に解決されるため、`things.first.toUpperCse()` のようなタイプミスでも問題なくコンパイルされ、ユーザーの目の前でクラッシュします。
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>、引数から推論される
+print(a.value + 1);      // 8、コンパイラはvalueがintだと分かっている
 ```
 
 文字そのものには意味がありません。`T` は「型」を表す慣習にすぎません。
@@ -78,14 +78,14 @@ print(a.value + 1);      // 8, the compiler knows value is an int
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig、ここでTはString
+print(firstOf([10, 20]));        // 10、ここでTはint
 ```
 
 1つの関数本体を一度チェックすれば、すべての型で再利用できます。型引数は通常は引数から推論されますが、推論する手がかりがないときは明示的に書くこともできます：
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // 例外をスローするが、型は明確
 ```
 
 クラスの中のメソッドもまったく同じルールに従います。
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 健全なnull安全のもとでは、クエスチョンマークが現れる場所は2つあり、それぞれ異なる意味を持ちます：
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // 存在し、null許容のintを保持するボックス
+Box<int>? b = null;      // ボックスが全くない、あるとすればintを保持する
 ```
 
 `Box<int?>` では**型引数**がnull許容なので、`a.value` の型は `int?` で `null` かもしれませんが、`a` 自体は常に存在します。`Box<int>?` では**変数**がnull許容なので、`b` は `null` かもしれず、中に入るには `b?.value` か `b!.value` が必要です。
@@ -146,10 +146,10 @@ Box<int>? b = null;      // no box at all, but if there is one it holds an int
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0、ボックスは存在し、その中身はnull
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0、ボックス自体が存在しない
 ```
 
 `Box<int>?` に対して `b.value` と書くとまったくコンパイルできません。Dartは存在しないかもしれないもののフィールドを読むことを拒否します。
@@ -187,7 +187,7 @@ num biggerOf<T extends num>(T a, T b) => a > b ? a : b;
 境界は型パラメータ自身に言及することもできます。`Comparable<T>` は、`compareTo` を通じて自分と同じ種類のものと比較する方法を知っているすべてのもののインターフェースです：
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // 負: figが先
 print('kiwi'.compareTo('fig')); // positive
 print('fig'.compareTo('fig'));  // zero
 ```

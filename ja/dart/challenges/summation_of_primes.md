@@ -16,7 +16,7 @@ title: 素数の総和
 関数呼び出しの例:
 ```dart
 print(primeSummation(10));
-// prints 17
+// 出力: 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ void main() {
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // エラトステネスの篩
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

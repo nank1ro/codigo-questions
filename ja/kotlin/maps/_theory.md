@@ -5,7 +5,7 @@
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// {Italy=Rome, France=Paris} を出力
 ```
 ここで`"Italy"`と`"France"`がキーで、`"Rome"`と`"Paris"`がそれぞれの値です。
 
@@ -38,10 +38,10 @@ println(ages.getOrDefault("Zoe", 0))   // 0
 `mapOf`で作成したマップは読み取り専用です。エントリを追加または変更するには`mutableMapOf`を使います。これは`MutableMap`を返します：
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // 新しいエントリを追加
+ages["Alice"] = 31 // 既存のものを更新
 println(ages)
-// prints {Alice=31, Bob=25}
+// {Alice=31, Bob=25} を出力
 ```
 `map[key] = value`で代入すると、キーが新しい場合はペアが追加され、キーが既に存在する場合は値が置き換えられます。同じことをする`ages.put("Bob", 25)`を呼び出すこともできます。
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// 出力:
 // Alice is 30
 // Bob is 25
 ```

@@ -2,7 +2,7 @@
 Dartでは`+`記号（連結）を使って、2つ以上の文字列を一緒に表示できます。例えば：
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// 出力: "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ print("Hello " + "Dart!");
 `${}`の中に条件を入れることもできます。例えば：
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// 出力: The answer is correct
 ```
 
 ---

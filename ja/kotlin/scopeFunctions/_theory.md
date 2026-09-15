@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` は作ったばかりのオブジェクトに限定されません。任意のオブジェクトに対して動作し、オブジェクトを返すので、オブジェクトが期待される場所ならどこでも式全体を使えます。
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // box を変更して返す
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 ブロックは普通のコードブロックなので、必要な数の文を含められます。

@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0、bは独自のcountを持つ
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // これがそれを使う唯一の方法
 ```
 
 名前は型として引き続き機能するので、`Team() is Scored` も `Scored s = Team();` もどちらも問題ありません。ミックスインにはコンストラクタがないため、非null許容のフィールドは上の `int score = 0;` のように、宣言した場所で初期化する（または `late` を付ける）必要があります。
@@ -82,7 +82,7 @@ class Team with Scored {}      // this is the only way to use it
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // 本体なし: クラスが提供する
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B、リストの最後のミックスイン
+  print(Second().who()); // A、リストの最後のミックスイン
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // formatはStarred由来
+class Simple with Starred, Plain {} // formatはPlain由来
 ```
 
 1つのミックスインだけが宣言しているメンバーは決して競合しません。順序にかかわらず利用できます。`with X, Y` は「`X` から始めて、`Y` にそれを上書きさせる」と読みます。
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // 動作する: クラスである
+class Record extends Serializable {} // 動作する: クラスである
+class Row with Serializable {}       // 動作する: ミックスインである
 ```
 
 `mixin class` はその柔軟性の代償として2つの制約を払います。`Object` を継承しなければならないため自分の `extends` 句を持てず、コンストラクタを宣言してはなりません。ミックスインはコンストラクタを決して実行しないからです。

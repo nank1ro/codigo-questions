@@ -54,7 +54,7 @@ print(len(letters))  # 3
 - `discard(value)` は存在すれば削除し、存在しなくても**何もせず**エラーになりません
 ```python
 letters.remove("a")
-letters.discard("z")  # "z" is not there, but no error
+letters.discard("z")  # "z" は存在しないが、エラーにはならない
 letters.remove("z")   # KeyError: 'z'
 ```
 
@@ -84,7 +84,7 @@ for color in {"red", "blue"}:
 決まった順序が必要な場合は、セットを `sorted()` に渡してください。これは要素を並べ替えた**リスト**を返します：
 ```python
 for color in sorted({"red", "blue"}):
-    print(color)  # blue, then red
+    print(color)  # blue、次に red
 ```
 
 ---
@@ -158,7 +158,7 @@ print(small.isdisjoint({8, 9}))  # True
 リスト、辞書、または別のセットを追加しようとすると `TypeError` が発生します：
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # OK、タプルなので大丈夫
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 タプルのセットは、座標や (name, age) のような一意なペアを管理するのに便利です：

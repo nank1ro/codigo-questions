@@ -9,9 +9,9 @@ const pattern = /cat/;
 パターンでできる最も簡単なことは、それが文字列に現れるかどうかを尋ねることです。**`test`** メソッドはテキストを受け取り、`true` か `false` を返します:
 ```javascript
 console.log(/cat/.test("the cat sleeps"));
-// prints true
+// true を出力
 console.log(/cat/.test("the dog sleeps"));
-// prints false
+// false を出力
 ```
 `test` は文字列の*どこか*でパターンを探せばよく、文字列全体がマッチする必要はないことに注意してください。
 
@@ -24,14 +24,14 @@ console.log(/cat/.test("the dog sleeps"));
 
 ```javascript
 console.log(/\d/.test("room 12"));
-// prints true
+// true を出力
 console.log(/\d/.test("lobby"));
-// prints false
+// false を出力
 ```
 **量指定子**は、直前の部分が何回繰り返せるかを示します。最も一般的なのは「1つ以上」を意味する `+` です:
 ```javascript
 console.log(/\d+/.test("42"));
-// prints true
+// true を出力
 ```
 つまり `/\d/` は1桁の数字1つにマッチし、`/\d+/` は数字の連なりにマッチします。単純な `test` では、どちらも数字が1つあればよいので、同じように動作します。
 
@@ -42,12 +42,12 @@ console.log(/\d+/.test("42"));
 const word = "cat";
 const pattern = new RegExp(word);
 console.log(pattern.test("the cat sleeps"));
-// prints true
+// true を出力
 ```
 落とし穴が1つあります。文字列の中ではバックスラッシュは*文字列*のエスケープシーケンスを始めるため、正規表現がそれを見る前に消えてしまいます。パターンに本物のバックスラッシュを入れたい場合は、2つ重ねる必要があります:
 ```javascript
 const digits = new RegExp("\\d+");
-// the same pattern as /\d+/
+// /\d+/ と同じパターン
 ```
 代わりに `new RegExp("\d+")` と書くと、できあがるパターンは `/d+/` になり、これは数字ではなく文字 `d` にマッチします。
 
@@ -59,19 +59,19 @@ const digits = new RegExp("\\d+");
 
 **文字クラス**は角括弧で囲まれた文字の集合で、その中のどれか1文字にちょうどマッチします。ダッシュは範囲を表し、先頭の `^` は集合を否定します:
 ```javascript
-/[aeiou]/   // one vowel
-/[a-z]/     // one lowercase letter
-/[A-Z0-9]/  // one uppercase letter or one digit
-/[^0-9]/    // one character that is not a digit
+/[aeiou]/   // 母音1文字
+/[a-z]/     // 小文字1文字
+/[A-Z0-9]/  // 大文字1文字または数字1文字
+/[^0-9]/    // 数字ではない1文字
 ```
 **量指定子**は直前の部分が何回繰り返すかを示します: `+` は1つ以上、`*` は0個以上、`?` は0個か1個、`{n}` はちょうど `n` 回です。
 
 最後に、**アンカー**はパターンをテキストの端に結び付けます: `^` は「ここから始まる」、`$` は「ここで終わる」という意味です。これらがないとパターンは文字列内のどこでもマッチしうるので、`/\d{2}/.test("abc12def")` は `true` になります。両方のアンカーを付けると、文字列全体がマッチする必要があります:
 ```javascript
 console.log(/^\d{2}$/.test("abc12def"));
-// prints false
+// false を出力
 console.log(/^\d{2}$/.test("12"));
-// prints true
+// true を出力
 ```
 
 ---
@@ -87,9 +87,9 @@ const match = "order 42 shipped".match(/\d+/);
 
 ```javascript
 console.log(match[0]);
-// prints 42
+// 42 を出力
 console.log(match.index);
-// prints 6
+// 6 を出力
 ```
 結果は `null` になりうるので、`match[0]` を読む前に必ず確認してください。
 
@@ -118,11 +118,11 @@ return text.match(/[a-z]+/)?.[0] ?? "";
 ```javascript
 const match = "2026-09-12".match(/(\d{4})-(\d{2})-(\d{2})/);
 console.log(match[0]);
-// prints 2026-09-12
+// 2026-09-12 を出力
 console.log(match[1]);
-// prints 2026
+// 2026 を出力
 console.log(match[3]);
-// prints 12
+// 12 を出力
 ```
 つまり `match[0]` は常にマッチ全体で、`match[1]`、`match[2]`、... がグループです。パターンがまったくマッチしなければ、グループがあっても `match` 全体が `null` を返します。
 
@@ -132,7 +132,7 @@ console.log(match[3]);
 ```javascript
 const minutes = "at 14:35:02".match(/\d{2}:(\d{2}):\d{2}/)?.[1];
 console.log(minutes);
-// prints 35
+// 35 を出力
 ```
 パターン全体はマッチする必要があるので、時と秒も依然として要求されます。単にキャプチャされないだけです。グループが少ないほど、`match[1]`、`match[2]` などを読むときに追いかける番号が少なくて済みます。
 
@@ -142,9 +142,9 @@ console.log(minutes);
 ```javascript
 const match = "2026-09-12".match(/(?<year>\d{4})-(?<month>\d{2})-\d{2}/);
 console.log(match.groups.year);
-// prints 2026
+// 2026 を出力
 console.log(match.groups.month);
-// prints 09
+// 09 を出力
 ```
 名前付きグループにも番号は付くので `match[1]` は引き続き動作しますが、`match.groups.year` はその値が何を意味するのかを教えてくれます。パターンに名前付きグループがまったくないとき、`match.groups` は `undefined` です。
 
@@ -158,9 +158,9 @@ console.log(match.groups.month);
 ```javascript
 const numbers = "a1 b22 c333".match(/\d+/g);
 console.log(numbers);
-// prints [ '1', '22', '333' ]
+// [ '1', '22', '333' ] を出力
 console.log(numbers.length);
-// prints 3
+// 3 を出力
 ```
 フラグは `/cat/gi` のように任意の順序で組み合わせられます。`RegExp` コンストラクタでは第2引数に指定します: `new RegExp("\\d+", "g")`。
 
@@ -172,8 +172,8 @@ const text = "a=1;b=2";
 for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
   console.log(`${match.groups.key} -> ${match.groups.value}`);
 }
-// prints a -> 1
-// prints b -> 2
+// a -> 1 を出力
+// b -> 2 を出力
 ```
 `matchAll` には `g` フラグが必要で、なければ `TypeError` が発生します。イテレータを返すので、本物の配列が欲しいときは `[...text.matchAll(pattern)]` とスプレッドしてください。また、パターンが一度もマッチしないときは何も生成しないことにも注意してください。
 
@@ -182,7 +182,7 @@ for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
 **`replace`** は、マッチを別のものに置き換えた新しい文字列を返します。元の文字列は決して変更されません。
 ```javascript
 console.log("the cat sleeps".replace(/cat/, "dog"));
-// prints the dog sleeps
+// the dog sleeps を出力
 ```
 置換文字列の中では、いくつかのシーケンスが特別な意味を持ちます:
 - `$1`、`$2`、... グループ1、グループ2、... がキャプチャしたテキスト
@@ -192,7 +192,7 @@ console.log("the cat sleeps".replace(/cat/, "dog"));
 これこそが `replace` を、単なる置き換えではなく書き換えツールにしています:
 ```javascript
 console.log("2026-09-12".replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1"));
-// prints 12/09/2026
+// 12/09/2026 を出力
 ```
 `g` フラグがないと、**最初の**マッチだけが置き換えられます。
 
@@ -201,9 +201,9 @@ console.log("2026-09-12".replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1"));
 最初の1つではなく**すべての**マッチを書き換える方法は2つあります:
 ```javascript
 console.log("a1 b2".replace(/\d/g, "#"));
-// prints a# b#
+// a# b# を出力
 console.log("a1 b2".replaceAll(/\d/g, "#"));
-// prints a# b#
+// a# b# を出力
 ```
 **`replaceAll`** の方が2つのうち分かりやすく、パターンとして普通の文字列も受け付けます。正規表現を渡すとき、その正規表現は `g` フラグを**必ず**持っている必要があります。そうでなければ `TypeError` が発生します。これはまさに、`replace` と書いてしまい最初のマッチだけを直すという見えないバグを防ぐ仕組みです。
 
@@ -214,10 +214,10 @@ console.log("a1 b2".replaceAll(/\d/g, "#"));
 関数はまずマッチ全体を受け取り、その後に各キャプチャグループを受け取ります:
 ```javascript
 console.log("hello world".replace(/\w+/g, (word) => word.length));
-// prints 5 5
+// 5 5 を出力
 
 console.log("ann lee".replace(/(\w)(\w*)/g, (whole, first, rest) => first.toUpperCase() + rest));
-// prints Ann Lee
+// Ann Lee を出力
 ```
 マッチしたテキストから置換結果を計算できるのは、この方法だけです。`$1` だけではこれはできません。
 
@@ -226,9 +226,9 @@ console.log("ann lee".replace(/(\w)(\w*)/g, (whole, first, rest) => first.toUppe
 **`split`** は文字列を配列に切り分けます。普通の文字列を渡すとそのテキストそのもので切り分けますが、正規表現を渡すとパターンにマッチするたびに切り分けるので、1回の呼び出しで変化する区切り文字に対応できます:
 ```javascript
 console.log("a, b;c".split(", "));
-// prints [ 'a', 'b;c' ]
+// [ 'a', 'b;c' ] を出力
 console.log("a, b;c".split(/[,;]\s*/));
-// prints [ 'a', 'b', 'c' ]
+// [ 'a', 'b', 'c' ] を出力
 ```
 区切り文字そのものは結果には含まれません。文字列の先頭や末尾にある区切り文字には注意してください: その側に空のフィールドがあるため、配列の中に空文字列ができます。
 
@@ -240,8 +240,8 @@ console.log("a, b;c".split(/[,;]\s*/));
 ```javascript
 const text = "note a\nb\nnote c";
 console.log(text.match(/^note.*/g));
-// prints [ 'note a' ]
+// [ 'note a' ] を出力
 console.log(text.match(/^note.*/gm));
-// prints [ 'note a', 'note c' ]
+// [ 'note a', 'note c' ] を出力
 ```
 ここで重要な詳細が2つあります。デフォルトでは `.` は改行にマッチしないので（それを変えるのは `s` フラグだけです）、`.*` はそれだけで行末で止まります。また、`g` フラグ付きの `match` は、何もマッチしないときに空の配列ではなく `null` を返すので、配列を返すと約束するときは `?? []` と組み合わせてください。

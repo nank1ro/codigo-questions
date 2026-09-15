@@ -40,9 +40,9 @@ print("hello".contains(#/\w+\s\w+/#))       // false
 - `$`は「テキストの末尾」を意味します
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true、テキストは sw で始まる
+print("myswift".contains(#/^sw/#)) // false、sw が先頭にない
+print("swift".contains(#/ft$/#))  // true、テキストは ft で終わる
 ```
 アンカーは文字ではなく位置にマッチするので、マッチの内容には何も追加しません。
 

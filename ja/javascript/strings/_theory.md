@@ -3,7 +3,7 @@
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// 5 を出力
 ```
 スペースや句読点も文字としてカウントされます。
 
@@ -14,14 +14,14 @@ console.log(greeting.length);
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// h を出力
 console.log(word.charAt(1));
-// prints e
+// e を出力
 ```
 最後の文字はインデックス`length - 1`にあります:
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// o を出力
 ```
 
 ---
@@ -30,9 +30,9 @@ console.log(word[word.length - 1]);
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// HELLO を出力
 console.log(word.toLowerCase());
-// prints hello
+// hello を出力
 ```
 どちらのメソッドも引数を取らないので、括弧を忘れないでください。
 
@@ -46,11 +46,11 @@ console.log(word.toLowerCase());
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// true を出力
 console.log(file.startsWith("ph"));
-// prints true
+// true を出力
 console.log(file.endsWith(".jpg"));
-// prints false
+// false を出力
 ```
 比較は大文字・小文字を区別します: `"Hello".includes("h")`は`false`です。
 
@@ -61,9 +61,9 @@ console.log(file.endsWith(".jpg"));
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// 2 を出力
 console.log(word.indexOf("z"));
-// prints -1
+// -1 を出力
 ```
 
 ---
@@ -72,9 +72,9 @@ console.log(word.indexOf("z"));
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// Java を出力
 console.log(word.slice(4));
-// prints Script
+// Script を出力
 ```
 `end`を省略すると、文字列の末尾まで切り出されます。
 負のインデックスは末尾から数えます: `word.slice(-3)`は`"ipt"`です。
@@ -87,5 +87,5 @@ console.log(word.slice(4));
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// 45 を出力
 ```

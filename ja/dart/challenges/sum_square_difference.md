@@ -20,7 +20,7 @@ title: 和の二乗と二乗の和の差
 関数呼び出しの例:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// 出力: 2640
 ```
 
 # --seed--

@@ -52,8 +52,8 @@ Future<int> lengthInIsolate(String text) {
 `Isolate.run` は**並列性**を与えます。2つ目のプロセッサコアに2つ目の isolate があり、1つ目と同じ瞬間にそれぞれのコードを実行します。計算のための正しい道具です。
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // 待機中: 空いているコアがない
+await Isolate.run(() => hugeCalculation());       // 計算中: 別のコアが使用中
 ```
 
 遅い計算を `await` しても何の役にも立ちません。`await bigSum()` は `bigSum` を現在の isolate の上で実行し、最後の行までそれをブロックします。その処理をどこかへ追い出せるのは、2つ目の isolate だけです。
@@ -258,7 +258,7 @@ isolate はメモリを共有しないので、すべてのメッセージは渡
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // コピーが大きくなる
 print(numbers);                           // [1, 2, 3]
 ```
 

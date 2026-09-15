@@ -11,7 +11,7 @@ var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 
 キーを使って辞書の値にアクセスする方法は、インデックスを使って配列の値にアクセスする方法と同じです:
 ```swift
-// gets the age value from the user dictionary
+// user 辞書から age の値を取得する
 user['age']
 ```
 
@@ -34,7 +34,7 @@ dictName[newKeyName] = newValue
 辞書は変更可能なので、様々な方法で変更できます。`removeValue(forKey:)`メソッドを使って辞書から要素を削除できます:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // キーが存在する場合、削除された値を出力する
 }
 ```
 これにより、辞書からキー`keyName`とそれに関連付けられた値が削除されます。

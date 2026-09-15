@@ -16,7 +16,7 @@ title: 3または5の倍数
 関数呼び出しの例:
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// 23 を出力
 ```
 
 # --before-seed--

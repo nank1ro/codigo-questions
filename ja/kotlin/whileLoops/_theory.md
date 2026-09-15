@@ -5,7 +5,7 @@
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // 繰り返すコード
 }
 ```
 ブール式はループの最初に一度評価され、
@@ -46,7 +46,7 @@ while (counter < 100) { // [2]
 _while_ を使う2つ目の方法があります。`do` キーワードと組み合わせて使います。
 ```kotlin
 do {
-  // Code to be repeated
+  // 繰り返すコード
 } while (Boolean-expression)
 ```
 ご覧の通り、`do-while` は `while` ループにとても似ていますが、1つの重要な違いがあります:
@@ -71,7 +71,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// 1, 3 を出力
 ```
 
 __[1]__ でご覧の通り、`i` が _2_ に等しいとき、スキップして次のステップに _continue_ します。実際に数字の2は表示されません。
@@ -86,7 +86,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// 1 を出力
 ```
 
 __[1]__ でご覧の通り、`i` が _2_ に等しいとき、ループを _break_ します。実際に数字の2と3は表示されません。

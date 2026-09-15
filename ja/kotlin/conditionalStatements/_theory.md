@@ -4,7 +4,7 @@
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 }
 ```
 `if` 文は条件が `true` の場合にのみコードブロックを実行することを見てきました。
@@ -28,9 +28,9 @@ Kotlinでは `else` 文を使用できます：
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // 外で遊ぶ
 } else {
-    // stay home
+    // 家にいる
 }
 ```
 

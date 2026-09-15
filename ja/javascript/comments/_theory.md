@@ -2,7 +2,7 @@
 
 最も単純なコメントは**単一行コメント**です。`//` で始まり、その行の終わりまで続きます。
 ```javascript
-// Greets the user
+// ユーザーに挨拶する
 console.log("Hello");
 ```
 コメントは、そのコードが何のためにあるのか、なぜそう書かれたのかを説明するために使います。他の言語とは違い、JavaScript では `#` はコメントを開始**しない**ことに注意してください。
@@ -11,7 +11,7 @@ console.log("Hello");
 
 コメントは専用の行である必要はありません。同じ行のコードの後ろに続けることもできます。これが**インラインコメント**（行末コメント）で、その文についての短いメモを書くのに適した場所です。
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // 3回試したら諦める
 ```
 `//` から行末までのすべてが無視され、その前にあるコードはいつもどおり実行されます。
 
@@ -23,7 +23,7 @@ const retries = 3; // give up after three attempts
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // 10 を出力
 ```
 2 行目はコメントになったので、`total` は `10` のままです。`//` を取り除けば、その行はまた生き返ります。
 
@@ -47,7 +47,7 @@ console.log("Welcome!");
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// aのみを出力
 ```
 プログラムが何を出力するか分からないときは、まず頭の中ですべてのコメントを消して、残ったものを読んでみましょう。
 
@@ -55,8 +55,8 @@ console.log("a"); // console.log("b");
 
 行末で終わる `//` とは違い、`/*` コメントは `*/` に出会うまで終わりません。閉じ忘れると、JavaScript はそれ以降のコードをすべてコメントの一部とみなし、構文エラーを報告します。
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* センチメートル単位
+console.log(width); // まだコメントの中: SyntaxError、コメントが閉じられていない
 ```
 `//` も `/* */` もインラインコメントとして使えますが、`/*` を使うときは必ず `*/` があることを確認してください。
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // 100 を出力
 ```
 ブロックの中の行は無視されるので、`total` は変化しません。これはそれらの行に `*/` が含まれていない場合にのみ有効であることを覚えておいてください。
 
@@ -158,12 +158,12 @@ JavaScript はこの行をコメントとまったく同じように無視しま
 
 良いコメントは、コードが**何を**するかではなく、**なぜ**そうするのかを説明します。何が起きるかはコード自体が示しています。それを言葉で繰り返すとノイズが増え、コードが変わった途端に古くなります。
 ```javascript
-// set timeout to 30
+// timeout を30に設定する
 const timeout = 30;
 ```
 その数字の背後にある理由こそ、読む人には推測できないものです。
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// サーバーは35秒後にアイドル接続を切断するため、早めに停止する
 const timeout = 30;
 ```
 コメントが下の行を言い換えているだけなら、削除するか、理由に置き換えましょう。
@@ -176,8 +176,8 @@ const timeout = 30;
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: 設定から上限を読み込む
+// FIXME: リストが空だとクラッシュする
 ```
 JavaScript にとってはふつうのコメントですが、エディタはこれらを一覧表示するので、残っている作業を見つけやすくなります。`TODO` はたいてい、本当の実装が書かれるまでコードを動かし続けるための仮実装のそばにあります。作業を終えたら、同じ変更の中で仮実装を置き換え、マーカーを削除してください。古くなった `TODO` は誤解を招きます。
 

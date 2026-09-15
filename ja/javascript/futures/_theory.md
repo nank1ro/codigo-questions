@@ -11,7 +11,7 @@ async function fetchNumber() {
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // 42 を出力
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// HI を出力
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// Promise { 'HI' } を出力
 ```
 2つの関数の中身は同じコードで、結果の読み取り方だけが異なります。`shoutLater("hi")`が`"HI"`を返すようにするには、別の`async`関数の中でawaitする必要があります。
 
@@ -52,7 +52,7 @@ const soon = new Promise((resolve) => {
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // doneを出力、約1秒後
 }
 
 main();
@@ -76,7 +76,7 @@ main();
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // 21 を出力
 });
 ```
 **`Promise.resolve(value)`**は`value`ですでに履行されたプロミスを作ります。値は手元にあるのにプロミスを返さなければならないときに便利です。
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// 42 を出力
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// startを出力、続いてdata、続いてdone
 ```
 最後の行に注目してください。`async`関数でも**呼び出す**必要があります。括弧なしで`main`と書くと、作業を定義するだけで決して開始されず、何も出力されません。
 
@@ -125,7 +125,7 @@ function readAge(age) {
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // negative age を出力
 });
 ```
 `resolve`と`reject`の両方を呼び出しても、どちらかを2回呼び出しても、何も変わりません。最初の呼び出しだけが意味を持ちます。
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// cleanupを出力、続いてerror: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ async function main() {
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() はError("boom")で拒否されるプロミスを返す
 ```
 どの`try`ブロックとも同じように、失敗した`await`の後の行はスキップされ、`catch`ブロックが実行され、どちらの場合でも`finally`ブロックが実行されます。
 
@@ -199,7 +199,7 @@ const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// true を出力
 ```
 返ってくる配列は、受け取った配列と常に同じ数の要素を同じ位置に持つので、他の配列と同じようにループできます。
 
@@ -207,11 +207,11 @@ console.log(values.length === items.length);
 
 **逐次**と**並列**の待機の違いは、`await`を*どこに*置くかで決まります：
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// 逐次: 約300 + 300 = 600ms
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// 並列: 約300ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 最初のバージョンでは、`await`がその行で関数を一時停止するため、2番目のダウンロードは1番目が終わってから始まります。2番目のバージョンでは、何かをawaitする前に両方の呼び出しが行われるので、`Promise.all`が待っている間に、両方のダウンロードはすでに実行されています。
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// fulfilled を出力
 console.log(results[1].reason.message);
-// prints nope
+// nope を出力
 ```
 `status`が`"fulfilled"`のときだけ`value`を、`"rejected"`のときだけ`reason`を読んでください。もう片方のプロパティは単に存在しません。
 

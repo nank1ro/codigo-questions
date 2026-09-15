@@ -11,7 +11,7 @@ var x = 1
 このようにして、`x`という名前の変数に値`1`を代入しました。
 変数`x`を出力すると、数値`1`が返されます：
 ```kotlin
-println(x) // prints 1
+println(x) // 1 を出力
 ```
 
 ---
@@ -20,9 +20,9 @@ println(x) // prints 1
 `=`を使って新しい値を与えることで、`x`を更新できます。
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // 1 を出力
 x = 2
-println(x) // prints 2
+println(x) // 2 を出力
 ```
 
 ---
@@ -31,7 +31,7 @@ println(x) // prints 2
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // 5 を出力
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 変数を更新すると、以前の値は失われます。ここでは、`x`変数を2回表示して、値がどのように更新されるかを確認できます。
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // 5 を出力
 x = 10
-println(x) // prints 10
+println(x) // 10 を出力
 ```
 
 ---

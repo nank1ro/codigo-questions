@@ -12,7 +12,7 @@ var x = 1;
 変数`x`を表示すると、数値`1`が返されます:
 ```javascript
 console.log(x);
-// prints 1
+// 1 を出力
 ```
 
 ---
@@ -21,9 +21,9 @@ console.log(x);
 `=`を使って`x`に新しい値を与えることで更新できます。
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // 1 を出力
 x = 2;
-console.log(x); // prints 2
+console.log(x); // 2 を出力
 ```
 
 ---
@@ -33,7 +33,7 @@ console.log(x); // prints 2
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // 5 を出力
 ```
 
 ---
@@ -42,9 +42,9 @@ console.log(y); // prints 5
 ここでは、変数`x`を2回表示して、値がどのように更新されるかを確認できます。
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // 5 を出力
 x = 10;
-console.log(x); // prints 10
+console.log(x); // 10 を出力
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 JavaScriptでは、文字列変数はダブルクォートとシングルクォートの両方を使って宣言できます:
 ```javascript
 let x = "May";
-// both are the same string
+// どちらも同じ文字列
 let y = 'May';
 console.log(x === y);
-// prints true
+// true を出力
 ```
 
 ---

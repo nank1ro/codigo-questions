@@ -26,7 +26,7 @@ val greet: (String) -> Unit = { name -> println("Hi, $name") }
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // 戻り値
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 ラムダのパラメータがちょうど**1つ**のときは、その宣言を省略できます。Kotlinが `it` という名前を付けてくれます。
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // 同じこと
 ```
 `it` はパラメータが明示的に宣言されていないときにだけ存在し、単一パラメータのラムダでのみ使えます。
 短いラムダを簡潔に保てますが、長い本体には実際の名前のほうが分かりやすいでしょう。
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // 同じだが、末尾ラムダを使用
 ```
 関数型のパラメータを**最後**に置くことで、呼び出し側が末尾ラムダ構文を使えるようになります。
 
@@ -160,7 +160,7 @@ println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4]、同じこと
 ```
 メンバー関数はその型を通して参照します。例えば `String::uppercase` のようになります:
 ```kotlin

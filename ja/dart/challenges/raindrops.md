@@ -28,7 +28,7 @@ title: 雨粒
 関数呼び出しの例：
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// 出力: "Plong"
 ```
 
 # --seed--

@@ -7,7 +7,7 @@ char name[] = "Codigo";
 文字列を出力するには`%s`プレースホルダーを使います:
 ```c
 printf("%s\n", name);
-// prints "Codigo"
+// "Codigo" を出力する
 ```
 
 ---
@@ -15,7 +15,7 @@ printf("%s\n", name);
 ヌル終端文字もメモリ上の領域を使います。リテラル`"hi"`は`'h'`、`'i'`、`'\0'`の3バイトを占有します。
 自分でサイズを宣言する場合は、必ずそのための余裕を残してください:
 ```c
-char word[6] = "hello"; // 5 letters + '\0'
+char word[6] = "hello"; // 5文字 + '\0'
 ```
 終端文字がないと、Cは文字列がどこで終わるかを知る手段がありません。
 
@@ -39,7 +39,7 @@ word[5]; // 'g'
 ```
 1文字を出力するには`%c`を使います。文字を書き換えることもできます:
 ```c
-word[0] = 'K'; // word is now "Koding"
+word[0] = 'K'; // word は今 "Koding"
 ```
 
 ---
@@ -56,7 +56,7 @@ for (int i = 0; text[i] != '\0'; i++) {
 配列は宣言後に`=`で代入することはできません:
 ```c
 char copy[20];
-copy = "Codigo"; // error
+copy = "Codigo"; // エラー
 ```
 文字列をコピーするには、`string.h`の`strcpy(destination, source)`を使います。
 コピー先はすべての文字と`'\0'`を格納できるだけの十分な大きさが必要です。
@@ -67,7 +67,7 @@ copy = "Codigo"; // error
 ```c
 char text[20] = "Hello";
 strcat(text, " World");
-// text is now "Hello World"
+// text は今 "Hello World"
 ```
 `strcpy`と同様に、コピー先の配列は結果を格納できるだけの十分な大きさが必要です。
 
@@ -96,7 +96,7 @@ strcmp("b", "a"); // positive
 ```c
 char prefix[10];
 strncpy(prefix, "Codigo", 3);
-prefix[3] = '\0'; // prefix is "Cod"
+prefix[3] = '\0'; // prefix は "Cod"
 ```
 
 ---
@@ -120,7 +120,7 @@ text[i] = toupper(text[i]);
 `sprintf`は`printf`と同じように動作しますが、フォーマットされたテキストを画面ではなく`char`配列に書き込みます:
 ```c
 char buffer[30];
-sprintf(buffer, "%d items", 3); // buffer is "3 items"
+sprintf(buffer, "%d items", 3); // buffer は "3 items"
 ```
 バッファはテキスト全体とその`'\0'`を格納できるだけの十分な大きさが必要です。
 

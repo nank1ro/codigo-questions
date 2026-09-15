@@ -27,7 +27,7 @@ Luhnアルゴリズムは、クレジットカード番号などの識別番号�
 関数呼び出しの例：
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# True を出力する
 ```
 
 # --seed--

@@ -18,7 +18,7 @@ a + b + c の値が `n` に等しいピタゴラス数の組を見つけ、積 a
 関数呼び出しの例:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// 出力: 60
 ```
 
 # --seed--

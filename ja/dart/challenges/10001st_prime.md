@@ -16,7 +16,7 @@ title: 10001番目の素数
 関数呼び出しの例:
 ```dart
 print(nthPrime(6));
-// prints 13
+// 出力: 13
 ```
 
 # --seed--

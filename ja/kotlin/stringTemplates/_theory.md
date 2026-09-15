@@ -2,7 +2,7 @@
 Kotlinでは、`+`記号（連結）を使用して、2つ以上の文字列を一緒に表示できます。例えば：
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// "Hello Kotlin!" を出力
 ```
 
 ---
@@ -36,7 +36,7 @@ println("Hello " + "Kotlin!")
 `${}`の中には条件式も入れることができます。例えば：
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// Correct を出力
 ```
 
 ---

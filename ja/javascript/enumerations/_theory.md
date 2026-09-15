@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// red を出力
 ```
 慣習として、このオブジェクトは`const`で宣言され、名前は大文字で始まり、メンバー名は他の定数と同じように`UPPER_CASE`で書かれます。
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// done を出力
 ```
 一度凍結されたオブジェクトには新しいプロパティを追加することもできず、`Object.isFrozen(obj)`でオブジェクトが凍結されているかどうかを確認できます。
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// true を出力
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// s を出力
 console.log(Size.MEDIUM);
-// prints undefined
+// undefined を出力
 ```
 どちらのモードでも、列挙型は定義した値をそのまま保持します。これはまさに定数の集合に求められる性質です。
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// true を出力
 ```
 トレードオフは可読性です。`Priority.HIGH`を出力すると`3`と表示され、文字列`"high"`ほど多くの情報を伝えません。
 
@@ -70,14 +70,14 @@ console.log(Priority.HIGH > Priority.LOW);
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// [ 'RED', 'BLUE' ] を出力
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// [ 'red', 'blue' ] を出力
 ```
 `Object.values()`と配列メソッドの`includes()`を組み合わせることは、例えばユーザー入力から読み取った値のような任意の値が、有効なメンバーかどうかを確認する標準的な方法です。
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// true を出力
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// false を出力
 ```

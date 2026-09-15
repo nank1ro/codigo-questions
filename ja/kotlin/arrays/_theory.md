@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// x、続けて y を出力
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 配列が`val`で宣言されていても、インデックスに代入することで**要素**を置き換えることができます：
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums は今 [10, 2, 3]
 ```
 すべての要素を巡回するには、`for`ループや`forEach`を使用できます：
 ```kotlin
@@ -83,8 +83,8 @@ println(nums.contentToString())   // [1, 2, 3]
 - `sorted()`、`sortedDescending()`、`reversed()`は配列を変更せず、新しい`List`を返します
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums は今 [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1]、nums はまだ [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ println(nums.count())   // 3
 `nums + 4`のような式は`nums`を大きくするのではなく、まったく新しい配列を作成します：
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok、nums は [9, 2, 3]
+val bigger = nums + 4    // 新しい配列 [9, 2, 3, 4]、nums は3要素のまま
 ```
 要素数が時間とともに変化する場合は`MutableList`を、要素数があらかじめ分かっている場合やプリミティブなパフォーマンスが必要な場合は配列を選んでください。
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// どちらも 0 -> cat、続けて 1 -> dog の順に出力
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true、リストは要素同士を比較する
 ```
 
 ---

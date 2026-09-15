@@ -50,7 +50,7 @@ Dartは__型安全__な言語です。
 
 ```dart
 int integerNumber = 1;
-integerNumber = 3.14159; // Error
+integerNumber = 3.14159; // エラー
 ```
 
 `3.14159`は`double`型ですが、`integerNumber`は既に`int`型として定義されています。
@@ -61,7 +61,7 @@ integerNumber = 3.14159; // Error
 num number;
 number = 1; // OK
 number = 3.14159; // OK
-number = '10'; // Error
+number = '10'; // エラー
 ```
 
 `int`と`double`はどちらも`num`を拡張しているため、両方の型が受け入れられます。
@@ -119,7 +119,7 @@ const number = 5;
 
 ```dart
 const number = 2;
-number = 3; // Error
+number = 3; // エラー
 ```
 
 このコードは次のエラーを生成します:

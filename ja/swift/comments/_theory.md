@@ -2,7 +2,7 @@
 
 最もシンプルなコメントは**1行コメント**です。`//`で始まり、行の終わりまで続きます。
 ```swift
-// Greets the user
+// ユーザーに挨拶する
 print("Hello")
 ```
 コメントは、コードが何のためのものか、なぜそのように書かれたのかを説明するために使います。
@@ -11,7 +11,7 @@ print("Hello")
 
 コメントは専用の行を持つ必要はなく、同じ行でコードの後に続けることができます。これは**行末コメント**と呼ばれ、その特定の文についての短いメモを書くのに適した場所です:
 ```swift
-let retries = 3 // give up after three attempts
+let retries = 3 // 3回試したら諦める
 ```
 `//`から行の終わりまではすべて無視され、その前のコードは通常どおり実行されます。
 
@@ -23,7 +23,7 @@ let retries = 3 // give up after three attempts
 ```swift
 var total = 10
 // total = total + 5
-print(total) // prints 10
+print(total) // 10 を出力
 ```
 2行目はコメントになったため、`total`は`10`のままです。`//`を取り除くと、その行は再び実行されるようになります。
 
@@ -45,8 +45,8 @@ print("Welcome!")
 
 行の終わりで止まる`//`とは異なり、`/*`コメントは`*/`に達するまで止まりません。閉じるのを忘れると、コンパイラはそれ以降のコードをすべてコメントの一部として扱い、エラーを報告します:
 ```swift
-let width = 10 /* in centimetres
-print(width) // still inside the comment: error, the comment is never closed
+let width = 10 /* センチメートル単位
+print(width) // まだコメントの中: エラー、コメントが閉じられていない
 ```
 `//`も`/* */`も行末コメントとして使えますが、`/*`を使うときは必ず`*/`があることを確認してください。
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-print(total) // prints 100
+print(total) // 100 を出力
 ```
 ネストのおかげで、それらの行の1つにすでに`/* */`コメントが含まれている場合でも機能します。
 
@@ -90,7 +90,7 @@ func toSeconds(_ minutes: Int) -> Int {
 
 Swiftには3つ目のコメントである**ドキュメンテーションコメント**があります。`///`(スラッシュ3つ)で始まる1行コメントで、関数、型、プロパティのすぐ上に置かれます。
 ```swift
-/// Returns the greeting for `name`.
+/// `name` に対する挨拶を返す。
 func greet(_ name: String) -> String {
     return "Hi, \(name)!"
 }
@@ -101,7 +101,7 @@ func greet(_ name: String) -> String {
 
 ドキュメンテーションコメントの最初の行は**要約**です。関数が何をするかを述べる短い文です。三人称で、関数を説明するかのように書きます: 「Returns...」「Adds...」「Checks...」。
 ```swift
-/// Returns `true` when `n` is divisible by two.
+/// `n` が2で割り切れるとき `true` を返す。
 func isEven(_ n: Int) -> Bool {
     return n % 2 == 0
 }
@@ -127,9 +127,9 @@ func greet(_ name: String) -> String {
 
 要約の後に、ドキュメンテーションコメントはXcodeが認識する特別なMarkdownのリスト項目で、パラメータと戻り値を説明できます:
 ```swift
-/// Returns the number of seconds in the given minutes.
-/// - Parameter minutes: a whole number of minutes, never negative
-/// - Returns: `minutes` multiplied by sixty
+/// 与えられた分を秒数にして返す。
+/// - Parameter minutes: 分を表す整数、負の値にはならない
+/// - Returns: `minutes` に60を掛けた値
 func toSeconds(_ minutes: Int) -> Int {
     return minutes * 60
 }
@@ -144,10 +144,10 @@ func toSeconds(_ minutes: Int) -> Int {
 - `// FIXME: ...`は、間違っていることが分かっていて修正が必要なコードを示します
 
 ```swift
-// MARK: - Setup
+// MARK: - セットアップ
 let limit = 10
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: 設定から limit を読み込む
+// FIXME: リストが空のときにクラッシュする
 ```
 コンパイラにとってそれらは普通のコメントですが、Xcodeはそれらを一覧表示するため、残っている作業を見つけやすくなります。作業が終わったらマーカーを削除してください。古くなった`TODO`は誤解を招きます。
 
@@ -163,12 +163,12 @@ let limit = 10
 
 良いコメントは、コードが**何を**しているかではなく、**なぜ**そうしているかを説明します。コードはすでに何が起こるかを示しているため、それを言葉で繰り返すのはノイズを増やすだけで、コードが変わるとすぐに古くなります:
 ```swift
-// set timeout to 30
+// timeout を 30 に設定する
 let timeout = 30
 ```
 その数の背後にある理由こそ、読む人が推測できないものです:
 ```swift
-// the server drops idle connections after 35 seconds, so stop earlier
+// サーバーは35秒後にアイドル接続を切断するため、それより早く止める
 let timeout = 30
 ```
 コメントがその下の行を言い換えているだけなら、削除するか理由に置き換えてください。

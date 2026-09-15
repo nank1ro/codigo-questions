@@ -16,7 +16,7 @@ title: 偶数フィボナッチ数
 関数呼び出しの例:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// 出力: 10
 ```
 
 # --seed--

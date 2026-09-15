@@ -27,7 +27,7 @@ total += 2
 つまり、以下の2つはまったく同じです
 ```python
 num = num - 5
-# is equal to
+# と等しい
 num -= 5
 ```
 
@@ -38,7 +38,7 @@ num -= 5
 つまり、以下の2つはまったく同じです
 ```python
 num = num * 5
-# is equal to
+# と等しい
 num *= 5
 ```
 
@@ -49,7 +49,7 @@ num *= 5
 つまり、以下の2つはまったく同じです
 ```python
 num = num / 5
-# is equal to
+# と等しい
 num /= 5
 ```
 
@@ -60,7 +60,7 @@ num /= 5
 つまり、以下の2つはまったく同じです
 ```python
 num = num ** 5
-# is equal to
+# と等しい
 num **= 5
 ```
 
@@ -71,7 +71,7 @@ num **= 5
 つまり、以下の2つはまったく同じです
 ```python
 num = num % 5
-# is equal to
+# と等しい
 num %= 5
 ```
 
@@ -82,6 +82,6 @@ num %= 5
 つまり、以下の2つはまったく同じです
 ```python
 num = num // 5
-# is equal to
+# と等しい
 num //= 5
 ```

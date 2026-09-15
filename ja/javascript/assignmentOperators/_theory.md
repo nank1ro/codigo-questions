@@ -27,7 +27,7 @@ total += 2;
 つまり、以下は全く同じです
 ```javascript
 var num = num - 5;
-// is equal to
+// と同じ
 num -= 5;
 ```
 
@@ -38,7 +38,7 @@ num -= 5;
 つまり、以下は全く同じです
 ```javascript
 var num = num * 5;
-// is equal to
+// と同じ
 num *= 5;
 ```
 
@@ -49,7 +49,7 @@ num *= 5;
 つまり、以下は全く同じです
 ```javascript
 num = num / 5;
-// is equal to
+// と同じ
 num /= 5;
 ```
 
@@ -60,6 +60,6 @@ num /= 5;
 つまり、以下は全く同じです
 ```javascript
 num = num % 5;
-// is equal to
+// と同じ
 num %= 5;
 ```

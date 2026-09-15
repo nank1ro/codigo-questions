@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// Max makes a sound を出力
 ```
 子が独自のコンストラクタを宣言するとき、その中で `super(...)` を呼ぶことは**必須**です。呼ばないとオブジェクトが初期化されず、JavaScript は `ReferenceError` を投げます。コンストラクタをまったく持たない子クラスは問題ありません。JavaScript がすべての引数を親に転送するコンストラクタを自動で書いてくれるからです。
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// Woof を出力
 ```
 オーバーライドしても親のバージョンが消えるわけではなく、隠れるだけです。子のメソッド内では `super.methodName(...)` で親のバージョンに届くので、親の振る舞いを置き換えるのではなく拡張できます：
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// Woof! を出力
 ```
 違いに注意してください。`super(...)` は親の**コンストラクタ**を呼び、`super.name(...)` は親の**メソッド**を呼びます。
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// 0 を出力
 ```
 フィールドはコンストラクタの本体が実行される前にそれぞれの新しいインスタンスに代入されるので、コンストラクタはそれらをすでに当てにできます。値のないフィールドも宣言はされており、単に `undefined` として始まります：
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// 8 を出力
 ```
 静的メソッドはインスタンスではなくクラス名に対して呼び出します。`new MathUtils().double(4)` は `TypeError` を投げます。インスタンスは静的メンバーを受け取らないからです。静的メソッドの中では `this` はクラスを指すので、`this.otherStatic(...)` で別の静的メソッドを呼び出せます。
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// 3.14 を出力
 ```
 コピーは1つしかないので、それを更新するインスタンスはすべて同じ値を更新することになります。コンストラクタの中では `this` ではなくクラス名を通して `Circle.PI` にアクセスします。`this.PI` はインスタンス上のプロパティを探し、何も見つからず `undefined` を返してしまいます。
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// 120 を出力
 ```
 ファクトリーはインスタンスが1つも存在しない前に呼び出せます。通常のメソッドではこれはできません。
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// 12 を出力
 ```
 `r.area` はメソッドを実行してその結果を返すので、数値です。括弧を付けるとその数値を呼び出そうとして、失敗します。
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// 3を出力、セッターは50を拒否した
 ```
 同じ名前のゲッターとセッターは1つのプロパティを形作るので、同時に通常のフィールドにはなれません。格納される値は別の名前の下に置きます。慣習としては、先頭にアンダースコアを付けた同じ名前です。
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// 1234 を出力
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// $7 を出力
 ```
 これが、ヘルパーの処理を API の外に追いやる方法です。呼び出し側に見えるのは `print` で、その背後にある整形の詳細は見えません。プライベートフィールドとプライベートメソッドを合わせれば、クラスには明確な内側と外側ができます。
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// $7 を出力
 ```
 同じメソッドは文字列の連結や `String(value)` でも使われます。適切な**数値**も欲しい場合は、`[Symbol.toPrimitive](hint)` を定義します。これは `"string"`、`"number"`、`"default"` のいずれかを受け取って返す値を決定し、存在すれば `toString` よりも優先されます。
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] を出力
 ```
 名前の前の `*` はそれを**ジェネレーター**にします。ジェネレーターとは、`yield` で値を1つずつ渡し、その間で一時停止する関数です。これが反復プロトコルを満たす最も短い方法で、格納されているのではなく計算される値に対しても機能します。

@@ -21,7 +21,7 @@ title: 二分探索
 ```c
 int numbers[] = {1, 3, 5, 7};
 printf("%d\n", binarySearch(numbers, 4, 5));
-// prints 2
+// 2 を出力する
 ```
 
 # --before-seed--

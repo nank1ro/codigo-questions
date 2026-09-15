@@ -11,7 +11,7 @@ void sayHello() {
 関数を呼び出すには、名前の後に `()` を記述します：
 
 ```dart
-sayHello(); // prints Hello!
+sayHello(); // 出力: Hello!
 ```
 
 ---
@@ -36,7 +36,7 @@ int square(int n) {
 }
 
 void main() {
-  print(square(4)); // prints 16
+  print(square(4)); // 出力: 16
 }
 ```
 
@@ -71,7 +71,7 @@ void printInfo({required String name, int age = 0}) {
 
 void main() {
   printInfo(name: "Alice", age: 30);
-  // prints Alice is 30 years old
+  // 出力: Alice is 30 years old
 }
 ```
 

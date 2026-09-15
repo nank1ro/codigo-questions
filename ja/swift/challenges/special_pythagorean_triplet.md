@@ -16,7 +16,7 @@ a + b + c = n となるピタゴラス数の積 a × b × c を求める関数�
 関数呼び出しの例:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// 60 を出力
 ```
 
 # --before-seed--

@@ -18,7 +18,7 @@ Nのすべての桁の合計を計算するプログラムを書いてくださ�
 関数呼び出しの例:
 ```swift
 print(sumDigits(28))
-// prints 10
+// 10 を出力
 ```
 
 # --before-seed--

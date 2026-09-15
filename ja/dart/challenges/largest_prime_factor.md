@@ -16,7 +16,7 @@ title: 最大素因数
 関数呼び出しの例:
 ```dart
 print(largestPrimeFactor(13195));
-// prints 29
+// 出力: 29
 ```
 
 # --seed--

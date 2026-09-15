@@ -23,15 +23,15 @@ arrayName[index];
 配列のインデックスにアクセスする方法は次のとおりです:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// 値 "Jeremiah" を出力
 console.log(names[0]);
 ```
 代入は次のように行います:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// 新しい値 "Jordan" を代入
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// 値 "Jordan" を出力
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ console.log(names[0]);
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"] を出力
 ```
 
 ---
@@ -60,7 +60,7 @@ console.log(letters);
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// [2, 3] を出力
 ```
 まず、`numbers`という配列を作成します。
 次に、配列の一部を取り出して`slice`配列に格納します。
@@ -71,9 +71,9 @@ console.log(slice);
 
 JavaScriptでは配列を自由にスライスできます！
 ```javascript
-// Grabs the first two items
+// 最初の2つの要素を取得
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// 4番目から最後までの要素を取得
 listName.slice(3);
 ```
 配列のスライスに最初の要素や最後の要素が含まれる場合、その要素のインデックスを含める必要はありません
@@ -94,13 +94,13 @@ JavaScriptでは`indexOf()`メソッドを使用できます:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// 1 を出力
 ```
 上記のコードは、文字列`"Zac"`を含む最初のインデックス（この場合は`1`）を出力します。
 また、`splice()`メソッドを使用して、特定のインデックスに要素を挿入することもできます:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"] を出力
 ```
 上記のコードは`"Ali"`をインデックス`1`に挿入し、このインデックス以降のすべての要素を1つ後ろにずらします。
 2番目の値`0`は_deleteCount_（削除数）を意味します。この場合、配列からどの要素も削除しません。しかし`1`を指定した場合、`Zac`が配列から削除されます
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// 1, 2, 3 を出力
 ```
 `for`キーワードの後に変数名を指定すると、その変数に配列の各要素の値が順番に代入されます。

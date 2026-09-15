@@ -7,7 +7,7 @@ enum Color { RED, GREEN, BLUE };
 整数なので、`%d`で出力します。
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// "1" を出力する
 ```
 
 ---
@@ -19,7 +19,7 @@ printf("%d\n", GREEN);
 
 `=`を使って定数に明示的な値を与えることもできます。それ以降の定数は、その値から数え続けます。
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB は 2、MAR は 3
 ```
 明示的な値は連続している必要も増加している必要もありません。`enum Status { OK = 200, NOT_FOUND = 404 };`も全く問題なく有効です。
 
@@ -86,7 +86,7 @@ Color favorite = BLUE;
 enumの定数は自動的に`int`に変換されるので、`int n = BLUE;`は有効で`2`が格納されます。
 逆方向は**キャスト**で行います。整数の前に括弧で列挙型を書きます。
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c は GREEN
 ```
 Cはその数値が定数に一致するかどうかをチェックしません。`(enum Color)7`はどの定数も`7`でなくてもコンパイルが通るので、変換する前に整数を検証してください。
 
@@ -103,7 +103,7 @@ enum Color after_green = (enum Color)(GREEN + 1); // BLUE
 
 よく使われる手法として、列挙型の最後に`COUNT`という名前の余分な定数を1つ追加します。番号付けは`0`から始まるので、その値はちょうどそれより前にある実際の定数の個数になります。
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT は 3
 ```
 この番兵（sentinel）を使えば、数を直接書かなくてもすべての定数をループでき、番兵の前に定数を追加しても正しく動作し続けます。
 ```c
@@ -119,7 +119,7 @@ for (int d = MON; d < DAY_COUNT; d++) {
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // "4" を出力する
 ```
 `0`から`FRUIT_COUNT`までのループですべてのスロットを巡回でき、返す必要があるときはループのインデックスを`enum Fruit`にキャストし直せます。
 

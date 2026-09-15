@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// true を出力
 console.log(colors.has("green"));
-// prints false
+// false を出力
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// 2 を出力
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// 1 を出力
 ```
 
 ---
@@ -46,13 +46,13 @@ letters.add("a").add("b");
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// 3 を出力
 ```
 **スプレッド**演算子`...`はその逆で、セットを配列に戻します：
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// [ 1, 2, 3 ] を出力
 ```
 `Array.from(distinct)`も同じことを行います。
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// 3 を出力
+// 1 を出力
+// 2 を出力
 ```
 セットには、すべての値に対して関数を呼び出す`forEach()`メソッドもあります：
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// 30 を出力
+// 10 を出力
+// 20 を出力
 ```

@@ -65,12 +65,12 @@ future の2つの側面をはっきり区別しておきましょう：
 
 ```dart
 Future<int> count() async {
-  return 3;                 // int, wrapped into Future<int>
+  return 3;                 // int、Future<int>にラップされる
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>、intに展開される
+  Future<int> f = count();  // awaitなし: まだFuture<int>
 }
 ```
 
@@ -138,7 +138,7 @@ future は**エラー**で完了することもあります。`async` 関数が�
 ```dart
 Future<int> parseLater(String s) async {
   await Future.delayed(const Duration(milliseconds: 5));
-  return int.parse(s); // throws FormatException for 'abc'
+  return int.parse(s); // 'abc'に対してFormatExceptionをスローする
 }
 
 Future<int> orZero(String s) async {
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // 両方のタイマーが今始まる
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // 一度だけ待つ、合計約20ms
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // ここで例外をスローし、loadTwiceも失敗する
+  return n * 2;             // 決して実行されない
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // 呼び出し元は元のエラーを見る
   }
 }
 ```

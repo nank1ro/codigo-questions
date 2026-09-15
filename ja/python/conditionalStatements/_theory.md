@@ -4,7 +4,7 @@
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 外で遊ぶ
 ```
 
 ---
@@ -13,7 +13,7 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 外で遊ぶ
 ```
 `if` 文は条件が `True` の場合にのみコードブロックを実行することがわかりました。
 もう一つ重要なことは、**コロン** `:` と**インデント**です。これらはコードブロックの開始を示します。
@@ -30,9 +30,9 @@ Pythonでは、`else` 文を使用できます。例えば：
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 外で遊ぶ
 else:
-    # stay home
+    # 家にいる
 ```
 
 ---

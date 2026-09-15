@@ -28,7 +28,7 @@ title: 雨粒
 関数呼び出しの例：
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// "Plong" を出力
 ```
 
 # --seed--

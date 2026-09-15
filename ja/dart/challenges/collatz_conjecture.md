@@ -22,7 +22,7 @@ title: コラッツの予想
 関数呼び出しの例：
 ```dart
 print(collatzSteps(16));
-// prints 4
+// 出力: 4
 ```
 
 # --seed--

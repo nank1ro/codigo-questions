@@ -22,7 +22,7 @@ for (item in collection) {
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// 1, 2, 3 を出力
 ```
 
 出力は、インデックス`i`が_1_から_3_までの範囲の各値を受け取ることを示しています。
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* 出力:
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ for (i in 3..1) println(i)
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// 3, 2, 1 を出力
 ```
 
 `downTo`は減少する範囲を生成します。
@@ -78,7 +78,7 @@ for (i in 3 downTo 1) println(i)
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// 1, 3, 5, 7, 9 を出力
 ```
 
 ご覧の通り、コードブロックは_1_ではなく_2_のステップで実行され、出力が完全に変わります。
@@ -88,7 +88,7 @@ for (i in 1..10 step 2) {
 _文字_の範囲を生成することもできます。
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// abcdefghijklmnopqrstuvwxyz を出力
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 __文字列__を反復処理することができます。
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// bdc を出力
 ```
 
 上の例では、各文字に1を加えて出力しているので、`'a'`は`'b'`になり、`'b'`は`'c'`になります。
@@ -113,7 +113,7 @@ for (char in 'abc') print(char + 1)
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// repeat を3回出力
 ```
 
 インデックスにアクセスすることもできます
@@ -121,19 +121,19 @@ repeat(3) {
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// 0, 1, 2 を出力
 ```
 
 ---
 
 Kotlinでは、反復可能なコレクションに対して`for-in`を使用し、各要素に対して指定されたクロージャを呼び出すこともできます：
 ```kotlin
-// this is a list, we'll see about that soon
+// これはリスト、それについては後で見ていく
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// (2, 4, 6, 8, 10) を出力
 ```
 
 ---
@@ -142,7 +142,7 @@ Kotlinには`forEach`ループもあります。
 `for-in`ループと同じ順序で、シーケンスの各要素に対して指定されたクロージャを呼び出します：
 
 ```kotlin
-// this is a list, we'll see about that soon
+// これはリスト、それについては後で見ていく
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

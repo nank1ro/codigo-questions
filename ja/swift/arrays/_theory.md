@@ -25,15 +25,15 @@ arrayName[index]
 配列のインデックスにアクセスする方法は次の通りです：
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// 値 "Jeremiah" を出力
 print(names[0])
 ```
 代入は次のように行います：
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// 新しい値 "Jordan" を代入
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// 値 "Jordan" を出力
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ print(names[0])
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"] を出力
 ```
 
 ---
@@ -62,7 +62,7 @@ print(letters)
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// [2, 3] を出力
 ```
 まず、`numbers`という配列を作成します。
 次に、配列の一部を取り出してslice配列に格納します。
@@ -73,9 +73,9 @@ Swiftでは`...`を使って最後のインデックスを含めることがで�
 
 Swiftでは配列を自由にスライスできます！
 ```swift
-// Grabs the first two items
+// 最初の2つの要素を取得
 listName[..<2]
-// Grabs the fourth through last items
+// 4番目から最後までの要素を取得
 listName[3...]
 ```
 配列スライスに配列の最初または最後の要素が含まれる場合、その要素のインデックスを含める必要はありません
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// 1 を出力
 ```
 上のコードは、文字列`"Zac"`を含む最初のインデックス（この場合は`1`）を出力します。
 また、`insert()`メソッドを使って特定のインデックスに要素を挿入することもできます：
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"] を出力
 ```
 上のコードはインデックス`1`に`"Ali"`を挿入し、このインデックス以降のすべての要素を1つ後ろにずらします
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3
+// 1, 2, 3 を出力
 ```
 `for`キーワードの後に変数名が続き、配列の各要素の値が順番に代入されます。
 
