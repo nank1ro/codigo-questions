@@ -22,7 +22,7 @@ Hier ist eine `for`-Schleife, die eine Aktion eine feste Anzahl von Malen wieder
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// gibt 1, 2, 3 aus
 ```
 
 Die Ausgabe zeigt den Index `i`, der jeden Wert im Bereich von _1_ bis _3_ erhält.
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* gibt aus
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ Um es funktionsfähig zu machen, müssen wir das `downTo`-Schlüsselwort verwend
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// gibt 3, 2, 1 aus
 ```
 
 `downTo` erzeugt einen abnehmenden Bereich.
@@ -78,7 +78,7 @@ Sie können den __step__ Ihrer `for`-Schleife mit dem `step`-Schlüsselwort defi
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// gibt 1, 3, 5, 7, 9 aus
 ```
 
 Wie Sie sehen, wird der Code-Block mit einem Schritt von _2_ statt _1_ ausgeführt und ändert unsere Ausgabe vollständig.
@@ -88,7 +88,7 @@ Wie Sie sehen, wird der Code-Block mit einem Schritt von _2_ statt _1_ ausgefüh
 Sie können auch einen Bereich von _Zeichen_ erzeugen.
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// gibt abcdefghijklmnopqrstuvwxyz aus
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 Sie können über einen __String__ iterieren.
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// gibt bdc aus
 ```
 
 Im obigen Beispiel haben wir jeden Buchstaben + 1 gedruckt, also wird `'a'` zu `'b'`, `'b'` wird zu `'c'` und so weiter.
@@ -113,7 +113,7 @@ Falls Sie einfach einen Code-Block `n`-mal wiederholen müssen, können Sie die 
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// gibt repeat 3-mal aus
 ```
 
 Sie können sogar auf den Index zugreifen mit
@@ -121,19 +121,19 @@ Sie können sogar auf den Index zugreifen mit
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// gibt 0, 1, 2 aus
 ```
 
 ---
 
 In Kotlin können wir auch `for-in` für iterierbare Sammlungen verwenden und die gegebene Schließung auf jedem Element aufrufen:
 ```kotlin
-// this is a list, we'll see about that soon
+// das ist eine Liste, dazu kommen wir gleich
 val numbers = listOf(2, 4, 6, 8, 10) 
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// gibt (2, 4, 6, 8, 10) aus
 ```
 
 ---
@@ -142,7 +142,7 @@ In Kotlin haben wir auch die `forEach`-Schleife.
 Sie ruft die gegebene Schließung auf jedem Element in der Sequenz in der gleichen Reihenfolge wie eine `for-in`-Schleife auf:
 
 ```kotlin
-// this is a list, we'll see about that soon
+// das ist eine Liste, dazu kommen wir gleich
 val numbers = listOf(1, 3, 5, 7, 9) 
 numbers.forEach {
     println(it)

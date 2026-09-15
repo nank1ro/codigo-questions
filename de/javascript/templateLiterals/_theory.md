@@ -1,6 +1,6 @@
 In JavaScript können wir das `+` Zeichen verwenden, um zwei oder mehr Strings zusammen anzuzeigen, wie hier:
 ```javascript
-console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
+console.log("Hello " + "JavaScript!") // gibt "Hello JavaScript!" aus
 ```
 
 ---

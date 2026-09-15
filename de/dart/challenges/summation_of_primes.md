@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die Summe aller Primzahlen unterhalb von `n` zurück
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(primeSummation(10));
-// prints 17
+// gibt 17 aus
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ Die Summe aller Primzahlen unterhalb von 100000 muss 454396537 ergeben
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // Sieb des Eratosthenes
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

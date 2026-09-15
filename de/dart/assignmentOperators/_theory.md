@@ -13,7 +13,7 @@ Der **Additionszuweisungsoperator** `+=` addiert einen Wert zu einer Variable un
 
 ```dart
 int score = 10;
-score += 5; // score is now 15
+score += 5; // score ist jetzt 15
 ```
 
 Dies ist eine Kurzform für `score = score + 5`.
@@ -24,7 +24,7 @@ Der **Subtraktionszuweisungsoperator** `-=` subtrahiert einen Wert von einer Var
 
 ```dart
 int lives = 3;
-lives -= 1; // lives is now 2
+lives -= 1; // lives ist jetzt 2
 ```
 
 Dies ist eine Kurzform für `lives = lives - 1`.
@@ -35,7 +35,7 @@ Der **Multiplikationszuweisungsoperator** `*=` multipliziert eine Variable mit e
 
 ```dart
 int side = 4;
-side *= 3; // side is now 12
+side *= 3; // side ist jetzt 12
 ```
 
 Dies ist eine Kurzform für `side = side * 3`.

@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` ist nicht auf Objekte beschränkt, die Sie gerade erstellt haben: Es funktioniert auf jedem Objekt, und da es das Objekt zurückgibt, können Sie den ganzen Ausdruck überall dort verwenden, wo das Objekt erwartet wird.
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // verändert box und gibt es zurück
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 Der Block ist ein normaler Codeblock, daher kann er so viele Anweisungen enthalten, wie Sie brauchen.

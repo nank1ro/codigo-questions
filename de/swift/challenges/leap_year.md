@@ -18,7 +18,7 @@ Geben Sie `true` zurück, wenn es ein Schaltjahr ist, `false` ansonsten.
 Beispiel für einen Funktionsaufruf:
 ```swift
 print(leapYear(2000))
-// prints true
+// gibt true aus
 ```
 
 # --before-seed--

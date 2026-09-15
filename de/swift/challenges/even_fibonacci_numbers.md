@@ -18,7 +18,7 @@ Schreibe eine Funktion, die die Summe aller geradzahligen Fibonacci-Zahlen bis e
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// gibt 10 aus
 ```
 
 # --before-seed--

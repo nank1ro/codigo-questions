@@ -17,7 +17,7 @@ Schreiben Sie eine Funktion, die die Summe zweier Zahlen zurückgibt.
 Beispiel für einen Funktionsaufruf:
 ```swift
 print(addition(1, 2))
-// prints 3
+// gibt 3 aus
 ```
 
 # --before-seed--

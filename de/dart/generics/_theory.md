@@ -11,7 +11,7 @@ Der Lohn dafür ist, dass der Compiler weiß, was drinsteckt:
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // gut: first ist ein String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart hat außerdem den Typ `dynamic`, der bedeutet: „alles ist erlaubt“. Ein
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // akzeptiert
+print(things.first.toUpperCase()); // akzeptiert
 ```
 
 Der Haken: Während du den Code schreibst, wird nichts geprüft. Jeder Aufruf auf einem `dynamic`-Wert wird erst aufgelöst, während das Programm läuft, sodass sich ein Tippfehler wie `things.first.toUpperCse()` gerne kompilieren lässt und vor den Augen eines Benutzers explodiert.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, aus dem Argument abgeleitet
+print(a.value + 1);      // 8, der Compiler weiß, dass value ein int ist
 ```
 
 Der Buchstabe spielt keine Rolle: `T` ist eine Konvention für „Typ“, nichts weiter.
@@ -78,14 +78,14 @@ Eine Funktion kann für sich allein generisch sein, ohne in einer generischen Kl
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, hier ist T String
+print(firstOf([10, 20]));        // 10, hier ist T int
 ```
 
 Ein Funktionskörper, einmal geprüft, für jeden Typ wiederverwendet. Das Typargument wird normalerweise aus den Argumenten abgeleitet, aber es lässt sich explizit hinschreiben, wenn die Inferenz nichts zum Arbeiten hat:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // wirft, aber der Typ ist klar
 ```
 
 Methoden innerhalb einer Klasse folgen genau derselben Regel.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 Mit sound null safety kann das Fragezeichen an zwei verschiedenen Stellen landen, und die beiden bedeuten Verschiedenes:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // eine Box, die existiert und einen nullable int enthält
+Box<int>? b = null;      // gar keine Box, aber falls es eine gibt, enthält sie einen int
 ```
 
 Bei `Box<int?>` ist das **Typargument** nullable, daher hat `a.value` den Typ `int?` und kann `null` sein, während `a` selbst immer da ist. Bei `Box<int>?` ist die **Variable** nullable, daher kann `b` `null` sein, und du brauchst `b?.value` oder `b!.value`, um in sie hineinzugreifen.
@@ -146,10 +146,10 @@ Der Unterschied wird wichtig, sobald du den Wert verwendest. Bei einer `Box<int?
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, die Box ist da, ihr Inhalt ist null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, die Box selbst fehlt
 ```
 
 `b.value` auf einer `Box<int>?` zu schreiben kompiliert gar nicht erst: Dart weigert sich, ein Feld von etwas zu lesen, das möglicherweise nicht existiert.
@@ -187,9 +187,9 @@ Ohne die Bound würde `a > b` nicht kompilieren: Der Vergleichsoperator gehört 
 Eine Bound kann den Typparameter selbst erwähnen. `Comparable<T>` ist das Interface von allem, was weiß, wie es sich mit seinesgleichen vergleicht, über `compareTo`:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
-print('kiwi'.compareTo('fig')); // positive
-print('fig'.compareTo('fig'));  // zero
+print('fig'.compareTo('kiwi')); // negativ: fig kommt zuerst
+print('kiwi'.compareTo('fig')); // positiv
+print('fig'.compareTo('fig'));  // null
 ```
 
 `T extends Comparable<T>` liest sich also als „jeder Typ, der mit sich selbst verglichen werden kann“, was genau das ist, was eine Sortier- oder Maximumfunktion braucht:

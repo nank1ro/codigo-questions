@@ -7,7 +7,7 @@ Jede Konstante ist eine Ganzzahl: Wenn du nichts anderes angibst, ist die erste 
 Da es Ganzzahlen sind, gibst du sie mit `%d` aus:
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// gibt "1" aus
 ```
 
 ---
@@ -19,7 +19,7 @@ Die Namen werden üblicherweise in Großbuchstaben geschrieben, wie andere Konst
 
 Du kannst einer Konstante mit `=` auch einen expliziten Wert geben; die darauffolgenden Konstanten zählen ab diesem Wert weiter:
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB ist 2, MAR ist 3
 ```
 Explizite Werte müssen weder aufeinanderfolgend noch aufsteigend sein: `enum Status { OK = 200, NOT_FOUND = 404 };` ist vollkommen gültig.
 
@@ -86,7 +86,7 @@ Der neue Name `Color` wird für sich allein verwendet, ohne das Schlüsselwort `
 Eine Aufzählungskonstante wird automatisch zu `int` konvertiert, also ist `int n = BLUE;` gültig und speichert `2`.
 Den umgekehrten Weg erledigt eine **Typumwandlung**, indem du den Aufzählungstyp in Klammern vor die Ganzzahl schreibst:
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c ist GREEN
 ```
 C prüft nicht, ob die Zahl zu einer Konstante passt: `(enum Color)7` kompiliert, obwohl keine Konstante `7` ist, also validiere Ganzzahlen, bevor du sie umwandelst.
 
@@ -103,7 +103,7 @@ Zusammen mit dem Restoperator `%` kannst du damit durch die Konstanten zyklen un
 
 Ein gängiger Trick ist es, am Ende der Aufzählung eine zusätzliche Konstante hinzuzufügen, meist `COUNT` genannt: Da die Nummerierung bei `0` beginnt, entspricht ihr Wert genau der Anzahl der echten Konstanten davor.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT ist 3
 ```
 Dieser Wächterwert erlaubt es dir, über jede Konstante zu iterieren, ohne die Zahl fest zu codieren, und er bleibt korrekt, wenn du davor Konstanten hinzufügst:
 ```c
@@ -119,7 +119,7 @@ Der `COUNT`-Wächterwert ist auch die perfekte Größe für ein Array mit einem 
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // gibt "4" aus
 ```
 Eine Schleife von `0` bis `FRUIT_COUNT` besucht jedes Feld, und der Schleifenindex kann bei Bedarf zurück in `enum Fruit` umgewandelt werden.
 

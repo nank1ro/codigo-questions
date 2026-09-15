@@ -2,7 +2,7 @@ Eine **Klasse** ist eine Vorlage zum Erstellen von Objekten. In Dart definierst 
 
 ```dart
 class Animal {
-  // fields and methods go here
+  // Felder und Methoden gehören hierher
 }
 ```
 
@@ -232,7 +232,7 @@ Eine **abstrakte Klasse** ist eine Klasse, die nicht direkt instanziiert werden 
 
 ```dart
 abstract class Shape {
-  double area(); // abstract method — no body
+  double area(); // abstrakte Methode — kein Körper
 }
 
 class Circle extends Shape {
@@ -258,7 +258,7 @@ class MathHelper {
 }
 
 void main() {
-  // access without creating an object:
+  // Zugriff, ohne ein Objekt zu erstellen:
   print(MathHelper.pi);
   print(MathHelper.circleArea(5));
 }

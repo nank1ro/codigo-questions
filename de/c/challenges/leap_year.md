@@ -18,7 +18,7 @@ Geben Sie `true` zurück, wenn es sich um ein Schaltjahr handelt, `false` andern
 Beispiel eines Funktionsaufrufs:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// gibt true aus
 ```
 
 # --before-seed--

@@ -11,7 +11,7 @@ Um den Wert aus einem Promise zu holen, verwendest du **`await`**. Es pausiert d
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // gibt 42 aus
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// gibt HI aus
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// gibt Promise { 'HI' } aus
 ```
 Die beiden Funktionen enthalten denselben Code; nur die Art, wie du das Ergebnis liest, unterscheidet sich. `shoutLater("hi")` muss innerhalb einer anderen `async`-Funktion abgewartet werden, um `"HI"` zurückzubekommen.
 
@@ -52,7 +52,7 @@ Die an `new Promise` übergebene Funktion läuft sofort los, aber das Promise bl
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // gibt done aus, etwa eine Sekunde später
 }
 
 main();
@@ -76,7 +76,7 @@ Der Aufruf einer `async`-Funktion wartet nie: Sie startet die Arbeit und gibt di
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // gibt 21 aus
 });
 ```
 **`Promise.resolve(value)`** baut ein Promise, das bereits mit `value` erfüllt ist, was praktisch ist, wenn du den Wert schon zur Hand hast, aber ein Promise zurückgeben musst.
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// gibt 42 aus
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// gibt start aus, dann data, dann done
 ```
 Beachte die letzte Zeile: Eine `async`-Funktion muss immer noch **aufgerufen** werden. `main` ohne die Klammern zu schreiben, definiert die Arbeit, startet sie aber nie, und es wird nichts ausgegeben.
 
@@ -125,7 +125,7 @@ Eine Ablehnung liest man mit **`.catch(callback)`**, dem Spiegelbild von `.then`
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // gibt negative age aus
 });
 ```
 Sowohl `resolve` als auch `reject` aufzurufen oder eines davon zweimal ändert nichts: Nur der erste Aufruf zählt.
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// gibt cleanup aus, dann error: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ Umgekehrt gilt dasselbe: Ein `throw` innerhalb einer `async`-Funktion lässt den
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() gibt ein Promise zurück, das mit Error("boom") abgelehnt wird
 ```
 Wie bei jedem `try`-Block werden die Zeilen nach dem fehlgeschlagenen `await` übersprungen, der `catch`-Block läuft, und der `finally`-Block läuft in beiden Fällen.
 
@@ -199,7 +199,7 @@ Zwei Regeln sind merkenswert:
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// gibt true aus
 ```
 Das zurückgegebene Array hat immer genau so viele Einträge wie das übergebene Array, an denselben Positionen, sodass man darüber iterieren kann wie über jedes andere Array.
 
@@ -207,11 +207,11 @@ Das zurückgegebene Array hat immer genau so viele Einträge wie das übergebene
 
 Der Unterschied zwischen **sequenziellem** und **parallelem** Warten entscheidet sich danach, *wo* du `await` setzt:
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// sequenziell: etwa 300 + 300 = 600 ms
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// parallel: etwa 300 ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 In der ersten Version startet der zweite Download erst, wenn der erste fertig ist, weil `await` die Funktion in dieser Zeile pausiert. In der zweiten werden beide Aufrufe getätigt, bevor irgendetwas abgewartet wird, sodass beide Downloads bereits laufen, während `Promise.all` wartet.
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// gibt fulfilled aus
 console.log(results[1].reason.message);
-// prints nope
+// gibt nope aus
 ```
 Lies `value` nur, wenn `status` `"fulfilled"` ist, und `reason` nur, wenn es `"rejected"` ist: Die andere Eigenschaft fehlt schlicht.
 

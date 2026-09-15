@@ -11,7 +11,7 @@ var x = 1
 Auf diese Weise haben wir der Variablen `x` den Wert `1` zugewiesen.
 Wenn wir die Variable `x` ausgeben, bekommen wir die Zahl `1` zurück:
 ```swift
-print(x) // prints 1
+print(x) // gibt 1 aus
 ```
 
 ---
@@ -20,9 +20,9 @@ Variablen werden so genannt, weil sich der Wert, den sie speichern, ändern kann
 Wir können `x` mit Hilfe von `=` aktualisieren und ihm einen neuen Wert geben.
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // gibt 1 aus
 x = 2
-print(x) // prints 2
+print(x) // gibt 2 aus
 ```
 
 ---
@@ -31,7 +31,7 @@ Wir können Variablen auch die Werte anderer Variablen zuweisen. Hier können wi
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // gibt 5 aus
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 Wenn wir eine Variable aktualisieren, vergisst sie ihren vorherigen Wert. Hier können wir die Variable `x` zweimal anzeigen und sehen, wie sich ihr Wert aktualisiert.
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // gibt 5 aus
 x = 10
-print(x) // prints 10
+print(x) // gibt 10 aus
 ```
 
 ---

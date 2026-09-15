@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// gibt 5 aus
 ```
 Eine **Pfeilfunktion** ist eine kürzere Art, dasselbe zu schreiben: Streiche das Schlüsselwort `function` und setze einen „Fat Arrow" `=>` zwischen die Parameterliste und den Körper:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// gibt 5 aus
 ```
 Pfeilfunktionen werden meist in einer `const` gespeichert, damit der Name nicht versehentlich neu zugewiesen werden kann, und werden genau wie jede andere Funktion aufgerufen.
 
@@ -23,13 +23,13 @@ Wenn der Körper ein **einzelner Ausdruck** ist, kannst du die geschweiften Klam
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// gibt 5 aus
 ```
 Wenn es **genau einen Parameter** gibt, kannst du auch die Klammern darum weglassen:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// gibt 8 aus
 ```
 Bei null Parametern oder bei zwei oder mehr sind die Klammern erforderlich: `() => 42` und `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ Beim impliziten return gibt es eine Falle. Eine Pfeilfunktion, deren Körper mit
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// gibt undefined aus
 ```
 Hier ist `{ name: name }` ein Block, der das Label `name:` gefolgt vom Ausdruck `name` enthält. Nichts wird zurückgegeben, daher liefert der Aufruf `undefined`.
 Um ein Objektliteral in einer Zeile zurückzugeben, setze es in **Klammern**, damit JavaScript es als Ausdruck behandelt:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// gibt { name: 'Ana' } aus
 ```
 
 ---
@@ -55,13 +55,13 @@ Das Objektliteral in Klammern zu setzen ist der Standardweg, um Objekte mit eine
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// gibt 30 aus
 ```
 Eine Pfeilfunktion ohne Parameter beginnt mit einem leeren Paar Klammern `()`:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// gibt {} aus
 ```
 
 ---
@@ -71,9 +71,9 @@ Pfeilfunktionen entfalten ihre volle Stärke als **Callbacks**: Funktionen, die 
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// gibt [ 10, 20, 30, 40 ] aus
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// gibt [ 3, 4 ] aus
 ```
 Beide geben ein neues Array zurück und lassen das Original unangetastet, sodass du sie verketten kannst: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ Zwei weitere Array-Methoden nehmen einen Callback entgegen.
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// gibt 1, 2 und 3 in drei Zeilen aus
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// gibt 6 aus
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// gibt [ 50, 70, 90 ] aus
 console.log(scores.find((s) => s > 60));
-// prints 70
+// gibt 70 aus
 ```
 
 ---
@@ -111,9 +111,9 @@ Ein **Standardwert** wird verwendet, wenn das Argument weggelassen wird oder `un
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// gibt Hello, World! aus
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// gibt Hello, Ana! aus
 ```
 Beachte, dass ein Parameter mit einem Standardwert immer die Klammern braucht, selbst wenn er der einzige ist: `name = "World" => ...` ist ein Syntaxfehler.
 
@@ -123,7 +123,7 @@ Ein **Rest-Parameter** `...name` sammelt beliebig viele Argumente in einem Array
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// gibt 3 aus
 ```
 Reguläre Funktionen haben außerdem ein verstecktes Array-ähnliches `arguments`-Objekt, das jedes empfangene Argument enthält. Pfeilfunktionen **nicht**: Innerhalb einer Pfeilfunktion verweist `arguments` auf das `arguments` der umgebenden Funktion oder existiert gar nicht. Wann immer du „alle Argumente" in einer Pfeilfunktion brauchst, verwende einen Rest-Parameter.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// gibt 1 aus
 console.log(next());
-// prints 2
+// gibt 2 aus
 ```
 Niemand sonst kann `count` lesen oder zurücksetzen: Es existiert nur innerhalb der zurückgegebenen Funktion. Ein zweiter Aufruf von `makeCounter()` erzeugt einen unabhängigen Zähler mit seinem eigenen `count`.
 
@@ -154,8 +154,8 @@ Da eine Funktion ein Wert ist, kann eine Pfeilfunktion **eine andere Pfeilfunkti
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// gibt 15 aus
 console.log(makeAdder(1)(5));
-// prints 6
+// gibt 6 aus
 ```
 Lies sie von links nach rechts: `makeAdder` nimmt `amount` entgegen und gibt `(n) => n + amount` zurück, eine Pfeilfunktion, die `amount` über eine Closure einfängt. `makeAdder(1)(5)` ruft die zurückgegebene Funktion sofort auf.

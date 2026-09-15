@@ -11,7 +11,7 @@ var x = 1
 Auf diese Weise haben wir der Variablen `x` den Wert `1` zugewiesen.
 Wenn wir die Variable `x` drucken, erhalten wir die Nummer `1` zurück:
 ```kotlin
-println(x) // prints 1
+println(x) // gibt 1 aus
 ```
 
 ---
@@ -20,9 +20,9 @@ Variablen werden so genannt, weil sich der Wert, den sie speichern, ändern kann
 Wir können `x` aktualisieren, indem wir `=` verwenden und ihm einen neuen Wert geben.
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // gibt 1 aus
 x = 2
-println(x) // prints 2
+println(x) // gibt 2 aus
 ```
 
 ---
@@ -31,7 +31,7 @@ Wir können auch Variablen die Werte anderer Variablen zuweisen. Hier können wi
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // gibt 5 aus
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 Wenn wir eine Variable aktualisieren, vergisst sie ihren vorherigen Wert. Hier können wir die Variable `x` zweimal anzeigen und sehen, wie sich ihr Wert aktualisiert.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // gibt 5 aus
 x = 10
-println(x) // prints 10
+println(x) // gibt 10 aus
 ```
 
 ---

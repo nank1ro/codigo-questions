@@ -23,13 +23,13 @@ Ein Listenindex verhält sich wie jeder andere Variablenname! Er kann zum Zugrei
 Sie haben gesehen, wie Sie auf einen Listenindex wie folgt zugreifen:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # Holt den Wert "Jeremiah"
 ```
 So funktioniert eine Zuordnung:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # Holt den neuen Wert "Jordan"
 ```
 
 ---
@@ -69,9 +69,9 @@ In Python schließen wir bei der Angabe eines Listenabschnitts auf diese Weise d
 Sie können einen String genau wie eine Liste aufteilen! Tatsächlich können Sie Strings als Listen von Zeichen betrachten: jedes Zeichen ist ein nachfolgendes Element in der Liste, beginnend mit Index `0`.
 ```python
 list_name[:2]
-# Grabs the first two items
+# Greift sich die ersten zwei Elemente
 list_name[3:]
-# Grabs the fourth through last items
+# Greift sich das vierte bis letzte Element
 ```
 Wenn Ihr Listenschnitt das erste oder letzte Element einer Liste (oder eines Strings) enthält, muss der Index für dieses Element nicht angegeben werden.
 

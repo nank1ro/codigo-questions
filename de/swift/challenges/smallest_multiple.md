@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die kleinste positive Zahl zurückgibt, die durch al
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// gibt 2520 aus
 ```
 
 # --before-seed--

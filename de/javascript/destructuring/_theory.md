@@ -9,7 +9,7 @@ const y = point[1];
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// gibt 3 7 aus
 ```
 Das Muster muss nicht das ganze Array abdecken: Überzählige Elemente werden einfach ignoriert, und ein Name ohne passendes Element wird zu `undefined`.
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// gibt 5 aus
 ```
 Im ursprünglichen Array wird nichts kopiert oder geändert, das Muster liest nur daraus.
 
@@ -33,7 +33,7 @@ Manchmal ist nur ein einziges Element tief im Array wichtig. Du kannst eine Posi
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// gibt 64 aus
 ```
 Zähle die Kommas, nicht die Namen: Jedes Komma rückt das Muster eine Position weiter, ganz gleich, ob vor ihm ein Name steht oder nicht.
 
@@ -44,7 +44,7 @@ Ein Array ist nicht immer so lang, wie das Muster es erwartet. Hinter einen Name
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// gibt 1920 1080 aus
 ```
 Der Standardwert wird nur ausgewertet, wenn er gebraucht wird, er darf also sogar ein Funktionsaufruf sein, und ein Standardwert kann an jeder Position stehen, nicht nur an der letzten.
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// gibt 2 1 aus
 ```
 Die rechte Seite wird zuerst aufgebaut, daher sind beide alten Werte beim Zuweisen bereits sicher im temporären Array gespeichert. Achte auf das Semikolon in der Zeile davor: Eine Zeile, die mit `[` beginnt, würde sonst als Index des davor Stehenden gelesen.
 
@@ -67,7 +67,7 @@ Auch Objekte lassen sich destrukturieren, mit geschweiften statt eckigen Klammer
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// gibt Ada 36 aus
 ```
 `age` und `name` im Muster zu tauschen ändert nichts, und Schlüssel, die das Muster nicht erwähnt, werden einfach übergangen. Ein Name ohne passenden Schlüssel wird zu `undefined`.
 
@@ -78,7 +78,7 @@ Objektmuster und Standardwerte lassen sich genauso kombinieren wie Arraymuster, 
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// gibt dark en aus
 ```
 Da das ganze Muster eine einzige Anweisung ist, kann eine Funktion in ihrer allerersten Zeile alles, was sie braucht, aus ihrem Argument auspacken.
 
@@ -89,7 +89,7 @@ Ein Objektmuster benennt seine Variablen nach den Schlüsseln, was unpraktisch i
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// gibt Ada 1815 aus
 ```
 Lies es als „nimm `n`, nenne es `name`". Der Doppelpunkt deklariert keinen Typ, und `n` selbst wird nie als Variable angelegt, nur `name`. Ein umbenannter Name kann trotzdem einen Standardwert bekommen, der dahinter geschrieben wird: `{ n: name = "unknown" }`.
 
@@ -99,7 +99,7 @@ Standardwerte haben eine Regel, die jeden überrascht: Sie greifen **nur** bei `
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// gibt 0 aus
 ```
 `null` verhält sich hier genauso wie `0`, obwohl es in einer API-Antwort oft „kein Wert" bedeutet. Wenn auch `null` ersetzt werden muss, destrukturiere zuerst und greife danach mit `??` darauf zurück.
 
@@ -110,7 +110,7 @@ Wenn ein Schlüssel ein weiteres Objekt oder ein Array enthält, kann das Muster
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// gibt London aus
 ```
 Achte darauf, was diese Zeile erzeugt: `address: { city }` bedeutet „geh in `address` hinein", nicht „gib mir `address`", daher wird nur `city` zu einer Variable. Um beides zu bekommen, nenne den Schlüssel zweimal: `const { address, address: { city } } = user;`. Array- und Objektmuster lassen sich frei ineinander verschachteln, wie in `{ tags: [first] }`.
 
@@ -121,7 +121,7 @@ Den Kopf eines Arrays zu nehmen und den Rest zu behalten ist ein so verbreitetes
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// gibt a [ 'b', 'c' ] aus
 ```
 Ein Rest-Element muss im Muster an letzter Stelle stehen und darf keinen Standardwert haben: Wenn nichts übrig bleibt, ist es einfach ein leeres Array.
 
@@ -132,7 +132,7 @@ Auch Objektmuster haben ein Rest-Element, und dort sammelt es jeden Schlüssel, 
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// gibt { name: 'Ada', city: 'London' } aus
 ```
 Das ist der kürzeste Weg, eine Kopie eines Objekts ohne einen seiner Schlüssel zu bauen: Das Original wird nie angetastet, und das Rest-Objekt ist ein frisches, das die übrigen Werte enthält.
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// gibt 12 aus
 ```
 Im Körper gibt es überhaupt keine Objekt-Variable, nur `width` und `height`. Der Aufrufer übergibt ein Objekt, aber die Signatur dokumentiert genau, welche Schlüssel die Funktion liest, und die Schlüssel können in beliebiger Reihenfolge ankommen.
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// gibt guest/false aus
 ```
 Lies die Zeile von außen nach innen: `= {}` liefert ein leeres Objekt, wenn das Argument fehlt, und jeder innere Standardwert füllt dann seinen eigenen Schlüssel auf.
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// gibt ada is 36 aus
+// gibt bob is 41 aus
 ```
 Das ist die lesbare Art, ein Objekt zu durchlaufen: kein Index, keine Suche, nur die beiden Namen, die dich interessieren. `Object.keys` und `Object.values` liefern jeweils nur eine Seite, `Object.entries` liefert beide.
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// gibt Post [js] +2 aus
 ```
 Halte es lesbar: Ein Muster, das nicht mehr auf ein paar Zeilen passt, ist meist ein Zeichen dafür, dass die Funktion zu viel verlangt.

@@ -42,8 +42,8 @@ Ein Dezimalliteral wird nie als `Float` abgeleitet: `val ratio = 0.5` ist ein `D
 Ein `Int` kann ganze Zahlen bis etwa zwei Milliarden aufnehmen, genauer gesagt bis `Int.MAX_VALUE`, das `2147483647` ist.
 Ein Ganzzahl-Literal, das zu groß für ein `Int` ist, wird automatisch als `Long` abgeleitet, und Sie können mit dem Suffix `L` für jedes Literal ein `Long` erzwingen:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, zu groß für einen Int
+val small = 3L        // Long, dank des Suffixes
 ```
 Auf dieselbe Weise macht das Suffix `f` aus einem Dezimalliteral ein `Float`: `val ratio = 0.5f`.
 Lange Zahlen sind schwer zu lesen, daher können Sie in Kotlin Unterstriche `_` an beliebiger Stelle zwischen den Ziffern setzen; der Compiler ignoriert sie:
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, keine ganze Zahl
+println(" 42".toIntOrNull())  // null, Leerzeichen sind nicht erlaubt
 println("abc".toIntOrNull())  // null
 ```
 Für Dezimaltext gibt es `toDoubleOrNull()`, das auf dieselbe Weise `"3.5"` akzeptiert und ein `Double?` zurückgibt.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 Sobald eine Prüfung bestanden ist, führt der Compiler einen **Smart Cast** des Werts durch: Innerhalb des `if` (oder des `when`-Zweigs) können Sie ihn als diesen Typ verwenden, ganz ohne Konvertierung:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value ist hier ein Int
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

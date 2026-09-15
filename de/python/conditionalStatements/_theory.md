@@ -4,7 +4,7 @@ In der Programmierung können wir eine boolesche Variable `nice_weather` speiche
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # draußen spielen
 ```
 
 ---
@@ -13,7 +13,7 @@ Wir fahren mit dem vorherigen Beispiel fort.
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # draußen spielen
 ```
 Wir haben gesehen, dass die `if`-Anweisung den Code-Block nur dann ausführt, wenn die Bedingung `True` ist.
 Eine weitere wichtige Sache ist der **Doppelpunkt** `:` und die **Einrückung**, die den Beginn eines Code-Blocks anzeigen.
@@ -30,9 +30,9 @@ In Python können wir die `else`-Anweisung verwenden, wie hier:
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # draußen spielen
 else:
-    # stay home
+    # zu Hause bleiben
 ```
 
 ---

@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// gibt red aus
 ```
 Laut Konvention wird das Objekt mit `const` deklariert, sein Name beginnt mit einem Großbuchstaben, und die Namen der Mitglieder werden in `UPPER_CASE` geschrieben, genau wie andere Konstanten.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// gibt done aus
 ```
 Einmal eingefroren, kann das Objekt auch keine neuen Eigenschaften mehr erhalten, und `Object.isFrozen(obj)` verrät dir, ob ein Objekt eingefroren wurde:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// gibt true aus
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// gibt s aus
 console.log(Size.MEDIUM);
-// prints undefined
+// gibt undefined aus
 ```
 So oder so behält die Enumeration die Werte, die du definiert hast, was genau das ist, was man von einer Reihe von Konstanten erwartet.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// gibt true aus
 ```
 Der Kompromiss ist die Lesbarkeit: Wenn du `Priority.HIGH` ausgibst, siehst du `3`, was dir viel weniger sagt als der String `"high"`.
 
@@ -70,14 +70,14 @@ Da eine Enumeration nur ein Objekt ist, kannst du sie mit den üblichen Objekt-H
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// gibt [ 'RED', 'BLUE' ] aus
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// gibt [ 'red', 'blue' ] aus
 ```
 `Object.values()` mit der Array-Methode `includes()` zu kombinieren ist der Standardweg, um zu prüfen, ob ein beliebiger Wert, zum Beispiel einer, der aus einer Benutzereingabe gelesen wurde, ein gültiges Mitglied ist:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// gibt true aus
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// gibt false aus
 ```

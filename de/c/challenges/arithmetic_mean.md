@@ -17,7 +17,7 @@ Beispiel eines Funktionsaufrufs:
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// gibt 2.0 aus
 ```
 
 # --before-seed--

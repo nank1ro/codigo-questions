@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die n aufeinanderfolgenden Ziffern der 1000-stellige
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// gibt 5832 aus
 ```
 
 # --before-seed--

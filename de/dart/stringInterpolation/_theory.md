@@ -2,7 +2,7 @@ Eine String-_Interpolation_ ist eine programmatische Möglichkeit, einen String 
 In Dart können wir das `+`-Zeichen (Verkettung) verwenden, um zwei oder mehr Strings zusammen anzuzeigen, wie:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// gibt "Hello Dart!" aus
 ```
 
 ---
@@ -36,7 +36,7 @@ Wir können geschweifte Klammern verwenden, um Werte so oft einzufügen, wie wir
 Innerhalb der `${}` können wir auch Bedingungen eingeben, zum Beispiel:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// gibt The answer is correct aus
 ```
 
 ---

@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// gibt "Hello!" aus
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// gibt "Hello Smith! Welcome on board :)" aus
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ Du kannst einen _Standardwert_ für jeden Parameter in einer Funktion definieren
 Wenn ein Standardwert definiert ist, kannst du diesen Parameter beim Aufruf der Funktion auslassen
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // hier etwas tun
 }
 ```
 
@@ -54,7 +54,7 @@ Zum Beispiel wird ein Rest-Parameter namens `numbers` im Funktionskörper als ko
 
 In Funktionen können wir einen _optionalen Kommentar_ hinzufügen, der erklärt, was die Funktion tut:
 ```javascript
-// Prints 'Hello World' to the console.
+// Gibt 'Hello World' auf der Konsole aus.
 function helloWorld() {
     console.log("Hello, World!");
 }

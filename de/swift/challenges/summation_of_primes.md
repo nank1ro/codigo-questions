@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die Summe aller Primzahlen unterhalb der gegebenen Z
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(primeSummation(10))
-// prints 17
+// gibt 17 aus
 ```
 
 # --before-seed--

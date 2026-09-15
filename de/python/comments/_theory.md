@@ -2,7 +2,7 @@ Ein **Kommentar** ist eine Notiz im Quellcode für die Menschen, die ihn lesen. 
 
 Der einzige Kommentar, den Python kennt, ist der **einzeilige Kommentar**: er beginnt mit `#` und reicht bis zum Ende der Zeile.
 ```python
-# Greets the user
+# Begrüßt den Nutzer
 print("Hello")
 ```
 Verwende Kommentare, um zu erklären, wofür ein Stück Code gedacht ist oder warum es so geschrieben wurde.
@@ -11,7 +11,7 @@ Verwende Kommentare, um zu erklären, wofür ein Stück Code gedacht ist oder wa
 
 Ein Kommentar braucht keine eigene Zeile: er kann dem Code in derselben Zeile folgen. Das ist ein **Inline-Kommentar**, ein guter Platz für eine kurze Notiz zu genau dieser Anweisung:
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # nach drei Versuchen aufgeben
 ```
 Alles von `#` bis zum Ende der Zeile wird ignoriert, während der Code davor wie üblich läuft.
 
@@ -25,7 +25,7 @@ Deshalb ist `#` ein schneller Weg, eine Codezeile abzuschalten, ohne sie zu lös
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # gibt 10 aus
 ```
 Die zweite Zeile ist jetzt ein Kommentar, `total` bleibt also `10`. Entfernt man das `#`, lebt die Zeile wieder auf.
 
@@ -37,8 +37,8 @@ Viele Sprachen haben eine zweite Art von Kommentar, einen **Blockkommentar**, de
 
 Braucht eine Erklärung mehr als eine Zeile, setze an den Anfang jeder Zeile ein `#`:
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# Gibt das Willkommensbanner aus.
+# Wird einmal beim Start der App aufgerufen.
 print("Welcome!")
 ```
 Derselbe Trick kommentiert gleich mehrere Codezeilen auf einmal aus: ein `#` pro Zeile. Jeder Editor kann diese `#` für eine ganze Auswahl mit einem einzigen Shortcut hinzufügen oder entfernen, also kostet das weniger, als es aussieht.
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # Gibt die Begrüßung für name zurück.
 ```
 Hat eine Funktion keinen Docstring, ist `__doc__` `None`. Das gibt `help(greet)` aus, und das zeigt ein Editor an, wenn du über den Namen fährst.
 
@@ -121,7 +121,7 @@ Ein **Kommentar** ist für diejenigen, die den Code **lesen**: warum diese Zeile
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # der Server trennt inaktive Verbindungen nach 35 Sekunden
     return 30
 ```
 Also: Die Dokumentation der Funktion kommt in den Docstring, die Notizen zur Implementierung in Kommentare.
@@ -151,7 +151,7 @@ Manche Kommentare folgen einer Konvention, die Editoren verstehen. Die häufigst
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: das Limit aus den Einstellungen lesen
 ```
 Für Python sind sie ganz normale Kommentare; Editoren sammeln sie in einem eigenen Panel ein, damit offene Arbeit leicht zu finden ist. Ein `TODO` steht meist neben einem Platzhalter, der das Programm laufen lässt, bis der echte Code geschrieben ist.
 
@@ -162,7 +162,7 @@ Wenn du die Arbeit abschließt, ersetze den Platzhalter und entferne den Marker 
 Ein Kommentar über einer Funktion, der sagt, was die Funktion tut, ist am falschen Ort. Der Docstring ist der Platz dafür: er hängt an der Funktion, `help()` findet ihn und Editoren zeigen ihn an, während ein `#`-Kommentar über dem `def` für alle unsichtbar bleibt.
 
 ```python
-# adds a and b
+# addiert a und b
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ Das erste `#` ist Teil des Texts, das zweite startet einen echten Kommentar. Das
 
 Ein guter Kommentar erklärt, **warum** der Code etwas tut, nicht **was** er tut. Der Code zeigt bereits, was passiert; es in Worten zu wiederholen fügt nur Rauschen hinzu und veraltet, sobald sich der Code ändert:
 ```python
-# set timeout to 30
+# setzt timeout auf 30
 timeout = 30
 ```
 Der Grund hinter der Zahl ist das, was man als Leser nicht erraten kann:
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# der Server trennt inaktive Verbindungen nach 35 Sekunden, also früher stoppen
 timeout = 30
 ```
 Wiederholt ein Kommentar nur die Zeile unter ihm, lösche ihn oder ersetze ihn durch den Grund. Die besten Kommentare sind die, die etwas sagen, das der Code nicht sagen kann.

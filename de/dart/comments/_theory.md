@@ -9,5 +9,5 @@ Dart unterstützt _einzeilige_ Kommentare, _mehrzeilige_ Kommentare und _Dokumen
 
 So schreibst du einen _einzeiligen_ Kommentar:
 ```dart
-// This is a comment. It is not executed.
+// Dies ist ein Kommentar. Er wird nicht ausgeführt.
 ```

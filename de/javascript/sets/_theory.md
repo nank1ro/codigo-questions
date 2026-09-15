@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// gibt true aus
 console.log(colors.has("green"));
-// prints false
+// gibt false aus
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// gibt 2 aus
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// gibt 1 aus
 ```
 
 ---
@@ -46,13 +46,13 @@ Du kannst ein Set auf einen Schlag erstellen, indem du ein Array an `new Set()` 
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// gibt 3 aus
 ```
 Der **Spread**-Operator `...` funktioniert umgekehrt und verwandelt ein Set zurück in ein Array:
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// gibt [ 1, 2, 3 ] aus
 ```
 `Array.from(distinct)` macht dasselbe.
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// gibt 3 aus
+// gibt 1 aus
+// gibt 2 aus
 ```
 Sets haben außerdem eine `forEach()`-Methode, die für jeden Wert eine Funktion aufruft:
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// gibt 30 aus
+// gibt 10 aus
+// gibt 20 aus
 ```

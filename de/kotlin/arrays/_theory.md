@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// gibt x aus, dann y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 Auch wenn ein Array mit `val` deklariert wird, können seine **Elemente** ersetzt werden, indem man einem Index einen Wert zuweist:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums ist jetzt [10, 2, 3]
 ```
 Um jedes Element zu besuchen, kannst du eine `for`-Schleife oder `forEach` verwenden:
 ```kotlin
@@ -83,8 +83,8 @@ Arrays können **an Ort und Stelle** sortiert oder in eine neue sortierte Sammlu
 - `sorted()`, `sortedDescending()` und `reversed()` lassen das Array unverändert und geben eine neue `List` zurück
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums ist jetzt [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums ist weiterhin [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ Der Hauptunterschied zwischen einem Array und einer `MutableList` ist, dass ein 
 Ausdrücke wie `nums + 4` lassen `nums` nicht wachsen, sie bauen ein brandneues Array:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok, nums ist [9, 2, 3]
+val bigger = nums + 4    // neues Array [9, 2, 3, 4], nums hat weiterhin 3 Elemente
 ```
 Bevorzuge eine `MutableList`, wenn sich die Anzahl der Elemente im Laufe der Zeit ändert, und ein Array, wenn sie von vornherein bekannt ist oder wenn du die Leistung primitiver Typen brauchst.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// beide geben 0 -> cat aus, dann 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, Listen vergleichen ihre Elemente
 ```
 
 ---

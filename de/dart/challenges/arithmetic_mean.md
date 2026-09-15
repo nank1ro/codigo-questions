@@ -16,7 +16,7 @@ Schreiben Sie eine Funktion, die den Mittelwert eines numerischen Vektors zurüc
 Example of function call:
 ```dart
 print(mean([1, 2, 3]));
-// prints 2.0
+// gibt 2.0 aus
 ```
 
 # --seed--

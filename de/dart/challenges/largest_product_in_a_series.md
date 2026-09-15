@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die `n` aufeinanderfolgenden Ziffern in der 1000-ste
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// gibt 5832 aus
 ```
 
 # --seed--

@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die n-te Primzahl zurückgibt.
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(nthPrime(6))
-// prints 13
+// gibt 13 aus
 ```
 
 # --before-seed--

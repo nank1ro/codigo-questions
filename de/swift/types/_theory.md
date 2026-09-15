@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 Wenn du einen anderen Typ als den abgeleiteten möchtest, füge eine Annotation hinzu. Ein Ganzzahl-Literal kann in einer `Double`- oder `Float`-Konstante gespeichert werden, und ein Ein-Zeichen-Literal in einer `Character`-Konstante:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, kein Int
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, keine ganze Zahl
+print(Int(" 42"))  // nil, Leerzeichen sind nicht erlaubt
 print(Int("abc"))  // nil
 ```
 Für Dezimaltext verwende `Double(text)`, das auf dieselbe Weise ein `Double?` zurückgibt: `Double("3.5")` ist `Optional(3.5)`.
@@ -166,7 +166,7 @@ Da `Int(text)` und `Double(text)` bei einem Fehler `nil` zurückgeben, verrät d
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, eine ganze Zahl ist auch ein gültiger Double
 ```
 Beachte die letzte Zeile: jeder von `Int` akzeptierte Text wird auch von `Double` akzeptiert, daher prüfe zuerst auf `Int`, wenn du sie unterscheiden willst.
 
@@ -180,7 +180,7 @@ Jedes Element erinnert sich noch an seinen echten Typ, den `type(of:)` offenlegt
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // läuft nur für 1
     }
 }
 ```

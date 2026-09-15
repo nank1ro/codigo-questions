@@ -5,7 +5,7 @@ Mit `mapOf` erstellen Sie eine schreibgeschützte Map, indem Sie jeden Schlüsse
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// gibt {Italy=Rome, France=Paris} aus
 ```
 Hier sind `"Italy"` und `"France"` die Schlüssel und `"Rome"` und `"Paris"` ihre Werte.
 
@@ -38,10 +38,10 @@ Das erste Argument ist der Schlüssel, das zweite der Standardwert, der zurückg
 Eine mit `mapOf` erstellte Map ist schreibgeschützt. Um Einträge hinzuzufügen oder zu ändern, verwenden Sie `mutableMapOf`, das eine `MutableMap` zurückgibt:
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // fügt einen neuen Eintrag hinzu
+ages["Alice"] = 31 // aktualisiert den vorhandenen
 println(ages)
-// prints {Alice=31, Bob=25}
+// gibt {Alice=31, Bob=25} aus
 ```
 Die Zuweisung mit `map[key] = value` fügt das Paar hinzu, wenn der Schlüssel neu ist, und ersetzt den Wert, wenn der Schlüssel bereits existiert. Sie können auch `ages.put("Bob", 25)` aufrufen, was dasselbe bewirkt.
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// gibt aus
 // Alice is 30
 // Bob is 25
 ```

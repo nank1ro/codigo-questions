@@ -16,7 +16,7 @@ Schreibe eine Funktion, die die Summe aller Vielfachen von 3 oder 5 unterhalb vo
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// gibt 23 aus
 ```
 
 # --seed--

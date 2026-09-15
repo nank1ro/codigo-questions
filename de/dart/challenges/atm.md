@@ -23,7 +23,7 @@ Wenn nicht genug Geld auf dem Konto ist, um die Transaktion abzuschließen, gebe
 Beispiel eines Funktionsaufrufs:
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// gibt 9.5 aus
 ```
 
 # --seed--

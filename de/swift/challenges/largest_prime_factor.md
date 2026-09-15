@@ -16,7 +16,7 @@ Schreibe eine Funktion, die den größten Primfaktor der gegebenen Zahl zurückg
 Beispiel eines Funktionsaufrufs:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// gibt 29 aus
 ```
 
 # --before-seed--

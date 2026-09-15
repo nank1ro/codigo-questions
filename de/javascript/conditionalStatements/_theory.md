@@ -4,7 +4,7 @@ In der Programmierung können wir eine boolesche Variable `niceWeather` speicher
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // draußen spielen
 }
 ```
 
@@ -14,7 +14,7 @@ Lassen Sie uns das vorherige Beispiel fortsetzen.
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // draußen spielen
 }
 ```
 Wir haben gesehen, dass die `if`-Anweisung den Codeblock nur ausführt, wenn die Bedingung `true` ist.
@@ -28,9 +28,9 @@ In JavaScript können wir die `else`-Anweisung verwenden:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // draußen spielen
 } else {
-    // stay home
+    // zu Hause bleiben
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// gibt 10 aus
 ```
 Der Kurzcode für den obigen Code ist:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// gibt 10 aus
 ```
 `c` wird auf `a` gesetzt, weil die Bedingung `a < b` wahr war
 

@@ -27,7 +27,7 @@ Schreiben Sie eine Funktion `is_valid`, die einen `const char *` entgegennimmt u
 Beispiel eines Funktionsaufrufs:
 ```c
 printf("%d\n", is_valid("095 245 88"));
-// prints true
+// gibt true aus
 ```
 
 # --before-seed--
