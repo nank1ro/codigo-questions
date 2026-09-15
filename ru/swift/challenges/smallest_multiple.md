@@ -16,7 +16,7 @@ title: Наименьшее кратное
 Пример вызова функции:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// выводит 2520
 ```
 
 # --before-seed--

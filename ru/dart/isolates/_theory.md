@@ -52,8 +52,8 @@ Future<int> lengthInIsolate(String text) {
 `Isolate.run` даёт **параллелизм**: второй изолят на втором процессорном ядре, выполняющий свой код в тот же момент, что и первый. Это правильный инструмент для вычислений.
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // ожидание: ни одно ядро не занято
+await Isolate.run(() => hugeCalculation());       // вычисление: другое ядро занято
 ```
 
 Ожидание медленного вычисления через `await` совсем не помогает: `await bigSum()` всё равно выполняет `bigSum` на текущем изоляте и блокирует его до последней строки. Только второй изолят уносит эту работу прочь.
@@ -258,7 +258,7 @@ Future<void> main() async {
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // копия растёт
 print(numbers);                           // [1, 2, 3]
 ```
 

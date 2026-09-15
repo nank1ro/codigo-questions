@@ -14,8 +14,8 @@
 
 Логические значения также можно инвертировать с помощью `!` перед ними, например:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // выводит false
+println(!false) // выводит true
 ```
 
 ---
@@ -26,10 +26,10 @@ println(!false) // prints true
 - `||` (_или_): возвращает true, если выражение слева или справа от оператора истинно, или если оба истинны.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // выводит true
+println(true && false) // выводит false
+println(false && false) // выводит false
+println(true || true) // выводит true
+println(true || false) // выводит true
+println(false || false) // выводит false
 ```

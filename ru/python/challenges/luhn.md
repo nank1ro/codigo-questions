@@ -27,7 +27,7 @@ title: Контрольная сумма Луна
 Пример вызова функции:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# выводит True
 ```
 
 # --seed--

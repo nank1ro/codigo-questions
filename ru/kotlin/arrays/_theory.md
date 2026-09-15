@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// выводит x, затем y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 Даже если массив объявлен с `val`, его **элементы** можно заменить, присвоив значение по индексу:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums теперь [10, 2, 3]
 ```
 Чтобы посетить каждый элемент, можно использовать цикл `for` или `forEach`:
 ```kotlin
@@ -83,8 +83,8 @@ println(nums.contentToString())   // [1, 2, 3]
 - `sorted()`, `sortedDescending()` и `reversed()` оставляют массив нетронутым и возвращают новый `List`
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums теперь [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums всё ещё [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ println(nums.count())   // 3
 Выражения вроде `nums + 4` не увеличивают `nums`, они создают совершенно новый массив:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ок, nums — [9, 2, 3]
+val bigger = nums + 4    // новый массив [9, 2, 3, 4], в nums по-прежнему 3 элемента
 ```
 Предпочитайте `MutableList`, когда количество элементов меняется со временем, и массив, когда оно известно заранее или когда нужна производительность примитивов.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// оба выводят 0 -> cat, затем 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, списки сравнивают свои элементы
 ```
 
 ---

@@ -18,7 +18,7 @@ title: Високосный год
 Пример вызова функции:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// выводит true
 ```
 
 # --before-seed--

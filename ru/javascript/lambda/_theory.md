@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// выводит 5
 ```
 **Стрелочная функция** — более короткий способ записать то же самое: уберите ключевое слово `function` и поставьте «жирную стрелку» `=>` между списком параметров и телом:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// выводит 5
 ```
 Стрелочные функции обычно сохраняют в `const`, чтобы имя нельзя было случайно переназначить, и вызывают их точно так же, как любую другую функцию.
 
@@ -23,13 +23,13 @@ console.log(add(2, 3));
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// выводит 5
 ```
 Когда параметр **ровно один**, можно также опустить круглые скобки вокруг него:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// выводит 8
 ```
 С нулём параметров или с двумя и более скобки обязательны: `() => 42` и `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ console.log(double(4));
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// выводит undefined
 ```
 Здесь `{ name: name }` — это блок, содержащий метку `name:`, за которой следует выражение `name`. Ничего не возвращается, поэтому вызов даёт `undefined`.
 Чтобы вернуть литерал объекта одной строкой, оберните его в **круглые скобки**, чтобы JavaScript считал его выражением:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// выводит { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ console.log(make("Ana"));
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// выводит 30
 ```
 Стрелочная функция без параметров начинается с пустой пары круглых скобок `()`:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// выводит {}
 ```
 
 ---
@@ -71,9 +71,9 @@ console.log(empty());
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// выводит [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// выводит [ 3, 4 ]
 ```
 Оба возвращают новый массив и оставляют исходный нетронутым, поэтому их можно объединять в цепочки: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ console.log(numbers.filter((n) => n > 2));
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// выводит 1, 2 и 3 на трёх строках
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// выводит 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// выводит [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// выводит 70
 ```
 
 ---
@@ -111,9 +111,9 @@ console.log(scores.find((s) => s > 60));
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// выводит Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// выводит Hello, Ana!
 ```
 Обратите внимание, что параметр со значением по умолчанию всегда требует круглых скобок, даже когда он единственный: `name = "World" => ...` — синтаксическая ошибка.
 
@@ -123,7 +123,7 @@ console.log(greet("Ana"));
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// выводит 3
 ```
 У обычных функций также есть скрытый подобный массиву объект `arguments`, в котором хранится каждый полученный аргумент. У стрелочных функций его **нет**: внутри стрелки `arguments` ссылается на `arguments` окружающей функции или вовсе не существует. Когда в стрелочной функции нужны «все аргументы», используйте rest-параметр.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// выводит 1
 console.log(next());
-// prints 2
+// выводит 2
 ```
 Никто другой не может прочитать или сбросить `count`: он живёт только внутри возвращённой функции. Повторный вызов `makeCounter()` создаёт независимый счётчик со своим собственным `count`.
 
@@ -154,8 +154,8 @@ console.log(next());
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// выводит 15
 console.log(makeAdder(1)(5));
-// prints 6
+// выводит 6
 ```
 Читайте слева направо: `makeAdder` принимает `amount` и возвращает `(n) => n + amount`, стрелочную функцию, которая захватывает `amount` через замыкание. `makeAdder(1)(5)` сразу вызывает возвращённую функцию.

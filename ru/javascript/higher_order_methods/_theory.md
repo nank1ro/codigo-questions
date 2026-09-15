@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// выводит HI!!
 ```
 Обрати внимание, что `shout` передаётся **без скобок**: `twice(shout, "hi")` передаёт саму функцию, тогда как `twice(shout("hi"), "hi")` сначала вызвал бы `shout` и передал его результат, строку `"HI!"`, которую вызвать нельзя.
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// выводит a и b на двух строках
 ```
 Колбэк получает по одному элементу за раз. Это может быть стрелочная функция, написанная на месте, как выше, или любая функция, сохранённая в переменной. Именно так внутри работают встроенные методы массивов, с которыми ты познакомишься дальше.
 
@@ -32,9 +32,9 @@ each(["a", "b"], (letter) => console.log(letter));
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// выводит 5 и 10 на двух строках
 console.log(doubled);
-// prints [ 10, 20 ]
+// выводит [ 10, 20 ]
 ```
 Частая ошибка — сохранить результат `forEach` или прицепить к нему ещё один метод: цеплять нечего, ведь он возвращает `undefined`. Правило: бери `map`, когда нужны новые значения, и `forEach`, когда нужно только что-то *сделать*.
 
@@ -46,9 +46,9 @@ console.log(doubled);
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// выводит [ 8, 5 ]
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// выводит 16
 ```
 Так как `filter` и `map` возвращают массивы, их можно объединять в цепочку и завершать её `reduce`: `numbers.filter(...).map(...).reduce(...)`.
 
@@ -61,9 +61,9 @@ console.log(numbers.reduce((sum, n) => sum + n, 0));
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// выводит 45
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// выводит true false
 ```
 Все три останавливаются, как только ответ известен, поэтому они никогда не просматривают больше элементов, чем нужно.
 
@@ -73,9 +73,9 @@ console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
 Без компаратора `sort()` превращает каждый элемент в **строку** и сравнивает их посимвольно, поэтому `10` идёт раньше `9`: ведь `"1"` меньше `"9"`:
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// выводит [ 1, 10, 9 ]
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// выводит [ 1, 9, 10 ]
 ```
 Так как `sort` изменяет массив, сортируй копию, когда нужен и исходный порядок: `[...numbers].sort(...)`. Для строк используй компаратор `(a, b) => a.localeCompare(b)`, который упорядочивает текст по алфавиту.
 
@@ -86,7 +86,7 @@ console.log([10, 9, 1].sort((a, b) => a - b));
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// выводит [ 'a', 'b' ]
 ```
 Сортировка копии оставляет `items` в исходном порядке.
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// выводит 15
 console.log(makeMultiplier(10)(5));
-// prints 50
+// выводит 50
 ```
 Каждый вызов `makeMultiplier` создаёт новую функцию со своим `factor`. Так из одного шаблона строится семейство похожих функций. То же самое можно записать стрелочными функциями: `const makeMultiplier = (factor) => (n) => n * factor;`.
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// выводит 2
 ```
 Никто не может прочитать или сбросить `count` снаружи иначе как через эти две функции: переменная **приватная**. Второй вызов `makeCounter()` создаёт совершенно отдельный `count`.
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// выводит HI
 ```
 Порядок важен: `compose(f, g)` сначала выполняет `g`, потом `f`. Построение программ из склеенных таким образом маленьких функций называется **композицией функций**.
 
@@ -146,7 +146,7 @@ console.log(clean("  hi  "));
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// выводит [ 'tree' ]
 ```
 Общая функция `not(predicate)` сделала бы это для любого предиката: она возвращает новую функцию, которая вызывает `predicate` с тем же аргументом и переворачивает результат с помощью `!`. Предикаты для `filter`, `find`, `some` и `every` получают элемент первым аргументом, поэтому обёртке нужно передать дальше только это значение.
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// выводит { yes: 2, no: 1 }
 ```
 `acc[vote] ?? 0` читает текущий счётчик или `0`, когда такого ключа ещё нет.
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// выводит 42
 ```
 Фиксация `this` важна для методов. Когда метод скопирован из своего объекта и вызывается сам по себе, `this` больше не ссылается на объект, поэтому `this.name` становится `undefined`. `bind` привязывает его к объекту:
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// выводит Hi undefined
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// выводит Hi Ana
 ```
 Исходная функция никогда не меняется: `bind` всегда создаёт новую, чьё `name` — это исходное имя с приставкой `bound `.
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// выводит ready ready 1
 ```
 Обёртке нужны две приватные переменные: запускалась ли уже `fn` и сохранённый результат. Обе живут в замыкании и невидимы снаружи. Чтобы передать в `fn` все аргументы обёртки, объяви обёртку с остаточным параметром `(...args)` и вызови `fn(...args)`.
 
@@ -220,6 +220,6 @@ console.log(init(), init(), calls);
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// выводит { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
 ```
 Для каждого элемента вычисли ключ, создай массив для этого ключа, если его ещё нет (`acc[key] ?? []`), добавь элемент и верни аккумулятор. Так как `keyFn` выбирает вызывающий код, одна и та же функция группирует слова по первой букве, людей по городу или числа по чётности.

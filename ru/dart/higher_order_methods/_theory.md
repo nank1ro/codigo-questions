@@ -64,8 +64,8 @@ print(numbers.every((n) => n > 2)); // false
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // пока ничего не вычислено
+print(doubled.first);                      // вычисляет только 2
 ```
 
 `toList()` — то, что **материализует** последовательность: она проходит её от начала до конца и сохраняет каждый результат в настоящий `List`.
@@ -183,7 +183,7 @@ print(numbers); // [1, 2, 3]
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2], без изменений
 ```
 
 `sort` также принимает **компаратор**: функцию от двух элементов, возвращающую отрицательное число, когда первый должен идти перед вторым, `0`, когда они равны, и положительное число в противном случае. `compareTo` возвращает именно это, поэтому упорядочивание по любому ключу умещается в одну строку:
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // String из Strings
+final letters = words.fold(0, (acc, w) => acc + w.length); // int из Strings
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

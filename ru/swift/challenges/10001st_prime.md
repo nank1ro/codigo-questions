@@ -16,7 +16,7 @@ title: 10001-е простое число
 Пример вызова функции:
 ```swift
 print(nthPrime(6))
-// prints 13
+// выводит 13
 ```
 
 # --before-seed--

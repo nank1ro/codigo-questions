@@ -16,7 +16,7 @@ title: Особая пифагорова тройка
 Пример вызова функции:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// выводит 60
 ```
 
 # --before-seed--

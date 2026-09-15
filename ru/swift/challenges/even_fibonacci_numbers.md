@@ -18,7 +18,7 @@ title: Чётные числа Фибоначчи
 Пример вызова функции:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// выводит 10
 ```
 
 # --before-seed--

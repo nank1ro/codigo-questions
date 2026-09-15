@@ -5,7 +5,7 @@ let ages = new Map();
 ages.set("Ann", 30);
 ages.set("Bob", 25);
 console.log(ages.get("Ann"));
-// prints 30
+// выводит 30
 ```
 Вызов `set()` с ключом, который уже существует, заменяет его значение.
 
@@ -21,10 +21,10 @@ let stock = new Map();
 stock.set("apple", 3);
 stock.set("pear", 5);
 console.log(stock.has("apple"));
-// prints true
+// выводит true
 stock.delete("pear");
 console.log(stock.size);
-// prints 1
+// выводит 1
 ```
 Обратите внимание, что `size` — это свойство, а не метод, поэтому у него нет скобок.
 
@@ -35,7 +35,7 @@ console.log(stock.size);
 let ages = new Map();
 ages.set("Ann", 30);
 console.log(ages.get("Zed"));
-// prints undefined
+// выводит undefined
 ```
 Именно поэтому существует `has()`: он позволяет отличить отсутствующий ключ от ключа, значение которого оказалось `undefined`.
 `set()` возвращает сам Map, поэтому вызовы можно объединять в цепочку:
@@ -52,11 +52,11 @@ let lookup = new Map();
 lookup.set(1, "number one");
 lookup.set("1", "string one");
 console.log(lookup.size);
-// prints 2
+// выводит 2
 let alice = { name: "Alice" };
 lookup.set(alice, "an object key");
 console.log(lookup.get(alice));
-// prints an object key
+// выводит an object key
 ```
 Ключи-объекты сравниваются по идентичности: значение получает обратно только тот же самый объект.
 
@@ -71,8 +71,8 @@ stock.set("pear", 5);
 for (const [name, qty] of stock.entries()) {
   console.log(`${name}: ${qty}`);
 }
-// prints apple: 3
-// prints pear: 5
+// выводит apple: 3
+// выводит pear: 5
 ```
 Перебор самого Map, `for (const [name, qty] of stock)`, делает ровно то же самое.
 
@@ -86,13 +86,13 @@ prices.set("cake", 4);
 for (const name of prices.keys()) {
   console.log(name);
 }
-// prints tea
-// prints cake
+// выводит tea
+// выводит cake
 for (const price of prices.values()) {
   console.log(price);
 }
-// prints 2
-// prints 4
+// выводит 2
+// выводит 4
 ```
 
 ---
@@ -102,12 +102,12 @@ for (const price of prices.values()) {
 let pairs = [["red", "#f00"], ["blue", "#00f"]];
 let colors = new Map(pairs);
 console.log(colors.size);
-// prints 2
+// выводит 2
 ```
 Поскольку `Object.entries(obj)` возвращает именно такой массив пар, это самый быстрый способ превратить объект в Map:
 ```javascript
 let user = { name: "Ann", age: 30 };
 let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
-// prints 30
+// выводит 30
 ```

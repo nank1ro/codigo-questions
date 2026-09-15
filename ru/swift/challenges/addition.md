@@ -17,7 +17,7 @@ title: Сложение
 Пример вызова функции:
 ```swift
 print(addition(1, 2))
-// prints 3
+// выводит 3
 ```
 
 # --before-seed--

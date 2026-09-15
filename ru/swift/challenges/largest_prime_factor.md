@@ -16,7 +16,7 @@ title: Наибольший простой множитель
 Пример вызова функции:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// выводит 29
 ```
 
 # --before-seed--

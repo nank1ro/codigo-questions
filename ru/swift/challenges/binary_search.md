@@ -21,7 +21,7 @@ title: Двоичный поиск
 Пример вызова функции:
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// выводит 2
 ```
 
 # --before-seed--

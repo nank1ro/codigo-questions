@@ -11,10 +11,10 @@
 Оператор `typeof` сообщает тип значения в виде строки:
 ```javascript
 console.log(typeof 42, typeof "Ana", typeof true);
-// prints number string boolean
+// выводит number string boolean
 let city;
 console.log(typeof city);
-// prints undefined
+// выводит undefined
 ```
 
 ---
@@ -23,10 +23,10 @@ JavaScript — язык с **динамической типизацией**: у
 ```javascript
 let data = 10;
 console.log(typeof data);
-// prints number
+// выводит number
 data = "ten";
 console.log(typeof data);
-// prints string
+// выводит string
 ```
 Это удобно, но означает и то, что функция может получить значение неожиданного типа, поэтому проверка с помощью `typeof` — обычный первый шаг. Поскольку `typeof` возвращает строку, его результат сравнивают со строкой:
 ```javascript
@@ -41,14 +41,14 @@ if (typeof data === "string") {
 Функции получают собственный ответ — `"function"`, хотя они являются объектами:
 ```javascript
 console.log(typeof function () {});
-// prints function
+// выводит function
 console.log(typeof console.log);
-// prints function
+// выводит function
 ```
 Массивы **не** получают собственного ответа: это обычный `"object"`, как и у `{}`:
 ```javascript
 console.log(typeof [1, 2, 3]);
-// prints object
+// выводит object
 ```
 А `typeof null` — это `"object"`, историческая ошибка, которую так и не исправили. Поэтому `typeof` хорошо различает примитивы и функции, но не может отличить массив, объект и `null` друг от друга.
 
@@ -64,9 +64,9 @@ console.log(typeof [1, 2, 3]);
 const input = "7";
 const count = Number(input) + 1;
 console.log(count, typeof count);
-// prints 8 number
+// выводит 8 number
 console.log(String(count) + "!");
-// prints 8!
+// выводит 8!
 ```
 Явное преобразование делает ваш замысел очевидным: тот, кто читает `Number(input)`, знает, что `input` был текстом.
 
@@ -75,19 +75,19 @@ console.log(String(count) + "!");
 `Number()` строг: вся строка должна быть числом, иначе результат — `NaN` ("Not a Number"):
 ```javascript
 console.log(Number("12px"));
-// prints NaN
+// выводит NaN
 ```
 `parseInt()` и `parseFloat()` более снисходительны: они читают цифры с начала строки, пропускают начальные пробелы и останавливаются на первом символе, который не является частью числа. `parseInt` сохраняет только целую часть:
 ```javascript
 console.log(parseInt("12px"), parseFloat("1.5kg"));
-// prints 12 1.5
+// выводит 12 1.5
 console.log(parseInt("3.9em"), parseInt("-4px"));
-// prints 3 -4
+// выводит 3 -4
 ```
 Когда строка не начинается с того, с чего может начинаться число (необязательный знак, затем цифра), они тоже возвращают `NaN`:
 ```javascript
 console.log(parseInt("auto"));
-// prints NaN
+// выводит NaN
 ```
 `NaN` — единственное значение, которое не равно самому себе, поэтому `x === NaN` всегда `false`; чтобы его обнаружить, используйте `Number.isNaN(x)`.
 
@@ -97,16 +97,16 @@ console.log(parseInt("auto"));
 Старая глобальная функция `isNaN(value)` сначала **преобразует** `value` в число, а затем проверяет. Поэтому она говорит `true` для всего, что не может стать числом, даже если это вовсе не `NaN`:
 ```javascript
 console.log(isNaN("hello"));
-// prints true, because Number("hello") is NaN
+// выводит true, потому что Number("hello") равно NaN
 console.log(isNaN("42"));
-// prints false, because Number("42") is 42
+// выводит false, потому что Number("42") равно 42
 ```
 `Number.isNaN(value)` **не** преобразует: она равна `true`, только когда `value` — действительно число `NaN`:
 ```javascript
 console.log(Number.isNaN("hello"));
-// prints false, a string is not NaN
+// выводит false, строка — это не NaN
 console.log(Number.isNaN(Number("hello")));
-// prints true
+// выводит true
 ```
 Предпочитайте `Number.isNaN`, а если хотите узнать, не удалось ли преобразование, сначала выполните преобразование.
 
@@ -115,14 +115,14 @@ console.log(Number.isNaN(Number("hello")));
 JavaScript выполняет преобразования и **неявно**, и чаще всего здесь преподносит сюрпризы оператор `+`. Если хотя бы одна из сторон — строка, `+` **конкатенирует**, а другая сторона преобразуется в строку:
 ```javascript
 console.log("5" + 3);
-// prints 53
+// выводит 53
 console.log(1 + 2 + "3");
-// prints 33, because 1 + 2 is computed first
+// выводит 33, потому что 1 + 2 вычисляется первым
 ```
 Все остальные арифметические операторы преобразуют обе стороны в **числа**:
 ```javascript
 console.log("6" - 2, "3" * "4");
-// prints 4 12
+// выводит 4 12
 ```
 Поэтому сложение значений, приходящих из текста (пользовательский ввод, файлы, URL), может незаметно построить строку вместо суммы. Чтобы быть уверенным, преобразуйте с помощью `Number()` перед сложением.
 
@@ -131,9 +131,9 @@ console.log("6" - 2, "3" * "4");
 Короткий способ преобразовать строку в число — **унарный плюс**: `+`, поставленный перед одиночным значением, преобразует его точно так же, как это делает `Number()`:
 ```javascript
 console.log(+"5" + 5);
-// prints 10
+// выводит 10
 console.log(typeof +"5");
-// prints number
+// выводит number
 ```
 Он компактен, но его легко спутать со сложением, поэтому многие команды предпочитают явный `Number("5")`.
 
@@ -142,16 +142,16 @@ console.log(typeof +"5");
 **Нестрогое** равенство `==` преобразует обе стороны к общему типу перед сравнением, следуя правилам, которые трудно запомнить:
 ```javascript
 console.log("5" == 5);
-// prints true, "5" becomes 5
+// выводит true, "5" становится 5
 console.log(0 == "");
-// prints true, "" becomes 0
+// выводит true, "" становится 0
 console.log(0 == false, "1" == true);
-// prints true true
+// выводит true true
 ```
 **Строгое** равенство `===` никогда не преобразует: значения разных типов просто не равны:
 ```javascript
 console.log("5" === 5, 0 === "", 0 === false);
-// prints false false false
+// выводит false false false
 ```
 По умолчанию используйте `===` (и `!==`). Единственное распространённое исключение — `value == null`, проверяющее `null` и `undefined` одновременно.
 
@@ -162,9 +162,9 @@ console.log("5" === 5, 0 === "", 0 === false);
 **Всё остальное — truthy**, включая некоторые значения, которые выглядят пустыми:
 ```javascript
 console.log(Boolean(0), Boolean(""), Boolean(NaN));
-// prints false false false
+// выводит false false false
 console.log(Boolean("0"), Boolean("false"), Boolean([]), Boolean({}));
-// prints true true true true
+// выводит true true true true
 ```
 `"0"` — непустая строка, поэтому она truthy; пустой массив — это объект, поэтому он тоже truthy.
 
@@ -173,7 +173,7 @@ console.log(Boolean("0"), Boolean("false"), Boolean([]), Boolean({}));
 Распространённый способ преобразовать любое значение в булево — **двойное отрицание** `!!`: первый `!` преобразует значение в булево и переворачивает его, второй переворачивает обратно:
 ```javascript
 console.log(!!"text", !!0);
-// prints true false
+// выводит true false
 ```
 `!!value` и `Boolean(value)` дают ровно одинаковый результат; явная форма легче для чтения.
 
@@ -182,12 +182,12 @@ console.log(!!"text", !!0);
 В JavaScript есть единственный тип `number` для целых и десятичных чисел: каждое число — это 64-битное значение с плавающей точкой (a *double*). Поэтому `5` и `5.0` — это одно и то же значение, и отдельного целочисленного типа нет:
 ```javascript
 console.log(5 === 5.0, 10 / 2);
-// prints true 5
+// выводит true 5
 ```
 Чтобы узнать, нет ли у числа дробной части, используйте `Number.isInteger`:
 ```javascript
 console.log(Number.isInteger(5.0), Number.isInteger(3.5));
-// prints true false
+// выводит true false
 ```
 Шаблонные литералы преобразуют интерполируемое значение в строку по тем же правилам, что и `String()`, поэтому `${5.0}` становится `"5"`, а не `"5.0"`.
 
@@ -196,20 +196,20 @@ console.log(Number.isInteger(5.0), Number.isInteger(3.5));
 Поскольку числа — это double, некоторые десятичные дроби невозможно сохранить точно, и появляются небольшие погрешности:
 ```javascript
 console.log(0.1 + 0.2);
-// prints 0.30000000000000004
+// выводит 0.30000000000000004
 console.log(0.1 + 0.2 === 0.3);
-// prints false
+// выводит false
 ```
 Метод `toFixed(digits)` округляет число до `digits` знаков после запятой, но возвращает **строку**, что хорошо для отображения и плохо для дальнейших вычислений:
 ```javascript
 const price = (0.1 + 0.2).toFixed(2);
 console.log(price, typeof price);
-// prints 0.30 string
+// выводит 0.30 string
 ```
 Чтобы получить округлённое **число**, преобразуйте результат обратно с помощью `Number()`:
 ```javascript
 console.log(Number((0.1 + 0.2).toFixed(1)));
-// prints 0.3
+// выводит 0.3
 ```
 
 ---
@@ -217,13 +217,13 @@ console.log(Number((0.1 + 0.2).toFixed(1)));
 Тип `number` может точно представлять целые числа только до `Number.MAX_SAFE_INTEGER`, то есть `9007199254740991`. Сверх этого цифры теряются:
 ```javascript
 console.log(9007199254740993);
-// prints 9007199254740992
+// выводит 9007199254740992
 ```
 Для больших целых чисел используйте `bigint`: запишите литерал с суффиксом `n` или преобразуйте с помощью `BigInt()`:
 ```javascript
 const big = 9007199254740993n;
 console.log(typeof big, big + 1n);
-// prints bigint 9007199254740994n
+// выводит bigint 9007199254740994n
 ```
 `console.log` показывает суффикс `n`; `String(big)` даёт просто цифры.
 `bigint` и `number` нельзя смешивать в арифметике: `big + 1` выбрасывает `TypeError`. Преобразуйте одну из сторон явно, с помощью `BigInt(count)` или `Number(big)`.
@@ -234,7 +234,7 @@ console.log(typeof big, big + 1n);
 `Array.isArray(value)` равна `true` только для массивов:
 ```javascript
 console.log(Array.isArray([1, 2]), Array.isArray({}));
-// prints true false
+// выводит true false
 ```
 Для `null` сравнивайте напрямую: `value === null`. Их сочетание даёт полную картину о любом значении:
 ```javascript
@@ -251,6 +251,6 @@ function kind(value) {
 Текст, приходящий из форм, файлов или URL, — всегда строка, даже когда он представляет число или булево значение. Обратное преобразование в правильный тип объединяет то, что вы уже видели: для булевых значений сравнивайте с `"true"` и `"false"`, а для чисел пробуйте `Number()`, помня, что `Number("")` — это `0` и что `Number.isNaN` сообщает, когда преобразование не удалось:
 ```javascript
 console.log(Number("3.5"), Number(""), Number("12px"));
-// prints 3.5 0 NaN
+// выводит 3.5 0 NaN
 ```
 Когда ничего не подходит, оставьте строку как есть.

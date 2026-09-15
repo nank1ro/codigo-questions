@@ -16,7 +16,7 @@ title: Наибольший палиндром-произведение
 Пример вызова функции:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// выводит 9009
 ```
 
 # --before-seed--

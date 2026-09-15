@@ -23,7 +23,7 @@ title: "ATM"
 Пример вызова функции:
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// выводит 9.5
 ```
 
 # --seed--

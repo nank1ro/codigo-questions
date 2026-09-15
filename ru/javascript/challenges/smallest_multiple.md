@@ -84,7 +84,7 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 ```javascript
 function smallestMultiple(n){
   function gcd(a, b) {
-    return b === 0 ? a : gcd(b, a%b); // Euclidean algorithm
+    return b === 0 ? a : gcd(b, a%b); // Алгоритм Евклида
   }
 
   function lcm(a, b) {

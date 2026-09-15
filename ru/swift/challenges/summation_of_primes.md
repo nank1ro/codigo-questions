@@ -16,7 +16,7 @@ title: Сумма простых чисел
 Пример вызова функции:
 ```swift
 print(primeSummation(10))
-// prints 17
+// выводит 17
 ```
 
 # --before-seed--

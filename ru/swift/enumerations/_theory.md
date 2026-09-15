@@ -32,7 +32,7 @@ switch color {
     case .green:
         print("Green")
 }
-// prints "Red"
+// выводит "Red"
 ```
 Имейте в виду, что если вам не нужно предоставлять `case` для каждого варианта перечисления, вы можете указать ветку `default` для покрытия всех случаев, которые не указаны явно
 
@@ -48,5 +48,5 @@ enum Colors: CaseIterable {
 for color in Colors.allCases {
     print(color)
 }
-// prints blue, red, green
+// выводит blue, red, green
 ```

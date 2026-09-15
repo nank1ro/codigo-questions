@@ -16,7 +16,7 @@ title: Наибольшее палиндромное произведение
 Пример вызова функции:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// выводит 9009
 ```
 
 # --seed--

@@ -18,7 +18,7 @@ title: Високосный год
 Пример вызова функции:
 ```swift
 print(leapYear(2000))
-// prints true
+// выводит true
 ```
 
 # --before-seed--

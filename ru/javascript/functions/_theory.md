@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// выводит "Hello!"
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// выводит "Hello Smith! Welcome on board :)"
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ console.log(sayHello("Smith", true));
 Если значение по умолчанию задано, вы можете опустить этот параметр при вызове функции
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // делай что-нибудь здесь
 }
 ```
 
@@ -54,7 +54,7 @@ function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
 
 В функциях мы можем добавить _необязательный комментарий_, который объясняет, что делает функция:
 ```javascript
-// Prints 'Hello World' to the console.
+// Выводит 'Hello World' в консоль.
 function helloWorld() {
     console.log("Hello, World!");
 }

@@ -20,7 +20,7 @@ title: Двоичный поиск
 Пример вызова функции:
 ```javascript
 console.log(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// выводит 2
 ```
 
 # --before-seed--

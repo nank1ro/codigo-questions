@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # выводит только "checking -1"
+check(2) or check(-3)   # выводит только "checking 2"
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False, проверяются только ключи
 ```
 Оба возвращают логическое значение и читаются как английский текст, что делает их предпочтительным способом проверки вхождения вместо написания цикла.

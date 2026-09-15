@@ -54,7 +54,7 @@ print(len(letters))  # 3
 - `discard(value)` удаляет его, если он присутствует, и **ничего не делает** в противном случае, без ошибки
 ```python
 letters.remove("a")
-letters.discard("z")  # "z" is not there, but no error
+letters.discard("z")  # "z" отсутствует, но ошибки нет
 letters.remove("z")   # KeyError: 'z'
 ```
 
@@ -158,7 +158,7 @@ print(small.isdisjoint({8, 9}))  # True
 Попытка добавить список, словарь или другое множество вызывает `TypeError`:
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # ok, кортеж
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 Множества кортежей удобны для отслеживания уникальных пар, таких как координаты или записи (name, age):

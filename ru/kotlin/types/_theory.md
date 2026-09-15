@@ -42,8 +42,8 @@ println(price::class.simpleName) // Double
 `Int` может хранить целые числа примерно до двух миллиардов, а точнее до `Int.MAX_VALUE`, то есть `2147483647`.
 Целочисленный литерал, слишком большой для `Int`, автоматически выводится как `Long`, а для любого литерала можно принудительно задать `Long` суффиксом `L`:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, слишком большое для Int
+val small = 3L        // Long, благодаря суффиксу
 ```
 Точно так же суффикс `f` превращает десятичный литерал в `Float`: `val ratio = 0.5f`.
 Длинные числа трудно читать, поэтому Kotlin позволяет ставить знак подчёркивания `_` в любом месте между цифрами; компилятор их игнорирует:
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, не целое число
+println(" 42".toIntOrNull())  // null, пробелы не допускаются
 println("abc".toIntOrNull())  // null
 ```
 Для десятичного текста используйте `toDoubleOrNull()`, которая принимает `"3.5"` и аналогично возвращает `Double?`.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 Когда проверка пройдена, компилятор выполняет **умное приведение** типа: внутри `if` (или ветки `when`) можно использовать значение как этот тип, без всякого преобразования:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value здесь имеет тип Int
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

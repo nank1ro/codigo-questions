@@ -11,7 +11,7 @@ var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 
 Доступ к значениям словаря по ключу аналогичен доступу к значениям массива по индексу:
 ```swift
-// gets the age value from the user dictionary
+// получает значение age из словаря user
 user['age']
 ```
 
@@ -34,7 +34,7 @@ dictName[newKeyName] = newValue
 Поскольку словари изменяемы, их можно модифицировать различными способами. Элементы можно удалить из словаря с помощью метода `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // выводит удалённое значение, если ключ существует
 }
 ```
 удалит ключ `keyName` и связанное с ним значение из словаря.
@@ -73,5 +73,5 @@ for (key, value) in dictName {
 Мы также можем удалить элемент, присвоив ключу значение `nil`
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName удалён из словаря dictName
 ```

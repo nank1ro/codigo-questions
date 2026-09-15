@@ -12,7 +12,7 @@ var x = 1;
 Если мы выведем переменную `x`, то получим число `1`:
 ```javascript
 console.log(x);
-// prints 1
+// выводит 1
 ```
 
 ---
@@ -21,9 +21,9 @@ console.log(x);
 Мы можем обновить `x`, используя `=` и задав новое значение.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // выводит 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // выводит 2
 ```
 
 ---
@@ -33,7 +33,7 @@ console.log(x); // prints 2
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // выводит 5
 ```
 
 ---
@@ -42,9 +42,9 @@ console.log(y); // prints 5
 Здесь мы можем вывести переменную `x` дважды и увидеть, как её значение обновляется.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // выводит 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // выводит 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 В JavaScript строковые переменные можно объявлять как с двойными, так и с одинарными кавычками:
 ```javascript
 let x = "May";
-// both are the same string
+// обе строки одинаковы
 let y = 'May';
 console.log(x === y);
-// prints true
+// выводит true
 ```
 
 ---

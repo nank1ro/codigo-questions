@@ -26,7 +26,7 @@ val greet: (String) -> Unit = { name -> println("Hi, $name") }
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // возвращается
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 Когда у лямбды ровно **один** параметр, можно не объявлять его: Kotlin сам называет его `it`.
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // то же самое
 ```
 `it` существует только тогда, когда параметр не объявлен явно, и только для лямбд с одним параметром.
 Он сохраняет компактность коротких лямбд, но для более длинных тел настоящее имя понятнее.
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // то же самое, с лямбдой в конце
 ```
 Размещение функционального параметра **последним** — именно это делает синтаксис trailing lambda доступным для вызывающих.
 
@@ -160,7 +160,7 @@ println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], то же самое
 ```
 Функции-члены ссылаются через их тип, например `String::uppercase`:
 ```kotlin

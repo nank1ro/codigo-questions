@@ -25,7 +25,7 @@ title: "ATM"
 Пример вызова функции:
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// выводит 9,5
 ```
 
 # --before-seed--

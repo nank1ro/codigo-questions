@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 Когда вам нужен тип, отличный от выведенного, добавьте аннотацию. Целочисленный литерал можно сохранить в константе `Double` или `Float`, а литерал из одного символа — в константе `Character`:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, а не Int
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, не целое число
+print(Int(" 42"))  // nil, пробелы не допускаются
 print(Int("abc"))  // nil
 ```
 Для десятичного текста используйте `Double(text)`, который аналогичным образом возвращает `Double?`: `Double("3.5")` — это `Optional(3.5)`.
@@ -166,7 +166,7 @@ for c in "a1" {
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, целое число также является допустимым Double
 ```
 Обратите внимание на последнюю строку: любой текст, принятый `Int`, принимается и `Double`, поэтому, когда нужно их различить, сначала проверяйте на `Int`.
 
@@ -180,7 +180,7 @@ let items: [Any] = [1, "two", true]
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // выполняется только для 1
     }
 }
 ```

@@ -94,15 +94,15 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3, у него уже было значение
 ```
 
 Он также работает с элементами map, которые являются nullable, потому что ключа может не быть:
 
 ```dart
 var stock = {'apple': 4};
-stock['pear'] ??= 1;  // added
-stock['apple'] ??= 9; // ignored
+stock['pear'] ??= 1;  // добавлено
+stock['apple'] ??= 9; // проигнорировано
 print(stock); // {apple: 4, pear: 1}
 ```
 
@@ -142,7 +142,7 @@ print(text!.length); // Null check operator used on a null value
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // здесь n — int, ! не нужен
   }
   return 0;
 }
@@ -153,7 +153,7 @@ int twice(int? n) {
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // начиная отсюда n — int
 }
 ```
 
@@ -207,7 +207,7 @@ class Connection {
 `late` можно также сочетать с инициализатором, который тогда выполняется **лениво**, при первом чтении переменной:
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport() выполняется, только когда используется report
 ```
 
 ---
@@ -270,7 +270,7 @@ print(int.tryParse(''));    // null
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // ничего не происходит, numbers всё ещё null
 ```
 
 **Null-безопасный спред** `...?` вставляет элементы nullable-коллекции в литерал, не добавляя ничего, когда коллекция равна `null`:

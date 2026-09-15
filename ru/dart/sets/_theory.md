@@ -33,7 +33,7 @@ print(letters.length); // 3
 ```dart
 var tags = {'dart'};
 tags.add('web');    // true
-tags.add('dart');   // false, already there
+tags.add('dart');   // false, уже там
 tags.addAll(['web', 'mobile']);
 print(tags); // {dart, web, mobile}
 ```

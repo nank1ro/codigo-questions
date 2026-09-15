@@ -18,7 +18,7 @@ title: Високосный год
 Пример вызова функции:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// выводит true
 ```
 
 # --before-seed--

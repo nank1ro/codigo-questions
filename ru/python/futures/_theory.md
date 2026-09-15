@@ -49,7 +49,7 @@ asyncio.run(countdown())
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # ничего не выводится
 ```
 Python даже предупреждает об этом: `RuntimeWarning: coroutine 'hello' was never awaited`. Забытый `await` — самая распространённая асинхронная ошибка: код выглядит вызванным, но никогда не выполняется, а переменная, которая должна была хранить его результат, вместо этого хранит объект-сопрограмму.
 
@@ -60,7 +60,7 @@ Python даже предупреждает об этом: `RuntimeWarning: corou
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # имитирует медленный поиск
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # выводит пустую строку
 ```
 Исключение, которое никто не перехватывает, распространяется через каждый `await` вплоть до `asyncio.run`, который выбрасывает его заново в синхронном коде — совсем как обычный стек вызовов.
 

@@ -11,7 +11,7 @@ async function fetchNumber() {
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // выводит 42
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// выводит HI
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// выводит Promise { 'HI' }
 ```
 Обе функции содержат одинаковый код; отличается только способ чтения результата. Чтобы `shoutLater("hi")` отдала `"HI"`, её нужно подождать через `await` внутри другой `async` функции.
 
@@ -52,7 +52,7 @@ const soon = new Promise((resolve) => {
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // выводит done примерно через секунду
 }
 
 main();
@@ -76,7 +76,7 @@ main();
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // выводит 21
 });
 ```
 **`Promise.resolve(value)`** создаёт промис, который уже выполнен со значением `value`; это удобно, когда значение уже есть под рукой, но вернуть нужно промис.
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// выводит 42
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// выводит start, затем data, затем done
 ```
 Обратите внимание на последнюю строку: `async` функцию всё ещё нужно **вызвать**. Запись `main` без скобок определяет работу, но никогда её не запускает, и ничего не выводится.
 
@@ -125,7 +125,7 @@ function readAge(age) {
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // выводит negative age
 });
 ```
 Вызов и `resolve`, и `reject`, или вызов одного из них дважды, ничего не меняет: учитывается только первый вызов.
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// выводит cleanup, затем error: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ async function main() {
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() возвращает промис, отклонённый с Error("boom")
 ```
 Как и в любом блоке `try`, строки после неудачного `await` пропускаются, блок `catch` выполняется, а блок `finally` выполняется в обоих случаях.
 
@@ -199,7 +199,7 @@ const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// выводит true
 ```
 Возвращаемый массив всегда содержит ровно столько же элементов, сколько было в полученном массиве, на тех же позициях, поэтому его можно перебирать, как любой другой массив.
 
@@ -207,11 +207,11 @@ console.log(values.length === items.length);
 
 Разница между **последовательным** и **параллельным** ожиданием решается тем, *где* вы поставите `await`:
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// последовательно: около 300 + 300 = 600 мс
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// параллельно: около 300 мс
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 В первой версии вторая загрузка начинается только после завершения первой, потому что `await` приостанавливает функцию на этой строке. Во второй оба вызова сделаны до того, как что-либо ожидается, поэтому обе загрузки уже идут, пока `Promise.all` ждёт.
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// выводит fulfilled
 console.log(results[1].reason.message);
-// prints nope
+// выводит nope
 ```
 Читайте `value`, только когда `status` равен `"fulfilled"`, и `reason`, только когда он равен `"rejected"`: другое свойство просто отсутствует.
 

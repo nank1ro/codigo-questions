@@ -16,7 +16,7 @@ difficulty: 1
 Пример вызова функции:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# выводит 2
 ```
 
 # --seed--

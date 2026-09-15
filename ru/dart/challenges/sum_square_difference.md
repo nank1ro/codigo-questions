@@ -20,7 +20,7 @@ title: Разность квадратов сумм
 Пример вызова функции:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// выводит 2640
 ```
 
 # --seed--

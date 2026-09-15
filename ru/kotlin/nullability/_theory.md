@@ -7,7 +7,7 @@ var city: String = null // error: Null can not be a value of a non-null type Str
 Тип `String?` хранит либо `String`, либо `null`:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // разрешено
 println(city) // null
 ```
 `String` и `String?` — это два разных типа: `String` никогда не отсутствует, `String?` — может.
@@ -17,9 +17,9 @@ println(city) // null
 Разница между `String` и `String?` проверяется **компилятором**, а не во время выполнения.
 Присваивание `null` типу, не допускающему null, или передача значения, допускающего null, туда, где ожидается значение, не допускающее null, — это ошибка компиляции, поэтому программа даже не запускается:
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // не компилируется
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // не компилируется: String? — это не String
 ```
 Так Kotlin избегает падений с «null pointer», распространённых в других языках: значение может отсутствовать только там, где вы явно объявили это с помощью `?`.
 
@@ -47,12 +47,12 @@ println(none?.length)   // null
 **Элвис-оператор** `?:` делает именно это: он возвращает левую часть, когда она не `null`, иначе — значение справа:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown — это String, равная "Guest"
 ```
 Поскольку правая часть используется только тогда, когда левая равна `null`, результат не допускает null, когда его не допускает значение по умолчанию.
 `?:` хорошо сочетается с `?.`, превращая безопасный вызов обратно в обычное значение:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len — это Int, 0, когда name равно null
 ```
 
 ---
@@ -62,7 +62,7 @@ val len = name?.length ?: 0 // len is an Int, 0 when name is null
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() и uppercase() не выполняются
 ```
 Цепочка, заканчивающаяся на `?:`, даёт результат, не допускающий null, в одну строку:
 ```kotlin
@@ -103,7 +103,7 @@ println(none!!.length) // NullPointerException
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name здесь — это String
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ fun greet(name: String?): String {
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name отсюда и далее — String
 }
 ```
 Умные приведения работают с переменными `val` и параметрами функций, значение которых не может измениться между проверкой и использованием.
@@ -123,9 +123,9 @@ fun greet(name: String?): String {
 В сочетании с безопасным вызовом `?.let` выполняет блок **только** когда значение не `null`, и внутри блока `it` не допускает null:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // выводит Sending to ada@example.com
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // ничего не происходит
 ```
 Это компактная альтернатива `if (x != null) { ... }`, когда значение нужно только внутри блока.
 
@@ -213,7 +213,7 @@ println(none.orDash()) // -
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first здесь — это Char
 }
 ```
 Все инструменты, которые вы видели, хорошо сочетаются: параметры и возвращаемые типы, допускающие null, описывают *где* значение может отсутствовать, а `?.`, `?:`, `let`, умные приведения и `toIntOrNull` обрабатывают это, не допуская падения.

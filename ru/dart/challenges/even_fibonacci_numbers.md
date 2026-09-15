@@ -16,7 +16,7 @@ title: Чётные числа Фибоначчи
 Пример вызова функции:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// выводит 10
 ```
 
 # --seed--
