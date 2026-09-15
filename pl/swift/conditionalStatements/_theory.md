@@ -4,7 +4,7 @@ W programowaniu możemy zapisać zmienną logiczną `niceWeather` i wykonać czy
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // bawić się na dworze
 }
 ```
 
@@ -14,7 +14,7 @@ Kontynuujmy poprzedni przykład.
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // bawić się na dworze
 }
 ```
 Widzieliśmy, że instrukcja `if` wykonuje blok kodu tylko wtedy, gdy warunek jest `true`.
@@ -28,9 +28,9 @@ W Swift możemy użyć instrukcji `else`, tak jak:
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // bawić się na dworze
 } else {
-    // stay home
+    // zostać w domu
 }
 ```
 

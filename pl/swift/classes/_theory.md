@@ -12,10 +12,10 @@ _Struktury_ i _klasy_ to ogólne, elastyczne konstrukty, które stają się blok
 Podstawowa klasa lub struktura składa się wyłącznie ze słowa kluczowego `class` lub `struct` i jej nazwy, na przykład:
 ```swift
 class ClassName {
-    // class definition
+    // definicja klasy
 }
 struct ClassName {
-    // structure definition
+    // definicja struktury
 }
 ```
 

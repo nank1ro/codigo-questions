@@ -11,7 +11,7 @@ Klucz `key1` wskazuje na wartość `1`, `key2` na `2` i tak dalej.
 
 Dostęp do wartości słownika za pomocą klucza jest podobny do dostępu do wartości tablicy za pomocą indeksu:
 ```javascript
-// gets the age value from the user dictionary
+// pobiera wartość wieku ze słownika użytkownika
 user['age'];
 ```
 

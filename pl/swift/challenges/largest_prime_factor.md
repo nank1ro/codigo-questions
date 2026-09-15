@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca największy czynnik pierwszy podanej liczby.
 Przykład wywołania funkcji:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// wypisuje 29
 ```
 
 # --before-seed--

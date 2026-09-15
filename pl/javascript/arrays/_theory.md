@@ -23,15 +23,15 @@ Można go używać zarówno do uzyskiwania dostępu, jak i do przypisywania wart
 Widziałeś, jak uzyskać dostęp do indeksu tablicy w ten sposób:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// Wypisuje wartość "Jeremiah"
 console.log(names[0]);
 ```
 Tak działa przypisanie:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// Przypisz nową wartość "Jordan"
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// Wypisuje wartość "Jordan"
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ Aby dodać element do tablicy, używamy funkcji `push`:
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// Wypisuje ["a", "b", "c"]
 ```
 
 ---
@@ -60,7 +60,7 @@ Rozważ następujący kod:
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// wypisuje [2, 3]
 ```
 Najpierw tworzymy tablicę o nazwie `numbers`.
 Następnie pobieramy fragment tablicy i zapisujemy go w tablicy slice.
@@ -71,9 +71,9 @@ Pamiętaj, że prawy indeks jest wykluczony
 
 W JavaScript możemy wycinać tablice tak jak chcemy!
 ```javascript
-// Grabs the first two items
+// Pobiera pierwsze dwa elementy
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// Pobiera elementy od czwartego do ostatniego
 listName.slice(3);
 ```
 Jeśli fragment tablicy zawiera pierwszy lub ostatni element tablicy, indeks tego elementu nie musi być uwzględniony
@@ -94,13 +94,13 @@ W JavaScript możemy użyć metody `indexOf()`:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// wypisuje 1
 ```
 Powyższy kod drukuje pierwszy indeks, który zawiera ciąg `"Zac"`, w tym przypadku `1`.
 Możemy również wstawiać elementy do tablicy na określonym indeksie, używając metody `splice()`:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// wypisuje ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 Powyższy kod wstawia `"Ali"` na indeksie `1`, co przesuwa wszystko po tym indeksie o 1.
 Druga wartość `0` oznacza _deleteCount_, w tym przypadku nie usuwamy żadnego elementu z tablicy; ale gdybyśmy podali `1`, wartość `Zac` zostałaby usunięta z tablicy
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// wypisuje 1, 2, 3
 ```
 Po słowie kluczowym `for` następuje nazwa zmiennej, która będzie kolejno przyjmować wartość każdego elementu tablicy.

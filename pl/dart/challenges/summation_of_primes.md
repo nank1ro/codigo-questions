@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca sumę wszystkich liczb pierwszych poniżej `n`.
 Przykład wywołania funkcji:
 ```dart
 print(primeSummation(10));
-// prints 17
+// wypisuje 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ Suma wszystkich liczb pierwszych poniżej 100000 musi być równa 454396537
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // Sito Eratostenesa
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

@@ -79,7 +79,7 @@ Zwróć uwagę, że `int(3.9)` nie zaokrągla: odrzuca część dziesiętną.
 Konwersja może się nie udać. `int("abc")` nie może dać liczby, więc zgłasza `ValueError` i program się zatrzymuje:
 ```python
 int("abc")   # ValueError: invalid literal for int() with base 10: 'abc'
-int("3.5")   # ValueError as well: "3.5" is not a whole number
+int("3.5")   # ValueError też: "3.5" nie jest liczbą całkowitą
 ```
 Aby program działał dalej, możesz przechwycić błąd za pomocą `try` / `except`: kod w bloku `try` się wykonuje, a jeśli zgłosi wskazany błąd, wykonuje się blok `except`:
 ```python

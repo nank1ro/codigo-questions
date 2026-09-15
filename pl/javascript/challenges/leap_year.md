@@ -18,7 +18,7 @@ Zwróć `true`, jeśli rok jest przestępny, w przeciwnym razie `false`.
 Przykład wywołania funkcji:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// wypisuje true
 ```
 
 # --before-seed--

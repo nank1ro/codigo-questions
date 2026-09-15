@@ -23,7 +23,7 @@ Jeśli na koncie nie ma wystarczającej ilości pieniędzy, aby zakończyć tran
 Przykład wywołania funkcji:
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// wypisuje 9.5
 ```
 
 # --seed--

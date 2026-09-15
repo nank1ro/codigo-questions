@@ -7,7 +7,7 @@ fun greet() {
 ```
 Aby wywołać (wykonać) funkcję, użyj jej nazwy z nawiasami:
 ```kotlin
-greet() // prints Hello!
+greet() // wypisuje Hello!
 ```
 Funkcja, która nie zwraca wartości, niejawnie zwraca `Unit`.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 Słowo kluczowe `return` odsyła wartość do miejsca wywołania:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // wypisuje 42
 ```
 Typ zwracany musi odpowiadać typowi zwracanej wartości.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 Argumenty przekazuje się podczas wywołania funkcji:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // wypisuje Hello, Alice!
 ```
 Parametry umożliwiają pisanie wielokrotnie używanego kodu, który działa z różnymi wartościami.
 
@@ -48,8 +48,8 @@ Kotlin obsługuje domyślne wartości parametrów. Jeśli wywołujący nie poda 
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // wypisuje Hello, World!
+greet("Alice")  // wypisuje Hello, Alice!
 ```
 Wartości domyślne sprawiają, że parametry są opcjonalne, zmniejszając potrzebę przeciążania funkcji.
 
@@ -72,8 +72,8 @@ Funkcje mogą zwracać wartości `Boolean`, co jest przydatne do sprawdzania war
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // wypisuje true
+println(isEven(7)) // wypisuje false
 ```
 Funkcja `Boolean` zwraca `true` lub `false`.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// wypisuje My name is Bob and I am 30 years old.
 ```
 Nazwane argumenty pozwalają przekazywać wartości w dowolnej kolejności, używając nazwy parametru:
 ```kotlin

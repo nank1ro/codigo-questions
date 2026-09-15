@@ -4,7 +4,7 @@ W programowaniu możemy zapisać zmienną boolowską `nice_weather` i wykonać a
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // baw się na dworze
 }
 ```
 
@@ -14,7 +14,7 @@ Kontynuujmy poprzedni przykład.
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // baw się na dworze
 }
 ```
 Widzieliśmy, że instrukcja `if` wykonuje blok kodu tylko wtedy, gdy warunek jest `true`.
@@ -28,9 +28,9 @@ W C możemy użyć instrukcji `else`, na przykład:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // baw się na dworze
 } else {
-    // stay home
+    // zostań w domu
 }
 ```
 

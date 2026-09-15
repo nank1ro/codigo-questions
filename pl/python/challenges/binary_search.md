@@ -20,7 +20,7 @@ Lista nigdy nie zawiera duplikatów, więc indeks jest zawsze unikalny. Lista mo
 Przykład wywołania funkcji:
 ```python
 print(binary_search([1, 3, 5, 7], 5))
-# prints 2
+# wypisuje 2
 ```
 
 # --seed--

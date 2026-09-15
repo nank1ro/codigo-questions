@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje n sąsiadujących cyfr w liczbie 1000-cyfrowej 
 Przykład wywołania funkcji:
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// wypisuje 5832
 ```
 
 # --before-seed--

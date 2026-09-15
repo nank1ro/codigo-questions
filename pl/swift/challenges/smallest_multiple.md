@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca najmniejszą dodatnią liczbę, która jest równ
 Przykład wywołania funkcji:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// wypisuje 2520
 ```
 
 # --before-seed--

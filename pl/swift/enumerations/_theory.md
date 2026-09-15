@@ -32,7 +32,7 @@ switch color {
     case .green:
         print("Green")
 }
-// prints "Red"
+// wypisuje "Red"
 ```
 Pamiętaj, że jeśli nie musisz podawać `case` dla każdego przypadku wyliczenia, możesz podać przypadek `default`, który obejmuje wszystkie przypadki nieadresowane wprost
 
@@ -48,5 +48,5 @@ enum Colors: CaseIterable {
 for color in Colors.allCases {
     print(color)
 }
-// prints blue, red, green
+// wypisuje blue, red, green
 ```

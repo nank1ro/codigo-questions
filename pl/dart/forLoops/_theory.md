@@ -2,7 +2,7 @@ Pętla `for` powtarza blok kodu określoną liczbę razy. Podstawowa składnia t
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // ciało
 }
 ```
 
@@ -56,7 +56,7 @@ Instrukcja `break` natychmiast kończy pętlę, gdy spełniony jest warunek:
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // zatrzymuje się na 5
   print(i);
 }
 ```

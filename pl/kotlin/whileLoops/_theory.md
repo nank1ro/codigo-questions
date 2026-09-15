@@ -5,7 +5,7 @@ Powtarza blok kodu tak długo, jak _wyrażenie boolowskie_ kontrolujące jest pr
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // Kod do powtórzenia
 }
 ```
 Wyrażenie boolowskie jest sprawdzane raz na początku pętli i
@@ -46,7 +46,7 @@ Wynik powyższego kodu to _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, 
 Istnieje drugi sposób użycia _while_, w połączeniu ze słowem kluczowym `do`.
 ```kotlin
 do {
-  // Code to be repeated
+  // Kod do powtórzenia
 } while (Boolean-expression)
 ```
 Jak widać, `do-while` jest bardzo podobna do pętli `while`, z wyjątkiem jednej ważnej różnicy:
@@ -71,7 +71,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// wypisuje 1, 3
 ```
 
 Jak widać w __[1]__, gdy `i` jest równe _2_, pomijamy i _kontynuujemy_ do następnego kroku. W rzeczywistości liczba 2 nigdy nie jest wyświetlana.
@@ -86,7 +86,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// wypisuje 1
 ```
 
 Jak widać w __[1]__, gdy `i` jest równe _2_, _przerywamy_ pętlę. W rzeczywistości liczby 2 i 3 nigdy nie są wyświetlane.

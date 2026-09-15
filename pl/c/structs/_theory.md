@@ -12,7 +12,7 @@ struct Point p = {3, 4}; // x is 3, y is 4
 ```
 Pola odczytuje się i zapisuje operatorem **kropki** `.`:
 ```c
-printf("%d\n", p.x); // prints "3"
+printf("%d\n", p.x); // wypisuje "3"
 p.y = 10;
 ```
 
@@ -67,7 +67,7 @@ typedef struct {
 Wewnętrzną strukturę inicjalizuje się jej własną parą nawiasów klamrowych, a jej pola osiąga się przez łączenie operatora kropki:
 ```c
 Segment s = {{1, 2}, {5, 2}};
-printf("%d\n", s.end.x); // prints "5"
+printf("%d\n", s.end.x); // wypisuje "5"
 ```
 
 ---
@@ -101,7 +101,7 @@ int count_free(Item items[], int size) {
 Gdy struktura jest przekazywana do funkcji **przez wartość**, funkcja otrzymuje jej **kopię**. Zmiana pola parametru zmienia tylko kopię, a zmienna wywołującego pozostaje taka, jak była:
 ```c
 void reset(Point p) {
-    p.x = 0; // changes the copy
+    p.x = 0; // zmienia kopię
 }
 ```
 Aby funkcja mogła zmodyfikować strukturę wywołującego, przekaż jej **adres** za pomocą `&` i zadeklaruj parametr jako **wskaźnik**, `Point *p`. Wskaźnik odnosi się do oryginalnej zmiennej, a nie do kopii:

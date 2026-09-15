@@ -30,7 +30,7 @@ Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 Przykład wywołania funkcji:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// wypisuje "Plong"
 ```
 
 # --before-seed--

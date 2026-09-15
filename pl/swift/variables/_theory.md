@@ -11,7 +11,7 @@ var x = 1
 W ten sposób przypisaliśmy wartość `1` do zmiennej o nazwie `x`.
 Jeśli wyświetlimy zmienną `x`, otrzymamy liczbę `1`:
 ```swift
-print(x) // prints 1
+print(x) // wypisuje 1
 ```
 
 ---
@@ -20,9 +20,9 @@ Zmienne nazywane są w ten sposób, ponieważ wartość, którą przechowują, m
 Możemy zaktualizować `x` używając `=` i podając nową wartość.
 ```swift
 var x = 1
-print(x) // prints 1
+print(x) // wypisuje 1
 x = 2
-print(x) // prints 2
+print(x) // wypisuje 2
 ```
 
 ---
@@ -31,7 +31,7 @@ Możemy również przypisywać zmiennym wartości innych zmiennych. Tutaj możem
 ```swift
 var x = 5
 var y = x
-print(y) // prints 5
+print(y) // wypisuje 5
 ```
 
 ---
@@ -39,9 +39,9 @@ print(y) // prints 5
 Kiedy aktualizujemy zmienną, zapomina ona poprzednią wartość. Tutaj możemy wyświetlić zmienną `x` dwa razy i zobaczyć, jak jej wartość się aktualizuje.
 ```swift
 var x = 5
-print(x) // prints 5
+print(x) // wypisuje 5
 x = 10
-print(x) // prints 10
+print(x) // wypisuje 10
 ```
 
 ---

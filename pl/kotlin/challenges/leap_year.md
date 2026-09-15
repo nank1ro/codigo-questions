@@ -18,7 +18,7 @@ Zwróć `true`, jeśli jest to rok przestępny, w przeciwnym razie `false`.
 Przykład wywołania funkcji:
 ```kotlin
 println(leapYear(2000))
-// prints true
+// wypisuje true
 ```
 
 # --seed--

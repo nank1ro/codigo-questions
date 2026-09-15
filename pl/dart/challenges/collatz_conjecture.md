@@ -22,7 +22,7 @@ Napisz funkcję `collatzSteps`, która przyjmuje dodatnią liczbę całkowitą `
 Przykład wywołania funkcji:
 ```dart
 print(collatzSteps(16));
-// prints 4
+// wypisuje 4
 ```
 
 # --seed--

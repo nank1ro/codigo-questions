@@ -2,7 +2,7 @@
 
 Najprostszy komentarz to **komentarz jednoliniowy**: zaczyna się od `//` i trwa do końca linii.
 ```kotlin
-// Greets the user
+// Wita użytkownika
 println("Hello")
 ```
 Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego został napisany w taki sposób.
@@ -11,7 +11,7 @@ Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego
 
 Komentarz nie musi mieć własnej linii: może następować po kodzie w tej samej linii. To **komentarz końcowy**, dobre miejsce na krótką notatkę o tej konkretnej instrukcji:
 ```kotlin
-val retries = 3 // give up after three attempts
+val retries = 3 // poddaje się po trzech próbach
 ```
 Wszystko od `//` do końca linii jest ignorowane, a kod przed nim wykonuje się normalnie.
 
@@ -23,7 +23,7 @@ Dzięki temu `//` to szybki sposób na wyłączenie linii kodu bez jej usuwania.
 ```kotlin
 var total = 10
 // total = total + 5
-println(total) // prints 10
+println(total) // wypisuje 10
 ```
 Druga linia jest teraz komentarzem, więc `total` pozostaje `10`. Usunięcie `//` przywraca ją do życia.
 
@@ -45,8 +45,8 @@ Komentarz blokowy może też być krótki i zmieścić się w jednej linii: `/* 
 
 W przeciwieństwie do `//`, który kończy się na końcu linii, komentarz `/*` kończy się dopiero przy `*/`. Jeśli zapomnisz go zamknąć, kompilator potraktuje cały dalszy kod jako część komentarza i zgłosi błąd:
 ```kotlin
-val width = 10 /* in centimetres
-println(width) // still inside the comment: error, the comment is never closed
+val width = 10 /* w centymetrach
+println(width) // nadal wewnątrz komentarza: błąd, komentarz nigdy się nie zamyka
 ```
 Zarówno `//`, jak i `/* */` działają jako komentarze końcowe, ale przy `/*` zawsze upewnij się, że `*/` jest na miejscu.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-println(total) // prints 100
+println(total) // wypisuje 100
 ```
 Dzięki zagnieżdżaniu działa to nawet wtedy, gdy jedna z tych linii zawiera już komentarz `/* */`.
 
@@ -159,7 +159,7 @@ Niektóre komentarze podlegają konwencji, którą rozumieją edytory. Najczęst
 
 ```kotlin
 val limit = 10
-// TODO: read the limit from the settings
+// TODO: odczytaj limit z ustawień
 ```
 Dla kompilatora to zwykłe komentarze; IntelliJ IDEA zbiera je w dedykowanym oknie narzędziowym, dzięki czemu łatwo znaleźć zaległą pracę. `TODO` zwykle znajduje się obok zaślepki, która utrzymuje kod kompilowalnym do czasu napisania prawdziwej implementacji. Gdy kończysz pracę, zamień zaślepkę i usuń znacznik w tej samej zmianie, aby komentarz nigdy nie kłamał o stanie kodu.
 
@@ -171,12 +171,12 @@ Dla kompilatora to zwykłe komentarze; IntelliJ IDEA zbiera je w dedykowanym okn
 
 Dobry komentarz wyjaśnia, **dlaczego** kod coś robi, a nie **co** robi. Kod już pokazuje, co się dzieje; powtarzanie tego słowami dodaje szumu i dezaktualizuje się, gdy tylko kod się zmieni:
 ```kotlin
-// set timeout to 30
+// ustaw timeout na 30
 val timeout = 30
 ```
 Powodu stojącego za tą liczbą czytelnik nie jest w stanie odgadnąć:
 ```kotlin
-// the server drops idle connections after 35 seconds, so stop earlier
+// serwer zrywa bezczynne połączenia po 35 sekundach, więc zatrzymaj się wcześniej
 val timeout = 30
 ```
 Jeśli komentarz jedynie powtarza linię poniżej, usuń go albo zastąp powodem. Najlepsze komentarze to te, które mówią coś, czego kod powiedzieć nie może.

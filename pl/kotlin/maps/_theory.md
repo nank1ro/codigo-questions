@@ -5,7 +5,7 @@ Mapę tylko do odczytu tworzysz za pomocą `mapOf`, łącząc każdy klucz z jeg
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// wypisuje {Italy=Rome, France=Paris}
 ```
 Tutaj `"Italy"` i `"France"` to klucze, a `"Rome"` i `"Paris"` to ich wartości.
 
@@ -38,10 +38,10 @@ Pierwszy argument to klucz, drugi to wartość domyślna zwracana, gdy klucz nie
 Mapa utworzona za pomocą `mapOf` jest tylko do odczytu. Aby dodać lub zmienić wpisy, użyj `mutableMapOf`, która zwraca `MutableMap`:
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // dodaje nowy wpis
+ages["Alice"] = 31 // aktualizuje istniejący
 println(ages)
-// prints {Alice=31, Bob=25}
+// wypisuje {Alice=31, Bob=25}
 ```
 Przypisanie za pomocą `map[key] = value` dodaje parę, gdy klucz jest nowy, i zastępuje wartość, gdy klucz już istnieje. Możesz też wywołać `ages.put("Bob", 25)`, co robi to samo.
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// wypisuje
 // Alice is 30
 // Bob is 25
 ```

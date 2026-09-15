@@ -26,7 +26,7 @@ Ciało lambdy może zajmować kilka linii. Nie ma słowa kluczowego `return`: wa
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // zwrócone
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 Gdy lambda ma dokładnie **jeden** parametr, możesz pominąć jego deklarację: Kotlin nadaje mu nazwę `it`.
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // to samo
 ```
 `it` istnieje tylko wtedy, gdy parametr nie jest zadeklarowany wprost, i tylko w lambdach z jednym parametrem.
 Dzięki niej krótkie lambdy pozostają zwięzłe, ale przy dłuższych ciałach czytelniejsza jest prawdziwa nazwa.
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // to samo, z trailing lambda
 ```
 To umieszczenie parametru funkcyjnego **na końcu** sprawia, że składnia trailing lambda jest dostępna dla wywołujących.
 
@@ -160,7 +160,7 @@ Gdy funkcja, której potrzebujesz, już istnieje, nie ma potrzeby owijania jej w
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], to samo
 ```
 Do funkcji składowych tworzy się referencje przez ich typ, na przykład `String::uppercase`:
 ```kotlin

@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca sumę dwóch liczb.
 Przykład wywołania funkcji:
 ```kotlin
 println(addition(1, 2))
-// prints 3
+// wypisuje 3
 ```
 
 # --seed--

@@ -22,7 +22,7 @@ Oto pętla `for` powtarzająca akcję określoną liczbę razy:
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// wypisuje 1, 2, 3
 ```
 
 Wynik pokazuje indeks `i` otrzymujący każdą wartość z zakresu od _1_ do _3_.
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* wypisuje
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ Aby to działało, musimy użyć słowa kluczowego `downTo`:
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// wypisuje 3, 2, 1
 ```
 
 `downTo` tworzy malejący zakres.
@@ -78,7 +78,7 @@ Możesz zdefiniować __krok__ swojej pętli `for` używając słowa kluczowego `
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// wypisuje 1, 3, 5, 7, 9
 ```
 
 Jak widać, blok kodu wykonuje się z krokiem _2_ zamiast _1_, co całkowicie zmienia nasz wynik.
@@ -88,7 +88,7 @@ Jak widać, blok kodu wykonuje się z krokiem _2_ zamiast _1_, co całkowicie zm
 Można również tworzyć zakres _znaków_.
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// wypisuje abcdefghijklmnopqrstuvwxyz
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 Można iterować po __String__.
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// wypisuje bdc
 ```
 
 W powyższym przykładzie wydrukowaliśmy każdy znak + 1, więc `'a'` staje się `'b'`, `'b'` staje się `'c'` i tak dalej.
@@ -113,7 +113,7 @@ Jeśli po prostu musisz powtórzyć blok kodu `n` razy, możesz użyć funkcji `
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// wypisuje repeat 3 razy
 ```
 
 Możesz nawet uzyskać dostęp do indeksu za pomocą
@@ -121,19 +121,19 @@ Możesz nawet uzyskać dostęp do indeksu za pomocą
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// wypisuje 0, 1, 2
 ```
 
 ---
 
 W Kotlinie możemy używać `for-in` również dla iterowalnych kolekcji, wywołując podane domknięcie na każdym elemencie:
 ```kotlin
-// this is a list, we'll see about that soon
+// to jest lista, zajmiemy się tym wkrótce
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// wypisuje (2, 4, 6, 8, 10)
 ```
 
 ---
@@ -142,7 +142,7 @@ W Kotlinie mamy również pętlę `forEach`.
 Wywołuje ona podane domknięcie na każdym elemencie sekwencji w tej samej kolejności co pętla `for-in`:
 
 ```kotlin
-// this is a list, we'll see about that soon
+// to jest lista, zajmiemy się tym wkrótce
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

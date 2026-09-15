@@ -27,7 +27,7 @@ Funkcjonalność jest taka sama, jedyną różnicą jest to, że wykonuje odejmo
 Poniższe są dokładnie równoważne:
 ```python
 num = num - 5
-# is equal to
+# jest równoważne z
 num -= 5
 ```
 
@@ -38,7 +38,7 @@ Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Poniższe są dokładnie równoważne:
 ```python
 num = num * 5
-# is equal to
+# jest równoważne z
 num *= 5
 ```
 
@@ -49,7 +49,7 @@ Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Poniższe są dokładnie równoważne:
 ```python
 num = num / 5
-# is equal to
+# jest równoważne z
 num /= 5
 ```
 
@@ -60,7 +60,7 @@ Podnosi zmienną do określonej potęgi i przypisuje wynik do zmiennej.
 Poniższe są dokładnie równoważne:
 ```python
 num = num ** 5
-# is equal to
+# jest równoważne z
 num **= 5
 ```
 
@@ -71,7 +71,7 @@ Oblicza modulo zmiennej i wartości, a następnie przypisuje wynik do tej zmienn
 Poniższe są dokładnie równoważne:
 ```python
 num = num % 5
-# is equal to
+# jest równoważne z
 num %= 5
 ```
 
@@ -82,6 +82,6 @@ Dzieli zmienną całkowicie przez wartość i przypisuje wynik do tej zmiennej.
 Poniższe są dokładnie równoważne:
 ```python
 num = num // 5
-# is equal to
+# jest równoważne z
 num //= 5
 ```

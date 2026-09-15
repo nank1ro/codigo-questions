@@ -24,7 +24,7 @@ Aby utworzyć modyfikowalną listę, użyj słowa kluczowego `mutableListOf`
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// wypisuje [1, 3, 5, 7]
 ```
 
 ---
@@ -47,15 +47,15 @@ Indeks listy może być używany zarówno do odczytu, jak i do przypisywania war
 Zobaczyłeś, jak uzyskać dostęp do indeksu listy w ten sposób:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// Wypisuje wartość "Jeremiah"
 println(names[0])
 ```
 Oto jak działa przypisanie:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// Przypisz nową wartość "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// Wypisuje wartość "Jordan"
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ Na przykład, jeśli masz listę imion, możesz użyć metody `contains`, aby sp
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// wypisuje true
 ```
 
 ---
@@ -83,7 +83,7 @@ Aby dodać element do modyfikowalnej listy, używamy funkcji `add` lub skrótu `
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// wypisuje [a, b, c]
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// wypisuje [a, b, c, d, e]
 ```
 
 ---
@@ -106,7 +106,7 @@ Rozważ następujący kod:
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// wypisuje [2, 3]
 ```
 __[1]__: najpierw tworzymy listę _tylko do odczytu_ o nazwie `numbers`.
 __[2]__: następnie pobieramy fragment listy za pomocą funkcji `slice` i przechowujemy go na liście slice.
@@ -130,7 +130,7 @@ W Kotlinie możemy użyć metody `indexOfFirst`:
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// wypisuje 1
 ```
 
 Metoda `indexOfFirst` przyjmuje funkcję __predykat__, która będzie ewaluowana dla każdego elementu na liście, dopóki nie będzie prawdziwa, zwracając _indeks_ elementu.
@@ -139,7 +139,7 @@ Powyższy kod drukuje pierwszy indeks zawierający ciąg `"Zac"`, w tym przypadk
 Możemy również wstawiać elementy do modyfikowalnej listy na określony indeks za pomocą metody `add(index, element)`:
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// wypisuje [Trevor, Ali, Zac, Glenn]
 ```
 Powyższy kod wstawia `"Ali"` na indeksie `1`, co przesuwa wszystko po tym indeksie o 1 w dół
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// wypisuje 1, 2, 3
 ```
 Po słowie kluczowym `for` następuje nazwa zmiennej, która będzie kolejno przyjmować wartość każdego elementu listy.

@@ -42,8 +42,8 @@ Literał dziesiętny nigdy nie jest wnioskowany jako `Float`: `val ratio = 0.5` 
 `Int` może przechowywać liczby całkowite do około dwóch miliardów, a dokładniej do `Int.MAX_VALUE`, czyli `2147483647`.
 Literał całkowity zbyt duży dla `Int` jest automatycznie wnioskowany jako `Long`, a dla dowolnego literału możesz wymusić `Long` sufiksem `L`:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, zbyt duże dla Int
+val small = 3L        // Long, dzięki sufiksowi
 ```
 Analogicznie sufiks `f` zamienia literał dziesiętny w `Float`: `val ratio = 0.5f`.
 Długie liczby są trudne do odczytania, więc Kotlin pozwala wstawić podkreślniki `_` w dowolnym miejscu między cyframi; kompilator je ignoruje:
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, nie jest liczbą całkowitą
+println(" 42".toIntOrNull())  // null, spacje są niedozwolone
 println("abc".toIntOrNull())  // null
 ```
 Dla tekstu dziesiętnego użyj `toDoubleOrNull()`, które przyjmuje `"3.5"` i analogicznie zwraca `Double?`.
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 Gdy sprawdzenie się powiedzie, kompilator wykonuje **smart cast**: wewnątrz `if` (lub gałęzi `when`) możesz użyć wartości jako tego typu, bez żadnej konwersji:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value jest tutaj Int
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

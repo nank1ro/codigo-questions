@@ -10,7 +10,7 @@ Wywoływanie też wygląda inaczej: musisz napisać **`await`** przed wywołanie
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// wypisuje 42
 ```
 W skrypcie Swift najwyższy poziom już obsługuje `await`, więc możesz wywoływać funkcje asynchroniczne bezpośrednio, bez żadnej dodatkowej konfiguracji. Zapomnienie `async` lub `await` to błąd kompilacji, a nie cichy błąd.
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// wypisuje 10.0
 ```
 Zwracana wartość to zwykły `Double`, a nie opakowanie: gdy `await` się zakończy, pracujesz z nią dokładnie jak zwykle.
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// wypisuje 15
 ```
 `await` jest dozwolony tylko wewnątrz kontekstu asynchronicznego: funkcji `async` albo najwyższego poziomu skryptu. Zwykła funkcja bez `async` nie może używać `await`.
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// wypisuje could not load
 ```
 Kolejność słów kluczowych jest ustalona: najpierw `try`, potem `await`.
 
@@ -144,7 +144,7 @@ let job = Task {
 Wynik odczytuje się później za pomocą **`.value`**, które jest awaitowane:
 ```swift
 print(await job.value)
-// prints 42
+// wypisuje 42
 ```
 Typ uchwytu mówi, co on produkuje i co może zgłosić: `Task<Int, Never>` to zadanie, które zwraca `Int` i nigdy nie zgłasza błędu. W przeciwieństwie do `async let`, `Task` można utworzyć ze zwykłego, nieasynchronicznego kodu.
 

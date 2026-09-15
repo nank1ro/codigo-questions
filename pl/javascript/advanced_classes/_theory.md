@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// wypisuje Max makes a sound
 ```
 Gdy klasa potomna deklaruje własny konstruktor, wywołanie `super(...)` wewnątrz niego jest **obowiązkowe**: bez tego obiekt nigdy nie zostaje zainicjowany, a JavaScript rzuca `ReferenceError`. Klasa potomna bez żadnego konstruktora jest w porządku, ponieważ JavaScript pisze za nią taki, który przekazuje każdy argument do klasy nadrzędnej.
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// wypisuje Woof
 ```
 Nadpisywanie nie usuwa wersji z klasy nadrzędnej, tylko ją ukrywa. Wewnątrz metody klasy potomnej `super.nazwaMetody(...)` nadal się do niej dociera, co pozwala rozszerzyć zachowanie klasy nadrzędnej zamiast je zastępować:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// wypisuje Woof!
 ```
 Zwróć uwagę na różnicę: `super(...)` wywołuje **konstruktor** klasy nadrzędnej, a `super.nazwa(...)` wywołuje **metodę** klasy nadrzędnej.
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// wypisuje 0
 ```
 Pola są przypisywane każdej nowej instancji, zanim wykona się ciało konstruktora, więc konstruktor może już na nich polegać. Pole bez wartości nadal jest deklarowane, po prostu zaczyna jako `undefined`:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// wypisuje 8
 ```
 Metodę statyczną wywołuje się na nazwie klasy, nigdy na instancji: `new MathUtils().double(4)` rzuca `TypeError`, ponieważ instancje nie otrzymują statycznych składowych. Wewnątrz metody statycznej `this` odnosi się do klasy, więc jedna metoda statyczna może wywołać inną za pomocą `this.innaStatyczna(...)`.
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// wypisuje 3.14
 ```
 Ponieważ istnieje tylko jedna kopia, każda instancja, która ją aktualizuje, aktualizuje tę samą wartość. Wewnątrz konstruktora sięgasz do niej przez nazwę klasy, `Circle.PI`, a nie przez `this`: `this.PI` szukałoby właściwości w instancji, nie znalazłoby nic i dałoby ci `undefined`.
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// wypisuje 120
 ```
 Fabrykę można wywołać, zanim jeszcze istnieje jakakolwiek instancja, czego zwykła metoda nie potrafi.
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// wypisuje 12
 ```
 `r.area` uruchamia metodę i zwraca jej wynik, więc jest to liczba. Dodanie nawiasów próbowałoby wtedy wywołać tę liczbę, co kończy się niepowodzeniem.
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// wypisuje 3, setter odrzucił 50
 ```
 Getter i setter o tej samej nazwie tworzą jedną właściwość, więc nie mogą nią być jednocześnie zwykłe pole: zapisana wartość mieszka pod inną nazwą, z konwencją tej samej nazwy z wiodącym podkreślnikiem.
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// wypisuje 1234
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// wypisuje $7
 ```
 W ten sposób trzymasz kroki pomocnicze z dala od API: wywołujący widzi `print`, a nie szczegół formatowania, który się za nim kryje. Prywatne pola i prywatne metody razem dają klasie wyraźne wnętrze i zewnętrze.
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// wypisuje $7
 ```
 Ta sama metoda jest używana przez konkatenację ciągów znaków oraz przez `String(value)`. Jeśli chcesz też rozsądną **liczbę**, zdefiniuj `[Symbol.toPrimitive](hint)`, który otrzymuje `"string"`, `"number"` lub `"default"` i decyduje, co zwrócić; gdy istnieje, wygrywa z `toString`.
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// wypisuje [ 'a', 'b' ]
 ```
 Znak `*` przed nazwą czyni ją **generatorem**: funkcją, która przekazuje wartości pojedynczo za pomocą `yield` i pauzuje między nimi. To najkrótszy sposób spełnienia protokołu iteracji i działa dla wartości, które są obliczane, a nie przechowywane.

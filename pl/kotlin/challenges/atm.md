@@ -23,7 +23,7 @@ Jeśli na koncie nie ma wystarczających środków do przeprowadzenia transakcji
 Przykład wywołania funkcji:
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// wypisuje 9.5
 ```
 
 # --seed--

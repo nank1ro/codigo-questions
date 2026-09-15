@@ -50,7 +50,7 @@ Oznacza to, że gdy przypisujesz typ do zmiennej, nie możesz go później zmien
 
 ```dart
 int integerNumber = 1;
-integerNumber = 3.14159; // Error
+integerNumber = 3.14159; // Błąd
 ```
 
 `3.14159` jest typu `double`, ale już zdefiniowałeś `integerNumber` z typem `int`.
@@ -61,7 +61,7 @@ Oczywiście, czasami może być przydatne przypisanie powiązanych typów do tej
 num number;
 number = 1; // OK
 number = 3.14159; // OK
-number = '10'; // Error
+number = '10'; // Błąd
 ```
 
 Zarówno `int`, jak i `double` rozszerzają `num`, więc oba typy są akceptowane.
@@ -119,7 +119,7 @@ Gdy zadeklarowałeś stałą zmienną, nie możesz już zmieniać jej wartości.
 
 ```dart
 const number = 2;
-number = 3; // Error
+number = 3; // Błąd
 ```
 
 Ten kod powoduje błąd:

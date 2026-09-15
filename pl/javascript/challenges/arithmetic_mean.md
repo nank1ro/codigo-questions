@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca średnią wektora liczbowego.
 Przykład wywołania funkcji:
 ```javascript
 console.log(mean([1, 2, 3]));
-// prints 2.0
+// wypisuje 2.0
 ```
 
 # --before-seed--

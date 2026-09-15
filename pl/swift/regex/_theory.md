@@ -40,9 +40,9 @@ Domyślnie wzorzec może pasować gdziekolwiek wewnątrz tekstu. **Kotwice** wi�
 - `$` oznacza „koniec tekstu"
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, tekst zaczyna się od sw
+print("myswift".contains(#/^sw/#)) // false, sw nie znajduje się na początku
+print("swift".contains(#/ft$/#))  // true, tekst kończy się na ft
 ```
 Kotwice dopasowują pozycję, a nie znak, więc nic nie dodają do zawartości dopasowania.
 

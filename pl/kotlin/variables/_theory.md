@@ -11,7 +11,7 @@ var x = 1
 W ten sposób przypisaliśmy wartość `1` do zmiennej o nazwie `x`.
 Jeśli wyświetlimy zmienną `x`, otrzymamy liczbę `1`:
 ```kotlin
-println(x) // prints 1
+println(x) // wypisuje 1
 ```
 
 ---
@@ -20,9 +20,9 @@ Zmienne są tak nazwane, ponieważ przechowywana przez nie wartość może się 
 Możemy zaktualizować `x` używając `=` i nadając mu nową wartość.
 ```kotlin
 var x = 1
-println(x) // prints 1
+println(x) // wypisuje 1
 x = 2
-println(x) // prints 2
+println(x) // wypisuje 2
 ```
 
 ---
@@ -31,7 +31,7 @@ Możemy też przypisywać zmiennym wartości innych zmiennych. Tutaj możemy prz
 ```kotlin
 var x = 5
 var y = x
-println(y) // prints 5
+println(y) // wypisuje 5
 ```
 
 ---
@@ -39,9 +39,9 @@ println(y) // prints 5
 Gdy aktualizujemy zmienną, zapomina ona swojej poprzedniej wartości. Tutaj możemy wyświetlić zmienną `x` dwa razy i zobaczyć, jak jej wartość się zmienia.
 ```kotlin
 var x = 5
-println(x) // prints 5
+println(x) // wypisuje 5
 x = 10
-println(x) // prints 10
+println(x) // wypisuje 10
 ```
 
 ---

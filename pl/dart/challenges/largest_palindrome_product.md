@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca największy palindrom będący iloczynem dwóch l
 Przykład wywołania funkcji:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// wypisuje 9009
 ```
 
 # --seed--

@@ -65,12 +65,12 @@ Miej jasno w głowie dwie strony future:
 
 ```dart
 Future<int> count() async {
-  return 3;                 // int, wrapped into Future<int>
+  return 3;                 // int, opakowany w Future<int>
 }
 
 Future<void> main() async {
-  int n = await count();    // Future<int>, unwrapped to int
-  Future<int> f = count();  // no await: still a Future<int>
+  int n = await count();    // Future<int>, rozpakowany do int
+  Future<int> f = count();  // brak await: to nadal Future<int>
 }
 ```
 
@@ -138,7 +138,7 @@ Future może też zakończyć się **błędem**. Gdy funkcja `async` rzuca wyją
 ```dart
 Future<int> parseLater(String s) async {
   await Future.delayed(const Duration(milliseconds: 5));
-  return int.parse(s); // throws FormatException for 'abc'
+  return int.parse(s); // rzuca FormatException dla 'abc'
 }
 
 Future<int> orZero(String s) async {
@@ -218,9 +218,9 @@ Future<int> pages() => Future.delayed(const Duration(milliseconds: 20), () => 30
 Future<int> words() => Future.delayed(const Duration(milliseconds: 20), () => 90000);
 
 Future<double> average() async {
-  final p = pages();          // both timers start now
+  final p = pages();          // oba timery startują teraz
   final w = words();
-  return await w / await p;   // waits once, about 20 ms in total
+  return await w / await p;   // czeka raz, łącznie około 20 ms
 }
 ```
 
@@ -236,8 +236,8 @@ Future<int> load() async {
 }
 
 Future<int> loadTwice() async {
-  final n = await load();   // throws here, loadTwice fails too
-  return n * 2;             // never runs
+  final n = await load();   // rzuca tutaj, loadTwice też zawodzi
+  return n * 2;             // nigdy się nie uruchamia
 }
 
 Future<void> main() async {
@@ -278,7 +278,7 @@ Future<String> onceThenGiveUp(Future<String> Function() task) async {
     return await task();
   } catch (e) {
     print('first attempt failed');
-    rethrow; // the caller sees the original error
+    rethrow; // wywołujący widzi oryginalny błąd
   }
 }
 ```

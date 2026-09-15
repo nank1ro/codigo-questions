@@ -18,7 +18,7 @@ Zwróć sumę cyfr liczby `N`.
 Przykład wywołania funkcji:
 ```swift
 print(sumDigits(28))
-// prints 10
+// wypisuje 10
 ```
 
 # --before-seed--

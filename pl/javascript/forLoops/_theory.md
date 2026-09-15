@@ -34,7 +34,7 @@ Zlicza, na której iteracji pętli aktualnie się znajdujemy
 W JavaScript mamy również pętlę `forEach`.
 W rzeczywistości `forEach` wywołuje podane domknięcie na każdym elemencie sekwencji w tej samej kolejności co pętla `for`:
 ```javascript
-// this is an array, we'll see about that soon
+// to jest tablica, zaraz się tym zajmiemy
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```

@@ -1,6 +1,6 @@
 W Swift możemy używać znaku `+`, aby wyświetlić dwa lub więcej ciągów razem, na przykład:
 ```swift
-print("Hello " + "Swift!") // prints "Hello Swift!"
+print("Hello " + "Swift!") // wypisuje "Hello Swift!"
 ```
 
 ---

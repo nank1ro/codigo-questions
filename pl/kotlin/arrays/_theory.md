@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// wypisuje x, potem y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 Nawet gdy tablica jest zadeklarowana za pomocą `val`, jej **elementy** można zastąpić, przypisując wartość do indeksu:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums jest teraz [10, 2, 3]
 ```
 Aby odwiedzić każdy element, możesz użyć pętli `for` lub `forEach`:
 ```kotlin
@@ -83,8 +83,8 @@ Tablice można sortować **w miejscu** (in place) albo kopiować do nowej posort
 - `sorted()`, `sortedDescending()` i `reversed()` pozostawiają tablicę nietkniętą i zwracają nową `List`
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums jest teraz [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1], nums nadal jest [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ Główna różnica między tablicą a `MutableList` polega na tym, że tablica m
 Wyrażenia takie jak `nums + 4` nie powiększają `nums`, tylko tworzą zupełnie nową tablicę:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok, nums to [9, 2, 3]
+val bigger = nums + 4    // nowa tablica [9, 2, 3, 4], nums nadal ma 3 elementy
 ```
 Wybieraj `MutableList`, gdy liczba elementów zmienia się w czasie, a tablicę, gdy jest znana z góry albo gdy potrzebujesz wydajności typów prymitywnych.
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// oba wypisują 0 -> cat, potem 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, listy porównują swoje elementy
 ```
 
 ---

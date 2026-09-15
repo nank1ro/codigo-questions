@@ -139,7 +139,7 @@ Wewnątrz domknięcia `$0` to element z pierwszej sekwencji, a `$1` ten z drugie
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// wypisuje 1 i 3
 ```
 Używaj `forEach` do krótkiego efektu ubocznego na każdym elemencie, a `for-in`, gdy musisz zatrzymać się wcześniej.
 

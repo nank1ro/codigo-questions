@@ -9,7 +9,7 @@ const y = point[1];
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// wypisuje 3 7
 ```
 Wzorzec nie musi obejmować całej tablicy: nadmiarowe elementy są po prostu ignorowane, a nazwa bez pasującego elementu staje się `undefined`.
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// wypisuje 5
 ```
 Nic nie jest kopiowane ani zmieniane w oryginalnej tablicy, wzorzec jedynie z niej czyta.
 
@@ -33,7 +33,7 @@ Czasami ważny jest tylko jeden element głęboko wewnątrz tablicy. Możesz zos
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// wypisuje 64
 ```
 Policz przecinki, a nie nazwy: każdy przecinek przesuwa wzorzec o jedną pozycję do przodu, niezależnie od tego, czy przed nim stoi nazwa.
 
@@ -44,7 +44,7 @@ Tablica nie zawsze jest tak długa, jak oczekuje wzorzec. Zapisanie `= value` po
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// wypisuje 1920 1080
 ```
 Wartość domyślna jest obliczana tylko wtedy, gdy jest potrzebna, więc może być nawet wywołaniem funkcji, a wartość domyślną można nadać dowolnej pozycji, nie tylko ostatniej.
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// wypisuje 2 1
 ```
 Prawa strona jest budowana najpierw, więc obie stare wartości są już bezpieczne wewnątrz tablicy tymczasowej, gdy następuje przypisanie. Uważaj na średnik w poprzedniej linijce: linijka zaczynająca się od `[` zostałaby w przeciwnym razie odczytana jako indeks tego, co przed nią.
 
@@ -67,7 +67,7 @@ Obiekty też można destrukturyzować, za pomocą nawiasów klamrowych zamiast k
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// wypisuje Ada 36
 ```
 Podmiana `age` i `name` miejscami we wzorcu niczego nie zmienia, a klucze, których wzorzec nie wymienia, są po prostu pomijane. Nazwa bez pasującego klucza staje się `undefined`.
 
@@ -78,7 +78,7 @@ Wzorce obiektów i wartości domyślne łączą się dokładnie tak jak tablicow
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// wypisuje dark en
 ```
 Ponieważ cały wzorzec to jedna instrukcja, funkcja może rozpakować wszystko, czego potrzebuje, ze swojego argumentu już w pierwszej linijce.
 
@@ -89,7 +89,7 @@ Wzorzec obiektu nazywa swoje zmienne od kluczy, co jest niewygodne, gdy klucze s
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// wypisuje Ada 1815
 ```
 Czytaj to jako „weź `n`, nazwij je `name`”. Dwukropek nie deklaruje typu, a samo `n` nigdy nie zostaje utworzone jako zmienna, tylko `name`. Nazwa o zmienionej nazwie wciąż może otrzymać wartość domyślną, zapisaną po niej: `{ n: name = "unknown" }`.
 
@@ -99,7 +99,7 @@ Wartości domyślne mają jedną zasadę, która zaskakuje wszystkich: dotyczą 
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// wypisuje 0
 ```
 `null` zachowuje się tutaj tak samo jak `0`, mimo że w odpowiedzi API często oznacza „brak wartości”. Gdy `null` też musi zostać zastąpiony, najpierw zdestrukturyzuj, a potem wróć do wartości zastępczej za pomocą `??`.
 
@@ -110,7 +110,7 @@ Tam, gdzie klucz zawiera inny obiekt lub tablicę, wzorzec może po prostu iść
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// wypisuje London
 ```
 Uważaj, co tworzy taka linijka: `address: { city }` znaczy „wejdz do `address`”, a nie „daj mi `address`”, więc tylko `city` staje się zmienną. Aby uzyskać oba, wymień klucz dwa razy: `const { address, address: { city } } = user;`. Wzorce tablic i obiektów swobodnie zagnieżdżają się w sobie, jak w `{ tags: [first] }`.
 
@@ -121,7 +121,7 @@ Wzięcie głowy tablicy i zachowanie ogona to tak powszechna potrzeba, że wzorc
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// wypisuje a [ 'b', 'c' ]
 ```
 Element rest musi być ostatni we wzorcu i nie może mieć wartości domyślnej: gdy nic nie zostaje, jest po prostu pustą tablicą.
 
@@ -132,7 +132,7 @@ Wzorce obiektów też mają rest i tam zbiera on każdy klucz, którego wzorzec 
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// wypisuje { name: 'Ada', city: 'London' }
 ```
 To najkrótszy sposób na zbudowanie kopii obiektu bez jednego z jego kluczy: oryginał nie jest nigdy dotykany, a obiekt rest jest świeżym obiektem przechowującym pozostałe wartości.
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// wypisuje 12
 ```
 Wewnątrz ciała nie ma wcale zmiennej obiektu, są tylko `width` i `height`. Wywołujący przekazuje jeden obiekt, ale sygnatura dokumentuje dokładnie, które klucze funkcja odczytuje, a klucze mogą przyjść w dowolnej kolejności.
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// wypisuje guest/false
 ```
 Czytaj tę linijkę od zewnątrz do środka: `= {}` dostarcza pusty obiekt, gdy brakuje argumentu, a każda wewnętrzna wartość domyślna wypełnia potem swój własny klucz.
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// wypisuje ada is 36
+// wypisuje bob is 41
 ```
 To czytelny sposób na przejście po obiekcie: bez indeksu, bez wyszukiwania, tylko dwie nazwy, na których ci zależy. `Object.keys` i `Object.values` dają tylko jedną stronę każda, `Object.entries` daje obie.
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// wypisuje Post [js] +2
 ```
 Zachowaj czytelność: wzorzec, który nie mieści się już w kilku linijkach, to zwykle znak, że funkcja oczekuje za dużo.

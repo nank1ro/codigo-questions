@@ -4,7 +4,7 @@ W programowaniu możemy zapisać zmienną logiczną `nice_weather` i wykonać cz
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # baw się na dworze
 ```
 
 ---
@@ -13,7 +13,7 @@ Kontynuujmy poprzedni przykład.
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # baw się na dworze
 ```
 Widzieliśmy, że instrukcja `if` wykonuje blok kodu tylko wtedy, gdy warunek jest `True`.
 Inną ważną rzeczą do rozważenia są **dwukropki** `:` i **wcięcia**, które wskazują początek bloku kodu.
@@ -30,9 +30,9 @@ W Pythonie możemy użyć instrukcji `else`, jak:
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # baw się na dworze
 else:
-    # stay home
+    # zostań w domu
 ```
 
 ---

@@ -10,7 +10,7 @@ int age = 30;
 double height = 1.75;
 char initial = 'A';
 printf("%d %f %c\n", age, height, initial);
-// prints "30 1.750000 A"
+// wypisuje "30 1.750000 A"
 ```
 Użycie złego specyfikatora dla danego typu wypisze śmieci, więc zawsze je dopasowuj.
 
@@ -35,8 +35,8 @@ double half(double x) {
 `%f` wypisuje sześć miejsc po przecinku, co rzadko jest tym, czego chcesz. Umieść precyzję między `%` a `f`, aby wybrać liczbę wyświetlanych miejsc dziesiętnych: `%.2f` wypisuje dwa miejsca, `%.1f` wypisuje jedno, a wartość jest **zaokrąglana**, a nie obcinana:
 ```c
 double price = 9.987;
-printf("%.2f\n", price); // prints "9.99"
-printf("%.1f\n", price); // prints "10.0"
+printf("%.2f\n", price); // wypisuje "9.99"
+printf("%.1f\n", price); // wypisuje "10.0"
 ```
 `float` jest wypisywany za pomocą tych samych specyfikatorów co `double`: przy przekazaniu do `printf` jest automatycznie konwertowany na `double`.
 
@@ -46,8 +46,8 @@ Wynik `/` zależy od typów jego argumentów.
 Gdy **oba** argumenty są liczbami całkowitymi, wynik jest liczbą całkowitą, a część ułamkowa jest odrzucana: `7 / 2` to `3`, a nie `3.5`.
 Gdy **przynajmniej jeden** argument jest wartością zmiennoprzecinkową, dzielenie zachowuje część ułamkową: `7 / 2.0` to `3.5`.
 ```c
-printf("%d\n", 7 / 2);     // prints "3"
-printf("%f\n", 7 / 2.0);   // prints "3.500000"
+printf("%d\n", 7 / 2);     // wypisuje "3"
+printf("%f\n", 7 / 2.0);   // wypisuje "3.500000"
 ```
 Zapisanie literału jako `2.0` zamiast `2` to najprostszy sposób na wymuszenie dzielenia zmiennoprzecinkowego.
 
@@ -93,7 +93,7 @@ Dlatego można wykonywać arytmetykę na znakach:
 Ta sama wartość może być wypisana jako znak za pomocą `%c` lub jako liczba za pomocą `%d`:
 ```c
 char c = 'A';
-printf("%c %d\n", c, c); // prints "A 65"
+printf("%c %d\n", c, c); // wypisuje "A 65"
 ```
 
 ---
@@ -115,7 +115,7 @@ Literał, który musi być typu `long`, otrzymuje przyrostek `L`, `unsigned` —
 ```c
 long population = 8000000000L;
 unsigned int count = 40U;
-printf("%ld %u\n", population, count); // prints "8000000000 40"
+printf("%ld %u\n", population, count); // wypisuje "8000000000 40"
 ```
 `%ld` wypisuje `long`, `%u` — `unsigned int`, a `%lu` — `unsigned long`. Zwykły `int` na większości systemów przechowuje wartości do około 2 miliardów, więc `5000000000` się w nim nie mieści.
 
@@ -123,7 +123,7 @@ printf("%ld %u\n", population, count); // prints "8000000000 40"
 
 Operator `sizeof` mówi, ile **bajtów** zajmuje typ lub zmienna. Jego wynik ma typ `size_t`, który wypisuje się za pomocą `%zu`:
 ```c
-printf("%zu\n", sizeof(int));  // prints "4" on most systems
+printf("%zu\n", sizeof(int));  // wypisuje "4" na większości systemów
 ```
 Standard gwarantuje jedynie, że `sizeof(char)` wynosi `1` oraz że `short <= int <= long`, ale na typowym systemie 64-bitowym rozmiary wynoszą: `char` 1, `short` 2, `int` 4, `long` 8, `float` 4, `double` 8.
 `sizeof` jest często używany do sprawdzenia, ile pamięci zajmuje zmienna, bez zapisywania tej liczby na sztywno w kodzie.
@@ -134,11 +134,11 @@ Każdy typ całkowity ma ograniczony zakres, a nagłówek `limits.h` nadaje tym 
 ```c
 #include <limits.h>
 
-printf("%d\n", INT_MAX); // prints "2147483647" on most systems
+printf("%d\n", INT_MAX); // wypisuje "2147483647" na większości systemów
 ```
 Przekroczenie `INT_MAX` przy typie ze znakiem to **zachowanie niezdefiniowane**: program może się zawinąć, ulec awarii lub zrobić cokolwiek innego. Sprawdź przed obliczeniem:
 ```c
-if (a <= INT_MAX - b) { /* a + b is safe */ }
+if (a <= INT_MAX - b) { /* a + b jest bezpieczne */ }
 ```
 Zauważ, że sprawdzenie odejmuje zamiast dodawać, ponieważ samo `a + b` mogłoby już spowodować przepełnienie.
 
@@ -149,7 +149,7 @@ Dodanie `1` do `UINT_MAX` daje `0`, a odjęcie `1` od `0` daje `UINT_MAX` (`4294
 ```c
 unsigned int n = UINT_MAX;
 n = n + 1;
-printf("%u\n", n); // prints "0"
+printf("%u\n", n); // wypisuje "0"
 ```
 Dlatego pętla, która zmniejsza zmienną `unsigned` "aż stanie się ujemna", nigdy się nie zatrzymuje: wartość unsigned nigdy nie spada poniżej `0`.
 
@@ -160,8 +160,8 @@ Od C99 nagłówek `stdbool.h` udostępnia typ `bool` ze stałymi `true` (`1`) i 
 ```c
 #include <stdbool.h>
 
-bool b = 0.5;  // true, because 0.5 is not zero
-int n = 0.5;   // 0, because the decimals are truncated
+bool b = 0.5;  // true, ponieważ 0.5 nie jest zerem
+int n = 0.5;   // 0, ponieważ część ułamkowa jest obcinana
 ```
 Porównania takie jak `x != 0` już dają wynik zgodny z `bool`, a funkcja zwracająca `bool` dokumentuje, że odpowiada na pytanie tak/nie.
 
@@ -172,7 +172,7 @@ Tak więc `long big = n * n;` z `n` typu `int` mnoży dwie wartości `int`, powo
 Zrzutuj jeden argument **przed** operacją, aby obliczenia odbyły się w szerszym typie:
 ```c
 int n = 100000;
-long big = (long) n * n; // 10000000000, computed as long
+long big = (long) n * n; // 10000000000, obliczone jako long
 ```
 Ta sama zasada wyjaśnia, dlaczego działa `(double) total / count`: rzutowanie zmienia typ argumentu, a dzielenie się do niego dostosowuje.
 

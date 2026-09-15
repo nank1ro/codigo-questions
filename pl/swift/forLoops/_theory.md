@@ -52,7 +52,7 @@ W tym przypadku wartość `through` jest włączona
 W Swift mamy również pętlę `forEach`.
 W rzeczywistości `forEach` wywołuje podane domknięcie dla każdego elementu sekwencji w tej samej kolejności co pętla `for-in`:
 ```swift
-// this is an array, we'll see about that soon
+// to jest tablica, zajmiemy się tym wkrótce
 let numbers: [Int] = [1, 3, 5, 7, 9]
 numbers.forEach { num in
     print(num)

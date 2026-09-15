@@ -21,7 +21,7 @@ Tablica nigdy nie zawiera duplikatów, więc indeks jest zawsze unikalny. Tablic
 Przykład wywołania funkcji:
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// wypisuje 2
 ```
 
 # --before-seed--

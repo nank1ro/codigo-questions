@@ -11,7 +11,7 @@ Aby wydobyć wartość z obietnicy, używasz **`await`**. Wstrzymuje on funkcję
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // wypisuje 42
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// wypisuje HI
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// wypisuje Promise { 'HI' }
 ```
 Obie funkcje zawierają ten sam kod; różni się tylko sposób odczytania wyniku. `shoutLater("hi")` musi być wywołane z `await` wewnątrz innej funkcji `async`, aby oddać `"HI"`.
 
@@ -52,7 +52,7 @@ Funkcja przekazana do `new Promise` uruchamia się od razu, ale obietnica pozost
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // wypisuje done, około sekundę później
 }
 
 main();
@@ -76,7 +76,7 @@ Wywołanie funkcji `async` nigdy nie czeka: zaczyna pracę i natychmiast wręcza
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // wypisuje 21
 });
 ```
 **`Promise.resolve(value)`** buduje obietnicę już spełnioną z `value`, co jest wygodne, gdy masz wartość pod ręką, ale musisz zwrócić obietnicę.
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// wypisuje 42
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// wypisuje start, potem data, potem done
 ```
 Zwróć uwagę na ostatnią linię: funkcję `async` nadal trzeba **wywołać**. Napisanie `main` bez nawiasów definiuje pracę, ale nigdy jej nie rozpoczyna i nic nie zostaje wypisane.
 
@@ -125,7 +125,7 @@ Odrzucenie odczytuje się za pomocą **`.catch(callback)`**, lustrzanego odbicia
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // wypisuje negative age
 });
 ```
 Wywołanie zarówno `resolve`, jak i `reject`, albo dwukrotne wywołanie, nic nie zmienia: liczy się tylko pierwsze wywołanie.
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// wypisuje cleanup, potem error: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ Działa też w drugą stronę: `throw` wewnątrz funkcji `async` nie wywala wywo
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() zwraca obietnicę odrzuconą z Error("boom")
 ```
 Jak w każdym bloku `try`, linie po nieudanym `await` są pomijane, blok `catch` się wykonuje, a blok `finally` wykonuje się w obu przypadkach.
 
@@ -199,7 +199,7 @@ Warto zapamiętać dwie reguły:
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// wypisuje true
 ```
 Zwracana tablica zawsze ma dokładnie tyle elementów, ile tablica otrzymana, na tych samych pozycjach, więc można po niej iterować jak po każdej innej tablicy.
 
@@ -207,11 +207,11 @@ Zwracana tablica zawsze ma dokładnie tyle elementów, ile tablica otrzymana, na
 
 Różnica między czekaniem **sekwencyjnym** a **równoległym** zależy od tego, *gdzie* postawisz `await`:
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// sekwencyjnie: około 300 + 300 = 600 ms
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// równolegle: około 300 ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 W pierwszej wersji drugie pobieranie zaczyna się dopiero, gdy pierwsze się skończy, ponieważ `await` wstrzymuje funkcję w tej linii. W drugiej oba wywołania są wykonane, zanim cokolwiek będziemy oczekiwać, więc oba pobierania już działają, podczas gdy `Promise.all` czeka.
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// wypisuje fulfilled
 console.log(results[1].reason.message);
-// prints nope
+// wypisuje nope
 ```
 Czytaj `value` tylko wtedy, gdy `status` to `"fulfilled"`, a `reason` tylko wtedy, gdy to `"rejected"`: druga właściwość po prostu nie istnieje.
 
