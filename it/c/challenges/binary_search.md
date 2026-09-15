@@ -21,7 +21,7 @@ Esempio di chiamata di funzione:
 ```c
 int numbers[] = {1, 3, 5, 7};
 printf("%d\n", binarySearch(numbers, 4, 5));
-// prints 2
+// stampa 2
 ```
 
 # --before-seed--

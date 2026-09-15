@@ -2,7 +2,7 @@ Un **commento** è testo all'interno del tuo codice sorgente destinato alle pers
 
 Il tipo più comune è il **commento su singola riga**: tutto quello che va da `//` alla fine della riga viene ignorato.
 ```c
-// Greet the user
+// Saluta l'utente
 printf("Hello\n");
 ```
 La prima riga non fa nulla quando il programma viene eseguito; solo il `printf` produce output.
@@ -15,7 +15,7 @@ Questo rende `//` un modo rapido per disattivare una riga di codice senza elimin
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // stampa "10"
 ```
 La seconda riga ora è un commento, quindi `total` rimane `10`. Rimuovendo il `//` la riga torna attiva.
 
@@ -49,7 +49,7 @@ Questo è importante quando vuoi commentare un blocco che contiene già un comme
 
 Un commento non ha bisogno di una riga tutta per sé: può seguire il codice sulla stessa riga. Questo è un **commento a fine riga**, ed è un buon posto per una breve nota su quella specifica istruzione:
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // rinuncia dopo tre tentativi
 ```
 Sia `//` che `/* */` funzionano come commenti a fine riga, ma fai attenzione con `/*`: siccome si ferma solo al `*/`, un `/*` non chiuso alla fine di una riga ingoia le righe che seguono, e il programma non compila più.
 
@@ -83,8 +83,8 @@ I programmatori usano alcune parole chiave convenzionali all'inizio di un commen
 - `FIXME` contrassegna del codice che si sa essere sbagliato e che deve essere corretto
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: valida l'input prima di usarlo
+// FIXME: va in crash quando la lista è vuota
 ```
 Editor e strumenti possono elencare questi contrassegni, così il lavoro in sospeso è facile da trovare. Una volta completato il lavoro, elimina il contrassegno: un `TODO` obsoleto è fuorviante.
 
@@ -92,12 +92,12 @@ Editor e strumenti possono elencare questi contrassegni, così il lavoro in sosp
 
 Un buon commento spiega **perché** il codice fa qualcosa, non **cosa** fa. Il codice mostra già cosa succede; ripeterlo a parole aggiunge rumore e diventa obsoleto appena il codice cambia:
 ```c
-// multiply price by 90 and divide by 100
+// moltiplica price per 90 e dividi per 100
 return price * 90 / 100;
 ```
 Il motivo dietro quei numeri è ciò che chi legge non può indovinare:
 ```c
-// launch discount: members get 10% off until the end of June
+// sconto di lancio: i membri hanno il 10% di sconto fino alla fine di giugno
 return price * 90 / 100;
 ```
 Se un commento si limita a ripetere la riga sottostante, eliminalo o sostituiscilo con il motivo.

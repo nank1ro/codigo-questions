@@ -9,7 +9,7 @@ I nodi sono collegati memorizzando l'indirizzo di uno nel `next` di un altro, e 
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // stampa "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ Aggiungere un nodo **all'inizio** lo crea, lo fa puntare alla testa attuale e lo
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // la lista è ora 8, 7
 ```
 Inserire in una lista vuota funziona allo stesso modo: il nuovo nodo punta a `NULL` e diventa l'intera lista.
 

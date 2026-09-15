@@ -220,7 +220,7 @@ char* fizz_buzz(int number) {
     if (number % 5 == 0) {
         return "Buzz";
     }
-    char* string_number = malloc(12); // Assuming a maximum of 11 characters for the number
+    char* string_number = malloc(12); // Assumendo un massimo di 11 caratteri per il numero
     sprintf(string_number, "%d", number);
     return string_number;
 }
