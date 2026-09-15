@@ -24,7 +24,7 @@ Esempio di chiamata di funzione:
 int numbers[] = {3, 1, 2};
 bubbleSort(numbers, 3);
 printf("%d %d %d\n", numbers[0], numbers[1], numbers[2]);
-// prints 1 2 3
+// stampa 1 2 3
 ```
 
 # --before-seed--

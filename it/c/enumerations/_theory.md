@@ -7,7 +7,7 @@ Ogni costante è un intero: se non specifichi altrimenti, la prima è `0` e ogni
 Poiché sono numeri interi, le stampi con `%d`:
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// stampa "1"
 ```
 
 ---
@@ -19,7 +19,7 @@ I nomi vengono di solito scritti in maiuscolo, come le altre costanti, e devono 
 
 Puoi anche assegnare a una costante un valore esplicito con `=`; le costanti successive continuano a contare a partire da quel valore:
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB è 2, MAR è 3
 ```
 I valori espliciti non devono essere consecutivi né crescenti: `enum Status { OK = 200, NOT_FOUND = 404 };` è perfettamente valido.
 
@@ -86,7 +86,7 @@ Il nuovo nome `Color` viene usato da solo, senza la parola chiave `enum` davanti
 Una costante di enumerazione viene convertita automaticamente in `int`, quindi `int n = BLUE;` è valido e memorizza `2`.
 Il percorso inverso si fa con un **cast**, scrivendo il tipo enumerato tra parentesi prima dell'intero:
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c è GREEN
 ```
 C non verifica che il numero corrisponda a una costante: `(enum Color)7` compila anche se nessuna costante vale `7`, quindi valida gli interi prima di convertirli.
 
@@ -103,7 +103,7 @@ Combinato con l'operatore resto `%`, questo ti permette di ciclare tra le costan
 
 Un trucco comune è aggiungere una costante extra alla fine dell'enumerazione, di solito chiamata `COUNT`: poiché la numerazione parte da `0`, il suo valore corrisponde esattamente al numero di costanti reali che la precedono.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT è 3
 ```
 Questa sentinella ti permette di scorrere tutte le costanti senza codificare il numero, e resta corretta quando aggiungi costanti prima di essa:
 ```c
@@ -119,7 +119,7 @@ La sentinella `COUNT` è anche la dimensione perfetta per un array con una casel
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // stampa "4"
 ```
 Un ciclo da `0` a `FRUIT_COUNT` visita ogni casella, e l'indice del ciclo può essere riconvertito in `enum Fruit` quando serve restituirlo.
 

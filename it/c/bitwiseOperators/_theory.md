@@ -6,7 +6,7 @@ Gli **operatori bit a bit** agiscono su quei singoli bit invece che sul numero n
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// stampa "8"
 ```
 I pattern di bit di solito si scrivono come letterali esadecimali come `0x0C`, perché ogni cifra esadecimale rappresenta esattamente quattro bit. Usa sempre tipi `unsigned` per lavorare con i bit e stampali con `%u`.
 
@@ -19,7 +19,7 @@ L'operatore **OR** `|` confronta i due valori bit per bit e mantiene un `1` dove
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// stampa "14"
 ```
 `|` è il modo usuale per unire due pattern di bit in uno solo.
 
@@ -32,7 +32,7 @@ L'operatore **XOR** `^` (or esclusivo) mantiene un `1` solo dove i due bit sono 
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// stampa "6"
 ```
 Ne deriva una proprietà utile: applicare lo stesso XOR due volte ridà il valore di partenza.
 
@@ -42,7 +42,7 @@ L'operatore **NOT** `~` prende un solo operando e inverte ognuno dei suoi bit: o
 Un `unsigned int` contiene 32 bit, quindi `~0x0Fu` li inverte tutti e 32 e produce un numero molto grande. Per tenere solo il byte che ti interessa, combina `~` con `& 0xFF`:
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// stampa "240"
 ```
 `~` ha una precedenza più alta di `&`, quindi viene applicato per primo.
 Non confondere `~` con il `!` logico: `!` guarda il valore nel suo complesso e risponde `0` oppure `1`, mentre `~` riscrive ogni bit.
@@ -55,7 +55,7 @@ L'operatore di **scorrimento a sinistra** `<<` sposta ogni bit di un certo numer
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// stampa "12"
 ```
 Scorrere a sinistra di `n` moltiplica il valore per 2 elevato a `n`.
 Due errori rendono indefinito il comportamento di un programma C: scorrere a sinistra un valore negativo, e scorrere di una quantità maggiore o uguale alla larghezza del tipo (32 per `unsigned int`). Lavorare con valori **unsigned** ti mette al riparo dal primo.
@@ -68,7 +68,7 @@ L'operatore di **scorrimento a destra** `>>` sposta ogni bit verso destra; i bit
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// stampa "3"
 ```
 Scorrere a destra di `n` divide un valore unsigned per 2 elevato a `n`, scartando il resto.
 Scorrere a destra un valore *negativo* non è portabile, ed è un motivo in più per lavorare sui bit con tipi `unsigned`.
@@ -78,11 +78,11 @@ Scorrere a destra un valore *negativo* non è portabile, ed è un motivo in più
 Ogni operatore bit a bit binario ha una forma di **assegnazione composta** che aggiorna una variabile sul posto: `&=`, `|=`, `^=`, `<<=` e `>>=`.
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // equivale a x = x & 10;
+x |= 1;   // equivale a x = x | 1;
+x ^= 3;   // equivale a x = x ^ 3;
+x <<= 1;  // equivale a x = x << 1;
+x >>= 2;  // equivale a x = x >> 2;
 ```
 Si leggono meglio che ripetere il nome della variabile e sono il modo usuale per cambiare i bit di una variabile flag.
 
@@ -95,7 +95,7 @@ Una **maschera** è un valore i cui bit selezionano la parte di un altro valore 
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// stampa "11"
 ```
 `0x0F` mantiene i quattro bit più bassi, chiamati **nibble** basso, e `0xFF` mantiene gli otto bit più bassi, un intero byte.
 
@@ -107,7 +107,7 @@ Per **impostare** un singolo bit, cioè accenderlo senza toccare gli altri, eseg
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// stampa "6"
 ```
 Se il bit era già acceso il valore non cambia, il che rende l'impostazione di un bit sicura da ripetere.
 
@@ -118,7 +118,7 @@ Per **cancellare** un singolo bit, cioè spegnerlo, esegui l'AND del valore con 
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// stampa "5"
 ```
 `~(1u << 1)` è un valore con ogni bit acceso tranne il bit `1`, quindi l'AND lascia intatto tutto il resto.
 
@@ -129,7 +129,7 @@ Per **commutare** un singolo bit, cioè invertirlo qualunque sia il suo stato at
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// stampa "7"
 ```
 Poiché lo XOR annulla se stesso, commutare lo stesso bit una seconda volta ridà il valore originale.
 
@@ -138,8 +138,8 @@ Poiché lo XOR annulla se stesso, commutare lo stesso bit una seconda volta rid�
 Per **verificare** un singolo bit, esegui l'AND del valore con la maschera e controlla se il risultato è diverso da `0`:
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // stampa "1"
+printf("%d\n", (value & (1u << 2)) != 0); // stampa "0"
 ```
 L'AND non produce `1`: produce `0` oppure la maschera stessa, che per il bit `3` è `8`. Ecco perché il risultato viene confrontato con `!= 0` invece di essere usato così com'è come risposta.
 
@@ -150,7 +150,7 @@ I **flag** sono maschere con nome, ognuna delle quali usa un bit diverso, e poss
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// stampa "1"
 ```
 Un solo `unsigned int` può quindi portare 32 risposte sì/no indipendenti.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// stampa "0101"
 ```
 Scorrere il valore a destra di `i` porta il bit `i` nella posizione più a destra, dove `& 1u` lo isola.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count è 2
 ```
 Il ciclo termina sempre, perché un valore unsigned diventa `0` dopo abbastanza scorrimenti a destra.
 
@@ -186,6 +186,6 @@ Diversi numeri piccoli vengono spesso impacchettati dentro un valore più grande
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// stampa "18", il byte 0x12
 ```
 Prima scorrere e mascherare dopo è l'ordine da ricordare: la maschera descrive sempre il campo una volta che questo è arrivato in fondo.

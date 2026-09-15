@@ -1,12 +1,12 @@
 Ogni variabile vive da qualche parte in memoria, e quel luogo ha un numero chiamato **indirizzo**. L'operatore `&`, che si legge "address of" (indirizzo di), restituisce l'indirizzo di una variabile:
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // stampa qualcosa come 0x7ffd5c3e9a4c
 ```
 Lo specificatore `%p` stampa un indirizzo; il numero esatto cambia da un'esecuzione all'altra, quindi i programmi non vi si affidano mai.
 Un indirizzo viene memorizzato in una variabile **puntatore**. Un puntatore si dichiara con il tipo a cui punta seguito da `*`:
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p è un puntatore a int, e contiene l'indirizzo di x
 ```
 Si dice che `p` **punta a** `x`. Due puntatori sono uguali quando contengono lo stesso indirizzo, quindi `p == &x` è vero.
 
@@ -16,7 +16,7 @@ Un puntatore da solo è soltanto un indirizzo. Per leggere il valore memorizzato
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // stampa "42"
 ```
 `*p` significa "il valore a cui `p` punta", ed è un `int` come `x` stessa. Lo stesso simbolo `*` ha due ruoli: in una dichiarazione `int *p` dice "questo è un puntatore", in un'espressione `*p` segue il puntatore fino al valore.
 
@@ -27,7 +27,7 @@ Un puntatore dereferenziato può anche essere **assegnato**. Scrivere su `*p` me
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // stampa "10"
 ```
 `x` e `*p` sono due nomi per la stessa memoria. Assegnare a `p` senza il `*` cambierebbe invece **quale indirizzo** contiene il puntatore, non il valore memorizzato lì.
 
@@ -51,7 +51,7 @@ Un puntatore può puntare a qualsiasi tipo: `double *`, `char *`, `bool *` e cos
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price è ora 19.0
 ```
 Un puntatore deve corrispondere al tipo della variabile a cui punta; `int *p = &price;` viene rifiutato dal compilatore. `NULL` è l'unico valore compatibile con un puntatore di qualsiasi tipo.
 
@@ -62,7 +62,7 @@ Un puntatore a `char` funziona come qualsiasi altro puntatore: contiene l'indiri
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // stampa "A"
 ```
 Leggere attraverso un puntatore e scrivere attraverso di esso possono essere liberamente mescolati: `*p = *p + 1` trasforma `'A'` in `'B'`.
 
@@ -70,9 +70,9 @@ Leggere attraverso un puntatore e scrivere attraverso di esso possono essere lib
 
 Un puntatore memorizza un indirizzo, e ogni indirizzo ha la stessa dimensione su una data macchina, indipendentemente dal tipo di dato memorizzato lì. La `sizeof` di un puntatore è quindi la stessa per `char *`, `int *` e `double *`: `8` byte su un sistema a 64 bit, `4` su uno a 32 bit:
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // stampa "8" su sistemi a 64 bit
+printf("%zu\n", sizeof(double)); // stampa "8"
+printf("%zu\n", sizeof(char));   // stampa "1"
 ```
 Non confondere la dimensione del puntatore con la dimensione di ciò a cui punta: `sizeof(p)` è la dimensione dell'indirizzo, `sizeof(*p)` è la dimensione del valore.
 
@@ -81,7 +81,7 @@ Non confondere la dimensione del puntatore con la dimensione di ciò a cui punta
 Un nome di array usato in un'espressione fornisce l'indirizzo del suo **primo elemento**, quindi può essere assegnato direttamente a un puntatore:
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // equivale a &numbers[0]
 ```
 Aggiungere un intero a un puntatore lo sposta in avanti di quel numero di **elementi**, non di byte: `p + 1` è l'indirizzo di `numbers[1]`, e `*(p + 1)` è `20`. Il compilatore scala il passo in base alla dimensione del tipo.
 L'indicizzazione funziona anche sui puntatori: `p[i]` è definito come `*(p + i)`, quindi `p[2]` è `30`. Questo si chiama **aritmetica dei puntatori**.
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter è ora 0
 ```
 L'esempio classico è lo scambio di due variabili, che richiede una copia temporanea di un valore mentre l'altro viene sovrascritto.
 
@@ -159,8 +159,8 @@ Chi chiama poi legge i membri attraverso il puntatore restituito con `->`, dopo 
 
 `const` può proteggere il valore o il puntatore, a seconda di dove viene scritto:
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // puntatore a const: *p non può essere cambiato, p può puntare altrove
+int *const q = &a; // puntatore costante: q punta sempre ad a, ma *q può essere cambiato
 ```
 Si legge la dichiarazione da destra a sinistra: `p` è un puntatore a un `int` costante; `q` è un puntatore costante a un `int`. Un puntatore a const è il modo usuale per promettere che una funzione fa solo **lettura** di ciò che riceve, come in `int sum(const int *values, int size)`. Una variabile normale può essere passata; la promessa limita solo ciò che la funzione può fare.
 
