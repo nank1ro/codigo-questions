@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la somma di tutti i multipli di 3 o 5 inferi
 Esempio di chiamata alla funzione:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// stampa 23
 ```
 
 # --seed--

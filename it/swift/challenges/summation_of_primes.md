@@ -16,7 +16,7 @@ Scrivi una funzione che calcola la somma di tutti i numeri primi inferiori al nu
 Esempio di chiamata alla funzione:
 ```swift
 print(primeSummation(10))
-// prints 17
+// stampa 17
 ```
 
 # --before-seed--

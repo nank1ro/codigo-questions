@@ -2,7 +2,7 @@ Un ciclo `for` ripete un blocco di codice un numero fisso di volte. La sintassi 
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // corpo
 }
 ```
 
@@ -56,7 +56,7 @@ L'istruzione `break` esce immediatamente da un ciclo quando una condizione è so
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // si ferma a 5
   print(i);
 }
 ```

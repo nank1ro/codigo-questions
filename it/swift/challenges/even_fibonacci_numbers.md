@@ -18,7 +18,7 @@ Scrivi una funzione che restituisce la somma di tutti i numeri di Fibonacci pari
 Esempio di chiamata alla funzione:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// stampa 10
 ```
 
 # --before-seed--

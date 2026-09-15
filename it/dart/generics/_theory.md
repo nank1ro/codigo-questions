@@ -11,7 +11,7 @@ Il vantaggio è che il compilatore sa cosa c'è dentro:
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // ok: first è una String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart ha anche il tipo `dynamic`, che significa «qualsiasi cosa va bene». Una `
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // accettato
+print(things.first.toUpperCase()); // accettato
 ```
 
 Il rovescio della medaglia è che nulla viene controllato mentre scrivi il codice. Ogni chiamata su un valore `dynamic` viene risolta mentre il programma è in esecuzione, quindi un refuso come `things.first.toUpperCse()` compila felicemente ed esplode davanti a un utente.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, dedotto dall’argomento
+print(a.value + 1);      // 8, il compilatore sa che value è un int
 ```
 
 La lettera non conta: `T` è una convenzione per «tipo», niente di più.
@@ -78,14 +78,14 @@ Una funzione può essere generica da sola, senza trovarsi in una classe generica
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, qui T è String
+print(firstOf([10, 20]));        // 10, qui T è int
 ```
 
 Un solo corpo di funzione, controllato una volta, riutilizzato per ogni tipo. L'argomento di tipo di solito viene dedotto dagli argomenti, ma può essere scritto esplicitamente quando l'inferenza non ha nulla su cui lavorare:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // lancia, ma il tipo è chiaro
 ```
 
 I metodi dentro una classe seguono esattamente la stessa regola.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 Con la null safety solida il punto interrogativo può trovarsi in due posti diversi, e significano due cose diverse:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // una scatola che esiste e contiene un int nullable
+Box<int>? b = null;      // nessuna scatola, ma se esiste contiene un int
 ```
 
 In `Box<int?>` l'**argomento di tipo** è nullable, quindi `a.value` ha tipo `int?` e può essere `null`, mentre `a` in sé è sempre presente. In `Box<int>?` è la **variabile** a essere nullable, quindi `b` può essere `null` e ti serve `b?.value` o `b!.value` per raggiungere il suo interno.
@@ -146,10 +146,10 @@ La differenza conta appena usi il valore. Su una `Box<int?>` raggiungi il campo 
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, la scatola c’è, il suo contenuto è null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, manca proprio la scatola
 ```
 
 Scrivere `b.value` su una `Box<int>?` non compila affatto: Dart si rifiuta di leggere un campo di qualcosa che potrebbe non esistere.
@@ -187,7 +187,7 @@ Senza il vincolo, `a > b` non compilarrebbe: l'operatore di confronto appartiene
 Un vincolo può menzionare il parametro di tipo stesso. `Comparable<T>` è l'interfaccia di tutto ciò che sa confrontarsi con i propri simili, tramite `compareTo`:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // negativo: fig viene prima
 print('kiwi'.compareTo('fig')); // positive
 print('fig'.compareTo('fig'));  // zero
 ```

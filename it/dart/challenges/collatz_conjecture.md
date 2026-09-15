@@ -22,7 +22,7 @@ Scrivi una funzione `collatzSteps` che riceve un intero positivo `n` e restituis
 Esempio di chiamata alla funzione:
 ```dart
 print(collatzSteps(16));
-// prints 4
+// stampa 4
 ```
 
 # --seed--

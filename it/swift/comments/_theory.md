@@ -2,7 +2,7 @@ Un **commento** è una nota scritta all'interno del codice sorgente per le perso
 
 Il commento più semplice è il **commento su una riga**: inizia con `//` e continua fino alla fine della riga.
 ```swift
-// Greets the user
+// Saluta l'utente
 print("Hello")
 ```
 Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato scritto in quel modo.
@@ -11,7 +11,7 @@ Usa i commenti per spiegare a cosa serve un pezzo di codice, o perché è stato 
 
 Un commento non ha bisogno di una riga tutta per sé: può seguire il codice sulla stessa riga. Questo è un **commento in coda**, ed è il posto ideale per una breve nota su quella specifica istruzione:
 ```swift
-let retries = 3 // give up after three attempts
+let retries = 3 // rinuncia dopo tre tentativi
 ```
 Tutto ciò che va da `//` alla fine della riga viene ignorato, mentre il codice che lo precede viene eseguito come al solito.
 
@@ -23,7 +23,7 @@ Questo rende `//` un modo rapido per disattivare una riga di codice senza elimin
 ```swift
 var total = 10
 // total = total + 5
-print(total) // prints 10
+print(total) // stampa 10
 ```
 La seconda riga ora è un commento, quindi `total` resta `10`. Rimuovendo il `//` la riga torna in vita.
 
@@ -45,8 +45,8 @@ Un commento a blocco può anche essere breve e stare su una riga sola: `/* like 
 
 A differenza di `//`, che si ferma alla fine della riga, un commento `/*` si ferma solo al `*/`. Se dimentichi di chiuderlo, il compilatore tratta tutto il codice seguente come parte del commento e segnala un errore:
 ```swift
-let width = 10 /* in centimetres
-print(width) // still inside the comment: error, the comment is never closed
+let width = 10 /* in centimetri
+print(width) // ancora dentro il commento: errore, il commento non viene mai chiuso
 ```
 Sia `//` che `/* */` funzionano come commenti in coda, ma con `/*` assicurati sempre che ci sia il `*/`.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-print(total) // prints 100
+print(total) // stampa 100
 ```
 Grazie all'annidamento questo funziona anche quando una di quelle righe contiene già un commento `/* */`.
 
@@ -90,7 +90,7 @@ Chi chiama `toSeconds` può ora leggere l'intestazione invece del corpo. Tieni l
 
 Swift ha un terzo tipo di commento, il **commento di documentazione**: un commento su una sola riga che inizia con `///` (tre barre) messo subito sopra una funzione, un tipo o una proprietà.
 ```swift
-/// Returns the greeting for `name`.
+/// Restituisce il saluto per `name`.
 func greet(_ name: String) -> String {
     return "Hi, \(name)!"
 }
@@ -101,7 +101,7 @@ Per il compilatore è solo un commento, ma strumenti come Xcode lo leggono e lo 
 
 La prima riga di un commento di documentazione è il **riassunto**: una frase breve che dice cosa fa la funzione. Scrivila alla terza persona, come se descrivessi la funzione: "Returns...", "Adds...", "Checks...".
 ```swift
-/// Returns `true` when `n` is divisible by two.
+/// Restituisce `true` quando `n` è divisibile per due.
 func isEven(_ n: Int) -> Bool {
     return n % 2 == 0
 }
@@ -127,9 +127,9 @@ func greet(_ name: String) -> String {
 
 Dopo il riassunto, un commento di documentazione può descrivere i parametri e il valore restituito con speciali elementi di elenco Markdown che Xcode riconosce:
 ```swift
-/// Returns the number of seconds in the given minutes.
-/// - Parameter minutes: a whole number of minutes, never negative
-/// - Returns: `minutes` multiplied by sixty
+/// Restituisce il numero di secondi nei minuti indicati.
+/// - Parameter minutes: un numero intero di minuti, mai negativo
+/// - Returns: `minutes` moltiplicato per sessanta
 func toSeconds(_ minutes: Int) -> Int {
     return minutes * 60
 }
@@ -163,12 +163,12 @@ Un `FIXME` è diverso da un `TODO`: il codice esiste già, ma si sa che è sbagl
 
 Un buon commento spiega **perché** il codice fa qualcosa, non **cosa** fa. Il codice mostra già cosa succede; ripeterlo a parole aggiunge rumore e invecchia appena il codice cambia:
 ```swift
-// set timeout to 30
+// imposta il timeout a 30
 let timeout = 30
 ```
 Il motivo dietro il numero è ciò che chi legge non può indovinare:
 ```swift
-// the server drops idle connections after 35 seconds, so stop earlier
+// il server chiude le connessioni inattive dopo 35 secondi, quindi fermati prima
 let timeout = 30
 ```
 Se un commento si limita a ripetere la riga sotto di esso, cancellalo o sostituiscilo con il motivo.

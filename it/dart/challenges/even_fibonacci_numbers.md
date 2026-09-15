@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la somma di tutti i termini di Fibonacci di 
 Esempio di chiamata alla funzione:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// stampa 10
 ```
 
 # --seed--

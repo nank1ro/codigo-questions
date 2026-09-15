@@ -16,7 +16,7 @@ Scrivi una funzione che calcola la somma di tutti i multipli di 3 o 5 inferiori 
 Esempio di chiamata alla funzione:
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// stampa 23
 ```
 
 # --before-seed--

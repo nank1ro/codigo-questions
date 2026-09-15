@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca la somma di tutti i numeri primi inferiori a
 Esempio di chiamata alla funzione:
 ```dart
 print(primeSummation(10));
-// prints 17
+// stampa 17
 ```
 
 # --seed--

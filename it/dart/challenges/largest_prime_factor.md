@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca il fattore primo più grande di `number`.
 Esempio di chiamata alla funzione:
 ```dart
 print(largestPrimeFactor(13195));
-// prints 29
+// stampa 29
 ```
 
 # --seed--

@@ -27,7 +27,7 @@ Scrivi una funzione `isValid` che riceve una stringa e restituisce `true` quando
 Esempio di chiamata di funzione:
 ```dart
 print(isValid("095 245 88"));
-// prints true
+// stampa true
 ```
 
 # --seed--

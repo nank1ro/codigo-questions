@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 Quando vuoi un tipo diverso da quello dedotto, aggiungi un'annotazione. Un literal numero intero può essere memorizzato in una costante `Double` o `Float`, e un literal di un solo carattere in una costante `Character`:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, non un Int
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, non è un numero intero
+print(Int(" 42"))  // nil, gli spazi non sono consentiti
 print(Int("abc"))  // nil
 ```
 Per il testo decimale usa `Double(text)`, che restituisce un `Double?` nello stesso modo: `Double("3.5")` è `Optional(3.5)`.
@@ -166,7 +166,7 @@ Poiché `Int(text)` e `Double(text)` restituiscono `nil` in caso di fallimento, 
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, un numero intero è anche un Double valido
 ```
 Nota l'ultima riga: ogni testo accettato da `Int` è accettato anche da `Double`, quindi controlla prima `Int` quando vuoi distinguerli.
 
@@ -180,7 +180,7 @@ Ogni elemento ricorda comunque il suo tipo reale, che `type(of:)` rivela. Per la
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // viene eseguito solo per 1
     }
 }
 ```

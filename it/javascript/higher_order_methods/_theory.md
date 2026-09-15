@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// stampa HI!!
 ```
 Nota che `shout` viene passata **senza parentesi**: `twice(shout, "hi")` consegna la funzione stessa, mentre `twice(shout("hi"), "hi")` chiamerebbe prima `shout` e passerebbe il suo risultato, la stringa `"HI!"`, che non può essere chiamata.
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// stampa a e b su due righe
 ```
 La callback riceve un elemento alla volta. Può essere una arrow function scritta in linea, come sopra, o qualsiasi funzione salvata in una variabile. È esattamente così che funzionano internamente i metodi degli array che incontrerai a breve.
 
@@ -32,9 +32,9 @@ Il metodo integrato `map` fa quello che fa `transform`: chiama la callback per o
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// stampa 5 e 10 su due righe
 console.log(doubled);
-// prints [ 10, 20 ]
+// stampa [ 10, 20 ]
 ```
 Un errore comune è salvare il risultato di `forEach` o concatenare un altro metodo dopo di esso: non c'è nulla da concatenare, perché restituisce `undefined`. Regola pratica: usa `map` quando ti servono i nuovi valori, `forEach` quando devi solo *fare* qualcosa.
 
@@ -46,9 +46,9 @@ Altri due metodi di ordine superiore coprono la maggior parte delle esigenze quo
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// stampa [ 8, 5 ]
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// stampa 16
 ```
 Poiché `filter` e `map` restituiscono array, puoi concatenarli e concludere con `reduce`: `numbers.filter(...).map(...).reduce(...)`.
 
@@ -61,9 +61,9 @@ Tre metodi rispondono a domande su un array usando un predicato:
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// stampa 45
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// stampa true false
 ```
 Tutti e tre si fermano appena la risposta è nota, quindi non guardano mai più elementi del necessario.
 
@@ -73,9 +73,9 @@ Tutti e tre si fermano appena la risposta è nota, quindi non guardano mai più 
 Senza un comparatore, `sort()` converte ogni elemento in una **stringa** e li confronta carattere per carattere, quindi `10` viene prima di `9` perché `"1"` è minore di `"9"`:
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// stampa [ 1, 10, 9 ]
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// stampa [ 1, 9, 10 ]
 ```
 Poiché `sort` modifica l'array, ordina una copia quando ti serve anche l'ordine originale: `[...numbers].sort(...)`. Per le stringhe usa `(a, b) => a.localeCompare(b)` come comparatore, che ordina il testo alfabeticamente.
 
@@ -86,7 +86,7 @@ Il comparatore può guardare qualsiasi parte degli elementi, quindi un array di 
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// stampa [ 'a', 'b' ]
 ```
 Ordinare la copia lascia `items` nel suo ordine originale.
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// stampa 15
 console.log(makeMultiplier(10)(5));
-// prints 50
+// stampa 50
 ```
 Ogni chiamata a `makeMultiplier` crea una nuova funzione con il proprio `factor`. È così che costruisci una famiglia di funzioni simili a partire da un unico modello. Lo stesso si può scrivere con le arrow function: `const makeMultiplier = (factor) => (n) => n * factor;`.
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// stampa 2
 ```
 Nessuno può leggere o azzerare `count` dall'esterno se non attraverso quelle due funzioni: la variabile è **privata**. Una seconda chiamata a `makeCounter()` crea un `count` completamente separato.
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// stampa HI
 ```
 L'ordine conta: `compose(f, g)` esegue prima `g`, poi `f`. Costruire programmi incollando insieme piccole funzioni in questo modo si chiama **composizione di funzioni**.
 
@@ -146,7 +146,7 @@ Una funzione che restituisce una funzione è anche il modo naturale per **adatta
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// stampa [ 'tree' ]
 ```
 Un `not(predicate)` generico farebbe questo per qualsiasi predicato: restituisce una nuova funzione che chiama `predicate` con lo stesso argomento e inverte il risultato con `!`. I predicati per `filter`, `find`, `some` ed `every` ricevono l'elemento come primo argomento, quindi il wrapper deve inoltrare solo quel valore.
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// stampa { yes: 2, no: 1 }
 ```
 `acc[vote] ?? 0` legge il conteggio attuale, o `0` quando quella chiave non esiste ancora.
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// stampa 42
 ```
 Fissare `this` è importante per i metodi. Quando un metodo viene copiato fuori dal suo oggetto e chiamato da solo, `this` non si riferisce più all'oggetto, quindi `this.name` diventa `undefined`. `bind` lo blocca sull'oggetto:
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// stampa Hi undefined
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// stampa Hi Ana
 ```
 La funzione originale non viene mai modificata: `bind` costruisce sempre una nuova funzione, il cui `name` è il nome originale preceduto da `bound `.
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// stampa ready ready 1
 ```
 Il wrapper ha bisogno di due variabili private: se `fn` è già stata eseguita e il risultato salvato. Entrambe vivono nella closure, invisibili al mondo esterno. Per inoltrare a `fn` ogni argomento del wrapper, dichiara il wrapper con un parametro rest `(...args)` e chiama `fn(...args)`.
 
@@ -220,6 +220,6 @@ Tutto si unisce in `groupBy(items, keyFn)`: una funzione di ordine superiore che
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// stampa { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
 ```
 Per ogni elemento, calcola la chiave, crea l'array per quella chiave se non esiste ancora (`acc[key] ?? []`), inserisci l'elemento e restituisci l'accumulatore. Poiché è il chiamante a scegliere `keyFn`, la stessa funzione raggruppa parole per iniziale, persone per città o numeri per parità.

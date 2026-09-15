@@ -16,7 +16,7 @@ Scrivi una funzione che trova il prodotto a × b × c della terna pitagorica dov
 Esempio di chiamata alla funzione:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// stampa 60
 ```
 
 # --before-seed--

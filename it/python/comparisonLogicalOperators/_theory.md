@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # stampa solo "checking -1"
+check(2) or check(-3)   # stampa solo "checking 2"
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False, vengono controllate solo le chiavi
 ```
 Entrambi restituiscono un booleano e si leggono come l'inglese, il che li rende il modo preferito per verificare l'appartenenza invece di scrivere un ciclo.

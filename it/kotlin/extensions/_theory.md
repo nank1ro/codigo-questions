@@ -177,7 +177,7 @@ Una funzione di estensione con esattamente **un** parametro può essere marcata 
 infix fun Int.percentOf(total: Int): Int = total * this / 100
 
 println(20 percentOf 50)   // 10
-println(20.percentOf(50))  // 10, the normal call still works
+println(20.percentOf(50))  // 10, la chiamata normale funziona comunque
 ```
 Kotlin la usa anche per alcune funzioni predefinite: `1 to "one"` costruisce una `Pair`, e `1 until 5` costruisce un intervallo.
 
@@ -186,7 +186,7 @@ Kotlin la usa anche per alcune funzioni predefinite: `1 to "one"` costruisce una
 Per poter essere marcata `infix`, una funzione deve essere un membro o un'estensione, deve avere esattamente un parametro, e quel parametro non può avere un valore predefinito. Qualsiasi altra cosa è un errore di compilazione:
 ```kotlin
 infix fun Int.add(other: Int): Int = this + other          // ok
-infix fun add(a: Int, b: Int): Int = a + b                 // error: not a member or extension
-infix fun Int.add(a: Int, b: Int): Int = this + a + b      // error: two parameters
+infix fun add(a: Int, b: Int): Int = a + b                 // errore: non è un membro o un'estensione
+infix fun Int.add(a: Int, b: Int): Int = this + a + b      // errore: due parametri
 ```
 Le chiamate infix hanno una precedenza fra l'aritmetica e il confronto: `1 add 2 * 3` è `1 add 6`, mentre `1 add 2 == 3` confronta il risultato con `3`.

@@ -16,7 +16,7 @@ Scrivi una funzione che restituisca il numero positivo più piccolo divisibile i
 Esempio di chiamata alla funzione:
 ```dart
 print(smallestMultiple(10));
-// prints 2520
+// stampa 2520
 ```
 
 # --seed--

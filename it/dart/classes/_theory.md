@@ -2,7 +2,7 @@ Una **classe** è un modello per creare oggetti. In Dart, si definisce una class
 
 ```dart
 class Animal {
-  // fields and methods go here
+  // campi e metodi vanno qui
 }
 ```
 
@@ -232,7 +232,7 @@ Una **classe astratta** è una classe che non può essere istanziata direttament
 
 ```dart
 abstract class Shape {
-  double area(); // abstract method — no body
+  double area(); // metodo astratto — senza corpo
 }
 
 class Circle extends Shape {
@@ -258,7 +258,7 @@ class MathHelper {
 }
 
 void main() {
-  // access without creating an object:
+  // accesso senza creare un oggetto:
   print(MathHelper.pi);
   print(MathHelper.circleArea(5));
 }
