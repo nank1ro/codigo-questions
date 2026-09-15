@@ -32,3 +32,4 @@ doc/api/
 .flutter-plugins-dependencies
 
 curriculum_dev.json
+__pycache__/
