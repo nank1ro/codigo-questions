@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// Max makes a sound 출력
 ```
 자식이 자신의 생성자를 선언하면, 그 안에서 `super(...)`를 호출하는 것은 **필수**입니다. 호출하지 않으면 객체가 초기화되지 않은 채로 남아 JavaScript가 `ReferenceError`를 던집니다. 생성자가 전혀 없는 자식은 괜찮습니다. JavaScript가 모든 인자를 부모에게 전달하는 생성자를 작성해 주기 때문입니다.
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// Woof 출력
 ```
 재정의는 부모 버전을 삭제하지 않고 숨길 뿐입니다. 자식 메서드 안에서 `super.methodName(...)`는 여전히 부모 버전에 도달할 수 있으므로, 부모 동작을 대체하는 대신 확장할 수 있습니다:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// Woof! 출력
 ```
 차이에 주의하세요. `super(...)`는 부모 **생성자**를 호출하고, `super.name(...)`는 부모 **메서드**를 호출합니다.
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// 0 출력
 ```
 필드는 생성자 본문이 실행되기 전에 각 새 인스턴스에 할당되므로, 생성자는 이미 필드를 믿고 사용할 수 있습니다. 값이 없는 필드도 선언은 되지만 `undefined`로 시작합니다:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// 8 출력
 ```
 정적 메서드는 클래스 이름으로 호출되며, 인스턴스로는 호출하지 않습니다. `new MathUtils().double(4)`는 `TypeError`를 던집니다. 인스턴스는 정적 멤버를 받지 않기 때문입니다. 정적 메서드 안에서 `this`는 클래스를 가리키므로, `this.otherStatic(...)`으로 다른 정적 메서드를 호출할 수 있습니다.
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// 3.14 출력
 ```
 사본이 하나뿐이므로, 값을 갱신하는 모든 인스턴스는 같은 값을 갱신합니다. 생성자 안에서는 `this`가 아니라 클래스 이름인 `Circle.PI`로 접근합니다. `this.PI`는 인스턴스의 프로퍼티를 찾는데 아무것도 없어서 `undefined`를 줍니다.
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// 120 출력
 ```
 팩토리는 인스턴스가 존재하기 전에 호출될 수 있으며, 일반 메서드로는 불가능합니다.
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// 12 출력
 ```
 `r.area`는 메서드를 실행하고 그 결과를 돌려주므로 숫자입니다. 여기에 괄호를 붙이면 그 숫자를 호출하려 하기 때문에 실패합니다.
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// 3 출력, setter가 50을 거부함
 ```
 같은 이름의 게터와 세터는 하나의 프로퍼티를 이루므로, 동시에 일반 필드일 수는 없습니다. 저장된 값은 다른 이름 아래 있으며, 관례상 앞에 밑줄을 붙인 같은 이름을 사용합니다.
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// 1234 출력
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// $7 출력
 ```
 이렇게 하면 도우미 단계를 API 밖에 둘 수 있습니다. 호출자는 그 뒤의 포매팅 세부 사항이 아니라 `print`를 봅니다. 비공개 필드와 비공개 메서드가 함께 클래스에 명확한 안과 밖을 만들어 줍니다.
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// $7 출력
 ```
 같은 메서드는 문자열 연결과 `String(value)`에서도 사용됩니다. 적절한 **숫자** 변환도 원한다면 `[Symbol.toPrimitive](hint)`를 정의하세요. 이것은 `"string"`, `"number"` 또는 `"default"`를 받고 무엇을 반환할지 결정하며, 존재하면 `toString`보다 우선합니다.
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] 출력
 ```
 이름 앞의 `*`는 그것을 **제너레이터**로 만듭니다. `yield`로 값을 한 번에 하나씩 넘겨주고 그 사이에 멈추는 함수입니다. 반복 프로토콜을 만족하는 가장 짧은 방법이며, 저장된 값이 아니라 계산된 값에도 동작합니다.

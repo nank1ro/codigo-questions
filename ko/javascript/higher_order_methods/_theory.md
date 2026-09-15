@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// HI!! 출력
 ```
 `shout`이 **괄호 없이** 전달된다는 점에 주목하세요. `twice(shout, "hi")`는 함수 자체를 넘기지만, `twice(shout("hi"), "hi")`는 먼저 `shout`을 호출해 그 결과인 문자열 `"HI!"`를 넘기게 되며, 문자열은 호출할 수 없습니다.
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// a와 b를 두 줄에 걸쳐 출력
 ```
 콜백은 한 번에 요소 하나를 받습니다. 위처럼 인라인으로 쓴 화살표 함수일 수도 있고, 변수에 저장된 어떤 함수든 될 수 있습니다. 다음에 배울 내장 배열 메서드도 내부적으로는 정확히 이렇게 동작합니다.
 
@@ -32,9 +32,9 @@ each(["a", "b"], (letter) => console.log(letter));
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// 5와 10을 두 줄에 걸쳐 출력
 console.log(doubled);
-// prints [ 10, 20 ]
+// [ 10, 20 ] 출력
 ```
 흔한 실수는 `forEach`의 결과를 저장하거나 그 뒤에 다른 메서드를 이어 붙이는 것입니다. `undefined`를 반환하므로 이어 붙일 것이 없습니다. 기준은 간단합니다. 새 값이 필요하면 `map`, 무언가를 *하기만* 하면 될 때는 `forEach`를 쓰세요.
 
@@ -46,9 +46,9 @@ console.log(doubled);
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// [ 8, 5 ] 출력
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// 16 출력
 ```
 `filter`와 `map`은 배열을 반환하므로 이어 붙인 뒤 `reduce`로 마무리할 수 있습니다: `numbers.filter(...).map(...).reduce(...)`.
 
@@ -61,9 +61,9 @@ console.log(numbers.reduce((sum, n) => sum + n, 0));
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// 45 출력
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// true false 출력
 ```
 셋 다 답이 정해지는 즉시 멈추므로 필요한 것보다 많은 요소를 보지 않습니다.
 
@@ -73,9 +73,9 @@ console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
 비교 함수가 없으면 `sort()`는 각 요소를 **문자열**로 바꿔 한 글자씩 비교하므로, `"1"`이 `"9"`보다 작아서 `10`이 `9`보다 앞에 옵니다:
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// [ 1, 10, 9 ] 출력
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// [ 1, 9, 10 ] 출력
 ```
 `sort`는 배열을 변경하므로 원래 순서도 필요하다면 복사본을 정렬하세요: `[...numbers].sort(...)`. 문자열에는 텍스트를 알파벳순으로 정렬하는 `(a, b) => a.localeCompare(b)`를 비교 함수로 사용하세요.
 
@@ -86,7 +86,7 @@ console.log([10, 9, 1].sort((a, b) => a - b));
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] 출력
 ```
 복사본을 정렬하면 `items`는 원래 순서 그대로 남습니다.
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// 15 출력
 console.log(makeMultiplier(10)(5));
-// prints 50
+// 50 출력
 ```
 `makeMultiplier`를 호출할 때마다 각자의 `factor`를 가진 새 함수가 만들어집니다. 이렇게 하나의 틀에서 비슷한 함수들의 가족을 만들 수 있습니다. 같은 것을 화살표 함수로도 쓸 수 있습니다: `const makeMultiplier = (factor) => (n) => n * factor;`.
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// 2 출력
 ```
 그 두 함수를 거치지 않고는 밖에서 아무도 `count`를 읽거나 되돌릴 수 없습니다. 이 변수는 **비공개**입니다. `makeCounter()`를 다시 호출하면 완전히 별개인 `count`가 만들어집니다.
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// HI 출력
 ```
 순서가 중요합니다. `compose(f, g)`는 `g`를 먼저 실행하고 그다음 `f`를 실행합니다. 이렇게 작은 함수들을 이어 붙여 프로그램을 만드는 것을 **함수 합성**이라고 합니다.
 
@@ -146,7 +146,7 @@ console.log(clean("  hi  "));
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// [ 'tree' ] 출력
 ```
 일반적인 `not(predicate)`는 어떤 술어에 대해서도 이 일을 합니다. 같은 인자로 `predicate`를 호출하고 결과를 `!`로 뒤집는 새 함수를 반환합니다. `filter`, `find`, `some`, `every`의 술어는 요소를 첫 번째 인자로 받으므로, 래퍼는 그 값 하나만 전달하면 됩니다.
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// { yes: 2, no: 1 } 출력
 ```
 `acc[vote] ?? 0`은 현재 개수를 읽고, 그 키가 아직 없으면 `0`을 읽습니다.
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// 42 출력
 ```
 `this`를 고정하는 것은 메서드에서 중요합니다. 메서드를 객체 밖으로 꺼내 단독으로 호출하면 `this`는 더 이상 그 객체를 가리키지 않으므로 `this.name`은 `undefined`가 됩니다. `bind`는 그것을 객체에 묶어 둡니다:
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// Hi undefined 출력
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// Hi Ana 출력
 ```
 원래 함수는 절대 변경되지 않습니다. `bind`는 항상 새 함수를 만들며, 그 `name`은 원래 이름 앞에 `bound `가 붙은 것입니다.
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// ready ready 1 출력
 ```
 래퍼에는 비공개 변수 두 개가 필요합니다. `fn`이 이미 실행됐는지 여부와 저장된 결과입니다. 둘 다 클로저 안에 있어 바깥에서는 보이지 않습니다. 래퍼의 모든 인자를 `fn`에 넘기려면 나머지 매개변수 `(...args)`로 래퍼를 선언하고 `fn(...args)`를 호출하세요.
 
@@ -220,6 +220,6 @@ console.log(init(), init(), calls);
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// { h: [ 'hi', 'hey' ], y: [ 'yo' ] } 출력
 ```
 각 요소마다 키를 계산하고, 그 키의 배열이 아직 없으면 만들고(`acc[key] ?? []`), 요소를 넣은 뒤 누적자를 반환하세요. `keyFn`을 호출하는 쪽이 정하므로, 같은 함수로 단어를 첫 글자별로, 사람을 도시별로, 숫자를 홀짝별로 묶을 수 있습니다.

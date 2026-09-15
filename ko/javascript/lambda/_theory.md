@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 출력
 ```
 **화살표 함수**는 같은 것을 더 짧게 쓰는 방법입니다: `function` 키워드를 없애고 매개변수 목록과 본문 사이에 "fat arrow" `=>`를 넣습니다:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 출력
 ```
 화살표 함수는 보통 `const`에 저장되므로 이름이 실수로 다시 할당될 수 없고, 다른 함수와 똑같은 방식으로 호출됩니다.
 
@@ -23,13 +23,13 @@ console.log(add(2, 3));
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// 5 출력
 ```
 매개변수가 **정확히 하나**일 때는 그 주위의 괄호도 생략할 수 있습니다:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// 8 출력
 ```
 매개변수가 없거나 두 개 이상일 때는 괄호가 필요합니다: `() => 42`와 `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ console.log(double(4));
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// undefined 출력
 ```
 여기서 `{ name: name }`은 레이블 `name:`과 그 뒤의 표현식 `name`을 담고 있는 블록입니다. 아무것도 반환되지 않으므로 호출 결과는 `undefined`입니다.
 한 줄에서 객체 리터럴을 반환하려면 JavaScript가 표현식으로 취급하도록 **괄호**로 감싸세요:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// { name: 'Ana' } 출력
 ```
 
 ---
@@ -55,13 +55,13 @@ console.log(make("Ana"));
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// 30 출력
 ```
 매개변수가 없는 화살표 함수는 빈 괄호 쌍 `()`으로 시작합니다:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// {} 출력
 ```
 
 ---
@@ -71,9 +71,9 @@ console.log(empty());
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// [ 10, 20, 30, 40 ] 출력
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// [ 3, 4 ] 출력
 ```
 둘 다 새 배열을 반환하고 원본을 그대로 두므로 체이닝할 수 있습니다: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ console.log(numbers.filter((n) => n > 2));
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// 1, 2, 3을 세 줄에 걸쳐 출력
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// 6 출력
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// [ 50, 70, 90 ] 출력
 console.log(scores.find((s) => s > 60));
-// prints 70
+// 70 출력
 ```
 
 ---
@@ -111,9 +111,9 @@ console.log(scores.find((s) => s > 60));
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// Hello, World! 출력
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// Hello, Ana! 출력
 ```
 기본값이 있는 매개변수는 하나뿐인 경우에도 항상 괄호가 필요합니다: `name = "World" => ...`은 문법 오류입니다.
 
@@ -123,7 +123,7 @@ console.log(greet("Ana"));
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// 3 출력
 ```
 일반 함수에는 받은 모든 인수를 담고 있는 숨겨진 배열 유사 객체 `arguments`도 있습니다. 화살표 함수에는 **없습니다**: 화살표 안에서 `arguments`는 둘러싼 함수의 `arguments`를 가리키거나 아예 존재하지 않습니다. 화살표 함수에서 "모든 인수"가 필요하다면 나머지 매개변수를 사용하세요.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// 1 출력
 console.log(next());
-// prints 2
+// 2 출력
 ```
 다른 누구도 `count`를 읽거나 초기화할 수 없습니다: `count`는 반환된 함수 안에만 존재합니다. `makeCounter()`를 다시 호출하면 자체적인 `count`를 가진 독립적인 카운터가 만들어집니다.
 
@@ -154,8 +154,8 @@ console.log(next());
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// 15 출력
 console.log(makeAdder(1)(5));
-// prints 6
+// 6 출력
 ```
 왼쪽에서 오른쪽으로 읽어 보세요: `makeAdder`는 `amount`를 받아 `(n) => n + amount`, 즉 클로저를 통해 `amount`를 붙잡아 두는 화살표 함수를 반환합니다. `makeAdder(1)(5)`는 반환된 함수를 즉시 호출합니다.

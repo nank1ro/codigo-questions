@@ -30,7 +30,7 @@ title: 빗방울
 함수 호출 예시:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// "Plong"을 출력
 ```
 
 # --before-seed--

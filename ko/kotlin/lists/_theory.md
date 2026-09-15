@@ -24,7 +24,7 @@ __[1]__ `List`는 _읽기 전용_이므로 오류가 발생합니다.
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// [1, 3, 5, 7]을 출력합니다
 ```
 
 ---
@@ -47,15 +47,15 @@ listName[index]
 다음과 같이 리스트 인덱스에 접근하는 방법을 보셨습니다:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// "Jeremiah" 값을 출력합니다
 println(names[0])
 ```
 다음은 값을 할당하는 방법입니다:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// 새 값 "Jordan"을 대입합니다
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// "Jordan" 값을 출력합니다
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ println(names[0])
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// true를 출력합니다
 ```
 
 ---
@@ -83,7 +83,7 @@ println(names.contains("Scarlett"))
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// [a, b, c]를 출력합니다
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// [a, b, c, d, e]를 출력합니다
 ```
 
 ---
@@ -106,7 +106,7 @@ println(letters)
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// [2, 3]을 출력합니다
 ```
 __[1]__: 먼저 `numbers`라는 _읽기 전용_ 리스트를 생성합니다.
 __[2]__: 그런 다음 `slice` 함수를 사용하여 리스트의 부분을 가져와 slice 리스트에 저장합니다.
@@ -130,7 +130,7 @@ Kotlin에서는 `indexOfFirst` 메서드를 사용할 수 있습니다:
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// 1을 출력합니다
 ```
 
 `indexOfFirst` 메서드는 리스트의 각 항목에 대해 true가 될 때까지 평가되는 __술어__ 함수를 받아, 해당 요소의 _인덱스_를 반환합니다.
@@ -139,7 +139,7 @@ println(names.indexOfFirst { it == "Zac"})
 `add(index, element)` 메서드를 사용하여 수정 가능한 리스트의 특정 인덱스에 항목을 삽입할 수도 있습니다:
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// [Trevor, Ali, Zac, Glenn]을 출력합니다
 ```
 위 코드는 인덱스 `1`에 `"Ali"`를 삽입하며, 이 인덱스 이후의 모든 항목은 1만큼 뒤로 이동합니다
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// 1, 2, 3을 출력합니다
 ```
 `for` 키워드 뒤에 변수 이름이 오며, 이 변수에는 각 리스트 항목의 값이 차례로 할당됩니다.

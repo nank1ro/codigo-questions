@@ -16,7 +16,7 @@ title: 연속된 숫자의 가장 큰 곱
 함수 호출 예시:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// 출력: 5832
 ```
 
 # --seed--

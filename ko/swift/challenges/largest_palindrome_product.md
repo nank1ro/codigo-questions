@@ -16,7 +16,7 @@ n자리 수 두 개의 곱으로 만들 수 있는 가장 큰 회문 수를 찾�
 함수 호출 예시:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// 9009를 출력
 ```
 
 # --before-seed--

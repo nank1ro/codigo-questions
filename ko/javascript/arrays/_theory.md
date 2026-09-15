@@ -23,15 +23,15 @@ arrayName[index];
 배열 인덱스에 접근하는 방법은 다음과 같습니다:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// "Jeremiah" 값을 출력합니다
 console.log(names[0]);
 ```
 값을 할당하는 방법은 다음과 같습니다:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// 새로운 값 "Jordan"을 할당합니다
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// "Jordan" 값을 출력합니다
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ console.log(names[0]);
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"]를 출력합니다
 ```
 
 ---
@@ -60,7 +60,7 @@ console.log(letters);
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// [2, 3] 출력
 ```
 먼저 `numbers`라는 배열을 생성합니다.
 그런 다음 배열의 일부를 가져와 slice 배열에 저장합니다.
@@ -71,9 +71,9 @@ console.log(slice);
 
 JavaScript에서는 배열을 원하는 대로 슬라이스할 수 있습니다!
 ```javascript
-// Grabs the first two items
+// 처음 두 항목을 가져옵니다
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// 네 번째부터 마지막 항목까지 가져옵니다
 listName.slice(3);
 ```
 배열 슬라이스에 배열의 맨 처음 또는 맨 마지막 항목이 포함되는 경우, 해당 항목의 인덱스를 포함할 필요가 없습니다
@@ -94,13 +94,13 @@ JavaScript에서는 `indexOf()` 메서드를 사용할 수 있습니다:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// 1 출력
 ```
 위 코드는 문자열 `"Zac"`을 포함하는 첫 번째 인덱스인 `1`을 출력합니다.
 `splice()` 메서드를 사용하여 특정 인덱스에 항목을 삽입할 수도 있습니다:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"] 출력
 ```
 위 코드는 인덱스 `1`에 `"Ali"`를 삽입하며, 이 인덱스 이후의 모든 항목을 1칸씩 뒤로 이동시킵니다.
 두 번째 값 `0`은 _삭제 개수_를 의미하며, 이 경우 배열에서 어떤 항목도 삭제하지 않습니다. 하지만 `1`을 지정했다면 `Zac` 값이 배열에서 제거되었을 것입니다
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3 
+// 1, 2, 3 출력 
 ```
 `for` 키워드 뒤에 변수 이름이 오며, 이 변수에는 각 배열 항목의 값이 차례로 할당됩니다.

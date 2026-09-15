@@ -64,8 +64,8 @@ print(numbers.every((n) => n > 2)); // false
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // 아직 아무것도 계산되지 않음
+print(doubled.first);                      // 2만 계산됨
 ```
 
 `toList()`가 시퀀스를 **실체화**합니다: 처음부터 끝까지 순회하며 모든 결과를 실제 `List`에 저장합니다.
@@ -183,7 +183,7 @@ print(numbers); // [1, 2, 3]
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2], 그대로
 ```
 
 `sort`는 **비교자(comparator)**도 받습니다: 두 요소를 받는 함수로, 첫 번째가 두 번째보다 앞설 때는 음수, 같을 때는 `0`, 그 외에는 양수를 반환합니다. `compareTo`가 정확히 그것을 만들어내므로, 어떤 키로든 정렬하는 것은 한 줄입니다:
@@ -201,7 +201,7 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 ```dart
 final words = ['fig', 'kiwi'];
 final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final letters = words.fold(0, (acc, w) => acc + w.length); // int, Strings로부터
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

@@ -18,7 +18,7 @@ title: 윤년
 함수 호출 예시:
 ```swift
 print(leapYear(2000))
-// prints true
+// true를 출력
 ```
 
 # --before-seed--

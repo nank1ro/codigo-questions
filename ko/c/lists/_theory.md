@@ -9,7 +9,7 @@ typedef struct Node {
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // "2" 출력
 ```
 
 ---
@@ -42,7 +42,7 @@ for (Node *n = head; n != NULL; n = n->next) {
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // 리스트는 이제 8, 7
 ```
 빈 리스트에 추가하는 것도 같은 방식으로 동작합니다: 새 노드는 `NULL`을 가리키고 리스트 전체가 됩니다.
 

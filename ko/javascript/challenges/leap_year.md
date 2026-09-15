@@ -18,7 +18,7 @@ title: 윤년
 함수 호출 예시:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// true 출력
 ```
 
 # --before-seed--

@@ -94,15 +94,15 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3, 이미 값이 있었음
 ```
 
 키가 없을 수 있어 널 가능인 map의 항목에도 사용할 수 있습니다:
 
 ```dart
 var stock = {'apple': 4};
-stock['pear'] ??= 1;  // added
-stock['apple'] ??= 9; // ignored
+stock['pear'] ??= 1;  // 추가됨
+stock['apple'] ??= 9; // 무시됨
 print(stock); // {apple: 4, pear: 1}
 ```
 
@@ -142,7 +142,7 @@ print(text!.length); // Null check operator used on a null value
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // 여기서 n은 int, !가 필요 없음
   }
   return 0;
 }
@@ -153,7 +153,7 @@ int twice(int? n) {
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // n은 여기서부터 int
 }
 ```
 
@@ -207,7 +207,7 @@ class Connection {
 `late`는 초기화식과 함께 쓸 수도 있으며, 이 경우 초기화식은 변수를 처음 읽을 때 **지연 실행**됩니다:
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport()는 report가 사용될 때만 실행됨
 ```
 
 ---
@@ -270,7 +270,7 @@ print(int.tryParse(''));    // null
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // 아무 일도 일어나지 않음, numbers는 여전히 null
 ```
 
 **널 인식 스프레드** `...?`는 널 가능 컬렉션의 요소를 리터럴에 넣고, 컬렉션이 `null`이면 아무것도 추가하지 않습니다:

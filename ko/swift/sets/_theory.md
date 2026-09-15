@@ -42,9 +42,9 @@ print(primes.contains(6)) // false
 ```swift
 var numbers: Set<Int> = [1, 2]
 numbers.insert(3) // {1, 2, 3}
-numbers.insert(2) // 2 is already there: nothing changes
+numbers.insert(2) // 2는 이미 있음: 아무것도 바뀌지 않음
 numbers.remove(1) // {2, 3}
-numbers.remove(9) // 9 is not there: nothing changes
+numbers.remove(9) // 9는 없음: 아무것도 바뀌지 않음
 ```
 이미 존재하는 값을 삽입해도 아무 효과가 없고, 존재하지 않는 값을 제거해도 오류가 발생하지 않습니다.
 `remove(_:)`는 제거된 값을 옵셔널로 반환합니다(아무것도 제거되지 않았다면 `nil`). 이를 통해 실제로 제거가 일어났는지 확인할 수 있습니다.
@@ -57,6 +57,6 @@ set을 완전히 비우려면 `removeAll()`을 호출하세요.
 ```swift
 let numbers: Set<Int> = [3, 1, 2]
 for number in numbers.sorted() {
-    print(number) // 1, 2, 3 on separate lines
+    print(number) // 1, 2, 3이 각각 다른 줄에
 }
 ```

@@ -2,7 +2,7 @@
 
 가장 단순한 주석은 **한 줄 주석**입니다. `//`로 시작해서 그 줄의 끝까지 이어집니다.
 ```javascript
-// Greets the user
+// 사용자에게 인사합니다
 console.log("Hello");
 ```
 주석은 어떤 코드가 무엇을 위한 것인지, 또는 왜 그렇게 작성되었는지를 설명할 때 사용하세요. 다른 일부 언어와 달리 JavaScript에서 `#`는 주석을 시작하지 **않는다**는 점에 유의하세요.
@@ -11,7 +11,7 @@ console.log("Hello");
 
 주석이 반드시 자기만의 줄을 차지할 필요는 없습니다. 같은 줄에서 코드 뒤에 올 수도 있습니다. 이것이 **인라인 주석**(또는 후행 주석)이며, 그 문장에 대한 짧은 메모를 적기에 좋은 자리입니다:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // 세 번 시도 후 포기
 ```
 `//`부터 줄 끝까지는 모두 무시되고, 그 앞의 코드는 평소처럼 실행됩니다.
 
@@ -23,7 +23,7 @@ const retries = 3; // give up after three attempts
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // 10 출력
 ```
 두 번째 줄은 이제 주석이므로 `total`은 `10`으로 남습니다. `//`를 없애면 그 줄이 다시 살아납니다.
 
@@ -47,7 +47,7 @@ console.log("Welcome!");
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// only a 출력
 ```
 프로그램이 무엇을 출력할지 확신이 서지 않을 때는, 먼저 머릿속에서 모든 주석을 지우고 남은 것을 읽어 보세요.
 
@@ -55,8 +55,8 @@ console.log("a"); // console.log("b");
 
 줄 끝에서 멈추는 `//`와 달리 `/*` 주석은 `*/`를 만나야만 끝납니다. 닫는 것을 잊으면 JavaScript는 뒤따르는 모든 코드를 주석의 일부로 취급하고 문법 오류를 보고합니다:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* 센티미터 단위
+console.log(width); // 여전히 주석 안: SyntaxError, 주석이 닫히지 않음
 ```
 `//`와 `/* */` 둘 다 인라인 주석으로 쓸 수 있지만, `/*`를 쓸 때는 항상 `*/`가 있는지 확인하세요.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // 100 출력
 ```
 블록 안의 줄들은 무시되므로 `total`은 전혀 바뀌지 않습니다. 이 방법은 그 줄들 중 어느 것에도 `*/`가 들어 있지 않을 때만 통한다는 점을 기억하세요.
 
@@ -158,12 +158,12 @@ JavaScript는 이 줄을 주석과 똑같이 무시하지만, 그것이 파일�
 
 좋은 주석은 코드가 **무엇을** 하는지가 아니라 **왜** 그렇게 하는지를 설명합니다. 무슨 일이 일어나는지는 코드가 이미 보여 주고 있습니다. 그것을 말로 되풀이하면 잡음만 늘고, 코드가 바뀌는 순간 낡은 정보가 됩니다:
 ```javascript
-// set timeout to 30
+// timeout을 30으로 설정
 const timeout = 30;
 ```
 그 숫자 뒤에 있는 이유야말로 읽는 사람이 짐작할 수 없는 것입니다:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// 서버는 35초 후 유휴 연결을 끊으므로 더 일찍 중단하세요
 const timeout = 30;
 ```
 주석이 아래 줄을 그대로 되풀이하기만 한다면, 지우거나 그 이유로 바꾸세요.
@@ -176,8 +176,8 @@ const timeout = 30;
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: 설정에서 한도를 읽어옵니다
+// FIXME: 리스트가 비어 있으면 충돌합니다
 ```
 JavaScript에게는 평범한 주석이지만, 편집기가 이것들을 모아 보여 주므로 남은 작업을 찾기 쉽습니다. `TODO`는 보통 진짜 구현이 작성될 때까지 코드가 돌아가게 해 주는 임시 코드 옆에 있습니다. 작업을 끝내면 같은 변경에서 임시 코드를 대체하고 표식도 지우세요. 오래된 `TODO`는 사람을 오해하게 만듭니다.
 

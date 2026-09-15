@@ -11,7 +11,7 @@ async function fetchNumber() {
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // 42 출력
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// HI 출력
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// Promise { 'HI' } 출력
 ```
 두 함수는 같은 코드를 담고 있습니다. 결과를 읽는 방식만 다를 뿐입니다. `shoutLater("hi")`가 `"HI"`를 돌려주게 하려면 다른 `async` 함수 안에서 await해야 합니다.
 
@@ -52,7 +52,7 @@ const soon = new Promise((resolve) => {
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // done, about one second later 출력
 }
 
 main();
@@ -76,7 +76,7 @@ main();
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // 21 출력
 });
 ```
 **`Promise.resolve(value)`**는 이미 `value`로 이행된 프로미스를 만듭니다. 값은 손에 있지만 프로미스를 반환해야 할 때 유용합니다.
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// 42 출력
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// start, then data, then done 출력
 ```
 마지막 줄에 주목하세요: `async` 함수도 여전히 **호출**되어야 합니다. 괄호 없이 `main`만 쓰면 작업을 정의할 뿐 결코 시작하지 않고, 아무것도 출력되지 않습니다.
 
@@ -125,7 +125,7 @@ function readAge(age) {
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // negative age 출력
 });
 ```
 `resolve`와 `reject`를 둘 다 호출하거나 두 번 호출해도 아무 일도 일어나지 않습니다: 첫 번째 호출만 효과가 있습니다.
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// cleanup, then error: no network 출력
 ```
 
 ---
@@ -164,7 +164,7 @@ async function main() {
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky()는 Error("boom")으로 거부된 프로미스를 반환합니다
 ```
 어떤 `try` 블록에서와 마찬가지로, 실패한 `await` 뒤의 줄들은 건너뛰어지고, `catch` 블록이 실행되며, `finally` 블록은 두 경우 모두에서 실행됩니다.
 
@@ -199,7 +199,7 @@ const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// true 출력
 ```
 반환되는 배열은 받은 배열과 정확히 같은 개수의 항목을 같은 위치에 담으므로, 다른 배열처럼 반복문으로 순회할 수 있습니다.
 
@@ -207,11 +207,11 @@ console.log(values.length === items.length);
 
 **순차적** 대기와 **병렬** 대기의 차이는 `await`를 *어디에* 두느냐로 결정됩니다:
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// 순차: 약 300 + 300 = 600 ms
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// 병렬: 약 300 ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 첫 번째 버전에서는 두 번째 다운로드가 첫 번째가 끝나야 시작됩니다. `await`가 그 줄에서 함수를 멈추기 때문입니다. 두 번째에서는 아무것도 await하기 전에 두 호출을 모두 하므로, `Promise.all`이 기다리는 동안 두 다운로드는 이미 실행 중입니다.
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// fulfilled 출력
 console.log(results[1].reason.message);
-// prints nope
+// nope 출력
 ```
 `status`가 `"fulfilled"`일 때만 `value`를, `"rejected"`일 때만 `reason`을 읽으세요: 다른 쪽 프로퍼티는 그냥 없습니다.
 

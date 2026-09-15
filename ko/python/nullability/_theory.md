@@ -39,7 +39,7 @@ if user is not None:
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # 출력되지만, 0은 유효한 값입니다!
 ```
 "값 없음"과 "빈 값"을 다르게 다뤄야 할 때는 먼저 `is None`을 확인한 다음 truthiness를 확인하세요:
 ```python

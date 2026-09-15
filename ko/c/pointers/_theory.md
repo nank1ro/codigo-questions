@@ -1,12 +1,12 @@
 모든 변수는 메모리 어딘가에 자리하며, 그 자리에는 **주소**라고 부르는 번호가 붙어 있습니다. `&` 연산자는 "~의 주소"라고 읽으며, 변수의 주소를 구합니다:
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // 0x7ffd5c3e9a4c와 비슷한 값 출력
 ```
 `%p` 서식 지정자는 주소를 출력합니다. 정확한 숫자는 실행할 때마다 달라지므로 프로그램은 절대 그 값에 의존하지 않습니다.
 주소는 **포인터** 변수에 저장됩니다. 포인터는 가리키는 타입 뒤에 `*`를 붙여 선언합니다:
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p는 int를 가리키는 포인터이며, x의 주소를 담고 있음
 ```
 이제 `p`는 `x`를 **가리킨다**고 말합니다. 두 포인터는 같은 주소를 담고 있을 때 같으므로 `p == &x`는 참입니다.
 
@@ -16,7 +16,7 @@ int *p = &x; // p is a pointer to int, and it holds the address of x
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // "42" 출력
 ```
 `*p`는 "`p`가 가리키는 값"이라는 뜻이며, `x` 자체와 마찬가지로 `int`입니다. 같은 기호 `*`는 두 가지 역할을 합니다: 선언 `int *p`에서는 "이것은 포인터다"라고 말하고, 표현식 `*p`에서는 포인터를 따라가 값에 도달합니다.
 
@@ -27,7 +27,7 @@ printf("%d\n", *p); // prints "42"
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // "10" 출력
 ```
 `x`와 `*p`는 같은 메모리를 부르는 두 이름입니다. `*` 없이 `p`에 대입하면 그곳에 저장된 값이 아니라, 포인터가 **어느 주소**를 담고 있는지가 바뀝니다.
 
@@ -51,7 +51,7 @@ if (p != NULL) {
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price는 이제 19.0
 ```
 포인터는 가리키는 변수의 타입과 일치해야 하며, `int *p = &price;`는 컴파일러가 거부합니다. `NULL`은 어떤 타입의 포인터에도 넣을 수 있는 유일한 값입니다.
 
@@ -62,7 +62,7 @@ double *p = &price;
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // "A" 출력
 ```
 포인터를 통한 읽기와 쓰기는 자유롭게 섞을 수 있습니다: `*p = *p + 1`은 `'A'`를 `'B'`로 바꿉니다.
 
@@ -70,9 +70,9 @@ printf("%c\n", grade); // prints "A"
 
 포인터는 주소를 저장하며, 주소의 크기는 무엇이 저장되어 있느냐에 관계없이 주어진 기계에서 모두 같습니다. 따라서 포인터의 `sizeof`는 `char *`, `int *`, `double *`에서 모두 같습니다: 64비트 시스템에서는 `8`바이트이고 32비트 시스템에서는 `4`바이트입니다:
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // 64비트 환경에서 "8" 출력
+printf("%zu\n", sizeof(double)); // "8" 출력
+printf("%zu\n", sizeof(char));   // "1" 출력
 ```
 포인터의 크기와 포인터가 가리키는 대상의 크기를 혼동하지 마세요: `sizeof(p)`는 주소의 크기이고, `sizeof(*p)`는 값의 크기입니다.
 
@@ -81,7 +81,7 @@ printf("%zu\n", sizeof(char));   // prints "1"
 배열 이름은 표현식에서 사용되면 **첫 번째 요소**의 주소를 나타내므로, 포인터에 바로 대입할 수 있습니다:
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // &numbers[0]와 같음
 ```
 포인터에 정수를 더하면 바이트가 아니라 그만큼의 **요소** 수만큼 앞으로 이동합니다: `p + 1`은 `numbers[1]`의 주소이고, `*(p + 1)`은 `20`입니다. 컴파일러가 이동 폭을 타입의 크기에 맞게 조절합니다.
 인덱싱은 포인터에도 동작합니다: `p[i]`는 `*(p + i)`로 정의되므로 `p[2]`는 `30`입니다. 이것을 **포인터 산술**이라고 부릅니다.
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter는 이제 0
 ```
 고전적인 예는 두 변수를 맞바꾸는 것으로, 한 값이 덮어 써지는 동안 다른 한 값의 임시 복사본이 필요합니다.
 
@@ -159,8 +159,8 @@ Player *first_active(Player players[], int size) {
 
 `const`는 어디에 쓰이느냐에 따라 값이나 포인터 중 하나를 보호할 수 있습니다:
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // 상수 포인터: *p는 바꿀 수 없지만, p는 다른 곳을 가리킬 수 있음
+int *const q = &a; // 상수 포인터: q는 항상 a를 가리키지만, *q는 바꿀 수 있음
 ```
 선언은 오른쪽에서 왼쪽으로 읽습니다: `p`는 상수 `int`에 대한 포인터이고, `q`는 `int`에 대한 상수 포인터입니다. const에 대한 포인터는 함수가 받은 것을 **읽기만** 한다고 약속하는 일반적인 방법으로, `int sum(const int *values, int size)`가 그 예입니다. 일반 변수도 전달할 수 있으며, 이 약속은 함수가 할 수 있는 일만 제한합니다.
 

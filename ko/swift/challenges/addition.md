@@ -17,7 +17,7 @@ title: 덧셈
 함수 호출 예시:
 ```swift
 print(addition(1, 2))
-// prints 3
+// 3을 출력
 ```
 
 # --before-seed--

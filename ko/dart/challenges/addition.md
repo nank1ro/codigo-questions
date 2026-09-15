@@ -16,7 +16,7 @@ title: 덧셈
 함수 호출 예시:
 ```dart
 print(addition(1, 2));
-// prints 3
+// 출력: 3
 ```
 
 # --seed--

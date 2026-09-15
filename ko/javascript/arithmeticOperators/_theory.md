@@ -3,7 +3,7 @@
 이 연산자는 두 숫자를 더하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 + 3);
-// prints 8
+// 8 출력
 ```
 
 ---
@@ -12,7 +12,7 @@ console.log(5 + 3);
 이 연산자는 한 숫자에서 다른 숫자를 빼는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 - 3);
-// prints 2
+// 2 출력
 ```
 
 ---
@@ -21,7 +21,7 @@ console.log(5 - 3);
 이 연산자는 두 숫자를 곱하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 * 3);
-// prints 15
+// 15 출력
 ```
 
 ---
@@ -30,7 +30,7 @@ console.log(5 * 3);
 이 연산자는 두 숫자를 나누는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(10 / 5);
-// prints 2
+// 2 출력
 ```
 
 ---
@@ -39,11 +39,11 @@ console.log(10 / 5);
 이 연산자는 두 숫자를 나눈 후 나머지를 구하는 데 사용됩니다. 예를 들면:
 ```javascript
 console.log(5 % 2);
-// prints 1
+// 1 출력
 ```
 5를 2로 나누면 몫이 2이고 나머지가 1이므로 결과는 1입니다
 ```javascript
 console.log(9 % 3);
-// prints 0
+// 0 출력
 ```
 9를 3으로 나누면 몫이 3이고 나머지가 0이므로 결과는 0입니다

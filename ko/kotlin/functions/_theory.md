@@ -7,7 +7,7 @@ fun greet() {
 ```
 함수를 호출(실행)하려면, 이름 뒤에 괄호를 사용합니다:
 ```kotlin
-greet() // prints Hello!
+greet() // Hello!를 출력합니다
 ```
 값을 반환하지 않는 함수는 암묵적으로 `Unit`을 반환합니다.
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 `return` 키워드는 호출자에게 값을 돌려줍니다:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // 42를 출력합니다
 ```
 반환 타입은 반환하는 값의 타입과 일치해야 합니다.
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 함수를 호출할 때 인수를 전달합니다:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // Hello, Alice!를 출력합니다
 ```
 매개변수를 사용하면 다양한 값으로 동작하는 재사용 가능한 코드를 작성할 수 있습니다.
 
@@ -48,8 +48,8 @@ Kotlin은 기본 매개변수 값을 지원합니다. 호출자가 인수를 제
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // Hello, World!를 출력합니다
+greet("Alice")  // Hello, Alice!를 출력합니다
 ```
 기본값을 사용하면 매개변수를 선택 사항으로 만들 수 있어 오버로드된 함수의 필요성이 줄어듭니다.
 
@@ -72,8 +72,8 @@ fun square(n: Int) = n * n
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // true를 출력합니다
+println(isEven(7)) // false를 출력합니다
 ```
 `Boolean` 함수는 `true` 또는 `false`를 반환합니다.
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// My name is Bob and I am 30 years old.를 출력합니다
 ```
 이름 있는 인수를 사용하면 매개변수 이름을 사용하여 임의의 순서로 값을 전달할 수 있습니다:
 ```kotlin

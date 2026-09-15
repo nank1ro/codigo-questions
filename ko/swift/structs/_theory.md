@@ -76,6 +76,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12, 괄호 없음
 ```
 계산 프로퍼티는 저장할 것이 없기 때문에 멤버별 이니셜라이저에 포함되지 않습니다. 값이 다른 값들에서 파생될 때는 계산 프로퍼티를, 작업에 매개변수가 필요할 때는 메서드를 사용하세요.

@@ -12,7 +12,7 @@ _클래스_는 프로그램 코드의 기본 구성 요소가 되는 범용적�
 기본적인 클래스는 `class` 키워드와 이름만으로 구성됩니다. 예를 들어:
 ```javascript
 class ClassName {
-    // class definition
+    // 클래스 정의
 }
 ```
 

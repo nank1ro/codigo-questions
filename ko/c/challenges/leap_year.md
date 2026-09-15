@@ -18,7 +18,7 @@ title: 윤년
 함수 호출 예시:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// true 출력
 ```
 
 # --before-seed--

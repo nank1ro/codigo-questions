@@ -7,7 +7,7 @@ enum Color { RED, GREEN, BLUE };
 정수이므로 `%d`로 출력합니다.
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// "1" 출력
 ```
 
 ---
@@ -19,7 +19,7 @@ printf("%d\n", GREEN);
 
 `=`를 사용해 상수에 명시적인 값을 지정할 수도 있습니다. 그 이후의 상수들은 해당 값부터 계속 이어서 셉니다.
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB는 2, MAR는 3
 ```
 명시적인 값은 연속적이거나 증가하는 값일 필요가 없습니다: `enum Status { OK = 200, NOT_FOUND = 404 };`도 완전히 유효합니다.
 
@@ -86,7 +86,7 @@ Color favorite = BLUE;
 enum 상수는 자동으로 `int`로 변환되므로, `int n = BLUE;`는 유효하며 `2`를 저장합니다.
 반대 방향은 **캐스트**로 이루어지며, 정수 앞 괄호 안에 enum 타입을 씁니다.
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c는 GREEN
 ```
 C는 그 숫자가 어떤 상수와 일치하는지 확인하지 않습니다: `(enum Color)7`은 `7`인 상수가 없어도 컴파일되므로, 변환하기 전에 정수를 검증해야 합니다.
 
@@ -103,7 +103,7 @@ enum Color after_green = (enum Color)(GREEN + 1); // BLUE
 
 흔히 쓰이는 방법은 열거형 끝에 보통 `COUNT`라는 이름의 상수를 하나 더 추가하는 것입니다: 번호 매기기가 `0`부터 시작하므로, 그 값은 정확히 그 앞에 있는 실제 상수의 개수가 됩니다.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT는 3
 ```
 이 경계값(sentinel)을 이용하면 숫자를 하드코딩하지 않고도 모든 상수를 순회할 수 있고, 그 앞에 상수를 추가해도 여전히 정확하게 동작합니다.
 ```c
@@ -119,7 +119,7 @@ for (int d = MON; d < DAY_COUNT; d++) {
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // "4" 출력
 ```
 `0`부터 `FRUIT_COUNT`까지의 루프는 모든 슬롯을 방문하며, 반환해야 할 때는 루프 인덱스를 다시 `enum Fruit`로 캐스트할 수 있습니다.
 

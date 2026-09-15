@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// true 출력
 console.log(colors.has("green"));
-// prints false
+// false 출력
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// 2 출력
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// 1 출력
 ```
 
 ---
@@ -46,13 +46,13 @@ letters.add("a").add("b");
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// 3 출력
 ```
 **스프레드** 연산자 `...`는 반대로 세트를 다시 배열로 바꿔줍니다:
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// [ 1, 2, 3 ] 출력
 ```
 `Array.from(distinct)`도 같은 일을 합니다.
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// 3 출력
+// 1 출력
+// 2 출력
 ```
 세트에는 모든 값에 대해 함수를 호출하는 `forEach()` 메서드도 있습니다:
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// 30 출력
+// 10 출력
+// 20 출력
 ```

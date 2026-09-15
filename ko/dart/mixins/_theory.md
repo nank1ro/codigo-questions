@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0, b는 자신만의 count를 가짐
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // 이것이 사용하는 유일한 방법
 ```
 
 이름은 여전히 타입으로 동작하므로 `Team() is Scored`와 `Scored s = Team();`은 모두 괜찮습니다. 믹스인에는 생성자가 없으므로 널 불가능 필드는 위의 `int score = 0;`처럼 선언된 위치에서 초기화하거나(또는 `late`로 표시해야 합니다).
@@ -82,7 +82,7 @@ class Team with Scored {}      // this is the only way to use it
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // 본문 없음: 클래스가 제공함
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B, 목록의 마지막 mixin
+  print(Second().who()); // A, 목록의 마지막 mixin
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // 포맷은 Starred에서 옴
+class Simple with Starred, Plain {} // 포맷은 Plain에서 옴
 ```
 
 하나의 믹스인만 선언하는 멤버는 경쟁하지 않습니다. 순서와 상관없이 사용할 수 있습니다. `with X, Y`를 "`X`에서 시작해 `Y`가 이를 재정의하게 한다"고 읽으면 됩니다.
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // 동작함: class임
+class Record extends Serializable {} // 동작함: class임
+class Row with Serializable {}       // 동작함: mixin임
 ```
 
 `mixin class`는 그 유연함의 대가로 두 가지 제약을 받습니다. `Object`를 상속해야 하므로 자체 `extends` 절을 가질 수 없고, 믹스인은 생성자를 절대 실행하지 않으므로 생성자를 선언해서는 안 됩니다.

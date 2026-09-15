@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// 출력: Cold
 ```
 
 두 분기 중 항상 정확히 하나만 실행됩니다.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// 출력: B
 ```
 
 ---
@@ -61,7 +61,7 @@ if (score >= 90) {
 ```dart
 int x = 10;
 String label = x > 0 ? 'positive' : 'non-positive';
-print(label); // positive
+print(label); // 양수
 ```
 
 조건이 `true`이면 `expr1`이 사용되고, 그렇지 않으면 `expr2`가 사용됩니다.

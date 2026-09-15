@@ -16,7 +16,7 @@ title: 가장 작은 공배수
 함수 호출 예시:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// 2520을 출력
 ```
 
 # --before-seed--

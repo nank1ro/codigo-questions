@@ -7,7 +7,7 @@ char name[] = "Codigo";
 문자열을 출력하려면 `%s` 플레이스홀더를 사용합니다:
 ```c
 printf("%s\n", name);
-// prints "Codigo"
+// "Codigo" 출력
 ```
 
 ---
@@ -15,7 +15,7 @@ printf("%s\n", name);
 널 종료 문자도 메모리에서 공간을 차지합니다: 리터럴 `"hi"`는 `'h'`, `'i'`, `'\0'`의 3바이트를 차지합니다.
 크기를 직접 선언할 때는 항상 그 공간을 남겨 두어야 합니다:
 ```c
-char word[6] = "hello"; // 5 letters + '\0'
+char word[6] = "hello"; // 5글자 + '\0'
 ```
 종료 문자가 없으면 C는 문자열이 어디서 끝나는지 알 방법이 없습니다.
 
@@ -39,7 +39,7 @@ word[5]; // 'g'
 ```
 문자 하나는 `%c`로 출력합니다. 문자를 교체할 수도 있습니다:
 ```c
-word[0] = 'K'; // word is now "Koding"
+word[0] = 'K'; // word는 이제 "Koding"
 ```
 
 ---
@@ -56,7 +56,7 @@ for (int i = 0; text[i] != '\0'; i++) {
 배열은 선언 후에 `=`로 대입할 수 없습니다:
 ```c
 char copy[20];
-copy = "Codigo"; // error
+copy = "Codigo"; // 오류
 ```
 문자열을 복사하려면 `string.h`의 `strcpy(destination, source)`를 사용합니다.
 목적지는 모든 문자와 `'\0'`을 담을 수 있을 만큼 충분히 커야 합니다.
@@ -67,7 +67,7 @@ copy = "Codigo"; // error
 ```c
 char text[20] = "Hello";
 strcat(text, " World");
-// text is now "Hello World"
+// text는 이제 "Hello World"
 ```
 `strcpy`와 마찬가지로, 목적지 배열은 결과를 담을 수 있을 만큼 충분히 커야 합니다.
 
@@ -85,8 +85,8 @@ strcmp("cat", "dog"); // not 0
 `strcmp`는 문자 코드를 사용하여 문자열을 한 문자씩 비교합니다.
 첫 번째 문자열이 두 번째보다 앞서면 음수, 뒤에 오면 양수, 같으면 `0`이 결과가 됩니다:
 ```c
-strcmp("a", "b"); // negative
-strcmp("b", "a"); // positive
+strcmp("a", "b"); // 음수
+strcmp("b", "a"); // 양수
 ```
 
 ---
@@ -96,7 +96,7 @@ strcmp("b", "a"); // positive
 ```c
 char prefix[10];
 strncpy(prefix, "Codigo", 3);
-prefix[3] = '\0'; // prefix is "Cod"
+prefix[3] = '\0'; // prefix는 "Cod"
 ```
 
 ---
@@ -120,7 +120,7 @@ text[i] = toupper(text[i]);
 `sprintf`는 `printf`처럼 동작하지만, 서식이 적용된 텍스트를 화면이 아니라 `char` 배열에 씁니다:
 ```c
 char buffer[30];
-sprintf(buffer, "%d items", 3); // buffer is "3 items"
+sprintf(buffer, "%d items", 3); // buffer는 "3 items"
 ```
 버퍼는 전체 텍스트와 그 `'\0'`을 담을 수 있을 만큼 충분히 커야 합니다.
 

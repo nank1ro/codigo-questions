@@ -40,9 +40,9 @@ print("hello".contains(#/\w+\s\w+/#))       // false
 - `$`는 "텍스트의 끝"을 뜻합니다
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, 텍스트가 sw로 시작함
+print("myswift".contains(#/^sw/#)) // false, sw가 시작 부분에 없음
+print("swift".contains(#/ft$/#))  // true, 텍스트가 ft로 끝남
 ```
 앵커는 문자가 아니라 위치와 일치하므로, 매치에 아무것도 더하지 않습니다.
 

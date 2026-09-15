@@ -28,7 +28,7 @@ title: 빗방울
 함수 호출 예시:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// 출력: "Plong"
 ```
 
 # --seed--

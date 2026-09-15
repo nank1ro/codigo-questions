@@ -15,7 +15,7 @@ val setName = setOf<itemsType>(item1, item2)
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// [1, 2]를 출력합니다
 ```
 
 __[1]__에서 숫자 __1__이 두 번 포함된 set을 생성하려고 하지만, 보시다시피 각 요소는 고유해야 하며 두 번째 __1__은 자동으로 제거됩니다.
@@ -38,7 +38,7 @@ __[1]__은 `Set`이 _읽기 전용_이기 때문에 오류를 발생시킵니다
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// [1, 2, 3, 4]를 출력합니다
 ```
 
 ---
@@ -47,8 +47,8 @@ println(numbers)
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // true를 출력합니다
+println(numbers.contains(5)) // false를 출력합니다
 ```
 
 위에서 볼 수 있듯이 `in`과 `contains`는 전달된 요소가 set에 존재하는지 여부를 나타내는 `Bool`을 반환합니다

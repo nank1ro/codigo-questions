@@ -16,7 +16,7 @@ difficulty: 1
 함수 호출 예시:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# 2 출력
 ```
 
 # --seed--

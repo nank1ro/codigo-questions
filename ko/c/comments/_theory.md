@@ -2,7 +2,7 @@
 
 가장 흔한 종류는 **한 줄 주석**입니다: `//`부터 그 줄의 끝까지는 모두 무시됩니다.
 ```c
-// Greet the user
+// 사용자에게 인사
 printf("Hello\n");
 ```
 프로그램이 실행될 때 첫 줄은 아무것도 하지 않으며, `printf`만 출력을 만듭니다.
@@ -15,7 +15,7 @@ printf("Hello\n");
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // "10" 출력
 ```
 두 번째 줄은 이제 주석이므로 `total`은 `10`을 유지합니다. `//`를 제거하면 그 줄이 다시 살아납니다.
 
@@ -49,7 +49,7 @@ printf("Welcome!\n");
 
 주석이 꼭 자기 줄을 가질 필요는 없습니다: 같은 줄에서 코드 뒤에 붙을 수도 있습니다. 이것을 **후행 주석**이라고 하며, 그 명령문에 대한 짧은 메모를 남기기 좋은 자리입니다:
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // 세 번 시도한 뒤 포기
 ```
 `//`와 `/* */` 모두 후행 주석으로 사용할 수 있지만, `/*`는 조심하세요: `*/`에서만 끝나므로 줄 끝에 닫히지 않은 `/*`는 뒤따르는 줄들까지 삼켜 버리고, 프로그램은 더 이상 컴파일되지 않습니다.
 
@@ -83,8 +83,8 @@ int area = width /* cm */ * height /* cm */;
 - `FIXME`는 잘못되었음을 알고 있어 수정이 필요한 코드를 표시합니다
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: 사용하기 전에 입력값을 검증
+// FIXME: 리스트가 비어 있으면 충돌함
 ```
 에디터와 도구는 이러한 표식을 목록으로 보여줄 수 있으므로 남아 있는 작업을 쉽게 찾을 수 있습니다. 작업이 끝나면 표식을 지우세요: 오래된 `TODO`는 오히려 오해를 부릅니다.
 
@@ -92,12 +92,12 @@ int area = width /* cm */ * height /* cm */;
 
 좋은 주석은 코드가 **무엇을** 하는지가 아니라 **왜** 그렇게 하는지를 설명합니다. 코드는 이미 무슨 일이 일어나는지 보여주므로, 그것을 말로 반복하면 잡음만 더해지고 코드가 바뀌는 순간 낡아 버립니다:
 ```c
-// multiply price by 90 and divide by 100
+// price에 90을 곱하고 100으로 나눔
 return price * 90 / 100;
 ```
 그 숫자 뒤에 있는 이유야말로 읽는 사람이 추측할 수 없는 것입니다:
 ```c
-// launch discount: members get 10% off until the end of June
+// 출시 할인: 회원은 6월 말까지 10% 할인
 return price * 90 / 100;
 ```
 주석이 아랫줄을 그대로 되풀이할 뿐이라면, 삭제하거나 이유로 바꾸세요.

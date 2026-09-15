@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply`는 방금 만든 객체에만 국한되지 않습니다: 어떤 객체에든 동작하며, 객체를 그대로 돌려주기 때문에 객체가 필요한 어디에서든 전체 표현식을 사용할 수 있습니다.
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // box를 변경하고 반환합니다
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 블록은 일반적인 코드 블록이므로 필요한 만큼 많은 문을 담을 수 있습니다.

@@ -221,7 +221,7 @@ char* fizz_buzz(int number) {
     if (number % 5 == 0) {
         return "Buzz";
     }
-    char* string_number = malloc(12); // Assuming a maximum of 11 characters for the number
+    char* string_number = malloc(12); // 숫자가 최대 11자리라고 가정
     sprintf(string_number, "%d", number);
     return string_number;
 }

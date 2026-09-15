@@ -16,7 +16,7 @@ title: 덧셈
 함수 호출 예시:
 ```kotlin
 println(addition(1, 2))
-// prints 3
+// 3을 출력합니다
 ```
 
 # --seed--

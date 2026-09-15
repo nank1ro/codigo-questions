@@ -16,7 +16,7 @@ title: 가장 큰 회문 곱
 함수 호출 예시:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// 출력: 9009
 ```
 
 # --seed--

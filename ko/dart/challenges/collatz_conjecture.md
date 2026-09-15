@@ -22,7 +22,7 @@ title: 콜라츠 추측
 함수 호출 예시:
 ```dart
 print(collatzSteps(16));
-// prints 4
+// 출력: 4
 ```
 
 # --seed--

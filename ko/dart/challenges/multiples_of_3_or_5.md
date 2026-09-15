@@ -16,7 +16,7 @@ title: 3 또는 5의 배수
 함수 호출 예시:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// 출력: 23
 ```
 
 # --seed--

@@ -14,8 +14,8 @@ Kotlin에서 어떤 표현식이든 평가하면 `true` 또는 `false` 두 가�
 
 불리언 값은 앞에 `!`를 사용하여 부정할 수도 있습니다. 예를 들면:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // false를 출력합니다
+println(!false) // true를 출력합니다
 ```
 
 ---
@@ -26,10 +26,10 @@ println(!false) // prints true
 - `||` (_or_): 연산자의 왼쪽 또는 오른쪽 표현식 중 하나라도 참이거나, 둘 다 참이면 참을 반환합니다.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // true를 출력합니다
+println(true && false) // false를 출력합니다
+println(false && false) // false를 출력합니다
+println(true || true) // true를 출력합니다
+println(true || false) // true를 출력합니다
+println(false || false) // false를 출력합니다
 ```

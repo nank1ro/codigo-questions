@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # "checking -1"만 출력
+check(2) or check(-3)   # "checking 2"만 출력
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False, 키만 확인됨
 ```
 둘 다 불리언을 반환하고 영어처럼 읽히므로, 반복문을 쓰는 대신 포함 여부를 확인하는 선호되는 방법입니다.

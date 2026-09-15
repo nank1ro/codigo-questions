@@ -11,7 +11,7 @@ List<int> scores = [10, 20];
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // fine: first는 String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart에는 `dynamic`이라는 타입도 있습니다. 이는 "무엇이든 허�
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // 허용됨
+print(things.first.toUpperCase()); // 허용됨
 ```
 
 문제는 코드를 작성하는 동안 아무것도 검사되지 않는다는 점입니다. `dynamic` 값에 대한 모든 호출은 프로그램이 실행되는 동안 해석되므로, `things.first.toUpperCse()` 같은 오타도 문제없이 컴파일되고 사용자 앞에서 터집니다.
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, 인자로부터 추론됨
+print(a.value + 1);      // 8, 컴파일러는 value가 int임을 앎
 ```
 
 문자 자체는 중요하지 않습니다: `T`는 "타입"을 위한 관례일 뿐 그 이상도 이하도 아닙니다.
@@ -78,14 +78,14 @@ print(a.value + 1);      // 8, the compiler knows value is an int
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, 여기서 T는 String
+print(firstOf([10, 20]));        // 10, 여기서 T는 int
 ```
 
 하나의 함수 본문이 한 번 검사되어 모든 타입에 재사용됩니다. 타입 인수는 보통 인수로부터 추론되지만, 추론할 근거가 없을 때는 명시적으로 쓸 수 있습니다:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // throw되지만 타입은 명확함
 ```
 
 클래스 안의 메서드도 정확히 같은 규칙을 따릅니다.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 견고한 널 안전성에서 물음표는 서로 다른 두 곳에 위치할 수 있고, 위치마다 의미가 다릅니다:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // 존재하며 nullable int를 담고 있는 box
+Box<int>? b = null;      // box가 전혀 없음, 있다면 int를 담음
 ```
 
 `Box<int?>`에서는 **타입 인수**가 널 가능하므로 `a.value`의 타입은 `int?`이고 `null`일 수 있으며, `a` 자체는 항상 존재합니다. `Box<int>?`에서는 **변수**가 널 가능하므로 `b`는 `null`일 수 있고, 안의 값에 접근하려면 `b?.value`나 `b!.value`가 필요합니다.
@@ -146,10 +146,10 @@ Box<int>? b = null;      // no box at all, but if there is one it holds an int
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, box는 있지만 내용물은 null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, box 자체가 없음
 ```
 
 `Box<int>?`에 `b.value`를 쓰면 아예 컴파일되지 않습니다: Dart는 존재하지 않을 수도 있는 것의 필드를 읽는 것을 거부합니다.
@@ -187,8 +187,8 @@ num biggerOf<T extends num>(T a, T b) => a > b ? a : b;
 경계는 타입 매개변수 자신을 언급할 수도 있습니다. `Comparable<T>`는 `compareTo`를 통해 자신과 같은 종류와 자신을 비교하는 방법을 아는 모든 것의 인터페이스입니다:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
-print('kiwi'.compareTo('fig')); // positive
+print('fig'.compareTo('kiwi')); // 음수: fig가 먼저
+print('kiwi'.compareTo('fig')); // 양수
 print('fig'.compareTo('fig'));  // zero
 ```
 

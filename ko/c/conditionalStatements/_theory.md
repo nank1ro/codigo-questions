@@ -4,7 +4,7 @@
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // 밖에서 놀기
 }
 ```
 
@@ -14,7 +14,7 @@ if (nice_weather) {
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // 밖에서 놀기
 }
 ```
 `if` 문은 조건이 `true`일 때만 코드 블록을 실행한다는 것을 확인했습니다.
@@ -28,9 +28,9 @@ C에서는 `else` 문을 사용할 수 있습니다:
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // 밖에서 놀기
 } else {
-    // stay home
+    // 집에 있기
 }
 ```
 

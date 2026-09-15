@@ -16,7 +16,7 @@ title: 산술 평균
 함수 호출 예시:
 ```swift
 print(mean([1, 2, 3]))
-// prints 2.0
+// 2.0을 출력
 ```
 
 # --before-seed--

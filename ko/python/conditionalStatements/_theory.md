@@ -4,7 +4,7 @@
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 밖에서 놀기
 ```
 
 ---
@@ -13,7 +13,7 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 밖에서 놀기
 ```
 `if` 문은 조건이 `True`일 때만 코드 블록을 실행한다는 것을 배웠습니다.
 또 하나 중요하게 고려해야 할 것은 **콜론** `:`과 **들여쓰기**인데, 이는 코드 블록의 시작을 나타냅니다.
@@ -30,9 +30,9 @@ Python에서는 `else` 문을 사용할 수 있습니다:
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 밖에서 놀기
 else:
-    # stay home
+    # 집에 있기
 ```
 
 ---

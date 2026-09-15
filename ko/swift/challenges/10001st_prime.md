@@ -16,7 +16,7 @@ n번째 소수를 반환하는 함수를 작성하세요.
 함수 호출 예시:
 ```swift
 print(nthPrime(6))
-// prints 13
+// 13을 출력
 ```
 
 # --before-seed--

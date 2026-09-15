@@ -16,7 +16,7 @@ title: 산술 평균
 함수 호출 예시:
 ```javascript
 console.log(mean([1, 2, 3]));
-// prints 2.0
+// 2.0 출력
 ```
 
 # --before-seed--
