@@ -94,7 +94,7 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3, já tinha um valor
 ```
 
 Ele também funciona em entradas de map, que são nullable porque uma chave pode estar ausente:
@@ -102,7 +102,7 @@ Ele também funciona em entradas de map, que são nullable porque uma chave pode
 ```dart
 var stock = {'apple': 4};
 stock['pear'] ??= 1;  // added
-stock['apple'] ??= 9; // ignored
+stock['apple'] ??= 9; // ignorado
 print(stock); // {apple: 4, pear: 1}
 ```
 
@@ -142,7 +142,7 @@ Verificar um valor nullable com `if` é mais seguro do que `!`, e o Dart recompe
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // aqui n é um int, sem precisar de !
   }
   return 0;
 }
@@ -153,7 +153,7 @@ A promoção também funciona depois de um retorno antecipado:
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // n é um int a partir daqui
 }
 ```
 
@@ -207,7 +207,7 @@ Ler um campo `late` que ainda não foi atribuído lança um `LateInitializationE
 `late` também pode ser combinado com um inicializador, que então roda de forma **preguiçosa**, na primeira vez que a variável é lida:
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport() roda apenas quando report é usado
 ```
 
 ---
@@ -270,7 +270,7 @@ A **cascata null-aware** `?..` executa uma cadeia de operações em cascata apen
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // nada acontece, numbers continua null
 ```
 
 O **spread null-aware** `...?` insere os elementos de uma coleção nullable em um literal, não adicionando nada quando a coleção é `null`:

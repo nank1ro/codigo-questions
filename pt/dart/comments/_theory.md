@@ -9,5 +9,5 @@ Dart suporta comentários de _linha única_, comentários de _múltiplas linhas_
 
 Veja como escrever um comentário de _linha única_:
 ```dart
-// This is a comment. It is not executed.
+// Isto é um comentário. Ele não é executado.
 ```

@@ -28,7 +28,7 @@ Escreva uma função que retorne a string correta, exemplos:
 Exemplo de chamada da função:
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// imprime "Plong"
 ```
 
 # --seed--

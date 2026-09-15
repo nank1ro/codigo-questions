@@ -2,7 +2,7 @@ Um **comentário** é uma nota escrita dentro do código-fonte para quem o lê. 
 
 O comentário mais simples é o **comentário de uma linha**: começa com `//` e vai até o final da linha.
 ```javascript
-// Greets the user
+// Cumprimenta o usuário
 console.log("Hello");
 ```
 Use comentários para explicar para que serve um trecho de código, ou por que ele foi escrito daquela forma. Note que, ao contrário de outras linguagens, `#` **não** inicia um comentário em JavaScript.
@@ -11,7 +11,7 @@ Use comentários para explicar para que serve um trecho de código, ou por que e
 
 Um comentário não precisa de uma linha só para ele: pode vir depois do código na mesma linha. Esse é um **comentário em linha** (ou comentário final), e é um bom lugar para uma nota curta sobre aquela instrução específica:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // desiste após três tentativas
 ```
 Tudo o que vai de `//` até o final da linha é ignorado, enquanto o código antes dele é executado normalmente.
 
@@ -23,7 +23,7 @@ Isso faz de `//` uma forma rápida de desligar uma linha de código sem apagá-l
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // imprime 10
 ```
 A segunda linha agora é um comentário, então `total` continua `10`. Remover o `//` traz a linha de volta à vida.
 
@@ -47,7 +47,7 @@ Seja qual for o tipo de comentário que você usar, a regra é a mesma: o texto 
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// imprime apenas a
 ```
 Quando não tiver certeza do que um programa imprime, apague mentalmente todos os comentários e leia o que sobrou.
 
@@ -55,8 +55,8 @@ Quando não tiver certeza do que um programa imprime, apague mentalmente todos o
 
 Ao contrário de `//`, que para no fim da linha, um comentário `/*` só para no `*/`. Se você esquecer de fechá-lo, o JavaScript trata todo o código seguinte como parte do comentário e reporta um erro de sintaxe:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* em centímetros
+console.log(width); // ainda dentro do comentário: SyntaxError, o comentário nunca é fechado
 ```
 Tanto `//` quanto `/* */` funcionam como comentários em linha, mas com `/*` certifique-se sempre de que o `*/` está lá.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // imprime 100
 ```
 Como as linhas dentro do bloco são ignoradas, `total` nunca muda. Lembre-se de que isso só funciona quando nenhuma dessas linhas contém um `*/`.
 
@@ -158,12 +158,12 @@ O JavaScript ignora essa linha exatamente como um comentário, mas apenas quando
 
 Um bom comentário explica **por que** o código faz algo, não **o que** ele faz. O código já mostra o que acontece; repetir isso em palavras só acrescenta ruído e fica desatualizado assim que o código muda:
 ```javascript
-// set timeout to 30
+// define timeout como 30
 const timeout = 30;
 ```
 O motivo por trás do número é o que quem lê não consegue adivinhar:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// o servidor encerra conexões ociosas depois de 35 segundos, então pare antes
 const timeout = 30;
 ```
 Se um comentário apenas repete a linha abaixo dele, apague-o ou substitua-o pelo motivo.
@@ -176,8 +176,8 @@ Alguns comentários seguem uma convenção que os editores entendem. Os **marcad
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: lê o limite das configurações
+// FIXME: falha quando a lista está vazia
 ```
 Para o JavaScript são comentários comuns; os editores os listam para que o trabalho pendente seja fácil de encontrar. Um `TODO` normalmente fica ao lado de um substituto provisório que mantém o código funcionando até que a implementação real seja escrita. Quando você concluir o trabalho, substitua o provisório e remova o marcador na mesma alteração: um `TODO` desatualizado é enganoso.
 

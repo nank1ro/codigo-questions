@@ -18,7 +18,7 @@ Escreva uma função que encontra a tripla pitagórica onde a + b + c é igual a
 Exemplo de chamada de função:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// imprime 60
 ```
 
 # --seed--

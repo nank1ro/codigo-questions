@@ -7,7 +7,7 @@ Para permitir um valor ausente, você declara um tipo **nullable** adicionando u
 Um `String?` contém um `String` ou `null`:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // permitido
 println(city) // null
 ```
 `String` e `String?` são dois tipos diferentes: um `String` nunca está ausente, um `String?` pode estar.
@@ -17,9 +17,9 @@ println(city) // null
 A diferença entre `String` e `String?` é verificada pelo **compilador**, não em tempo de execução.
 Atribuir `null` a um tipo não nulo, ou passar um valor nullable onde um não nulo é esperado, é um erro de compilação, então o programa nem chega a iniciar:
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // não compila
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // não compila: String? não é uma String
 ```
 É assim que o Kotlin evita as falhas de "null pointer" comuns em outras linguagens: um valor só pode estar ausente onde você o declarou explicitamente com `?`.
 
@@ -47,12 +47,12 @@ Muitas vezes, tudo o que você quer de um valor nullable é o próprio valor ou 
 O **operador Elvis** `?:` faz exatamente isso: ele retorna o lado esquerdo quando não é `null`, caso contrário o valor à sua direita:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown é uma String igual a "Guest"
 ```
 Como o lado direito é usado apenas quando o lado esquerdo é `null`, o resultado é não nulo quando o padrão o é.
 O `?:` combina bem com o `?.` para transformar uma chamada segura de volta em um valor simples:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len é um Int, 0 quando name é null
 ```
 
 ---
@@ -62,7 +62,7 @@ Chamadas seguras podem ser **encadeadas**: assim que um elo é `null`, o restant
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() e uppercase() nunca são executados
 ```
 Uma cadeia que termina com `?:` lhe dá um resultado não nulo em uma linha:
 ```kotlin
@@ -103,7 +103,7 @@ Quando você verifica um valor quanto a `null` com `if`, o compilador lembra dis
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name é uma String aqui
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ O mesmo acontece depois de uma saída antecipada:
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name é uma String daqui em diante
 }
 ```
 Smart casts funcionam em variáveis `val` e parâmetros de função, cujo valor não pode mudar entre a verificação e o uso.
@@ -123,9 +123,9 @@ O `let` executa um bloco de código com o valor sobre o qual é chamado, dispon�
 Combinado com uma chamada segura, o `?.let` executa o bloco **apenas** quando o valor não é `null`, e dentro do bloco `it` é não nulo:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // imprime Sending to ada@example.com
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // nada acontece
 ```
 É uma alternativa compacta a `if (x != null) { ... }` quando você só precisa do valor dentro do bloco.
 
@@ -213,7 +213,7 @@ O lado direito de `?:` pode ser qualquer expressão, incluindo `return`. Isso of
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first é um Char aqui
 }
 ```
 Todas as ferramentas que você viu combinam bem: parâmetros nullable e tipos de retorno descrevem *onde* um valor pode estar ausente, e `?.`, `?:`, `let`, smart casts e `toIntOrNull` o tratam sem nunca falhar.

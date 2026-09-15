@@ -9,9 +9,9 @@ Caracteres comuns em um padrão correspondem a si mesmos, então `/cat/` corresp
 A coisa mais simples que você pode fazer com um padrão é perguntar se ele aparece em uma string. O método **`test`** recebe o texto e retorna `true` ou `false`:
 ```javascript
 console.log(/cat/.test("the cat sleeps"));
-// prints true
+// imprime true
 console.log(/cat/.test("the dog sleeps"));
-// prints false
+// imprime false
 ```
 Note que `test` procura o padrão *em algum lugar* da string; a string inteira não precisa corresponder.
 
@@ -24,14 +24,14 @@ Os padrões se tornam úteis quando descrevem um *tipo* de caractere em vez de u
 
 ```javascript
 console.log(/\d/.test("room 12"));
-// prints true
+// imprime true
 console.log(/\d/.test("lobby"));
-// prints false
+// imprime false
 ```
 Um **quantificador** diz quantas vezes o trecho anterior pode se repetir. O mais comum é `+`, que significa "um ou mais":
 ```javascript
 console.log(/\d+/.test("42"));
-// prints true
+// imprime true
 ```
 Então `/\d/` corresponde a um único dígito e `/\d+/` corresponde a uma sequência de dígitos. Para um `test` simples os dois se comportam da mesma forma, porque ambos precisam de apenas um dígito presente.
 
@@ -42,12 +42,12 @@ Um literal como `/\d+/` é fixo depois que você o escreve. Quando o padrão pre
 const word = "cat";
 const pattern = new RegExp(word);
 console.log(pattern.test("the cat sleeps"));
-// prints true
+// imprime true
 ```
 Há uma armadilha. Dentro de uma string, uma barra invertida inicia uma sequência de escape da *string*, então ela desaparece antes que a regex a veja. Para colocar uma barra invertida real no padrão você deve duplicá-la:
 ```javascript
 const digits = new RegExp("\\d+");
-// the same pattern as /\d+/
+// o mesmo padrão que /\d+/
 ```
 Escrever `new RegExp("\d+")` em vez disso produz o padrão `/d+/`, que corresponde à letra `d`, não a um dígito.
 
@@ -59,19 +59,19 @@ Mais dois blocos de construção permitem descrever quase qualquer forma de text
 
 Uma **classe de caracteres** é um conjunto de caracteres entre colchetes; ela corresponde a exatamente um deles. Um traço escreve um intervalo, e um `^` no início nega o conjunto:
 ```javascript
-/[aeiou]/   // one vowel
-/[a-z]/     // one lowercase letter
-/[A-Z0-9]/  // one uppercase letter or one digit
-/[^0-9]/    // one character that is not a digit
+/[aeiou]/   // uma vogal
+/[a-z]/     // uma letra minúscula
+/[A-Z0-9]/  // uma letra maiúscula ou um dígito
+/[^0-9]/    // um caractere que não é um dígito
 ```
 **Quantificadores** dizem quantas vezes o trecho anterior se repete: `+` um ou mais, `*` zero ou mais, `?` zero ou um, e `{n}` exatamente `n` vezes.
 
 Por fim, **âncoras** ligam o padrão às extremidades do texto: `^` significa "comece aqui" e `$` significa "termine aqui". Sem elas um padrão pode corresponder em qualquer lugar dentro da string, então `/\d{2}/.test("abc12def")` é `true`. Com ambas as âncoras a string inteira precisa corresponder:
 ```javascript
 console.log(/^\d{2}$/.test("abc12def"));
-// prints false
+// imprime false
 console.log(/^\d{2}$/.test("12"));
-// prints true
+// imprime true
 ```
 
 ---
@@ -87,9 +87,9 @@ Quando nada corresponde, `match` retorna `null`. Quando algo corresponde, ele re
 
 ```javascript
 console.log(match[0]);
-// prints 42
+// imprime 42
 console.log(match.index);
-// prints 6
+// imprime 6
 ```
 Como o resultado pode ser `null`, verifique-o antes de ler `match[0]`.
 
@@ -118,11 +118,11 @@ Os grupos aparecem depois de `match[0]`, numerados da esquerda para a direita pe
 ```javascript
 const match = "2026-09-12".match(/(\d{4})-(\d{2})-(\d{2})/);
 console.log(match[0]);
-// prints 2026-09-12
+// imprime 2026-09-12
 console.log(match[1]);
-// prints 2026
+// imprime 2026
 console.log(match[3]);
-// prints 12
+// imprime 12
 ```
 Então `match[0]` é sempre a correspondência inteira, e `match[1]`, `match[2]`, ... são os grupos. Um grupo que faz parte de um padrão que não corresponde de forma alguma faz todo o `match` retornar `null`.
 
@@ -132,7 +132,7 @@ Capture apenas o que você precisa. Um grupo não é apenas uma forma de ler um 
 ```javascript
 const minutes = "at 14:35:02".match(/\d{2}:(\d{2}):\d{2}/)?.[1];
 console.log(minutes);
-// prints 35
+// imprime 35
 ```
 O padrão inteiro ainda precisa corresponder, então as horas e os segundos ainda são obrigatórios; eles simplesmente não são capturados. Menos grupos significam menos números para controlar quando você lê `match[1]`, `match[2]` e assim por diante.
 
@@ -142,9 +142,9 @@ Contar parênteses cansa, e adicionar um grupo no meio de um padrão renumera tu
 ```javascript
 const match = "2026-09-12".match(/(?<year>\d{4})-(?<month>\d{2})-\d{2}/);
 console.log(match.groups.year);
-// prints 2026
+// imprime 2026
 console.log(match.groups.month);
-// prints 09
+// imprime 09
 ```
 Grupos nomeados ainda são numerados, então `match[1]` continua funcionando, mas `match.groups.year` diz o que o valor significa. Quando o padrão não tem nenhum grupo nomeado, `match.groups` é `undefined`.
 
@@ -158,9 +158,9 @@ Com a flag `g`, `match` se comporta de forma diferente: ele retorna um array sim
 ```javascript
 const numbers = "a1 b22 c333".match(/\d+/g);
 console.log(numbers);
-// prints [ '1', '22', '333' ]
+// imprime [ '1', '22', '333' ]
 console.log(numbers.length);
-// prints 3
+// imprime 3
 ```
 Flags podem ser combinadas em qualquer ordem, como em `/cat/gi`. Com o construtor `RegExp` elas vão no segundo argumento: `new RegExp("\\d+", "g")`.
 
@@ -172,8 +172,8 @@ const text = "a=1;b=2";
 for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
   console.log(`${match.groups.key} -> ${match.groups.value}`);
 }
-// prints a -> 1
-// prints b -> 2
+// imprime a -> 1
+// imprime b -> 2
 ```
 `matchAll` exige a flag `g`; sem ela, ele lança um `TypeError`. Como ele retorna um iterador, espalhe-o com `[...text.matchAll(pattern)]` quando quiser um array real, e note que ele não produz nada quando o padrão nunca corresponde.
 
@@ -182,7 +182,7 @@ for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
 **`replace`** retorna uma nova string com a correspondência trocada por outra coisa. A string original nunca é alterada.
 ```javascript
 console.log("the cat sleeps".replace(/cat/, "dog"));
-// prints the dog sleeps
+// imprime the dog sleeps
 ```
 Dentro da string de substituição algumas sequências têm um significado especial:
 - `$1`, `$2`, ... o texto capturado pelo grupo 1, grupo 2, ...
@@ -192,7 +192,7 @@ Dentro da string de substituição algumas sequências têm um significado espec
 É isso que faz de `replace` uma ferramenta de reescrita e não apenas uma troca:
 ```javascript
 console.log("2026-09-12".replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1"));
-// prints 12/09/2026
+// imprime 12/09/2026
 ```
 Sem a flag `g` apenas a **primeira** correspondência é substituída.
 
@@ -201,9 +201,9 @@ Sem a flag `g` apenas a **primeira** correspondência é substituída.
 Para reescrever **toda** correspondência em vez da primeira você tem duas opções:
 ```javascript
 console.log("a1 b2".replace(/\d/g, "#"));
-// prints a# b#
+// imprime a# b#
 console.log("a1 b2".replaceAll(/\d/g, "#"));
-// prints a# b#
+// imprime a# b#
 ```
 **`replaceAll`** é o mais claro dos dois, e ele também aceita uma string simples como padrão. Quando você fornece uma regex, essa regex **deve** ter a flag `g`, caso contrário ele lança um `TypeError`; isso é exatamente o que evita o bug silencioso de escrever `replace` e corrigir apenas a primeira correspondência.
 
@@ -214,10 +214,10 @@ A substituição não precisa ser uma string. Quando você passa uma **função*
 A função recebe primeiro a correspondência inteira, depois cada grupo de captura:
 ```javascript
 console.log("hello world".replace(/\w+/g, (word) => word.length));
-// prints 5 5
+// imprime 5 5
 
 console.log("ann lee".replace(/(\w)(\w*)/g, (whole, first, rest) => first.toUpperCase() + rest));
-// prints Ann Lee
+// imprime Ann Lee
 ```
 Esta é a única forma de calcular a substituição a partir do texto correspondido, o que `$1` sozinho não consegue fazer.
 
@@ -226,9 +226,9 @@ Esta é a única forma de calcular a substituição a partir do texto correspond
 **`split`** corta uma string em um array. Recebendo uma string simples ele corta nesse texto exato, mas recebendo uma regex ele corta em cada correspondência do padrão, o que permite que uma única chamada trate separadores que variam:
 ```javascript
 console.log("a, b;c".split(", "));
-// prints [ 'a', 'b;c' ]
+// imprime [ 'a', 'b;c' ]
 console.log("a, b;c".split(/[,;]\s*/));
-// prints [ 'a', 'b', 'c' ]
+// imprime [ 'a', 'b', 'c' ]
 ```
 Os separadores em si não fazem parte do resultado. Cuidado com um separador no início ou no fim da string: ele produz uma string vazia no array, porque há um campo vazio desse lado.
 
@@ -240,8 +240,8 @@ A flag **`m`** (multiline) muda isso: `^` e `$` então também correspondem logo
 ```javascript
 const text = "note a\nb\nnote c";
 console.log(text.match(/^note.*/g));
-// prints [ 'note a' ]
+// imprime [ 'note a' ]
 console.log(text.match(/^note.*/gm));
-// prints [ 'note a', 'note c' ]
+// imprime [ 'note a', 'note c' ]
 ```
 Dois detalhes importam aqui. Por padrão o `.` não corresponde a uma quebra de linha (apenas a flag `s` muda isso), então `.*` para no fim da linha por si só. E `match` com a flag `g` retorna `null`, não um array vazio, quando nada corresponde, então combine-o com `?? []` quando você promete retornar um array.

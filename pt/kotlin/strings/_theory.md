@@ -91,7 +91,7 @@ Como `split` retorna uma `List`, você pode percorrer seus elementos como qualqu
 for (part in "a-b".split("-")) {
     println(part)
 }
-// prints a, then b
+// imprime a, depois b
 ```
 
 ---

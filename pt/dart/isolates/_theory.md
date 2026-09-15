@@ -52,8 +52,8 @@ O que viaja é o `text` capturado na ida e o `int` resultante na volta, cada um 
 `Isolate.run` dá a você **paralelismo**: um segundo isolate em um segundo núcleo do processador, rodando seu próprio código no mesmo instante que o primeiro. Essa é a ferramenta certa para calcular.
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // aguardando: nenhum núcleo está ocupado
+await Isolate.run(() => hugeCalculation());       // computando: outro núcleo está ocupado
 ```
 
 Colocar `await` em um cálculo lento não ajuda em nada: `await bigSum()` ainda roda `bigSum` no isolate atual e o bloqueia até a última linha. Apenas um segundo isolate tira esse trabalho de lá.
@@ -258,7 +258,7 @@ A consequência é a regra que torna os isolates seguros: depois do envio, os do
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // a cópia cresce
 print(numbers);                           // [1, 2, 3]
 ```
 

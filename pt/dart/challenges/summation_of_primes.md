@@ -16,7 +16,7 @@ Escreva uma função que retorna a soma de todos os números primos abaixo de `n
 Exemplo de chamada de função:
 ```dart
 print(primeSummation(10));
-// prints 17
+// imprime 17
 ```
 
 # --seed--

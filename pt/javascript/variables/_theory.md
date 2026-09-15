@@ -12,7 +12,7 @@ Dessa forma, atribuímos o valor `1` à variável chamada `x`.
 Se imprimirmos a variável `x`, obtemos o número `1`:
 ```javascript
 console.log(x);
-// prints 1
+// imprime 1
 ```
 
 ---
@@ -21,9 +21,9 @@ Variáveis são chamadas assim porque o valor que armazenam pode mudar.
 Podemos atualizar `x` usando `=` e atribuindo um novo valor.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // imprime 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // imprime 2
 ```
 
 ---
@@ -33,7 +33,7 @@ Aqui, podemos atribuir à variável `y` o valor de `x`
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // imprime 5
 ```
 
 ---
@@ -42,9 +42,9 @@ Quando atualizamos uma variável, ela esquece seu valor anterior.
 Aqui podemos exibir a variável `x` duas vezes e ver como seu valor é atualizado.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // imprime 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // imprime 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 Em JavaScript, variáveis de string podem ser declaradas usando tanto aspas duplas quanto aspas simples:
 ```javascript
 let x = "May";
-// both are the same string
+// ambas são a mesma string
 let y = 'May';
 console.log(x === y);
-// prints true
+// imprime true
 ```
 
 ---

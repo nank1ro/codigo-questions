@@ -11,7 +11,7 @@ A vantagem é que o compilador sabe o que há dentro:
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // tudo certo: first é uma String
 ```
 
 ---
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, inferido a partir do argumento
+print(a.value + 1);      // 8, o compilador sabe que value é um int
 ```
 
 A letra não importa: `T` é uma convenção para "tipo", nada mais.
@@ -78,14 +78,14 @@ Uma função pode ser genérica por si só, sem viver em uma classe genérica. O
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, T é String aqui
+print(firstOf([10, 20]));        // 10, T é int aqui
 ```
 
 Um corpo de função, verificado uma vez, reutilizado para cada tipo. O argumento de tipo geralmente é inferido dos argumentos, mas pode ser escrito explicitamente quando a inferência não tem nada de que partir:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // lança, mas o tipo é claro
 ```
 
 Métodos dentro de uma classe seguem exatamente a mesma regra.
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 Com sound null safety, o ponto de interrogação pode cair em dois lugares diferentes, e eles significam duas coisas diferentes:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // uma caixa que existe e guarda um int anulável
+Box<int>? b = null;      // nenhuma caixa, mas se houvesse uma guardaria um int
 ```
 
 Em `Box<int?>` o **argumento de tipo** é nullable, então `a.value` tem tipo `int?` e pode ser `null`, enquanto `a` em si sempre existe. Em `Box<int>?` a **variável** é nullable, então `b` pode ser `null` e você precisa de `b?.value` ou `b!.value` para alcançar o que há dentro dela.
@@ -146,10 +146,10 @@ A diferença importa assim que você usa o valor. Em uma `Box<int?>` você acess
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, a caixa existe, seu conteúdo é null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, a própria caixa está ausente
 ```
 
 Escrever `b.value` em uma `Box<int>?` não compila de forma alguma: o Dart se recusa a ler um campo de algo que pode não existir.
@@ -187,7 +187,7 @@ Sem o bound, `a > b` não compilaria: o operador de comparação pertence a `num
 Um bound pode mencionar o próprio parâmetro de tipo. `Comparable<T>` é a interface de tudo que sabe se comparar com seus semelhantes, por meio de `compareTo`:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // negativo: fig vem primeiro
 print('kiwi'.compareTo('fig')); // positive
 print('fig'.compareTo('fig'));  // zero
 ```

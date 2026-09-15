@@ -3,7 +3,7 @@ Toda string tem uma propriedade `length` que informa quantos caracteres ela cont
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// imprime 5
 ```
 Espaços e pontuação também contam como caracteres.
 
@@ -14,14 +14,14 @@ Você pode ler um único caractere com colchetes ou com o método `charAt()`:
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// imprime h
 console.log(word.charAt(1));
-// prints e
+// imprime e
 ```
 O último caractere está no índice `length - 1`:
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// imprime o
 ```
 
 ---
@@ -30,9 +30,9 @@ Strings possuem muitos **métodos** integrados. Dois dos mais simples alteram a 
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// imprime HELLO
 console.log(word.toLowerCase());
-// prints hello
+// imprime hello
 ```
 Ambos os métodos não recebem argumentos, então não esqueça os parênteses.
 
@@ -46,11 +46,11 @@ Para verificar se uma string contém outra string, use estes métodos, que retor
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// imprime true
 console.log(file.startsWith("ph"));
-// prints true
+// imprime true
 console.log(file.endsWith(".jpg"));
-// prints false
+// imprime false
 ```
 A comparação diferencia maiúsculas de minúsculas: `"Hello".includes("h")` é `false`.
 
@@ -61,9 +61,9 @@ Se o texto não for encontrado, ele retorna `-1`:
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// imprime 2
 console.log(word.indexOf("z"));
-// prints -1
+// imprime -1
 ```
 
 ---
@@ -72,9 +72,9 @@ O método `slice(start, end)` extrai um trecho de uma string, do índice `start`
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// imprime Java
 console.log(word.slice(4));
-// prints Script
+// imprime Script
 ```
 Se você omitir `end`, o trecho vai até o final da string.
 Um índice negativo conta a partir do final: `word.slice(-3)` é `"ipt"`.
@@ -87,5 +87,5 @@ O método `substring(start, end)` funciona da mesma forma, mas não aceita índi
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// imprime 45
 ```

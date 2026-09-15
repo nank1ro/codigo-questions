@@ -139,7 +139,7 @@ Dentro da closure `$0` é o elemento da primeira sequência e `$1` o da segunda.
     if n == 2 { return }
     print(n)
 }
-// prints 1 and 3
+// imprime 1 e 3
 ```
 Use `forEach` para um efeito colateral curto em cada elemento, e `for-in` quando precisar parar mais cedo.
 

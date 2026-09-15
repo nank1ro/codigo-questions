@@ -16,7 +16,7 @@ Escreva uma função que retorne a média de um vetor numérico.
 Exemplo de chamada da função:
 ```javascript
 console.log(mean([1, 2, 3]));
-// prints 2.0
+// imprime 2.0
 ```
 
 # --before-seed--

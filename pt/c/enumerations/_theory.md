@@ -7,7 +7,7 @@ Toda constante é um inteiro: a menos que você diga o contrário, a primeira é
 Como são inteiros, você as imprime com `%d`:
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// imprime "1"
 ```
 
 ---
@@ -19,7 +19,7 @@ Os nomes geralmente são escritos em maiúsculas, como outras constantes, e deve
 
 Você também pode dar um valor explícito a uma constante com `=`; as constantes seguintes continuam contando a partir desse valor:
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB é 2, MAR é 3
 ```
 Os valores explícitos não precisam ser consecutivos ou crescentes: `enum Status { OK = 200, NOT_FOUND = 404 };` é perfeitamente válido.
 
@@ -86,7 +86,7 @@ O novo nome `Color` é usado sozinho, sem a palavra-chave `enum` na frente dele.
 Uma constante de enum é convertida para `int` automaticamente, então `int n = BLUE;` é válido e armazena `2`.
 Fazer o caminho inverso é feito com um **cast**, escrevendo o tipo enum entre parênteses antes do inteiro:
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c é GREEN
 ```
 C não verifica se o número corresponde a uma constante: `(enum Color)7` compila mesmo que nenhuma constante seja `7`, então valide os inteiros antes de convertê-los.
 
@@ -103,7 +103,7 @@ Combinado com o operador de resto `%`, isso permite percorrer as constantes em c
 
 Um truque comum é adicionar uma constante extra no final da enumeração, geralmente chamada `COUNT`: como a numeração começa em `0`, seu valor é exatamente o número de constantes reais que vêm antes dela.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT é 3
 ```
 Essa sentinela permite percorrer todas as constantes sem fixar o número no código, e continua correta quando você adiciona constantes antes dela:
 ```c
@@ -119,7 +119,7 @@ A sentinela `COUNT` também é o tamanho perfeito para um array com uma posiçã
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // imprime "4"
 ```
 Um loop de `0` até `FRUIT_COUNT` visita cada posição, e o índice do loop pode ser convertido de volta para `enum Fruit` quando você precisar retorná-lo.
 

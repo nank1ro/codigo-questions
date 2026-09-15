@@ -4,7 +4,7 @@ Na programacao, podemos salvar uma variavel booleana `niceWeather` e executar a 
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // brincar lá fora
 }
 ```
 
@@ -14,7 +14,7 @@ Vamos continuar com o exemplo anterior.
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // brincar lá fora
 }
 ```
 Vimos que a instrucao `if` executa o bloco de codigo apenas se a condicao for `true`.
@@ -28,9 +28,9 @@ Em Swift podemos usar a instrucao `else`, assim:
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // brincar lá fora
 } else {
-    // stay home
+    // ficar em casa
 }
 ```
 

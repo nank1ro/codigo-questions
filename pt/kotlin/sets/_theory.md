@@ -15,7 +15,7 @@ Um `Set` é uma coleção de itens __únicos__ sem uma ordem específica.
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// imprime [1, 2]
 ```
 
 Em __[1]__ estamos tentando criar um set com o número __1__ presente duas vezes, mas como você pode ver, cada elemento deve ser único e o segundo __1__ é automaticamente descartado.
@@ -38,7 +38,7 @@ Para criar um set modificável, use a palavra-chave `mutableSetOf`
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// imprime [1, 2, 3, 4]
 ```
 
 ---
@@ -47,8 +47,8 @@ A atividade mais comum com `Set` é testar a pertinência usando `in` ou `contai
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // imprime true
+println(numbers.contains(5)) // imprime false
 ```
 
 Como você pode ver acima, `in` e `contains` retornam um `Bool` indicando se o elemento passado está presente no set

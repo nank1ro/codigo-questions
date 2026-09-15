@@ -50,7 +50,7 @@ Isso significa que quando você atribui um tipo a uma variável, não pode alter
 
 ```dart
 int integerNumber = 1;
-integerNumber = 3.14159; // Error
+integerNumber = 3.14159; // Erro
 ```
 
 `3.14159` é do tipo `double`, mas você já definiu `integerNumber` com o tipo `int`.
@@ -61,7 +61,7 @@ Claro, ocasionalmente pode ser útil atribuir tipos relacionados à mesma variá
 num number;
 number = 1; // OK
 number = 3.14159; // OK
-number = '10'; // Error
+number = '10'; // Erro
 ```
 
 Tanto `int` quanto `double` estendem `num`, então ambos os tipos são aceitos.
@@ -119,7 +119,7 @@ Quando você declarou uma variável constante, não pode mais alterar seu valor.
 
 ```dart
 const number = 2;
-number = 3; // Error
+number = 3; // Erro
 ```
 
 Este código produz o erro:

@@ -18,7 +18,7 @@ Escreva uma função que retorne a soma de todos os números de Fibonacci de val
 Exemplo de chamada da função:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// imprime 10
 ```
 
 # --before-seed--

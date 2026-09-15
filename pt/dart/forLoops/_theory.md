@@ -2,7 +2,7 @@ Um laço `for` repete um bloco de código um número definido de vezes. A sintax
 
 ```dart
 for (initialization; condition; update) {
-  // body
+  // corpo
 }
 ```
 
@@ -56,7 +56,7 @@ A instrução `break` sai de um laço imediatamente quando uma condição é sat
 
 ```dart
 for (int i = 0; i < 10; i++) {
-  if (i == 5) break; // stops at 5
+  if (i == 5) break; // para em 5
   print(i);
 }
 ```

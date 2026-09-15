@@ -16,7 +16,7 @@ Escreva uma função que encontre a soma de todos os primos abaixo do número da
 Exemplo de chamada da função:
 ```swift
 print(primeSummation(10))
-// prints 17
+// imprime 17
 ```
 
 # --before-seed--

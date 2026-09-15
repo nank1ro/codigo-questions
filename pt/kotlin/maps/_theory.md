@@ -5,7 +5,7 @@ Você cria um map somente leitura com `mapOf`, associando cada chave ao seu valo
 ```kotlin
 val capitals = mapOf("Italy" to "Rome", "France" to "Paris")
 println(capitals)
-// prints {Italy=Rome, France=Paris}
+// imprime {Italy=Rome, France=Paris}
 ```
 Aqui `"Italy"` e `"France"` são as chaves e `"Rome"` e `"Paris"` são seus valores.
 
@@ -38,10 +38,10 @@ O primeiro argumento é a chave, o segundo é o valor padrão retornado quando a
 Um map criado com `mapOf` é somente leitura. Para adicionar ou alterar entradas use `mutableMapOf`, que retorna um `MutableMap`:
 ```kotlin
 val ages = mutableMapOf("Alice" to 30)
-ages["Bob"] = 25   // adds a new entry
-ages["Alice"] = 31 // updates the existing one
+ages["Bob"] = 25   // adiciona uma nova entrada
+ages["Alice"] = 31 // atualiza a existente
 println(ages)
-// prints {Alice=31, Bob=25}
+// imprime {Alice=31, Bob=25}
 ```
 Atribuir com `map[key] = value` adiciona o par quando a chave é nova e substitui o valor quando a chave já existe. Você também pode chamar `ages.put("Bob", 25)`, que faz o mesmo.
 
@@ -84,7 +84,7 @@ val ages = mapOf("Alice" to 30, "Bob" to 25)
 for ((name, age) in ages) {
     println("$name is $age")
 }
-// prints
+// imprime
 // Alice is 30
 // Bob is 25
 ```

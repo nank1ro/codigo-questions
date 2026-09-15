@@ -12,10 +12,10 @@ _Estruturas_ e _classes_ são construções flexíveis e de propósito geral que
 Uma classe|struct básica consiste apenas na palavra-chave `class` ou `struct` e seu nome, por exemplo:
 ```swift
 class ClassName {
-    // class definition
+    // definição da classe
 }
 struct ClassName {
-    // structure definition
+    // definição da estrutura
 }
 ```
 

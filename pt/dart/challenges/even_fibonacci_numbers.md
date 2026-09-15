@@ -16,7 +16,7 @@ Escreva uma função que retorna a soma de todos os termos pares da sequência d
 Exemplo de chamada de função:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// imprime 10
 ```
 
 # --seed--

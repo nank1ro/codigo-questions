@@ -17,7 +17,7 @@ Exemplo de chamada da função:
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
-// prints 2.0
+// imprime 2.0
 ```
 
 # --seed--

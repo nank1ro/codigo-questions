@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// imprime "Hello!"
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// imprime "Hello Smith! Welcome on board :)"
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ Você pode definir um valor _padrão_ para qualquer parâmetro em uma função a
 Se um valor padrão for definido, você pode omitir esse parâmetro ao chamar a função
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // faça algo aqui
 }
 ```
 
@@ -54,7 +54,7 @@ Por exemplo, um parâmetro rest com o nome `numbers` fica disponível dentro do 
 
 Nas funções podemos adicionar um _comentário opcional_ que explica o que a função faz:
 ```javascript
-// Prints 'Hello World' to the console.
+// Imprime 'Hello World' no console.
 function helloWorld() {
     console.log("Hello, World!");
 }

@@ -16,7 +16,7 @@ Escreva uma função que retorne o n-ésimo número primo.
 Exemplo de chamada da função:
 ```swift
 print(nthPrime(6))
-// prints 13
+// imprime 13
 ```
 
 # --before-seed--

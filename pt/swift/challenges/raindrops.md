@@ -30,7 +30,7 @@ Escreva uma função que retorne a string correta, exemplos:
 Exemplo de chamada da função:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// imprime "Plong"
 ```
 
 # --before-seed--

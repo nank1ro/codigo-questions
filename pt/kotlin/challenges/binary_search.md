@@ -20,7 +20,7 @@ O array nunca contém duplicatas, então o índice é sempre único. O array tam
 Exemplo de chamada da função:
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// imprime 2
 ```
 
 # --seed--

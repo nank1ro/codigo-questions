@@ -23,7 +23,7 @@ Se não houver dinheiro suficiente na conta para completar a transação, retorn
 Exemplo de chamada da função:
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// imprime 9.5
 ```
 
 # --seed--

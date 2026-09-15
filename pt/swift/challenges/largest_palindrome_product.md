@@ -16,7 +16,7 @@ Escreva uma função que encontre o maior palíndromo feito a partir do produto 
 Exemplo de chamada da função:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// imprime 9009
 ```
 
 # --before-seed--

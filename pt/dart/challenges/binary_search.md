@@ -20,7 +20,7 @@ A lista nunca contém duplicatas, então o índice é sempre único. A lista tam
 Exemplo de chamada da função:
 ```dart
 print(binarySearch([1, 3, 5, 7], 5));
-// prints 2
+// imprime 2
 ```
 
 # --seed--

@@ -158,7 +158,7 @@ Um conjunto só pode conter elementos **hasheáveis**, ou seja, valores que não
 Tentar adicionar uma lista, um dicionário ou outro conjunto gera um `TypeError`:
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # ok, uma tupla
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 Conjuntos de tuplas são úteis para acompanhar pares únicos, como coordenadas ou registros (name, age):

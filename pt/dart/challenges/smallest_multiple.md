@@ -16,7 +16,7 @@ Escreva uma função que retorna o menor número positivo que é divisível por 
 Exemplo de chamada de função:
 ```dart
 print(smallestMultiple(10));
-// prints 2520
+// imprime 2520
 ```
 
 # --seed--

@@ -18,7 +18,7 @@ Retorne `true` se for um ano bissexto, `false` caso contrário.
 Exemplo de chamada da função:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// imprime true
 ```
 
 # --before-seed--

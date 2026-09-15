@@ -26,7 +26,7 @@ O corpo de uma lambda pode ocupar várias linhas. Não há palavra-chave `return
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // retornado
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 Quando uma lambda tem exatamente **um** parâmetro, você pode omitir a declaração dele: o Kotlin o nomeia como `it` para você.
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // mesma coisa
 ```
 O `it` só existe quando o parâmetro não é declarado explicitamente, e apenas para lambdas de um único parâmetro.
 Ele mantém lambdas curtas compactas, mas para corpos mais longos um nome real é mais claro.
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // mesma coisa, com trailing lambda
 ```
 Colocar o parâmetro função por **último** é o que torna a sintaxe trailing lambda disponível para quem chama.
 
@@ -160,7 +160,7 @@ Quando a função de que você já precisa existe, não é necessário envolvê-
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], mesma coisa
 ```
 Funções membro são referenciadas por meio do seu tipo, como `String::uppercase`:
 ```kotlin

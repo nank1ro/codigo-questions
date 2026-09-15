@@ -11,7 +11,7 @@ A chave `key1` aponta para o valor `1`, `key2` para `2`, e assim por diante.
 
 Acessar valores de um dicionário pela chave é igual a acessar valores de um array pelo índice:
 ```swift
-// gets the age value from the user dictionary
+// obtém o valor da idade do dicionário user
 user['age']
 ```
 
@@ -34,7 +34,7 @@ Cada par conta apenas uma vez, mesmo que o valor seja um array. (Isso mesmo: voc
 Como dicionários são mutáveis, eles podem ser alterados de várias formas. Itens podem ser removidos de um dicionário com o método `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // imprime o valor removido, se a chave existir
 }
 ```
 irá remover a chave `keyName` e seu valor associado do dicionário.
@@ -73,5 +73,5 @@ Anteriormente vimos como remover um _par chave-valor_ do dicionário com o méto
 Também podemos remover um elemento atribuindo à chave o valor `nil`
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName foi removida do dicionário dictName
 ```

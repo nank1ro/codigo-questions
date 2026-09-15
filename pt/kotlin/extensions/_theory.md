@@ -177,7 +177,7 @@ Uma função de extensão com exatamente **um** parâmetro pode ser marcada como
 infix fun Int.percentOf(total: Int): Int = total * this / 100
 
 println(20 percentOf 50)   // 10
-println(20.percentOf(50))  // 10, the normal call still works
+println(20.percentOf(50))  // 10, a chamada normal ainda funciona
 ```
 O Kotlin usa isso também em algumas funções nativas: `1 to "one"` constrói um `Pair`, e `1 until 5` constrói um intervalo.
 

@@ -16,7 +16,7 @@ Escreva uma função que retorna o maior palíndromo formado pelo produto de doi
 Exemplo de chamada de função:
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// imprime 9009
 ```
 
 # --seed--
