@@ -12,7 +12,7 @@ _Klasy_ to ogólne, elastyczne konstrukty, które stają się budulcem kodu Twoj
 Podstawowa klasa składa się tylko ze słowa kluczowego `class` i jej nazwy, na przykład:
 ```javascript
 class ClassName {
-    // class definition
+    // definicja klasy
 }
 ```
 

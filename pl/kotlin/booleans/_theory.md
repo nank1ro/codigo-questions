@@ -14,8 +14,8 @@ Przeciwna wartość `true` to `false`
 
 Wartości boolowskie można też negować, używając `!` przed nimi, np.:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // wypisuje false
+println(!false) // wypisuje true
 ```
 
 ---
@@ -26,10 +26,10 @@ Możemy również tworzyć wyrażenia boolowskie przy użyciu `&&` (_i_) oraz `|
 - `||` (_lub_): daje true, jeśli wyrażenie po lewej lub prawej stronie operatora jest prawdziwe, albo oba są prawdziwe.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // wypisuje true
+println(true && false) // wypisuje false
+println(false && false) // wypisuje false
+println(true || true) // wypisuje true
+println(true || false) // wypisuje true
+println(false || false) // wypisuje false
 ```

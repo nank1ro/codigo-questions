@@ -154,7 +154,7 @@ Jeśli dwa elementy mają tę samą wartość, drugi nie jest nowym elementem, l
 ```python
 class Status(Enum):
     ACTIVE = 1
-    ENABLED = 1  # alias of ACTIVE
+    ENABLED = 1  # alias dla ACTIVE
 
 print(Status.ENABLED)  # Status.ACTIVE
 print(len(Status))     # 1

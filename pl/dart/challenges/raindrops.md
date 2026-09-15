@@ -28,7 +28,7 @@ Napisz funkcję, która zwraca poprawny ciąg znaków, przykłady:
 Przykład wywołania funkcji:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// wypisuje "Plong"
 ```
 
 # --seed--

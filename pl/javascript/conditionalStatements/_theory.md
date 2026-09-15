@@ -4,7 +4,7 @@ W programowaniu możemy zapisać zmienną logiczną `niceWeather` i wykonać akc
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // baw się na dworze
 }
 ```
 
@@ -14,7 +14,7 @@ Kontynuujmy poprzedni przykład.
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // baw się na dworze
 }
 ```
 Widzieliśmy, że instrukcja `if` wykonuje blok kodu tylko wtedy, gdy warunek jest `true`.
@@ -28,9 +28,9 @@ W JavaScript możemy użyć instrukcji `else`, jak:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // baw się na dworze
 } else {
-    // stay home
+    // zostań w domu
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// wypisuje 10
 ```
 Skrócony zapis powyższego kodu to:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// wypisuje 10
 ```
 `c` jest ustawione równe `a`, ponieważ warunek `a < b` był prawdziwy
 

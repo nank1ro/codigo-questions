@@ -25,15 +25,15 @@ Można go używać zarówno do odczytywania, jak i przypisywania wartości.
 Zobaczyłeś, jak uzyskać dostęp do indeksu tablicy w taki sposób:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// Wypisuje wartość "Jeremiah"
 print(names[0])
 ```
 Tak działa przypisanie:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// Przypisuje nową wartość "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// Wypisuje wartość "Jordan"
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ Aby dodać element do tablicy, używamy funkcji `append`:
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// Wypisuje ["a", "b", "c"]
 ```
 
 ---
@@ -62,7 +62,7 @@ Rozważ następujący kod:
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// wypisuje [2, 3]
 ```
 Najpierw tworzymy tablicę o nazwie `numbers`.
 Następnie pobieramy podsekcję tablicy i zapisujemy ją w tablicy slice.
@@ -73,9 +73,9 @@ W Swift możemy uwzględnić ostatni indeks używając `...`, ale możemy też w
 
 W Swift możemy wycinać tablicę według własnych potrzeb!
 ```swift
-// Grabs the first two items
+// Pobiera pierwsze dwa elementy
 listName[..<2]
-// Grabs the fourth through last items
+// Pobiera elementy od czwartego do ostatniego
 listName[3...]
 ```
 Jeśli wycinek tablicy zawiera pierwszy lub ostatni element tablicy, indeks tego elementu nie musi być uwzględniony
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// wypisuje 1
 ```
 Powyższy kod drukuje pierwszy indeks zawierający ciąg `"Zac"`, w tym przypadku `1`.
 Możemy również wstawiać elementy do tablicy pod określonym indeksem, używając metody `insert()`:
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// wypisuje ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 Powyższy kod wstawia `"Ali"` pod indeksem `1`, co przesuwa wszystko po tym indeksie o 1
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3
+// wypisuje 1, 2, 3
 ```
 Nazwa zmiennej następuje po słowie kluczowym `for` - będzie jej przypisywana wartość każdego kolejnego elementu tablicy.
 

@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca n-tą liczbę pierwszą.
 Przykład wywołania funkcji:
 ```swift
 print(nthPrime(6))
-// prints 13
+// wypisuje 13
 ```
 
 # --before-seed--

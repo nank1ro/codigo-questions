@@ -12,7 +12,7 @@ Najprostsze pytanie, jakie możesz zadać, to `matches`, które jest `true` tylk
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false, litera nie jest cyfrą
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches` jest często zbyt surowe: zwykle chcesz tylko wiedzieć, czy wzorzec pojawia się **gdziekolwiek** w tekście. Do tego służy `containsMatchIn`:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false, cały ciąg nie składa się z cyfr
+println(digits.containsMatchIn("order 42"))  // true, "42" tam jest
 ```
 Obok `\d` są jeszcze dwa skróty, których będziesz używać bez przerwy: `\w` to znak słowa (litera, cyfra lub `_`), a `\s` to znak białej spacji. Każdy z nich można powtórzyć za pomocą **kwantyfikatora**:
 - `+` jeden lub więcej
@@ -31,7 +31,7 @@ Obok `\d` są jeszcze dwa skróty, których będziesz używać bez przerwy: `\w`
 
 Podwajanie każdego ukośnika wstecznego jest męczące, więc wzorce zapisuje się zwykle jako **surowe ciągi znaków** w potrójnych cudzysłowach, gdzie `\` jest zwykłym znakiem:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // to samo co Regex("\\d+")
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0` to całe dopasowanie. Gdy potrzebujesz dosłownego `$` w tekście zastępującym, poprzedź go znakiem ucieczki jako `\$`.
 `replace` przepisuje **każde** dopasowanie, więc gdy przepisany ma być tylko cały ciąg znaków, przypnij wzorzec **kotwicami** `^` (początek tekstu) i `$` (koniec tekstu):
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two, nic nie jest zamieniane
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 Znaki `. * + ? ( ) [ ] { } | ^ $ \` mają specjalne znaczenie wewnątrz wzorca. Najbardziej zdradliwy jest `.`, który pasuje do **dowolnego** znaku, a nie do kropki. Aby oznaczał sam siebie, poprzedź go ukośnikiem wstecznym:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true, kropka pasuje do x
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 Gdy szukany tekst pochodzi ze zmiennej i ma być potraktowany dosłownie, pozwól bibliotece dodać znaki ucieczki za pomocą `Regex.escape`:
@@ -180,7 +180,7 @@ Nawiasy kwadratowe definiują **klasę znaków**: jeden znak z wymienionego zbio
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true, żadna cyfra niedozwolona
 ```
 Klasa wybiera tylko spośród pojedynczych znaków. Aby wybrać spośród całych alternatyw, użyj `|`, zwykle zamkniętego w grupie, żeby nie pochłonął reszty wzorca:
 ```kotlin

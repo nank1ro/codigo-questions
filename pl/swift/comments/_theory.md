@@ -2,7 +2,7 @@
 
 Najprostszym komentarzem jest **komentarz jednoliniowy**: zaczyna się od `//` i trwa do końca linii.
 ```swift
-// Greets the user
+// Wita użytkownika
 print("Hello")
 ```
 Używaj komentarzy, aby wyjaśnić, do czego służy dany fragment kodu albo dlaczego został napisany w ten sposób.
@@ -11,7 +11,7 @@ Używaj komentarzy, aby wyjaśnić, do czego służy dany fragment kodu albo dla
 
 Komentarz nie musi zajmować własnej linii: może następować po kodzie w tej samej linii. Jest to **komentarz końcowy** i dobre miejsce na krótką notatkę o tej konkretnej instrukcji:
 ```swift
-let retries = 3 // give up after three attempts
+let retries = 3 // poddać się po trzech próbach
 ```
 Wszystko od `//` do końca linii jest ignorowane, a kod przed nim działa jak zwykle.
 
@@ -23,7 +23,7 @@ Dzięki temu `//` jest szybkim sposobem na wyłączenie linii kodu bez jej usuwa
 ```swift
 var total = 10
 // total = total + 5
-print(total) // prints 10
+print(total) // wypisuje 10
 ```
 Druga linia jest teraz komentarzem, więc `total` pozostaje `10`. Usunięcie `//` przywraca linii życie.
 
@@ -45,8 +45,8 @@ Komentarz blokowy może być też krótki i zmieścić się w jednej linii: `/* 
 
 W przeciwieństwie do `//`, które kończy się na końcu linii, komentarz `/*` kończy się dopiero na `*/`. Jeśli zapomnisz go zamknąć, kompilator traktuje cały kolejny kod jako część komentarza i zgłasza błąd:
 ```swift
-let width = 10 /* in centimetres
-print(width) // still inside the comment: error, the comment is never closed
+let width = 10 /* w centymetrach
+print(width) // wciąż wewnątrz komentarza: błąd, komentarz nigdy się nie zamyka
 ```
 Zarówno `//`, jak i `/* */` działają jako komentarze końcowe, ale w przypadku `/*` zawsze upewnij się, że `*/` jest na miejscu.
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-print(total) // prints 100
+print(total) // wypisuje 100
 ```
 Dzięki zagnieżdżaniu działa to nawet wtedy, gdy jedna z tych linii zawiera już komentarz `/* */`.
 
@@ -90,7 +90,7 @@ Każdy, kto wywołuje `toSeconds`, może teraz przeczytać nagłówek zamiast ci
 
 Swift ma trzeci rodzaj komentarza, **komentarz dokumentacyjny**: jednoliniowy komentarz zaczynający się od `///` (trzech ukośników), umieszczany bezpośrednio nad funkcją, typem lub właściwością.
 ```swift
-/// Returns the greeting for `name`.
+/// Zwraca powitanie dla `name`.
 func greet(_ name: String) -> String {
     return "Hi, \(name)!"
 }
@@ -101,7 +101,7 @@ Dla kompilatora to zwykły komentarz, ale narzędzia takie jak Xcode czytają go
 
 Pierwsza linia komentarza dokumentacyjnego to **streszczenie**: krótkie zdanie mówiące, co robi funkcja. Napisz je w trzeciej osobie, jakbyś opisywał funkcję: "Zwraca...", "Dodaje...", "Sprawdza...".
 ```swift
-/// Returns `true` when `n` is divisible by two.
+/// Zwraca `true`, gdy `n` jest podzielne przez dwa.
 func isEven(_ n: Int) -> Bool {
     return n % 2 == 0
 }
@@ -127,9 +127,9 @@ func greet(_ name: String) -> String {
 
 Po streszczeniu komentarz dokumentacyjny może opisać parametry i wartość zwracaną za pomocą specjalnych elementów listy Markdown, które rozpoznaje Xcode:
 ```swift
-/// Returns the number of seconds in the given minutes.
-/// - Parameter minutes: a whole number of minutes, never negative
-/// - Returns: `minutes` multiplied by sixty
+/// Zwraca liczbę sekund w podanych minutach.
+/// - Parameter minutes: liczba całkowita minut, nigdy ujemna
+/// - Returns: `minutes` pomnożone przez sześćdziesiąt
 func toSeconds(_ minutes: Int) -> Int {
     return minutes * 60
 }
@@ -144,10 +144,10 @@ Niektóre komentarze stosują konwencję, którą rozumieją edytory. W Swift na
 - `// FIXME: ...` wskazuje kod, o którym wiadomo, że jest błędny i musi zostać poprawiony
 
 ```swift
-// MARK: - Setup
+// MARK: - Konfiguracja
 let limit = 10
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: wczytaj limit z ustawień
+// FIXME: powoduje awarię, gdy lista jest pusta
 ```
 Dla kompilatora są to zwykłe komentarze; Xcode wypisuje je na liście, dzięki czemu łatwo znaleźć zaległą pracę. Gdy praca jest gotowa, usuń znacznik: nieaktualny `TODO` wprowadza w błąd.
 
@@ -163,12 +163,12 @@ Dla kompilatora są to zwykłe komentarze; Xcode wypisuje je na liście, dzięki
 
 Dobry komentarz wyjaśnia **dlaczego** kod coś robi, a nie **co** robi. Kod już pokazuje, co się dzieje; powtarzanie tego słowami dodaje szumu i starzeje się, gdy tylko kod się zmieni:
 ```swift
-// set timeout to 30
+// ustaw timeout na 30
 let timeout = 30
 ```
 Tego, czego czytelnik nie może odgadnąć, jest uzasadnienie tej liczby:
 ```swift
-// the server drops idle connections after 35 seconds, so stop earlier
+// serwer zrywa bezczynne połączenia po 35 sekundach, więc zatrzymaj się wcześniej
 let timeout = 30
 ```
 Jeśli komentarz tylko powtarza linię znajdującą się pod nim, usuń go albo zastąp wyjaśnieniem przyczyny.

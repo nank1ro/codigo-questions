@@ -3,16 +3,16 @@ JavaScript ma dwa różne sposoby na powiedzenie "nie ma tu żadnej wartości".
 ```javascript
 let city;
 console.log(city);
-// prints undefined
+// wypisuje undefined
 const user = { name: "Ana" };
 console.log(user.age);
-// prints undefined
+// wypisuje undefined
 ```
 `null` to wartość, którą **Ty** przypisujesz celowo, aby powiedzieć "pusto, i wiem o tym":
 ```javascript
 let owner = null;
 console.log(owner);
-// prints null
+// wypisuje null
 ```
 Zatem `undefined` to zwykle język informujący Cię, że czegoś brakuje, podczas gdy `null` to programista stwierdzający, że coś jest celowo puste.
 
@@ -25,7 +25,7 @@ function greet(name) {
   console.log(name);
 }
 greet();
-// prints undefined
+// wypisuje undefined
 ```
 Gdy funkcja kończy działanie **bez `return`** (lub z samym `return;`), jej wywołanie daje `undefined`:
 ```javascript
@@ -34,7 +34,7 @@ function log(message) {
 }
 const result = log("hi");
 console.log(result);
-// prints hi, then undefined
+// wypisuje hi, potem undefined
 ```
 Zauważ, że jawne przekazanie `null` to nie to samo, co pominięcie argumentu: `greet(null)` wypisuje `null`, ponieważ `null` to prawdziwa wartość przekazana do funkcji.
 
@@ -44,12 +44,12 @@ Operator `typeof` zwraca typ wartości w postaci ciągu znaków. Dla `undefined`
 ```javascript
 let city;
 console.log(typeof city);
-// prints undefined
+// wypisuje undefined
 ```
 Dla `null` odpowiada jednak `"object"`. To błąd z samej pierwszej wersji JavaScriptu, którego nigdy nie naprawiono, ponieważ zbyt dużo kodu od niego zależy:
 ```javascript
 console.log(typeof null);
-// prints object
+// wypisuje object
 ```
 Zatem `typeof` to niezawodny sposób wykrycia `undefined`, ale już nie `null`. Aby sprawdzić `null`, porównaj z nią bezpośrednio: `value === null`.
 
@@ -59,16 +59,16 @@ Jak `null` i `undefined` porównują się ze sobą? To zależy od operatora.
 **Luźne** porównanie `==` traktuje je jako to samo i uznaje je za różne od każdej innej wartości, w tym `0`, `""` i `false`:
 ```javascript
 console.log(null == undefined);
-// prints true
+// wypisuje true
 console.log(null == 0, undefined == "");
-// prints false false
+// wypisuje false false
 ```
 **Ścisłe** porównanie `===` porównuje także typ, a `null` i `undefined` mają różne typy:
 ```javascript
 console.log(null === undefined);
-// prints false
+// wypisuje false
 console.log(null === null);
-// prints true
+// wypisuje true
 ```
 
 ---
@@ -83,9 +83,9 @@ function show(value) {
   return "present";
 }
 console.log(show(null), show(undefined));
-// prints missing missing
+// wypisuje missing missing
 console.log(show(0), show(""));
-// prints present present
+// wypisuje present present
 ```
 To jedyny przypadek, w którym `==` jest preferowane nad `===`: zapis `value === null || value === undefined` robi dokładnie to samo, tylko dłużej.
 Wartości takie jak `0`, `""` i `false` to *nie* `null`: to prawdziwe wartości, które po prostu są falsy.
@@ -101,9 +101,9 @@ console.log(user.address.city);
 `user.address` to `undefined`, a `undefined` nie ma żadnych właściwości. Operator **opcjonalnego łańcuchowania** `?.` rozwiązuje ten problem: jeśli wartość po jego lewej stronie to `null` lub `undefined`, całe wyrażenie się zatrzymuje i przyjmuje wartość `undefined` zamiast zgłaszać błąd:
 ```javascript
 console.log(user.address?.city);
-// prints undefined
+// wypisuje undefined
 console.log(user.name?.length);
-// prints 3
+// wypisuje 3
 ```
 Gdy lewa strona jednak ma wartość, `?.` zachowuje się dokładnie jak zwykła kropka `.`. Można łączyć ich kilka: `user.address?.street?.name` zwraca `undefined`, gdy tylko jakiekolwiek ogniwo jest brakujące.
 
@@ -114,16 +114,16 @@ Opcjonalne łańcuchowanie nie ogranicza się do właściwości po kropce. Istni
 ```javascript
 const post = { tags: ["js", "node"] };
 console.log(post.tags?.[0]);
-// prints js
+// wypisuje js
 const empty = {};
 console.log(empty.tags?.[0]);
-// prints undefined
+// wypisuje undefined
 ```
 `?.()` wywołuje funkcję tylko wtedy, gdy ona istnieje, co jest wygodne dla opcjonalnych callbacków:
 ```javascript
 const task = { name: "build" };
 task.onDone?.();
-// nothing happens, no error
+// nic się nie dzieje, brak błędu
 ```
 W każdej formie sprawdzenie dotyczy wartości **tuż przed** `?.`: `post?.tags?.[0]` jest bezpieczne nawet wtedy, gdy samo `post` to `null` lub `undefined`.
 
@@ -135,12 +135,12 @@ Operator **nullish coalescing** `a ?? b` zwraca `b` tylko wtedy, gdy `a` to `nul
 ```javascript
 const count = 0;
 console.log(count || 10);
-// prints 10
+// wypisuje 10
 console.log(count ?? 10);
-// prints 0
+// wypisuje 0
 let name;
 console.log(name ?? "Guest");
-// prints Guest
+// wypisuje Guest
 ```
 Używaj `??`, gdy `0`, `""` lub `false` to pełnoprawne wartości, które trzeba zachować, a `||`, gdy naprawdę chcesz zamienić każdą wartość falsy.
 
@@ -156,7 +156,7 @@ const options = { retries: 0 };
 options.retries ??= 3;
 options.timeout ??= 1000;
 console.log(options);
-// prints { retries: 0, timeout: 1000 }
+// wypisuje { retries: 0, timeout: 1000 }
 ```
 `retries` pozostaje `0`, ponieważ `0` nie jest nullish; `timeout` nie istniał, więc otrzymuje `1000`. Ta sama idea istnieje dla `||` jako `||=`, które nadpisuje każdą wartość falsy.
 
@@ -168,11 +168,11 @@ function repeat(text, times = 2) {
   return text.repeat(times);
 }
 console.log(repeat("ab"));
-// prints abab
+// wypisuje abab
 console.log(repeat("ab", undefined));
-// prints abab
+// wypisuje abab
 console.log(repeat("ab", null));
-// prints an empty string, because null is converted to 0
+// wypisuje pusty string, ponieważ null jest konwertowany na 0
 ```
 Parametry domyślne stosują regułę `undefined`, podczas gdy `??` obejmuje i `null`, i `undefined`: wybierz to, które pasuje do sposobu wywoływania Twojej funkcji.
 
@@ -196,12 +196,12 @@ Wiele wbudowanych metod zgłasza "niczego nie znaleziono", zwracając `undefined
 const products = [{ name: "pen", price: 2 }];
 const found = products.find((p) => p.name === "ink");
 console.log(found);
-// prints undefined
+// wypisuje undefined
 ```
 Odczytanie tutaj `found.price` zgłosiłoby błąd, więc `?.` i `??` to naturalni towarzysze `find`:
 ```javascript
 console.log(products.find((p) => p.name === "ink")?.price ?? "no price");
-// prints no price
+// wypisuje no price
 ```
 
 ---
@@ -211,12 +211,12 @@ JSON ma wartość `null`, ale nie ma `undefined`, więc właściwość o wartoś
 ```javascript
 const user = { name: "Ana", nickname: undefined, email: null };
 console.log(JSON.stringify(user));
-// prints {"name":"Ana","email":null}
+// wypisuje {"name":"Ana","email":null}
 ```
 Wewnątrz tablic pozycje nie mogą zniknąć, więc tam `undefined` staje się `null`:
 ```javascript
 console.log(JSON.stringify([1, undefined, 3]));
-// prints [1,null,3]
+// wypisuje [1,null,3]
 ```
 
 ---
@@ -226,8 +226,8 @@ Sprawdzenie `obj.key === undefined` nie potrafi odróżnić dwóch sytuacji: wł
 ```javascript
 const config = { debug: undefined };
 console.log(config.debug === undefined, config.level === undefined);
-// prints true true
+// wypisuje true true
 console.log(Object.hasOwn(config, "debug"), Object.hasOwn(config, "level"));
-// prints true false
+// wypisuje true false
 ```
 "Własna" oznacza zadeklarowaną na samym obiekcie: dziedziczone składowe, takie jak `toString`, są dostępne na każdym obiekcie, ale `Object.hasOwn(config, "toString")` daje `false`.

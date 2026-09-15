@@ -1,6 +1,6 @@
 W JavaScript możemy użyć znaku `+`, aby wyświetlić razem dwa lub więcej łańcuchów, na przykład:
 ```javascript
-console.log("Hello " + "JavaScript!") // prints "Hello JavaScript!"
+console.log("Hello " + "JavaScript!") // wypisuje "Hello JavaScript!"
 ```
 
 ---

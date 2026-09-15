@@ -2,7 +2,7 @@
 
 Najczęstszym rodzajem jest **komentarz jednolinijkowy**: wszystko od `//` do końca tej linii jest ignorowane.
 ```c
-// Greet the user
+// Przywitaj użytkownika
 printf("Hello\n");
 ```
 Pierwsza linia nie robi nic, gdy program działa; dane wyjściowe generuje tylko `printf`.
@@ -15,7 +15,7 @@ Dzięki temu `//` to szybki sposób na wyłączenie linii kodu bez jej usuwania.
 ```c
 int total = 10;
 // total = total + 5;
-printf("%d\n", total); // prints "10"
+printf("%d\n", total); // wypisuje "10"
 ```
 Druga linia jest teraz komentarzem, więc `total` pozostaje `10`. Usunięcie `//` przywraca linię do życia.
 
@@ -49,7 +49,7 @@ Ma to znaczenie, gdy chcesz zakomentować blok, który już zawiera komentarz `/
 
 Komentarz nie potrzebuje własnej linii: może następować po kodzie w tej samej linii. To **komentarz końcowy** i dobre miejsce na krótką uwagę o tej konkretnej instrukcji:
 ```c
-int retries = 3; // give up after three attempts
+int retries = 3; // poddaj się po trzech próbach
 ```
 Zarówno `//`, jak i `/* */` działają jako komentarze końcowe, ale uważaj na `/*`: ponieważ kończy się dopiero na `*/`, niedomknięte `/*` na końcu linii pochłonie kolejne linie i program przestanie się kompilować.
 
@@ -83,8 +83,8 @@ Programiści używają kilku konwencjonalnych słów kluczowych na początku kom
 - `FIXME` oznacza kod, o którym wiadomo, że jest błędny i musi zostać poprawiony
 
 ```c
-// TODO: validate the input before using it
-// FIXME: crashes when the list is empty
+// TODO: zwaliduj dane wejściowe przed użyciem
+// FIXME: ulega awarii, gdy lista jest pusta
 ```
 Edytory i narzędzia potrafią wypisać takie znaczniki, więc zaległa praca jest łatwa do znalezienia. Gdy praca jest gotowa, usuń znacznik: nieaktualny `TODO` wprowadza w błąd.
 
@@ -92,12 +92,12 @@ Edytory i narzędzia potrafią wypisać takie znaczniki, więc zaległa praca je
 
 Dobry komentarz wyjaśnia **dlaczego** kod coś robi, a nie **co** robi. Kod sam pokazuje, co się dzieje; powtarzanie tego słowami dodaje szum i dezaktualizuje się, gdy tylko kod się zmieni:
 ```c
-// multiply price by 90 and divide by 100
+// pomnóż cenę przez 90 i podziel przez 100
 return price * 90 / 100;
 ```
 Tego, czego czytelnik nie może się domyślić, to powód stojący za liczbami:
 ```c
-// launch discount: members get 10% off until the end of June
+// zniżka premierowa: członkowie mają 10% zniżki do końca czerwca
 return price * 90 / 100;
 ```
 Jeśli komentarz tylko powtarza treść linii poniżej, usuń go albo zastąp wyjaśnieniem powodu.

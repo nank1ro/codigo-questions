@@ -18,7 +18,7 @@ Zwróć `true`, jeśli rok jest przestępny, `false` w przeciwnym razie.
 Przykład wywołania funkcji:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// wypisuje true
 ```
 
 # --before-seed--

@@ -20,7 +20,7 @@ Twoja funkcja musi działać również dla pustej tablicy, tablicy z jednym elem
 Przykład wywołania funkcji:
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// wypisuje [ 1, 2, 3 ]
 ```
 
 # --before-seed--

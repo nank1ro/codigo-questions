@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// wypisuje: Cold
 ```
 
 Zawsze wykonywana jest dokładnie jedna z dwóch gałęzi.
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// wypisuje: B
 ```
 
 ---

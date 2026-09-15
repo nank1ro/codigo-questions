@@ -2,7 +2,7 @@ _Interpolacja_ ciągów znaków to programowy sposób generowania ciągu.
 W Dart możemy używać znaku `+` (konkatenacja), aby wyświetlać dwa lub więcej ciągów razem, na przykład:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// wypisuje "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ Możemy używać nawiasów klamrowych, aby wstawiać wartości tyle razy, ile ch
 Wewnątrz `${}` możemy też umieszczać warunki, na przykład:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// wypisuje The answer is correct
 ```
 
 ---

@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje sumę wszystkich wielokrotności 3 lub 5 poniż
 Przykład wywołania funkcji:
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// wypisuje 23
 ```
 
 # --before-seed--

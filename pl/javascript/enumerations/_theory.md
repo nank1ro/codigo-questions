@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// wypisuje red
 ```
 Zgodnie z konwencją obiekt jest deklarowany za pomocą `const`, jego nazwa zaczyna się wielką literą, a nazwy składowych są zapisywane w formacie `UPPER_CASE`, dokładnie tak jak inne stałe.
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// wypisuje done
 ```
 Po zamrożeniu obiekt nie może również otrzymać nowych właściwości, a `Object.isFrozen(obj)` mówi, czy obiekt został zamrożony:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// wypisuje true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// wypisuje s
 console.log(Size.MEDIUM);
-// prints undefined
+// wypisuje undefined
 ```
 Tak czy inaczej, enumeracja zachowuje zdefiniowane przez Ciebie wartości, czego dokładnie oczekujesz od zestawu stałych.
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// wypisuje true
 ```
 Kompromisem jest czytelność: wypisanie `Priority.HIGH` pokazuje `3`, co mówi znacznie mniej niż powiedziałby ciąg znaków `"high"`.
 
@@ -70,14 +70,14 @@ Ponieważ enumeracja jest po prostu obiektem, standardowe metody obiektowe pozwa
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// wypisuje [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// wypisuje [ 'red', 'blue' ]
 ```
 Połączenie `Object.values()` z metodą tablicową `includes()` to standardowy sposób sprawdzenia, czy dowolna wartość, na przykład wczytana z danych wejściowych użytkownika, jest prawidłową składową:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// wypisuje true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// wypisuje false
 ```

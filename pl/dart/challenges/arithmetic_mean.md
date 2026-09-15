@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca średnią wektora liczb.
 Przykład wywołania funkcji:
 ```dart
 print(mean([1, 2, 3]));
-// prints 2.0
+// wypisuje 2.0
 ```
 
 # --seed--

@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca sumę wszystkich parzystych wyrazów ciągu Fibon
 Przykład wywołania funkcji:
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// wypisuje 10
 ```
 
 # --seed--

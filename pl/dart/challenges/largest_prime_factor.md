@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca największy czynnik pierwszy liczby `number`.
 Przykład wywołania funkcji:
 ```dart
 print(largestPrimeFactor(13195));
-// prints 29
+// wypisuje 29
 ```
 
 # --seed--

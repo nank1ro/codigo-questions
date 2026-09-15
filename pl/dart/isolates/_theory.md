@@ -52,8 +52,8 @@ W podróż udają się przechwycone `text` w jedną stronę i powstały `int` w 
 `Isolate.run` daje ci **równoległość**: drugi izolat na drugim rdzeniu procesora, wykonujący własny kod w tym samym momencie co pierwszy. To właściwe narzędzie do obliczeń.
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // oczekiwanie: żaden rdzeń nie jest zajęty
+await Isolate.run(() => hugeCalculation());       // obliczanie: inny rdzeń jest zajęty
 ```
 
 Czekanie `await` na wolne obliczenie nie pomaga wcale: `await bigSum()` nadal wykonuje `bigSum` na bieżącym izolacie i blokuje go do ostatniej linii. Tylko drugi izolat przenosi tę pracę gdzie indziej.
@@ -258,7 +258,7 @@ Konsekwencją jest reguła, która czyni izolaty bezpiecznymi: po wysłaniu obie
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // kopia rośnie
 print(numbers);                           // [1, 2, 3]
 ```
 

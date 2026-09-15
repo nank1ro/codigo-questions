@@ -11,7 +11,7 @@ Klucz `key1` wskazuje na wartość `1`, `key2` na `2` i tak dalej.
 
 Dostęp do wartości słownika za pomocą klucza jest podobny do dostępu do wartości tablicy za pomocą indeksu:
 ```swift
-// gets the age value from the user dictionary
+// pobiera wartość wieku ze słownika user
 user['age']
 ```
 
@@ -34,7 +34,7 @@ Każda para liczy się tylko raz, nawet jeśli wartość jest tablicą. (Tak, mo
 Ponieważ słowniki są mutowalne, można je zmieniać na wiele sposobów. Elementy można usuwać ze słownika za pomocą metody `removeValue(forKey:)`:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // wypisuje usuniętą wartość, jeśli klucz istnieje
 }
 ```
 usunie klucz `keyName` i jego powiązaną wartość ze słownika.
@@ -73,5 +73,5 @@ Wcześniej widzieliśmy, jak usunąć _parę klucz-wartość_ ze słownika za po
 Możemy też usunąć element, przypisując kluczowi wartość `nil`
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName zostało usunięte ze słownika dictName
 ```

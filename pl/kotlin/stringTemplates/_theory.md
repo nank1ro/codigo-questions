@@ -2,7 +2,7 @@ Szablon tekstowy (_String template_) to programowy sposób generowania ciągu zn
 W Kotlinie możemy użyć znaku `+` (konkatenacja) do wyświetlania dwóch lub więcej ciągów razem, na przykład:
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// wypisuje "Hello Kotlin!"
 ```
 
 ---
@@ -36,7 +36,7 @@ Możemy używać nawiasów klamrowych do wstawiania wartości tak często, jak c
 Wewnątrz `${}` możemy również umieszczać warunki, na przykład:
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// wypisuje Correct
 ```
 
 ---

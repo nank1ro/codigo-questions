@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje `n` sąsiadujących cyfr w liczbie 1000-cyfrowe
 Przykład wywołania funkcji:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// wypisuje 5832
 ```
 
 # --seed--

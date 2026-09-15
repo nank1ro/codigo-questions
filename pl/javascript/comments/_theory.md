@@ -2,7 +2,7 @@
 
 Najprostszy komentarz to **komentarz jednolinijkowy**: zaczyna się od `//` i trwa do końca linii.
 ```javascript
-// Greets the user
+// Wita użytkownika
 console.log("Hello");
 ```
 Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego został napisany w taki sposób. Zwróć uwagę, że w przeciwieństwie do niektórych innych języków, `#` **nie** rozpoczyna komentarza w JavaScripcie.
@@ -11,7 +11,7 @@ Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego
 
 Komentarz nie potrzebuje własnej linii: może znajdować się za kodem w tej samej linii. To **komentarz w linii** (nazywany też komentarzem końcowym) i jest dobrym miejscem na krótką notatkę o tej konkretnej instrukcji:
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // zrezygnuj po trzech próbach
 ```
 Wszystko od `//` do końca linii jest ignorowane, a kod przed nim wykonuje się normalnie.
 
@@ -23,7 +23,7 @@ Dzięki temu `//` to szybki sposób na wyłączenie linii kodu bez jej usuwania.
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // wypisuje 10
 ```
 Druga linia jest teraz komentarzem, więc `total` pozostaje `10`. Usunięcie `//` przywraca linię do życia.
 
@@ -47,7 +47,7 @@ Niezależnie od tego, jakiego rodzaju komentarza użyjesz, zasada jest ta sama: 
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// wypisuje tylko a
 ```
 Gdy nie masz pewności, co program wypisze, usuń w myślach wszystkie komentarze i przeczytaj to, co zostało.
 
@@ -55,8 +55,8 @@ Gdy nie masz pewności, co program wypisze, usuń w myślach wszystkie komentarz
 
 W przeciwieństwie do `//`, który kończy się na końcu linii, komentarz `/*` kończy się dopiero na `*/`. Jeśli zapomnisz go zamknąć, JavaScript potraktuje cały dalszy kod jako część komentarza i zgłosi błąd składni:
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* w centymetrach
+console.log(width); // wciąż wewnątrz komentarza: SyntaxError, komentarz nigdy się nie zamyka
 ```
 Zarówno `//`, jak i `/* */` działają jako komentarze w linii, ale przy `/*` zawsze upewnij się, że `*/` jest na miejscu.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // wypisuje 100
 ```
 Ponieważ linie wewnątrz bloku są ignorowane, `total` nigdy się nie zmienia. Pamiętaj, że działa to tylko wtedy, gdy żadna z tych linii nie zawiera `*/`.
 
@@ -158,12 +158,12 @@ JavaScript ignoruje tę linię dokładnie tak jak komentarz, ale tylko wtedy, gd
 
 Dobry komentarz wyjaśnia, **dlaczego** kod coś robi, a nie **co** robi. Kod już pokazuje, co się dzieje; powtarzanie tego słowami dodaje szumu i dezaktualizuje się, gdy tylko kod się zmieni:
 ```javascript
-// set timeout to 30
+// ustaw timeout na 30
 const timeout = 30;
 ```
 Powód stojący za tą liczbą to coś, czego czytelnik nie zgadnie:
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// serwer zrywa bezczynne połączenia po 35 sekundach, więc zatrzymaj się wcześniej
 const timeout = 30;
 ```
 Jeśli komentarz tylko powtarza linię pod nim, usuń go albo zastąp powodem.
@@ -176,8 +176,8 @@ Niektóre komentarze stosują konwencję, którą rozumieją edytory. Najczęsts
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: odczytaj limit z ustawień
+// FIXME: powoduje awarię, gdy lista jest pusta
 ```
 Dla JavaScriptu to zwyczajne komentarze; edytory je wypisują, dzięki czemu łatwo znaleźć zaległą pracę. `TODO` zwykle stoi obok zaślepki, która utrzymuje działanie kodu, dopóki nie powstanie prawdziwa implementacja. Gdy skończysz pracę, zastąp zaślepkę i usuń znacznik w tej samej zmianie: nieaktualne `TODO` wprowadza w błąd.
 

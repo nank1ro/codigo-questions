@@ -25,7 +25,7 @@ Jeśli na koncie nie ma wystarczających środków do realizacji transakcji, zwr
 Przykład wywołania funkcji:
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// wypisuje 9,5
 ```
 
 # --before-seed--

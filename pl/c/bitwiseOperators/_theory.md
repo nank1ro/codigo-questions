@@ -6,7 +6,7 @@ Każda liczba całkowita jest przechowywana w pamięci jako rząd **bitów**, z 
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// wypisuje "8"
 ```
 Wzorce bitowe zapisuje się zwykle jako literały szesnastkowe, takie jak `0x0C`, ponieważ każda cyfra szesnastkowa odpowiada dokładnie czterem bitom. Do pracy na bitach zawsze używaj typów `unsigned` i wypisuj je za pomocą `%u`.
 
@@ -19,7 +19,7 @@ Operator **OR** `|` porównuje dwie wartości bit po bicie i zachowuje `1` tam, 
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// wypisuje "14"
 ```
 `|` to zwykły sposób scalania dwóch wzorców bitowych w jeden.
 
@@ -32,7 +32,7 @@ Operator **XOR** `^` (alternatywa rozłączna) zachowuje `1` tylko tam, gdzie dw
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// wypisuje "6"
 ```
 Wynika z tego przydatna własność: dwukrotne zastosowanie tego samego XOR przywraca pierwotną wartość.
 
@@ -42,7 +42,7 @@ Operator **NOT** `~` przyjmuje jeden operand i odwraca każdy z jego bitów: ka�
 Typ `unsigned int` przechowuje 32 bity, więc `~0x0Fu` odwraca wszystkie 32 i daje bardzo dużą liczbę. Aby zachować tylko bajt, który Cię interesuje, połącz `~` z `& 0xFF`:
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// wypisuje "240"
 ```
 `~` ma wyższy priorytet niż `&`, więc jest stosowane najpierw.
 Nie myl `~` z logicznym `!`: `!` patrzy na całą wartość i odpowiada `0` lub `1`, podczas gdy `~` przepisuje każdy bit.
@@ -55,7 +55,7 @@ Operator **przesunięcia w lewo** `<<` przesuwa każdy bit o podaną liczbę mie
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// wypisuje "12"
 ```
 Przesunięcie w lewo o `n` mnoży wartość przez 2 do potęgi `n`.
 Dwa błędy czynią program w języku C niezdefiniowanym: przesunięcie w lewo wartości ujemnej oraz przesunięcie o liczbę miejsc równą lub większą niż szerokość typu (32 dla `unsigned int`). Praca na wartościach **unsigned** uwalnia Cię od pierwszego z nich.
@@ -68,7 +68,7 @@ Operator **przesunięcia w prawo** `>>` przesuwa każdy bit w prawo; bity, któr
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// wypisuje "3"
 ```
 Przesunięcie w prawo o `n` dzieli wartość bez znaku przez 2 do potęgi `n`, odrzucając resztę z dzielenia.
 Przesunięcie w prawo wartości *ujemnej* nie jest przenośne, co jest jeszcze jednym powodem, aby pracę na bitach prowadzić na typach `unsigned`.
@@ -78,11 +78,11 @@ Przesunięcie w prawo wartości *ujemnej* nie jest przenośne, co jest jeszcze j
 Każdy binarny operator bitowy ma formę **przypisania złożonego**, która aktualizuje zmienną w miejscu: `&=`, `|=`, `^=`, `<<=` i `>>=`.
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // to samo co x = x & 10;
+x |= 1;   // to samo co x = x | 1;
+x ^= 3;   // to samo co x = x ^ 3;
+x <<= 1;  // to samo co x = x << 1;
+x >>= 2;  // to samo co x = x >> 2;
 ```
 Są czytelniejsze niż powtarzanie nazwy zmiennej i stanowią typowy sposób zmieniania bitów zmiennej flagowej.
 
@@ -95,7 +95,7 @@ Są czytelniejsze niż powtarzanie nazwy zmiennej i stanowią typowy sposób zmi
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// wypisuje "11"
 ```
 `0x0F` zachowuje cztery najniższe bity, nazywane dolnym **nibble**, a `0xFF` zachowuje osiem najniższych bitów, czyli cały bajt.
 
@@ -107,7 +107,7 @@ Aby **ustawić** pojedynczy bit, czyli włączyć go bez dotykania pozostałych,
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// wypisuje "6"
 ```
 Jeśli bit był już włączony, wartość się nie zmienia, co czyni ustawianie bitu bezpiecznym do powtarzania.
 
@@ -118,7 +118,7 @@ Aby **wyzerować** pojedynczy bit, czyli go wyłączyć, wykonaj na wartości op
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// wypisuje "5"
 ```
 `~(1u << 1)` to wartość, w której włączony jest każdy bit oprócz bitu `1`, więc AND pozostawia wszystko inne nietknięte.
 
@@ -129,7 +129,7 @@ Aby **przełączyć** pojedynczy bit, czyli odwrócić go niezależnie od jego a
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// wypisuje "7"
 ```
 Ponieważ XOR cofa sam siebie, ponowne przełączenie tego samego bitu przywraca pierwotną wartość.
 
@@ -138,8 +138,8 @@ Ponieważ XOR cofa sam siebie, ponowne przełączenie tego samego bitu przywraca
 Aby **sprawdzić** pojedynczy bit, wykonaj na wartości operację AND z maską i sprawdź, czy wynik różni się od `0`:
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // wypisuje "1"
+printf("%d\n", (value & (1u << 2)) != 0); // wypisuje "0"
 ```
 AND nie daje `1`: daje albo `0`, albo samą maskę, która dla bitu `3` wynosi `8`. Dlatego wynik porównuje się z `!= 0`, zamiast używać go jako zwykłej odpowiedzi.
 
@@ -150,7 +150,7 @@ AND nie daje `1`: daje albo `0`, albo samą maskę, która dla bitu `3` wynosi `
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// wypisuje "1"
 ```
 Jeden `unsigned int` może więc nieść 32 niezależne odpowiedzi tak/nie.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// wypisuje "0101"
 ```
 Przesunięcie wartości w prawo o `i` wprowadza bit `i` na skrajnie prawe miejsce, gdzie `& 1u` go wyodrębnia.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count wynosi 2
 ```
 Pętla zawsze się kończy, ponieważ wartość bez znaku przesuwana w prawo wystarczająco wiele razy staje się `0`.
 
@@ -186,6 +186,6 @@ Kilka małych liczb jest często upakowanych wewnątrz jednej większej wartośc
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// wypisuje "18", bajt 0x12
 ```
 Najpierw przesunięcie, potem maskowanie — to kolejność, którą należy zapamiętać: maska zawsze opisuje pole, gdy osiągnęło ono dół.

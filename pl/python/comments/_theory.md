@@ -2,7 +2,7 @@
 
 Jedynym rodzajem komentarza w Pythonie jest **komentarz jednolinijkowy**: zaczyna się od `#` i ciągnie do końca linii.
 ```python
-# Greets the user
+# Wita użytkownika
 print("Hello")
 ```
 Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego został napisany w ten sposób.
@@ -11,7 +11,7 @@ Używaj komentarzy, aby wyjaśnić, do czego służy fragment kodu albo dlaczego
 
 Komentarz nie musi mieć własnej linii: może następować po kodzie w tej samej linii. To **komentarz w linii**, dobre miejsce na krótką notatkę o tej konkretnej instrukcji:
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # poddaj się po trzech próbach
 ```
 Wszystko od `#` do końca linii jest ignorowane, a kod przed nim wykonuje się jak zwykle.
 
@@ -25,7 +25,7 @@ Dzięki temu `#` jest szybkim sposobem na wyłączenie linii kodu bez jej usuwan
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # wypisuje 10
 ```
 Druga linia jest teraz komentarzem, więc `total` pozostaje `10`. Usunięcie `#` przywraca linię do życia.
 
@@ -37,8 +37,8 @@ Wiele języków ma drugi rodzaj komentarza, **komentarz blokowy**, obejmujący k
 
 Gdy wyjaśnienie potrzebuje więcej niż jednej linii, postaw `#` na początku każdej linii:
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# Wypisuje baner powitalny.
+# Wywoływane raz, gdy aplikacja się uruchamia.
 print("Welcome!")
 ```
 Ten sam trik zakomentowuje od razu kilka linii kodu: po jednym `#` na linię. Każdy edytor potrafi dodać lub usunąć te `#` dla całego zaznaczenia jednym skrótem, więc to mniej pracy, niż się wydaje.
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # Zwraca powitanie dla name.
 ```
 Gdy funkcja nie ma docstringa, `__doc__` ma wartość `None`. To właśnie wypisuje `help(greet)` i to pokazuje edytor, gdy najedziesz kursorem na nazwę.
 
@@ -121,7 +121,7 @@ Docstringi i komentarze `#` wyglądają podobnie, ale odpowiadają na różne py
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # serwer zrywa bezczynne połączenia po 35 sekundach
     return 30
 ```
 A więc: dokumentacja funkcji trafia do docstringa, a notatki o implementacji — do komentarzy.
@@ -151,7 +151,7 @@ Niektóre komentarze są zgodne z konwencją, którą rozumieją edytory. Najcz�
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: wczytaj limit z ustawień
 ```
 Dla Pythona to zwykłe komentarze; edytory zbierają je w osobnym panelu, więc zaległa praca jest łatwa do znalezienia. `TODO` zwykle stoi obok kodu zastępczego, który utrzymuje program w działaniu, dopóki prawdziwy kod nie zostanie napisany.
 
@@ -162,7 +162,7 @@ Kiedy skończysz pracę, zamień kod zastępczy i usuń znacznik w tej samej zmi
 Komentarz umieszczony nad funkcją, aby powiedzieć, co funkcja robi, jest w złym miejscu. Właśnie do tego służy docstring: jest przypisany do funkcji, znajduje go `help()` i pokazują edytory, podczas gdy komentarz `#` nad `def` jest dla nich wszystkich niewidoczny.
 
 ```python
-# adds a and b
+# dodaje a i b
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ Pierwszy `#` jest częścią tekstu, a drugi rozpoczyna prawdziwy komentarz. To 
 
 Dobry komentarz wyjaśnia **dlaczego** kod coś robi, a nie **co** robi. Kod sam pokazuje, co się dzieje; powtarzanie tego słowami dodaje tylko szumu i starzeje się, gdy tylko kod się zmieni:
 ```python
-# set timeout to 30
+# ustaw timeout na 30
 timeout = 30
 ```
 Powód, dla którego wybrano tę liczbę, to coś, czego czytelnik nie odgadnie:
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# serwer zrywa bezczynne połączenia po 35 sekundach, więc przerwij wcześniej
 timeout = 30
 ```
 Jeśli komentarz tylko powtarza linię poniżej, usuń go albo zastąp powodem. Najlepsze komentarze to te, które mówią coś, czego kod powiedzieć nie potrafi.

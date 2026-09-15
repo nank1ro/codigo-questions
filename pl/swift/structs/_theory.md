@@ -77,6 +77,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12, bez nawiasów
 ```
 Właściwości obliczeniowe nie są częścią inicjalizatora memberwise, ponieważ nie ma nic do przechowania. Używaj ich, gdy wartość jest wyliczana z innych, a metodę, gdy praca wymaga parametrów.

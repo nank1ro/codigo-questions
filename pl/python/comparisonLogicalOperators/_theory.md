@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # wypisuje tylko "checking -1"
+check(2) or check(-3)   # wypisuje tylko "checking 2"
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False, sprawdzane są tylko klucze
 ```
 Oba zwracają wartość logiczną i czytają się jak angielski, co czyni je preferowanym sposobem sprawdzania przynależności zamiast pisania pętli.

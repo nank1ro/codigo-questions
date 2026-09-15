@@ -29,7 +29,7 @@ Napisz funkcję `isValid`, która przyjmuje ciąg znaków i zwraca `true`, gdy n
 Przykład wywołania funkcji:
 ```swift
 print(isValid("095 245 88"))
-// prints true
+// wypisuje true
 ```
 
 # --before-seed--

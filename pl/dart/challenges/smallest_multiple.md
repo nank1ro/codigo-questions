@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca najmniejszą dodatnią liczbę podzielną przez w
 Przykład wywołania funkcji:
 ```dart
 print(smallestMultiple(10));
-// prints 2520
+// wypisuje 2520
 ```
 
 # --seed--

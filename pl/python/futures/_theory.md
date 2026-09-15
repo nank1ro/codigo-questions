@@ -49,7 +49,7 @@ Wywołanie funkcji asynchronicznej nie wystarcza, aby ją uruchomić. Wywołanie
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # nic nie jest wypisywane
 ```
 Python ostrzega nawet o tym: `RuntimeWarning: coroutine 'hello' was never awaited`. Zapomniany `await` to najczęstszy błąd asynchroniczny: kod wygląda na wywołany, ale nigdy się nie wykonuje, a każda zmienna, która powinna przechowywać jego wynik, przechowuje zamiast tego obiekt korutyny.
 
@@ -60,7 +60,7 @@ Korutyny wywołują się nawzajem za pomocą `await`. Korutyna może użyć `awa
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # symuluje wolne wyszukiwanie
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # wypisuje pustą linię
 ```
 Wyjątek, którego nikt nie łapie, propaguje przez każde `await` aż do `asyncio.run`, które zgłasza go ponownie w kodzie synchronicznym, dokładnie jak zwykły stos wywołań.
 

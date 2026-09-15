@@ -7,7 +7,7 @@ Kompilator liczy znaki i sam dodaje na końcu `'\0'`.
 Aby wyświetlić ciąg znaków, użyj specyfikatora `%s`:
 ```c
 printf("%s\n", name);
-// prints "Codigo"
+// wypisuje "Codigo"
 ```
 
 ---
@@ -15,7 +15,7 @@ printf("%s\n", name);
 Terminator null zajmuje miejsce w pamięci: literał `"hi"` zajmuje 3 bajty: `'h'`, `'i'` i `'\0'`.
 Gdy sam deklarujesz rozmiar, zawsze zostaw dla niego miejsce:
 ```c
-char word[6] = "hello"; // 5 letters + '\0'
+char word[6] = "hello"; // 5 liter + '\0'
 ```
 Bez terminatora C nie ma jak wiedzieć, gdzie kończy się ciąg znaków.
 
@@ -39,7 +39,7 @@ word[5]; // 'g'
 ```
 Pojedynczy znak wyświetla się za pomocą `%c`. Znaki można też podmieniać:
 ```c
-word[0] = 'K'; // word is now "Koding"
+word[0] = 'K'; // word to teraz "Koding"
 ```
 
 ---
@@ -56,7 +56,7 @@ for (int i = 0; text[i] != '\0'; i++) {
 Tablicy nie można przypisać wartości operatorem `=` po jej deklaracji:
 ```c
 char copy[20];
-copy = "Codigo"; // error
+copy = "Codigo"; // błąd
 ```
 Aby skopiować ciąg znaków, użyj `strcpy(destination, source)` z `string.h`.
 Cel musi być wystarczająco duży, aby pomieścić wszystkie znaki plus `'\0'`.
@@ -67,7 +67,7 @@ Cel musi być wystarczająco duży, aby pomieścić wszystkie znaki plus `'\0'`.
 ```c
 char text[20] = "Hello";
 strcat(text, " World");
-// text is now "Hello World"
+// text to teraz "Hello World"
 ```
 Podobnie jak w `strcpy`, tablica docelowa musi mieć wystarczająco dużo miejsca na wynik.
 
@@ -96,7 +96,7 @@ Jeśli `source` jest dłuższe niż `n`, żaden `'\0'` nie zostaje zapisany: mus
 ```c
 char prefix[10];
 strncpy(prefix, "Codigo", 3);
-prefix[3] = '\0'; // prefix is "Cod"
+prefix[3] = '\0'; // prefix to "Cod"
 ```
 
 ---
@@ -120,7 +120,7 @@ text[i] = toupper(text[i]);
 `sprintf` działa jak `printf`, ale zapisuje sformatowany tekst do tablicy znaków zamiast na ekran:
 ```c
 char buffer[30];
-sprintf(buffer, "%d items", 3); // buffer is "3 items"
+sprintf(buffer, "%d items", 3); // buffer to "3 items"
 ```
 Bufor musi być wystarczająco duży na cały tekst i jego `'\0'`.
 

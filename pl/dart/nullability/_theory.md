@@ -94,7 +94,7 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3, już miało wartość
 ```
 
 Działa też na wpisach mapy, które są nullable, ponieważ klucza może brakować:
@@ -142,7 +142,7 @@ Sprawdzenie wartości nullable za pomocą `if` jest bezpieczniejsze niż `!`, a 
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // tutaj n jest typu int, ! nie jest potrzebne
   }
   return 0;
 }
@@ -153,7 +153,7 @@ Promocja działa też po wcześniejszym zwrocie:
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // n jest typu int od teraz
 }
 ```
 
@@ -207,7 +207,7 @@ Odczyt pola `late`, któremu nie przypisano jeszcze wartości, zgłasza `LateIni
 `late` można też połączyć z inicjalizatorem, który wykonuje się wtedy **leniwie**, przy pierwszym odczycie zmiennej:
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport() uruchamia się tylko, gdy report jest użyte
 ```
 
 ---
@@ -270,7 +270,7 @@ Jeszcze dwa operatory mają wariant null-aware.
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // nic się nie dzieje, numbers wciąż jest null
 ```
 
 **Rozwinięcie null-aware** `...?` wstawia elementy kolekcji typu nullable do literału, nie dodając nic, gdy kolekcja jest `null`:

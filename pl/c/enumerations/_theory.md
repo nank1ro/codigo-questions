@@ -7,7 +7,7 @@ Każda stała jest liczbą całkowitą: jeśli nie powiesz inaczej, pierwsza ma 
 Ponieważ są to liczby całkowite, wypisujesz je za pomocą `%d`:
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// wypisuje "1"
 ```
 
 ---
@@ -19,7 +19,7 @@ Nazwy zwykle pisze się wielkimi literami, tak jak inne stałe, i muszą być un
 
 Możesz też nadać stałej jawną wartość za pomocą `=`; stałe po niej dalej liczą od tej wartości:
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB wynosi 2, MAR wynosi 3
 ```
 Jawne wartości nie muszą być kolejne ani rosnące: `enum Status { OK = 200, NOT_FOUND = 404 };` jest całkowicie poprawne.
 
@@ -86,7 +86,7 @@ Nowa nazwa `Color` jest używana samodzielnie, bez poprzedzającego jej słowa k
 Stała enum jest automatycznie konwertowana na `int`, więc `int n = BLUE;` jest poprawne i zapisuje `2`.
 Odwrotną drogę wykonuje się za pomocą **rzutowania**, wpisując typ enum w nawiasach przed liczbą całkowitą:
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c to GREEN
 ```
 C nie sprawdza, czy liczba odpowiada jakiejś stałej: `(enum Color)7` się kompiluje, mimo że żadna stała nie ma wartości `7`, więc zweryfikuj liczby całkowite przed ich konwersją.
 
@@ -103,7 +103,7 @@ W połączeniu z operatorem reszty `%` pozwala to cyklicznie przechodzić przez 
 
 Częstą sztuczką jest dodanie jednej dodatkowej stałej na końcu wyliczenia, zwykle nazwanej `COUNT`: ponieważ numeracja zaczyna się od `0`, jej wartość to dokładnie liczba właściwych stałych przed nią.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT wynosi 3
 ```
 Ten wartownik pozwala przejść pętlą przez wszystkie stałe bez wpisywania liczby na sztywno, i pozostaje poprawny, gdy dodasz stałe przed nim:
 ```c
@@ -119,7 +119,7 @@ Wartownik `COUNT` ma też idealny rozmiar dla tablicy z jednym miejscem na stał
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // wypisuje "4"
 ```
 Pętla od `0` do `FRUIT_COUNT` odwiedza każde miejsce, a indeks pętli można zrzutować z powrotem na `enum Fruit`, gdy trzeba go zwrócić.
 

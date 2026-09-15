@@ -18,7 +18,7 @@ Napisz funkcję, która znajduje trójkę pitagorejską, gdzie a + b + c wynosi 
 Przykład wywołania funkcji:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// wypisuje 60
 ```
 
 # --seed--

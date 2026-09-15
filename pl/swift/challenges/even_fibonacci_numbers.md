@@ -18,7 +18,7 @@ Napisz funkcję, która zwraca sumę wszystkich parzystych liczb Fibonacciego do
 Przykład wywołania funkcji:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// wypisuje 10
 ```
 
 # --before-seed--

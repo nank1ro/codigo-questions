@@ -12,7 +12,7 @@ W ten sposób przypisaliśmy wartość `1` do zmiennej o nazwie `x`.
 Jeśli wydrukujemy zmienną `x`, otrzymamy liczbę `1`:
 ```javascript
 console.log(x);
-// prints 1
+// wypisuje 1
 ```
 
 ---
@@ -21,9 +21,9 @@ Zmienne są tak nazywane, ponieważ przechowywane przez nie wartości mogą się
 Możemy zaktualizować `x`, używając `=` i podając nową wartość.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // wypisuje 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // wypisuje 2
 ```
 
 ---
@@ -33,7 +33,7 @@ Tutaj możemy nadać zmiennej `y` wartość `x`
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // wypisuje 5
 ```
 
 ---
@@ -42,9 +42,9 @@ Kiedy aktualizujemy zmienną, zapomina ona swoją poprzednią wartość.
 Tutaj możemy wyświetlić zmienną `x` dwa razy i zobaczyć, jak aktualizuje się jej wartość.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // wypisuje 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // wypisuje 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 W JavaScript zmienne łańcuchowe można deklarować zarówno za pomocą podwójnych, jak i pojedynczych cudzysłowów:
 ```javascript
 let x = "May";
-// both are the same string
+// oba to ten sam ciąg znaków
 let y = 'May';
 console.log(x === y);
-// prints true
+// wypisuje true
 ```
 
 ---

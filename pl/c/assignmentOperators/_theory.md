@@ -27,7 +27,7 @@ Funkcjonalność jest taka sama, jedyna różnica polega na tym, że wykonuje od
 Zatem poniższe są dokładnie tym samym
 ```c
 num = num - 5;
-// is equal to
+// jest równe
 num -= 5;
 ```
 
@@ -38,7 +38,7 @@ Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Zatem poniższe są dokładnie tym samym
 ```c
 num = num * 5;
-// is equal to
+// jest równe
 num *= 5;
 ```
 
@@ -49,7 +49,7 @@ Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Zatem poniższe są dokładnie tym samym
 ```c
 num = num / 5;
-// is equal to
+// jest równe
 num /= 5;
 ```
 
@@ -60,6 +60,6 @@ Oblicza resztę z dzielenia zmiennej przez wartość i przypisuje wynik do tej z
 Zatem poniższe są dokładnie tym samym
 ```c
 num = num % 5;
-// is equal to
+// jest równe
 num %= 5;
 ```

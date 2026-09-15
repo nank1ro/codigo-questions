@@ -27,7 +27,7 @@ Funkcjonalność jest taka sama, jedyną różnicą jest to, że wykonuje odejmo
 Poniższe są dokładnie tym samym:
 ```swift
 var num = num - 5
-// is equal to
+// jest równe
 num -= 5
 ```
 
@@ -38,7 +38,7 @@ Mnoży zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Poniższe są dokładnie tym samym:
 ```swift
 var num = num * 5
-// is equal to
+// jest równe
 num *= 5
 ```
 
@@ -49,7 +49,7 @@ Dzieli zmienną przez wartość i przypisuje wynik do tej zmiennej.
 Poniższe są dokładnie tym samym:
 ```swift
 num = num / 5
-// is equal to
+// jest równe
 num /= 5
 ```
 
@@ -60,6 +60,6 @@ Oblicza resztę ze zmiennej i wartości, a wynik przypisuje do tej zmiennej.
 Poniższe są dokładnie tym samym:
 ```swift
 num = num % 5
-// is equal to
+// jest równe
 num %= 5
 ```

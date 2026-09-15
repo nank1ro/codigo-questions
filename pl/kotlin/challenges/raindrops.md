@@ -28,7 +28,7 @@ Napisz funkcję, która zwraca odpowiedni ciąg znaków, przykłady:
 Przykład wywołania funkcji:
 ```kotlin
 println(raindrops(28))
-// prints "Plong"
+// wypisuje "Plong"
 ```
 
 # --seed--

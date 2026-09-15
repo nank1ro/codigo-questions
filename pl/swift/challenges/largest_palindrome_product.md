@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje największy palindrom będący iloczynem dwóch
 Przykład wywołania funkcji:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// wypisuje 9009
 ```
 
 # --before-seed--

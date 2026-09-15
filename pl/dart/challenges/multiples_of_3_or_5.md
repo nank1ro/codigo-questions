@@ -16,7 +16,7 @@ Napisz funkcję, która zwraca sumę wszystkich wielokrotności 3 lub 5 poniżej
 Przykład wywołania funkcji:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// wypisuje 23
 ```
 
 # --seed--

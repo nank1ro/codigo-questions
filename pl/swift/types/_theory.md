@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 Gdy chcesz typ inny niż wnioskowany, dodaj adnotację. Literal liczby całkowitej może być przechowany w stałej `Double` lub `Float`, a literal jednego znaku w stałej `Character`:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, nie Int
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, nie jest liczbą całkowitą
+print(Int(" 42"))  // nil, spacje są niedozwolone
 print(Int("abc"))  // nil
 ```
 Dla tekstu dziesiętnego użyj `Double(text)`, który w ten sam sposób zwraca `Double?`: `Double("3.5")` to `Optional(3.5)`.
@@ -166,7 +166,7 @@ Ponieważ `Int(text)` i `Double(text)` zwracają `nil` w razie niepowodzenia, po
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, liczba całkowita jest też poprawnym Double
 ```
 Zwróć uwagę na ostatnią linię: każdy tekst zaakceptowany przez `Int` jest też akceptowany przez `Double`, więc sprawdź najpierw `Int`, gdy chcesz je odróżnić.
 
@@ -180,7 +180,7 @@ Każdy element nadal pamięta swój rzeczywisty typ, który ujawnia `type(of:)`.
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // działa tylko dla 1
     }
 }
 ```

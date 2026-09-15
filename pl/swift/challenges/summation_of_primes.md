@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje sumę wszystkich liczb pierwszych poniżej poda
 Przykład wywołania funkcji:
 ```swift
 print(primeSummation(10))
-// prints 17
+// wypisuje 17
 ```
 
 # --before-seed--

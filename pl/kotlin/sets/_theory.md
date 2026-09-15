@@ -15,7 +15,7 @@ val setName = setOf<itemsType>(item1, item2)
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// wypisuje [1, 2]
 ```
 
 W __[1]__ próbujemy utworzyć zbiór z liczbą __1__ pojawiającą się dwukrotnie, ale jak widać każdy element musi być unikalny i drugi __1__ jest automatycznie odrzucany.
@@ -38,7 +38,7 @@ Aby utworzyć modyfikowalny zbiór, użyj słowa kluczowego `mutableSetOf`
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// wypisuje [1, 2, 3, 4]
 ```
 
 ---
@@ -47,8 +47,8 @@ Najczęstszą operacją na `Set` jest sprawdzanie przynależności za pomocą `i
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // wypisuje true
+println(numbers.contains(5)) // wypisuje false
 ```
 
 Jak widać powyżej, `in` i `contains` zwracają wartość `Bool` informującą, czy przekazany element jest obecny w zbiorze

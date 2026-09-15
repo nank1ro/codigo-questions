@@ -9,7 +9,7 @@ Węzły łączy się, zapisując adres jednego w polu `next` drugiego, a do pól
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // wypisuje "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ Dodanie węzła na **początku** tworzy go, sprawia, że wskazuje on na obecną 
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // lista to teraz 8, 7
 ```
 Wstawianie do pustej listy działa tak samo: nowy węzeł wskazuje na `NULL` i staje się całą listą.
 

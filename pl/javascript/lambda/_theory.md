@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// wypisuje 5
 ```
 **Funkcja strzałkowa** to krótszy sposób zapisania tego samego: opuszczasz słowo kluczowe `function` i wstawiasz "grubą strzałkę" `=>` między listą parametrów a ciałem:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// wypisuje 5
 ```
 Funkcje strzałkowe zwykle zapisuje się w `const`, więc nazwy nie da się przez pomyłkę przypisać ponownie, a wywołuje się je dokładnie tak samo jak każdą inną funkcję.
 
@@ -23,13 +23,13 @@ Gdy ciało to **pojedyncze wyrażenie**, możesz opuścić klamry i słowo klucz
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// wypisuje 5
 ```
 Gdy jest **dokładnie jeden parametr**, możesz też opuścić nawiasy wokół niego:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// wypisuje 8
 ```
 Przy zerze parametrów albo przy dwóch lub więcej nawiasy są wymagane: `() => 42` oraz `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ Z niejawnym return wiąże się jedna pułapka. Funkcję strzałkową, której c
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// wypisuje undefined
 ```
 Tu `{ name: name }` to blok zawierający etykietę `name:`, po której następuje wyrażenie `name`. Nic nie jest zwracane, więc wywołanie daje `undefined`.
 Aby zwrócić literał obiektu w jednej linii, owiń go w **nawiasy okrągłe**, dzięki czemu JavaScript potraktuje go jako wyrażenie:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// wypisuje { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ Owijanie literału obiektu w nawiasy okrągłe to standardowy sposób tworzenia 
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// wypisuje 30
 ```
 Funkcja strzałkowa bez parametrów zaczyna się od pustej pary nawiasów `()`:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// wypisuje {}
 ```
 
 ---
@@ -71,9 +71,9 @@ Funkcje strzałkowe sprawdzają się przede wszystkim jako **callbacki**: funkcj
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// wypisuje [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// wypisuje [ 3, 4 ]
 ```
 Obie zwracają nową tablicę i pozostawiają oryginał nietkniętym, więc można je łączyć w łańcuch: `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ Jeszcze dwie metody tablic przyjmują callback.
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// wypisuje 1, 2 i 3 w trzech liniach
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// wypisuje 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// wypisuje [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// wypisuje 70
 ```
 
 ---
@@ -111,9 +111,9 @@ Parametry funkcji strzałkowej obsługują te same możliwości co parametry zwy
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// wypisuje Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// wypisuje Hello, Ana!
 ```
 Zauważ, że parametr z wartością domyślną zawsze wymaga nawiasów, nawet gdy jest jedyny: `name = "World" => ...` to błąd składni.
 
@@ -123,7 +123,7 @@ Zauważ, że parametr z wartością domyślną zawsze wymaga nawiasów, nawet gd
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// wypisuje 3
 ```
 Zwykłe funkcje mają też ukryty obiekt przypominający tablicę, `arguments`, przechowujący wszystkie otrzymane argumenty. Funkcje strzałkowe **nie**: wewnątrz strzałki `arguments` odnosi się do `arguments` otaczającej funkcji albo w ogóle nie istnieje. Gdy w funkcji strzałkowej potrzebujesz "wszystkich argumentów", użyj parametru reszty.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// wypisuje 1
 console.log(next());
-// prints 2
+// wypisuje 2
 ```
 Nikt inny nie może odczytać ani zresetować `count`: żyje on tylko wewnątrz zwróconej funkcji. Drugie wywołanie `makeCounter()` tworzy niezależny licznik z własnym `count`.
 
@@ -154,8 +154,8 @@ Ponieważ funkcja jest wartością, funkcja strzałkowa może **zwracać inną f
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// wypisuje 15
 console.log(makeAdder(1)(5));
-// prints 6
+// wypisuje 6
 ```
 Czytaj od lewej do prawej: `makeAdder` przyjmuje `amount` i zwraca `(n) => n + amount`, funkcję strzałkową, która przechwytuje `amount` dzięki domknięciu. `makeAdder(1)(5)` od razu wywołuje zwróconą funkcję.

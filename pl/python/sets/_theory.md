@@ -54,7 +54,7 @@ Istnieją dwa sposoby usunięcia elementu:
 - `discard(value)` usuwa ją, jeśli jest obecna, i **nic nie robi** w przeciwnym razie, bez błędu
 ```python
 letters.remove("a")
-letters.discard("z")  # "z" is not there, but no error
+letters.discard("z")  # "z" go nie ma, ale bez błędu
 letters.remove("z")   # KeyError: 'z'
 ```
 
@@ -158,7 +158,7 @@ Zbiór może zawierać tylko elementy **haszowalne**, czyli wartości, które ni
 Próba dodania listy, słownika lub innego zbioru zgłasza `TypeError`:
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # ok, to krotka
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 Zbiory krotek są przydatne do śledzenia unikalnych par, jak współrzędne czy rekordy (name, age):

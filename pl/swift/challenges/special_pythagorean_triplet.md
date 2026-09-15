@@ -16,7 +16,7 @@ Napisz funkcję, która znajduje iloczyn a × b × c trójki pitagorejskiej, gdz
 Przykład wywołania funkcji:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// wypisuje 60
 ```
 
 # --before-seed--

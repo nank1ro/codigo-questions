@@ -1,12 +1,12 @@
 Każda zmienna znajduje się gdzieś w pamięci, a to miejsce ma numer zwany jej **adresem**. Operator `&`, czytany „adres", podaje adres zmiennej:
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // wypisuje coś w rodzaju 0x7ffd5c3e9a4c
 ```
 Specyfikator `%p` wypisuje adres; dokładna liczba zmienia się z uruchomienia na uruchomienie, więc programy nigdy nie polegają na jej wartości.
 Adres jest przechowywany w zmiennej będącej **wskaźnikiem**. Wskaźnik deklaruje się, podając typ, na który wskazuje, a po nim `*`:
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p jest wskaźnikiem na int i przechowuje adres x
 ```
 Mówi się teraz, że `p` **wskazuje na** `x`. Dwa wskaźniki są równe, gdy przechowują ten sam adres, więc `p == &x` jest prawdą.
 
@@ -16,7 +16,7 @@ Sam wskaźnik to tylko adres. Aby odczytać wartość zapisaną pod tym adresem,
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // wypisuje "42"
 ```
 `*p` znaczy „wartość, na którą wskazuje `p`", i jest to `int`, podobnie jak samo `x`. Ten sam symbol `*` pełni dwie role: w deklaracji `int *p` oznacza „to jest wskaźnik", a w wyrażeniu `*p` prowadzi wskaźnikiem do wartości.
 
@@ -27,7 +27,7 @@ Do wyłuskanego wskaźnika można też **przypisywać** wartość. Zapis do `*p`
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // wypisuje "10"
 ```
 `x` i `*p` to dwie nazwy tej samej pamięci. Przypisanie do `p` bez `*` zmieniłoby zamiast tego **adres**, który przechowuje wskaźnik, a nie wartość zapisaną pod nim.
 
@@ -51,7 +51,7 @@ Wskaźnik może wskazywać na dowolny typ: `double *`, `char *`, `bool *` i tak 
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price wynosi teraz 19.0
 ```
 Wskaźnik musi pasować do typu zmiennej, na którą wskazuje; `int *p = &price;` zostaje odrzucony przez kompilator. `NULL` to jedyna wartość, która pasuje do wskaźnika dowolnego typu.
 
@@ -62,7 +62,7 @@ Wskaźnik na `char` działa jak każdy inny wskaźnik: przechowuje adres pojedyn
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // wypisuje "A"
 ```
 Odczyt przez wskaźnik i zapis przez niego można dowolnie łączyć: `*p = *p + 1` zamienia `'A'` na `'B'`.
 
@@ -70,9 +70,9 @@ Odczyt przez wskaźnik i zapis przez niego można dowolnie łączyć: `*p = *p +
 
 Wskaźnik przechowuje adres, a każdy adres ma ten sam rozmiar na danej maszynie, niezależnie od typu przechowywanego pod nim. `sizeof` wskaźnika jest więc takie samo dla `char *`, `int *` i `double *`: `8` bajtów w systemie 64-bitowym, `4` w 32-bitowym:
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // wypisuje "8" w systemie 64-bitowym
+printf("%zu\n", sizeof(double)); // wypisuje "8"
+printf("%zu\n", sizeof(char));   // wypisuje "1"
 ```
 Nie myl rozmiaru wskaźnika z rozmiarem tego, na co wskazuje: `sizeof(p)` to rozmiar adresu, a `sizeof(*p)` to rozmiar wartości.
 
@@ -81,7 +81,7 @@ Nie myl rozmiaru wskaźnika z rozmiarem tego, na co wskazuje: `sizeof(p)` to roz
 Nazwa tablicy użyta w wyrażeniu daje adres jej **pierwszego elementu**, więc można ją przypisać bezpośrednio do wskaźnika:
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // to samo co &numbers[0]
 ```
 Dodanie liczby całkowitej do wskaźnika przesuwa go do przodu o tyle **elementów**, nie bajtów: `p + 1` to adres `numbers[1]`, a `*(p + 1)` to `20`. Kompilator skaluje krok o rozmiar typu.
 Indeksowanie działa też na wskaźnikach: `p[i]` jest zdefiniowane jako `*(p + i)`, więc `p[2]` to `30`. Nazywa się to **arytmetyką wskaźników**.
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter wynosi teraz 0
 ```
 Klasycznym przykładem jest zamiana dwóch zmiennych, która wymaga tymczasowej kopii jednej wartości, podczas gdy druga jest nadpisywana.
 
@@ -159,8 +159,8 @@ Wywołujący odczytuje potem pola przez zwrócony wskaźnik za pomocą `->`, po 
 
 `const` może chronić wartość albo wskaźnik, zależnie od tego, gdzie zostało zapisane:
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // wskaźnik na stałą: *p nie można zmienić, p może wskazywać gdzie indziej
+int *const q = &a; // stały wskaźnik: q zawsze wskazuje na a, ale *q można zmienić
 ```
 Czytaj deklarację od prawej do lewej: `p` to wskaźnik na stałą typu `int`; `q` to stały wskaźnik na `int`. Wskaźnik na stałą to zwykły sposób obiecania, że funkcja tylko **odczytuje** to, co otrzymuje, jak w `int sum(const int *values, int size)`. Można jej przekazać zwykłą zmienną; obietnica ogranicza tylko to, co funkcja może zrobić.
 

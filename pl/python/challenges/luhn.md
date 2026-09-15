@@ -27,7 +27,7 @@ Napisz funkcję `is_valid`, która przyjmuje ciąg znaków i zwraca `True`, gdy 
 Przykład wywołania funkcji:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# wypisuje True
 ```
 
 # --seed--

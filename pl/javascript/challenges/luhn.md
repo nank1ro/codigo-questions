@@ -27,7 +27,7 @@ Napisz funkcję `isValid`, która przyjmuje ciąg znaków i zwraca `true`, gdy n
 Przykład wywołania funkcji:
 ```javascript
 console.log(isValid("095 245 88"));
-// prints true
+// wypisuje true
 ```
 
 # --before-seed--

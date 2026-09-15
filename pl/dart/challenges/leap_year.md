@@ -18,7 +18,7 @@ Zwróć `true` jeśli to rok przestępny, `false` w przeciwnym razie.
 Przykład wywołania funkcji:
 ```dart
 print(leapYear(2000));
-// prints true
+// wypisuje true
 ```
 
 # --seed--

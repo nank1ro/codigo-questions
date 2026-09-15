@@ -5,7 +5,7 @@ W Swift używamy słowa kluczowego `func` po którym następuje nazwa funkcji:
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // wypisuje "Hello!"
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// wypisuje "Hello Smith! Welcome on board :)"
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ Możesz zdefiniować _domyślną_ wartość dla dowolnego parametru w funkcji, p
 Jeśli wartość domyślna jest zdefiniowana, możesz pominąć ten parametr przy wywoływaniu funkcji
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // zrób tutaj coś
 }
 ```
 
@@ -62,7 +62,7 @@ Na przykład, parametr wariadyczny o nazwie `numbers` i typie `Double...` jest d
 
 W funkcjach możemy dodać _opcjonalny komentarz_ wyjaśniający, co robi funkcja:
 ```swift
-/// Prints 'Hello World' to the console.
+/// Wypisuje 'Hello World' na konsolę.
 func helloWorld() {
     print("Hello, World!")
 }

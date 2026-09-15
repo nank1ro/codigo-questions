@@ -17,7 +17,7 @@ Zwróć sumę cyfr liczby `N`.
 Przykład wywołania funkcji:
 ```kotlin
 println(sumDigits(28))
-// prints 10
+// wypisuje 10
 ```
 
 # --seed--

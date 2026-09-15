@@ -23,13 +23,13 @@ Indeks listy zachowuje się jak każda inna nazwa zmiennej! Może być używany 
 Widziałeś, jak uzyskać dostęp do indeksu listy w ten sposób:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # Pobiera wartość "Jeremiah"
 ```
 Tak wygląda przypisanie:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # Pobiera nową wartość "Jordan"
 ```
 
 ---
@@ -69,9 +69,9 @@ W Pythonie, gdy w ten sposób określamy część listy, uwzględniamy element z
 Możesz wycinać ciąg znaków dokładnie tak samo jak listę! W rzeczywistości możesz myśleć o ciągach znaków jako o listach znaków: każdy znak jest kolejnym elementem listy, zaczynając od indeksu `0`.
 ```python
 list_name[:2]
-# Grabs the first two items
+# Pobiera pierwsze dwa elementy
 list_name[3:]
-# Grabs the fourth through last items
+# Pobiera elementy od czwartego do ostatniego
 ```
 Jeśli wycięty fragment listy obejmuje pierwszy lub ostatni element listy (lub ciągu znaków), indeks tego elementu nie musi być podany.
 

@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// wypisuje "Hello!"
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// wypisuje "Hello Smith! Welcome on board :)"
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ Możesz zdefiniować _domyślną_ wartość dla dowolnego parametru w funkcji, p
 Jeśli zdefiniowana jest wartość domyślna, możesz pominąć ten parametr podczas wywoływania funkcji
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // zrób coś tutaj
 }
 ```
 
@@ -54,7 +54,7 @@ Na przykład parametr rest o nazwie `numbers` jest dostępny w ciele funkcji jak
 
 W funkcjach możemy dodać _opcjonalny komentarz_ wyjaśniający, co robi funkcja:
 ```javascript
-// Prints 'Hello World' to the console.
+// Wypisuje 'Hello World' w konsoli.
 function helloWorld() {
     console.log("Hello, World!");
 }
