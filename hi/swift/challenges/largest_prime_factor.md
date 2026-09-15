@@ -16,7 +16,7 @@ title: सबसे बड़ा अभाज्य गुणनखंड
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(largestPrimeFactor(13195))
-// prints 29
+// 29 प्रिंट करता है
 ```
 
 # --before-seed--

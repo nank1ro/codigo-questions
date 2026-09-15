@@ -39,7 +39,7 @@ if user is not None:
 ```python
 count = 0
 if not count:
-    print("missing?")   # printed, but 0 is a real value!
+    print("missing?")   # प्रिंट हुआ, लेकिन 0 एक वास्तविक मान है!
 ```
 जब "कोई मान नहीं" और "खाली मान" को अलग-अलग ट्रीट करना हो, तो पहले `is None` जाँचें, फिर truthiness:
 ```python
@@ -125,7 +125,7 @@ print(name or "anonymous")  # Ada
 ```python
 timeout = 0
 seconds = timeout if timeout is not None else 30
-print(seconds)  # 0, not 30
+print(seconds)  # 0, 30 नहीं
 ```
 
 ---

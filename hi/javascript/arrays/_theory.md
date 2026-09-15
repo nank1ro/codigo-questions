@@ -23,15 +23,15 @@ arrayName[index];
 आपने देखा कि ऐरे इंडेक्स को इस प्रकार कैसे एक्सेस करते हैं:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// "Jeremiah" मान प्रिंट करता है
 console.log(names[0]);
 ```
 असाइनमेंट इस प्रकार काम करता है:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// नया मान "Jordan" असाइन करें
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// "Jordan" मान प्रिंट करता है
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ console.log(names[0]);
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"] प्रिंट करता है
 ```
 
 ---
@@ -60,7 +60,7 @@ console.log(letters);
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// [2, 3] प्रिंट करता है
 ```
 पहले, हम `numbers` नामक एक ऐरे बनाते हैं।
 फिर, हम ऐरे का एक उपभाग लेते हैं और इसे slice ऐरे में संग्रहीत करते हैं।
@@ -71,9 +71,9 @@ console.log(slice);
 
 JavaScript में हम ऐरे को जैसे चाहें स्लाइस कर सकते हैं!
 ```javascript
-// Grabs the first two items
+// पहले दो आइटम लेता है
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// चौथे से आखिरी तक के आइटम लेता है
 listName.slice(3);
 ```
 यदि आपके ऐरे स्लाइस में ऐरे का पहला या आखिरी आइटम शामिल है, तो उस आइटम के लिए इंडेक्स शामिल करने की आवश्यकता नहीं है
@@ -94,13 +94,13 @@ JavaScript में हम `indexOf()` मेथड का उपयोग क�
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// 1 प्रिंट करता है
 ```
 ऊपर दिया गया कोड पहला इंडेक्स प्रिंट करता है जिसमें स्ट्रिंग `"Zac"` है, इस मामले में `1`।
 हम `splice()` मेथड का उपयोग करके किसी विशिष्ट इंडेक्स पर ऐरे में आइटम भी डाल सकते हैं:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"] प्रिंट करता है
 ```
 ऊपर दिया गया कोड `"Ali"` को इंडेक्स `1` पर डालता है, जो इस इंडेक्स के बाद सब कुछ 1 से नीचे खिसका देता है।
 दूसरा मान `0` का अर्थ है _deleteCount_, इस मामले में, हम ऐरे में कोई आइटम नहीं हटाते; लेकिन अगर हमने `1` निर्दिष्ट किया होता तो `Zac` मान ऐरे से हटा दिया जाता
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// 1, 2, 3 प्रिंट करता है
 ```
 `for` कीवर्ड के बाद एक वेरिएबल नाम आता है, इसे बारी-बारी से प्रत्येक ऐरे आइटम का मान असाइन किया जाएगा।

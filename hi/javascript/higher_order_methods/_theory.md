@@ -7,7 +7,7 @@ function twice(fn, value) {
   return fn(fn(value));
 }
 console.log(twice(shout, "hi"));
-// prints HI!!
+// HI!! प्रिंट करता है
 ```
 ध्यान दें कि `shout` को **बिना कोष्ठक के** पास किया गया है: `twice(shout, "hi")` फ़ंक्शन को ही सौंपता है, जबकि `twice(shout("hi"), "hi")` पहले `shout` को कॉल करता और उसका परिणाम, यानी स्ट्रिंग `"HI!"`, पास करता, जिसे कॉल नहीं किया जा सकता।
 
@@ -21,7 +21,7 @@ function each(items, action) {
   }
 }
 each(["a", "b"], (letter) => console.log(letter));
-// prints a and b on two lines
+// दो लाइनों में a और b प्रिंट करता है
 ```
 Callback को एक बार में एक एलिमेंट मिलता है। यह ऊपर की तरह इनलाइन लिखा arrow फ़ंक्शन हो सकता है, या किसी वेरिएबल में रखा कोई भी फ़ंक्शन। आगे आप जिन बिल्ट-इन array मेथड्स से मिलेंगे, वे भीतर से ठीक इसी तरह काम करते हैं।
 
@@ -32,9 +32,9 @@ Callback को एक बार में एक एलिमेंट मि�
 const prices = [5, 10];
 const doubled = prices.map((p) => p * 2);
 prices.forEach((p) => console.log(p));
-// prints 5 and 10 on two lines
+// दो लाइनों में 5 और 10 प्रिंट करता है
 console.log(doubled);
-// prints [ 10, 20 ]
+// [ 10, 20 ] प्रिंट करता है
 ```
 एक आम ग़लती है `forEach` के परिणाम को सहेजना या उसके बाद कोई और मेथड जोड़ना: जोड़ने के लिए कुछ है ही नहीं, क्योंकि वह `undefined` लौटाता है। सरल नियम: जब आपको नए मान चाहिए तब `map` का उपयोग करें, और जब सिर्फ़ कुछ *करना* हो तब `forEach` का।
 
@@ -46,9 +46,9 @@ console.log(doubled);
 ```javascript
 const numbers = [3, 8, 5];
 console.log(numbers.filter((n) => n > 4));
-// prints [ 8, 5 ]
+// [ 8, 5 ] प्रिंट करता है
 console.log(numbers.reduce((sum, n) => sum + n, 0));
-// prints 16
+// 16 प्रिंट करता है
 ```
 चूँकि `filter` और `map` array लौटाते हैं, आप उन्हें जोड़ सकते हैं और अंत में `reduce` लगा सकते हैं: `numbers.filter(...).map(...).reduce(...)`।
 
@@ -61,9 +61,9 @@ console.log(numbers.reduce((sum, n) => sum + n, 0));
 ```javascript
 const scores = [72, 45, 90];
 console.log(scores.find((s) => s < 60));
-// prints 45
+// 45 प्रिंट करता है
 console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
-// prints true false
+// true false प्रिंट करता है
 ```
 तीनों उत्तर मिलते ही रुक जाते हैं, इसलिए वे कभी ज़रूरत से ज़्यादा एलिमेंट नहीं देखते।
 
@@ -73,9 +73,9 @@ console.log(scores.some((s) => s === 90), scores.every((s) => s >= 60));
 बिना तुलना फ़ंक्शन के, `sort()` हर एलिमेंट को **स्ट्रिंग** में बदलकर एक-एक अक्षर की तुलना करता है, इसलिए `10` `9` से पहले आता है क्योंकि `"1"` `"9"` से छोटा है:
 ```javascript
 console.log([10, 9, 1].sort());
-// prints [ 1, 10, 9 ]
+// [ 1, 10, 9 ] प्रिंट करता है
 console.log([10, 9, 1].sort((a, b) => a - b));
-// prints [ 1, 9, 10 ]
+// [ 1, 9, 10 ] प्रिंट करता है
 ```
 चूँकि `sort` array को बदल देता है, जब आपको मूल क्रम भी चाहिए तो एक कॉपी को क्रमबद्ध करें: `[...numbers].sort(...)`। स्ट्रिंग्स के लिए तुलना फ़ंक्शन के रूप में `(a, b) => a.localeCompare(b)` का उपयोग करें, जो पाठ को वर्णमाला क्रम में लगाता है।
 
@@ -86,7 +86,7 @@ console.log([10, 9, 1].sort((a, b) => a - b));
 const items = [{ name: "b", size: 3 }, { name: "a", size: 1 }];
 const bySize = [...items].sort((x, y) => x.size - y.size);
 console.log(bySize.map((item) => item.name));
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] प्रिंट करता है
 ```
 कॉपी को क्रमबद्ध करने से `items` अपने मूल क्रम में ही रहता है।
 
@@ -101,9 +101,9 @@ function makeMultiplier(factor) {
 }
 const triple = makeMultiplier(3);
 console.log(triple(5));
-// prints 15
+// 15 प्रिंट करता है
 console.log(makeMultiplier(10)(5));
-// prints 50
+// 50 प्रिंट करता है
 ```
 `makeMultiplier` की हर कॉल अपने अलग `factor` वाला एक नया फ़ंक्शन बनाती है। इसी तरह एक ही साँचे से मिलते-जुलते फ़ंक्शनों का परिवार बनाया जाता है। यही बात arrow फ़ंक्शनों से भी लिखी जा सकती है: `const makeMultiplier = (factor) => (n) => n * factor;`।
 
@@ -122,7 +122,7 @@ const counter = makeCounter();
 counter.increment();
 counter.increment();
 console.log(counter.value());
-// prints 2
+// 2 प्रिंट करता है
 ```
 उन दो फ़ंक्शनों के अलावा बाहर से कोई `count` को न पढ़ सकता है और न रीसेट कर सकता है: यह वेरिएबल **निजी** है। `makeCounter()` की दूसरी कॉल पूरी तरह अलग `count` बनाती है।
 
@@ -135,7 +135,7 @@ const trim = (s) => s.trim();
 const shout = (s) => s.toUpperCase();
 const clean = compose(shout, trim);
 console.log(clean("  hi  "));
-// prints HI
+// HI प्रिंट करता है
 ```
 क्रम मायने रखता है: `compose(f, g)` पहले `g` चलाता है, फिर `f`। इस तरह छोटे फ़ंक्शनों को जोड़कर प्रोग्राम बनाने को **फ़ंक्शन कंपोज़िशन** कहते हैं।
 
@@ -146,7 +146,7 @@ console.log(clean("  hi  "));
 const isLong = (word) => word.length > 4;
 const isShort = (word) => !isLong(word);
 console.log(["tree", "forest"].filter(isShort));
-// prints [ 'tree' ]
+// [ 'tree' ] प्रिंट करता है
 ```
 एक सामान्य `not(predicate)` यह काम किसी भी प्रेडिकेट के लिए कर देगा: यह एक नया फ़ंक्शन लौटाता है जो उसी आर्ग्युमेंट के साथ `predicate` को कॉल करता है और परिणाम को `!` से उलट देता है। `filter`, `find`, `some` और `every` के प्रेडिकेट को एलिमेंट पहले आर्ग्युमेंट के रूप में मिलता है, इसलिए रैपर को सिर्फ़ वही एक मान आगे भेजना होता है।
 
@@ -160,7 +160,7 @@ const tally = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(tally);
-// prints { yes: 2, no: 1 }
+// { yes: 2, no: 1 } प्रिंट करता है
 ```
 `acc[vote] ?? 0` मौजूदा गिनती पढ़ता है, और जब वह key अभी मौजूद नहीं है तो `0`।
 
@@ -173,7 +173,7 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(21));
-// prints 42
+// 42 प्रिंट करता है
 ```
 मेथड्स के लिए `this` तय करना मायने रखता है। जब कोई मेथड अपने ऑब्जेक्ट से बाहर निकालकर अकेले कॉल किया जाता है, तो `this` उस ऑब्जेक्ट को नहीं दर्शाता, इसलिए `this.name` `undefined` हो जाता है। `bind` उसे ऑब्जेक्ट से बाँध देता है:
 ```javascript
@@ -183,10 +183,10 @@ const user = {
 };
 const loose = user.hello;
 console.log(loose());
-// prints Hi undefined
+// Hi undefined प्रिंट करता है
 const bound = user.hello.bind(user);
 console.log(bound());
-// prints Hi Ana
+// Hi Ana प्रिंट करता है
 ```
 मूल फ़ंक्शन कभी नहीं बदलता: `bind` हमेशा एक नया फ़ंक्शन बनाता है, जिसका `name` मूल नाम के आगे `bound ` लगाकर बनता है।
 
@@ -210,7 +210,7 @@ const init = once(() => {
   return "ready";
 });
 console.log(init(), init(), calls);
-// prints ready ready 1
+// ready ready 1 प्रिंट करता है
 ```
 रैपर को दो निजी वेरिएबल चाहिए: क्या `fn` पहले ही चल चुका है, और सहेजा गया परिणाम। दोनों क्लोज़र में रहते हैं, बाहरी दुनिया के लिए अदृश्य। रैपर के सभी आर्ग्युमेंट `fn` तक पहुँचाने के लिए रैपर को rest पैरामीटर `(...args)` के साथ घोषित करें और `fn(...args)` कॉल करें।
 
@@ -220,6 +220,6 @@ console.log(init(), init(), calls);
 ```javascript
 const byInitial = groupBy(["hi", "yo", "hey"], (w) => w[0]);
 console.log(byInitial);
-// prints { h: [ 'hi', 'hey' ], y: [ 'yo' ] }
+// { h: [ 'hi', 'hey' ], y: [ 'yo' ] } प्रिंट करता है
 ```
 हर एलिमेंट के लिए key निकालें, अगर उस key का array अभी नहीं है तो उसे बनाएँ (`acc[key] ?? []`), एलिमेंट जोड़ें और संचायक लौटाएँ। चूँकि `keyFn` कॉल करने वाला चुनता है, वही फ़ंक्शन शब्दों को पहले अक्षर से, लोगों को शहर से या संख्याओं को सम-विषम से समूहित कर देता है।

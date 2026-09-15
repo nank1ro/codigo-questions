@@ -2,9 +2,9 @@
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि दो अभिव्यक्तियाँ बराबर हैं या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 == 2); 
-// prints true
+// true प्रिंट करता है
 console.log(2 == 3);
-// prints false
+// false प्रिंट करता है
 ```
 
 ---
@@ -13,9 +13,9 @@ console.log(2 == 3);
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि दो अभिव्यक्तियाँ **बराबर नहीं** हैं, उदाहरण के लिए:
 ```javascript
 console.log(2 != 2);
-// prints false
+// false प्रिंट करता है
 console.log(2 != 3); 
-// prints true
+// true प्रिंट करता है
 ```
 यह *बराबर* ऑपरेटर का बिल्कुल विपरीत है
 
@@ -25,9 +25,9 @@ console.log(2 != 3);
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से बड़ी है या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 > 2);
-// prints false
+// false प्रिंट करता है
 console.log(3 > 2);
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -36,9 +36,9 @@ console.log(3 > 2);
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से छोटी है या नहीं, उदाहरण के लिए:
 ```javascript
 console.log(2 < 2);
-// prints false
+// false प्रिंट करता है
 console.log(2 < 3);
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -47,11 +47,11 @@ console.log(2 < 3);
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से बड़ी या बराबर है, उदाहरण के लिए:
 ```javascript
 console.log(2 >= 2); 
-// prints true
+// true प्रिंट करता है
 console.log(3 >= 2);
-// prints true
+// true प्रिंट करता है
 console.log(3 >= 4);
-// prints false
+// false प्रिंट करता है
 ```
 
 ---
@@ -60,11 +60,11 @@ console.log(3 >= 4);
 यह एक **boolean** (`true` या `false`) लौटाता है जो बताता है कि एक अभिव्यक्ति दूसरी से छोटी या बराबर है, उदाहरण के लिए:
 ```javascript
 console.log(2 <= 2); 
-// prints true
+// true प्रिंट करता है
 console.log(3 <= 2);
-// prints false
+// false प्रिंट करता है
 console.log(3 <= 4);
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -73,9 +73,9 @@ console.log(3 <= 4);
 यह पहला ऑपरेंड लौटाता है जो *false* का मूल्यांकन करता है या अंतिम ऑपरेंड अगर सभी *true* हैं।
 ```javascript
 console.log(2 == 2 && 2 == 3);
-// prints false
+// false प्रिंट करता है
 console.log(1 == 1 && 1 == 1.0);
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -84,9 +84,9 @@ console.log(1 == 1 && 1 == 1.0);
 यह पहला ऑपरेंड लौटाता है जो *true* का मूल्यांकन करता है या अंतिम ऑपरेंड अगर सभी *false* हैं।
 ```javascript
 console.log(2 == 2 || 2 == 3);
-// prints true
+// true प्रिंट करता है
 console.log(1 == 2 || 1 == 3);
-// prints false
+// false प्रिंट करता है
 ```
 
 ---
@@ -95,9 +95,9 @@ console.log(1 == 2 || 1 == 3);
 यह एक boolean लौटाता है जो किसी अभिव्यक्ति की लॉजिकल स्थिति का उल्टा होता है।
 ```javascript
 console.log(!true);
-// prints false
+// false प्रिंट करता है
 console.log(!false);
-// prints true
+// true प्रिंट करता है
 console.log(!(2 == 2));
-// prints false
+// false प्रिंट करता है
 ```

@@ -14,8 +14,8 @@ Boolean मानों को तार्किक कहा जाता ह�
 
 Boolean मानों को उनके पहले `!` का उपयोग करके नकारा भी जा सकता है, उदाहरण:
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // false प्रिंट करता है
+println(!false) // true प्रिंट करता है
 ```
 
 ---
@@ -26,10 +26,10 @@ println(!false) // prints true
 - `||` (_or_): true उत्पन्न करता है यदि ऑपरेटर के बाईं या दाईं ओर का व्यंजक true है, या यदि दोनों true हैं।
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // true प्रिंट करता है
+println(true && false) // false प्रिंट करता है
+println(false && false) // false प्रिंट करता है
+println(true || true) // true प्रिंट करता है
+println(true || false) // true प्रिंट करता है
+println(false || false) // false प्रिंट करता है
 ```

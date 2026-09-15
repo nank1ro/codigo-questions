@@ -9,7 +9,7 @@ typedef struct Node {
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // "2" प्रिंट करता है
 ```
 
 ---
@@ -42,7 +42,7 @@ for (Node *n = head; n != NULL; n = n->next) {
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // लिस्ट अब 8, 7 है
 ```
 खाली लिस्ट पर पुश करना भी उसी तरह काम करता है: नया नोड `NULL` की ओर इशारा करता है और पूरी लिस्ट बन जाता है।
 

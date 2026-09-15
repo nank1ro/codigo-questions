@@ -16,7 +16,7 @@ title: जोड़
 फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(addition(1, 2))
-// prints 3
+// 3 प्रिंट करता है
 ```
 
 # --seed--

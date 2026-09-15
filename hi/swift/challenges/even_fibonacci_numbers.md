@@ -18,7 +18,7 @@ title: सम फिबोनाची संख्याएँ
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// 10 प्रिंट करता है
 ```
 
 # --before-seed--

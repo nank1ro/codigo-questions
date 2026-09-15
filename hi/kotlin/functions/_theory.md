@@ -7,7 +7,7 @@ fun greet() {
 ```
 किसी फंक्शन को कॉल (निष्पादित) करने के लिए, उसके नाम के बाद कोष्ठक का उपयोग करें:
 ```kotlin
-greet() // prints Hello!
+greet() // Hello! प्रिंट करता है
 ```
 जो फंक्शन कोई मान नहीं लौटाता, वह अंतर्निहित रूप से `Unit` लौटाता है।
 
@@ -22,7 +22,7 @@ fun getNumber(): Int {
 `return` कीवर्ड कॉलर को एक मान वापस भेजता है:
 ```kotlin
 var result = getNumber()
-println(result) // prints 42
+println(result) // 42 प्रिंट करता है
 ```
 रिटर्न टाइप उस मान के टाइप से मेल खाना चाहिए जो आप लौटाते हैं।
 
@@ -37,7 +37,7 @@ fun greet(name: String) {
 ```
 आप फंक्शन को कॉल करते समय आर्गुमेंट पास करते हैं:
 ```kotlin
-greet("Alice") // prints Hello, Alice!
+greet("Alice") // Hello, Alice! प्रिंट करता है
 ```
 पैरामीटर आपको पुनः उपयोगी कोड लिखने देते हैं जो विभिन्न मानों के साथ काम करता है।
 
@@ -48,8 +48,8 @@ Kotlin डिफ़ॉल्ट पैरामीटर मानों का 
 fun greet(name: String = "World") {
     println("Hello, $name!")
 }
-greet()         // prints Hello, World!
-greet("Alice")  // prints Hello, Alice!
+greet()         // Hello, World! प्रिंट करता है
+greet("Alice")  // Hello, Alice! प्रिंट करता है
 ```
 डिफ़ॉल्ट मान पैरामीटर को वैकल्पिक बनाते हैं, जिससे ओवरलोडेड फंक्शन की आवश्यकता कम होती है।
 
@@ -72,8 +72,8 @@ fun square(n: Int) = n * n
 fun isEven(n: Int): Boolean {
     return n % 2 == 0
 }
-println(isEven(4)) // prints true
-println(isEven(7)) // prints false
+println(isEven(4)) // true प्रिंट करता है
+println(isEven(7)) // false प्रिंट करता है
 ```
 एक `Boolean` फंक्शन `true` या `false` लौटाता है।
 
@@ -85,7 +85,7 @@ fun introduce(name: String, age: Int): String {
     return "My name is $name and I am $age years old."
 }
 println(introduce("Bob", 30))
-// prints My name is Bob and I am 30 years old.
+// My name is Bob and I am 30 years old. प्रिंट करता है
 ```
 नामांकित आर्गुमेंट आपको पैरामीटर नाम का उपयोग करके किसी भी क्रम में मान पास करने देते हैं:
 ```kotlin

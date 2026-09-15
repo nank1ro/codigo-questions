@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// x, फिर y प्रिंट करता है
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 भले ही ऐरे `val` से घोषित किया गया हो, इंडेक्स पर वैल्यू असाइन करके उसके **एलिमेंट्स** को बदला जा सकता है:
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums अब [10, 2, 3] है
 ```
 हर एलिमेंट पर जाने के लिए आप `for` लूप या `forEach` का उपयोग कर सकते हैं:
 ```kotlin
@@ -83,8 +83,8 @@ println(nums.contentToString())   // [1, 2, 3]
 - `sorted()`, `sortedDescending()` और `reversed()` ऐरे को बिना बदले छोड़ देते हैं और एक नई `List` लौटाते हैं
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums अब [1, 2, 3] है
+println(nums.reversed())    // [3, 2, 1], nums अब भी [1, 2, 3] है
 ```
 
 ---
@@ -106,8 +106,8 @@ println(nums.count())   // 3
 `nums + 4` जैसे एक्सप्रेशन `nums` को बड़ा नहीं करते, बल्कि एक बिल्कुल नया ऐरे बनाते हैं:
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ठीक, nums [9, 2, 3] है
+val bigger = nums + 4    // नई array [9, 2, 3, 4], nums में अब भी 3 elements हैं
 ```
 जब एलिमेंट्स की संख्या समय के साथ बदलती है तो `MutableList` को प्राथमिकता दें, और जब संख्या पहले से पता हो या आपको प्रिमिटिव परफॉर्मेंस चाहिए तो ऐरे को।
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// दोनों 0 -> cat, फिर 1 -> dog प्रिंट करते हैं
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true, lists अपने elements की तुलना करती हैं
 ```
 
 ---

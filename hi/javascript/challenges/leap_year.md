@@ -18,7 +18,7 @@ title: लीप वर्ष
 फ़ंक्शन कॉल का उदाहरण:
 ```javascript
 console.log(leapYear(2000));
-// prints true
+// true प्रिंट करता है
 ```
 
 # --before-seed--

@@ -21,7 +21,7 @@ title: बाइनरी सर्च
 ```c
 int numbers[] = {1, 3, 5, 7};
 printf("%d\n", binarySearch(numbers, 4, 5));
-// prints 2
+// 2 प्रिंट करता है
 ```
 
 # --before-seed--

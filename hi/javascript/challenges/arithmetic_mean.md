@@ -16,7 +16,7 @@ title: अंकगणितीय माध्य
 फ़ंक्शन कॉल का उदाहरण:
 ```javascript
 console.log(mean([1, 2, 3]));
-// prints 2.0
+// 2.0 प्रिंट करता है
 ```
 
 # --before-seed--

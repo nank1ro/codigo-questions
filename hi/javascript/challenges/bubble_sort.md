@@ -20,7 +20,7 @@ title: बबल सॉर्ट
 फ़ंक्शन कॉल का उदाहरण:
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// [ 1, 2, 3 ] प्रिंट करता है
 ```
 
 # --before-seed--

@@ -17,7 +17,7 @@ title: अंकगणितीय माध्य
 ```kotlin
 val numbers = doubleArrayOf(1.0, 2.0, 3.0)
 print(mean(numbers))
-// prints 2.0
+// 2.0 प्रिंट करता है
 ```
 
 # --seed--

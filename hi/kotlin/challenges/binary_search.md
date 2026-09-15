@@ -20,7 +20,7 @@ title: बाइनरी सर्च
 फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// 2 प्रिंट करता है
 ```
 
 # --seed--

@@ -4,7 +4,7 @@
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 
@@ -14,7 +14,7 @@ if (nice_weather) {
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
@@ -28,9 +28,9 @@ C में हम `else` स्टेटमेंट का उपयोग क
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // बाहर खेलें
 } else {
-    // stay home
+    // घर पर रहें
 }
 ```
 

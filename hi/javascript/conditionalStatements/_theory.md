@@ -4,7 +4,7 @@
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी चलाता है जब शर्त `true` हो।
@@ -28,9 +28,9 @@ JavaScript में हम `else` स्टेटमेंट का उपय�
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 } else {
-    // stay home
+    // घर पर रहें
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// 10 प्रिंट करता है
 ```
 उपरोक्त कोड का शॉर्टहैंड कोड है:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// 10 प्रिंट करता है
 ```
 `c` को `a` के बराबर सेट किया गया है, क्योंकि शर्त `a < b` सही थी
 

@@ -16,7 +16,7 @@ title: अभाज्य संख्याओं का योग
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(primeSummation(10));
-// prints 17
+// 17 प्रिंट करता है
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ void main() {
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // इरैटोस्थनीज़ की चलनी
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

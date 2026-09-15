@@ -52,7 +52,7 @@ stride(from:through:by:)
 Swift में हमारे पास `forEach` लूप भी है।
 वास्तव में, `forEach` दिए गए क्लोज़र को अनुक्रम के प्रत्येक तत्व पर उसी क्रम में कॉल करता है जैसे `for-in` लूप:
 ```swift
-// this is an array, we'll see about that soon
+// यह एक array है, इसके बारे में हम जल्द ही देखेंगे
 let numbers: [Int] = [1, 3, 5, 7, 9]
 numbers.forEach { num in
     print(num)

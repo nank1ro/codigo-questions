@@ -24,7 +24,7 @@ __[1]__ एक Error फेंकता है क्योंकि `List` _rea
 val numbers = mutableListOf(1, 3, 5)
 numbers.add(7)
 println(numbers)
-// prints [1, 3, 5, 7]
+// [1, 3, 5, 7] प्रिंट करता है
 ```
 
 ---
@@ -47,15 +47,15 @@ listName[index]
 आपने देखा कि लिस्ट इंडेक्स को इस तरह एक्सेस करते हैं:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// मान "Jeremiah" प्रिंट करता है
 println(names[0])
 ```
 असाइनमेंट इस तरह काम करता है:
 ```kotlin
 val names = mutableListOf("Jeremiah", "Barney", "Ivan", "Noel")
-// Assign the new value "Jordan"
+// नया मान "Jordan" असाइन करें
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// मान "Jordan" प्रिंट करता है
 println(names[0])
 ```
 
@@ -71,7 +71,7 @@ println(names[0])
 ```kotlin
 val names = listOf("Thomas", "Donald", "Scarlett")
 println(names.contains("Scarlett"))
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -83,7 +83,7 @@ println(names.contains("Scarlett"))
 val letters = mutableListOf("a", "b")
 letters.add("c")
 println(letters)
-// prints [a, b, c]
+// [a, b, c] प्रिंट करता है
 ```
 
 ---
@@ -95,7 +95,7 @@ val letters = mutableListOf("a", "b")
 val newLetters = listOf("c", "d", "e")
 letters.addAll(newLetters)
 println(letters)
-// prints [a, b, c, d, e]
+// [a, b, c, d, e] प्रिंट करता है
 ```
 
 ---
@@ -106,7 +106,7 @@ println(letters)
 val numbers = listOf(1, 2, 3, 4) // [1]
 val slice = numbers.slice(1..2) // [2]
 println(slice)
-// prints [2, 3]
+// [2, 3] प्रिंट करता है
 ```
 __[1]__: सबसे पहले, हम `numbers` नाम की एक _read-only_ लिस्ट बनाते हैं।
 __[2]__: फिर, हम `slice` फंक्शन का उपयोग करके लिस्ट का एक उपखंड लेते हैं और इसे slice लिस्ट में स्टोर करते हैं।
@@ -130,7 +130,7 @@ Kotlin में हम `indexOfFirst` मेथड का उपयोग क�
 ```kotlin
 val names = mutableListOf("Trevor", "Zac", "Glenn")
 println(names.indexOfFirst { it == "Zac"})
-// prints 1
+// 1 प्रिंट करता है
 ```
 
 `indexOfFirst` मेथड एक __predicate__ फंक्शन लेता है जो लिस्ट में प्रत्येक आइटम के लिए तब तक मूल्यांकित किया जाएगा जब तक यह true न हो, एलिमेंट का _index_ लौटाता है।
@@ -139,7 +139,7 @@ println(names.indexOfFirst { it == "Zac"})
 हम `add(index, element)` मेथड का उपयोग करके एक संशोधनीय लिस्ट में किसी विशिष्ट इंडेक्स पर आइटम भी डाल सकते हैं:
 ```kotlin
 names.add(1, "Ali")
-// prints [Trevor, Ali, Zac, Glenn]
+// [Trevor, Ali, Zac, Glenn] प्रिंट करता है
 ```
 ऊपर दिया गया कोड इंडेक्स `1` पर `"Ali"` डालता है, जो इस इंडेक्स के बाद सब कुछ 1 से नीचे खिसका देता है
 
@@ -151,6 +151,6 @@ val numbers = listOf(1, 2, 3)
 for (num in numbers) {
     println(num)
 }
-// prints 1, 2, 3
+// 1, 2, 3 प्रिंट करता है
 ```
 `for` कीवर्ड के बाद एक वेरिएबल नाम आता है, जिसे बारी-बारी से लिस्ट के प्रत्येक आइटम का मान असाइन किया जाएगा।

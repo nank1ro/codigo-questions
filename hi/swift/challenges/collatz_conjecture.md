@@ -22,7 +22,7 @@ title: कोलैट्ज़ अनुमान
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(collatzSteps(16))
-// prints 4
+// 4 प्रिंट करता है
 ```
 
 # --before-seed--

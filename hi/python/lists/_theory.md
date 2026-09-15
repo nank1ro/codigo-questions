@@ -23,13 +23,13 @@ list_name[index]
 आपने देखा कि लिस्ट इंडेक्स को इस प्रकार एक्सेस किया जाता है:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # मान "Jeremiah" प्राप्त करता है
 ```
 असाइनमेंट इस प्रकार काम करता है:
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # नया मान "Jordan" प्राप्त करता है
 ```
 
 ---

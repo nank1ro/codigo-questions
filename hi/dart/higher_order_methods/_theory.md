@@ -64,8 +64,8 @@ print(numbers.every((n) => n > 2)); // false
 
 ```dart
 final numbers = [1, 2, 3];
-final doubled = numbers.map((n) => n * 2); // nothing computed yet
-print(doubled.first);                      // computes only 2
+final doubled = numbers.map((n) => n * 2); // अभी तक कुछ भी गणना नहीं हुई
+print(doubled.first);                      // सिर्फ़ 2 की गणना करता है
 ```
 
 `toList()` ही वह चीज़ है जो अनुक्रम को **materialise** करती है: वह उसमें शुरुआत से अंत तक चलती है और हर परिणाम को एक वास्तविक `List` में संग्रहीत करती है।
@@ -183,7 +183,7 @@ print(numbers); // [1, 2, 3]
 final numbers = [3, 1, 2];
 final sorted = numbers.toList()..sort();
 print(sorted);  // [1, 2, 3]
-print(numbers); // [3, 1, 2], untouched
+print(numbers); // [3, 1, 2], अपरिवर्तित
 ```
 
 `sort` एक **comparator** भी स्वीकार करता है: दो तत्वों का एक फंक्शन जो ऋणात्मक संख्या लौटाता है जब पहला तत्व दूसरे से पहले आता हो, `0` जब वे बराबर हों, और अन्यथा धनात्मक संख्या। `compareTo` ठीक यही उत्पन्न करता है, इसलिए किसी भी कुंजी के अनुसार क्रमित करना एक एक-पंक्ति का काम है:
@@ -200,8 +200,8 @@ print(words.toList()..sort((a, b) => a.length.compareTo(b.length)));
 
 ```dart
 final words = ['fig', 'kiwi'];
-final joined = words.reduce((a, b) => '$a, $b'); // String from Strings
-final letters = words.fold(0, (acc, w) => acc + w.length); // int from Strings
+final joined = words.reduce((a, b) => '$a, $b'); // Strings से बना String
+final letters = words.fold(0, (acc, w) => acc + w.length); // Strings से बना int
 print(joined);  // fig, kiwi
 print(letters); // 7
 ```

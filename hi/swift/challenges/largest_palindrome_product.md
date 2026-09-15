@@ -16,7 +16,7 @@ title: सबसे बड़ा पैलिंड्रोम गुणनफ�
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// 9009 प्रिंट करता है
 ```
 
 # --before-seed--

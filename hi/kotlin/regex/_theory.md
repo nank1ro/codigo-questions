@@ -12,7 +12,7 @@ val b = "cat".toRegex()
 ```kotlin
 val digits = Regex("\\d+")
 println(digits.matches("2026")) // true
-println(digits.matches("20a6")) // false, the letter is not a digit
+println(digits.matches("20a6")) // false, यह अक्षर एक अंक नहीं है
 ```
 
 ---
@@ -20,8 +20,8 @@ println(digits.matches("20a6")) // false, the letter is not a digit
 `matches` अक्सर बहुत सख़्त होता है: आमतौर पर आप केवल यह जानना चाहते हैं कि पैटर्न टेक्स्ट में **कहीं भी** दिखाई देता है या नहीं। वह `containsMatchIn` है:
 ```kotlin
 val digits = Regex("\\d+")
-println(digits.matches("order 42"))          // false, the whole string is not digits
-println(digits.containsMatchIn("order 42"))  // true, "42" is in there
+println(digits.matches("order 42"))          // false, पूरी string अंक नहीं है
+println(digits.containsMatchIn("order 42"))  // true, "42" उसमें मौजूद है
 ```
 `\d` के अलावा दो और शॉर्टहैंड हैं जिनका उपयोग आप बार-बार करेंगे: `\w` एक वर्ड कैरेक्टर है (अक्षर, अंक या `_`) और `\s` एक व्हाइटस्पेस कैरेक्टर है। इनमें से हर एक को एक **quantifier** के साथ दोहराया जा सकता है:
 - `+` एक या अधिक
@@ -31,7 +31,7 @@ println(digits.containsMatchIn("order 42"))  // true, "42" is in there
 
 हर बैकस्लैश को दोगुना करने से कोड गड़बड़ हो जाता है, इसलिए पैटर्न आमतौर पर ट्रिपल कोट्स वाली **raw strings** के रूप में लिखे जाते हैं, जहाँ `\` सिर्फ एक साधारण कैरेक्टर है:
 ```kotlin
-val digits = Regex("""\d+""") // same as Regex("\\d+")
+val digits = Regex("""\d+""") // Regex("\\d+") जैसा ही
 ```
 
 ---
@@ -99,7 +99,7 @@ println(name.replace("Ann Lee", "$2 $1")) // Lee Ann
 `$0` पूरा मैच होता है। अगर आपको रिप्लेसमेंट में एक literal `$` चाहिए, तो उसे `\$` के रूप में एस्केप करें।
 `replace` **हर** मैच को फिर से लिखता है, इसलिए जब केवल एक पूरी स्ट्रिंग को फिर से लिखना हो, तो पैटर्न को **anchors** `^` (टेक्स्ट की शुरुआत) और `$` (टेक्स्ट का अंत) से पिन करें:
 ```kotlin
-println(Regex("""^\w+$""").replace("one two", "x")) // one two, nothing is replaced
+println(Regex("""^\w+$""").replace("one two", "x")) // one two, कुछ भी replace नहीं होता
 ```
 
 ---
@@ -150,7 +150,7 @@ val pattern = Regex("""\b""" + word + """\b""")
 
 कैरेक्टर `. * + ? ( ) [ ] { } | ^ $ \` का पैटर्न के अंदर एक विशेष मतलब होता है। उनमें सबसे धोखेबाज़ `.` है, जो **कोई भी** कैरेक्टर से मैच करता है, डॉट से नहीं। कैरेक्टर के खुद का मतलब देने के लिए, उसे एक बैकस्लैश के साथ एस्केप करें:
 ```kotlin
-println(Regex("""3.14""").matches("3x14"))  // true, the dot matches the x
+println(Regex("""3.14""").matches("3x14"))  // true, dot, x से मेल खाता है
 println(Regex("""3\.14""").matches("3x14")) // false
 ```
 जब खोजने के लिए टेक्स्ट किसी वेरिएबल से आता है और उसे literal लिया जाना ज़रूरी हो, तो एस्केपिंग `Regex.escape` से लाइब्रेरी को करने दें:
@@ -180,7 +180,7 @@ println(value) // local
 ```kotlin
 println(Regex("""gr[ae]y""").matches("grey"))  // true
 println(Regex("""[a-f0-9]+""").matches("1b3")) // true
-println(Regex("""[^0-9]+""").matches("abc"))   // true, no digit allowed
+println(Regex("""[^0-9]+""").matches("abc"))   // true, किसी अंक की अनुमति नहीं
 ```
 एक क्लास केवल एकल कैरेक्टर के बीच चुनती है। पूरे विकल्पों के बीच चुनने के लिए, `|` का उपयोग करें, आमतौर पर एक ग्रुप में लपेटा हुआ ताकि वह पैटर्न का बाकी हिस्सा निगल न जाए:
 ```kotlin

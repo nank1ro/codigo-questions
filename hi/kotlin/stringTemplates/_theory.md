@@ -2,7 +2,7 @@ String _template_ एक String उत्पन्न करने का प्
 Kotlin में हम दो या अधिक strings को एक साथ प्रदर्शित करने के लिए `+` चिह्न (concatenation) का उपयोग कर सकते हैं, जैसे:
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// "Hello Kotlin!" प्रिंट करता है
 ```
 
 ---
@@ -36,7 +36,7 @@ String templates हमें बिना किसी त्रुटि क�
 `${}` के अंदर हम conditions भी रख सकते हैं, उदाहरण के लिए:
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// Correct प्रिंट करता है
 ```
 
 ---

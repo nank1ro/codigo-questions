@@ -217,7 +217,7 @@ struct Ticket: Priced {
     var price = 12
 }
 
-print(Ticket().price) // 12, not 0
+print(Ticket().price) // 12, न कि 0
 ```
 डिफ़ॉल्ट केवल वही गैप भरता है जिन्हें टाइप खुला छोड़ देता है।
 

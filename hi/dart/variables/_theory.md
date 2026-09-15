@@ -50,7 +50,7 @@ Dart एक __टाइप-सेफ__ भाषा है।
 
 ```dart
 int integerNumber = 1;
-integerNumber = 3.14159; // Error
+integerNumber = 3.14159; // त्रुटि
 ```
 
 3.14159` `double` प्रकार का है, लेकिन आपने पहले ही `integerNumber` को `int` प्रकार के साथ परिभाषित किया है।
@@ -61,7 +61,7 @@ integerNumber = 3.14159; // Error
 num number;
 number = 1; // OK
 number = 3.14159; // OK
-number = '10'; // Error
+number = '10'; // त्रुटि
 ```
 
 `int` और `double` दोनों `num` को एक्सटेंड करते हैं, इसलिए दोनों प्रकार स्वीकार किए जाते हैं।
@@ -119,7 +119,7 @@ const number = 5;
 
 ```dart
 const number = 2;
-number = 3; // Error
+number = 3; // त्रुटि
 ```
 
 यह कोड एरर उत्पन्न करता है:

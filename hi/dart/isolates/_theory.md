@@ -52,8 +52,8 @@ Future<int> lengthInIsolate(String text) {
 `Isolate.run` तुम्हें **समानांतरवाद (parallelism)** देता है: दूसरे प्रोसेसर कोर पर एक दूसरा isolate, पहले के साथ उसी क्षण अपना कोड चलाता हुआ। गणना के लिए यही सही औज़ार है।
 
 ```dart
-await Future.delayed(const Duration(seconds: 1)); // waiting: no core is busy
-await Isolate.run(() => hugeCalculation());       // computing: another core is busy
+await Future.delayed(const Duration(seconds: 1)); // इंतज़ार: कोई कोर व्यस्त नहीं है
+await Isolate.run(() => hugeCalculation());       // गणना हो रही है: दूसरा कोर व्यस्त है
 ```
 
 धीमी गणना का await करना कोई मदद नहीं करता: `await bigSum()` अब भी `bigSum` को मौजूदा isolate पर ही चलाता है और आख़िरी पंक्ति तक उसे रोके रखता है। वह काम केवल दूसरा isolate ही दूर ले जाता है।
@@ -258,7 +258,7 @@ Future<void> main() async {
 
 ```dart
 final numbers = [1, 2, 3];
-await Isolate.run(() => numbers..add(4)); // the copy grows
+await Isolate.run(() => numbers..add(4)); // कॉपी बढ़ती है
 print(numbers);                           // [1, 2, 3]
 ```
 

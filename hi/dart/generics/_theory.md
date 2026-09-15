@@ -11,7 +11,7 @@ List<int> scores = [10, 20];
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // ठीक: first एक String है
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart में `dynamic` नाम का टाइप भी है, जिस�
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // स्वीकृत
+print(things.first.toUpperCase()); // स्वीकृत
 ```
 
 लेकिन पकड़ यह है कि कोड लिखते समय कुछ भी जाँचा नहीं जाता। `dynamic` मान पर किया गया हर कॉल प्रोग्राम चलने के दौरान सुलझाया जाता है, इसलिए `things.first.toUpperCse()` जैसी टाइपो खुशी-खुशी कंपाइल हो जाती है और उपयोगकर्ता के सामने धमाका करती है।
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>, argument से अनुमानित
+print(a.value + 1);      // 8, कंपाइलर जानता है कि value एक int है
 ```
 
 अक्षर कुछ खास नहीं होता: `T` "टाइप" के लिए एक परंपरा है, बस इतना ही।
@@ -78,14 +78,14 @@ print(a.value + 1);      // 8, the compiler knows value is an int
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig, यहाँ T String है
+print(firstOf([10, 20]));        // 10, यहाँ T int है
 ```
 
 एक ही फंक्शन बॉडी, एक बार जाँची हुई, हर टाइप के लिए दोबारा उपयोग की जाने वाली। टाइप आर्ग्युमेंट आमतौर पर आर्ग्युमेंट्स से इन्फ़र कर लिया जाता है, लेकिन जब इन्फ़रेंस के पास कुछ न हो तो उसे स्पष्ट रूप से भी लिखा जा सकता है:
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // थ्रो करता है, पर टाइप स्पष्ट है
 ```
 
 क्लास के अंदर मेथड्स भी बिल्कुल वही नियम मानते हैं।
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 साउंड नल सेफ़्टी के साथ प्रश्न चिह्न दो अलग-अलग जगहों पर आ सकता है, और दोनों का अर्थ अलग-अलग होता है:
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // एक बॉक्स जो मौजूद है और एक नलेबल int रखता है
+Box<int>? b = null;      // बिल्कुल कोई बॉक्स नहीं, पर अगर होता तो वह एक int रखता
 ```
 
 `Box<int?>` में **टाइप आर्ग्युमेंट** नलेबल है, इसलिए `a.value` का टाइप `int?` है और वह `null` हो सकता है, जबकि `a` स्वयं हमेशा मौजूद रहता है। `Box<int>?` में **वेरिएबल** नलेबल है, इसलिए `b` `null` हो सकता है और उसके अंदर पहुँचने के लिए आपको `b?.value` या `b!.value` चाहिए।
@@ -146,10 +146,10 @@ Box<int>? b = null;      // no box at all, but if there is one it holds an int
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0, बॉक्स मौजूद है, उसका content null है
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0, बॉक्स खुद ही मौजूद नहीं है
 ```
 
 एक `Box<int>?` पर `b.value` लिखना तो कंपाइल होता ही नहीं: Dart किसी ऐसी चीज़ का फ़ील्ड पढ़ने से इनकार करता है जो मौजूद न हो सकती।
@@ -187,7 +187,7 @@ num biggerOf<T extends num>(T a, T b) => a > b ? a : b;
 एक बाउंड टाइप पैरामीटर को स्वयं भी उल्लेखित कर सकता है। `Comparable<T>` उन सब चीज़ों का इंटरफ़ेस है जो `compareTo` के ज़रिए जानती हैं कि अपने ही क़िस्म से खुद की तुलना कैसे करनी है:
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // नेगेटिव: fig पहले आता है
 print('kiwi'.compareTo('fig')); // positive
 print('fig'.compareTo('fig'));  // zero
 ```

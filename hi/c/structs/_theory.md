@@ -12,7 +12,7 @@ struct Point p = {3, 4}; // x is 3, y is 4
 ```
 सदस्यों को **डॉट** ऑपरेटर `.` से पढ़ा और लिखा जाता है:
 ```c
-printf("%d\n", p.x); // prints "3"
+printf("%d\n", p.x); // "3" प्रिंट करता है
 p.y = 10;
 ```
 
@@ -67,7 +67,7 @@ typedef struct {
 The inner struct is initialised with its own pair of braces, and its members are reached by chaining the dot operator:
 ```c
 Segment s = {{1, 2}, {5, 2}};
-printf("%d\n", s.end.x); // prints "5"
+printf("%d\n", s.end.x); // "5" प्रिंट करता है
 ```
 
 ---
@@ -101,7 +101,7 @@ int count_free(Item items[], int size) {
 When a struct is passed to a function **by value**, the function receives a **copy** of it. Changing a member of the parameter changes the copy only, and the caller's variable stays as it was:
 ```c
 void reset(Point p) {
-    p.x = 0; // changes the copy
+    p.x = 0; // कॉपी को बदलता है
 }
 ```
 To let a function modify the caller's struct, pass its **address** with `&` and declare the parameter as a **pointer**, `Point *p`. The pointer refers to the original variable instead of a copy:

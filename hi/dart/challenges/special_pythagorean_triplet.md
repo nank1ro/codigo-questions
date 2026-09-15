@@ -18,7 +18,7 @@ title: विशेष पाइथागोरस त्रिक
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(specialPythagoreanTriplet(12));
-// prints 60
+// 60 प्रिंट करता है
 ```
 
 # --seed--

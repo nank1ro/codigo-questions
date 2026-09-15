@@ -23,7 +23,7 @@ James एक ATM से N डॉलर निकालना चाहता ह
 फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// 9.5 प्रिंट करता है
 ```
 
 # --seed--

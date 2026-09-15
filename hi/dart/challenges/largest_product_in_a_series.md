@@ -16,7 +16,7 @@ title: श्रृंखला में सबसे बड़ा गुणन
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(largestProductInASeries(4));
-// prints 5832
+// 5832 प्रिंट करता है
 ```
 
 # --seed--

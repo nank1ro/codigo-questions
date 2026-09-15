@@ -28,7 +28,7 @@ title: रेनड्रॉप्स
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// "Plong" प्रिंट करता है
 ```
 
 # --seed--

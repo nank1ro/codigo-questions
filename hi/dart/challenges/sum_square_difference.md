@@ -20,7 +20,7 @@ title: योग-वर्ग अंतर
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// 2640 प्रिंट करता है
 ```
 
 # --seed--

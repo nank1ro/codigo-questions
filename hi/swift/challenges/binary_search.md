@@ -21,7 +21,7 @@ title: बाइनरी सर्च
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// 2 प्रिंट करता है
 ```
 
 # --before-seed--

@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// Max makes a sound प्रिंट करता है
 ```
 जब एक child अपना constructor घोषित करता है, तो उसमें `super(...)` को कॉल करना **अनिवार्य** होता है: इसके बिना ऑब्जेक्ट कभी इनिशियलाइज़ नहीं होता और JavaScript एक `ReferenceError` थ्रो करता है। बिना constructor वाला child बिल्कुल ठीक रहता है, क्योंकि JavaScript खुद एक ऐसा constructor लिख देता है जो हर argument को parent तक पहुँचा देता है।
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// Woof प्रिंट करता है
 ```
 ओवरराइडिंग parent के वर्ज़न को डिलीट नहीं करती, वह उसे केवल छिपा देती है। child के मेथड के अंदर `super.methodName(...)` अब भी उस तक पहुँच सकता है, जिससे आप parent के व्यवहार को बदलने के बजाय उसे बढ़ा सकते हैं:
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// Woof! प्रिंट करता है
 ```
 अंतर पर ध्यान दें: `super(...)` parent के **constructor** को कॉल करता है, जबकि `super.name(...)` parent की **मेथड** को कॉल करता है।
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// 0 प्रिंट करता है
 ```
 फ़ील्ड्स constructor की body चलने से पहले हर नए instance को असाइन कर दी जाती हैं, इसलिए constructor उन पर पहले से भरोसा कर सकता है। बिना वैल्यू वाला फ़ील्ड भी घोषित माना जाता है, वह बस `undefined` से शुरू होता है:
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// 8 प्रिंट करता है
 ```
 एक static मेथड को class के नाम पर कॉल किया जाता है, कभी भी instance पर नहीं: `new MathUtils().double(4)` एक `TypeError` थ्रो करता है, क्योंकि instances को static सदस्य नहीं मिलते। एक static मेथड के अंदर `this` class को संदर्भित करता है, इसलिए एक static दूसरे को `this.otherStatic(...)` से कॉल कर सकता है।
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// 3.14 प्रिंट करता है
 ```
 चूँकि केवल एक ही कॉपी होती है, इसे अपडेट करने वाला हर instance एक ही वैल्यू को अपडेट करता है। constructor के अंदर आप इसे class के नाम, `Circle.PI`, से पहुँचते हैं, `this` से नहीं: `this.PI` instance पर प्रॉपर्टी ढूँढेगा, कुछ नहीं पाएगा, और आपको `undefined` दे देगा।
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// 120 प्रिंट करता है
 ```
 एक फ़ैक्टरी को किसी भी instance के बनने से पहले कॉल किया जा सकता है, जो एक साधारण मेथड से संभव नहीं था।
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// 12 प्रिंट करता है
 ```
 `r.area` मेथड को चलाकर उसका परिणाम लौटाता है, इसलिए वह एक number है। कोष्ठक जोड़ने पर आप उस number को कॉल करने की कोशिश करेंगे, जो विफल हो जाता है।
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// 3 प्रिंट करता है, सेटर ने 50 को रिजेक्ट कर दिया
 ```
 एक ही नाम वाला getter और setter मिलकर एक ही प्रॉपर्टी बनाते हैं, इसलिए वे साथ ही एक साधारण फ़ील्ड भी नहीं हो सकते: संग्रहीत वैल्यू किसी दूसरे नाम के अंतर्गत रहती है, परंपरा के अनुसार वही नाम जिसके आगे एक अंडरस्कोर लगा हो।
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// 1234 प्रिंट करता है
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// $7 प्रिंट करता है
 ```
 इसी तरह आप हेल्पर चरणों को API से बाहर रखते हैं: कॉलर को `print` दिखता है, उसके पीछे की फ़ॉर्मैटिंग की बातें नहीं। प्राइवेट फ़ील्ड्स और प्राइवेट मेथड्स मिलकर एक class को स्पष्ट अंदरूनी और बाहरी हिस्सा देते हैं।
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// $7 प्रिंट करता है
 ```
 वही मेथड स्ट्रिंग कॉन्कैटिनेशन और `String(value)` द्वारा भी उपयोग किया जाता है। अगर आप एक सहज **number** भी चाहते हैं, तो `[Symbol.toPrimitive](hint)` परिभाषित करें, जो `"string"`, `"number"` या `"default"` प्राप्त करता है और तय करता है कि क्या लौटाना है; जब वह मौजूद होता है तो वह `toString` पर हावी हो जाता है।
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// [ 'a', 'b' ] प्रिंट करता है
 ```
 नाम के आगे का `*` उसे एक **जेनरेटर (generator)** बना देता है: एक ऐसा फ़ंक्शन जो वैल्यूज़ को `yield` के साथ एक बार में एक देता है और उनके बीच रुक जाता है। इटरेशन प्रोटोकॉल को पूरा करने का यह सबसे छोटा तरीका है, और यह संग्रहीत होने के बजाय गणना की जाने वाली वैल्यूज़ के लिए भी काम करता है।

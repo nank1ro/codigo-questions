@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// red प्रिंट करता है
 ```
 परंपरा के अनुसार यह ऑब्जेक्ट `const` से डिक्लेयर किया जाता है, इसका नाम बड़े अक्षर से शुरू होता है, और सदस्यों के नाम अन्य कॉन्स्टेंट की तरह ही `UPPER_CASE` में लिखे जाते हैं।
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// done प्रिंट करता है
 ```
 एक बार फ़्रीज़ हो जाने पर ऑब्जेक्ट को नई प्रॉपर्टीज़ भी नहीं मिल सकतीं, और `Object.isFrozen(obj)` बताता है कि कोई ऑब्जेक्ट फ़्रीज़ किया गया है या नहीं:
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// true प्रिंट करता है
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// s प्रिंट करता है
 console.log(Size.MEDIUM);
-// prints undefined
+// undefined प्रिंट करता है
 ```
 दोनों ही स्थितियों में एनम आपके द्वारा परिभाषित मानों को बनाए रखता है, जो कि कॉन्स्टेंट के एक समूह से बिल्कुल यही अपेक्षित होता है।
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// true प्रिंट करता है
 ```
 इसकी कीमत पठनीयता है: `Priority.HIGH` प्रिंट करने पर `3` दिखता है, जो स्ट्रिंग `"high"` की तुलना में बहुत कम जानकारी देता है।
 
@@ -70,14 +70,14 @@ console.log(Priority.HIGH > Priority.LOW);
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// [ 'RED', 'BLUE' ] प्रिंट करता है
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// [ 'red', 'blue' ] प्रिंट करता है
 ```
 `Object.values()` को ऐरे मेथड `includes()` के साथ मिलाना, यह जांचने का मानक तरीका है कि कोई मनमाना मान, उदाहरण के लिए यूज़र इनपुट से पढ़ा गया मान, कोई मान्य सदस्य है या नहीं:
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// true प्रिंट करता है
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// false प्रिंट करता है
 ```

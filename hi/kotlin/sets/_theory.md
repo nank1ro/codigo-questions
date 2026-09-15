@@ -15,7 +15,7 @@ val setName = setOf<itemsType>(item1, item2)
 ```kotlin
 val numbers = setOf(1, 1, 2) // [1]
 println(numbers)
-// prints [1, 2]
+// [1, 2] प्रिंट करता है
 ```
 
 __[1]__ पर हम संख्या __1__ को दो बार शामिल करके एक set बनाने की कोशिश कर रहे हैं, लेकिन जैसा कि आप देख सकते हैं, प्रत्येक तत्व अद्वितीय होना चाहिए और दूसरा __1__ स्वचालित रूप से हटा दिया जाता है।
@@ -38,7 +38,7 @@ __[1]__ एक Error देता है क्योंकि `Set` _केव�
 val numbers = mutableSetOf(1, 2, 3)
 numbers.add(4)
 println(numbers)
-// prints [1, 2, 3, 4]
+// [1, 2, 3, 4] प्रिंट करता है
 ```
 
 ---
@@ -47,8 +47,8 @@ println(numbers)
 
 ```kotlin
 val numbers = setOf(1, 2, 3)
-println(2 in numbers) // prints true
-println(numbers.contains(5)) // prints false
+println(2 in numbers) // true प्रिंट करता है
+println(numbers.contains(5)) // false प्रिंट करता है
 ```
 
 जैसा कि आप ऊपर देख सकते हैं, `in` और `contains` एक `Bool` लौटाते हैं जो बताता है कि पास किया गया तत्व set में मौजूद है या नहीं

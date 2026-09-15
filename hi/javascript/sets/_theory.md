@@ -6,9 +6,9 @@ let colors = new Set();
 colors.add("red");
 colors.add("blue");
 console.log(colors.has("red"));
-// prints true
+// true प्रिंट करता है
 console.log(colors.has("green"));
-// prints false
+// false प्रिंट करता है
 ```
 
 ---
@@ -24,10 +24,10 @@ tags.add("js");
 tags.add("css");
 tags.add("js");
 console.log(tags.size);
-// prints 2
+// 2 प्रिंट करता है
 tags.delete("css");
 console.log(tags.size);
-// prints 1
+// 1 प्रिंट करता है
 ```
 
 ---
@@ -46,13 +46,13 @@ letters.add("a").add("b");
 let nums = [1, 2, 2, 3, 3, 3];
 let distinct = new Set(nums);
 console.log(distinct.size);
-// prints 3
+// 3 प्रिंट करता है
 ```
 **स्प्रेड** ऑपरेटर `...` इसके उल्टा काम करता है और सेट को वापस ऐरे में बदल देता है:
 ```javascript
 let unique = [...distinct];
 console.log(unique);
-// prints [ 1, 2, 3 ]
+// [ 1, 2, 3 ] प्रिंट करता है
 ```
 `Array.from(distinct)` भी वही काम करता है।
 
@@ -64,14 +64,14 @@ let nums = new Set([3, 1, 2]);
 for (const n of nums) {
   console.log(n);
 }
-// prints 3
-// prints 1
-// prints 2
+// 3 प्रिंट करता है
+// 1 प्रिंट करता है
+// 2 प्रिंट करता है
 ```
 सेट में हर वैल्यू के लिए एक फ़ंक्शन कॉल करने वाला `forEach()` मेथड भी होता है:
 ```javascript
 nums.forEach((n) => console.log(n * 10));
-// prints 30
-// prints 10
-// prints 20
+// 30 प्रिंट करता है
+// 10 प्रिंट करता है
+// 20 प्रिंट करता है
 ```

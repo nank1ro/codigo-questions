@@ -16,7 +16,7 @@ title: सबसे छोटा गुणज
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// 2520 प्रिंट करता है
 ```
 
 # --before-seed--
