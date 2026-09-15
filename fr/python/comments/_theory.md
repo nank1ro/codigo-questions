@@ -2,7 +2,7 @@ Un **commentaire** est une note écrite dans le code source pour les personnes q
 
 La seule sorte de commentaire que Python possède est le **commentaire sur une seule ligne** : il commence par `#` et s'étend jusqu'à la fin de la ligne.
 ```python
-# Greets the user
+# Salue l'utilisateur
 print("Hello")
 ```
 Utilisez les commentaires pour expliquer à quoi sert un morceau de code, ou pourquoi il a été écrit de cette façon.
@@ -11,7 +11,7 @@ Utilisez les commentaires pour expliquer à quoi sert un morceau de code, ou pou
 
 Un commentaire n'a pas besoin de sa propre ligne : il peut suivre le code sur la même ligne. C'est un **commentaire en ligne**, et c'est un bon endroit pour une courte note sur cette instruction précise :
 ```python
-retries = 3  # give up after three attempts
+retries = 3  # abandonne après trois tentatives
 ```
 Tout ce qui va de `#` jusqu'à la fin de la ligne est ignoré, tandis que le code avant lui s'exécute normalement.
 
@@ -25,7 +25,7 @@ Cela fait de `#` un moyen rapide de désactiver une ligne de code sans la suppri
 ```python
 total = 10
 # total = total + 5
-print(total)  # prints 10
+print(total)  # affiche 10
 ```
 La deuxième ligne est maintenant un commentaire, donc `total` reste `10`. Retirer le `#` redonne vie à la ligne.
 
@@ -37,8 +37,8 @@ Beaucoup de langages ont une seconde sorte de commentaire, un **commentaire bloc
 
 Quand une explication a besoin de plus d'une ligne, mettez un `#` devant chaque ligne :
 ```python
-# Prints the welcome banner.
-# Called once when the app starts.
+# Affiche la bannière de bienvenue.
+# Appelée une fois au démarrage de l'application.
 print("Welcome!")
 ```
 La même astuce met en commentaire plusieurs lignes de code d'un coup : un `#` par ligne. Chaque éditeur sait ajouter ou retirer ces `#` à toute une sélection avec un seul raccourci, donc c'est moins fastidieux qu'il n'y paraît.
@@ -79,7 +79,7 @@ def greet(name):
     """Returns the greeting for name."""
     return "Hi, " + name + "!"
 
-print(greet.__doc__)  # Returns the greeting for name.
+print(greet.__doc__)  # Renvoie la salutation pour name.
 ```
 Quand une fonction n'a pas de docstring, `__doc__` vaut `None`. C'est ce que `help(greet)` affiche, et ce qu'un éditeur montre quand vous survolez le nom.
 
@@ -121,7 +121,7 @@ Un **commentaire** est destiné à celui qui **lit** le code : pourquoi cette li
 ```python
 def timeout():
     """Returns the number of seconds to wait for the server."""
-    # the server drops idle connections after 35 seconds
+    # le serveur coupe les connexions inactives après 35 secondes
     return 30
 ```
 Donc : la documentation de la fonction va dans la docstring, les notes sur l'implémentation vont dans les commentaires.
@@ -151,7 +151,7 @@ Certains commentaires suivent une convention que les éditeurs comprennent. Les 
 
 ```python
 limit = 10
-# TODO: read the limit from the settings
+# TODO: lire la limite depuis les paramètres
 ```
 Pour Python, ce sont des commentaires ordinaires ; les éditeurs les rassemblent dans un panneau dédié, donc le travail en attente est facile à trouver. Un `TODO` se trouve généralement à côté d'un espace réservé qui garde le programme en marche jusqu'à ce que le vrai code soit écrit.
 
@@ -162,7 +162,7 @@ Quand vous terminez le travail, remplacez l'espace réservé et supprimez le mar
 Un commentaire placé au-dessus d'une fonction pour dire ce que fait la fonction est au mauvais endroit. La docstring est l'endroit prévu pour cela : elle est attachée à la fonction, `help()` la trouve et les éditeurs l'affichent, tandis qu'un commentaire `#` au-dessus du `def` reste invisible pour tous.
 
 ```python
-# adds a and b
+# additionne a et b
 def add(a, b):
     return a + b
 ```
@@ -185,12 +185,12 @@ Le premier `#` fait partie du texte, le second commence un vrai commentaire. Il 
 
 Un bon commentaire explique **pourquoi** le code fait quelque chose, pas **ce** qu'il fait. Le code montre déjà ce qui se passe ; le répéter avec des mots ajoute du bruit et devient obsolète dès que le code change :
 ```python
-# set timeout to 30
+# définit timeout à 30
 timeout = 30
 ```
 La raison derrière le nombre est ce qu'un lecteur ne peut pas deviner :
 ```python
-# the server drops idle connections after 35 seconds, so stop earlier
+# le serveur coupe les connexions inactives après 35 secondes, alors on s'arrête plus tôt
 timeout = 30
 ```
 Si un commentaire ne fait que répéter la ligne en dessous, supprimez-le ou remplacez-le par la raison. Les meilleurs commentaires sont ceux qui disent quelque chose que le code ne peut pas dire.

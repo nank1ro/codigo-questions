@@ -14,8 +14,8 @@ La valeur opposée de `true` est `false`
 
 Les valeurs booléennes peuvent également être niées en utilisant le `!` avant elles, par exemple :
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // affiche false
+println(!false) // affiche true
 ```
 
 ---
@@ -26,10 +26,10 @@ Nous pouvons également créer des expressions booléennes en utilisant le `&&` 
 - `||` (_or_) : Produit vrai si l'expression à gauche ou à droite de l'opérateur est vraie, ou si les deux sont vraies.
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // affiche true
+println(true && false) // affiche false
+println(false && false) // affiche false
+println(true || true) // affiche true
+println(true || false) // affiche true
+println(false || false) // affiche false
 ```

@@ -20,7 +20,7 @@ La différence entre le carré de la somme et la somme des carrés pour 1 à 10 
 Exemple d'appel de fonction :
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// affiche 2640
 ```
 
 # --seed--

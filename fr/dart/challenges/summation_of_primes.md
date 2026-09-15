@@ -16,7 +16,7 @@ La somme des nombres premiers inférieurs à 10 est 2 + 3 + 5 + 7 = 17.
 Exemple d'appel de fonction :
 ```dart
 print(primeSummation(10));
-// prints 17
+// affiche 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ La somme de tous les nombres premiers inférieurs à 100000 doit être égale à
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // Crible d'Ératosthène
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

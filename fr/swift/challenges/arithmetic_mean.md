@@ -16,7 +16,7 @@ title: Moyenne arithmétique
 Exemple d'appel de fonction :
 ```swift
 print(mean([1, 2, 3]))
-// prints 2.0
+// affiche 2.0
 ```
 
 # --before-seed--

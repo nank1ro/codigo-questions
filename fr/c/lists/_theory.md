@@ -9,7 +9,7 @@ Les nœuds sont chaînés en stockant l'adresse de l'un dans le `next` d'un autr
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // affiche "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ Ajouter un nœud **devant** le crée, fait pointer le nouveau vers la tête actu
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // la liste vaut maintenant 8, 7
 ```
 Empiler sur une liste vide fonctionne de la même manière : le nouveau nœud pointe vers `NULL` et devient toute la liste.
 

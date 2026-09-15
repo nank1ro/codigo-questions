@@ -20,7 +20,7 @@ Votre fonction doit également fonctionner avec un tableau vide, un tableau d'un
 Exemple d'appel de fonction :
 ```javascript
 console.log(bubbleSort([3, 1, 2]));
-// prints [ 1, 2, 3 ]
+// affiche [ 1, 2, 3 ]
 ```
 
 # --before-seed--

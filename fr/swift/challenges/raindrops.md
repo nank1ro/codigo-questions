@@ -30,7 +30,7 @@ Les règles des gouttes de pluie sont que si un nombre donné :
 Exemple d'appel de fonction :
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// affiche "Plong"
 ```
 
 # --before-seed--

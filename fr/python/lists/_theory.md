@@ -23,13 +23,13 @@ Un indice de liste se comporte comme n'importe quel autre nom de variable ! Il p
 Vous avez vu comment accéder à un indice de liste comme ceci :
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # Récupère la valeur "Jeremiah"
 ```
 Voici comment fonctionne une affectation :
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # Récupère la nouvelle valeur "Jordan"
 ```
 
 ---
@@ -69,9 +69,9 @@ En Python, quand nous spécifions une partie d'une liste de cette manière, nous
 Vous pouvez découper une chaîne exactement comme une liste ! En fait, vous pouvez penser aux chaînes comme des listes de caractères : chaque caractère est un élément séquentiel dans la liste, à partir de l'indice `0`.
 ```python
 list_name[:2]
-# Grabs the first two items
+# Récupère les deux premiers éléments
 list_name[3:]
-# Grabs the fourth through last items
+# Récupère du quatrième au dernier élément
 ```
 Si votre tranche de liste inclut le tout premier ou le dernier élément d'une liste (ou d'une chaîne), l'indice de cet élément ne doit pas être inclus.
 

@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// affiche 5
 ```
 Une **fonction fléchée** est une manière plus courte d'écrire la même chose : retirez le mot-clé `function` et placez une « grosse flèche » `=>` entre la liste des paramètres et le corps :
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// affiche 5
 ```
 Les fonctions fléchées sont généralement stockées dans une `const`, de sorte que le nom ne peut pas être réassigné par erreur, et sont appelées exactement comme n'importe quelle autre fonction.
 
@@ -23,13 +23,13 @@ Lorsque le corps est une **expression unique**, vous pouvez omettre les accolade
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// affiche 5
 ```
 Lorsqu'il y a **exactement un paramètre**, vous pouvez aussi omettre les parenthèses autour de celui-ci :
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// affiche 8
 ```
 Avec zéro paramètre ou avec deux ou plus, les parenthèses sont obligatoires : `() => 42` et `(a, b) => a + b`.
 
@@ -39,14 +39,14 @@ Il y a un piège avec le retour implicite. Une fonction fléchée dont le corps 
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// affiche undefined
 ```
 Ici `{ name: name }` est un bloc contenant l'étiquette `name:` suivie de l'expression `name`. Rien n'est renvoyé, donc l'appel donne `undefined`.
 Pour renvoyer un littéral objet sur une seule ligne, enveloppez-le dans des **parenthèses** afin que JavaScript le traite comme une expression :
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// affiche { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ Envelopper le littéral objet dans des parenthèses est la manière standard de 
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// affiche 30
 ```
 Une fonction fléchée sans paramètre commence par une paire de parenthèses vide `()` :
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// affiche {}
 ```
 
 ---
@@ -71,9 +71,9 @@ Les fonctions fléchées brillent vraiment en tant que **callbacks** : des fonct
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// affiche [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// affiche [ 3, 4 ]
 ```
 Les deux renvoient un nouvel array et laissent l'original intact, vous pouvez donc les chaîner : `numbers.filter(...).map(...)`.
 
@@ -85,10 +85,10 @@ Deux autres méthodes d'array prennent un callback.
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// affiche 1, 2 et 3 sur trois lignes
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// affiche 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// affiche [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// affiche 70
 ```
 
 ---
@@ -111,9 +111,9 @@ Une **valeur par défaut** est utilisée lorsque l'argument est omis ou est `und
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// affiche Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// affiche Hello, Ana!
 ```
 Notez qu'un paramètre avec une valeur par défaut a toujours besoin des parenthèses, même lorsqu'il est le seul : `name = "World" => ...` est une erreur de syntaxe.
 
@@ -123,7 +123,7 @@ Un **paramètre du reste** `...name` rassemble un nombre quelconque d'arguments 
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// affiche 3
 ```
 Les fonctions régulières ont également un objet `arguments` caché, semblable à un array, qui contient tous les arguments qu'elles ont reçus. Les fonctions fléchées, **non** : à l'intérieur d'une flèche, `arguments` fait référence aux `arguments` de la fonction englobante ou n'existe pas du tout. Chaque fois que vous avez besoin de « tous les arguments » dans une fonction fléchée, utilisez un paramètre du reste.
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// affiche 1
 console.log(next());
-// prints 2
+// affiche 2
 ```
 Personne d'autre ne peut lire ou réinitialiser `count` : il vit uniquement à l'intérieur de la fonction renvoyée. Un second appel à `makeCounter()` crée un compteur indépendant avec son propre `count`.
 
@@ -154,8 +154,8 @@ Puisqu'une fonction est une valeur, une fonction fléchée peut **renvoyer une a
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// affiche 15
 console.log(makeAdder(1)(5));
-// prints 6
+// affiche 6
 ```
 Lisez-la de gauche à droite : `makeAdder` prend `amount` et renvoie `(n) => n + amount`, une fonction fléchée qui capture `amount` à travers une fermeture. `makeAdder(1)(5)` appelle immédiatement la fonction renvoyée.

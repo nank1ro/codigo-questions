@@ -12,7 +12,7 @@ La clé `key1` pointe vers la valeur `1`, `key2` vers `2`, et ainsi de suite.
 L'accès aux valeurs du dictionnaire par clé est tout comme l'accès aux valeurs de la liste par index :
 ```python
 user['age']
-# gets the age value from the user dictionary
+# récupère la valeur de l'âge dans le dictionnaire utilisateur
 ```
 
 ---

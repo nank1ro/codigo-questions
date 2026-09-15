@@ -29,7 +29,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// affiche Max makes a sound
 ```
 Quand un enfant déclare son propre constructeur, y appeler `super(...)` est **obligatoire** : sans cela, l'objet n'est jamais initialisé et JavaScript lève une `ReferenceError`. Un enfant sans constructeur du tout, en revanche, ne pose aucun problème, car JavaScript en écrit un qui transmet chaque argument au parent.
 
@@ -61,7 +61,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// affiche Woof
 ```
 La redéfinition ne supprime pas la version du parent, elle se contente de la masquer. À l'intérieur de la méthode enfant, `super.methodName(...)` l'atteint toujours, ce qui permet d'étendre le comportement du parent au lieu de le remplacer :
 ```javascript
@@ -71,7 +71,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// affiche Woof!
 ```
 Notez la différence : `super(...)` appelle le **constructeur** parent, `super.name(...)` appelle une **méthode** parente.
 
@@ -84,7 +84,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// affiche 0
 ```
 Les champs sont assignés à chaque nouvelle instance avant que le corps du constructeur ne s'exécute, donc le constructeur peut déjà compter sur eux. Un champ sans valeur est tout de même déclaré, il commence simplement à `undefined` :
 ```javascript
@@ -109,7 +109,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// affiche 8
 ```
 Une méthode statique s'appelle sur le nom de la classe, jamais sur une instance : `new MathUtils().double(4)` lève une `TypeError`, car les instances ne reçoivent pas les membres statiques. Dans une méthode statique, `this` désigne la classe, donc une méthode statique peut en appeler une autre avec `this.otherStatic(...)`.
 
@@ -121,7 +121,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// affiche 3.14
 ```
 Comme il n'existe qu'une seule copie, chaque instance qui la met à jour met à jour la même valeur. Dans un constructeur, vous y accédez par le nom de la classe, `Circle.PI`, et non par `this` : `this.PI` chercherait une propriété sur l'instance, ne trouverait rien et vous donnerait `undefined`.
 
@@ -138,7 +138,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// affiche 120
 ```
 Une factory peut être appelée avant même qu'une instance existe, ce qu'une méthode normale ne peut pas faire.
 
@@ -157,7 +157,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// affiche 12
 ```
 `r.area` exécute la méthode et renvoie son résultat, c'est donc un nombre. Ajouter des parenthèses reviendrait alors à appeler ce nombre, ce qui échoue.
 L'image miroir est un **setter**, déclaré avec `set`, qui s'exécute quand la propriété est assignée. Il prend exactement un paramètre :
@@ -187,7 +187,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// affiche 3, le setter a rejeté 50
 ```
 Un getter et un setter de même nom forment une seule propriété, ils ne peuvent donc pas être en même temps un champ normal : la valeur stockée vit sous un autre nom, par convention le même nom précédé d'un underscore.
 
@@ -203,7 +203,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// affiche 1234
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -222,7 +222,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// affiche $7
 ```
 C'est ainsi que vous gardez les étapes auxiliaires hors de l'API : l'appelant voit `print`, pas le détail de formatage derrière. Champs privés et méthodes privées donnent ensemble à une classe un intérieur et un extérieur clairs.
 
@@ -239,7 +239,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// affiche $7
 ```
 La même méthode est utilisée par la concaténation de chaînes et par `String(value)`. Si vous voulez aussi un **nombre** exploitable, définissez `[Symbol.toPrimitive](hint)`, qui reçoit `"string"`, `"number"` ou `"default"` et décide quoi renvoyer ; quand il existe, il l'emporte sur `toString`.
 
@@ -279,6 +279,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// affiche [ 'a', 'b' ]
 ```
 Le `*` devant le nom en fait un **générateur** : une fonction qui distribue les valeurs une à une avec `yield` et fait une pause entre elles. C'est la façon la plus courte de satisfaire le protocole d'itération, et cela fonctionne pour des valeurs calculées plutôt que stockées.

@@ -7,7 +7,7 @@ Pour autoriser une valeur absente, on déclare un type **nullable** en ajoutant 
 Un `String?` contient soit un `String`, soit `null` :
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // autorisé
 println(city) // null
 ```
 `String` et `String?` sont deux types différents : un `String` n'est jamais absent, un `String?` peut l'être.
@@ -17,9 +17,9 @@ println(city) // null
 La différence entre `String` et `String?` est vérifiée par le **compilateur**, et non à l'exécution.
 Affecter `null` à un type non null, ou passer une valeur nullable là où une valeur non null est attendue, est une erreur de compilation, si bien que le programme ne démarre même pas :
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // ne compile pas
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // ne compile pas : String? n'est pas un String
 ```
 C'est ainsi que Kotlin évite les plantages « null pointer » courants dans d'autres langages : une valeur ne peut être absente qu'aux endroits où vous l'avez explicitement déclarée avec `?`.
 
@@ -47,12 +47,12 @@ Très souvent, tout ce que l'on attend d'une valeur nullable, c'est la valeur el
 L'**opérateur Elvis** `?:` fait exactement cela : il retourne le membre de gauche lorsqu'il n'est pas `null`, sinon la valeur située à sa droite :
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown est un String égal à "Guest"
 ```
 Comme le membre de droite n'est utilisé que lorsque celui de gauche vaut `null`, le résultat est non null lorsque la valeur par défaut l'est.
 `?:` se combine harmonieusement avec `?.` pour ramener un appel sûr à une valeur ordinaire :
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len est un Int, 0 quand name est null
 ```
 
 ---
@@ -62,7 +62,7 @@ Les appels sûrs peuvent être **enchaînés** : dès qu'un maillon est `null`, 
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() et uppercase() ne s'exécutent jamais
 ```
 Une chaîne qui se termine par `?:` vous donne un résultat non null en une seule ligne :
 ```kotlin
@@ -103,7 +103,7 @@ Lorsque vous vérifiez avec `if` qu'une valeur n'est pas `null`, le compilateur 
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name est un String ici
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ La même chose se produit après une sortie anticipée :
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name est un String à partir d'ici
 }
 ```
 Les smart casts fonctionnent sur les variables `val` et les paramètres de fonction, dont la valeur ne peut pas changer entre la vérification et l'utilisation.
@@ -123,9 +123,9 @@ Les smart casts fonctionnent sur les variables `val` et les paramètres de fonct
 Combiné à un appel sûr, `?.let` exécute le bloc **uniquement** lorsque la valeur n'est pas `null`, et à l'intérieur du bloc `it` est non null :
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // affiche Sending to ada@example.com
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // rien ne se passe
 ```
 C'est une alternative compacte à `if (x != null) { ... }` lorsque vous n'avez besoin de la valeur qu'à l'intérieur du bloc.
 
@@ -213,7 +213,7 @@ Le membre de droite de `?:` peut être n'importe quelle expression, y compris `r
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first est un Char ici
 }
 ```
 Tous les outils que vous avez vus se combinent bien : les paramètres nullables et les types de retour décrivent *où* une valeur peut être absente, et `?.`, `?:`, `let`, les smart casts et `toIntOrNull` la gèrent sans jamais planter.

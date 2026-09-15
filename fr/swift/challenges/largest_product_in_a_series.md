@@ -16,7 +16,7 @@ Les quatre chiffres adjacents du nombre à 1000 chiffres ayant le plus grand pro
 Exemple d'appel de fonction :
 ```swift
 print(largestProductInASeries(4))
-// prints 5832
+// affiche 5832
 ```
 
 # --before-seed--

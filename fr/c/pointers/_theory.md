@@ -1,12 +1,12 @@
 Chaque variable vit quelque part en mémoire, et cet endroit porte un numéro appelé son **adresse**. L'opérateur `&`, qui se lit « adresse de », donne l'adresse d'une variable :
 ```c
 int x = 42;
-printf("%p\n", &x); // prints something like 0x7ffd5c3e9a4c
+printf("%p\n", &x); // affiche quelque chose comme 0x7ffd5c3e9a4c
 ```
 Le spécificateur `%p` affiche une adresse ; le nombre exact change d'une exécution à l'autre, les programmes ne s'y fient donc jamais.
 Une adresse se stocke dans une variable de type **pointeur**. Un pointeur se déclare avec le type vers lequel il pointe, suivi de `*` :
 ```c
-int *p = &x; // p is a pointer to int, and it holds the address of x
+int *p = &x; // p est un pointeur vers int, et il contient l'adresse de x
 ```
 `p` est maintenant dit **pointer vers** `x`. Deux pointeurs sont égaux lorsqu'ils contiennent la même adresse, donc `p == &x` est vrai.
 
@@ -16,7 +16,7 @@ Un pointeur à lui seul n'est qu'une adresse. Pour lire la valeur stockée à ce
 ```c
 int x = 42;
 int *p = &x;
-printf("%d\n", *p); // prints "42"
+printf("%d\n", *p); // affiche "42"
 ```
 `*p` signifie « la valeur vers laquelle `p` pointe », et c'est un `int` comme `x` lui-même. Le même symbole `*` a deux rôles : dans une déclaration `int *p`, il dit « ceci est un pointeur », dans une expression `*p`, il suit le pointeur jusqu'à la valeur.
 
@@ -27,7 +27,7 @@ Un pointeur déréférencé peut aussi être **affecté**. Écrire dans `*p` sto
 int x = 5;
 int *p = &x;
 *p = 10;
-printf("%d\n", x); // prints "10"
+printf("%d\n", x); // affiche "10"
 ```
 `x` et `*p` sont deux noms pour la même mémoire. Affecter à `p` sans le `*` changerait plutôt **quelle adresse** le pointeur contient, pas la valeur qui y est stockée.
 
@@ -51,7 +51,7 @@ Un pointeur peut pointer vers n'importe quel type : `double *`, `char *`, `bool 
 ```c
 double price = 9.5;
 double *p = &price;
-*p = *p * 2; // price is now 19.0
+*p = *p * 2; // price vaut maintenant 19.0
 ```
 Un pointeur doit correspondre au type de la variable vers laquelle il pointe ; `int *p = &price;` est rejeté par le compilateur. `NULL` est la seule valeur qui convient à un pointeur de n'importe quel type.
 
@@ -62,7 +62,7 @@ Un pointeur vers `char` fonctionne comme n'importe quel autre pointeur : il cont
 char grade = 'B';
 char *p = &grade;
 *p = 'A';
-printf("%c\n", grade); // prints "A"
+printf("%c\n", grade); // affiche "A"
 ```
 La lecture via un pointeur et l'écriture via celui-ci peuvent être mélangées librement : `*p = *p + 1` transforme `'A'` en `'B'`.
 
@@ -70,9 +70,9 @@ La lecture via un pointeur et l'écriture via celui-ci peuvent être mélangées
 
 Un pointeur stocke une adresse, et chaque adresse a la même taille sur une machine donnée, quel que soit le type qui y est stocké. `sizeof` d'un pointeur est donc le même pour `char *`, `int *` et `double *` : `8` octets sur un système 64 bits, `4` sur un système 32 bits :
 ```c
-printf("%zu\n", sizeof(int *));  // prints "8" on 64-bit
-printf("%zu\n", sizeof(double)); // prints "8"
-printf("%zu\n", sizeof(char));   // prints "1"
+printf("%zu\n", sizeof(int *));  // affiche "8" sur 64 bits
+printf("%zu\n", sizeof(double)); // affiche "8"
+printf("%zu\n", sizeof(char));   // affiche "1"
 ```
 Ne confonds pas la taille du pointeur avec la taille de ce vers quoi il pointe : `sizeof(p)` est la taille de l'adresse, `sizeof(*p)` est la taille de la valeur.
 
@@ -81,7 +81,7 @@ Ne confonds pas la taille du pointeur avec la taille de ce vers quoi il pointe :
 Un nom de tableau utilisé dans une expression donne l'adresse de son **premier élément**, il peut donc être affecté directement à un pointeur :
 ```c
 int numbers[3] = {10, 20, 30};
-int *p = numbers; // same as &numbers[0]
+int *p = numbers; // équivaut à &numbers[0]
 ```
 Ajouter un entier à un pointeur l'avance de autant d'**éléments**, pas d'octets : `p + 1` est l'adresse de `numbers[1]`, et `*(p + 1)` vaut `20`. Le compilateur met à l'échelle le pas selon la taille du type.
 L'indexation fonctionne aussi sur les pointeurs : `p[i]` est défini comme `*(p + i)`, donc `p[2]` vaut `30`. Cela s'appelle l'**arithmétique des pointeurs**.
@@ -118,7 +118,7 @@ void reset(int *p) {
 }
 
 int counter = 7;
-reset(&counter); // counter is now 0
+reset(&counter); // counter vaut maintenant 0
 ```
 L'exemple classique est l'échange de deux variables, qui a besoin d'une copie temporaire d'une valeur pendant que l'autre est écrasée.
 
@@ -159,8 +159,8 @@ L'appelant lit ensuite les membres via le pointeur renvoyé avec `->`, après av
 
 `const` peut protéger soit la valeur, soit le pointeur, selon l'endroit où il est écrit :
 ```c
-const int *p = &a; // pointer to const: *p cannot be changed, p can point elsewhere
-int *const q = &a; // const pointer: q always points to a, but *q can be changed
+const int *p = &a; // pointeur vers const : *p ne peut pas être modifié, p peut pointer ailleurs
+int *const q = &a; // pointeur const : q pointe toujours vers a, mais *q peut être modifié
 ```
 Lis la déclaration de droite à gauche : `p` est un pointeur vers un `int` constant ; `q` est un pointeur constant vers un `int`. Un pointeur vers const est la façon habituelle de promettre qu'une fonction se contente de **lire** ce qu'elle reçoit, comme dans `int sum(const int *values, int size)`. Une variable normale peut lui être passée ; la promesse ne limite que ce que la fonction peut faire.
 

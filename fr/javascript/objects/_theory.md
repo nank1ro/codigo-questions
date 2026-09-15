@@ -11,7 +11,7 @@ La clé `key1` pointe vers la valeur `1`, `key2` vers `2`, et ainsi de suite.
 
 Accéder aux valeurs du dictionnaire par clé est tout comme accéder aux valeurs du tableau par index :
 ```javascript
-// gets the age value from the user dictionary
+// récupère la valeur de l'âge depuis le dictionnaire utilisateur
 user['age'];
 ```
 

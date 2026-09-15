@@ -57,6 +57,6 @@ Lorsque l'ordre compte, appelle d'abord `sorted()` : il renvoie un nouveau **tab
 ```swift
 let numbers: Set<Int> = [3, 1, 2]
 for number in numbers.sorted() {
-    print(number) // 1, 2, 3 on separate lines
+    print(number) // 1, 2, 3 sur des lignes séparées
 }
 ```

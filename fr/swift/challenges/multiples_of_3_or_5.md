@@ -16,7 +16,7 @@ Si l'on liste tous les nombres naturels inférieurs à 10 qui sont multiples de 
 Exemple d'appel de fonction :
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// affiche 23
 ```
 
 # --before-seed--

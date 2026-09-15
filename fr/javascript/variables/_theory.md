@@ -12,7 +12,7 @@ De cette façon, nous avons assigné la valeur `1` à la variable nommée `x`.
 Si nous affichons la variable `x`, nous récupérons le nombre `1` :
 ```javascript
 console.log(x);
-// prints 1
+// affiche 1
 ```
 
 ---
@@ -21,9 +21,9 @@ Les variables sont appelées de cette façon parce que la valeur qu'elles stocke
 Nous pouvons mettre à jour `x` en utilisant `=` et en lui donnant une nouvelle valeur.
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // affiche 1
 x = 2;
-console.log(x); // prints 2
+console.log(x); // affiche 2
 ```
 
 ---
@@ -33,7 +33,7 @@ Ici, nous pouvons donner à la variable `y` la valeur de `x`
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // affiche 5
 ```
 
 ---
@@ -42,9 +42,9 @@ When we update a variable, it forgets its previous value.
 Ici, nous pouvons afficher la variable `x` deux fois et voir comment sa valeur se met à jour.
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // affiche 5
 x = 10;
-console.log(x); // prints 10
+console.log(x); // affiche 10
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 En JavaScript, les variables chaîne peuvent être déclarées en utilisant à la fois des guillemets doubles et simples :
 ```javascript
 let x = "May";
-// both are the same string
+// les deux sont la même chaîne
 let y = 'May';
 console.log(x === y);
-// prints true
+// affiche true
 ```
 
 ---

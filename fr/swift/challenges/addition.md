@@ -17,7 +17,7 @@ title: Addition
 Exemple d'appel de fonction :
 ```swift
 print(addition(1, 2))
-// prints 3
+// affiche 3
 ```
 
 # --before-seed--

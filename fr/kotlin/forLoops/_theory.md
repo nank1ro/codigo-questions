@@ -22,7 +22,7 @@ Voici une boucle `for` répétant une action un nombre fixe de fois :
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// affiche 1, 2, 3
 ```
 
 La sortie montre l'index `i` recevant chaque valeur dans la plage de _1_ à _3_.
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* affiche
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ Pour le faire fonctionner, nous devons utiliser le mot-clé `downTo` :
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// affiche 3, 2, 1
 ```
 
 `downTo` produit une plage décroissante.
@@ -78,7 +78,7 @@ Vous pouvez définir le __pas__ de votre boucle `for` en utilisant le mot-clé `
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// affiche 1, 3, 5, 7, 9
 ```
 
 Comme vous pouvez le voir, le bloc de code s'exécute avec un pas de _2_ au lieu de _1_, changeant complètement notre sortie.
@@ -88,7 +88,7 @@ Comme vous pouvez le voir, le bloc de code s'exécute avec un pas de _2_ au lieu
 Vous pouvez également produire une plage de _caractères_.
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// affiche abcdefghijklmnopqrstuvwxyz
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 Vous pouvez itérer sur une __String__.
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// affiche bdc
 ```
 
 Dans l'exemple ci-dessus, nous avons affiché chaque caractère + 1, donc `'a'` devient `'b'`, `'b'` devient `'c'` et ainsi de suite.
@@ -113,7 +113,7 @@ Si vous avez simplement besoin de répéter un bloc de code `n` fois, vous pouve
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// affiche repeat 3 fois
 ```
 
 Vous pouvez même accéder à l'index avec
@@ -121,19 +121,19 @@ Vous pouvez même accéder à l'index avec
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// affiche 0, 1, 2
 ```
 
 ---
 
 En Kotlin, nous pouvons utiliser le `for-in` également pour les collections itérables en appelant la closure donnée sur chaque élément :
 ```kotlin
-// this is a list, we'll see about that soon
+// ceci est une liste, on verra ça bientôt
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// affiche (2, 4, 6, 8, 10)
 ```
 
 ---
@@ -142,7 +142,7 @@ En Kotlin, nous avons aussi la boucle `forEach`.
 Elle appelle la closure donnée sur chaque élément de la séquence dans le même ordre qu'une boucle `for-in` :
 
 ```kotlin
-// this is a list, we'll see about that soon
+// ceci est une liste, on verra ça bientôt
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

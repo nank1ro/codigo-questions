@@ -27,7 +27,7 @@ Par exemple, `"059"` donne `0`, puis `5` doublé donne `10`, qui devient `1`, pu
 Exemple d'appel de fonction :
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# affiche True
 ```
 
 # --seed--

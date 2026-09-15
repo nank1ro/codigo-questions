@@ -2,7 +2,7 @@ Un **commentaire** est une note écrite à l'intérieur du code source pour les 
 
 Le commentaire le plus simple est le **commentaire sur une ligne** : il commence par `//` et va jusqu'à la fin de la ligne.
 ```javascript
-// Greets the user
+// Salue l'utilisateur
 console.log("Hello");
 ```
 Utilise les commentaires pour expliquer à quoi sert un morceau de code, ou pourquoi il a été écrit ainsi. Note que, contrairement à d'autres langages, `#` ne commence **pas** un commentaire en JavaScript.
@@ -11,7 +11,7 @@ Utilise les commentaires pour expliquer à quoi sert un morceau de code, ou pour
 
 Un commentaire n'a pas besoin de sa propre ligne : il peut suivre le code sur la même ligne. C'est un **commentaire en ligne** (ou commentaire de fin de ligne), et c'est un bon endroit pour une courte note sur cette instruction précise :
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // abandonne après trois tentatives
 ```
 Tout ce qui va de `//` à la fin de la ligne est ignoré, tandis que le code qui le précède s'exécute normalement.
 
@@ -23,7 +23,7 @@ Cela fait de `//` un moyen rapide de désactiver une ligne de code sans la suppr
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // affiche 10
 ```
 La deuxième ligne est maintenant un commentaire, donc `total` reste `10`. Enlever le `//` ramène la ligne à la vie.
 
@@ -47,7 +47,7 @@ Quel que soit le type de commentaire que tu utilises, la règle est la même : l
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// affiche seulement a
 ```
 Quand tu n'es pas sûr de ce qu'affiche un programme, supprime mentalement tous les commentaires et lis ce qui reste.
 
@@ -55,8 +55,8 @@ Quand tu n'es pas sûr de ce qu'affiche un programme, supprime mentalement tous 
 
 Contrairement à `//`, qui s'arrête à la fin de la ligne, un commentaire `/*` ne s'arrête qu'au `*/`. Si tu oublies de le fermer, JavaScript considère tout le code qui suit comme faisant partie du commentaire et signale une erreur de syntaxe :
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* en centimètres
+console.log(width); // toujours dans le commentaire : SyntaxError, le commentaire n'est jamais fermé
 ```
 `//` et `/* */` fonctionnent tous les deux comme commentaires en ligne, mais avec `/*` assure-toi toujours que le `*/` est bien là.
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // affiche 100
 ```
 Comme les lignes à l'intérieur du bloc sont ignorées, `total` ne change jamais. Souviens-toi que cela ne fonctionne que si aucune de ces lignes ne contient un `*/`.
 
@@ -158,12 +158,12 @@ JavaScript ignore cette ligne exactement comme un commentaire, mais seulement qu
 
 Un bon commentaire explique **pourquoi** le code fait quelque chose, pas **ce** qu'il fait. Le code montre déjà ce qui se passe ; le répéter avec des mots ajoute du bruit et devient obsolète dès que le code change :
 ```javascript
-// set timeout to 30
+// définit timeout à 30
 const timeout = 30;
 ```
 La raison derrière ce nombre est ce qu'un lecteur ne peut pas deviner :
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// le serveur abandonne les connexions inactives après 35 secondes, donc arrête plus tôt
 const timeout = 30;
 ```
 Si un commentaire ne fait que répéter la ligne en dessous, supprime-le ou remplace-le par la raison.
@@ -176,8 +176,8 @@ Certains commentaires suivent une convention que les éditeurs comprennent. Les 
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: lis la limite depuis les paramètres
+// FIXME: plante quand la liste est vide
 ```
 Pour JavaScript ce sont des commentaires ordinaires ; les éditeurs les répertorient pour que le travail en attente soit facile à trouver. Un `TODO` se trouve souvent à côté d'un bouchon qui garde le code fonctionnel jusqu'à ce que la vraie implémentation soit écrite. Quand tu termines le travail, remplace le bouchon et supprime le marqueur dans la même modification : un `TODO` périmé est trompeur.
 

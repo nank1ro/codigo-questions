@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, ce n'est pas un nombre entier
+print(Int(" 42"))  // nil, les espaces ne sont pas autorisés
 print(Int("abc"))  // nil
 ```
 Pour un texte décimal, utilise `Double(text)`, qui retourne un `Double?` de la même façon : `Double("3.5")` vaut `Optional(3.5)`.
@@ -166,7 +166,7 @@ Comme `Int(text)` et `Double(text)` retournent `nil` en cas d'échec, comparer l
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, un nombre entier est aussi un Double valide
 ```
 Note la dernière ligne : tout texte accepté par `Int` est aussi accepté par `Double`, donc vérifie d'abord `Int` quand tu veux les distinguer.
 
@@ -180,7 +180,7 @@ Chaque élément se souvient quand même de son type réel, que `type(of:)` rév
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // s'exécute uniquement pour 1
     }
 }
 ```

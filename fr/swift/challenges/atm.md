@@ -25,7 +25,7 @@ S'il n'y a pas assez d'argent sur le compte pour effectuer la transaction, retou
 Exemple d'appel de fonction :
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// affiche 9,5
 ```
 
 # --before-seed--

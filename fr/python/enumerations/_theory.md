@@ -154,7 +154,7 @@ Si deux membres partagent la même valeur, le second n'est pas un nouveau membre
 ```python
 class Status(Enum):
     ACTIVE = 1
-    ENABLED = 1  # alias of ACTIVE
+    ENABLED = 1  # alias de ACTIVE
 
 print(Status.ENABLED)  # Status.ACTIVE
 print(len(Status))     # 1

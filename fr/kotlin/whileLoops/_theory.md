@@ -5,7 +5,7 @@ Cela répète un bloc tant que l'expression _booléenne_ de contrôle est vraie:
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // Code à répéter
 }
 ```
 L'expression booléenne est évaluée une fois au début de la boucle et
@@ -46,7 +46,7 @@ La sortie du code ci-dessus est _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, 
 Il existe une deuxième façon d'utiliser _while_, en conjonction avec le mot-clé `do`.
 ```kotlin
 do {
-  // Code to be repeated
+  // Code à répéter
 } while (Boolean-expression)
 ```
 Comme vous pouvez le voir, la boucle `do-while` est très similaire à la boucle `while`, sauf pour une différence importante:
@@ -71,7 +71,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// affiche 1, 3
 ```
 
 Comme vous pouvez le voir au __[1]__ quand `i` est égal à _2_, nous sautons et _continuons_ à l'étape suivante. En fait, le nombre 2 ne s'imprime jamais.
@@ -86,7 +86,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// affiche 1
 ```
 
 Comme vous pouvez le voir au __[1]__ quand `i` est égal à _2_, nous _romperions_ la boucle. En fait, les nombres 2 et 3 ne s'impriment jamais.

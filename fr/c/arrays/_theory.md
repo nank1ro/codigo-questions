@@ -27,13 +27,13 @@ Un indice de liste se comporte comme n'importe quel autre nom de variable ! Il p
 Vous avez vu comment accéder à un indice de liste comme ceci :
 ```c
 int numbers[4] = {5, 6, 7, 8};
-numbers[0]; // Gets the value 5
+numbers[0]; // Récupère la valeur 5
 ```
 Voici comment fonctionne une assignation :
 ```c
 int numbers[4] = {5, 6, 7, 8};
 numbers[0] = 1;
-printf("%d\n", numbers[0]); // prints the new value 1
+printf("%d\n", numbers[0]); // affiche la nouvelle valeur 1
 ```
 
 ---

@@ -23,15 +23,15 @@ Il peut être utilisé pour accéder ainsi que pour assigner des valeurs.
 Vous avez vu comment accéder à un index de tableau comme ceci:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// Affiche la valeur "Jeremiah"
 console.log(names[0]);
 ```
 Voici comment fonctionne une affectation:
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// Assigne la nouvelle valeur "Jordan"
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// Affiche la valeur "Jordan"
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ Pour ajouter un élément à un tableau, nous utilisons la fonction `push`:
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// Affiche ["a", "b", "c"]
 ```
 
 ---
@@ -60,7 +60,7 @@ Considérez le code suivant:
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// affiche [2, 3]
 ```
 D'abord, nous créons un tableau appelé `numbers`.
 Ensuite, nous prenons une sous-section du tableau et la stockons dans le tableau slice.
@@ -71,9 +71,9 @@ Gardez à l'esprit que l'index de droite est exclu
 
 En JavaScript, nous pouvons découper un tableau comme nous le souhaitons!
 ```javascript
-// Grabs the first two items
+// Récupère les deux premiers éléments
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// Récupère du quatrième élément jusqu'au dernier
 listName.slice(3);
 ```
 Si votre tranche de tableau inclut le tout premier ou dernier élément d'un tableau, l'index de cet élément n'a pas besoin d'être inclus
@@ -94,13 +94,13 @@ En JavaScript, nous pouvons utiliser la méthode `indexOf()`:
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// affiche 1
 ```
 Le code ci-dessus imprime le premier index qui contient la chaîne `"Zac"`, `1` dans ce cas.
 Nous pouvons également insérer des éléments dans un tableau à un index spécifique, en utilisant la méthode `splice()`:
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// affiche ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 Le code ci-dessus insère `"Ali"` à l'index `1`, ce qui déplace tout après cet index d'une position vers le bas.
 La deuxième valeur `0` signifie _deleteCount_, dans ce cas, nous ne supprimons aucun élément du tableau; mais si nous avions spécifié `1`, la valeur `Zac` aurait été supprimée du tableau
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// affiche 1, 2, 3
 ```
 Un nom de variable suit le mot-clé `for`, il sera assigné la valeur de chaque élément du tableau à tour de rôle.

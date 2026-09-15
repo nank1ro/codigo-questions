@@ -27,7 +27,7 @@ La fonctionnalité est la même, la seule différence est qu'il effectue la sous
 Donc les éléments suivants sont exactement les mêmes
 ```c
 num = num - 5;
-// is equal to
+// équivaut à
 num -= 5;
 ```
 
@@ -38,7 +38,7 @@ Il multiplie la variable par une valeur et assigne le résultat à cette variabl
 Donc les éléments suivants sont exactement les mêmes
 ```c
 num = num * 5;
-// is equal to
+// équivaut à
 num *= 5;
 ```
 
@@ -49,7 +49,7 @@ Il divise la variable par une valeur et assigne le résultat à cette variable.
 Donc les éléments suivants sont exactement les mêmes
 ```c
 num = num / 5;
-// is equal to
+// équivaut à
 num /= 5;
 ```
 
@@ -60,6 +60,6 @@ Il calcule le modulus de la variable et d'une valeur et assigne le résultat à 
 Donc les éléments suivants sont exactement les mêmes
 ```c
 num = num % 5;
-// is equal to
+// équivaut à
 num %= 5;
 ```

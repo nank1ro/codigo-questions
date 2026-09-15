@@ -7,7 +7,7 @@ Chaque constante est un entier : sauf indication contraire, la première vaut `0
 Comme ce sont des entiers, vous les affichez avec `%d` :
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// affiche "1"
 ```
 
 ---
@@ -19,7 +19,7 @@ Les noms sont généralement écrits en majuscules, comme les autres constantes,
 
 Vous pouvez aussi donner une valeur explicite à une constante avec `=` ; les constantes suivantes continuent de compter à partir de cette valeur :
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB vaut 2, MAR vaut 3
 ```
 Les valeurs explicites n'ont pas besoin d'être consécutives ou croissantes : `enum Status { OK = 200, NOT_FOUND = 404 };` est parfaitement valide.
 
@@ -86,7 +86,7 @@ Le nouveau nom `Color` est utilisé seul, sans le mot-clé `enum` devant.
 Une constante d'énumération se convertit automatiquement en `int`, donc `int n = BLUE;` est valide et stocke `2`.
 Le chemin inverse se fait avec une **conversion**, en écrivant le type énuméré entre parenthèses avant l'entier :
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c vaut GREEN
 ```
 C ne vérifie pas que le nombre correspond à une constante : `(enum Color)7` compile même si aucune constante ne vaut `7`, il faut donc valider les entiers avant de les convertir.
 
@@ -103,7 +103,7 @@ Combiné à l'opérateur modulo `%`, cela permet de parcourir cycliquement les c
 
 Une astuce courante consiste à ajouter une constante supplémentaire à la fin de l'énumération, généralement nommée `COUNT` : comme la numérotation commence à `0`, sa valeur correspond exactement au nombre de constantes réelles qui la précèdent.
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT vaut 3
 ```
 Cette sentinelle vous permet de parcourir toutes les constantes sans coder le nombre en dur, et elle reste correcte quand vous ajoutez des constantes avant elle :
 ```c
@@ -119,7 +119,7 @@ La sentinelle `COUNT` est aussi la taille parfaite pour un tableau avec une case
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // affiche "4"
 ```
 Une boucle de `0` à `FRUIT_COUNT` visite chaque case, et l'indice de boucle peut être reconverti en `enum Fruit` quand vous devez le retourner.
 

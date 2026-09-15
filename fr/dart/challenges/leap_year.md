@@ -18,7 +18,7 @@ Return `true` if it's a leap year, `false` otherwise.
 Exemple d'appel de fonction :
 ```dart
 print(leapYear(2000));
-// prints true
+// affiche true
 ```
 
 # --seed--

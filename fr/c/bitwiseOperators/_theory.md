@@ -6,7 +6,7 @@ Les **opérateurs bit à bit** agissent sur ces bits individuels plutôt que sur
 //  --------
 //  00001000   (8)
 printf("%u\n", 12u & 10u);
-// prints "8"
+// affiche "8"
 ```
 Les motifs de bits s'écrivent généralement sous forme de littéraux hexadécimaux tels que `0x0C`, car chaque chiffre hexadécimal correspond exactement à quatre bits. Utilisez toujours des types `unsigned` pour travailler sur les bits et affichez-les avec `%u`.
 
@@ -19,7 +19,7 @@ L'opérateur **OR** `|` compare les deux valeurs bit par bit et garde un `1` là
 //  --------
 //  00001110   (14)
 printf("%u\n", 12u | 10u);
-// prints "14"
+// affiche "14"
 ```
 `|` est la façon habituelle de fusionner deux motifs de bits en un seul.
 
@@ -32,7 +32,7 @@ L'opérateur **XOR** `^` (ou exclusif) garde un `1` uniquement là où les deux 
 //  --------
 //  00000110   (6)
 printf("%u\n", 12u ^ 10u);
-// prints "6"
+// affiche "6"
 ```
 Une propriété utile en découle: appliquer le même XOR deux fois redonne la valeur d'origine.
 
@@ -42,7 +42,7 @@ L'opérateur **NOT** `~` prend un seul opérande et inverse chacun de ses bits: 
 Un `unsigned int` contient 32 bits, donc `~0x0Fu` inverse les 32 et produit un très grand nombre. Pour ne garder que l'octet qui vous intéresse, combinez `~` avec `& 0xFF`:
 ```c
 printf("%u\n", ~0x0Fu & 0xFFu);
-// prints "240"
+// affiche "240"
 ```
 `~` a une priorité plus élevée que `&`, il est donc appliqué en premier.
 Ne confondez pas `~` avec le `!` logique: `!` considère la valeur entière et répond `0` ou `1`, tandis que `~` réécrit chaque bit.
@@ -55,7 +55,7 @@ L'opérateur de **décalage à gauche** `<<` déplace chaque bit d'un certain no
 //  << 2
 //  00001100   (12)
 printf("%u\n", 3u << 2);
-// prints "12"
+// affiche "12"
 ```
 Décaler à gauche de `n` multiplie la valeur par 2 puissance `n`.
 Deux erreurs rendent le comportement d'un programme C indéfini: décaler à gauche une valeur négative, et décaler d'un montant supérieur ou égal à la largeur du type (32 pour un `unsigned int`). Travailler avec des valeurs **unsigned** vous met à l'abri de la première.
@@ -68,7 +68,7 @@ L'opérateur de **décalage à droite** `>>` déplace chaque bit vers la droite;
 //  >> 2
 //  00000011   (3)
 printf("%u\n", 12u >> 2);
-// prints "3"
+// affiche "3"
 ```
 Décaler à droite de `n` divise une valeur non signée par 2 puissance `n`, en jetant le reste.
 Décaler à droite une valeur *négative* n'est pas portable, ce qui est une raison de plus pour réserver le travail sur les bits aux types `unsigned`.
@@ -78,11 +78,11 @@ Décaler à droite une valeur *négative* n'est pas portable, ce qui est une rai
 Chaque opérateur bit à bit binaire possède une forme d'**affectation composée** qui met à jour une variable sur place: `&=`, `|=`, `^=`, `<<=` et `>>=`.
 ```c
 unsigned int x = 12;
-x &= 10;  // same as x = x & 10;
-x |= 1;   // same as x = x | 1;
-x ^= 3;   // same as x = x ^ 3;
-x <<= 1;  // same as x = x << 1;
-x >>= 2;  // same as x = x >> 2;
+x &= 10;  // équivaut à x = x & 10;
+x |= 1;   // équivaut à x = x | 1;
+x ^= 3;   // équivaut à x = x ^ 3;
+x <<= 1;  // équivaut à x = x << 1;
+x >>= 2;  // équivaut à x = x >> 2;
 ```
 Elles se lisent mieux que de répéter le nom de la variable et constituent la façon habituelle de modifier les bits d'une variable de flags.
 
@@ -95,7 +95,7 @@ Un **masque** est une valeur dont les bits sélectionnent la partie d'une autre 
 //  --------
 //  00001011   (0x0B)
 printf("%u\n", 0xABu & 0x0Fu);
-// prints "11"
+// affiche "11"
 ```
 `0x0F` garde les quatre bits les plus bas, appelé le **nibble** bas, et `0xFF` garde les huit bits les plus bas, un octet entier.
 
@@ -107,7 +107,7 @@ Pour **activer** un seul bit, c'est-à-dire le mettre à `1` sans toucher aux au
 unsigned int value = 4;      // 00000100
 value = value | (1u << 1);   // 00000110
 printf("%u\n", value);
-// prints "6"
+// affiche "6"
 ```
 Si le bit était déjà activé, la valeur ne change pas, ce qui rend l'activation d'un bit sans risque à répéter.
 
@@ -118,7 +118,7 @@ Pour **effacer** un seul bit, c'est-à-dire le mettre à `0`, faites un AND de l
 unsigned int value = 7;       // 00000111
 value = value & ~(1u << 1);   // 00000101
 printf("%u\n", value);
-// prints "5"
+// affiche "5"
 ```
 `~(1u << 1)` est une valeur avec tous les bits activés sauf le bit `1`, donc le AND laisse tout le reste intact.
 
@@ -129,7 +129,7 @@ Pour **basculer** un seul bit, c'est-à-dire l'inverser quel que soit son état 
 unsigned int value = 5;      // 00000101
 value = value ^ (1u << 1);   // 00000111
 printf("%u\n", value);
-// prints "7"
+// affiche "7"
 ```
 Comme le XOR s'annule lui-même, basculer le même bit une seconde fois redonne la valeur d'origine.
 
@@ -138,8 +138,8 @@ Comme le XOR s'annule lui-même, basculer le même bit une seconde fois redonne 
 Pour **tester** un seul bit, faites un AND de la valeur avec le masque et vérifiez si le résultat est différent de `0`:
 ```c
 unsigned int value = 10;                  // 00001010
-printf("%d\n", (value & (1u << 3)) != 0); // prints "1"
-printf("%d\n", (value & (1u << 2)) != 0); // prints "0"
+printf("%d\n", (value & (1u << 3)) != 0); // affiche "1"
+printf("%d\n", (value & (1u << 2)) != 0); // affiche "0"
 ```
 Le AND ne produit pas `1`: il produit soit `0`, soit le masque lui-même, qui pour le bit `3` vaut `8`. C'est pourquoi le résultat est comparé avec `!= 0` au lieu d'être utilisé comme réponse directe.
 
@@ -150,7 +150,7 @@ Les **flags** sont des masques nommés, chacun utilisant un bit différent, qui 
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
-// prints "1"
+// affiche "1"
 ```
 Un `unsigned int` peut donc transporter 32 réponses oui/non indépendantes.
 
@@ -163,7 +163,7 @@ for (int i = 3; i >= 0; i--) {
     printf("%u", (value >> i) & 1u);
 }
 printf("\n");
-// prints "0101"
+// affiche "0101"
 ```
 Décaler la valeur vers la droite de `i` rangs amène le bit `i` à la position la plus à droite, où `& 1u` l'isole.
 
@@ -176,7 +176,7 @@ while (value != 0) {
     count += value & 1u;
     value >>= 1;
 }
-// count is 2
+// count vaut 2
 ```
 La boucle se termine toujours, car une valeur non signée décalée vers la droite assez de fois devient `0`.
 
@@ -186,6 +186,6 @@ Plusieurs petits nombres sont souvent regroupés dans une valeur plus grande. Po
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
-// prints "18", the 0x12 byte
+// affiche "18", l'octet 0x12
 ```
 Décaler d'abord et masquer ensuite est l'ordre à retenir: le masque décrit toujours le champ une fois qu'il est arrivé en bas.

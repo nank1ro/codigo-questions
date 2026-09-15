@@ -16,7 +16,7 @@ Si nous listons tous les nombres naturels inférieurs à 10 qui sont des multipl
 Exemple d'appel de fonction :
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// affiche 23
 ```
 
 # --seed--

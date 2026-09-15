@@ -16,7 +16,7 @@ Un nombre palindrome se lit de la même façon dans les deux sens. Le plus grand
 Exemple d'appel de fonction :
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// affiche 9009
 ```
 
 # --before-seed--

@@ -16,7 +16,7 @@ Chaque nouveau terme de la suite de Fibonacci est généré en additionnant les 
 Exemple d'appel de fonction :
 ```dart
 print(fibonacciEvenSum(8));
-// prints 10
+// affiche 10
 ```
 
 # --seed--
