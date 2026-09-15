@@ -17,7 +17,7 @@ title: 加法
 函数调用示例：
 ```swift
 print(addition(1, 2))
-// prints 3
+// 输出 3
 ```
 
 # --before-seed--

@@ -11,7 +11,7 @@ var dictionaryName: [String: Int] = ["key1": 1, "key2": 2, "key3": 3]
 
 通过键访问字典值就像通过索引访问数组值一样：
 ```swift
-// gets the age value from the user dictionary
+// 从 user 字典中获取 age 的值
 user['age']
 ```
 
@@ -34,7 +34,7 @@ dictName[newKeyName] = newValue
 因为字典是可变的，所以它们可以通过多种方式进行修改。可以使用 `removeValue(forKey:)` 方法从字典中删除项目：
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // 输出被移除的值，如果该键存在
 }
 ```
 这将从字典中删除键 `keyName` 及其关联的值。
@@ -73,5 +73,5 @@ for (key, value) in dictName {
 我们也可以通过将键的值赋为 `nil` 来删除元素
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName 已从字典 dictName 中删除
 ```

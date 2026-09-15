@@ -7,7 +7,7 @@ char name[] = "Codigo";
 使用 `%s` 占位符打印字符串：
 ```c
 printf("%s\n", name);
-// prints "Codigo"
+// 打印 "Codigo"
 ```
 
 ---
@@ -15,7 +15,7 @@ printf("%s\n", name);
 空字符会占用内存空间：字面量 `"hi"` 占用 3 个字节，即 `'h'`、`'i'` 和 `'\0'`。
 当你自己声明大小时，一定要为它留出空间：
 ```c
-char word[6] = "hello"; // 5 letters + '\0'
+char word[6] = "hello"; // 5 个字母 + '\0'
 ```
 没有终止符，C 语言就无法知道字符串在哪里结束。
 
@@ -39,7 +39,7 @@ word[5]; // 'g'
 ```
 单个字符使用 `%c` 打印。字符也可以被替换：
 ```c
-word[0] = 'K'; // word is now "Koding"
+word[0] = 'K'; // word 现在是 "Koding"
 ```
 
 ---
@@ -56,7 +56,7 @@ for (int i = 0; text[i] != '\0'; i++) {
 数组在声明之后不能用 `=` 赋值：
 ```c
 char copy[20];
-copy = "Codigo"; // error
+copy = "Codigo"; // 错误
 ```
 要复制字符串，使用 `string.h` 中的 `strcpy(destination, source)`。
 目标数组必须足够大，能容纳所有字符加上 `'\0'`。
@@ -67,7 +67,7 @@ copy = "Codigo"; // error
 ```c
 char text[20] = "Hello";
 strcat(text, " World");
-// text is now "Hello World"
+// text 现在是 "Hello World"
 ```
 与 `strcpy` 一样，目标数组必须有足够的空间容纳结果。
 
@@ -77,7 +77,7 @@ strcat(text, " World");
 应使用 `strcmp(first, second)`，当两个字符串包含完全相同的字符时返回 `0`：
 ```c
 strcmp("cat", "cat"); // 0
-strcmp("cat", "dog"); // not 0
+strcmp("cat", "dog"); // 不为 0
 ```
 
 ---
@@ -85,8 +85,8 @@ strcmp("cat", "dog"); // not 0
 `strcmp` 使用字符编码逐个字符地比较字符串。
 当第一个字符串排在第二个之前时，结果为负数；排在之后时为正数；相等时为 `0`：
 ```c
-strcmp("a", "b"); // negative
-strcmp("b", "a"); // positive
+strcmp("a", "b"); // 负数
+strcmp("b", "a"); // 正数
 ```
 
 ---
@@ -96,7 +96,7 @@ strcmp("b", "a"); // positive
 ```c
 char prefix[10];
 strncpy(prefix, "Codigo", 3);
-prefix[3] = '\0'; // prefix is "Cod"
+prefix[3] = '\0'; // prefix 为 "Cod"
 ```
 
 ---
@@ -120,7 +120,7 @@ text[i] = toupper(text[i]);
 `sprintf` 的用法与 `printf` 类似，但它将格式化后的文本写入字符数组，而不是屏幕：
 ```c
 char buffer[30];
-sprintf(buffer, "%d items", 3); // buffer is "3 items"
+sprintf(buffer, "%d items", 3); // buffer 为 "3 items"
 ```
 缓冲区必须足够大，能容纳整个文本及其 `'\0'`。
 

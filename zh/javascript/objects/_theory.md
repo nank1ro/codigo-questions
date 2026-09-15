@@ -11,7 +11,7 @@ var objectName = {"key1": 1, "key2": 2, "key3": 3};
 
 通过键访问字典值就像通过索引访问数组值一样：
 ```javascript
-// gets the age value from the user dictionary
+// 从 user 字典中获取 age 值
 user['age'];
 ```
 

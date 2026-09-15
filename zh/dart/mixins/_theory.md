@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0，b 有自己的 count
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // 这是使用它的唯一方式
 ```
 
 它的名字仍然可以作为类型使用，因此 `Team() is Scored` 和 `Scored s = Team();` 都没有问题。mixin 没有构造函数，所以非空字段必须在声明处初始化（或标记为 `late`），就像上面的 `int score = 0;`。
@@ -82,7 +82,7 @@ mixin 可以声明**没有主体**的成员。这样的成员是抽象的：mixi
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // 没有方法体：由类提供
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B，列表中最后一个 mixin
+  print(Second().who()); // A，列表中最后一个 mixin
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // 格式来自 Starred
+class Simple with Starred, Plain {} // 格式来自 Plain
 ```
 
 只有一个 mixin 声明的成员永远不存在竞争：无论顺序如何，它们都可用。把 `with X, Y` 读作“从 `X` 开始，然后让 `Y` 覆盖它”。
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // 可行：它是一个类
+class Record extends Serializable {} // 可行：它是一个类
+class Row with Serializable {}       // 可行：它是一个 mixin
 ```
 
 `mixin class` 为这种灵活性付出两个限制的代价：它必须继承自 `Object`，因此不能有自己的 `extends` 子句；它不能声明构造函数，因为 mixin 永远不会运行构造函数。

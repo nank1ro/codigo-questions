@@ -22,7 +22,7 @@ title: 考拉兹猜想
 函数调用示例：
 ```dart
 print(collatzSteps(16));
-// prints 4
+// 打印 4
 ```
 
 # --seed--

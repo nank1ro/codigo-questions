@@ -23,15 +23,15 @@ arrayName[index];
 你已经看到了如何像这样访问数组索引：
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Prints the value "Jeremiah"
+// 打印值 "Jeremiah"
 console.log(names[0]);
 ```
 以下是赋值的方式：
 ```javascript
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"];
-// Assign the new value "Jordan"
+// 赋新值 "Jordan"
 names[0] = "Jordan";
-// Prints the value "Jordan"
+// 打印值 "Jordan"
 console.log(names[0]);
 ```
 
@@ -49,7 +49,7 @@ console.log(names[0]);
 var letters = ["a", "b"];
 letters.push("c");
 console.log(letters);
-// Prints ["a", "b", "c"]
+// 打印 ["a", "b", "c"]
 ```
 
 ---
@@ -60,7 +60,7 @@ console.log(letters);
 let numbers = [1, 2, 3, 4];
 let slice = numbers.slice(1, 3);
 console.log(slice);
-// prints [2, 3]
+// 打印 [2, 3]
 ```
 首先，我们创建一个名为 `numbers` 的数组。
 然后，我们取数组的一个子部分并将其存储在 slice 数组中。
@@ -71,9 +71,9 @@ console.log(slice);
 
 在 JavaScript 中，我们可以随意切片数组！
 ```javascript
-// Grabs the first two items
+// 取出前两个项目
 listName.slice(0, 2);
-// Grabs the fourth through last items
+// 取出第四个到最后一个项目
 listName.slice(3);
 ```
 如果你的数组切片包含数组中的第一个或最后一个项目，则不必包含该项目的索引
@@ -94,13 +94,13 @@ var arrayName = ["one", 2, true];
 ```javascript
 var names = ["Trevor", "Zac", "Glenn"];
 console.log(names.indexOf('Zac'));
-// prints 1
+// 打印 1
 ```
 上面的代码打印了包含字符串 `"Zac"` 的第一个索引，在本例中为 `1`。
 我们还可以使用 `splice()` 方法在特定索引处插入项目：
 ```javascript
 names.splice(1, 0, "Ali");
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// 打印 ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 上面的代码在索引 `1` 处插入了 `"Ali"`，这会将此索引之后的所有内容向后移动 1 位。
 第二个值 `0` 表示 _deleteCount_（删除数量），在本例中，我们不删除数组中的任何项目；但如果我们指定 `1`，则值 `Zac` 将从数组中被删除
@@ -113,6 +113,6 @@ var numbers = [1, 2, 3];
 for (num of numbers) {
     console.log(num);
 }
-// prints 1, 2, 3
+// 打印 1, 2, 3
 ```
 `for` 关键字后面跟着一个变量名，它将依次被赋予每个数组项目的值。

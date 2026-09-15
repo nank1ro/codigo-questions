@@ -4,7 +4,7 @@
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // 出去玩
 }
 ```
 
@@ -14,7 +14,7 @@ if (nice_weather) {
 ```c
 bool nice_weather = true;
 if (nice_weather) {
-    // play outside
+    // 出去玩
 }
 ```
 我们已经看到 `if` 语句只有在条件为 `true` 时才执行代码块。
@@ -28,9 +28,9 @@ if (nice_weather) {
 ```c
 bool nice_weather = false;
 if (nice_weather) {
-    // play outside
+    // 出去玩
 } else {
-    // stay home
+    // 待在家里
 }
 ```
 

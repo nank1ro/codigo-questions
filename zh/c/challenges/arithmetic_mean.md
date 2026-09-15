@@ -17,7 +17,7 @@ title: 算术平均值
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// 打印 2.0
 ```
 
 # --before-seed--

@@ -84,9 +84,9 @@ class PrimeSeive {
 
     for (let i = 0; i <= sqrtUpper; i++) {
       if (seive[i]) {
-        // Mark value in seive array
+        // 在 seive 数组中标记值
         const prime = 2 * i + 3;
-        // Mark all multiples of this number as false (not prime)
+        // 将该数的所有倍数标记为 false（非素数）
         const primeSqaredIndex = 2 * i ** 2 + 6 * i + 3;
         for (let j = primeSqaredIndex; j < upper; j += prime) {
           seive[j] = false;

@@ -177,7 +177,7 @@ println(Greeter("Hello").welcome("Ada")) // Hello, Ada!
 infix fun Int.percentOf(total: Int): Int = total * this / 100
 
 println(20 percentOf 50)   // 10
-println(20.percentOf(50))  // 10, the normal call still works
+println(20.percentOf(50))  // 10,常规调用仍然有效
 ```
 Kotlin 在一些内置函数上也用了这一点：`1 to "one"` 构造一个 `Pair`，`1 until 5` 构造一个区间。
 

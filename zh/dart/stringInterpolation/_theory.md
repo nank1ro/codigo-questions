@@ -2,7 +2,7 @@
 在 Dart 中，我们可以使用 `+` 号（连接）将两个或多个字符串组合在一起显示，例如：
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// 打印 "Hello Dart!"
 ```
 
 ---
@@ -36,7 +36,7 @@ print("Hello " + "Dart!");
 在 `${}` 中我们还可以放入条件表达式，例如：
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// 打印 The answer is correct
 ```
 
 ---

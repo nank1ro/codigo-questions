@@ -18,7 +18,7 @@ title: 闰年
 函数调用示例：
 ```kotlin
 println(leapYear(2000))
-// prints true
+// 打印 true
 ```
 
 # --seed--

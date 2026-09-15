@@ -69,7 +69,7 @@ println("${server.host}:${server.port}") // example.com:8080
 `apply` 并不局限于刚创建的对象：它可以作用于任何对象，并且由于它会把对象返回，你可以在任何需要该对象的地方使用整个表达式。
 ```kotlin
 val box = Box()
-box.apply { label = "tools" }        // changes box and returns it
+box.apply { label = "tools" }        // 修改 box 并将其返回
 println(listOf(Box().apply { label = "nails" }).size) // 1
 ```
 代码块就是一个普通的代码块，因此它可以容纳你需要任意多的语句。

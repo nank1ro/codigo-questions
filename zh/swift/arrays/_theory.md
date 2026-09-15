@@ -25,15 +25,15 @@ arrayName[index]
 你已经了解了如何这样访问数组索引：
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// 输出值 "Jeremiah"
 print(names[0])
 ```
 下面是赋值的方式：
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// 赋值新的值 "Jordan"
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// 输出值 "Jordan"
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ print(names[0])
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// 输出 ["a", "b", "c"]
 ```
 
 ---
@@ -62,7 +62,7 @@ print(letters)
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// 输出 [2, 3]
 ```
 首先，我们创建一个名为 `numbers` 的数组。
 然后，我们取数组的一个子部分并存储在 slice 数组中。
@@ -73,9 +73,9 @@ print(slice)
 
 在 Swift 中，我们可以随意切片数组！
 ```swift
-// Grabs the first two items
+// 获取前两个元素
 listName[..<2]
-// Grabs the fourth through last items
+// 获取从第四个到最后一个的元素
 listName[3...]
 ```
 如果你的数组切片包含数组中的第一个或最后一个元素，则不必包含该元素的索引
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// 输出 1
 ```
 上面的代码打印包含字符串 `"Zac"` 的第一个索引，在本例中为 `1`。
 我们还可以使用 `insert()` 方法在特定索引处插入元素：
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// 输出 ["Trevor", "Ali", "Zac", "Glenn"]
 ```
 上面的代码在索引 `1` 处插入 `"Ali"`，这会将该索引之后的所有元素向后移动 1 位
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3
+// 输出 1, 2, 3
 ```
 `for` 关键字后面跟一个变量名，它将依次被赋值为每个数组元素的值。
 

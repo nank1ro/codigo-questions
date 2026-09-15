@@ -2,7 +2,7 @@
 
 最简单的注释是**单行注释**：它以 `//` 开始，一直延续到该行结尾。
 ```swift
-// Greets the user
+// 问候用户
 print("Hello")
 ```
 用注释说明一段代码的用途，或者它为什么要这样写。
@@ -11,7 +11,7 @@ print("Hello")
 
 注释不一定要独占一行：它可以跟在同一行的代码之后。这就是**行尾注释**，很适合为那条具体的语句写一句简短说明：
 ```swift
-let retries = 3 // give up after three attempts
+let retries = 3 // 三次尝试后放弃
 ```
 从 `//` 到该行结尾的一切都会被忽略，而它前面的代码照常运行。
 
@@ -23,7 +23,7 @@ let retries = 3 // give up after three attempts
 ```swift
 var total = 10
 // total = total + 5
-print(total) // prints 10
+print(total) // 输出 10
 ```
 第二行现在是注释，所以 `total` 仍然是 `10`。去掉 `//` 就能让这行代码重新生效。
 
@@ -45,8 +45,8 @@ print("Welcome!")
 
 与在行尾停止的 `//` 不同，`/*` 注释只在 `*/` 处停止。如果你忘了关闭它，编译器就会把后面所有代码都当作注释的一部分并报错：
 ```swift
-let width = 10 /* in centimetres
-print(width) // still inside the comment: error, the comment is never closed
+let width = 10 /* 单位是厘米
+print(width) // 仍处于注释内部：错误，该注释永远不会闭合
 ```
 `//` 和 `/* */` 都可以用作行尾注释，但用 `/*` 时一定要确保 `*/` 存在。
 
@@ -68,7 +68,7 @@ var total = 100
 total = total - 30
 total = total - 20
 */
-print(total) // prints 100
+print(total) // 输出 100
 ```
 多亏了嵌套，即使其中某一行已经包含 `/* */` 注释，这样做也依然可行。
 
@@ -90,7 +90,7 @@ func toSeconds(_ minutes: Int) -> Int {
 
 Swift 还有第三种注释，即**文档注释**：以 `///`（三个斜杠）开头的单行注释，放在函数、类型或属性的正上方。
 ```swift
-/// Returns the greeting for `name`.
+/// 返回 `name` 对应的问候语。
 func greet(_ name: String) -> String {
     return "Hi, \(name)!"
 }
@@ -101,7 +101,7 @@ func greet(_ name: String) -> String {
 
 文档注释的第一行是**摘要**：一句简短说明函数做什么的话。用第三人称书写，就像在描述这个函数："Returns..."、"Adds..."、"Checks..."。
 ```swift
-/// Returns `true` when `n` is divisible by two.
+/// 当 `n` 能被二整除时返回 `true`。
 func isEven(_ n: Int) -> Bool {
     return n % 2 == 0
 }
@@ -127,9 +127,9 @@ func greet(_ name: String) -> String {
 
 在摘要之后，文档注释可以用 Xcode 能识别的特殊 Markdown 列表项来描述参数和返回值：
 ```swift
-/// Returns the number of seconds in the given minutes.
-/// - Parameter minutes: a whole number of minutes, never negative
-/// - Returns: `minutes` multiplied by sixty
+/// 返回给定分钟数对应的秒数。
+/// - Parameter minutes: 一个整数分钟数，不能为负数
+/// - Returns: `minutes` 乘以六十
 func toSeconds(_ minutes: Int) -> Int {
     return minutes * 60
 }
@@ -144,10 +144,10 @@ func toSeconds(_ minutes: Int) -> Int {
 - `// FIXME: ...` 标示已知有问题、必须修正的代码
 
 ```swift
-// MARK: - Setup
+// MARK: - 设置
 let limit = 10
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: 从设置中读取这个限制
+// FIXME: 列表为空时会崩溃
 ```
 对编译器来说它们只是普通注释；Xcode 会把它们列出来，方便找到待办工作。工作完成后就删掉标记：过期的 `TODO` 会误导人。
 
@@ -163,12 +163,12 @@ let limit = 10
 
 好的注释解释代码**为什么**这么做，而不是它**做了什么**。代码本身已经说明了发生了什么；用文字重复一遍只会增加噪音，而且代码一改它就过时了：
 ```swift
-// set timeout to 30
+// 将 timeout 设为 30
 let timeout = 30
 ```
 数字背后的原因才是读者猜不到的：
 ```swift
-// the server drops idle connections after 35 seconds, so stop earlier
+// 服务器会在 35 秒后断开空闲连接，所以要提前停止
 let timeout = 30
 ```
 如果一条注释只是复述它下面那一行，就删掉它，或者换成原因。

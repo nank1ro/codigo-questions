@@ -23,7 +23,7 @@ ATM 只会在 N 是 5 的倍数且 James 的账户有足够的现金来执行取
 函数调用示例：
 ```dart
 print(accountBalance(10, 20.00))
-// prints 9.5
+// 打印 9.5
 ```
 
 # --seed--

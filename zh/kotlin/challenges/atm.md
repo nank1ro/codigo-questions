@@ -23,7 +23,7 @@ ATM只会在N是5的倍数且James的账户有足够的现金来执行取款交�
 函数调用示例：
 ```kotlin
 println(accountBalance(10, 20.00))
-// prints 9.5
+// 打印 9.5
 ```
 
 # --seed--

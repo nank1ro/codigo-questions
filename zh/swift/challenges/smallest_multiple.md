@@ -16,7 +16,7 @@ title: 最小公倍数
 函数调用示例：
 ```swift
 print(smallestMultiple(10))
-// prints 2520
+// 输出 2520
 ```
 
 # --before-seed--

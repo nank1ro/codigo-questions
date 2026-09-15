@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 打印 5
 ```
 **箭头函数**是写同样内容的更简短方式：去掉 `function` 关键字，在参数列表和函数体之间放上一个胖箭头 `=>`：
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 打印 5
 ```
 箭头函数通常存储在 `const` 中，这样名字就不会被误重新赋值，而且它的调用方式与其他任何函数完全相同。
 
@@ -23,13 +23,13 @@ console.log(add(2, 3));
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// 打印 5
 ```
 当**恰好只有一个参数**时，你还可以省略它两侧的圆括号：
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// 打印 8
 ```
 当没有参数或有两个及以上参数时，圆括号则是必需的：`() => 42` 和 `(a, b) => a + b`。
 
@@ -39,14 +39,14 @@ console.log(double(4));
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// 打印 undefined
 ```
 这里 `{ name: name }` 是一个块，其中包含标签 `name:`，后面跟着表达式 `name`。没有返回任何东西，所以调用结果是 `undefined`。
 要在同一行返回对象字面量，请用**圆括号**把它包裹起来，让 JavaScript 将其视为表达式：
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// 打印 { name: 'Ana' }
 ```
 
 ---
@@ -55,13 +55,13 @@ console.log(make("Ana"));
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// 打印 30
 ```
 没有参数的箭头函数以一对空圆括号 `()` 开头：
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// 打印 {}
 ```
 
 ---
@@ -71,9 +71,9 @@ console.log(empty());
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// 打印 [ 10, 20, 30, 40 ]
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// 打印 [ 3, 4 ]
 ```
 两者都返回新数组且不修改原数组，因此你可以将它们链式调用：`numbers.filter(...).map(...)`。
 
@@ -85,10 +85,10 @@ console.log(numbers.filter((n) => n > 2));
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// 打印 1, 2 和 3，共三行
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// 打印 6
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// 打印 [ 50, 70, 90 ]
 console.log(scores.find((s) => s > 60));
-// prints 70
+// 打印 70
 ```
 
 ---
@@ -111,9 +111,9 @@ console.log(scores.find((s) => s > 60));
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// 打印 Hello, World!
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// 打印 Hello, Ana!
 ```
 注意，带默认值的参数总是需要圆括号，即使它是唯一的参数：`name = "World" => ...` 是一个语法错误。
 
@@ -123,7 +123,7 @@ console.log(greet("Ana"));
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// 打印 3
 ```
 普通函数还有一个隐藏的类数组 `arguments` 对象，保存着它们接收到的每个实参。箭头函数则**没有**：在箭头函数内部，`arguments` 指向外围函数的 `arguments`，或者根本不存在。每当你在箭头函数中需要所有实参时，请使用剩余参数。
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// 打印 1
 console.log(next());
-// prints 2
+// 打印 2
 ```
 其他任何人都无法读取或重置 `count`：它只存在于返回的函数内部。再次调用 `makeCounter()` 会创建一个独立的计数器，它拥有自己的 `count`。
 
@@ -154,8 +154,8 @@ console.log(next());
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// 打印 15
 console.log(makeAdder(1)(5));
-// prints 6
+// 打印 6
 ```
 从左往右阅读：`makeAdder` 接收 `amount` 并返回 `(n) => n + amount`，这是一个通过闭包捕获 `amount` 的箭头函数。`makeAdder(1)(5)` 会立即调用返回的函数。

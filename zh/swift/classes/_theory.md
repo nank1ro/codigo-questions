@@ -12,10 +12,10 @@ _结构体_ 和 _类_ 是通用的、灵活的结构，它们构成了程序代�
 一个基本的类或结构体仅由 `class` 或 `struct` 关键字及其名称组成，例如：
 ```swift
 class ClassName {
-    // class definition
+    // 类定义
 }
 struct ClassName {
-    // structure definition
+    // 结构体定义
 }
 ```
 

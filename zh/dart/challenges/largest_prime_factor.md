@@ -16,7 +16,7 @@ title: 最大质因数
 函数调用示例：
 ```dart
 print(largestPrimeFactor(13195));
-// prints 29
+// 打印 29
 ```
 
 # --seed--

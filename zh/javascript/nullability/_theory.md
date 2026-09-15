@@ -3,16 +3,16 @@ JavaScript 有两种不同的方式来表示"这里没有值"。
 ```javascript
 let city;
 console.log(city);
-// prints undefined
+// 打印 undefined
 const user = { name: "Ana" };
 console.log(user.age);
-// prints undefined
+// 打印 undefined
 ```
 `null` 是**你**有意赋的一个值，用来表示"它是空的，而且我知道"：
 ```javascript
 let owner = null;
 console.log(owner);
-// prints null
+// 打印 null
 ```
 所以 `undefined` 通常是语言在告诉你缺少了什么，而 `null` 是程序员在声明某处是有意为空的。
 
@@ -25,7 +25,7 @@ function greet(name) {
   console.log(name);
 }
 greet();
-// prints undefined
+// 打印 undefined
 ```
 当函数**没有 `return`** 就结束（或者只有单独的 `return;`）时，调用它会得到 `undefined`：
 ```javascript
@@ -34,7 +34,7 @@ function log(message) {
 }
 const result = log("hi");
 console.log(result);
-// prints hi, then undefined
+// 打印 hi，然后 undefined
 ```
 注意，显式传入 `null` 与省略实参并不相同：`greet(null)` 打印 `null`，因为 `null` 是一个真正传递给函数的值。
 
@@ -44,12 +44,12 @@ console.log(result);
 ```javascript
 let city;
 console.log(typeof city);
-// prints undefined
+// 打印 undefined
 ```
 然而对于 `null`，它回答的是 `"object"`。这是 JavaScript 第一个版本就存在且从未被修复的 bug，因为有太多代码依赖它：
 ```javascript
 console.log(typeof null);
-// prints object
+// 打印 object
 ```
 所以 `typeof` 是检测 `undefined` 的可靠方式，但不适用于 `null`。要检查 `null`，直接与它比较即可：`value === null`。
 
@@ -59,16 +59,16 @@ console.log(typeof null);
 **宽松**相等 `==` 把它们视为同一种东西，并认为它们与任何其他值都不同，包括 `0`、`""` 和 `false`：
 ```javascript
 console.log(null == undefined);
-// prints true
+// 打印 true
 console.log(null == 0, undefined == "");
-// prints false false
+// 打印 false false
 ```
 **严格**相等 `===` 还会比较类型，而 `null` 和 `undefined` 的类型不同：
 ```javascript
 console.log(null === undefined);
-// prints false
+// 打印 false
 console.log(null === null);
-// prints true
+// 打印 true
 ```
 
 ---
@@ -83,9 +83,9 @@ function show(value) {
   return "present";
 }
 console.log(show(null), show(undefined));
-// prints missing missing
+// 打印 missing missing
 console.log(show(0), show(""));
-// prints present present
+// 打印 present present
 ```
 这是唯一一个 `==` 比 `===` 更受青睐的场景：写 `value === null || value === undefined` 做的事完全一样，只是更长。
 `0`、`""` 和 `false` 这样的值*不是* `null`：它们是恰好为假值的真实值。
@@ -101,9 +101,9 @@ console.log(user.address.city);
 `user.address` 是 `undefined`，而 `undefined` 没有任何属性。**可选链**运算符 `?.` 解决了这个问题：如果它左边的值是 `null` 或 `undefined`，整个表达式会停止求值并得到 `undefined`，而不是抛出错误：
 ```javascript
 console.log(user.address?.city);
-// prints undefined
+// 打印 undefined
 console.log(user.name?.length);
-// prints 3
+// 打印 3
 ```
 当左边确实有值时，`?.` 的行为与普通的 `.` 完全一样。你可以链接多个：只要任何一环缺失，`user.address?.street?.name` 就会返回 `undefined`。
 
@@ -114,16 +114,16 @@ console.log(user.name?.length);
 ```javascript
 const post = { tags: ["js", "node"] };
 console.log(post.tags?.[0]);
-// prints js
+// 打印 js
 const empty = {};
 console.log(empty.tags?.[0]);
-// prints undefined
+// 打印 undefined
 ```
 `?.()` 只在函数存在时才调用它，这对可选的回调非常方便：
 ```javascript
 const task = { name: "build" };
 task.onDone?.();
-// nothing happens, no error
+// 什么都不会发生，也不会报错
 ```
 在每种形式中，检查都作用于 `?.` **紧前面**的值：即使 `post` 本身是 `null` 或 `undefined`，`post?.tags?.[0]` 也是安全的。
 
@@ -135,12 +135,12 @@ task.onDone?.();
 ```javascript
 const count = 0;
 console.log(count || 10);
-// prints 10
+// 打印 10
 console.log(count ?? 10);
-// prints 0
+// 打印 0
 let name;
 console.log(name ?? "Guest");
-// prints Guest
+// 打印 Guest
 ```
 当 `0`、`""` 或 `false` 是必须保留的合法值时使用 `??`，当你确实想替换每一个假值时使用 `||`。
 
@@ -156,7 +156,7 @@ const options = { retries: 0 };
 options.retries ??= 3;
 options.timeout ??= 1000;
 console.log(options);
-// prints { retries: 0, timeout: 1000 }
+// 打印 { retries: 0, timeout: 1000 }
 ```
 `retries` 保持为 `0`，因为 `0` 不是空值；`timeout` 原本不存在，所以它获得 `1000`。同样的想法对 `||` 也存在，即 `||=`，它会覆盖每一个假值。
 
@@ -168,11 +168,11 @@ function repeat(text, times = 2) {
   return text.repeat(times);
 }
 console.log(repeat("ab"));
-// prints abab
+// 打印 abab
 console.log(repeat("ab", undefined));
-// prints abab
+// 打印 abab
 console.log(repeat("ab", null));
-// prints an empty string, because null is converted to 0
+// 打印空字符串，因为 null 会被转换为 0
 ```
 默认参数遵循 `undefined` 规则，而 `??` 同时覆盖 `null` 和 `undefined`：选择与你的函数被调用方式相匹配的那一个。
 
@@ -196,12 +196,12 @@ function cityOf(user) {
 const products = [{ name: "pen", price: 2 }];
 const found = products.find((p) => p.name === "ink");
 console.log(found);
-// prints undefined
+// 打印 undefined
 ```
 在这里读取 `found.price` 会抛出错误，所以 `?.` 和 `??` 是 `find` 的天然伙伴：
 ```javascript
 console.log(products.find((p) => p.name === "ink")?.price ?? "no price");
-// prints no price
+// 打印 no price
 ```
 
 ---
@@ -211,12 +211,12 @@ JSON 有 `null` 值但没有 `undefined`，所以值为 `undefined` 的属性会
 ```javascript
 const user = { name: "Ana", nickname: undefined, email: null };
 console.log(JSON.stringify(user));
-// prints {"name":"Ana","email":null}
+// 打印 {"name":"Ana","email":null}
 ```
 在数组内部位置不能消失，所以 `undefined` 在那里会变成 `null`：
 ```javascript
 console.log(JSON.stringify([1, undefined, 3]));
-// prints [1,null,3]
+// 打印 [1,null,3]
 ```
 
 ---
@@ -226,8 +226,8 @@ console.log(JSON.stringify([1, undefined, 3]));
 ```javascript
 const config = { debug: undefined };
 console.log(config.debug === undefined, config.level === undefined);
-// prints true true
+// 打印 true true
 console.log(Object.hasOwn(config, "debug"), Object.hasOwn(config, "level"));
-// prints true false
+// 打印 true false
 ```
 "自有"意味着声明在对象本身上：像 `toString` 这样的继承成员在每个对象上都可用，但 `Object.hasOwn(config, "toString")` 是 `false`。

@@ -5,7 +5,7 @@
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // 输出 "Hello!"
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// 输出 "Hello Smith! Welcome on board :)"
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ print(sayHello(name: "Smith", newUser: true))
 如果定义了默认值，调用函数时可以省略该参数
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // 在这里做点什么
 }
 ```
 
@@ -62,7 +62,7 @@ _可变参数_接受零个或多个指定类型的值。
 
 在函数中，我们可以添加一个_可选的注释_来解释函数的功能：
 ```swift
-/// Prints 'Hello World' to the console.
+/// 将 'Hello World' 输出到控制台。
 func helloWorld() {
     print("Hello, World!")
 }

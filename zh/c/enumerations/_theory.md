@@ -7,7 +7,7 @@ enum Color { RED, GREEN, BLUE };
 因为它们是整数，所以你用 `%d` 打印它们：
 ```c
 printf("%d\n", GREEN);
-// prints "1"
+// 打印 "1"
 ```
 
 ---
@@ -19,7 +19,7 @@ printf("%d\n", GREEN);
 
 你也可以用 `=` 给某个常量指定显式的值；它之后的常量会从这个值继续递增：
 ```c
-enum Month { JAN = 1, FEB, MAR }; // FEB is 2, MAR is 3
+enum Month { JAN = 1, FEB, MAR }; // FEB 为 2，MAR 为 3
 ```
 显式的值不必是连续的或递增的：`enum Status { OK = 200, NOT_FOUND = 404 };` 完全合法。
 
@@ -86,7 +86,7 @@ Color favorite = BLUE;
 枚举常量会自动转换为 `int`，所以 `int n = BLUE;` 是合法的，并保存 `2`。
 反过来的转换要用**强制类型转换**来完成，即在整数前用括号写出枚举类型：
 ```c
-enum Color c = (enum Color)1; // c is GREEN
+enum Color c = (enum Color)1; // c 为 GREEN
 ```
 C 不会检查这个数字是否对应某个常量：`(enum Color)7` 可以编译通过，即使没有任何常量的值是 `7`，所以转换前要先校验整数。
 
@@ -103,7 +103,7 @@ enum Color after_green = (enum Color)(GREEN + 1); // BLUE
 
 一个常见的技巧是在枚举末尾多加一个常量，通常命名为 `COUNT`：由于编号从 `0` 开始，它的值正好等于它之前真正常量的数量。
 ```c
-enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT is 3
+enum Day { MON, TUE, WED, DAY_COUNT }; // DAY_COUNT 为 3
 ```
 这个哨兵值让你可以遍历所有常量而不用把数字写死，并且在你在它前面添加常量时依然保持正确：
 ```c
@@ -119,7 +119,7 @@ for (int d = MON; d < DAY_COUNT; d++) {
 enum Fruit { APPLE, BANANA, CHERRY, FRUIT_COUNT };
 
 int stock[FRUIT_COUNT] = {10, 4, 7};
-printf("%d\n", stock[BANANA]); // prints "4"
+printf("%d\n", stock[BANANA]); // 打印 "4"
 ```
 从 `0` 到 `FRUIT_COUNT` 的循环会访问每一个槽位，需要返回循环索引时可以把它转换回 `enum Fruit`。
 

@@ -5,7 +5,7 @@
 
 ```kotlin
 while (Boolean-expression) {
-  // Code to be repeated
+  // 要重复执行的代码
 }
 ```
 布尔表达式在循环开始时求值一次，然后在每次进一步迭代代码块之前再次求值。
@@ -45,7 +45,7 @@ while (counter < 100) { // [2]
 使用 _while_ 还有第二种方式，即与 `do` 关键字结合使用。
 ```kotlin
 do {
-  // Code to be repeated
+  // 要重复执行的代码
 } while (Boolean-expression)
 ```
 如你所见，`do-while` 与 `while` 循环非常相似，但有一个重要区别：
@@ -70,7 +70,7 @@ while (i < 3) {
   if (i == 2) continue // [1]
   println(i)
 }
-// prints 1, 3
+// 打印 1, 3
 ```
 
 如你在 __[1]__ 处所见，当 `i` 等于 _2_ 时，我们跳过并_继续_到下一步。事实上数字 2 从未被打印。
@@ -85,7 +85,7 @@ while (i < 3) {
   if (i == 2) break // [1]
   println(i)
 }
-// prints 1
+// 打印 1
 ```
 
 如你在 __[1]__ 处所见，当 `i` 等于 _2_ 时，我们_中断_了循环。事实上数字 2 和 3 从未被打印。

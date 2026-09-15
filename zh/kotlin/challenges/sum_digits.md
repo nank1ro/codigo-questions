@@ -17,7 +17,7 @@ title: 数字之和
 函数调用示例：
 ```kotlin
 println(sumDigits(28))
-// prints 10
+// 打印 10
 ```
 
 # --seed--

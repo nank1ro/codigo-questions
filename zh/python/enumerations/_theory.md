@@ -154,7 +154,7 @@ print(Light.RED.label)       # red
 ```python
 class Status(Enum):
     ACTIVE = 1
-    ENABLED = 1  # alias of ACTIVE
+    ENABLED = 1  # ACTIVE 的别名
 
 print(Status.ENABLED)  # Status.ACTIVE
 print(len(Status))     # 1

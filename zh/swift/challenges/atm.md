@@ -25,7 +25,7 @@ James 想从 ATM 取款 N 美元。
 函数调用示例：
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// 输出 9,5
 ```
 
 # --before-seed--

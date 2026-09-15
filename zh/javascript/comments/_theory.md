@@ -2,7 +2,7 @@
 
 最简单的注释是**单行注释**：它以 `//` 开头，一直延续到该行结尾。
 ```javascript
-// Greets the user
+// 问候用户
 console.log("Hello");
 ```
 用注释说明一段代码的用途，或者当初为什么这样写。注意，与某些其他语言不同，在 JavaScript 中 `#` **不会**开始一条注释。
@@ -11,7 +11,7 @@ console.log("Hello");
 
 注释不必独占一行：它可以跟在同一行的代码后面。这就是**行内注释**（也叫行尾注释），很适合对某条语句写一句简短的说明：
 ```javascript
-const retries = 3; // give up after three attempts
+const retries = 3; // 三次尝试后放弃
 ```
 从 `//` 到行尾的所有内容都会被忽略，而它前面的代码照常执行。
 
@@ -23,7 +23,7 @@ const retries = 3; // give up after three attempts
 ```javascript
 let total = 10;
 // total = total + 5;
-console.log(total); // prints 10
+console.log(total); // 打印 10
 ```
 第二行现在是注释，所以 `total` 仍然是 `10`。去掉 `//` 就能让这一行重新生效。
 
@@ -47,7 +47,7 @@ console.log("Welcome!");
 ```javascript
 console.log("a"); // console.log("b");
 /* console.log("c"); */
-// prints only a
+// 打印 only a
 ```
 当你不确定一个程序会输出什么时，先在心里删掉所有注释，再读剩下的内容。
 
@@ -55,8 +55,8 @@ console.log("a"); // console.log("b");
 
 与在行尾结束的 `//` 不同，`/*` 注释只有遇到 `*/` 才会结束。如果你忘了关闭它，JavaScript 会把后面的所有代码都当作注释的一部分，并报出语法错误：
 ```javascript
-const width = 10; /* in centimetres
-console.log(width); // still inside the comment: SyntaxError, the comment is never closed
+const width = 10; /* 单位为厘米
+console.log(width); // 仍在注释内：SyntaxError，注释从未关闭
 ```
 `//` 和 `/* */` 都可以用作行内注释，但用 `/*` 时一定要确认 `*/` 存在。
 
@@ -78,7 +78,7 @@ let total = 100;
 total = total - 30;
 total = total - 20;
 */
-console.log(total); // prints 100
+console.log(total); // 打印 100
 ```
 由于块内的这些行被忽略，`total` 始终不变。记住，只有当这些行中都不含 `*/` 时这样做才有效。
 
@@ -158,12 +158,12 @@ JavaScript 会像对待注释一样忽略这一行，但仅限它是文件的**�
 
 好的注释说明代码**为什么**这样做，而不是它**做了什么**。代码本身已经展示了发生的事情；用文字重复一遍只会增加噪音，而且代码一改动它就过时了：
 ```javascript
-// set timeout to 30
+// 将 timeout 设为 30
 const timeout = 30;
 ```
 这个数字背后的原因才是读者猜不到的：
 ```javascript
-// the server drops idle connections after 35 seconds, so stop earlier
+// 服务器会在 35 秒后断开空闲连接，所以要提前停止
 const timeout = 30;
 ```
 如果一条注释只是复述它下面那一行，就删掉它，或者换成写明原因。
@@ -176,8 +176,8 @@ const timeout = 30;
 
 ```javascript
 const limit = 10;
-// TODO: read the limit from the settings
-// FIXME: crashes when the list is empty
+// TODO: 从设置中读取限制
+// FIXME: 列表为空时会崩溃
 ```
 对 JavaScript 来说它们只是普通注释；编辑器会把它们列出来，方便找到待办工作。`TODO` 通常紧挨着一个占位实现，在真正的实现写好之前先让代码能跑起来。当你完成这项工作时，要在同一次改动中替换掉占位实现并删除标记：过时的 `TODO` 会误导人。
 

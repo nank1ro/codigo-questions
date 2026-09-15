@@ -217,7 +217,7 @@ struct Ticket: Priced {
     var price = 12
 }
 
-print(Ticket().price) // 12, not 0
+print(Ticket().price) // 12，不是 0
 ```
 默认实现只填补类型留出的空缺。
 

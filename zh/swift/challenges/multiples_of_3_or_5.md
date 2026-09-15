@@ -16,7 +16,7 @@ title: 3 或 5 的倍数
 函数调用示例：
 ```swift
 print(multiplesOf3And5(10))
-// prints 23
+// 输出 23
 ```
 
 # --before-seed--

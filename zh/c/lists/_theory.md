@@ -9,7 +9,7 @@ typedef struct Node {
 ```c
 Node second = {2, NULL};
 Node first = {1, &second};
-printf("%d\n", first.next->value); // prints "2"
+printf("%d\n", first.next->value); // 打印 "2"
 ```
 
 ---
@@ -42,7 +42,7 @@ for (Node *n = head; n != NULL; n = n->next) {
 ```c
 Node *head = NULL;
 head = push_front(head, 7);
-head = push_front(head, 8); // the list is now 8, 7
+head = push_front(head, 8); // 链表现在是 8, 7
 ```
 向空链表推入节点也是同样的道理：新节点指向 `NULL`，并成为整个链表。
 

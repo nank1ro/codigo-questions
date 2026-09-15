@@ -16,7 +16,7 @@ title: 最大回文乘积
 函数调用示例：
 ```swift
 print(largestPalindromeProduct(2))
-// prints 9009
+// 输出 9009
 ```
 
 # --before-seed--

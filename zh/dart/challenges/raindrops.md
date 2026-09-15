@@ -28,7 +28,7 @@ title: 雨滴
 函数调用示例：
 ```dart
 print(raindrops(28))
-// prints "Plong"
+// 打印 "Plong"
 ```
 
 # --seed--

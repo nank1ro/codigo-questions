@@ -16,7 +16,7 @@ title: 平方差之和
 函数调用示例：
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// 输出 2640
 ```
 
 # --before-seed--

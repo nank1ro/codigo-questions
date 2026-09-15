@@ -50,7 +50,7 @@ Dart 是一种__类型安全__的语言。
 
 ```dart
 int integerNumber = 1;
-integerNumber = 3.14159; // Error
+integerNumber = 3.14159; // 错误
 ```
 
 `3.14159` 是 `double` 类型，但你已经将 `integerNumber` 定义为 `int` 类型。
@@ -61,7 +61,7 @@ integerNumber = 3.14159; // Error
 num number;
 number = 1; // OK
 number = 3.14159; // OK
-number = '10'; // Error
+number = '10'; // 错误
 ```
 
 `int` 和 `double` 都继承自 `num`，因此两种类型都被接受。
@@ -119,7 +119,7 @@ const number = 5;
 
 ```dart
 const number = 2;
-number = 3; // Error
+number = 3; // 错误
 ```
 
 这段代码会产生错误：

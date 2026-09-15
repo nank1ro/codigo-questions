@@ -42,8 +42,8 @@ println(price::class.simpleName) // Double
 `Int` 可以存储最大约二十亿的整数，更准确地说最大到 `Int.MAX_VALUE`，即 `2147483647`。
 对于 `Int` 来说太大的整数字面量会自动被推断为 `Long`，你也可以用后缀 `L` 强制任何字面量为 `Long`：
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long,对 Int 来说太大了
+val small = 3L        // Long,因为有这个后缀
 ```
 同样地，后缀 `f` 把十进制字面量变成 `Float`：`val ratio = 0.5f`。
 很长的数字难以阅读，因此 Kotlin 允许你在数字之间的任意位置放置下划线 `_`；编译器会忽略它们：
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null,不是整数
+println(" 42".toIntOrNull())  // null,不允许有空格
 println("abc".toIntOrNull())  // null
 ```
 对于小数文本，请使用 `toDoubleOrNull()`，它以同样的方式接受 `"3.5"` 并返回一个 `Double?`。
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 一旦检查通过，编译器会对该值进行**智能转换**：在 `if`（或 `when` 分支）内部，你可以把它当作该类型使用，无需任何转换：
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43,这里 value 是 Int
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

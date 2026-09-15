@@ -9,9 +9,9 @@ const pattern = /cat/;
 对于一个模式，最简单的用法是询问它是否出现在某个字符串中。**`test`** 方法接收文本并返回 `true` 或 `false`：
 ```javascript
 console.log(/cat/.test("the cat sleeps"));
-// prints true
+// 打印 true
 console.log(/cat/.test("the dog sleeps"));
-// prints false
+// 打印 false
 ```
 注意 `test` 只是在字符串中的*某个位置*查找模式；并不要求整个字符串都匹配。
 
@@ -24,14 +24,14 @@ console.log(/cat/.test("the dog sleeps"));
 
 ```javascript
 console.log(/\d/.test("room 12"));
-// prints true
+// 打印 true
 console.log(/\d/.test("lobby"));
-// prints false
+// 打印 false
 ```
 **量词**表示前一个部分可以重复多少次。最常见的是 `+`，意思是"一个或多个"：
 ```javascript
 console.log(/\d+/.test("42"));
-// prints true
+// 打印 true
 ```
 所以 `/\d/` 匹配单个数字，而 `/\d+/` 匹配一段连续数字。对于普通的 `test` 来说，两者行为相同，因为它们都只需要存在一个数字。
 
@@ -42,12 +42,12 @@ console.log(/\d+/.test("42"));
 const word = "cat";
 const pattern = new RegExp(word);
 console.log(pattern.test("the cat sleeps"));
-// prints true
+// 打印 true
 ```
 这里有一个陷阱。在字符串内部，反斜杠开启的是*字符串*的转义序列，所以它在正则表达式看到之前就消失了。要在模式中放入一个真正的反斜杠，必须把它写成两个：
 ```javascript
 const digits = new RegExp("\\d+");
-// the same pattern as /\d+/
+// 和 /\d+/ 相同的模式
 ```
 如果写成 `new RegExp("\d+")`，得到的模式是 `/d+/`，它匹配字母 `d`，而不是数字。
 
@@ -59,19 +59,19 @@ const digits = new RegExp("\\d+");
 
 **字符类**是写在方括号之间的一组字符；它恰好匹配其中的一个。连字符表示一个范围，开头的 `^` 表示对集合取反：
 ```javascript
-/[aeiou]/   // one vowel
-/[a-z]/     // one lowercase letter
-/[A-Z0-9]/  // one uppercase letter or one digit
-/[^0-9]/    // one character that is not a digit
+/[aeiou]/   // 一个元音字母
+/[a-z]/     // 一个小写字母
+/[A-Z0-9]/  // 一个大写字母或一个数字
+/[^0-9]/    // 一个不是数字的字符
 ```
 **量词**表示前一个部分重复多少次：`+` 一个或多个，`*` 零个或多个，`?` 零个或一个，`{n}` 恰好 `n` 次。
 
 最后，**锚点**把模式固定到文本的两端：`^` 表示"从这里开始"，`$` 表示"到这里结束"。没有它们时，模式可以匹配字符串内部的任意位置，所以 `/\d{2}/.test("abc12def")` 是 `true`。两个锚点都用上时，整个字符串必须匹配：
 ```javascript
 console.log(/^\d{2}$/.test("abc12def"));
-// prints false
+// 打印 false
 console.log(/^\d{2}$/.test("12"));
-// prints true
+// 打印 true
 ```
 
 ---
@@ -87,9 +87,9 @@ const match = "order 42 shipped".match(/\d+/);
 
 ```javascript
 console.log(match[0]);
-// prints 42
+// 打印 42
 console.log(match.index);
-// prints 6
+// 打印 6
 ```
 由于结果可能是 `null`，在读取 `match[0]` 之前要先检查它。
 
@@ -118,11 +118,11 @@ return text.match(/[a-z]+/)?.[0] ?? "";
 ```javascript
 const match = "2026-09-12".match(/(\d{4})-(\d{2})-(\d{2})/);
 console.log(match[0]);
-// prints 2026-09-12
+// 打印 2026-09-12
 console.log(match[1]);
-// prints 2026
+// 打印 2026
 console.log(match[3]);
-// prints 12
+// 打印 12
 ```
 所以 `match[0]` 始终是整个匹配，而 `match[1]`、`match[2]`、……是各个组。如果模式中的某个组完全没有匹配，那么整个 `match` 会返回 `null`。
 
@@ -132,7 +132,7 @@ console.log(match[3]);
 ```javascript
 const minutes = "at 14:35:02".match(/\d{2}:(\d{2}):\d{2}/)?.[1];
 console.log(minutes);
-// prints 35
+// 打印 35
 ```
 整个模式仍然必须匹配，所以小时和秒仍然是必需的；它们只是没有被捕获。组越少，读取 `match[1]`、`match[2]` 等时需要记住的编号就越少。
 
@@ -142,9 +142,9 @@ console.log(minutes);
 ```javascript
 const match = "2026-09-12".match(/(?<year>\d{4})-(?<month>\d{2})-\d{2}/);
 console.log(match.groups.year);
-// prints 2026
+// 打印 2026
 console.log(match.groups.month);
-// prints 09
+// 打印 09
 ```
 命名捕获组仍然有编号，所以 `match[1]` 依然有效，但 `match.groups.year` 说明了这个值的含义。当模式中完全没有命名捕获组时，`match.groups` 是 `undefined`。
 
@@ -158,9 +158,9 @@ console.log(match.groups.month);
 ```javascript
 const numbers = "a1 b22 c333".match(/\d+/g);
 console.log(numbers);
-// prints [ '1', '22', '333' ]
+// 打印 [ '1', '22', '333' ]
 console.log(numbers.length);
-// prints 3
+// 打印 3
 ```
 标志可以按任意顺序组合，例如 `/cat/gi`。使用 `RegExp` 构造函数时，它们放在第二个参数中：`new RegExp("\\d+", "g")`。
 
@@ -172,8 +172,8 @@ const text = "a=1;b=2";
 for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
   console.log(`${match.groups.key} -> ${match.groups.value}`);
 }
-// prints a -> 1
-// prints b -> 2
+// 打印 a -> 1
+// 打印 b -> 2
 ```
 `matchAll` 要求带有 `g` 标志；没有它会抛出 `TypeError`。由于它返回的是迭代器，当你想要真正的数组时，可以用 `[...text.matchAll(pattern)]` 展开它；还要注意，当模式从不匹配时，它不会产出任何东西。
 
@@ -182,7 +182,7 @@ for (const match of text.matchAll(/(?<key>\w+)=(?<value>\w+)/g)) {
 **`replace`** 返回一个新字符串，其中匹配被换成别的内容。原字符串永远不会被改变。
 ```javascript
 console.log("the cat sleeps".replace(/cat/, "dog"));
-// prints the dog sleeps
+// 打印 the dog sleeps
 ```
 在替换字符串内部，有几个序列具有特殊含义：
 - `$1`、`$2`、…… 第 1 组、第 2 组、……捕获的文本
@@ -192,7 +192,7 @@ console.log("the cat sleeps".replace(/cat/, "dog"));
 这正是让 `replace` 成为改写工具而不只是交换工具的原因：
 ```javascript
 console.log("2026-09-12".replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1"));
-// prints 12/09/2026
+// 打印 12/09/2026
 ```
 没有 `g` 标志时，只有**第一个**匹配会被替换。
 
@@ -201,9 +201,9 @@ console.log("2026-09-12".replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1"));
 要改写**每一个**匹配而不是第一个，你有两种选择：
 ```javascript
 console.log("a1 b2".replace(/\d/g, "#"));
-// prints a# b#
+// 打印 a# b#
 console.log("a1 b2".replaceAll(/\d/g, "#"));
-// prints a# b#
+// 打印 a# b#
 ```
 **`replaceAll`** 是两者中更清晰的一个，而且它还接受普通字符串作为模式。当你给它一个正则表达式时，该正则表达式**必须**带有 `g` 标志，否则会抛出 `TypeError`；这恰好杜绝了"写了 `replace` 却只修正第一个匹配"这种无声的 bug。
 
@@ -214,10 +214,10 @@ console.log("a1 b2".replaceAll(/\d/g, "#"));
 函数先接收整个匹配，然后接收各个捕获组：
 ```javascript
 console.log("hello world".replace(/\w+/g, (word) => word.length));
-// prints 5 5
+// 打印 5 5
 
 console.log("ann lee".replace(/(\w)(\w*)/g, (whole, first, rest) => first.toUpperCase() + rest));
-// prints Ann Lee
+// 打印 Ann Lee
 ```
 这是根据匹配到的文本计算替换内容的唯一方式，仅靠 `$1` 做不到这一点。
 
@@ -226,9 +226,9 @@ console.log("ann lee".replace(/(\w)(\w*)/g, (whole, first, rest) => first.toUppe
 **`split`** 把字符串切分成数组。给它普通字符串时，它按这段确切的文本切分；给它正则表达式时，它按模式的每一次匹配切分，这让一次调用就能处理各不相同的分隔符：
 ```javascript
 console.log("a, b;c".split(", "));
-// prints [ 'a', 'b;c' ]
+// 打印 [ 'a', 'b;c' ]
 console.log("a, b;c".split(/[,;]\s*/));
-// prints [ 'a', 'b', 'c' ]
+// 打印 [ 'a', 'b', 'c' ]
 ```
 分隔符本身不会出现在结果中。要小心位于字符串开头或结尾的分隔符：它会在数组中产生一个空字符串，因为那一侧存在一个空字段。
 
@@ -240,8 +240,8 @@ console.log("a, b;c".split(/[,;]\s*/));
 ```javascript
 const text = "note a\nb\nnote c";
 console.log(text.match(/^note.*/g));
-// prints [ 'note a' ]
+// 打印 [ 'note a' ]
 console.log(text.match(/^note.*/gm));
-// prints [ 'note a', 'note c' ]
+// 打印 [ 'note a', 'note c' ]
 ```
 这里有两个细节。默认情况下 `.` 不匹配换行符（只有 `s` 标志会改变这一点），所以 `.*` 自己就会停在行尾。另外，带 `g` 标志的 `match` 在没有匹配时返回 `null` 而不是空数组，所以当你承诺返回数组时，要把它与 `?? []` 搭配。

@@ -11,7 +11,7 @@ async function fetchNumber() {
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // 打印 42
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// 打印 HI
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// 打印 Promise { 'HI' }
 ```
 这两个函数包含相同的代码；不同的只是读取结果的方式。`shoutLater("hi")` 必须在另一个 `async` 函数中被 await，才能得到 `"HI"`。
 
@@ -52,7 +52,7 @@ const soon = new Promise((resolve) => {
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // 打印 done，大约一秒后
 }
 
 main();
@@ -76,7 +76,7 @@ promise 从待定开始，并且最多改变一次状态。一旦兑现或拒绝
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // 打印 21
 });
 ```
 **`Promise.resolve(value)`** 构建一个已经以 `value` 兑现的 promise，当你手头就有这个值但必须返回一个 promise 时，它非常方便。
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// 打印 42
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// 打印 start，然后 data，然后 done
 ```
 注意最后一行：`async` 函数仍然必须被**调用**。写 `main` 而不带括号只是定义了工作但从不启动它，什么都不会打印。
 
@@ -125,7 +125,7 @@ function readAge(age) {
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // 打印 negative age
 });
 ```
 既调用 `resolve` 又调用 `reject`，或者调用两次，都不会有任何改变：只有第一次调用有效。
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// 打印 cleanup，然后 error: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ async function main() {
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() 返回一个被 Error("boom") 拒绝的 promise
 ```
 与任何 `try` 块一样，失败的 `await` 之后的行会被跳过，`catch` 块会运行，而 `finally` 块在两种情况下都会运行。
 
@@ -199,7 +199,7 @@ const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// 打印 true
 ```
 它返回的数组总是恰好拥有与它接收到的数组一样多的条目，并且位于相同的位置上，因此可以像任何其他数组一样对它进行循环。
 
@@ -207,11 +207,11 @@ console.log(values.length === items.length);
 
 **顺序**等待与**并行**等待的区别取决于你把 `await` 放在*哪里*：
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// 顺序执行：大约 300 + 300 = 600 毫秒
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// 并行：大约 300 毫秒
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 在第一种版本中，第二次下载只有等第一次完成后才会开始，因为 `await` 在那一行暂停了函数。在第二种版本中，两个调用都在任何 await 之前发出，所以当 `Promise.all` 等待时，两个下载都已经在运行。
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// 打印 fulfilled
 console.log(results[1].reason.message);
-// prints nope
+// 打印 nope
 ```
 只有当 `status` 是 `"fulfilled"` 时才读取 `value`，只有当它是 `"rejected"` 时才读取 `reason`：另一个属性根本不存在。
 

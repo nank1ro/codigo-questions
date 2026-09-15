@@ -20,7 +20,7 @@ title: 二分查找
 函数调用示例：
 ```kotlin
 println(binarySearch(intArrayOf(1, 3, 5, 7), 5))
-// prints 2
+// 打印 2
 ```
 
 # --seed--

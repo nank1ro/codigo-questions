@@ -20,7 +20,7 @@ title: 平方差之和
 函数调用示例：
 ```dart
 print(sumSquareDifference(10));
-// prints 2640
+// 打印 2640
 ```
 
 # --seed--

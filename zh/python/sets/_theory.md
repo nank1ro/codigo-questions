@@ -54,7 +54,7 @@ print(len(letters))  # 3
 - `discard(value)` 如果值存在则删除，否则**什么也不做**，不会报错
 ```python
 letters.remove("a")
-letters.discard("z")  # "z" is not there, but no error
+letters.discard("z")  # "z" 不存在，但没有报错
 letters.remove("z")   # KeyError: 'z'
 ```
 
@@ -84,7 +84,7 @@ for color in {"red", "blue"}:
 当你需要一个可预测的顺序时，把集合传给 `sorted()`，它会返回其元素的一个有序**列表**：
 ```python
 for color in sorted({"red", "blue"}):
-    print(color)  # blue, then red
+    print(color)  # 先 blue，再 red
 ```
 
 ---
@@ -158,7 +158,7 @@ print(small.isdisjoint({8, 9}))  # True
 尝试添加列表、字典或另一个集合会抛出 `TypeError`：
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # 没问题，是元组
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 元组集合非常适合用来记录唯一的组合，比如坐标或 (name, age) 记录：

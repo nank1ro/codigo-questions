@@ -23,13 +23,13 @@ list_name[index]
 你已经看过如何这样访问列表索引：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-names[0] # Gets the value "Jeremiah"
+names[0] # 获取值 "Jeremiah"
 ```
 以下是赋值的方式：
 ```python
 names = ["Jeremiah", "Barney", "Ivan", "Noel"]
 names[0] = "Jordan"
-names[0] # Gets the new value "Jordan"
+names[0] # 获取新值 "Jordan"
 ```
 
 ---
@@ -69,9 +69,9 @@ names[0] # Gets the new value "Jordan"
 你可以像切片列表一样切片字符串！实际上，你可以把字符串看作字符的列表：每个字符是列表中从索引 `0` 开始的连续元素。
 ```python
 list_name[:2]
-# Grabs the first two items
+# 获取前两个元素
 list_name[3:]
-# Grabs the fourth through last items
+# 获取第四个到最后一个元素
 ```
 如果你的列表切片包含列表（或字符串）中的第一个或最后一个元素，则不需要包含该元素的索引。
 

@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # 只打印 "checking -1"
+check(2) or check(-3)   # 只打印 "checking 2"
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False，只检查键
 ```
 两者都返回布尔值，读起来像英语，因此它们是检查成员关系的首选方式，而不必写循环。

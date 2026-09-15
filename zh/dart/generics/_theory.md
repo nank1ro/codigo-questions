@@ -11,7 +11,7 @@ List<int> scores = [10, 20];
 
 ```dart
 names.add(42);          // error: 42 is not a String
-print(names.first.toUpperCase()); // fine: first is a String
+print(names.first.toUpperCase()); // 正常：first 是 String
 ```
 
 ---
@@ -39,8 +39,8 @@ Dart 还有 `dynamic` 类型，它的意思是“什么都可以”。`List<dyna
 
 ```dart
 List<dynamic> things = ['Ada', 'Grace'];
-things.add(42);                    // accepted
-print(things.first.toUpperCase()); // accepted
+things.add(42);                    // 接受
+print(things.first.toUpperCase()); // 接受
 ```
 
 代价是编写代码时什么都不会被检查。对 `dynamic` 值的每次调用都是在程序运行时才解析的，所以像 `things.first.toUpperCse()` 这样的拼写错误也能顺利编译，然后在用户面前崩溃。
@@ -65,8 +65,8 @@ class Box<T> {
 
 ```dart
 final a = Box<int>(7);   // Box<int>
-final b = Box('fig');    // Box<String>, inferred from the argument
-print(a.value + 1);      // 8, the compiler knows value is an int
+final b = Box('fig');    // Box<String>，从参数推断得出
+print(a.value + 1);      // 8，编译器知道 value 是 int
 ```
 
 字母本身并不重要：`T` 只是“类型”的一种约定，仅此而已。
@@ -78,14 +78,14 @@ print(a.value + 1);      // 8, the compiler knows value is an int
 ```dart
 T firstOf<T>(List<T> items) => items.first;
 
-print(firstOf(['fig', 'kiwi'])); // fig, T is String here
-print(firstOf([10, 20]));        // 10, T is int here
+print(firstOf(['fig', 'kiwi'])); // fig，这里 T 是 String
+print(firstOf([10, 20]));        // 10，这里 T 是 int
 ```
 
 一份函数体，只检查一次，即可为每种类型复用。类型实参通常从参数推断得出，但当推断无据可依时，也可以显式写出：
 
 ```dart
-final empty = firstOf<String>(<String>[]); // throws, but the type is clear
+final empty = firstOf<String>(<String>[]); // 会抛出异常，但类型是明确的
 ```
 
 类中的方法遵循完全相同的规则。
@@ -132,8 +132,8 @@ Entry<V, K> get flipped => Entry(value, key);
 在健全的空安全下，问号可以出现在两个不同的位置，而它们表示两种不同的含义：
 
 ```dart
-Box<int?> a = Box(null); // a box that exists and holds a nullable int
-Box<int>? b = null;      // no box at all, but if there is one it holds an int
+Box<int?> a = Box(null); // 一个存在的盒子，里面装着可空的 int
+Box<int>? b = null;      // 根本没有盒子，但如果有的话，它装着一个 int
 ```
 
 在 `Box<int?>` 中，**类型实参**是可空的，所以 `a.value` 的类型是 `int?`，可能是 `null`，而 `a` 本身始终存在。在 `Box<int>?` 中，**变量**是可空的，所以 `b` 可能是 `null`，你需要 `b?.value` 或 `b!.value` 才能访问它的内部。
@@ -146,10 +146,10 @@ Box<int>? b = null;      // no box at all, but if there is one it holds an int
 
 ```dart
 Box<int?> a = Box(null);
-print(a.value ?? 0); // 0, the box is there, its content is null
+print(a.value ?? 0); // 0，盒子是存在的，其内容是 null
 
 Box<int>? b = null;
-print(b?.value ?? 0); // 0, the box itself is missing
+print(b?.value ?? 0); // 0，盒子本身就不存在
 ```
 
 在 `Box<int>?` 上写 `b.value` 根本无法编译：Dart 拒绝读取可能不存在的东西的字段。
@@ -187,9 +187,9 @@ num biggerOf<T extends num>(T a, T b) => a > b ? a : b;
 边界还可以提到类型参数本身。`Comparable<T>` 是所有懂得如何通过 `compareTo` 与自己同种类型进行比较的东西的接口：
 
 ```dart
-print('fig'.compareTo('kiwi')); // negative: fig comes first
+print('fig'.compareTo('kiwi')); // 负数：fig 排在前面
 print('kiwi'.compareTo('fig')); // positive
-print('fig'.compareTo('fig'));  // zero
+print('fig'.compareTo('fig'));  // 零
 ```
 
 所以 `T extends Comparable<T>` 应读作“任何可以与自身比较的类型”，这正是排序或求最大值的函数所需要的：

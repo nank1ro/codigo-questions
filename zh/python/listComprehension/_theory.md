@@ -154,5 +154,5 @@ print(unique)  # {1, 2, 3}
 comprehension 还能替代大多数配合 lambda 使用 `map()` 和 `filter()` 的场景：
 ```python
 doubled = list(map(lambda n: n * 2, nums))
-doubled = [n * 2 for n in nums]  # same result, easier to read
+doubled = [n * 2 for n in nums]  # 结果相同，但更易读
 ```

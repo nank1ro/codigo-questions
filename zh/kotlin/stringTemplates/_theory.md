@@ -2,7 +2,7 @@
 在 Kotlin 中，我们可以使用 `+` 号（连接符）将两个或多个字符串连接在一起显示，例如：
 ```kotlin
 println("Hello " + "Kotlin!")
-// prints "Hello Kotlin!"
+// 打印 "Hello Kotlin!"
 ```
 
 ---
@@ -36,7 +36,7 @@ println("Hello " + "Kotlin!")
 在 `${}` 中我们还可以放置条件表达式，例如：
 ```kotlin
 println("${if (true) "Correct" else "Wrong"}")
-// prints Correct
+// 打印 Correct
 ```
 
 ---

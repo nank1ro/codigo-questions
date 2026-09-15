@@ -30,7 +30,7 @@ class Animal {
 }
 class Dog extends Animal {}
 console.log(new Dog("Max").speak());
-// prints Max makes a sound
+// 打印 Max makes a sound
 ```
 当子类声明了自己的构造函数时，在其中调用 `super(...)` 是**强制性的**：没有它，对象就永远不会被初始化，JavaScript 会抛出 `ReferenceError`。完全没有构造函数的子类也没有问题，因为 JavaScript 会自动写一个把所有参数转发给父类的构造函数。
 
@@ -62,7 +62,7 @@ class Dog extends Animal {
     }
 }
 console.log(new Dog().speak());
-// prints Woof
+// 打印 Woof
 ```
 重写并不会删除父类的版本，只是把它隐藏起来。在子类方法内部，`super.methodName(...)` 仍然可以访问到它，这让你可以扩展父类的行为而不是完全替换它：
 ```javascript
@@ -72,7 +72,7 @@ class Puppy extends Dog {
     }
 }
 console.log(new Puppy().speak());
-// prints Woof!
+// 打印 Woof!
 ```
 注意区别：`super(...)` 调用的是父类的**构造函数**，`super.name(...)` 调用的是父类的**方法**。
 
@@ -85,7 +85,7 @@ class Counter {
     step = 1;
 }
 console.log(new Counter().count);
-// prints 0
+// 打印 0
 ```
 字段会在构造函数体运行之前赋给每个新实例，所以构造函数已经可以依赖它们。没有值的字段也依然是已声明的，只是以 `undefined` 作为起始值：
 ```javascript
@@ -110,7 +110,7 @@ class MathUtils {
     }
 }
 console.log(MathUtils.double(4));
-// prints 8
+// 打印 8
 ```
 静态方法通过类名调用，绝不能通过实例调用：`new MathUtils().double(4)` 会抛出 `TypeError`，因为实例不会获得静态成员。在静态方法内部，`this` 指向类本身，所以一个静态方法可以用 `this.otherStatic(...)` 调用另一个静态方法。
 
@@ -122,7 +122,7 @@ class Circle {
     static PI = 3.14;
 }
 console.log(Circle.PI);
-// prints 3.14
+// 打印 3.14
 ```
 因为只有一份副本，更新它的每个实例更新的都是同一个值。在构造函数内部，你要通过类名 `Circle.PI` 来访问它，而不是通过 `this`：`this.PI` 会在实例上查找属性，什么也找不到，然后给你 `undefined`。
 
@@ -139,7 +139,7 @@ class Duration {
     }
 }
 console.log(Duration.fromMinutes(2).seconds);
-// prints 120
+// 打印 120
 ```
 工厂可以在任何实例存在之前被调用，这是普通方法做不到的。
 
@@ -158,7 +158,7 @@ class Rectangle {
 }
 const r = new Rectangle(3, 4);
 console.log(r.area);
-// prints 12
+// 打印 12
 ```
 `r.area` 会运行该方法并返回它的结果，所以它是一个数字。再加上括号就会试图调用这个数字，而这会失败。
 
@@ -189,7 +189,7 @@ class Volume {
 const v = new Volume(3);
 v.level = 50;
 console.log(v.level);
-// prints 3, the setter rejected 50
+// 打印 3，setter 拒绝了 50
 ```
 同名的 getter 和 setter 共同构成一个属性，所以它们不能同时也是一个普通字段：存储的值存放在另一个名字下，按照惯例就是同名但前面加一个下划线。
 
@@ -205,7 +205,7 @@ class Secret {
 }
 const s = new Secret();
 console.log(s.reveal());
-// prints 1234
+// 打印 1234
 console.log(s.#code);
 // SyntaxError: the field is not accessible here
 ```
@@ -224,7 +224,7 @@ class Receipt {
     }
 }
 console.log(new Receipt().print(7));
-// prints $7
+// 打印 $7
 ```
 这就是你把辅助步骤挡在 API 之外的方式：调用者看到的是 `print`，而不是它背后的格式化细节。私有字段和私有方法一起让类有了清晰的内部与外部之分。
 
@@ -241,7 +241,7 @@ class Money {
     }
 }
 console.log(`${new Money(7)}`);
-// prints $7
+// 打印 $7
 ```
 字符串拼接和 `String(value)` 使用的也是同一个方法。如果你还想得到一个有意义的**数字**，可以定义 `[Symbol.toPrimitive](hint)`，它会接收 `"string"`、`"number"` 或 `"default"` 并决定返回什么；当它存在时，它的优先级高于 `toString`。
 
@@ -281,6 +281,6 @@ class Playlist {
 }
 const list = new Playlist(["a", "b"]);
 console.log([...list]);
-// prints [ 'a', 'b' ]
+// 打印 [ 'a', 'b' ]
 ```
 名字前面的 `*` 使它成为一个**生成器（generator）**：一种用 `yield` 逐个交出值并在其间暂停的函数。这是满足迭代协议的最简短方式，而且它也适用于那些被计算出来而非存储起来的值。

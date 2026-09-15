@@ -77,6 +77,6 @@ struct Rectangle {
 }
 
 let r = Rectangle(width: 3, height: 4)
-print(r.area) // 12, no parentheses
+print(r.area) // 12，没有括号
 ```
 计算属性不属于逐一成员初始化器的一部分，因为没有东西需要存储。当值由其他值推导而来时使用计算属性，当工作需要参数时使用方法。

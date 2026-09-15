@@ -34,7 +34,7 @@ for (let i = 0; i < 5; i++) {
 在 JavaScript 中，我们还有 `forEach` 循环。
 实际上，`forEach` 按照与 `for` 循环相同的顺序对序列中的每个元素调用给定的闭包：
 ```javascript
-// this is an array, we'll see about that soon
+// 这是一个数组，我们很快就会讲到
 let numbers = [1, 3, 5, 7, 9];
 numbers.forEach((num) => console.log(num));}
 ```

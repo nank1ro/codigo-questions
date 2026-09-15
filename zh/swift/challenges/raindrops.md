@@ -30,7 +30,7 @@ title: 雨滴
 函数调用示例：
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// 输出 "Plong"
 ```
 
 # --before-seed--

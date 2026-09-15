@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// 打印：Cold
 ```
 
 两个分支中始终恰好执行一个。
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// 打印：B
 ```
 
 ---

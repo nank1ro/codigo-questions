@@ -21,7 +21,7 @@ title: 二分查找
 函数调用示例：
 ```swift
 print(binarySearch([1, 3, 5, 7], 5))
-// prints 2
+// 输出 2
 ```
 
 # --before-seed--

@@ -16,7 +16,7 @@ title: 最大回文积
 函数调用示例：
 ```dart
 print(largestPalindromeProduct(2));
-// prints 9009
+// 打印 9009
 ```
 
 # --seed--

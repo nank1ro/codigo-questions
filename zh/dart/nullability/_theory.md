@@ -94,15 +94,15 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3，它已经有值了
 ```
 
 它也适用于 map 的条目，因为键可能不存在，所以这些条目是可空的：
 
 ```dart
 var stock = {'apple': 4};
-stock['pear'] ??= 1;  // added
-stock['apple'] ??= 9; // ignored
+stock['pear'] ??= 1;  // 已添加
+stock['apple'] ??= 9; // 已忽略
 print(stock); // {apple: 4, pear: 1}
 ```
 
@@ -142,7 +142,7 @@ print(text!.length); // Null check operator used on a null value
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // 这里 n 是 int，不需要 !
   }
   return 0;
 }
@@ -153,7 +153,7 @@ int twice(int? n) {
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // 从这里开始 n 是 int
 }
 ```
 
@@ -207,7 +207,7 @@ class Connection {
 `late` 也可以和初始化器一起使用，此时初始化器会**惰性**执行，在变量第一次被读取时才运行：
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport() 只有在使用 report 时才会运行
 ```
 
 ---
@@ -270,7 +270,7 @@ print(int.tryParse(''));    // null
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // 什么都不会发生，numbers 仍然是 null
 ```
 
 **空安全展开** `...?` 把可空集合的元素插入到字面量中；当集合为 `null` 时则什么也不添加：

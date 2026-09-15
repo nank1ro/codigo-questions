@@ -7,7 +7,7 @@ const Color = Object.freeze({
   BLUE: "blue",
 });
 console.log(Color.RED);
-// prints red
+// 打印 red
 ```
 按照惯例，该对象使用 `const` 声明，其名称以大写字母开头，成员名称使用 `UPPER_CASE` 书写，与其他常量完全一致。
 
@@ -20,12 +20,12 @@ const Status = Object.freeze({
   DONE: "done",
 });
 console.log(Status.DONE);
-// prints done
+// 打印 done
 ```
 一旦被冻结，该对象也无法再获得新的属性，`Object.isFrozen(obj)` 可以告诉你一个对象是否已被冻结：
 ```javascript
 console.log(Object.isFrozen(Status));
-// prints true
+// 打印 true
 ```
 
 ---
@@ -40,9 +40,9 @@ const Size = Object.freeze({ SMALL: "s", LARGE: "l" });
 Size.SMALL = "xs";
 Size.MEDIUM = "m";
 console.log(Size.SMALL);
-// prints s
+// 打印 s
 console.log(Size.MEDIUM);
-// prints undefined
+// 打印 undefined
 ```
 无论哪种情况，枚举都会保留你定义的值，这正是一组常量所需要的。
 
@@ -56,7 +56,7 @@ const Priority = Object.freeze({
   HIGH: 3,
 });
 console.log(Priority.HIGH > Priority.LOW);
-// prints true
+// 打印 true
 ```
 代价是可读性：打印 `Priority.HIGH` 只会显示 `3`，比字符串 `"high"` 所传达的信息要少得多。
 
@@ -70,14 +70,14 @@ console.log(Priority.HIGH > Priority.LOW);
 ```javascript
 const Color = Object.freeze({ RED: "red", BLUE: "blue" });
 console.log(Object.keys(Color));
-// prints [ 'RED', 'BLUE' ]
+// 打印 [ 'RED', 'BLUE' ]
 console.log(Object.values(Color));
-// prints [ 'red', 'blue' ]
+// 打印 [ 'red', 'blue' ]
 ```
 将 `Object.values()` 与数组方法 `includes()` 结合使用，是检查任意值（例如从用户输入中读取的值）是否为有效成员的标准方式：
 ```javascript
 console.log(Object.values(Color).includes("red"));
-// prints true
+// 打印 true
 console.log(Object.values(Color).includes("pink"));
-// prints false
+// 打印 false
 ```

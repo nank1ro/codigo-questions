@@ -4,7 +4,7 @@
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 出去玩
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 出去玩
 }
 ```
 我们已经看到 `if` 语句只在条件为 `true` 时执行代码块。
@@ -28,9 +28,9 @@ if (niceWeather) {
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
-    // play outside
+    // 出去玩
 } else {
-    // stay home
+    // 待在家里
 }
 ```
 
@@ -102,14 +102,14 @@ if (a < b) {
     c = b;
 }
 console.log(c);
-// prints 10
+// 打印 10
 ```
 上述代码的简写形式为：
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
-// prints 10
+// 打印 10
 ```
 `c` 被赋值为 `a`，因为条件 `a < b` 为 true
 

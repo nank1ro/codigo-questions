@@ -18,7 +18,7 @@ title: 数字之和
 函数调用示例：
 ```swift
 print(sumDigits(28))
-// prints 10
+// 输出 10
 ```
 
 # --before-seed--

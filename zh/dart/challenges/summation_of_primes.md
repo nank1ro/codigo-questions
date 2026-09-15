@@ -16,7 +16,7 @@ title: 质数之和
 函数调用示例：
 ```dart
 print(primeSummation(10));
-// prints 17
+// 打印 17
 ```
 
 # --seed--
@@ -75,7 +75,7 @@ void main() {
 ```dart
 int primeSummation(int n) {
   if (n < 2) return 0;
-  // Sieve of Eratosthenes
+  // 埃拉托斯特尼筛法
   final List<bool> sieve = List.filled(n, true);
   sieve[0] = false;
   sieve[1] = false;

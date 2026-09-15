@@ -14,8 +14,8 @@ Kotlin 有一个基本的布尔类型，称为 `Boolean`。
 
 布尔值也可以通过在其前面使用 `!` 来取反，例如：
 ```kotlin
-println(!true) // prints false
-println(!false) // prints true
+println(!true) // 打印 false
+println(!false) // 打印 true
 ```
 
 ---
@@ -26,10 +26,10 @@ println(!false) // prints true
 - `||`（_或_）：如果运算符左侧或右侧的表达式为 true，或者两者都为 true，则产生 true。
 
 ```kotlin
-println(true && true) // prints true
-println(true && false) // prints false
-println(false && false) // prints false
-println(true || true) // prints true
-println(true || false) // prints true
-println(false || false) // prints false
+println(true && true) // 打印 true
+println(true && false) // 打印 false
+println(false && false) // 打印 false
+println(true || true) // 打印 true
+println(true || false) // 打印 true
+println(false || false) // 打印 false
 ```

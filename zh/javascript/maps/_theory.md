@@ -5,7 +5,7 @@ let ages = new Map();
 ages.set("Ann", 30);
 ages.set("Bob", 25);
 console.log(ages.get("Ann"));
-// prints 30
+// 打印 30
 ```
 使用一个已经存在的键调用 `set()` 会替换它的值。
 
@@ -21,10 +21,10 @@ let stock = new Map();
 stock.set("apple", 3);
 stock.set("pear", 5);
 console.log(stock.has("apple"));
-// prints true
+// 打印 true
 stock.delete("pear");
 console.log(stock.size);
-// prints 1
+// 打印 1
 ```
 注意 `size` 是一个属性，而不是方法，所以它没有括号。
 
@@ -35,7 +35,7 @@ console.log(stock.size);
 let ages = new Map();
 ages.set("Ann", 30);
 console.log(ages.get("Zed"));
-// prints undefined
+// 打印 undefined
 ```
 这就是为什么存在 `has()`：它可以让你区分缺失的键和值恰好为 `undefined` 的键。
 `set()` 返回 Map 本身，所以可以链式调用：
@@ -52,11 +52,11 @@ let lookup = new Map();
 lookup.set(1, "number one");
 lookup.set("1", "string one");
 console.log(lookup.size);
-// prints 2
+// 打印 2
 let alice = { name: "Alice" };
 lookup.set(alice, "an object key");
 console.log(lookup.get(alice));
-// prints an object key
+// 打印 an object key
 ```
 对象键是按身份比较的：只有完全相同的那个对象才能取回对应的值。
 
@@ -71,8 +71,8 @@ stock.set("pear", 5);
 for (const [name, qty] of stock.entries()) {
   console.log(`${name}: ${qty}`);
 }
-// prints apple: 3
-// prints pear: 5
+// 打印 apple: 3
+// 打印 pear: 5
 ```
 直接遍历 Map 本身，`for (const [name, qty] of stock)`，效果完全相同。
 
@@ -86,13 +86,13 @@ prices.set("cake", 4);
 for (const name of prices.keys()) {
   console.log(name);
 }
-// prints tea
-// prints cake
+// 打印 tea
+// 打印 cake
 for (const price of prices.values()) {
   console.log(price);
 }
-// prints 2
-// prints 4
+// 打印 2
+// 打印 4
 ```
 
 ---
@@ -102,12 +102,12 @@ for (const price of prices.values()) {
 let pairs = [["red", "#f00"], ["blue", "#00f"]];
 let colors = new Map(pairs);
 console.log(colors.size);
-// prints 2
+// 打印 2
 ```
 因为 `Object.entries(obj)` 返回的正是这样一个键值对数组，所以它是把对象转换成 Map 最快的方法：
 ```javascript
 let user = { name: "Ann", age: 30 };
 let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
-// prints 30
+// 打印 30
 ```

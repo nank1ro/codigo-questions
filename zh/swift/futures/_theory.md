@@ -10,7 +10,7 @@ func fetchNumber() async -> Int {
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// 输出 42
 ```
 在 Swift 脚本中，顶层代码已经支持 `await`，因此可以直接调用异步函数，无需任何额外设置。忘记写 `async` 或 `await` 会导致编译错误，而不是一个悄无声息的 bug。
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// 输出 10.0
 ```
 返回的值是一个普通的 `Double`，而不是包装类型：`await` 结束之后，你就可以像往常一样使用它。
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// 输出 15
 ```
 `await` 只能在异步上下文中使用：`async` 函数内部，或脚本的顶层。普通的、非 `async` 的函数不能 `await` 任何东西。
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// 输出 could not load
 ```
 关键字的顺序是固定的：先写 `try`，再写 `await`。
 
@@ -144,7 +144,7 @@ let job = Task {
 结果之后用 **`.value`** 读取，读取时需要 await：
 ```swift
 print(await job.value)
-// prints 42
+// 输出 42
 ```
 句柄的类型说明了它产生什么值以及可能抛出什么错误：`Task<Int, Never>` 是一个返回 `Int` 且永不抛出错误的任务。与 `async let` 不同，`Task` 可以在普通的、非异步的代码中创建。
 

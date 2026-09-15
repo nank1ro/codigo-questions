@@ -4,7 +4,7 @@
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 出去玩
 ```
 
 ---
@@ -13,7 +13,7 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 出去玩
 ```
 我们已经看到 `if` 语句只有在条件为 `True` 时才会执行代码块。
 另一个需要注意的重要事项是**冒号** `:` 和**缩进**，它们表示代码块的开始。
@@ -30,9 +30,9 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # 出去玩
 else:
-    # stay home
+    # 待在家里
 ```
 
 ---

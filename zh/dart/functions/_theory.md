@@ -11,7 +11,7 @@ void sayHello() {
 通过写出函数名称加 `()` 来调用函数：
 
 ```dart
-sayHello(); // prints Hello!
+sayHello(); // 打印 Hello!
 ```
 
 ---
@@ -36,7 +36,7 @@ int square(int n) {
 }
 
 void main() {
-  print(square(4)); // prints 16
+  print(square(4)); // 打印 16
 }
 ```
 
@@ -71,7 +71,7 @@ void printInfo({required String name, int age = 0}) {
 
 void main() {
   printInfo(name: "Alice", age: 30);
-  // prints Alice is 30 years old
+  // 打印 Alice is 30 years old
 }
 ```
 

@@ -18,7 +18,7 @@ title: 偶数斐波那契数
 函数调用示例：
 ```swift
 print(fibonacciEvenSum(8))
-// prints 10
+// 输出 10
 ```
 
 # --before-seed--

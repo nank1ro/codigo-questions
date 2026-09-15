@@ -33,7 +33,7 @@ println(letters.lastIndex) // 1
 for (i in letters.indices) {
     println(letters[i])
 }
-// prints x, then y
+// 先打印 x,再打印 y
 ```
 
 ---
@@ -41,7 +41,7 @@ for (i in letters.indices) {
 即使数组用 `val` 声明，也可以通过对某个索引赋值来替换它的**元素**：
 ```kotlin
 val nums = intArrayOf(1, 2, 3)
-nums[0] = 10 // nums is now [10, 2, 3]
+nums[0] = 10 // nums 现在是 [10, 2, 3]
 ```
 要遍历每个元素，可以使用 `for` 循环或 `forEach`：
 ```kotlin
@@ -83,8 +83,8 @@ println(nums.contentToString())   // [1, 2, 3]
 - `sorted()`、`sortedDescending()` 和 `reversed()` 不改变原数组，返回一个新的 `List`
 ```kotlin
 val nums = intArrayOf(3, 1, 2)
-nums.sort()                 // nums is now [1, 2, 3]
-println(nums.reversed())    // [3, 2, 1], nums is still [1, 2, 3]
+nums.sort()                 // nums 现在是 [1, 2, 3]
+println(nums.reversed())    // [3, 2, 1],nums 仍然是 [1, 2, 3]
 ```
 
 ---
@@ -106,8 +106,8 @@ println(nums.count())   // 3
 像 `nums + 4` 这样的表达式不会让 `nums` 变大，而是构建一个全新的数组：
 ```kotlin
 val nums = arrayOf(1, 2, 3)
-nums[0] = 9              // ok, nums is [9, 2, 3]
-val bigger = nums + 4    // new array [9, 2, 3, 4], nums still has 3 elements
+nums[0] = 9              // ok,nums 是 [9, 2, 3]
+val bigger = nums + 4    // 新数组 [9, 2, 3, 4],nums 仍然有 3 个元素
 ```
 当元素数量会随时间变化时，优先使用 `MutableList`；当元素数量事先已知，或者需要基本类型的性能时，优先使用数组。
 
@@ -132,7 +132,7 @@ for ((i, pet) in pets.withIndex()) {
     println("$i -> $pet")
 }
 pets.forEachIndexed { i, pet -> println("$i -> $pet") }
-// both print 0 -> cat, then 1 -> dog
+// 两者都先打印 0 -> cat,再打印 1 -> dog
 ```
 
 ---
@@ -159,7 +159,7 @@ val a = intArrayOf(1, 2, 3)
 val b = intArrayOf(1, 2, 3)
 println(a == b)              // false
 println(a.contentEquals(b))  // true
-println(listOf(1, 2) == listOf(1, 2)) // true, lists compare their elements
+println(listOf(1, 2) == listOf(1, 2)) // true,列表会比较其中的元素
 ```
 
 ---

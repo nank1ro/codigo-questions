@@ -32,8 +32,8 @@ print(ages['Zed']); // null
 
 ```dart
 var ages = {'Ann': 30};
-ages['Bob'] = 25; // adds Bob
-ages['Ann'] = 31; // updates Ann
+ages['Bob'] = 25; // 添加 Bob
+ages['Ann'] = 31; // 更新 Ann
 print(ages); // {Ann: 31, Bob: 25}
 ```
 

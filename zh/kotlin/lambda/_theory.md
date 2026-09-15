@@ -26,7 +26,7 @@ lambda 的函数体可以跨越多行。这里没有 `return` 关键字：**最�
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // 返回值
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 当 lambda 恰好有**一个**参数时，你可以省略它的声明：Kotlin 会自动把它命名为 `it`。
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // 结果相同
 ```
 `it` 只在参数没有被显式声明时才存在，并且只适用于单参数的 lambda。
 它让简短的 lambda 保持紧凑，但对于较长的函数体，一个真正的名字会更清晰。
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // 结果相同,只是用了尾随 lambda
 ```
 把函数参数放在**最后**，正是让调用者能够使用尾随 lambda 语法的关键。
 
@@ -160,7 +160,7 @@ println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4],结果相同
 ```
 成员函数通过它们的类型来引用，比如 `String::uppercase`：
 ```kotlin

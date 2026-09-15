@@ -16,7 +16,7 @@ title: 加法
 函数调用示例：
 ```dart
 print(addition(1, 2));
-// prints 3
+// 打印 3
 ```
 
 # --seed--
