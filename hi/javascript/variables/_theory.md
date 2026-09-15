@@ -12,7 +12,7 @@ var x = 1;
 यदि हम वेरिएबल `x` को प्रिंट करते हैं तो हमें संख्या `1` मिलती है:
 ```javascript
 console.log(x);
-// prints 1
+// 1 प्रिंट करता है
 ```
 
 ---
@@ -21,9 +21,9 @@ console.log(x);
 हम `=` का उपयोग करके और एक नया मान देकर `x` को अपडेट कर सकते हैं।
 ```javascript
 var x = 1;
-console.log(x); // prints 1
+console.log(x); // 1 प्रिंट करता है
 x = 2;
-console.log(x); // prints 2
+console.log(x); // 2 प्रिंट करता है
 ```
 
 ---
@@ -33,7 +33,7 @@ console.log(x); // prints 2
 ```javascript
 var x = 5;
 var y = x;
-console.log(y); // prints 5
+console.log(y); // 5 प्रिंट करता है
 ```
 
 ---
@@ -42,9 +42,9 @@ console.log(y); // prints 5
 यहाँ हम `x` वेरिएबल को दो बार प्रदर्शित कर सकते हैं और देख सकते हैं कि इसका मान कैसे अपडेट होता है।
 ```javascript
 var x = 5;
-console.log(x); // prints 5
+console.log(x); // 5 प्रिंट करता है
 x = 10;
-console.log(x); // prints 10
+console.log(x); // 10 प्रिंट करता है
 ```
 
 ---
@@ -52,10 +52,10 @@ console.log(x); // prints 10
 JavaScript में स्ट्रिंग वेरिएबल्स को डबल कोट्स और सिंगल कोट्स दोनों का उपयोग करके घोषित किया जा सकता है:
 ```javascript
 let x = "May";
-// both are the same string
+// दोनों एक ही स्ट्रिंग हैं
 let y = 'May';
 console.log(x === y);
-// prints true
+// true प्रिंट करता है
 ```
 
 ---

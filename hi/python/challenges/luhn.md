@@ -27,7 +27,7 @@ title: लूह्न चेकसम
 फ़ंक्शन कॉल का उदाहरण:
 ```python
 print(is_valid("095 245 88"))
-# prints True
+# True प्रिंट करता है
 ```
 
 # --seed--

@@ -42,8 +42,8 @@ println(price::class.simpleName) // Double
 एक `Int` लगभग दो अरब तक की पूर्ण संख्याएँ रख सकता है, और अधिक सटीक रूप से `Int.MAX_VALUE` तक, जो `2147483647` है।
 एक `Int` के लिए बहुत बड़ा पूर्ण संख्या literal स्वतः ही `Long` के रूप में इन्फर हो जाता है, और आप सफिक्स `L` के साथ किसी भी literal के लिए `Long` फोर्स कर सकते हैं:
 ```kotlin
-val big = 3000000000  // Long, too big for an Int
-val small = 3L        // Long, thanks to the suffix
+val big = 3000000000  // Long, Int के लिए बहुत बड़ा
+val small = 3L        // Long, suffix की वजह से
 ```
 इसी तरह सफिक्स `f` एक दशमलव literal को `Float` में बदल देता है: `val ratio = 0.5f`।
 लंबी संख्याएँ पढ़ने में कठिन होती हैं, इसलिए Kotlin आपको अंकों के बीच कहीं भी अंडरस्कोर `_` रखने देता है; कंपाइलर उन्हें नजरअंदाज कर देता है:
@@ -131,8 +131,8 @@ println("4x2".toIntOrNull() ?: 0) // 0
 ```kotlin
 println("42".toIntOrNull())   // 42
 println("-7".toIntOrNull())   // -7
-println("3.5".toIntOrNull())  // null, not a whole number
-println(" 42".toIntOrNull())  // null, spaces are not allowed
+println("3.5".toIntOrNull())  // null, यह पूर्ण संख्या नहीं है
+println(" 42".toIntOrNull())  // null, spaces की अनुमति नहीं है
 println("abc".toIntOrNull())  // null
 ```
 दशमलव टेक्स्ट के लिए `toDoubleOrNull()` का उपयोग करें, जो `"3.5"` स्वीकार करता है और उसी तरह एक `Double?` लौटाता है।
@@ -171,7 +171,7 @@ println(value is String) // false
 ```
 जैसे ही एक चेक पास हो जाता है, कंपाइलर मान को **स्मार्ट कास्ट** कर देता है: `if` के अंदर (या `when` ब्रांच में) आप उसे उस टाइप के रूप में उपयोग कर सकते हैं, बिना किसी कन्वर्ज़न की ज़रूरत के:
 ```kotlin
-if (value is Int) println(value + 1) // 43, value is an Int here
+if (value is Int) println(value + 1) // 43, value यहाँ एक Int है
 when (value) {
     is String -> println(value.length)
     is Boolean -> println(!value)

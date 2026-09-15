@@ -27,7 +27,7 @@ title: लूह्न चेकसम
 फ़ंक्शन कॉल का उदाहरण:
 ```kotlin
 println(isValid("095 245 88"))
-// prints true
+// true प्रिंट करता है
 ```
 
 # --seed--

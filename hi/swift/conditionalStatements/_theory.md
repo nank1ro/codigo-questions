@@ -4,7 +4,7 @@
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // बाहर खेलना
 }
 ```
 
@@ -14,7 +14,7 @@ if niceWeather {
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // बाहर खेलना
 }
 ```
 हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
@@ -28,9 +28,9 @@ Swift में हम `else` स्टेटमेंट का उपयोग
 ```swift
 var niceWeather = true
 if niceWeather {
-    // play outside
+    // बाहर खेलना
 } else {
-    // stay home
+    // घर पर रहना
 }
 ```
 

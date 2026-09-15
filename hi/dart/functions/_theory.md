@@ -11,7 +11,7 @@ void sayHello() {
 आप फंक्शन का नाम और उसके बाद `()` लिखकर फंक्शन को कॉल करते हैं:
 
 ```dart
-sayHello(); // prints Hello!
+sayHello(); // Hello! प्रिंट करता है
 ```
 
 ---
@@ -36,7 +36,7 @@ int square(int n) {
 }
 
 void main() {
-  print(square(4)); // prints 16
+  print(square(4)); // 16 प्रिंट करता है
 }
 ```
 
@@ -71,7 +71,7 @@ void printInfo({required String name, int age = 0}) {
 
 void main() {
   printInfo(name: "Alice", age: 30);
-  // prints Alice is 30 years old
+  // Alice is 30 years old प्रिंट करता है
 }
 ```
 

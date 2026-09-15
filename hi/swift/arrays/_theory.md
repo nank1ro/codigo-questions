@@ -25,15 +25,15 @@ Array में दूसरा आइटम index 1 पर होता है:
 आपने देखा कि array index को इस प्रकार एक्सेस किया जाता है:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Prints the value "Jeremiah"
+// "Jeremiah" मान प्रिंट करता है
 print(names[0])
 ```
 इस प्रकार असाइनमेंट काम करता है:
 ```swift
 var names = ["Jeremiah", "Barney", "Ivan", "Noel"]
-// Assign the new value "Jordan"
+// नया मान "Jordan" असाइन करें
 names[0] = "Jordan"
-// Prints the value "Jordan"
+// "Jordan" मान प्रिंट करता है
 print(names[0])
 ```
 
@@ -51,7 +51,7 @@ Array में आइटम जोड़ने के लिए हम `append`
 var letters = ["a", "b"]
 letters.append("c")
 print(letters)
-// Prints ["a", "b", "c"]
+// ["a", "b", "c"] प्रिंट करता है
 ```
 
 ---
@@ -62,7 +62,7 @@ print(letters)
 let numbers = [1, 2, 3, 4]
 let slice = numbers[1...2]
 print(slice)
-// prints [2, 3]
+// [2, 3] प्रिंट करता है
 ```
 पहले, हम `numbers` नामक एक array बनाते हैं।
 फिर, हम array का एक उपखंड लेते हैं और इसे slice array में संग्रहीत करते हैं।
@@ -73,9 +73,9 @@ Swift में हम `...` का उपयोग करके अंतिम
 
 Swift में हम array को जैसे चाहें स्लाइस कर सकते हैं!
 ```swift
-// Grabs the first two items
+// पहले दो आइटम लेता है
 listName[..<2]
-// Grabs the fourth through last items
+// चौथे से आखिरी तक के आइटम लेता है
 listName[3...]
 ```
 यदि आपके array स्लाइस में array का पहला या अंतिम आइटम शामिल है, तो उस आइटम के लिए index शामिल करने की आवश्यकता नहीं है
@@ -98,13 +98,13 @@ var names: [String] = ["Trevor", "Zac", "Glenn"]
 if let index = names.firstIndex(of: "Zac") {
   print(index)
 }
-// prints 1
+// 1 प्रिंट करता है
 ```
 ऊपर का कोड पहले index को प्रिंट करता है जिसमें स्ट्रिंग `"Zac"` है, इस मामले में `1`।
 हम `insert()` मेथड का उपयोग करके किसी विशिष्ट index पर array में आइटम भी डाल सकते हैं:
 ```swift
 names.insert("Ali", at: 1)
-// prints ["Trevor", "Ali", "Zac", "Glenn"]
+// ["Trevor", "Ali", "Zac", "Glenn"] प्रिंट करता है
 ```
 ऊपर का कोड index `1` पर `"Ali"` डालता है, जो इस index के बाद सब कुछ 1 से नीचे खिसका देता है
 
@@ -116,7 +116,7 @@ var numbers = [1, 2, 3]
 for num in numbers {
     print(num)
 }
-// prints 1, 2, 3
+// 1, 2, 3 प्रिंट करता है
 ```
 `for` कीवर्ड के बाद एक वेरिएबल नाम आता है, इसे बारी-बारी से प्रत्येक array आइटम का मान असाइन किया जाएगा।
 

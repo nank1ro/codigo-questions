@@ -5,7 +5,7 @@ Swift में हम फ़ंक्शन के नाम के बाद `
 func say_hi() {
     print("Hello!")
 }
-say_hi() // prints "Hello!"
+say_hi() // "Hello!" प्रिंट करता है
 ```
 
 ---
@@ -28,7 +28,7 @@ func sayHello(name: String, newUser: Bool) -> String {
   }
   return greet
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)" प्रिंट करता है
 print(sayHello(name: "Smith", newUser: true))
 ```
 
@@ -46,7 +46,7 @@ print(sayHello(name: "Smith", newUser: true))
 यदि डिफ़ॉल्ट मान परिभाषित है, तो आप फ़ंक्शन को कॉल करते समय उस पैरामीटर को छोड़ सकते हैं
 ```swift
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-    // do stuff here
+    // यहाँ कुछ करें
 }
 ```
 
@@ -62,7 +62,7 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
 
 फ़ंक्शन में हम एक _वैकल्पिक टिप्पणी_ जोड़ सकते हैं जो बताती है कि फ़ंक्शन क्या करता है:
 ```swift
-/// Prints 'Hello World' to the console.
+/// 'Hello World' को कंसोल पर प्रिंट करता है।
 func helloWorld() {
     print("Hello, World!")
 }

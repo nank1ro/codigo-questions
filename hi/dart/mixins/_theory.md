@@ -54,7 +54,7 @@ void main() {
   a.increment();
   a.increment();
   print(a.count); // 2
-  print(b.count); // 0, b has its own count
+  print(b.count); // 0, b का अपना count है
 }
 ```
 
@@ -71,7 +71,7 @@ mixin Scored {
 
 final s = Scored();            // error: mixins cannot be instantiated
 class Team extends Scored {}   // error: mixins cannot be extended
-class Team with Scored {}      // this is the only way to use it
+class Team with Scored {}      // इसे इस्तेमाल करने का यही एकमात्र तरीका है
 ```
 
 नाम फिर भी एक टाइप की तरह काम करता है, इसलिए `Team() is Scored` और `Scored s = Team();` दोनों ठीक हैं। मिक्सिन का कोई कंस्ट्रक्टर नहीं होता, इसलिए एक non-nullable फ़ील्ड को घोषणा की जगह पर ही इनिशियलाइज़ करना ज़रूरी है (या उसे `late` चिह्नित करना होता है), जैसे ऊपर `int score = 0;` है।
@@ -82,7 +82,7 @@ class Team with Scored {}      // this is the only way to use it
 
 ```dart
 mixin Greeting {
-  String get name;                       // no body: the class provides it
+  String get name;                       // कोई बॉडी नहीं: क्लास इसे उपलब्ध कराती है
 
   String greet() => 'Hello, $name!';
 }
@@ -136,8 +136,8 @@ class First with A, B {}
 class Second with B, A {}
 
 void main() {
-  print(First().who());  // B, the last mixin in the list
-  print(Second().who()); // A, the last mixin in the list
+  print(First().who());  // B, लिस्ट का आख़िरी मिक्सिन
+  print(Second().who()); // A, लिस्ट का आख़िरी मिक्सिन
 }
 ```
 
@@ -156,8 +156,8 @@ mixin Starred {
   String format(String text) => '*$text*';
 }
 
-class Fancy with Plain, Starred {}  // format comes from Starred
-class Simple with Starred, Plain {} // format comes from Plain
+class Fancy with Plain, Starred {}  // format Starred से आता है
+class Simple with Starred, Plain {} // format Plain से आता है
 ```
 
 सदस्य जिन्हें केवल एक मिक्सिन घोषित करता है, वे कभी प्रतिस्पर्धा में नहीं होते: वे किसी भी क्रम में उपलब्ध रहते हैं। `with X, Y` को इस तरह पढ़ें: "`X` से शुरू करें, फिर `Y` को उसे ओवरराइड करने दें"।
@@ -284,9 +284,9 @@ mixin class Serializable {
   String toText() => 'data';
 }
 
-final s = Serializable();            // works: it is a class
-class Record extends Serializable {} // works: it is a class
-class Row with Serializable {}       // works: it is a mixin
+final s = Serializable();            // काम करता है: यह एक क्लास है
+class Record extends Serializable {} // काम करता है: यह एक क्लास है
+class Row with Serializable {}       // काम करता है: यह एक मिक्सिन है
 ```
 
 एक `mixin class` उस लचीलेपन की कीमत दो प्रतिबंधों से चुकाता है: उसे `Object` को एक्सटेंड करना ही होगा, इसलिए उसका अपना `extends` क्लॉज नहीं हो सकता, और उसे कंस्ट्रक्टर घोषित नहीं करना चाहिए, क्योंकि मिक्सिन कभी कोई कंस्ट्रक्टर नहीं चलाता।

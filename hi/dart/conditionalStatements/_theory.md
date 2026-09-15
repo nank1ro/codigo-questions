@@ -33,7 +33,7 @@ if (temperature > 20) {
 } else {
   print('Cold');
 }
-// prints: Cold
+// प्रिंट करता है: Cold
 ```
 
 दो शाखाओं में से हमेशा ठीक एक ही निष्पादित होती है।
@@ -51,7 +51,7 @@ if (score >= 90) {
 } else {
   print('C');
 }
-// prints: B
+// प्रिंट करता है: B
 ```
 
 ---

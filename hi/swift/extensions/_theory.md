@@ -118,8 +118,8 @@ extension Size {
         self.init(width: side, height: side)
     }
 }
-let a = Size(square: 3)          // from the extension
-let b = Size(width: 2, height: 5) // memberwise, still available
+let a = Size(square: 3)          // एक्सटेंशन से
+let b = Size(width: 2, height: 5) // मेंबरवाइज़, अभी भी उपलब्ध
 ```
 
 ---

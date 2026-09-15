@@ -29,7 +29,7 @@ title: लूह्न चेकसम
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(isValid("095 245 88"))
-// prints true
+// true प्रिंट करता है
 ```
 
 # --before-seed--

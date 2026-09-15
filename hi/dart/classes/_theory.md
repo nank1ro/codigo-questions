@@ -2,7 +2,7 @@
 
 ```dart
 class Animal {
-  // fields and methods go here
+  // फ़ील्ड्स और मेथड्स यहाँ आते हैं
 }
 ```
 
@@ -232,7 +232,7 @@ class Circle extends Shape {
 
 ```dart
 abstract class Shape {
-  double area(); // abstract method — no body
+  double area(); // ऐब्स्ट्रैक्ट मेथड — कोई बॉडी नहीं
 }
 
 class Circle extends Shape {
@@ -258,7 +258,7 @@ class MathHelper {
 }
 
 void main() {
-  // access without creating an object:
+  // बिना कोई ऑब्जेक्ट बनाए एक्सेस:
   print(MathHelper.pi);
   print(MathHelper.circleArea(5));
 }

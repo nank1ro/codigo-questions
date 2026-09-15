@@ -16,7 +16,7 @@ title: 10001वाँ अभाज्य
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(nthPrime(6))
-// prints 13
+// 13 प्रिंट करता है
 ```
 
 # --before-seed--

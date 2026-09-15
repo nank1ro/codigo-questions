@@ -30,7 +30,7 @@ title: बारिश की बूंदें
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(raindrops(28))
-// prints "Plong"
+// "Plong" प्रिंट करता है
 ```
 
 # --before-seed--

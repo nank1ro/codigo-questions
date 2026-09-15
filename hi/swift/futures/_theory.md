@@ -10,7 +10,7 @@ func fetchNumber() async -> Int {
 ```swift
 let n = await fetchNumber()
 print(n)
-// prints 42
+// 42 प्रिंट करता है
 ```
 Swift स्क्रिप्ट में टॉप लेवल पहले से `await` को सपोर्ट करता है, इसलिए आप बिना किसी अतिरिक्त सेटअप के सीधे एसिंक्रोनस फ़ंक्शन्स को कॉल कर सकते हैं। `async` या `await` भूलना एक कंपाइल एरर है, कोई चुपचाप चलता बग नहीं।
 
@@ -24,7 +24,7 @@ func price(of quantity: Int) async -> Double {
 
 let total = await price(of: 4)
 print(total)
-// prints 10.0
+// 10.0 प्रिंट करता है
 ```
 लौटाया गया मान एक सामान्य `Double` है, कोई रैपर नहीं: `await` के पूरा होने के बाद आप इसके साथ बिल्कुल पहले की तरह काम करते हैं।
 
@@ -42,7 +42,7 @@ func withBonus() async -> Int {
 }
 
 print(await withBonus())
-// prints 15
+// 15 प्रिंट करता है
 ```
 `await` केवल एक एसिंक्रोनस कॉन्टेक्स्ट के अंदर ही अनुमत है: कोई `async` फ़ंक्शन, या स्क्रिप्ट का टॉप लेवल। एक साधारण, गैर-`async` फ़ंक्शन कुछ भी `await` नहीं कर सकता।
 
@@ -69,7 +69,7 @@ do {
 } catch {
     print("could not load")
 }
-// prints could not load
+// could not load प्रिंट करता है
 ```
 कीवर्ड्स का क्रम तय है: `try` पहले आता है, फिर `await`।
 
@@ -144,7 +144,7 @@ let job = Task {
 परिणाम बाद में **`.value`** से पढ़ा जाता है, जिसे await किया जाता है:
 ```swift
 print(await job.value)
-// prints 42
+// 42 प्रिंट करता है
 ```
 हैंडल का टाइप बताता है कि वह क्या देता है और क्या throw कर सकता है: `Task<Int, Never>` एक ऐसा टास्क है जो एक `Int` लौटाता है और कभी throw नहीं करता। `async let` के विपरीत, एक `Task` साधारण, गैर-एसिंक्रोनस कोड से बनाया जा सकता है।
 

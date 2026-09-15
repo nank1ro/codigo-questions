@@ -2,7 +2,7 @@ String _interpolation_ एक प्रोग्रामेटिक तरी�
 Dart में हम `+` चिह्न (concatenation) का उपयोग करके दो या अधिक strings को एक साथ प्रदर्शित कर सकते हैं, जैसे:
 ```dart
 print("Hello " + "Dart!");
-// prints "Hello Dart!"
+// "Hello Dart!" प्रिंट करता है
 ```
 
 ---
@@ -36,7 +36,7 @@ String interpolation हमें बिना किसी त्रुटि �
 `${}` के अंदर हम conditions भी रख सकते हैं, उदाहरण के लिए:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
-// prints The answer is correct
+// The answer is correct प्रिंट करता है
 ```
 
 ---

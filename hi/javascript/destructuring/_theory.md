@@ -9,7 +9,7 @@ const y = point[1];
 const point = [3, 7];
 const [x, y] = point;
 console.log(x, y);
-// prints 3 7
+// 3 7 प्रिंट करता है
 ```
 पैटर्न को पूरे ऐरे को कवर करने की ज़रूरत नहीं है: अतिरिक्त एलिमेंट सीधे अनदेखे कर दिए जाते हैं, और जिस नाम का कोई मेल खाता एलिमेंट नहीं होता वह `undefined` हो जाता है।
 
@@ -22,7 +22,7 @@ function middle(range) {
     return (start + end) / 2;
 }
 console.log(middle([0, 10]));
-// prints 5
+// 5 प्रिंट करता है
 ```
 मूल ऐरे में कुछ भी कॉपी नहीं होता या बदला नहीं जाता, पैटर्न केवल उससे पढ़ता है।
 
@@ -33,7 +33,7 @@ console.log(middle([0, 10]));
 const rgb = [255, 128, 64];
 const [, , blue] = rgb;
 console.log(blue);
-// prints 64
+// 64 प्रिंट करता है
 ```
 नामों की नहीं, कॉमा की गिनती करें: हर कॉमा पैटर्न को एक स्थिति आगे बढ़ा देता है, चाहे उससे पहले कोई नाम हो या न हो।
 
@@ -44,7 +44,7 @@ console.log(blue);
 const size = [1920];
 const [width, height = 1080] = size;
 console.log(width, height);
-// prints 1920 1080
+// 1920 1080 प्रिंट करता है
 ```
 डिफ़ॉल्ट केवल तब मूल्यांकित होता है जब उसकी ज़रूरत हो, इसलिए वह फंक्शन कॉल भी हो सकता है, और डिफ़ॉल्ट किसी भी स्थिति को दिया जा सकता है, सिर्फ़ आख़िरी वाले को नहीं।
 
@@ -56,7 +56,7 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a];
 console.log(a, b);
-// prints 2 1
+// 2 1 प्रिंट करता है
 ```
 दाईं ओर पहले बनाई जाती है, इसलिए असाइनमेंट होने तक दोनों पुराने मान टेम्पररी ऐरे के अंदर पहले से सुरक्षित होते हैं। पिछली पंक्ति के सेमीकोलन का ध्यान रखें: वरना `[` से शुरू होने वाली पंक्ति को उससे पहले आई चीज़ का इंडेक्स समझ लिया जाता।
 
@@ -67,7 +67,7 @@ console.log(a, b);
 const user = { name: "Ada", age: 36 };
 const { age, name } = user;
 console.log(name, age);
-// prints Ada 36
+// Ada 36 प्रिंट करता है
 ```
 पैटर्न में `age` और `name` की जगह बदलने से कुछ नहीं बदलता, और पैटर्न में जिन कुंजियों का ज़िक्र नहीं है वे वैसी की वैसी छूट जाती हैं। जिस नाम की कोई मेल खाती कुंजी नहीं होती वह `undefined` हो जाता है।
 
@@ -78,7 +78,7 @@ console.log(name, age);
 const options = { theme: "dark" };
 const { theme, lang = "en" } = options;
 console.log(theme, lang);
-// prints dark en
+// dark en प्रिंट करता है
 ```
 चूँकि पूरा पैटर्न एक ही कथन है, कोई फंक्शन अपनी पहली ही पंक्ति पर आर्ग्युमेंट से ज़रूरत की हर चीज़ खोल सकता है।
 
@@ -89,7 +89,7 @@ console.log(theme, lang);
 const row = { n: "Ada", y: 1815 };
 const { n: name, y: born } = row;
 console.log(name, born);
-// prints Ada 1815
+// Ada 1815 प्रिंट करता है
 ```
 इसे इस तरह पढ़ें: "`n` लो, उसे `name` कहो"। कोलन कोई टाइप घोषित नहीं करता, और `n` खुद कभी वेरिएबल के रूप में नहीं बनता, केवल `name` बनता है। रीनेम किए हुए नाम को डिफ़ॉल्ट भी मिल सकता है, जो उसके बाद लिखा जाता है: `{ n: name = "unknown" }`।
 
@@ -99,7 +99,7 @@ console.log(name, born);
 ```javascript
 const { count = 10 } = { count: 0 };
 console.log(count);
-// prints 0
+// 0 प्रिंट करता है
 ```
 यहाँ `null` का व्यवहार `0` जैसा ही है, भले ही वह किसी API रिस्पॉन्स में अक्सर "कोई मान नहीं" का मतलब होता है। जब `null` को भी बदलना हो, तो पहले डिस्ट्रक्चर करें और उसके बाद `??` से फ़ॉलबैक लें।
 
@@ -110,7 +110,7 @@ console.log(count);
 const user = { name: "Ada", address: { city: "London" } };
 const { address: { city } } = user;
 console.log(city);
-// prints London
+// London प्रिंट करता है
 ```
 इस पंक्ति से क्या बनता है, इससे सावधान रहें: `address: { city }` का मतलब है "`address` के अंदर जाओ", "मुझे `address` दो" नहीं, इसलिए केवल `city` वेरिएबल बनता है। दोनों पाने के लिए कुंजी का दो बार ज़िक्र करें: `const { address, address: { city } } = user;`। ऐरे और ऑब्जेक्ट पैटर्न आपस में आराम से नेस्ट होते हैं, जैसे `{ tags: [first] }`।
 
@@ -121,7 +121,7 @@ console.log(city);
 const queue = ["a", "b", "c"];
 const [next, ...waiting] = queue;
 console.log(next, waiting);
-// prints a [ 'b', 'c' ]
+// a [ 'b', 'c' ] प्रिंट करता है
 ```
 रेस्ट एलिमेंट पैटर्न में आख़िर में ही आना चाहिए और उसे डिफ़ॉल्ट नहीं मिल सकता: जब कुछ न बचे तो वह सीधा एक खाली ऐरे होता है।
 
@@ -132,7 +132,7 @@ console.log(next, waiting);
 const user = { id: 1, name: "Ada", city: "London" };
 const { id, ...profile } = user;
 console.log(profile);
-// prints { name: 'Ada', city: 'London' }
+// { name: 'Ada', city: 'London' } प्रिंट करता है
 ```
 किसी ऑब्जेक्ट की एक कुंजी के बिना कॉपी बनाने का यह सबसे छोटा तरीका है: मूल ऑब्जेक्ट को कभी छुआ नहीं जाता, और रेस्ट ऑब्जेक्ट एक नया होता है जो बाकी मान रखता है।
 
@@ -144,7 +144,7 @@ function area({ width, height }) {
     return width * height;
 }
 console.log(area({ width: 4, height: 3 }));
-// prints 12
+// 12 प्रिंट करता है
 ```
 बॉडी के अंदर कोई ऑब्जेक्ट वेरिएबल बिल्कुल नहीं होता, केवल `width` और `height`। कॉल करने वाला एक ऑब्जेक्ट पास करता है, लेकिन सिग्नेचर साफ़ बता देता है कि फंक्शन कौन-सी कुंजियाँ पढ़ता है, और कुंजियाँ किसी भी क्रम में आ सकती हैं।
 
@@ -156,7 +156,7 @@ function createUser({ name = "guest", admin = false } = {}) {
     return `${name}/${admin}`;
 }
 console.log(createUser());
-// prints guest/false
+// guest/false प्रिंट करता है
 ```
 इस पंक्ति को बाहर से अंदर पढ़ें: `= {}` एक खाली ऑब्जेक्ट दे देता है जब आर्ग्युमेंट मौजूद न हो, और तब हर अंदरूनी डिफ़ॉल्ट अपनी कुंजी भर देता है।
 
@@ -168,8 +168,8 @@ const ages = { ada: 36, bob: 41 };
 for (const [name, age] of Object.entries(ages)) {
     console.log(`${name} is ${age}`);
 }
-// prints ada is 36
-// prints bob is 41
+// ada is 36 प्रिंट करता है
+// bob is 41 प्रिंट करता है
 ```
 किसी ऑब्जेक्ट पर चलने का यह सबसे पढ़ने-योग्य तरीका है: न कोई इंडेक्स, न कोई लुकअप, बस वही दो नाम जिनकी आपको परवाह है। `Object.keys` और `Object.values` हर एक केवल एक पक्ष देते हैं, `Object.entries` दोनों देता है।
 
@@ -181,6 +181,6 @@ function head({ title, tags: [main, ...extra] }) {
     return `${title} [${main}] +${extra.length}`;
 }
 console.log(head({ title: "Post", tags: ["js", "web", "dev"] }));
-// prints Post [js] +2
+// Post [js] +2 प्रिंट करता है
 ```
 इसे पढ़ने-योग्य रखें: जो पैटर्न अब दो-चार पंक्तियों में नहीं समाता, वह आम तौर पर इसका संकेत है कि फंक्शन बहुत ज़्यादा माँग रहा है।

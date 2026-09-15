@@ -49,7 +49,7 @@ asyncio.run(countdown())
 async def hello():
     print("hi")
 
-hello()  # nothing is printed
+hello()  # कुछ भी प्रिंट नहीं होता
 ```
 Python इस पर चेतावनी भी देता है: `RuntimeWarning: coroutine 'hello' was never awaited`। भूला हुआ `await` सबसे आम एसिंक्रोनस बग है: कोड कॉल किया हुआ दिखता है लेकिन कभी निष्पादित नहीं होता, और जो वेरिएबल उसका परिणाम रखना चाहिए, वह उसकी जगह एक कोरूटीन ऑब्जेक्ट रखता है।
 
@@ -60,7 +60,7 @@ Python इस पर चेतावनी भी देता है: `RuntimeW
 import asyncio
 
 async def fetch_price(item):
-    await asyncio.sleep(0.01)  # simulates a slow lookup
+    await asyncio.sleep(0.01)  # एक धीमी lookup का अनुकरण करता है
     return 10
 
 async def total(item, quantity):
@@ -170,7 +170,7 @@ async def safe_load(path):
     except FileNotFoundError:
         return ""
 
-print(asyncio.run(safe_load("")))  # prints an empty line
+print(asyncio.run(safe_load("")))  # एक खाली लाइन प्रिंट करता है
 ```
 कोई अपवाद जिसे कोई नहीं पकड़ता, वह हर `await` से होता हुआ `asyncio.run` तक फैलता है, जो उसे सिंक्रोनस कोड में दोबारा उठा देता है, बिल्कुल साधारण कॉल स्टैक की तरह।
 

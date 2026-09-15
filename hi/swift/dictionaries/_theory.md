@@ -11,7 +11,7 @@ key `key1` value `1` की ओर इंगित करती है, `key2` `
 
 key द्वारा dictionary values तक पहुँचना बिल्कुल वैसा ही है जैसे index द्वारा array values तक पहुँचना:
 ```swift
-// gets the age value from the user dictionary
+// user डिक्शनरी से age का मान प्राप्त करता है
 user['age']
 ```
 
@@ -34,7 +34,7 @@ dictName[newKeyName] = newValue
 चूँकि dictionaries mutable हैं, उन्हें कई तरीकों से बदला जा सकता है। `removeValue(forKey:)` method से dictionary से items हटाए जा सकते हैं:
 ```swift
 if let removedValue = dictName.removeValue(forKey: "keyName") {
-    print("The removed value is \(removedValue).") // prints the removed value, if the key exists
+    print("The removed value is \(removedValue).") // यदि key मौजूद है, तो हटाया गया value प्रिंट करता है
 }
 ```
 यह dictionary से key `keyName` और उससे जुड़ी value को हटा देगा।
@@ -73,5 +73,5 @@ dictionary में values __जोड़ने__ या __बदलने__ �
 हम key को `nil` value assign करके भी एक element हटा सकते हैं
 ```swift
 dictName[keyName] = nil
-// keyName has been removed from the dictionary dictName
+// keyName को dictName डिक्शनरी से हटा दिया गया है
 ```

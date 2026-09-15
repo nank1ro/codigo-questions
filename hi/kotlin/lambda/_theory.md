@@ -26,7 +26,7 @@ val greet: (String) -> Unit = { name -> println("Hi, $name") }
 ```kotlin
 val describe: (Int) -> String = { n ->
     val half = n / 2
-    "half of $n is $half" // returned
+    "half of $n is $half" // लौटाया गया
 }
 println(describe(10)) // half of 10 is 5
 ```
@@ -40,7 +40,7 @@ val parity: (Int) -> String = { n -> if (n % 2 == 0) "even" else "odd" }
 जब एक लैम्ब्डा में ठीक **एक** पैरामीटर होता है, तो आप उसे घोषित करना छोड़ सकते हैं: Kotlin उसे आपके लिए `it` नाम दे देता है।
 ```kotlin
 // val double: (Int) -> Int = { n -> n * 2 }
-val double: (Int) -> Int = { it * 2 } // same thing
+val double: (Int) -> Int = { it * 2 } // वही बात
 ```
 `it` केवल तब मौजूद होता है जब पैरामीटर स्पष्ट रूप से घोषित नहीं किया गया हो, और केवल एक-पैरामीटर वाले लैम्ब्डा के लिए।
 यह छोटे लैम्ब्डा को संक्षिप्त रखता है, लेकिन लंबी बॉडी के लिए एक असली नाम ज़्यादा स्पष्ट होता है।
@@ -149,7 +149,7 @@ fun repeatTwice(text: String, transform: (String) -> String): String {
     return transform(transform(text))
 }
 println(repeatTwice("a", { it + "!" })) // a!!
-println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
+println(repeatTwice("a") { it + "!" })  // वही, trailing lambda के साथ
 ```
 फ़ंक्शन पैरामीटर को **अंत में** रखना ही वह चीज़ है जो कॉल करने वालों के लिए trailing lambda सिंटैक्स उपलब्ध कराती है।
 
@@ -160,7 +160,7 @@ println(repeatTwice("a") { it + "!" })  // same, with a trailing lambda
 fun isEven(n: Int) = n % 2 == 0
 val numbers = listOf(1, 2, 3, 4)
 println(numbers.filter { isEven(it) }) // [2, 4]
-println(numbers.filter(::isEven))      // [2, 4], same thing
+println(numbers.filter(::isEven))      // [2, 4], वही बात
 ```
 मेंबर फ़ंक्शन अपने टाइप के ज़रिए रेफ़र किए जाते हैं, जैसे `String::uppercase`:
 ```kotlin

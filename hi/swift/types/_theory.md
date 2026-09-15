@@ -39,7 +39,7 @@ print(type(of: "hi"))  // String
 ```
 जब आप अनुमानित टाइप से अलग कोई टाइप चाहते हैं, तो एक एनोटेशन जोड़ें। एक पूर्ण संख्या लिटरल को `Double` या `Float` कॉन्स्टेंट में संग्रहीत किया जा सकता है, और एक-अक्षर वाला लिटरल एक `Character` कॉन्स्टेंट में:
 ```swift
-let ratio: Double = 3       // 3.0, not an Int
+let ratio: Double = 3       // 3.0, Int नहीं
 let half: Float = 0.5
 let initial: Character = "S"
 print(type(of: ratio))      // Double
@@ -110,8 +110,8 @@ print(number + 1) // 43
 ```swift
 print(Int("42"))   // Optional(42)
 print(Int("-7"))   // Optional(-7)
-print(Int("3.5"))  // nil, not a whole number
-print(Int(" 42"))  // nil, spaces are not allowed
+print(Int("3.5"))  // nil, पूर्ण संख्या नहीं
+print(Int(" 42"))  // nil, स्पेस की अनुमति नहीं है
 print(Int("abc"))  // nil
 ```
 दशमलव टेक्स्ट के लिए `Double(text)` का उपयोग करें, जो उसी तरह एक `Double?` लौटाता है: `Double("3.5")` की मान `Optional(3.5)` है।
@@ -166,7 +166,7 @@ for c in "a1" {
 ```swift
 print(Int("42") != nil)     // true
 print(Double("4.2") != nil) // true
-print(Double("42") != nil)  // true, a whole number is also a valid Double
+print(Double("42") != nil)  // true, एक पूर्ण संख्या भी एक मान्य Double है
 ```
 ध्यान दें कि अंतिम लाइन: `Int` द्वारा स्वीकार किया गया हर टेक्स्ट `Double` द्वारा भी स्वीकार किया जाता है, इसलिए जब आप उन्हें अलग करना चाहते हैं तो पहले `Int` की जांच करें।
 
@@ -180,7 +180,7 @@ let items: [Any] = [1, "two", true]
 ```swift
 for item in items {
     if let number = item as? Int {
-        print(number + 1) // runs only for 1
+        print(number + 1) // केवल 1 के लिए चलता है
     }
 }
 ```

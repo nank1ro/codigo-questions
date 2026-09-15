@@ -54,7 +54,7 @@ print(len(letters))  # 3
 - `discard(value)` अगर वैल्यू मौजूद है तो उसे हटा देता है, वरना बिना किसी एरर के **कुछ नहीं करता**
 ```python
 letters.remove("a")
-letters.discard("z")  # "z" is not there, but no error
+letters.discard("z")  # "z" वहाँ नहीं है, लेकिन कोई एरर नहीं
 letters.remove("z")   # KeyError: 'z'
 ```
 
@@ -84,7 +84,7 @@ for color in {"red", "blue"}:
 जब आपको एक निश्चित क्रम चाहिए हो, तो सेट को `sorted()` में पास करें, जो इसके एलिमेंट्स की सॉर्ट की गई एक **लिस्ट** लौटाता है:
 ```python
 for color in sorted({"red", "blue"}):
-    print(color)  # blue, then red
+    print(color)  # पहले blue, फिर red
 ```
 
 ---
@@ -158,7 +158,7 @@ print(small.isdisjoint({8, 9}))  # True
 लिस्ट, dictionary या किसी अन्य सेट को जोड़ने की कोशिश करने पर `TypeError` आता है:
 ```python
 points = set()
-points.add((1, 2))  # ok, a tuple
+points.add((1, 2))  # ठीक है, एक tuple
 points.add([1, 2])  # TypeError: unhashable type: 'list'
 ```
 tuples के सेट्स यूनिक जोड़ों, जैसे कोऑर्डिनेट्स या (name, age) रिकॉर्ड्स को ट्रैक करने के लिए काफी उपयोगी होते हैं:

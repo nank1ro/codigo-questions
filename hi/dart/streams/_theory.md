@@ -103,7 +103,7 @@ Stream<int> sequence() async* {
   yield* ones();
   yield 2;
 }
-// sequence() emits 0, 1, 1, 2
+// sequence() 0, 1, 1, 2 emit करता है
 ```
 
 भीतरी स्ट्रीम समाप्त होते ही बाहरी स्ट्रीम अपने `yield` के साथ आगे बढ़ती है।

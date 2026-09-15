@@ -18,7 +18,7 @@ title: लीप वर्ष
 फ़ंक्शन कॉल का उदाहरण:
 ```c
 printf("%d\n", leap_year(2000));
-// prints true
+// true प्रिंट करता है
 ```
 
 # --before-seed--

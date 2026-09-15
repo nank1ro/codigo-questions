@@ -25,7 +25,7 @@ title: "ATM"
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(accountBalance(10, 20))
-// prints 9,5
+// 9,5 प्रिंट करता है
 ```
 
 # --before-seed--

@@ -7,7 +7,7 @@ var city: String = null // error: Null can not be a value of a non-null type Str
 एक `String?` में या तो `String` होता है या `null`:
 ```kotlin
 var city: String? = "Rome"
-city = null // allowed
+city = null // अनुमति है
 println(city) // null
 ```
 `String` और `String?` दो अलग टाइप हैं: एक `String` कभी अनुपस्थित नहीं होता, जबकि एक `String?` हो सकता है।
@@ -17,9 +17,9 @@ println(city) // null
 `String` और `String?` के बीच का अंतर रनटाइम पर नहीं, बल्कि **कंपाइलर** द्वारा जांचा जाता है।
 किसी non-null टाइप को `null` असाइन करना, या जहां non-null मान अपेक्षित हो वहां एक nullable मान पास करना, एक कंपाइल एरर है, इसलिए प्रोग्राम शुरू होती ही नहीं:
 ```kotlin
-val name: String = null        // does not compile
+val name: String = null        // कंपाइल नहीं होता
 val maybe: String? = "hi"
-val sure: String = maybe       // does not compile: String? is not a String
+val sure: String = maybe       // कंपाइल नहीं होता: String? एक String नहीं है
 ```
 इसी तरह Kotlin अन्य भाषाओं में आम "null pointer" क्रैश से बचता है: कोई मान केवल वहीं अनुपस्थित हो सकता है जहां आपने `?` के साथ स्पष्ट रूप से घोषित किया हो।
 
@@ -47,12 +47,12 @@ println(none?.length)   // null
 **Elvis ऑपरेटर** `?:` बिल्कुल यही करता है: जब बायां हिस्सा `null` न हो तो वही लौटाता है, अन्यथा दाईं ओर का मान:
 ```kotlin
 val name: String? = null
-val shown = name ?: "Guest" // shown is a String equal to "Guest"
+val shown = name ?: "Guest" // shown एक String है जो "Guest" के बराबर है
 ```
 चूंकि दायां हिस्सा केवल तब उपयोग किया जाता है जब बायां `null` हो, डिफ़ॉल्ट के non-null होने पर परिणाम भी non-null होता है।
 `?:`, `?.` के साथ अच्छी तरह मिलकर एक सेफ कॉल को वापस साधारण मान में बदल देता है:
 ```kotlin
-val len = name?.length ?: 0 // len is an Int, 0 when name is null
+val len = name?.length ?: 0 // len एक Int है, name null होने पर 0
 ```
 
 ---
@@ -62,7 +62,7 @@ val len = name?.length ?: 0 // len is an Int, 0 when name is null
 val text: String? = "  hi  "
 println(text?.trim()?.uppercase())   // HI
 val none: String? = null
-println(none?.trim()?.uppercase())   // null, trim() and uppercase() never run
+println(none?.trim()?.uppercase())   // null, trim() और uppercase() कभी नहीं चलते
 ```
 `?:` पर समाप्त होने वाला चेन एक ही पंक्ति में non-null परिणाम देता है:
 ```kotlin
@@ -103,7 +103,7 @@ println(none!!.length) // NullPointerException
 ```kotlin
 fun greet(name: String?): String {
     if (name != null) {
-        return "Hello, " + name.uppercase() // name is a String here
+        return "Hello, " + name.uppercase() // name यहाँ एक String है
     }
     return "Hello, stranger"
 }
@@ -112,7 +112,7 @@ fun greet(name: String?): String {
 ```kotlin
 fun greet(name: String?): String {
     if (name == null) return "Hello, stranger"
-    return "Hello, " + name.uppercase() // name is a String from here on
+    return "Hello, " + name.uppercase() // name अब से एक String है
 }
 ```
 स्मार्ट कास्ट `val` वेरिएबल और फंक्शन पैरामीटर पर काम करते हैं, जिनका मान जांच और उपयोग के बीच बदल नहीं सकता।
@@ -123,9 +123,9 @@ fun greet(name: String?): String {
 एक सेफ कॉल के साथ मिलाकर, `?.let` ब्लॉक को **केवल** तब चलाता है जब मान `null` न हो, और ब्लॉक के अंदर `it` non-null होता है:
 ```kotlin
 val email: String? = "ada@example.com"
-email?.let { println("Sending to $it") } // prints Sending to ada@example.com
+email?.let { println("Sending to $it") } // Sending to ada@example.com प्रिंट करता है
 val missing: String? = null
-missing?.let { println("Sending to $it") } // nothing happens
+missing?.let { println("Sending to $it") } // कुछ नहीं होता
 ```
 जब आपको मान केवल ब्लॉक के अंदर चाहिए हो, तो यह `if (x != null) { ... }` का संक्षिप्त विकल्प है।
 
@@ -213,7 +213,7 @@ println(none.orDash()) // -
 ```kotlin
 fun firstUpper(text: String?): Char? {
     val first = text?.firstOrNull() ?: return null
-    return first.uppercaseChar() // first is a Char here
+    return first.uppercaseChar() // first यहाँ एक Char है
 }
 ```
 आपके द्वारा देखे गए हर टूल अच्छी तरह मिलते हैं: nullable पैरामीटर और रिटर्न टाइप बताते हैं कि मान *कहां* अनुपस्थित हो सकता है, और `?.`, `?:`, `let`, स्मार्ट कास्ट तथा `toIntOrNull` उसे कभी क्रैश हुए बिना संभालते हैं।

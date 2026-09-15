@@ -16,7 +16,7 @@ title: वर्गों के योग और योग के वर्ग 
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(sumSquareDifference(10))
-// prints 2640
+// 2640 प्रिंट करता है
 ```
 
 # --before-seed--

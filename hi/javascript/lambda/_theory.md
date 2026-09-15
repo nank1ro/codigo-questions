@@ -4,7 +4,7 @@ const add = function (a, b) {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 प्रिंट करता है
 ```
 एक **एरो फंक्शन** वही बात लिखने का एक छोटा तरीका है: `function` कीवर्ड हटा दें और पैरामीटर लिस्ट और बॉडी के बीच एक "fat arrow" `=>` लगा दें:
 ```javascript
@@ -12,7 +12,7 @@ const add = (a, b) => {
   return a + b;
 };
 console.log(add(2, 3));
-// prints 5
+// 5 प्रिंट करता है
 ```
 एरो फंक्शन आमतौर पर एक `const` में स्टोर किए जाते हैं, ताकि नाम को गलती से दोबारा असाइन न किया जा सके, और इन्हें बिल्कुल किसी और फंक्शन की तरह कॉल किया जाता है।
 
@@ -23,13 +23,13 @@ console.log(add(2, 3));
 ```javascript
 const add = (a, b) => a + b;
 console.log(add(2, 3));
-// prints 5
+// 5 प्रिंट करता है
 ```
 जब **ठीक एक पैरामीटर** हो, तो आप उसके चारों ओर के कोष्ठक भी हटा सकते हैं:
 ```javascript
 const double = n => n * 2;
 console.log(double(4));
-// prints 8
+// 8 प्रिंट करता है
 ```
 शून्य पैरामीटर्स के साथ या दो या अधिक के साथ, कोष्ठक आवश्यक होते हैं: `() => 42` और `(a, b) => a + b`।
 
@@ -39,14 +39,14 @@ console.log(double(4));
 ```javascript
 const make = (name) => { name: name };
 console.log(make("Ana"));
-// prints undefined
+// undefined प्रिंट करता है
 ```
 यहाँ `{ name: name }` एक ब्लॉक है जिसमें लेबल `name:` है जिसके बाद एक्सप्रेशन `name` है। कुछ भी लौटाया नहीं जाता, इसलिए कॉल `undefined` देता है।
 एक लाइन में ऑब्जेक्ट लिटरल लौटाने के लिए, उसे **कोष्ठकों** में लपेटें ताकि JavaScript उसे एक एक्सप्रेशन माने:
 ```javascript
 const make = (name) => ({ name: name });
 console.log(make("Ana"));
-// prints { name: 'Ana' }
+// { name: 'Ana' } प्रिंट करता है
 ```
 
 ---
@@ -55,13 +55,13 @@ console.log(make("Ana"));
 ```javascript
 const user = (name, age) => ({ name: name, age: age });
 console.log(user("Ana", 30).age);
-// prints 30
+// 30 प्रिंट करता है
 ```
 बिना पैरामीटर्स वाला एरो फंक्शन खाली कोष्ठकों के जोड़े `()` से शुरू होता है:
 ```javascript
 const empty = () => ({});
 console.log(empty());
-// prints {}
+// {} प्रिंट करता है
 ```
 
 ---
@@ -71,9 +71,9 @@ console.log(empty());
 ```javascript
 const numbers = [1, 2, 3, 4];
 console.log(numbers.map((n) => n * 10));
-// prints [ 10, 20, 30, 40 ]
+// [ 10, 20, 30, 40 ] प्रिंट करता है
 console.log(numbers.filter((n) => n > 2));
-// prints [ 3, 4 ]
+// [ 3, 4 ] प्रिंट करता है
 ```
 दोनों एक नया ऐरे लौटाते हैं और मूल ऐरे को अछूता छोड़ देते हैं, इसलिए आप उन्हें चेन कर सकते हैं: `numbers.filter(...).map(...)`।
 
@@ -85,10 +85,10 @@ console.log(numbers.filter((n) => n > 2));
 ```javascript
 const numbers = [1, 2, 3];
 numbers.forEach((n) => console.log(n));
-// prints 1, 2 and 3 on three lines
+// तीन लाइनों में 1, 2 और 3 प्रिंट करता है
 const total = numbers.reduce((sum, n) => sum + n, 0);
 console.log(total);
-// prints 6
+// 6 प्रिंट करता है
 ```
 
 ---
@@ -99,9 +99,9 @@ console.log(total);
 const scores = [50, 90, 70];
 scores.sort((a, b) => a - b);
 console.log(scores);
-// prints [ 50, 70, 90 ]
+// [ 50, 70, 90 ] प्रिंट करता है
 console.log(scores.find((s) => s > 60));
-// prints 70
+// 70 प्रिंट करता है
 ```
 
 ---
@@ -111,9 +111,9 @@ console.log(scores.find((s) => s > 60));
 ```javascript
 const greet = (name = "World") => `Hello, ${name}!`;
 console.log(greet());
-// prints Hello, World!
+// Hello, World! प्रिंट करता है
 console.log(greet("Ana"));
-// prints Hello, Ana!
+// Hello, Ana! प्रिंट करता है
 ```
 ध्यान दें कि डिफ़ॉल्ट मान वाले पैरामीटर को हमेशा कोष्ठकों की आवश्यकता होती है, यहाँ तक कि जब वह अकेला हो: `name = "World" => ...` एक सिंटैक्स एरर है।
 
@@ -123,7 +123,7 @@ console.log(greet("Ana"));
 ```javascript
 const count = (...items) => items.length;
 console.log(count("a", "b", "c"));
-// prints 3
+// 3 प्रिंट करता है
 ```
 सामान्य फंक्शन्स में एक छिपा हुआ ऐरे-जैसा `arguments` ऑब्जेक्ट भी होता है जिसमें उन्हें मिले हर आर्ग्युमेंट होते हैं। एरो फंक्शन्स में **ऐसा कुछ नहीं होता**: एरो के अंदर, `arguments` चारों ओर के फंक्शन के `arguments` को संदर्भित करता है या बिल्कुल मौजूद नहीं होता। जब भी आपको एरो फंक्शन में "सभी आर्ग्युमेंट्स" चाहिए, एक रेस्ट पैरामीटर का उपयोग करें।
 
@@ -141,9 +141,9 @@ const makeCounter = () => {
 };
 const next = makeCounter();
 console.log(next());
-// prints 1
+// 1 प्रिंट करता है
 console.log(next());
-// prints 2
+// 2 प्रिंट करता है
 ```
 कोई और `count` को पढ़ या रीसेट नहीं सकता: वह केवल लौटाए गए फंक्शन के अंदर रहता है। `makeCounter()` का दूसरा कॉल अपने `count` के साथ एक स्वतंत्र काउंटर बनाता है।
 
@@ -154,8 +154,8 @@ console.log(next());
 const makeAdder = (amount) => (n) => n + amount;
 const addTen = makeAdder(10);
 console.log(addTen(5));
-// prints 15
+// 15 प्रिंट करता है
 console.log(makeAdder(1)(5));
-// prints 6
+// 6 प्रिंट करता है
 ```
 इसे बाएँ से दाएँ पढ़ें: `makeAdder` `amount` लेता है और `(n) => n + amount` लौटाता है, एक एरो फंक्शन जो क्लोजर के ज़रिए `amount` को कैप्चर करता है। `makeAdder(1)(5)` लौटाए गए फंक्शन को तुरंत कॉल करता है।

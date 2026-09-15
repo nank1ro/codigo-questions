@@ -17,7 +17,7 @@ title: जोड़
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(addition(1, 2))
-// prints 3
+// 3 प्रिंट करता है
 ```
 
 # --before-seed--

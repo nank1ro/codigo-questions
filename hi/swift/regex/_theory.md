@@ -40,9 +40,9 @@ print("hello".contains(#/\w+\s\w+/#))       // false
 - `$` का अर्थ है "टेक्स्ट का अंत"
 
 ```swift
-print("swift".contains(#/^sw/#))  // true, the text starts with sw
-print("myswift".contains(#/^sw/#)) // false, sw is not at the start
-print("swift".contains(#/ft$/#))  // true, the text ends with ft
+print("swift".contains(#/^sw/#))  // true, टेक्स्ट sw से शुरू होता है
+print("myswift".contains(#/^sw/#)) // false, sw शुरुआत में नहीं है
+print("swift".contains(#/ft$/#))  // true, टेक्स्ट ft के साथ समाप्त होता है
 ```
 एंकर किसी वर्ण से नहीं, एक स्थिति से मैच करते हैं, इसलिए वे मैच की सामग्री में कुछ भी जोड़ते नहीं।
 

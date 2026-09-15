@@ -11,7 +11,7 @@ async function fetchNumber() {
 async function main() {
   const n = await fetchNumber();
   console.log(n);
-  // prints 42
+  // 42 प्रिंट करता है
 }
 
 main();
@@ -30,9 +30,9 @@ async function shoutLater(text) {
 }
 
 console.log(shout("hi"));
-// prints HI
+// HI प्रिंट करता है
 console.log(shoutLater("hi"));
-// prints Promise { 'HI' }
+// Promise { 'HI' } प्रिंट करता है
 ```
 दोनों फ़ंक्शनों में वही कोड है; केवल परिणाम पढ़ने का तरीका अलग है। `"HI"` वापस पाने के लिए `shoutLater("hi")` को किसी दूसरे `async` फ़ंक्शन के अंदर await किया जाना चाहिए।
 
@@ -52,7 +52,7 @@ const soon = new Promise((resolve) => {
 ```javascript
 async function main() {
   console.log(await soon);
-  // prints done, about one second later
+  // लगभग एक सेकंड बाद done प्रिंट करता है
 }
 
 main();
@@ -76,7 +76,7 @@ main();
 ```javascript
 Promise.resolve(21).then((n) => {
   console.log(n);
-  // prints 21
+  // 21 प्रिंट करता है
 });
 ```
 **`Promise.resolve(value)`** ऐसा प्रॉमिस बनाता है जो पहले से `value` के साथ fulfilled है, जो तब काम आता है जब मान आपके पास मौजूद हो लेकिन प्रॉमिस लौटाना ज़रूरी हो।
@@ -86,7 +86,7 @@ Promise.resolve(21).then((n) => {
 Promise.resolve(21)
   .then((n) => n * 2)
   .then((n) => console.log(n));
-// prints 42
+// 42 प्रिंट करता है
 ```
 
 ---
@@ -101,7 +101,7 @@ async function main() {
 }
 
 main();
-// prints start, then data, then done
+// start प्रिंट करता है, फिर data, फिर done
 ```
 आख़िरी पंक्ति पर ध्यान दें: किसी `async` फ़ंक्शन को अब भी **कॉल** करना पड़ता है। `main` को कोष्ठक के बिना लिखना काम को परिभाषित तो करता है पर कभी शुरू नहीं करता, और कुछ भी प्रिंट नहीं होता।
 
@@ -125,7 +125,7 @@ function readAge(age) {
 ```javascript
 readAge(-1).catch((error) => {
   console.log(error.message);
-  // prints negative age
+  // negative age प्रिंट करता है
 });
 ```
 `resolve` और `reject` दोनों को कॉल करने, या दो बार कॉल करने से कुछ नहीं बदलता: केवल पहली कॉल गिनती है।
@@ -141,7 +141,7 @@ Promise.reject(new Error("no network"))
   .catch((error) => `error: ${error.message}`)
   .finally(() => console.log("cleanup"))
   .then((message) => console.log(message));
-// prints cleanup, then error: no network
+// cleanup प्रिंट करता है, फिर error: no network
 ```
 
 ---
@@ -164,7 +164,7 @@ async function main() {
 async function risky() {
   throw new Error("boom");
 }
-// risky() returns a promise rejected with Error("boom")
+// risky() एक ऐसा प्रॉमिस रिटर्न करता है जो Error("boom") के साथ रिजेक्ट होता है
 ```
 किसी भी `try` ब्लॉक की तरह, विफल `await` के बाद की पंक्तियाँ छोड़ दी जाती हैं, `catch` ब्लॉक चलता है, और `finally` ब्लॉक दोनों ही स्थितियों में चलता है।
 
@@ -199,7 +199,7 @@ const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
-// prints true
+// true प्रिंट करता है
 ```
 जो ऐरे वह वापस देता है उसमें हमेशा ठीक उतनी ही प्रविष्टियाँ होती हैं जितनी उसे मिली थीं, उन्हीं स्थितियों पर, इसलिए उसे किसी और ऐरे की तरह लूप किया जा सकता है।
 
@@ -207,11 +207,11 @@ console.log(values.length === items.length);
 
 **क्रमिक** और **समानांतर** इंतज़ार का फ़र्क़ इस बात से तय होता है कि आप `await` *कहाँ* रखते हैं:
 ```javascript
-// sequential: about 300 + 300 = 600 ms
+// क्रमवार: लगभग 300 + 300 = 600 ms
 const a = await load("a");
 const b = await load("b");
 
-// parallel: about 300 ms
+// समानांतर: लगभग 300 ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
 पहले रूप में दूसरा डाउनलोड तभी शुरू होता है जब पहला पूरा हो चुका हो, क्योंकि `await` फ़ंक्शन को उसी पंक्ति पर रोक देता है। दूसरे में, दोनों कॉल किसी भी await से पहले कर दी जाती हैं, इसलिए `Promise.all` के इंतज़ार के दौरान दोनों डाउनलोड पहले से चल रहे होते हैं।
@@ -231,9 +231,9 @@ const results = await Promise.allSettled([
   Promise.reject(new Error("nope")),
 ]);
 console.log(results[0].status);
-// prints fulfilled
+// fulfilled प्रिंट करता है
 console.log(results[1].reason.message);
-// prints nope
+// nope प्रिंट करता है
 ```
 `value` केवल तब पढ़ें जब `status` `"fulfilled"` हो, और `reason` केवल तब जब वह `"rejected"` हो: दूसरी प्रॉपर्टी बस मौजूद नहीं होती।
 

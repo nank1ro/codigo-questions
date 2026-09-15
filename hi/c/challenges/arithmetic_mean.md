@@ -17,7 +17,7 @@ title: अंकगणितीय माध्य
 ```c
 double numbers[] = {1, 2, 3};
 printf("%.1f\n", mean(numbers, 3));
-// prints 2.0
+// 2.0 प्रिंट करता है
 ```
 
 # --before-seed--

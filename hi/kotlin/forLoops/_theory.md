@@ -22,7 +22,7 @@ for (item in collection) {
 for (i in 1..3) {
     println(i)
 }
-// prints 1, 2, 3
+// 1, 2, 3 प्रिंट करता है
 ```
 
 आउटपुट दिखाता है कि इंडेक्स `i` _1_ से _3_ तक की रेंज में प्रत्येक मान प्राप्त करता है।
@@ -38,7 +38,7 @@ var secondRange = 1 until 3     // [2]
 println(firstRange)
 println(secondRange)
 
-/* prints
+/* प्रिंट करता है
 1..3
 1..2
 */
@@ -63,7 +63,7 @@ for (i in 3..1) println(i)
 
 ```kotlin
 for (i in 3 downTo 1) println(i)
-// prints 3, 2, 1
+// 3, 2, 1 प्रिंट करता है
 ```
 
 `downTo` एक घटती हुई रेंज बनाता है।
@@ -78,7 +78,7 @@ for (i in 3 downTo 1) println(i)
 for (i in 1..10 step 2) {
     println(i)
 }
-// prints 1, 3, 5, 7, 9
+// 1, 3, 5, 7, 9 प्रिंट करता है
 ```
 
 जैसा कि आप देख सकते हैं, कोड-ब्लॉक _1_ के बजाय _2_ के step के साथ चलता है, जो हमारे आउटपुट को पूरी तरह से बदल देता है।
@@ -88,7 +88,7 @@ for (i in 1..10 step 2) {
 आप _characters_ की एक रेंज भी बना सकते हैं।
 ```kotlin
 for (char in 'a'..'z') print(char)
-// prints abcdefghijklmnopqrstuvwxyz
+// abcdefghijklmnopqrstuvwxyz प्रिंट करता है
 ```
 
 ---
@@ -96,7 +96,7 @@ for (char in 'a'..'z') print(char)
 आप एक __String__ पर पुनरावृत्ति कर सकते हैं।
 ```kotlin
 for (char in 'abc') print(char + 1)
-// prints bdc
+// bdc प्रिंट करता है
 ```
 
 ऊपर के उदाहरण में हमने प्रत्येक character + 1 प्रिंट किया है, इसलिए `'a'` `'b'` बन जाता है, `'b'` `'c'` बन जाता है और इसी तरह आगे।
@@ -113,7 +113,7 @@ for (char in 'abc') print(char + 1)
 repeat(3) {
     println("repeat")
 }
-// prints repeat 3 times
+// repeat को 3 बार प्रिंट करता है
 ```
 
 आप index को भी एक्सेस कर सकते हैं
@@ -121,19 +121,19 @@ repeat(3) {
 repeat(3) { index ->
     println(index)
 }
-// prints 0, 1, 2
+// 0, 1, 2 प्रिंट करता है
 ```
 
 ---
 
 Kotlin में हम `for-in` का उपयोग iterable collections के लिए भी कर सकते हैं, जो प्रत्येक तत्व पर दिए गए closure को कॉल करता है:
 ```kotlin
-// this is a list, we'll see about that soon
+// यह एक list है, उसके बारे में जल्द ही जानेंगे
 val numbers = listOf(2, 4, 6, 8, 10)
 for (num in numbers) {
     println(num)
 }
-// prints (2, 4, 6, 8, 10)
+// (2, 4, 6, 8, 10) प्रिंट करता है
 ```
 
 ---
@@ -142,7 +142,7 @@ Kotlin में हमारे पास `forEach` लूप भी है।
 यह अनुक्रम में प्रत्येक तत्व पर दिए गए closure को `for-in` लूप के समान क्रम में कॉल करता है:
 
 ```kotlin
-// this is a list, we'll see about that soon
+// यह एक list है, उसके बारे में जल्द ही जानेंगे
 val numbers = listOf(1, 3, 5, 7, 9)
 numbers.forEach {
     println(it)

@@ -8,7 +8,7 @@ void say_hello() {
 
 int main() {
     say_hello();
-    // prints "Hello!"
+    // "Hello!" प्रिंट करता है
     return 0;
 }
 ```
@@ -36,7 +36,7 @@ void say_hello(char *name, bool new_user) {
 }
 
 int main() {
-    // prints "Hello Tom"
+    // "Hello Tom" प्रिंट करता है
     say_hello("Tom", true);
     return 0;
 };

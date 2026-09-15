@@ -5,7 +5,7 @@ let ages = new Map();
 ages.set("Ann", 30);
 ages.set("Bob", 25);
 console.log(ages.get("Ann"));
-// prints 30
+// 30 प्रिंट करता है
 ```
 पहले से मौजूद की के साथ `set()` को कॉल करने पर उसकी वैल्यू बदल जाती है।
 
@@ -21,10 +21,10 @@ let stock = new Map();
 stock.set("apple", 3);
 stock.set("pear", 5);
 console.log(stock.has("apple"));
-// prints true
+// true प्रिंट करता है
 stock.delete("pear");
 console.log(stock.size);
-// prints 1
+// 1 प्रिंट करता है
 ```
 ध्यान दें कि `size` एक प्रॉपर्टी है, मेथड नहीं, इसलिए इसमें कोष्ठक नहीं होते।
 
@@ -35,7 +35,7 @@ console.log(stock.size);
 let ages = new Map();
 ages.set("Ann", 30);
 console.log(ages.get("Zed"));
-// prints undefined
+// undefined प्रिंट करता है
 ```
 इसीलिए `has()` मौजूद है: यह किसी अनुपस्थित की और ऐसी की के बीच अंतर बताता है जिसकी वैल्यू संयोगवश `undefined` है।
 `set()` मैप को ही लौटाता है, इसलिए कॉल्स को चेन किया जा सकता है:
@@ -52,11 +52,11 @@ let lookup = new Map();
 lookup.set(1, "number one");
 lookup.set("1", "string one");
 console.log(lookup.size);
-// prints 2
+// 2 प्रिंट करता है
 let alice = { name: "Alice" };
 lookup.set(alice, "an object key");
 console.log(lookup.get(alice));
-// prints an object key
+// an object key प्रिंट करता है
 ```
 ऑब्जेक्ट कीज़ की तुलना पहचान (identity) से होती है: केवल वही ऑब्जेक्ट वापस वैल्यू पा सकता है।
 
@@ -71,8 +71,8 @@ stock.set("pear", 5);
 for (const [name, qty] of stock.entries()) {
   console.log(`${name}: ${qty}`);
 }
-// prints apple: 3
-// prints pear: 5
+// apple: 3 प्रिंट करता है
+// pear: 5 प्रिंट करता है
 ```
 मैप पर सीधे लूप करना, `for (const [name, qty] of stock)`, बिल्कुल वही काम करता है।
 
@@ -86,13 +86,13 @@ prices.set("cake", 4);
 for (const name of prices.keys()) {
   console.log(name);
 }
-// prints tea
-// prints cake
+// tea प्रिंट करता है
+// cake प्रिंट करता है
 for (const price of prices.values()) {
   console.log(price);
 }
-// prints 2
-// prints 4
+// 2 प्रिंट करता है
+// 4 प्रिंट करता है
 ```
 
 ---
@@ -102,12 +102,12 @@ for (const price of prices.values()) {
 let pairs = [["red", "#f00"], ["blue", "#00f"]];
 let colors = new Map(pairs);
 console.log(colors.size);
-// prints 2
+// 2 प्रिंट करता है
 ```
 चूँकि `Object.entries(obj)` ठीक ऐसा ही जोड़ों का ऐरे लौटाता है, यह किसी ऑब्जेक्ट को मैप में बदलने का सबसे तेज़ तरीका है:
 ```javascript
 let user = { name: "Ann", age: 30 };
 let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
-// prints 30
+// 30 प्रिंट करता है
 ```

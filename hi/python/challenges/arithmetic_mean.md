@@ -16,7 +16,7 @@ difficulty: 1
 फ़ंक्शन कॉल का उदाहरण:
 ```python
 print(mean([1, 2, 3]))
-# prints 2
+# 2 प्रिंट करता है
 ```
 
 # --seed--

@@ -16,7 +16,7 @@ title: अभाज्य संख्याओं का योग
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(primeSummation(10))
-// prints 17
+// 17 प्रिंट करता है
 ```
 
 # --before-seed--

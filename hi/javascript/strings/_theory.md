@@ -3,7 +3,7 @@
 ```javascript
 let greeting = "hello";
 console.log(greeting.length);
-// prints 5
+// 5 प्रिंट करता है
 ```
 स्पेस और विराम चिह्न भी वर्णों के रूप में गिने जाते हैं।
 
@@ -14,14 +14,14 @@ console.log(greeting.length);
 ```javascript
 let word = "hello";
 console.log(word[0]);
-// prints h
+// h प्रिंट करता है
 console.log(word.charAt(1));
-// prints e
+// e प्रिंट करता है
 ```
 आखिरी वर्ण इंडेक्स `length - 1` पर होता है:
 ```javascript
 console.log(word[word.length - 1]);
-// prints o
+// o प्रिंट करता है
 ```
 
 ---
@@ -30,9 +30,9 @@ console.log(word[word.length - 1]);
 ```javascript
 let word = "Hello";
 console.log(word.toUpperCase());
-// prints HELLO
+// HELLO प्रिंट करता है
 console.log(word.toLowerCase());
-// prints hello
+// hello प्रिंट करता है
 ```
 दोनों मेथड कोई आर्गुमेंट नहीं लेते, इसलिए कोष्ठक लगाना न भूलें।
 
@@ -46,11 +46,11 @@ console.log(word.toLowerCase());
 ```javascript
 let file = "photo.png";
 console.log(file.includes("."));
-// prints true
+// true प्रिंट करता है
 console.log(file.startsWith("ph"));
-// prints true
+// true प्रिंट करता है
 console.log(file.endsWith(".jpg"));
-// prints false
+// false प्रिंट करता है
 ```
 तुलना केस-सेंसिटिव होती है: `"Hello".includes("h")` `false` है।
 
@@ -61,9 +61,9 @@ console.log(file.endsWith(".jpg"));
 ```javascript
 let word = "hello";
 console.log(word.indexOf("l"));
-// prints 2
+// 2 प्रिंट करता है
 console.log(word.indexOf("z"));
-// prints -1
+// -1 प्रिंट करता है
 ```
 
 ---
@@ -72,9 +72,9 @@ console.log(word.indexOf("z"));
 ```javascript
 let word = "JavaScript";
 console.log(word.slice(0, 4));
-// prints Java
+// Java प्रिंट करता है
 console.log(word.slice(4));
-// prints Script
+// Script प्रिंट करता है
 ```
 अगर आप `end` छोड़ देते हैं, तो स्लाइस स्ट्रिंग के अंत तक जाती है।
 एक ऋणात्मक इंडेक्स अंत से गिना जाता है: `word.slice(-3)` `"ipt"` है।
@@ -87,5 +87,5 @@ console.log(word.slice(4));
 let time = "10:45";
 let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
-// prints 45
+// 45 प्रिंट करता है
 ```

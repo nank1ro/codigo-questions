@@ -6,7 +6,7 @@ function sayHi() {
     console.log("Hello!");
 }
 sayHi();
-// prints "Hello!"
+// "Hello!" प्रिंट करता है
 ```
 
 ---
@@ -29,7 +29,7 @@ function sayHello(name, newUser) {
   }
   return greet;
 }
-// prints "Hello Smith! Welcome on board :)"
+// "Hello Smith! Welcome on board :)" प्रिंट करता है
 console.log(sayHello("Smith", true));
 ```
 
@@ -39,7 +39,7 @@ console.log(sayHello("Smith", true));
 अगर default मान परिभाषित है, तो आप function को कॉल करते समय उस parameter को छोड़ सकते हैं
 ```javascript
 function someFunction(parameterWithoutDefault, parameterWithDefault = 12) {
-    // do stuff here
+    // यहाँ काम करें
 }
 ```
 
@@ -54,7 +54,7 @@ rest parameter को पास किए गए मान function के body 
 
 Functions में हम एक _वैकल्पिक टिप्पणी_ जोड़ सकते हैं जो बताती है कि function क्या करता है:
 ```javascript
-// Prints 'Hello World' to the console.
+// 'Hello World' को कंसोल पर प्रिंट करता है।
 function helloWorld() {
     console.log("Hello, World!");
 }

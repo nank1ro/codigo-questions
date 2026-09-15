@@ -89,8 +89,8 @@ def check(n):
     print("checking", n)
     return n > 0
 
-check(-1) and check(5)  # prints only "checking -1"
-check(2) or check(-3)   # prints only "checking 2"
+check(-1) and check(5)  # केवल "checking -1" प्रिंट करता है
+check(2) or check(-3)   # केवल "checking 2" प्रिंट करता है
 ```
 
 ---
@@ -124,6 +124,6 @@ fruits = ["apple", "pear"]
 print("pear" in fruits)          # True
 print("kiwi" not in fruits)      # True
 print("ex" in "text")            # True
-print("age" in {"name": "Ada"})  # False, only keys are checked
+print("age" in {"name": "Ada"})  # False, सिर्फ़ keys जाँची जाती हैं
 ```
 दोनों एक बूलियन लौटाते हैं और अंग्रेज़ी की तरह पढ़े जाते हैं, जो उन्हें लूप लिखने के बजाय सदस्यता जाँचने का पसंदीदा तरीका बनाता है।

@@ -4,7 +4,7 @@
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # बाहर खेलना
 ```
 
 ---
@@ -13,7 +13,7 @@ if (nice_weather):
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # बाहर खेलना
 ```
 हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `True` हो।
 एक और महत्वपूर्ण बात **कोलन** `:` और **इंडेंटेशन** है, जो कोड ब्लॉक की शुरुआत को दर्शाते हैं।
@@ -30,9 +30,9 @@ Python में हम `else` स्टेटमेंट का उपयो�
 ```python
 nice_weather = True
 if (nice_weather):
-    # play outside
+    # बाहर खेलना
 else:
-    # stay home
+    # घर पर रहना
 ```
 
 ---

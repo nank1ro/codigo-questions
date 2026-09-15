@@ -4,7 +4,7 @@
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 
@@ -14,7 +14,7 @@ if (niceWeather) {
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 }
 ```
 हमने देखा कि `if` स्टेटमेंट कोड ब्लॉक को केवल तभी निष्पादित करता है जब शर्त `true` हो।
@@ -28,9 +28,9 @@ Kotlin में हम `else` स्टेटमेंट का उपयो�
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
-    // play outside
+    // बाहर खेलें
 } else {
-    // stay home
+    // घर पर रहें
 }
 ```
 

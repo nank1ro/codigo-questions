@@ -16,7 +16,7 @@ title: 3 या 5 के गुणज
 फ़ंक्शन कॉल का उदाहरण:
 ```dart
 print(multiplesOf3And5(10));
-// prints 23
+// 23 प्रिंट करता है
 ```
 
 # --seed--

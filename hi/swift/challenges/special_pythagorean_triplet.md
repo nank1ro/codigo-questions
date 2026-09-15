@@ -16,7 +16,7 @@ title: विशेष पाइथागोरियन त्रिक
 फ़ंक्शन कॉल का उदाहरण:
 ```swift
 print(specialPythagoreanTriplet(12))
-// prints 60
+// 60 प्रिंट करता है
 ```
 
 # --before-seed--

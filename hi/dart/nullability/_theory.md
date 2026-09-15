@@ -94,15 +94,15 @@ retries ??= 3;
 print(retries); // 3
 
 retries ??= 10;
-print(retries); // 3, it already had a value
+print(retries); // 3, इसमें पहले से एक value थी
 ```
 
 यह map की एंट्रियों पर भी काम करता है, जो नलेबल होती हैं क्योंकि कोई की मौजूद न भी हो सकती है:
 
 ```dart
 var stock = {'apple': 4};
-stock['pear'] ??= 1;  // added
-stock['apple'] ??= 9; // ignored
+stock['pear'] ??= 1;  // जोड़ा गया
+stock['apple'] ??= 9; // नज़रअंदाज़ किया गया
 print(stock); // {apple: 4, pear: 1}
 ```
 
@@ -142,7 +142,7 @@ print(text!.length); // Null check operator used on a null value
 ```dart
 int twice(int? n) {
   if (n != null) {
-    return n * 2; // here n is an int, no ! needed
+    return n * 2; // यहाँ n एक int है, ! की ज़रूरत नहीं
   }
   return 0;
 }
@@ -153,7 +153,7 @@ int twice(int? n) {
 ```dart
 int twice(int? n) {
   if (n == null) return 0;
-  return n * 2; // n is an int from here on
+  return n * 2; // यहाँ से आगे n एक int है
 }
 ```
 
@@ -207,7 +207,7 @@ class Connection {
 `late` को इनिशियलाइज़र के साथ भी जोड़ा जा सकता है, जो फिर **आलसी रूप से** चलता है, यानी वेरिएबल पहली बार पढ़े जाने पर:
 
 ```dart
-late String report = buildReport(); // buildReport() runs only when report is used
+late String report = buildReport(); // buildReport() तभी चलता है जब report इस्तेमाल हो
 ```
 
 ---
@@ -270,7 +270,7 @@ print(int.tryParse(''));    // null
 
 ```dart
 List<int>? numbers;
-numbers?..add(1)..add(2); // nothing happens, numbers is still null
+numbers?..add(1)..add(2); // कुछ नहीं होता, numbers अभी भी null है
 ```
 
 **नल-अवेयर स्प्रेड** `...?` किसी नलेबल कलेक्शन के एलिमेंट्स को लिटरल में डालता है, और कलेक्शन के `null` होने पर कुछ नहीं जोड़ता:

@@ -11,10 +11,10 @@ JavaScript में हर मान का एक **टाइप** होत�
 `typeof` ऑपरेटर आपको किसी मान का टाइप एक स्ट्रिंग के रूप में बताता है:
 ```javascript
 console.log(typeof 42, typeof "Ana", typeof true);
-// prints number string boolean
+// number string boolean प्रिंट करता है
 let city;
 console.log(typeof city);
-// prints undefined
+// undefined प्रिंट करता है
 ```
 
 ---
@@ -23,10 +23,10 @@ JavaScript **डायनामिकली टाइप्ड** है: एक 
 ```javascript
 let data = 10;
 console.log(typeof data);
-// prints number
+// number प्रिंट करता है
 data = "ten";
 console.log(typeof data);
-// prints string
+// string प्रिंट करता है
 ```
 यह सुविधाजनक है, लेकिन इसका यह मतलब भी है कि एक फंक्शन अप्रत्याशित टाइप का मान प्राप्त कर सकता है, इसलिए `typeof` से जाँच करना एक सामान्य पहला कदम है। चूँकि `typeof` एक स्ट्रिंग लौटाता है, आप उसके परिणाम की तुलना एक स्ट्रिंग से करते हैं:
 ```javascript
@@ -41,14 +41,14 @@ if (typeof data === "string") {
 फंक्शन्स को अपना अलग उत्तर मिलता है, `"function"`, भले ही वे ऑब्जेक्ट्स होते हैं:
 ```javascript
 console.log(typeof function () {});
-// prints function
+// function प्रिंट करता है
 console.log(typeof console.log);
-// prints function
+// function प्रिंट करता है
 ```
 ऐरे को अपना अलग उत्तर **नहीं** मिलता: वे साधारण `"object"` होते हैं, बिल्कुल `{}` की तरह:
 ```javascript
 console.log(typeof [1, 2, 3]);
-// prints object
+// object प्रिंट करता है
 ```
 और `typeof null` `"object"` है, एक ऐतिहासिक बग जो कभी ठीक नहीं किया गया। इसलिए `typeof` प्रिमिटिव्स और फंक्शन्स को अच्छी तरह पहचान लेता है, लेकिन यह ऐरे, ऑब्जेक्ट और `null` में अंतर नहीं कर सकता।
 
@@ -64,9 +64,9 @@ console.log(typeof [1, 2, 3]);
 const input = "7";
 const count = Number(input) + 1;
 console.log(count, typeof count);
-// prints 8 number
+// 8 number प्रिंट करता है
 console.log(String(count) + "!");
-// prints 8!
+// 8! प्रिंट करता है
 ```
 स्पष्ट रूप से बदलना आपके इरादे को साफ दिखाता है: जो कोई भी `Number(input)` पढ़ता है, उसे पता होता है कि `input` टेक्स्ट था।
 
@@ -75,19 +75,19 @@ console.log(String(count) + "!");
 `Number()` सख्त है: पूरी स्ट्रिंग एक संख्या होनी चाहिए, अन्यथा परिणाम `NaN` ("Not a Number") होता है:
 ```javascript
 console.log(Number("12px"));
-// prints NaN
+// NaN प्रिंट करता है
 ```
 `parseInt()` और `parseFloat()` अधिक उदार होते हैं: वे स्ट्रिंग की शुरुआत से अंक पढ़ते हैं, शुरुआती स्पेस छोड़ देते हैं, और पहले ऐसे अक्षर पर रुक जाते हैं जो संख्या का हिस्सा नहीं है। `parseInt` केवल पूर्ण भाग रखता है:
 ```javascript
 console.log(parseInt("12px"), parseFloat("1.5kg"));
-// prints 12 1.5
+// 12 1.5 प्रिंट करता है
 console.log(parseInt("3.9em"), parseInt("-4px"));
-// prints 3 -4
+// 3 -4 प्रिंट करता है
 ```
 जब स्ट्रिंग किसी ऐसी चीज़ से शुरू नहीं होती जो एक संख्या की शुरुआत कर सके (एक वैकल्पिक चिह्न, फिर एक अंक), तो वे भी `NaN` लौटाते हैं:
 ```javascript
 console.log(parseInt("auto"));
-// prints NaN
+// NaN प्रिंट करता है
 ```
 `NaN` एकमात्र ऐसा मान है जो स्वयं के बराबर नहीं होता, इसलिए `x === NaN` हमेशा `false` होता है; इसे पकड़ने के लिए `Number.isNaN(x)` का उपयोग करें।
 
@@ -97,16 +97,16 @@ console.log(parseInt("auto"));
 पुराना ग्लोबल `isNaN(value)` पहले `value` को संख्या में **बदलता** है, फिर जाँच करता है। इसलिए यह किसी भी ऐसी चीज़ के लिए `true` कहता है जो संख्या नहीं बन सकती, भले ही वह वास्तव में `NaN` न हो:
 ```javascript
 console.log(isNaN("hello"));
-// prints true, because Number("hello") is NaN
+// true प्रिंट करता है, क्योंकि Number("hello") NaN है
 console.log(isNaN("42"));
-// prints false, because Number("42") is 42
+// false प्रिंट करता है, क्योंकि Number("42") 42 है
 ```
 `Number.isNaN(value)` बदलता **नहीं** है: यह केवल तब `true` होता है जब `value` वास्तव में संख्या `NaN` हो:
 ```javascript
 console.log(Number.isNaN("hello"));
-// prints false, a string is not NaN
+// false प्रिंट करता है, एक स्ट्रिंग NaN नहीं होती
 console.log(Number.isNaN(Number("hello")));
-// prints true
+// true प्रिंट करता है
 ```
 `Number.isNaN` को प्राथमिकता दें, और यदि आप जानना चाहते हैं कि बदलाव असफल हुआ या नहीं, तो पहले बदलें।
 
@@ -115,14 +115,14 @@ console.log(Number.isNaN(Number("hello")));
 JavaScript **अंतर्निहित रूप से** भी बदलाव करता है, और `+` ऑपरेटर वह जगह है जहाँ यह सबसे अधिक परेशान करता है। यदि कोई एक पक्ष स्ट्रिंग है, तो `+` **जोड़ता (concatenate करता)** है और दूसरे पक्ष को स्ट्रिंग में बदल दिया जाता है:
 ```javascript
 console.log("5" + 3);
-// prints 53
+// 53 प्रिंट करता है
 console.log(1 + 2 + "3");
-// prints 33, because 1 + 2 is computed first
+// 33 प्रिंट करता है, क्योंकि 1 + 2 पहले कैलकुलेट होता है
 ```
 हर दूसरा अंकगणितीय ऑपरेटर दोनों पक्षों को **संख्या** में बदल देता है:
 ```javascript
 console.log("6" - 2, "3" * "4");
-// prints 4 12
+// 4 12 प्रिंट करता है
 ```
 इसलिए टेक्स्ट से आने वाले मानों (यूज़र इनपुट, फ़ाइलें, URLs) को जोड़ने पर योग की जगह चुपचाप एक स्ट्रिंग बन सकती है। सुरक्षित रहने के लिए जोड़ने से पहले `Number()` से बदलें।
 
@@ -131,9 +131,9 @@ console.log("6" - 2, "3" * "4");
 स्ट्रिंग को संख्या में बदलने का एक छोटा तरीका **यूनरी प्लस** है: किसी एक मान के आगे लगाया गया `+` उसे बिल्कुल वैसे ही बदल देता है जैसे `Number()` बदलता है:
 ```javascript
 console.log(+"5" + 5);
-// prints 10
+// 10 प्रिंट करता है
 console.log(typeof +"5");
-// prints number
+// number प्रिंट करता है
 ```
 यह संक्षिप्त है, लेकिन जोड़ से उलझा लेने लायक भी है, इसलिए कई टीमें स्पष्ट `Number("5")` को प्राथमिकता देती हैं।
 
@@ -142,16 +142,16 @@ console.log(typeof +"5");
 **लूज़** समानता `==` तुलना करने से पहले दोनों पक्षों को एक सामान्य टाइप में बदल देती है, ऐसे नियमों का पालन करते हुए जिन्हें याद रखना कठिन है:
 ```javascript
 console.log("5" == 5);
-// prints true, "5" becomes 5
+// true प्रिंट करता है, "5" 5 बन जाता है
 console.log(0 == "");
-// prints true, "" becomes 0
+// true प्रिंट करता है, "" 0 बन जाता है
 console.log(0 == false, "1" == true);
-// prints true true
+// true true प्रिंट करता है
 ```
 **स्ट्रिक्ट** समानता `===` कभी बदलाव नहीं करती: अलग-अलग टाइप के मान बस बराबर नहीं होते:
 ```javascript
 console.log("5" === 5, 0 === "", 0 === false);
-// prints false false false
+// false false false प्रिंट करता है
 ```
 डिफ़ॉल्ट रूप से `===` (और `!==`) का उपयोग करें। एकमात्र सामान्य अपवाद `value == null` है, जो `null` और `undefined` दोनों को एक साथ जाँचता है।
 
@@ -162,9 +162,9 @@ console.log("5" === 5, 0 === "", 0 === false);
 **बाकी सब कुछ truthy है**, जिनमें कुछ ऐसे मान भी शामिल हैं जो खाली दिखते हैं:
 ```javascript
 console.log(Boolean(0), Boolean(""), Boolean(NaN));
-// prints false false false
+// false false false प्रिंट करता है
 console.log(Boolean("0"), Boolean("false"), Boolean([]), Boolean({}));
-// prints true true true true
+// true true true true प्रिंट करता है
 ```
 `"0"` एक गैर-खाली स्ट्रिंग है, इसलिए वह truthy है; एक खाली ऐरे एक ऑब्जेक्ट है, इसलिए वह भी truthy है।
 
@@ -173,7 +173,7 @@ console.log(Boolean("0"), Boolean("false"), Boolean([]), Boolean({}));
 किसी भी मान को बूलियन में बदलने का एक सामान्य शॉर्टकट **डबल निगेशन** `!!` है: पहला `!` उसे बूलियन में बदलकर पलट देता है, दूसरा उसे वापस पलट देता है:
 ```javascript
 console.log(!!"text", !!0);
-// prints true false
+// true false प्रिंट करता है
 ```
 `!!value` और `Boolean(value)` बिल्कुल वही परिणाम देते हैं; स्पष्ट रूप पढ़ने में आसान होता है।
 
@@ -182,12 +182,12 @@ console.log(!!"text", !!0);
 JavaScript में पूर्ण संख्याओं और दशमलव के लिए एक ही `number` टाइप होता है: हर संख्या एक 64-बिट फ्लोटिंग पॉइंट मान (एक *double*) होती है। इसलिए `5` और `5.0` एक ही मान हैं, और कोई अलग इंटीजर टाइप नहीं है:
 ```javascript
 console.log(5 === 5.0, 10 / 2);
-// prints true 5
+// true 5 प्रिंट करता है
 ```
 यह पता लगाने के लिए कि क्या संख्या का दशमलव भाग नहीं है, `Number.isInteger` का उपयोग करें:
 ```javascript
 console.log(Number.isInteger(5.0), Number.isInteger(3.5));
-// prints true false
+// true false प्रिंट करता है
 ```
 टेम्पलेट लिटरल्स इंटरपोलेट किए गए मान को `String()` के उन्हीं नियमों से स्ट्रिंग में बदलते हैं, इसलिए `${5.0}` `"5"` बनता है, `"5.0"` नहीं।
 
@@ -196,20 +196,20 @@ console.log(Number.isInteger(5.0), Number.isInteger(3.5));
 क्योंकि संख्याएँ double होती हैं, कुछ दशमलव सटीक रूप से संग्रहीत नहीं हो सकते और छोटी त्रुटियाँ दिखाई देने लगती हैं:
 ```javascript
 console.log(0.1 + 0.2);
-// prints 0.30000000000000004
+// 0.30000000000000004 प्रिंट करता है
 console.log(0.1 + 0.2 === 0.3);
-// prints false
+// false प्रिंट करता है
 ```
 `toFixed(digits)` मेथड एक संख्या को `digits` दशमलवों तक राउंड करता है, लेकिन वह एक **स्ट्रिंग** लौटाता है, जो प्रदर्शन के लिए ठीक है और आगे के गणित के लिए गलत:
 ```javascript
 const price = (0.1 + 0.2).toFixed(2);
 console.log(price, typeof price);
-// prints 0.30 string
+// 0.30 string प्रिंट करता है
 ```
 एक राउंड की हुई **संख्या** पाने के लिए, परिणाम को `Number()` से वापस बदलें:
 ```javascript
 console.log(Number((0.1 + 0.2).toFixed(1)));
-// prints 0.3
+// 0.3 प्रिंट करता है
 ```
 
 ---
@@ -217,13 +217,13 @@ console.log(Number((0.1 + 0.2).toFixed(1)));
 एक `number` पूर्ण संख्याओं को केवल `Number.MAX_SAFE_INTEGER` तक ही सटीक रूप से दर्शा सकता है, जो `9007199254740991` है। इससे आगे, अंक खो जाते हैं:
 ```javascript
 console.log(9007199254740993);
-// prints 9007199254740992
+// 9007199254740992 प्रिंट करता है
 ```
 बड़ी पूर्ण संख्याओं के लिए `bigint` का उपयोग करें: लिटरल को `n` प्रत्यय के साथ लिखें, या `BigInt()` से बदलें:
 ```javascript
 const big = 9007199254740993n;
 console.log(typeof big, big + 1n);
-// prints bigint 9007199254740994n
+// bigint 9007199254740994n प्रिंट करता है
 ```
 `console.log` `n` प्रत्यय दिखाता है; `String(big)` सादे अंक देता है।
 एक `bigint` और एक `number` को अंकगणित में मिलाया नहीं जा सकता: `big + 1` एक `TypeError` फेंकता है। किसी एक पक्ष को स्पष्ट रूप से बदलें, `BigInt(count)` या `Number(big)` से।
@@ -234,7 +234,7 @@ console.log(typeof big, big + 1n);
 `Array.isArray(value)` केवल ऐरे के लिए `true` होता है:
 ```javascript
 console.log(Array.isArray([1, 2]), Array.isArray({}));
-// prints true false
+// true false प्रिंट करता है
 ```
 `null` के लिए सीधे तुलना करें, `value === null`। इन्हें मिलाकर किसी भी मान की पूरी तस्वीर मिल जाती है:
 ```javascript
@@ -251,6 +251,6 @@ function kind(value) {
 फॉर्म, फ़ाइलों या URLs से आने वाला टेक्स्ट हमेशा एक स्ट्रिंग होता है, भले ही वह एक संख्या या बूलियन दर्शाता हो। उसे वापस सही टाइप में बदलने में वह सब कुछ आता है जो आपने देखा है: बूलियन के लिए `"true"` और `"false"` से तुलना करें, और संख्याओं के लिए `Number()` आज़माएँ, यह याद रखते हुए कि `Number("")` `0` होता है और `Number.isNaN` आपको बताता है कि बदलाव कब असफल हुआ:
 ```javascript
 console.log(Number("3.5"), Number(""), Number("12px"));
-// prints 3.5 0 NaN
+// 3.5 0 NaN प्रिंट करता है
 ```
 जब कुछ भी मेल न खाए, तो स्ट्रिंग को वैसे ही रखें।
