@@ -118,5 +118,9 @@
   "hamming_distance": {
     "difficulty": 1,
     "name": "汉明距离"
+  },
+  "anagram": {
+    "difficulty": 2,
+    "name": "变位词"
   }
 }
