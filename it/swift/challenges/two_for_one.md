@@ -47,7 +47,7 @@ func tryCatch(_ assertion: Bool) {
 # --seed--
 
 ```swift
-func duePerUno(nome: String) -> String {
+func twoForOne(nome: String) -> String {
     
 }
 ```
@@ -89,7 +89,7 @@ print("Executed \(_testCount) tests, with \(_testFailedCount) failures")
 # --solutions--
 
 ```swift
-func duePerUno(nome: String? = nil) -> String {
+func twoForOne(nome: String? = nil) -> String {
     if let nomeValido = nome {
         return "Uno per \(nomeValido), uno per me."
     }

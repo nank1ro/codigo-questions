@@ -102,14 +102,14 @@ console.log(`Executed ${_testCount} tests, with ${_testFailedCount} failures`);
 # --solutions--
 
 ```javascript
-const fibonacciEvenSum = (number) => {
-    if (number <= 1) {
+const fibonacciSommaPari = (numero) => {
+    if (numero <= 1) {
         return 0;
     }
     let evenSum = 0,
       prevFibNum = 1,
       fibNum = 2;
-    while (fibNum <= number) {
+    while (fibNum <= numero) {
         if (fibNum % 2 == 0) {
             evenSum += fibNum;
         }
