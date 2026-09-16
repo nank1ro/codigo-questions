@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "Sortowanie bąbelkowe"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "Szyfr Cezara"
   }
 }

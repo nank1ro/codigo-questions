@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "冒泡排序"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "凯撒密码"
   }
 }
