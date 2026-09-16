@@ -114,5 +114,9 @@
   "caesar_cipher": {
     "difficulty": 2,
     "name": "Szyfr Cezara"
+  },
+  "hamming_distance": {
+    "difficulty": 1,
+    "name": "Odległość Hamminga"
   }
 }
