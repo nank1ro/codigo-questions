@@ -114,5 +114,9 @@
   "caesar_cipher": {
     "difficulty": 2,
     "name": "카이사르 암호"
+  },
+  "hamming_distance": {
+    "difficulty": 1,
+    "name": "해밍 거리"
   }
 }
