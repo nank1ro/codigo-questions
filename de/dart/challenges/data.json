@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "Bubblesort"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "Caesar-Verschlüsselung"
   }
 }

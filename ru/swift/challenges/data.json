@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "Сортировка пузырьком"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "Шифр Цезаря"
   }
 }

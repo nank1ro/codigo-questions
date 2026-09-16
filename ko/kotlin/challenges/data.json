@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "버블 정렬"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "카이사르 암호"
   }
 }

@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "Ordenação por bolha"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "Cifra de César"
   }
 }

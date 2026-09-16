@@ -110,5 +110,9 @@
   "bubble_sort": {
     "difficulty": 2,
     "name": "Tri à bulles"
+  },
+  "caesar_cipher": {
+    "difficulty": 2,
+    "name": "Chiffre de César"
   }
 }
