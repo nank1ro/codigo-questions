@@ -118,5 +118,9 @@
   "hamming_distance": {
     "difficulty": 1,
     "name": "Hamming distance"
+  },
+  "anagram": {
+    "difficulty": 2,
+    "name": "Anagram"
   }
 }
