@@ -138,5 +138,10 @@
     "order": 28,
     "title": "Genéricos",
     "description": "Escribe clases y funciones que funcionan con cualquier tipo"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "Errores y excepciones",
+    "description": "Lanza, captura y define excepciones para manejar errores"
   }
 }

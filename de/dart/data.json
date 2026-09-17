@@ -138,5 +138,10 @@
     "order": 28,
     "title": "Generics",
     "description": "Schreibe Klassen und Funktionen, die mit jedem Typ funktionieren"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "Fehler und Exceptions",
+    "description": "Wirf, fange und definiere Exceptions, um Fehler zu behandeln"
   }
 }
