@@ -1,15 +1,15 @@
-> Computadores sao ideais para tarefas repetitivas.
+> Computadores são ideais para tarefas repetitivas.
 
-A forma mais basica de repeticao usa a palavra-chave `while`.
-Isso repete um bloco enquanto a _expressao booleana_ de controle for true:
+A forma mais básica de repetição usa a palavra-chave `while`.
+Isso repete um bloco enquanto a _expressão booleana_ de controle for true:
 
 ```kotlin
 while (Boolean-expression) {
   // Código a ser repetido
 }
 ```
-A expressao booleana e avaliada uma vez no inicio do loop e
-novamente antes de cada iteracao seguinte pelo bloco.
+A expressão booleana é avaliada uma vez no início do loop e
+novamente antes de cada iteração seguinte pelo bloco.
 
 ```kotlin
 var x = 3
@@ -18,16 +18,16 @@ while (x > 0) {
     x--
 }
 ```
-Aqui criamos uma variavel `x`, atribuindo a ela o valor inicial de __3__.
+Aqui criamos uma variável `x`, atribuindo a ela o valor inicial de __3__.
 
-Depois usamos a instrucao `while` que executara o bloco de codigo ate que a condicao `x > 0` seja `true`.
+Depois usamos a instrução `while` que executará o bloco de código até que a condição `x > 0` seja `true`.
 
-Dentro do bloco de codigo, **NAO** devemos esquecer de adicionar a linha `x--`.
-Ela decrementa o valor de `x`, caso contrario, nosso loop sera infinito.
+Dentro do bloco de código, **NÃO** devemos esquecer de adicionar a linha `x--`.
+Ela decrementa o valor de `x`, caso contrário, nosso loop será infinito.
 
 ---
 
-Vamos analisar este trecho de codigo.
+Vamos analisar este trecho de código.
 ```kotlin
 var counter = 0 // [1]
 while (counter < 100) { // [2]
@@ -35,11 +35,11 @@ while (counter < 100) { // [2]
     println(counter)
 }
 ```
-- __[1]__: Inicializamos a variavel `counter` com __0__.
-- __[2]__: A expressao condicional do _while_ diz: "repita as instrucoes no corpo enquanto counter for menor que _100_".
-- __[3]__: O operador `+=` adiciona _10_ ao `counter` e atribui o resultado ao `counter` em uma unica operacao.
+- __[1]__: Inicializamos a variável `counter` com __0__.
+- __[2]__: A expressão condicional do _while_ diz: "repita as instruções no corpo enquanto counter for menor que _100_".
+- __[3]__: O operador `+=` adiciona _10_ ao `counter` e atribui o resultado ao `counter` em uma única operação.
 
-A saida do codigo acima e _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
+A saída do código acima é _10_, _20_, _30_, _40_, _50_, _60_, _70_, _80_, _90_, _100_
 
 ---
 
@@ -49,21 +49,21 @@ do {
   // Código a ser repetido
 } while (Boolean-expression)
 ```
-Como voce pode ver, o `do-while` e bastante semelhante ao loop `while`, exceto por uma diferenca importante:
-> o corpo do loop e executado uma vez antes que a condicao seja avaliada.
+Como você pode ver, o `do-while` é bastante semelhante ao loop `while`, exceto por uma diferença importante:
+> o corpo do loop é executado uma vez antes que a condição seja avaliada.
 
-Em outras palavras, o corpo do `do-while` sempre executa pelo menos uma vez, mesmo que a expressao condicional inicialmente produza `false`.
+Em outras palavras, o corpo do `do-while` sempre executa pelo menos uma vez, mesmo que a expressão condicional inicialmente produza `false`.
 
-Em contraste, o corpo de um loop `while` nunca sera executado se a condicao produzir `false` na primeira vez.
+Em contraste, o corpo de um loop `while` nunca será executado se a condição produzir `false` na primeira vez.
 
 ---
 
-O loop _while_ suporta tres expressoes de salto estrutural:
-- `break` encerra o loop mais proximo.
-- `continue` avanca para o proximo passo do loop mais proximo.
-- `return` por padrao retorna da funcao ou funcao anonima mais proxima (_veremos isso mais tarde quando falarmos sobre funcoes_).
+O loop _while_ suporta três expressões de salto estrutural:
+- `break` encerra o loop mais próximo.
+- `continue` avança para o próximo passo do loop mais próximo.
+- `return` por padrão retorna da função ou função anônima mais próxima (_veremos isso mais tarde quando falarmos sobre funções_).
 
-Aqui esta um exemplo do uso de `continue` dentro de um loop _while_:
+Aqui está um exemplo do uso de `continue` dentro de um loop _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -74,11 +74,11 @@ while (i < 3) {
 // imprime 1, 3
 ```
 
-Como voce pode ver em __[1]__ quando `i` e igual a _2_, pulamos e _continuamos_ para o proximo passo. Na verdade, o numero 2 nunca e impresso.
+Como você pode ver em __[1]__ quando `i` é igual a _2_, pulamos e _continuamos_ para o próximo passo. Na verdade, o número 2 nunca é impresso.
 
 ---
 
-Aqui esta um exemplo do uso de `break` dentro de um loop _while_:
+Aqui está um exemplo do uso de `break` dentro de um loop _while_:
 ```kotlin
 var i = 0
 while (i < 3) {
@@ -89,4 +89,4 @@ while (i < 3) {
 // imprime 1
 ```
 
-Como voce pode ver em __[1]__ quando `i` e igual a _2_, _interrompemos_ o loop. Na verdade, os numeros 2 e 3 nunca sao impressos.
+Como você pode ver em __[1]__ quando `i` é igual a _2_, _interrompemos_ o loop. Na verdade, os números 2 e 3 nunca são impressos.

@@ -1,5 +1,5 @@
-Vamos comecar com o operador relacional **igual** `==`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se duas expressoes sao iguais, por exemplo:
+Vamos começar com o operador relacional **igual** `==`.
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se duas expressões são iguais, por exemplo:
 ```c
 >>> 2 == 2
 1
@@ -10,19 +10,19 @@ Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se duas expr
 ---
 
 Vamos continuar com o operador relacional **diferente** `!=`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se duas expressoes **NAO** sao iguais, por exemplo:
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se duas expressões **NÃO** são iguais, por exemplo:
 ```c
 >>> 2 != 2
 0
 >>> 2 != 3
 1
 ```
-E exatamente o oposto do operador *igual*
+É exatamente o oposto do operador *igual*
 
 ---
 
 Vamos continuar com o operador relacional **maior que** `>`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressao e maior que a outra, por exemplo:
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressão é maior que a outra, por exemplo:
 ```c
 >>> 2 > 2
 0
@@ -33,7 +33,7 @@ Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expre
 ---
 
 Vamos continuar com o operador relacional **menor que** `<`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressao e menor que a outra, por exemplo:
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressão é menor que a outra, por exemplo:
 ```c
 >>> 2 < 2
 0
@@ -44,7 +44,7 @@ Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expre
 ---
 
 Vamos continuar com o operador relacional **maior ou igual** `>=`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressao e maior ou igual a outra, por exemplo:
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressão é maior ou igual a outra, por exemplo:
 ```c
 >>> 2 >= 2
 1
@@ -57,7 +57,7 @@ Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expre
 ---
 
 Vamos continuar com o operador relacional **menor ou igual** `<=`.
-Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressao e menor ou igual a outra, por exemplo:
+Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expressão é menor ou igual a outra, por exemplo:
 ```c
 >>> 2 <= 2
 1
@@ -69,8 +69,8 @@ Ele retorna um **booleano**, verdadeiro `1` ou falso `0`, indicando se uma expre
 
 ---
 
-Agora vamos ver os operadores **booleanos**, comecando pelo primeiro chamado __and__ `&&`.
-Ele retorna o primeiro operando que e avaliado como *false* ou o ultimo se todos forem *true*.
+Agora vamos ver os operadores **booleanos**, começando pelo primeiro chamado __and__ `&&`.
+Ele retorna o primeiro operando que é avaliado como *false* ou o último se todos forem *true*.
 ```c
 >>> 2 == 2 && 2 == 3
 0
@@ -81,7 +81,7 @@ Ele retorna o primeiro operando que e avaliado como *false* ou o ultimo se todos
 ---
 
 Vamos continuar com o operador booleano **or** `||`.
-Ele retorna o primeiro operando que e avaliado como *true* ou o ultimo se todos forem *false*.
+Ele retorna o primeiro operando que é avaliado como *true* ou o último se todos forem *false*.
 ```c
 >>> 2 == 2 || 2 == 3
 1
@@ -92,7 +92,7 @@ Ele retorna o primeiro operando que e avaliado como *true* ou o ultimo se todos 
 ---
 
 Vamos finalizar com o operador booleano **not** `!`.
-Ele retorna um booleano que e o inverso do estado logico de uma expressao.
+Ele retorna um booleano que é o inverso do estado lógico de uma expressão.
 ```c
 >>> !true
 0

@@ -1,6 +1,6 @@
-A tomada de decisao e necessaria quando queremos executar um codigo apenas se uma determinada condicao for satisfeita.
-Vamos supor que queremos brincar la fora apenas se o tempo estiver bom.
-Em programacao, podemos salvar uma variavel booleana `nice_weather` e executar a acao de brincar la fora `if` (se) essa variavel for `True`, assim:
+A tomada de decisão é necessária quando queremos executar um código apenas se uma determinada condição for satisfeita.
+Vamos supor que queremos brincar lá fora apenas se o tempo estiver bom.
+Em programação, podemos salvar uma variável booleana `nice_weather` e executar a ação de brincar lá fora `if` (se) essa variável for `True`, assim:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -15,18 +15,18 @@ nice_weather = True
 if (nice_weather):
     # brincar lá fora
 ```
-Vimos que a instrucao `if` executa o bloco de codigo apenas se a condicao for `True`.
-Outra coisa importante a considerar e representada pelos **dois pontos** `:` e pela **indentacao**, que indicam o inicio de um bloco de codigo.
-Indentacao refere-se aos espacos no inicio de uma linha de codigo.
-Enquanto em outras linguagens de programacao a indentacao no codigo serve apenas para legibilidade, a indentacao em Python e essencial.
-Voce pode usar seu numero favorito de espacos (2, 4, 6, 8), sendo que o preferido e 4.
-Aqui no app, sugerimos usar a tecla **TAB** para indentar suas linhas de codigo
+Vimos que a instrução `if` executa o bloco de código apenas se a condição for `True`.
+Outra coisa importante a considerar é representada pelos **dois pontos** `:` e pela **indentação**, que indicam o início de um bloco de código.
+Indentação refere-se aos espaços no início de uma linha de código.
+Enquanto em outras linguagens de programação a indentação no código serve apenas para legibilidade, a indentação em Python é essencial.
+Você pode usar seu número favorito de espaços (2, 4, 6, 8), sendo que o preferido é 4.
+Aqui no app, sugerimos usar a tecla **TAB** para indentar suas linhas de código
 
 ---
 
-Acabamos de ver como executar um bloco de codigo se uma condicao ocorrer, agora vamos ver como executar outro bloco de codigo se a primeira condicao falhar.
-Vamos brincar la fora se o tempo estiver bom; caso contrario, ficamos em casa.
-Em Python podemos usar a instrucao `else`, assim:
+Acabamos de ver como executar um bloco de código se uma condição ocorrer, agora vamos ver como executar outro bloco de código se a primeira condição falhar.
+Vamos brincar lá fora se o tempo estiver bom; caso contrário, ficamos em casa.
+Em Python podemos usar a instrução `else`, assim:
 ```python
 nice_weather = True
 if (nice_weather):
@@ -37,7 +37,7 @@ else:
 
 ---
 
-Vamos supor que temos outra condicao para verificar, como neste exemplo:
+Vamos supor que temos outra condição para verificar, como neste exemplo:
 ```python
 num = 3
 if (num == 2):
@@ -47,9 +47,9 @@ elif (num == 3):
 else:
     print("do something else")
 ```
-e a saida deste codigo e `the number is 3`.
-Primeiro, vamos verificar se o numero e igual a 2, isso e falso.
-Entao vamos passar para a segunda instrucao e verificar se `num` e igual a 3, sendo verdadeiro executamos o bloco de codigo seguinte imprimindo `the number is 3`
+e a saída deste código é `the number is 3`.
+Primeiro, vamos verificar se o número é igual a 2, isso é falso.
+Então vamos passar para a segunda instrução e verificar se `num` é igual a 3, sendo verdadeiro executamos o bloco de código seguinte imprimindo `the number is 3`
 
 ---
 
@@ -71,7 +71,7 @@ e a saida deste codigo e `the number is 4`.
 
 ---
 
-Tambem podemos aninhar uma instrucao condicional (`if`, `elif` ou `else`) dentro de outra instrucao condicional, para criar uma estrutura mais complexa.
+Também podemos aninhar uma instrução condicional (`if`, `elif` ou `else`) dentro de outra instrução condicional, para criar uma estrutura mais complexa.
 ```python
 num = 4
 if (num < 3):
@@ -84,7 +84,7 @@ else:
     else:
         print("the number is greather than 4")
 ```
-e a saida deste codigo e `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 

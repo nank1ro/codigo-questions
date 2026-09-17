@@ -1,10 +1,10 @@
-Um __module__ (modulo) e um arquivo que pode conter qualquer tipo de codigo Python.
-Os modulos nos permitem reutilizar codigo varias vezes.
+Um __module__ (módulo) é um arquivo que pode conter qualquer tipo de código Python.
+Os módulos nos permitem reutilizar código várias vezes.
 
 ---
 
-Existem muitos __modulos integrados__ que podem nos ajudar com diversos tipos de tarefas, como trabalhar com datas e horas.
-Para incluir um modulo, usamos a palavra-chave `import`
+Existem muitos __módulos integrados__ que podem nos ajudar com diversos tipos de tarefas, como trabalhar com datas e horas.
+Para incluir um módulo, usamos a palavra-chave `import`
 
 ---
 

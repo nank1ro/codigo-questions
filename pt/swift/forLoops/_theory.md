@@ -1,5 +1,5 @@
-Sabemos como repetir codigo usando um loop `while`.
-Como neste programa que repete instrucoes para exibir `hello`
+Sabemos como repetir código usando um loop `while`.
+Como neste programa que repete instruções para exibir `hello`
 ```swift
 var counter = 0
 
@@ -25,19 +25,19 @@ Podemos usar `..<` para iterar ate o proximo numero excluido, ou `...` para iter
 
 ---
 
-A variavel chamada `i` e a variavel contadora.
+A variável chamada `i` é a variável contadora.
 Podemos dar a ela o nome que quisermos.
-Ela conta em qual repeticao do loop estamos atualmente
+Ela conta em qual repetição do loop estamos atualmente
 
 ---
 
-A funcao `stride()` retorna uma sequencia de numeros.
-Ela requer os parametros _from_, _to_ e _by_.
-Esta e a sintaxe da funcao:
+A função `stride()` retorna uma sequência de números.
+Ela requer os parâmetros _from_, _to_ e _by_.
+Esta é a sintaxe da função:
 ```swift
 stride(from:to:by:)
 ```
-Tenha em mente que o valor `to` e excluido
+Tenha em mente que o valor `to` é excluído
 
 ---
 
@@ -49,8 +49,8 @@ Neste caso, o valor `through` e incluido
 
 ---
 
-Em Swift tambem temos o loop `forEach`.
-Na verdade, `forEach` chama a closure fornecida em cada elemento da sequencia na mesma ordem que um loop `for-in`:
+Em Swift também temos o loop `forEach`.
+Na verdade, `forEach` chama a closure fornecida em cada elemento da sequência na mesma ordem que um loop `for-in`:
 ```swift
 // isso é um array, veremos isso em breve
 let numbers: [Int] = [1, 3, 5, 7, 9]
@@ -58,6 +58,6 @@ numbers.forEach { num in
     print(num)
 }
 ```
-Usar o metodo `forEach` e diferente de um loop `for-in` de duas maneiras importantes:
-1. As instrucoes `break` ou `continue` nao podem ser usadas para sair da chamada atual da closure ou para pular chamadas subsequentes.
-2. Usar a instrucao `return` na closure apenas saira da closure e nao do escopo externo, e nao pulara chamadas subsequentes.
+Usar o método `forEach` é diferente de um loop `for-in` de duas maneiras importantes:
+1. As instruções `break` ou `continue` não podem ser usadas para sair da chamada atual da closure ou para pular chamadas subsequentes.
+2. Usar a instrução `return` na closure apenas sairá da closure e não do escopo externo, e não pulará chamadas subsequentes.
