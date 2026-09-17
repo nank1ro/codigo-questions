@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // blue, red, green を出力
 ```
+
+---
+
+`for-in`ループの代わりに、コレクションの`forEach`メソッドを使って反復処理することもできます。このメソッドは各要素に対してクロージャを1回ずつ呼び出します。
+```swift
+Colors.allCases.forEach { print($0) }
+```

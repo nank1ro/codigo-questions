@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // wypisuje blue, red, green
 ```
+
+---
+
+Zamiast pętli `for-in` możesz iterować po kolekcji za pomocą jej metody `forEach`, która wywołuje domknięcie raz dla każdego elementu:
+```swift
+Colors.allCases.forEach { print($0) }
+```

@@ -101,3 +101,34 @@ console.log(!false);
 console.log(!(2 == 2));
 // gibt false aus
 ```
+
+---
+
+`==` vergleicht seine beiden Seiten, nachdem sie in einen gemeinsamen Typ umgewandelt wurden, weshalb `"5" == 5` `true` ergibt. Der strikte Operator `===` überspringt diese Umwandlung und verlangt zusätzlich, dass auch die Typen übereinstimmen.
+```javascript
+console.log("5" == 5);  // true
+console.log("5" === 5); // false
+```
+
+---
+
+`!=` wandelt vor dem Vergleich um, genau wie `==`, weshalb `"5" != 5` `false` ergibt. Sein striktes Gegenstück `!==` behandelt eine Zeichenkette und eine Zahl als unterschiedlich, egal was sie enthalten.
+```javascript
+console.log("5" !== 5); // true
+```
+
+---
+
+Sind beide Seiten Zeichenketten, vergleicht `>` sie zeichenweise nach Code-Reihenfolge statt nach Länge, weshalb `"b" > "a"` `true` ergibt und auch `"apple" > "ant"` `true` ist.
+
+---
+
+`>=` wird von jeder Hälfte seines Namens erfüllt: `8 >= 8` ergibt `true`, weil die beiden Werte gleich sind, während das strengere `8 > 8` `false` ergibt.
+
+---
+
+Jeder Vergleich mit `NaN` liefert `false`, sogar entgegengesetzte: `NaN < 3` und `NaN >= 3` sind beide `false`, ein fehlgeschlagenes `<` bedeutet also nicht immer, dass die linke Seite größer ist.
+
+---
+
+Ist eine Seite eine Zeichenkette und die andere eine Zahl, wandelt `<=` die Zeichenkette zuerst in eine Zahl um, weshalb `"7" <= 8` `true` ergibt.

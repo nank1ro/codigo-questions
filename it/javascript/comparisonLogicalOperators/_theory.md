@@ -101,3 +101,34 @@ console.log(!false);
 console.log(!(2 == 2));
 // stampa false
 ```
+
+---
+
+`==` confronta i suoi due lati dopo averli convertiti in un tipo comune, quindi `"5" == 5` è `true`. L'operatore stretto `===` salta questa conversione e richiede che anche i tipi corrispondano.
+```javascript
+console.log("5" == 5);  // true
+console.log("5" === 5); // false
+```
+
+---
+
+`!=` converte prima di confrontare, proprio come `==`, quindi `"5" != 5` è `false`. La sua controparte stretta `!==` tratta una stringa e un numero come diversi qualunque cosa contengano.
+```javascript
+console.log("5" !== 5); // true
+```
+
+---
+
+Quando entrambi i lati sono stringhe, `>` le confronta carattere per carattere seguendo l'ordine dei codici anziché la lunghezza, quindi `"b" > "a"` è `true` e anche `"apple" > "ant"` è `true`.
+
+---
+
+`>=` è soddisfatto da entrambe le metà del suo nome: `8 >= 8` è `true` perché i due valori sono uguali, mentre il più rigido `8 > 8` è `false`.
+
+---
+
+Ogni confronto che coinvolge `NaN` restituisce `false`, anche quelli opposti: `NaN < 3` e `NaN >= 3` sono entrambi `false`, quindi un `<` fallito non significa sempre che il lato sinistro sia maggiore.
+
+---
+
+Quando un lato è una stringa e l'altro un numero, `<=` converte prima la stringa in un numero, quindi `"7" <= 8` è `true`.

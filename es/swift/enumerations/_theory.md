@@ -53,15 +53,7 @@ for color in Colors.allCases {
 
 ---
 
-Para algunas enumeraciones, es útil tener una colección de todos los casos de esa enumeración.
-Lo habilitas escribiendo `: CaseIterable` después del nombre de la enumeración.
-Swift expone una colección de todos los casos como una propiedad `allCases` del tipo de enumeración:
+En lugar de un bucle `for-in`, puedes iterar sobre una colección usando su método `forEach`, que llama a un cierre una vez por cada elemento:
 ```swift
-enum Colors: CaseIterable {
-    case blue, red, green
-}
-for color in Colors.allCases {
-    print(color)
-}
-// imprime blue, red, green
+Colors.allCases.forEach { print($0) }
 ```

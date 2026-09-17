@@ -122,3 +122,74 @@ L'operatore nil-coalescing e' una scorciatoia per il codice seguente:
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+`if` è la parola chiave che introduce un'istruzione condizionale in JavaScript. Qui non esiste la parola chiave `elif` — una seconda condizione viene introdotta con `else if`, scritto come due parole separate.
+
+---
+
+I letterali booleani di JavaScript sono minuscoli: `true` e `false`, non `True`/`False`, e nemmeno le stringhe `"true"`/`"false"`.
+
+---
+
+Per impedire l'esecuzione di un blocco di codice, la condizione tra parentesi deve valutare a `false`.
+
+---
+
+Lo spazio tra `if` e le sue parentesi è puramente estetico: `if(true)` e `if (true)` sono la stessa istruzione per JavaScript.
+
+---
+
+Le parentesi graffe sono ciò che raggruppa più istruzioni in un unico blocco. Senza di esse un `if` controlla solo la singola istruzione che lo segue, quindi `if (true) console.log("Hello!");` è JavaScript valido.
+
+---
+
+La condizione viene valutata una sola volta, prima che il blocco inizi. JavaScript non la riesamina mentre le istruzioni tra le parentesi graffe sono in esecuzione.
+
+---
+
+Una condizione `false` salta completamente il blocco, e il programma continua dalla prima istruzione dopo la parentesi graffa di chiusura.
+
+---
+
+Una condizione non deve essere per forza un booleano: JavaScript converte qualunque cosa trovi in uno, quindi `if (1)` esegue il suo blocco e `if (0)` no. Un letterale `true` non richiede alcuna conversione.
+
+---
+
+Un blocco di codice non è limitato a una singola riga — ogni istruzione all'interno delle parentesi graffe viene eseguita, in ordine, quando la condizione è `true`.
+```javascript
+if (true) {
+    console.log("First line");
+    console.log("Second line");
+}
+```
+e l'output è `First line` seguito da `Second line`.
+
+---
+
+Le istruzioni all'interno di un blocco vengono eseguite una dopo l'altra, dall'alto verso il basso, quindi due chiamate a `console.log` nello stesso blocco stampano su due righe separate.
+
+---
+
+Indentare le istruzioni all'interno di un blocco è solo una convenzione di leggibilità. JavaScript usa le parentesi graffe, mai l'indentazione, per decidere cosa appartiene al blocco.
+
+---
+
+Istruzioni come `if`, `else if` ed `else`, che eseguono o saltano il codice a seconda che una condizione sia `true` o `false`, sono chiamate **istruzioni condizionali**.
+
+---
+
+Una variabile booleana, anche una costruita con una negazione `!` come `isAfternoon`, può essere usata direttamente come condizione di un `if`, senza bisogno di confronti.
+
+---
+
+La condizione di un'istruzione `if` va sempre dentro le parentesi `()`, poste subito dopo la parola chiave `if` e prima della parentesi graffa di apertura.
+
+---
+
+Un blocco può contenere un numero qualsiasi di istruzioni, e può anche non contenerne nessuna: `if (true) {}` è JavaScript valido che semplicemente non fa nulla.
+
+---
+
+Il blocco di codice di un'istruzione `if` è l'insieme delle istruzioni all'interno delle parentesi graffe `{ }`, la parte che viene effettivamente eseguita quando la condizione è `true`.

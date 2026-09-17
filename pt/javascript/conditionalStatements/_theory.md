@@ -122,3 +122,74 @@ O operador de coalescencia nula e uma forma abreviada do codigo abaixo:
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+`if` é a palavra-chave que introduz uma instrução condicional em JavaScript. Não existe uma palavra-chave `elif` aqui — uma segunda condição é introduzida com `else if`, escrito como duas palavras separadas.
+
+---
+
+Os literais booleanos do JavaScript são em minúsculas: `true` e `false`, não `True`/`False`, e não as strings `"true"`/`"false"`.
+
+---
+
+Para impedir que um bloco de código seja executado, a condição dentro dos parênteses precisa resultar em `false`.
+
+---
+
+O espaço entre `if` e seus parênteses é puramente estético: `if(true)` e `if (true)` são a mesma instrução para o JavaScript.
+
+---
+
+As chaves são o que agrupa várias instruções em um único bloco. Sem elas, um `if` controla apenas a instrução que vem logo depois dele, então `if (true) console.log("Hello!");` é um JavaScript válido.
+
+---
+
+A condição é avaliada uma única vez, antes de o bloco começar. O JavaScript não a verifica novamente enquanto as instruções entre as chaves estão sendo executadas.
+
+---
+
+Uma condição `false` pula o bloco por completo, e o programa continua na primeira instrução depois da chave de fechamento.
+
+---
+
+Uma condição não precisa ser um booleano: o JavaScript converte o que quer que encontre para um, então `if (1)` executa seu bloco e `if (0)` não. Um literal `true` não precisa de nenhuma conversão.
+
+---
+
+Um bloco de código não se limita a uma única linha — toda instrução dentro das chaves é executada, em ordem, quando a condição é `true`.
+```javascript
+if (true) {
+    console.log("First line");
+    console.log("Second line");
+}
+```
+e a saída é `First line` seguido de `Second line`.
+
+---
+
+As instruções dentro de um bloco são executadas uma depois da outra, de cima para baixo, então duas chamadas de `console.log` no mesmo bloco imprimem em duas linhas separadas.
+
+---
+
+Indentar as instruções dentro de um bloco é apenas uma convenção de legibilidade. O JavaScript usa as chaves, nunca a indentação, para decidir o que pertence ao bloco.
+
+---
+
+Instruções como `if`, `else if` e `else`, que executam ou pulam código dependendo se uma condição é `true` ou `false`, são chamadas de **instruções condicionais**.
+
+---
+
+Uma variável booleana, mesmo uma construída a partir de uma negação `!` como `isAfternoon`, pode ser usada diretamente como condição de um `if`, sem necessidade de comparação.
+
+---
+
+A condição de uma instrução `if` sempre vai dentro de parênteses `()`, colocados logo depois da palavra-chave `if` e antes da chave de abertura.
+
+---
+
+Um bloco pode conter qualquer número de instruções, e também pode não conter nenhuma: `if (true) {}` é um JavaScript válido que simplesmente não faz nada.
+
+---
+
+O bloco de código de uma instrução `if` é o conjunto de instruções dentro das chaves `{ }`, a parte que realmente é executada quando a condição é `true`.

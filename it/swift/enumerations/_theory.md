@@ -50,3 +50,10 @@ for colore in Colori.allCases {
 }
 // stampa blue, rosso, verde
 ```
+
+---
+
+Invece di un ciclo `for-in`, puoi iterare su una collezione usando il suo metodo `forEach`, che chiama una closure una volta per ogni elemento:
+```swift
+Colors.allCases.forEach { print($0) }
+```

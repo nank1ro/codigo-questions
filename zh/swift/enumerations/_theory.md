@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // 输出 blue, red, green
 ```
+
+---
+
+除了使用 `for-in` 循环，你还可以使用集合的 `forEach` 方法来遍历它，该方法会对每个元素调用一次闭包：
+```swift
+Colors.allCases.forEach { print($0) }
+```

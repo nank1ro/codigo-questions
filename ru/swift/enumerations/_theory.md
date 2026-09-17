@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // выводит blue, red, green
 ```
+
+---
+
+Вместо цикла `for-in` можно перебирать коллекцию с помощью её метода `forEach`, который вызывает замыкание один раз для каждого элемента:
+```swift
+Colors.allCases.forEach { print($0) }
+```
