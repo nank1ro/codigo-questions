@@ -146,7 +146,7 @@ Promise.reject(new Error("no network"))
 
 ---
 
-Inside an `async` function you do not need `.catch`. Awaiting a rejected promise **throws** the error, so the ordinary `try` / `catch` / `finally` statement handles it:
+Dentro una funzione `async` non serve `.catch`. Fare `await` di una promessa rifiutata **lancia** l'errore, quindi la normale istruzione `try` / `catch` / `finally` lo gestisce:
 ```javascript
 async function main() {
   try {
@@ -159,18 +159,18 @@ async function main() {
   }
 }
 ```
-The other direction works too: a `throw` inside an `async` function does not crash the caller, it rejects the promise that the function returned.
+Funziona anche il percorso opposto: un `throw` dentro una funzione `async` non manda in crash il chiamante, ma rifiuta la promessa restituita dalla funzione.
 ```javascript
 async function risky() {
   throw new Error("boom");
 }
 // risky() restituisce una promessa rifiutata con Error("boom")
 ```
-As with any `try` block, the lines after the failing `await` are skipped, the `catch` block runs, and the `finally` block runs in both cases.
+Come in ogni blocco `try`, le righe dopo l'`await` che fallisce vengono saltate, il blocco `catch` viene eseguito, e il blocco `finally` viene eseguito in entrambi i casi.
 
 ---
 
-A common use of `try` / `catch` around `await` is to replace a failure with a sensible default, so the caller never has to deal with the error:
+Un uso comune di `try` / `catch` attorno a `await` è sostituire un fallimento con un valore predefinito sensato, così il chiamante non deve mai occuparsi dell'errore:
 ```javascript
 async function sizeOf(path) {
   try {
@@ -180,50 +180,50 @@ async function sizeOf(path) {
   }
 }
 ```
-Keep the `await` in front of `measure(path)` even though the value is returned straight away. Without it the promise leaves the function without ever passing through the `try` block, and a rejection would escape the `catch`.
+Mantieni `await` davanti a `measure(path)` anche se il valore viene restituito subito. Senza di esso la promessa lascerebbe la funzione senza mai passare per il blocco `try`, e un rifiuto sfuggirebbe al `catch`.
 
 ---
 
-When several results are needed, awaiting them one after another wastes time: each one starts only when the previous has finished. **`Promise.all(promises)`** takes an array of promises that are already running and returns a single promise fulfilled with an array of all their values:
+Quando servono più risultati, aspettarli uno dopo l'altro spreca tempo: ognuno parte solo quando il precedente è finito. **`Promise.all(promises)`** prende un array di promesse già in esecuzione e restituisce un'unica promessa adempiuta con un array di tutti i loro valori:
 ```javascript
 const results = await Promise.all([fetchUser(), fetchOrders()]);
 ```
-Two rules are worth remembering:
+Due regole vale la pena ricordare:
 
-- the values come back **in the order of the array**, not in the order in which they finished;
-- if any promise is rejected, the promise returned by `Promise.all` is rejected immediately with that first error, and the other values are lost.
+- i valori tornano **nell'ordine dell'array**, non nell'ordine in cui sono terminati;
+- se una qualsiasi promessa viene rifiutata, la promessa restituita da `Promise.all` viene rifiutata immediatamente con quel primo errore, e gli altri valori vengono persi.
 
 ---
 
-`Promise.all` works with an array of any length, including an empty one: awaiting `Promise.all([])` gives back an empty array straight away. That makes it safe to pass a list built at run time, without a special case for "nothing to wait for".
+`Promise.all` funziona con un array di qualsiasi lunghezza, incluso uno vuoto: fare `await` di `Promise.all([])` restituisce subito un array vuoto. Questo rende sicuro passare una lista costruita a runtime, senza bisogno di un caso speciale per "niente da aspettare".
 ```javascript
 const values = await Promise.all(items);
 console.log(values.length === items.length);
 // stampa true
 ```
-The array it gives back always has exactly as many entries as the array it received, in the same positions, so it can be looped over like any other array.
+L'array restituito ha sempre esattamente lo stesso numero di elementi dell'array ricevuto, nelle stesse posizioni, quindi può essere ciclato come qualsiasi altro array.
 
 ---
 
-The difference between **sequential** and **parallel** waiting is decided by *where* you put `await`:
+La differenza tra attesa **sequenziale** e **parallela** dipende da *dove* metti `await`:
 ```javascript
 // sequenziale: circa 300 + 300 = 600 ms
 const a = await load("a");
 const b = await load("b");
 
-// parallelo: circa 300 ms
+// parallela: circa 300 ms
 const [a, b] = await Promise.all([load("a"), load("b")]);
 ```
-In the first version the second download only starts once the first has finished, because `await` pauses the function on that line. In the second, both calls are made before anything is awaited, so both downloads are already running while `Promise.all` waits.
+Nella prima versione il secondo download parte solo quando il primo è finito, perché `await` mette in pausa la funzione a quella riga. Nella seconda, entrambe le chiamate vengono fatte prima che qualcosa venga atteso, quindi entrambi i download sono già in esecuzione mentre `Promise.all` aspetta.
 
-Use sequential awaits only when the second task really needs the result of the first. Otherwise start everything first and await together.
+Usa gli `await` sequenziali solo quando il secondo compito ha davvero bisogno del risultato del primo. Altrimenti avvia tutto per primo e aspetta insieme.
 
 ---
 
-`Promise.all` gives up as soon as one promise is rejected. When you want every result anyway, use **`Promise.allSettled(promises)`**: it is never rejected, and it is fulfilled with one small object per promise, in the same order:
+`Promise.all` si arrende non appena una promessa viene rifiutata. Quando vuoi comunque ogni risultato, usa **`Promise.allSettled(promises)`**: non viene mai rifiutata, ed è adempiuta con un piccolo oggetto per ogni promessa, nello stesso ordine:
 
-- `{ status: "fulfilled", value: ... }` for the ones that succeeded;
-- `{ status: "rejected", reason: ... }` for the ones that failed.
+- `{ status: "fulfilled", value: ... }` per quelle andate a buon fine;
+- `{ status: "rejected", reason: ... }` per quelle fallite.
 
 ```javascript
 const results = await Promise.allSettled([
@@ -235,25 +235,25 @@ console.log(results[0].status);
 console.log(results[1].reason.message);
 // stampa nope
 ```
-Read `value` only when `status` is `"fulfilled"`, and `reason` only when it is `"rejected"`: the other property is simply absent.
+Leggi `value` solo quando `status` è `"fulfilled"`, e `reason` solo quando è `"rejected"`: l'altra proprietà è semplicemente assente.
 
 ---
 
-**`Promise.race(promises)`** settles as soon as the **first** of the promises settles, and copies its outcome: fulfilled with the first value, or rejected with the first error. The others are not cancelled, they keep running, but whatever they produce is ignored.
+**`Promise.race(promises)`** si conclude non appena la **prima** delle promesse si conclude, e ne copia l'esito: adempiuta con il primo valore, oppure rifiutata con il primo errore. Le altre non vengono annullate, continuano a girare, ma qualsiasi cosa producano viene ignorata.
 ```javascript
 const winner = await Promise.race([slowServer(), fastServer()]);
 ```
-The typical use is a deadline: race the real work against a promise that fails after a while, and you get either the result or a timeout error.
+L'uso tipico è una scadenza: fai gareggiare il lavoro vero contro una promessa che fallisce dopo un po', e ottieni il risultato oppure un errore di timeout.
 
-Be careful with an empty array: `Promise.race([])` stays pending forever, because there is nothing that could settle it.
+Fai attenzione con un array vuoto: `Promise.race([])` resta in sospeso per sempre, perché non c'è niente che possa concluderla.
 
 ---
 
-Putting the last pieces together gives a small tool used in almost every real application: a deadline. Build a promise that is rejected after `ms` milliseconds, race it against the real work, and whichever settles first decides the outcome:
+Mettendo insieme gli ultimi pezzi si ottiene un piccolo strumento usato in quasi ogni applicazione reale: una scadenza. Costruisci una promessa che viene rifiutata dopo `ms` millisecondi, falla gareggiare contro il lavoro vero, e qualunque delle due si concluda per prima decide l'esito:
 ```javascript
 const timer = new Promise((resolve, reject) => {
   setTimeout(() => reject(new Error("timeout")), ms);
 });
 return Promise.race([work, timer]);
 ```
-Returning a promise from an `async` function is fine: the promise the function gives back follows it, so the caller awaits the final value and not a promise of a promise.
+Restituire una promessa da una funzione `async` va benissimo: la promessa restituita dalla funzione la segue, quindi il chiamante aspetta il valore finale e non una promessa di una promessa.

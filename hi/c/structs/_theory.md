@@ -55,7 +55,7 @@ Temperature t = {21.5};
 
 ---
 
-A member can itself be a struct. A segment, for example, is made of two points:
+एक सदस्य स्वयं भी एक स्ट्रक्चर हो सकता है। उदाहरण के लिए, एक सेगमेंट दो पॉइंट्स से बनता है:
 ```c
 typedef struct { int x; int y; } Point;
 
@@ -64,7 +64,7 @@ typedef struct {
     Point end;
 } Segment;
 ```
-The inner struct is initialised with its own pair of braces, and its members are reached by chaining the dot operator:
+अंदर वाला स्ट्रक्चर अपने ब्रेसेज़ के अलग जोड़े से इनिशियलाइज़ किया जाता है, और उसके सदस्यों तक डॉट ऑपरेटर को चेन करके पहुँचा जाता है:
 ```c
 Segment s = {{1, 2}, {5, 2}};
 printf("%d\n", s.end.x); // "5" प्रिंट करता है
@@ -72,7 +72,7 @@ printf("%d\n", s.end.x); // "5" प्रिंट करता है
 
 ---
 
-Structs can be stored in an array like any other type. Each element is initialised with its own braces, and a loop visits them one by one, indexing first and then using the dot:
+स्ट्रक्चर को भी किसी अन्य प्रकार की तरह ऐरे में संग्रहीत किया जा सकता है। हर एलिमेंट अपने ब्रेसेज़ से इनिशियलाइज़ किया जाता है, और एक लूप उन्हें एक-एक करके देखता है, पहले इंडेक्स करके फिर डॉट का उपयोग करके:
 ```c
 Point path[3] = {{0, 0}, {2, 1}, {4, 3}};
 
@@ -83,7 +83,7 @@ for (int i = 0; i < 3; i++) {
 
 ---
 
-An array of structs is passed to a function exactly like an array of numbers: the parameter is written as `Item items[]` and, since the array does not carry its length, the size is passed separately:
+स्ट्रक्चर के ऐरे को फ़ंक्शन में बिल्कुल वैसे ही पास किया जाता है जैसे संख्याओं के ऐरे को: पैरामीटर `Item items[]` के रूप में लिखा जाता है, और चूँकि ऐरे अपनी लंबाई साथ नहीं रखता, आकार अलग से पास किया जाता है:
 ```c
 int count_free(Item items[], int size) {
     int count = 0;
@@ -98,44 +98,44 @@ int count_free(Item items[], int size) {
 
 ---
 
-When a struct is passed to a function **by value**, the function receives a **copy** of it. Changing a member of the parameter changes the copy only, and the caller's variable stays as it was:
+जब कोई स्ट्रक्चर किसी फ़ंक्शन को **by value** पास किया जाता है, तो फ़ंक्शन को उसकी एक **कॉपी** मिलती है। पैरामीटर के किसी सदस्य को बदलने से केवल वह कॉपी बदलती है, और कॉलर का वेरिएबल वैसा ही बना रहता है:
 ```c
 void reset(Point p) {
     p.x = 0; // कॉपी को बदलता है
 }
 ```
-To let a function modify the caller's struct, pass its **address** with `&` and declare the parameter as a **pointer**, `Point *p`. The pointer refers to the original variable instead of a copy:
+किसी फ़ंक्शन को कॉलर का स्ट्रक्चर बदलने देने के लिए, `&` से उसका **एड्रेस** पास करें और पैरामीटर को एक **पॉइंटर**, `Point *p`, के रूप में घोषित करें। पॉइंटर कॉपी की जगह मूल वेरिएबल की ओर इशारा करता है:
 ```c
 void reset(Point *p) { ... }
 
 reset(&origin);
 ```
-Copying also costs time for large structs, so pointers are the usual choice even when nothing is modified.
+बड़े स्ट्रक्चर के लिए कॉपी करने में भी समय लगता है, इसलिए कुछ भी न बदलना हो तब भी आमतौर पर पॉइंटर ही उपयोग किए जाते हैं।
 
 ---
 
-Through a pointer the members are reached with the **arrow** operator `->` instead of the dot:
+पॉइंटर के ज़रिए सदस्यों तक डॉट की जगह **एरो** ऑपरेटर `->` से पहुँचा जाता है:
 ```c
 void grow(Box *b) {
     b->size = b->size * 2;
 }
 ```
-`b->size` is a shortcut for `(*b).size`: first follow the pointer, then take the member. The dot works only on a struct, the arrow only on a pointer to a struct.
-The caller passes the address of its variable with `&`, and the change made through the pointer is visible after the call.
+`b->size`, `(*b).size` का संक्षिप्त रूप है: पहले पॉइंटर का अनुसरण करें, फिर सदस्य लें। डॉट केवल स्ट्रक्चर पर काम करता है, एरो केवल स्ट्रक्चर की ओर इशारा करने वाले पॉइंटर पर।
+कॉलर `&` से अपने वेरिएबल का एड्रेस पास करता है, और पॉइंटर के ज़रिए किया गया बदलाव कॉल के बाद दिखता है।
 
 ---
 
-A function that receives a pointer to a struct can update the original value in place. This is the standard way to write "modifier" functions in C, where the first parameter is the struct to change and the others are the data to apply:
+जो फ़ंक्शन स्ट्रक्चर की ओर इशारा करने वाला पॉइंटर लेता है, वह मूल मान को उसी जगह अपडेट कर सकता है। C में "मॉडिफ़ायर" फ़ंक्शन लिखने का यही मानक तरीका है, जहाँ पहला पैरामीटर बदला जाने वाला स्ट्रक्चर होता है और बाकी लागू किया जाने वाला डेटा:
 ```c
 void set_number(Player *p, int new_number) {
     p->number = new_number;
 }
 ```
-Reading and writing go through the same arrow: `p->score += 10` adds to the member of the struct the pointer refers to.
+पढ़ना और लिखना दोनों एक ही एरो से होते हैं: `p->score += 10` उस स्ट्रक्चर के सदस्य में जोड़ता है जिसकी ओर पॉइंटर इशारा करता है।
 
 ---
 
-A function can also **return** a struct. Build it in a local variable and return it; the caller receives a copy of the whole value:
+एक फ़ंक्शन एक स्ट्रक्चर **लौटा** भी सकता है। इसे एक लोकल वेरिएबल में बनाएँ और लौटा दें; कॉलर को पूरे मान की एक कॉपी मिलती है:
 ```c
 Point make_point(int x, int y) {
     Point p = {x, y};
@@ -144,46 +144,46 @@ Point make_point(int x, int y) {
 
 Point origin = make_point(0, 0);
 ```
-This is how C returns more than one value from a function: pack them into a struct.
+C में किसी फ़ंक्शन से एक से ज़्यादा मान लौटाने का यही तरीका है: उन्हें एक स्ट्रक्चर में पैक कर दें।
 
 ---
 
-`sizeof` works on structs too, and it is the right way to know how much memory one occupies:
+`sizeof` स्ट्रक्चर पर भी काम करता है, और यह जानने का सही तरीका है कि कोई स्ट्रक्चर कितनी मेमोरी लेता है:
 ```c
 printf("%zu\n", sizeof(Point));
 ```
-The size is **at least** the sum of the sizes of the members. It can be larger, because the compiler may insert unused **padding** bytes so that each member sits at an address suited to its type: `struct { char c; int n; }` is usually `8` bytes, not `5`. Never hard-code the size of a struct; ask `sizeof`.
+यह आकार सदस्यों के आकारों के योग से **कम से कम** उतना होता है। यह उससे बड़ा भी हो सकता है, क्योंकि कंपाइलर बिना उपयोग वाले **पैडिंग** बाइट्स जोड़ सकता है ताकि हर सदस्य अपने प्रकार के लिए उपयुक्त एड्रेस पर बैठे: `struct { char c; int n; }` आमतौर पर `8` बाइट्स का होता है, `5` का नहीं। किसी स्ट्रक्चर के आकार को कभी हार्डकोड न करें; `sizeof` से पूछें।
 
 ---
 
-Structs cannot be compared with `==`: writing `a == b` on two structs is a **compilation error**. Compare them **member by member** instead, combining the results with `&&`:
+स्ट्रक्चर की तुलना `==` से नहीं की जा सकती: दो स्ट्रक्चर पर `a == b` लिखना एक **कंपाइलेशन एरर** है। इसके बजाय उनकी तुलना **सदस्य दर सदस्य** करें, और परिणामों को `&&` से जोड़ें:
 ```c
 bool same_size(Rectangle a, Rectangle b) {
     return a.width == b.width && a.height == b.height;
 }
 ```
-The same applies to `<` and `>`: you decide which member defines the order.
+यही बात `<` और `>` पर भी लागू होती है: यह आप तय करते हैं कि कौन सा सदस्य क्रम तय करेगा।
 
 ---
 
-A struct often holds text, stored as a `char` array member with a fixed size:
+स्ट्रक्चर अक्सर टेक्स्ट रखता है, जिसे एक निश्चित आकार वाले `char` ऐरे सदस्य में संग्रहीत किया जाता है:
 ```c
 typedef struct {
     char name[20];
     int age;
 } Person;
 ```
-An array member cannot be assigned with `=` after the declaration: `p.name = "Ann"` does not compile. Copy the text into it with `strcpy` from `string.h`, passing the member as the destination:
+घोषणा के बाद किसी ऐरे सदस्य को `=` से असाइन नहीं किया जा सकता: `p.name = "Ann"` कंपाइल नहीं होता। `string.h` के `strcpy` से टेक्स्ट को उसमें कॉपी करें, सदस्य को डेस्टिनेशन के रूप में पास करके:
 ```c
 Person p;
 strcpy(p.name, "Ann");
 p.age = 30;
 ```
-Only a brace initialiser at the declaration accepts the string directly: `Person p = {"Ann", 30};`.
+केवल घोषणा के समय दिया गया ब्रेस इनिशियलाइज़र ही स्ट्रिंग को सीधे स्वीकार करता है: `Person p = {"Ann", 30};`।
 
 ---
 
-`printf` has no specifier for a whole struct. The usual solution is a small function that prints the members in a fixed format, so every part of the program shows the value the same way:
+`printf` के पास पूरे स्ट्रक्चर के लिए कोई स्पेसिफ़ायर नहीं है। सामान्य समाधान एक छोटा फ़ंक्शन है जो सदस्यों को एक तय फ़ॉर्मेट में प्रिंट करता है, ताकि प्रोग्राम का हर हिस्सा मान को एक ही तरह दिखाए:
 ```c
 void print_person(Person p) {
     printf("%s (%d)\n", p.name, p.age);
@@ -192,10 +192,10 @@ void print_person(Person p) {
 
 ---
 
-Putting it together: a function that receives a pointer to a struct can update a text member with `strcpy` through the arrow, since `item->name` is the `char` array inside the original struct:
+सब कुछ जोड़ते हुए: जो फ़ंक्शन स्ट्रक्चर की ओर इशारा करने वाला पॉइंटर लेता है, वह एरो के ज़रिए `strcpy` से किसी टेक्स्ट सदस्य को अपडेट कर सकता है, क्योंकि `item->name` मूल स्ट्रक्चर के अंदर वही `char` ऐरे है:
 ```c
 void set_title(Book *book, char *title) {
     strcpy(book->title, title);
 }
 ```
-Remember to add `#include <string.h>` at the top of your code to use `strcpy`.
+`strcpy` उपयोग करने के लिए अपने कोड की शुरुआत में `#include <string.h>` जोड़ना याद रखें।

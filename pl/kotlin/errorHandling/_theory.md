@@ -68,7 +68,7 @@ Kolejność ma więc znaczenie. `NumberFormatException` i `IndexOutOfBoundsExcep
 
 ---
 
-A `finally` block can be added at the end. It runs **whatever happens**: after a successful `try`, after a `catch` has recovered, and even when the exception is not caught at all.
+Na końcu można dodać blok `finally`. Wykonuje się on **niezależnie od tego, co się stanie**: po udanym `try`, po tym, jak `catch` naprawi sytuację, a nawet gdy wyjątek w ogóle nie zostanie przechwycony.
 
 ```kotlin
 try {
@@ -85,23 +85,23 @@ reading
 bad number
 closing
 ```
-That makes it the place for clean-up that must not be skipped, such as closing a file. A `try` needs at least a `catch` or a `finally`, but it may have both.
+To czyni go odpowiednim miejscem na sprzątanie, które nie może zostać pominięte, na przykład zamknięcie pliku. `try` wymaga co najmniej `catch` albo `finally`, ale może mieć oba.
 
 ---
 
-In Kotlin `try` is not only a statement: it is an **expression** that produces a value. The value is the last expression of whichever block ran — the `try` block when nothing failed, the `catch` block when it did.
+W Kotlinie `try` to nie tylko instrukcja: to **wyrażenie**, które daje wartość. Tą wartością jest ostatnie wyrażenie tego bloku, który się wykonał — bloku `try`, gdy nic nie zawiodło, bloku `catch`, gdy jednak zawiodło.
 
 ```kotlin
 val n = try { "abc".toInt() } catch (e: NumberFormatException) { 0 }
 println(n) // 0
 ```
-This is the idiomatic shape in Kotlin. Instead of declaring a `var`, assigning it in two places and hoping every path sets it, you get a single `val` that always holds a usable value.
+To idiomatyczna forma w Kotlinie. Zamiast deklarować `var`, przypisywać mu wartość w dwóch miejscach i liczyć, że każda ścieżka go ustawi, dostajesz pojedynczy `val`, który zawsze przechowuje użyteczną wartość.
 
-Note that a `finally` block never changes the value: it runs for its side effects only.
+Zwróć uwagę, że blok `finally` nigdy nie zmienia wartości: wykonuje się wyłącznie dla swoich efektów ubocznych.
 
 ---
 
-Because `try` is an expression, it can be used anywhere a value is expected — including as the whole body of a function written with `=`:
+Ponieważ `try` jest wyrażeniem, można go użyć wszędzie tam, gdzie oczekiwana jest wartość — także jako całe ciało funkcji zapisanej za pomocą `=`:
 ```kotlin
 fun length(text: String): Int = try {
     text.toInt()
@@ -109,26 +109,26 @@ fun length(text: String): Int = try {
     -1
 }
 ```
-Both blocks must produce a value of the same type, here `Int`. Write the fallback as the last expression of the `catch` block; there is no `return` inside either block.
+Oba bloki muszą zwracać wartość tego samego typu, tutaj `Int`. Zapisz wartość zastępczą jako ostatnie wyrażenie bloku `catch`; w żadnym z bloków nie ma `return`.
 
 ---
 
-Throwing and catching is not free, and for the common conversions Kotlin offers a cheaper variant that simply returns `null` instead of throwing: `toIntOrNull()`, `toDoubleOrNull()`, `toLongOrNull()`.
+Zgłaszanie i przechwytywanie wyjątków nie jest darmowe, dlatego dla typowych konwersji Kotlin oferuje tańszy wariant, który zamiast zgłaszać wyjątek, po prostu zwraca `null`: `toIntOrNull()`, `toDoubleOrNull()`, `toLongOrNull()`.
 
 ```kotlin
 println("42".toIntOrNull())  // 42
 println("abc".toIntOrNull()) // null
 ```
-Combined with the elvis operator `?:`, which supplies a replacement when the value on its left is `null`, the whole `try`/`catch` collapses into one line:
+W połączeniu z operatorem elvis `?:`, który dostarcza wartość zastępczą, gdy wartość po jego lewej stronie to `null`, cały `try`/`catch` skraca się do jednej linii:
 ```kotlin
 val n = "abc".toIntOrNull() ?: 0
 println(n) // 0
 ```
-Reach for `try`/`catch` when the failure is genuinely exceptional; reach for `toIntOrNull()` when bad input is expected.
+Sięgaj po `try`/`catch`, gdy awaria jest naprawdę wyjątkowa; sięgaj po `toIntOrNull()`, gdy spodziewasz się nieprawidłowych danych wejściowych.
 
 ---
 
-Your own functions can refuse bad input the same way the standard library does, with `throw`. The library already provides a type for the most common case: `IllegalArgumentException` means "the value you passed me is not acceptable".
+Twoje własne funkcje mogą odrzucać złe dane wejściowe w taki sam sposób jak biblioteka standardowa, za pomocą `throw`. Biblioteka udostępnia już typ dla najczęstszego przypadku: `IllegalArgumentException` oznacza „wartość, którą mi przekazałeś, jest niedopuszczalna”.
 
 ```kotlin
 fun half(n: Int): Int {
@@ -136,16 +136,16 @@ fun half(n: Int): Int {
     return n / 2
 }
 ```
-`throw` ends the function immediately — the `return` below it is never reached. The caller decides what to do about it:
+`throw` kończy działanie funkcji natychmiast — `return` znajdujący się poniżej nigdy nie zostaje wykonany. To wywołujący decyduje, co z tym zrobić:
 ```kotlin
 try { println(half(-4)) }
 catch (e: IllegalArgumentException) { println("rejected") }
 ```
-Throwing is better than quietly returning a made-up value: a wrong answer travels far, an exception stops at the first caller who is ready to handle it.
+Zgłoszenie wyjątku jest lepsze niż ciche zwrócenie zmyślonej wartości: błędna odpowiedź wędruje daleko, a wyjątek zatrzymuje się przy pierwszym wywołującym, który jest gotów go obsłużyć.
 
 ---
 
-Every exception carries the text it was created with. Inside a `catch` block you read it through the `message` property of the exception object:
+Każdy wyjątek niesie ze sobą tekst, z jakim został utworzony. Wewnątrz bloku `catch` odczytujesz go poprzez właściwość `message` obiektu wyjątku:
 ```kotlin
 try {
     throw IllegalArgumentException("price must be positive")
@@ -153,33 +153,33 @@ try {
     println(e.message) // price must be positive
 }
 ```
-`message` is nullable, because an exception may be built without any text; `e.message ?: "unknown"` gives a safe replacement when you need a plain `String`.
+`message` jest nullowalne, ponieważ wyjątek może zostać utworzony bez żadnego tekstu; `e.message ?: "unknown"` daje bezpieczną wartość zastępczą, gdy potrzebujesz zwykłego `String`.
 
-Prefer printing `e.message` over printing the exception object itself: the object's own text also includes the class name, which is noise for the person reading the output.
+Wypisuj raczej `e.message` niż sam obiekt wyjątku: własny tekst obiektu zawiera też nazwę klasy, co jest szumem dla osoby czytającej wynik.
 
 ---
 
-Writing `if (...) throw IllegalArgumentException(...)` on every argument gets noisy, so Kotlin provides two shorthands that read as plain sentences:
+Pisanie `if (...) throw IllegalArgumentException(...)` przy każdym argumencie robi się uciążliwe, więc Kotlin dostarcza dwa skróty, które czyta się jak zwykłe zdania:
 
 ```kotlin
-require(n >= 0) { "n must not be negative" }   // throws IllegalArgumentException
-check(started) { "not started" }               // throws IllegalStateException
+require(n >= 0) { "n must not be negative" }   // zgłasza IllegalArgumentException
+check(started) { "not started" }               // zgłasza IllegalStateException
 ```
-Both take a condition and a block producing the message, and both throw **when the condition is false**. The only difference is the exception type, and that difference is a message to the reader:
+Obie funkcje przyjmują warunek i blok tworzący komunikat, i obie zgłaszają wyjątek **gdy warunek jest fałszywy**. Jedyną różnicą jest typ wyjątku, a ta różnica jest wiadomością dla czytelnika:
 
-* `require` guards the **arguments** the caller passed, and fails with `IllegalArgumentException`.
-* `check` guards the **state** of the object or program, and fails with `IllegalStateException`.
+* `require` pilnuje **argumentów** przekazanych przez wywołującego i kończy się niepowodzeniem z `IllegalArgumentException`.
+* `check` pilnuje **stanu** obiektu lub programu i kończy się niepowodzeniem z `IllegalStateException`.
 
-The block is only evaluated when the check fails, so building the message costs nothing on the happy path.
+Blok jest obliczany tylko wtedy, gdy warunek zawiedzie, więc budowanie komunikatu nic nie kosztuje na szczęśliwej ścieżce.
 
 ---
 
-When none of the built-in types describes your failure well, declare your own. An exception is an ordinary class that extends `Exception` and hands its text to the parent:
+Gdy żaden z wbudowanych typów dobrze nie opisuje twojej awarii, zadeklaruj własny. Wyjątek to zwykła klasa, która rozszerza `Exception` i przekazuje swój tekst do klasy nadrzędnej:
 
 ```kotlin
 class InsufficientFundsException(message: String) : Exception(message)
 ```
-That single line is a complete exception type. It is thrown and caught like any other, and `e.message` returns the text it was built with:
+Ta pojedyncza linia to kompletny typ wyjątku. Jest zgłaszany i przechwytywany tak jak każdy inny, a `e.message` zwraca tekst, z jakim został utworzony:
 ```kotlin
 try {
     throw InsufficientFundsException("balance too low")
@@ -187,11 +187,11 @@ try {
     println(e.message) // balance too low
 }
 ```
-The gain is precision: a caller can catch `InsufficientFundsException` alone and let every other failure travel on.
+Zyskujesz precyzję: wywołujący może przechwycić samodzielnie `InsufficientFundsException`, a każdą inną awarię puścić dalej.
 
 ---
 
-`runCatching` runs a block and never lets an exception escape. Instead it hands back a `Result`, an object holding **either** the value the block produced **or** the exception it threw:
+`runCatching` wykonuje blok i nigdy nie pozwala wyjątkowi się wydostać. Zamiast tego zwraca `Result` — obiekt przechowujący **albo** wartość zwróconą przez blok, **albo** zgłoszony przez niego wyjątek:
 
 ```kotlin
 val ok = runCatching { "42".toInt() }
@@ -200,13 +200,13 @@ val bad = runCatching { "abc".toInt() }
 println(ok.isSuccess)   // true
 println(bad.isFailure)  // true
 ```
-The value is read out afterwards, and you choose what a failure should become:
+Wartość odczytuje się później, a ty decydujesz, czym ma się stać awaria:
 ```kotlin
 println(ok.getOrNull())      // 42
 println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
-`getOrNull()` turns a failure into `null`, while `getOrElse { ... }` runs the block to build a replacement. Nothing is thrown at the call site, so the failure can be carried around and dealt with later.
+`getOrNull()` zamienia awarię w `null`, podczas gdy `getOrElse { ... }` wykonuje blok, aby zbudować wartość zastępczą. Nic nie jest zgłaszane w miejscu wywołania, więc awarię można przenieść i obsłużyć później.
 
 ---
 
@@ -223,20 +223,20 @@ println(result.isSuccess)        // false
 
 ---
 
-A `Result` can also be inspected without unwrapping it. `onFailure` runs its block only when the result holds an exception, `onSuccess` only when it holds a value, and **both give the same `Result` back** so the calls can be chained:
+`Result` można też sprawdzić bez jego rozpakowywania. `onFailure` wykonuje swój blok tylko wtedy, gdy wynik zawiera wyjątek, `onSuccess` — tylko wtedy, gdy zawiera wartość, a **oba zwracają ten sam `Result`**, dzięki czemu wywołania można łączyć w łańcuch:
 
 ```kotlin
 runCatching { "abc".toInt() }
     .onFailure { println("could not read it") }
     .onSuccess { println("read $it") }
 ```
-Inside the block the exception (or the value) is available as `it`, so `it.message` is the text of the failure.
+Wewnątrz bloku wyjątek (lub wartość) jest dostępny jako `it`, więc `it.message` to tekst awarii.
 
-This is the "log and carry on" shape: report the problem where it happened, then continue, without an early `return` and without a `var` set from two places.
+To układ „zaloguj i działaj dalej”: zgłoś problem tam, gdzie się wydarzył, a potem kontynuuj, bez wczesnego `return` i bez `var` ustawianego w dwóch miejscach.
 
 ---
 
-Where the `try` sits decides how much work a single bad value destroys. Wrap the **whole loop** and the first failure abandons the rest of the batch; wrap the **body** and only that one element is lost:
+To, gdzie umieścisz `try`, decyduje, ile pracy niszczy pojedyncza zła wartość. Owiń nią **całą pętlę**, a pierwsza awaria porzuci resztę partii; owiń nią **ciało**, a straci się tylko ten jeden element:
 
 ```kotlin
 var total = 0
@@ -244,9 +244,9 @@ for (value in listOf("3", "x", "5")) {
     try {
         total += value.toInt()
     } catch (e: NumberFormatException) {
-        // skip this one
+        // pomiń tę wartość
     }
 }
 println(total) // 8
 ```
-This pairs naturally with a validating function that throws: the function states one rule and refuses anything breaking it, and the loop decides that a refusal only costs one element.
+Świetnie łączy się to z walidującą funkcją, która zgłasza wyjątek: funkcja ustala jedną regułę i odrzuca wszystko, co ją łamie, a pętla decyduje, że odrzucenie kosztuje tylko jeden element.

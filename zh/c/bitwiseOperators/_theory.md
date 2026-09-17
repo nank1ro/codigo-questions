@@ -145,18 +145,18 @@ AND 的结果并不是 `1`：它要么是 `0`，要么是掩码本身（对第 `
 
 ---
 
-**Flags** are named masks, each one using a different bit, that can all be stored inside a single variable. They are combined with `|` and read back with `&`:
+**标志**是带名字的掩码，每个标志各占不同的一位，可以全部保存在同一个变量里。它们用 `|` 组合，用 `&` 读取回来：
 ```c
 unsigned int READ = 0x01, WRITE = 0x02;
 unsigned int perms = READ | WRITE;
 printf("%d\n", (perms & WRITE) != 0);
 // 打印 "1"
 ```
-One `unsigned int` can therefore carry 32 independent yes/no answers.
+因此，一个 `unsigned int` 就能携带 32 个独立的是/否答案。
 
 ---
 
-Before C23 there was no format specifier that printed a number in binary, and literals like `0b1010` were not standard C either. To show the bits you write the loop yourself: walk from the highest bit down to bit `0` and print `(value >> i) & 1u` each time.
+在 C23 之前，没有能把数字打印成二进制的格式说明符，`0b1010` 这样的字面量也不是标准 C 的写法。要显示这些位，你需要自己写循环：从最高位一直遍历到第 `0` 位，每次打印 `(value >> i) & 1u`。
 ```c
 unsigned int value = 5;
 for (int i = 3; i >= 0; i--) {
@@ -165,11 +165,11 @@ for (int i = 3; i >= 0; i--) {
 printf("\n");
 // 打印 "0101"
 ```
-Shifting the value down by `i` brings bit `i` into the rightmost place, where `& 1u` isolates it.
+把值右移 `i` 位，会把第 `i` 位移到最右端，这时 `& 1u` 就能把它单独取出来。
 
 ---
 
-Counting how many bits of a value are `1` is a classic bit loop: test the lowest bit with `& 1u`, add it to a counter, then shift the value one place right with `>>=` and repeat until nothing is left.
+统计一个值中有多少位是 `1`，是一种经典的位循环：用 `& 1u` 测试最低位，把结果加到计数器上，再用 `>>=` 把值右移一位，重复这个过程直到值变为 `0`。
 ```c
 unsigned int value = 6, count = 0;
 while (value != 0) {
@@ -178,14 +178,14 @@ while (value != 0) {
 }
 // count 为 2
 ```
-The loop always ends, because an unsigned value shifted right enough times becomes `0`.
+这个循环总会结束，因为无符号值经过足够多次右移后一定会变成 `0`。
 
 ---
 
-Several small numbers are often packed inside one larger value. To read one of them back, first shift it down so it starts at bit `0`, then mask off everything above it:
+多个较小的数字常常被打包进一个更大的值里。要把其中一个读取回来，先把它右移，使其从第 `0` 位开始，再掩码掉它上面的所有位：
 ```c
 unsigned int packed = 0x1234;
 printf("%u\n", (packed >> 8) & 0xFF);
 // 打印 "18"，即 0x12 字节
 ```
-Shifting first and masking afterwards is the order to remember: the mask always describes the field once it has reached the bottom.
+先移位、再掩码，这个顺序要记住：掩码描述的始终是字段移到最底部之后的样子。

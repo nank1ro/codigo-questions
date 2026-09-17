@@ -19,13 +19,13 @@ Un protocolo no contiene datos propios: es un contrato. Todo tipo que lo satisfa
 
 ---
 
-A protocol can also require **methods**. You write the signature — name, parameters and return type — and stop there, with no body:
+Un protocolo también puede requerir **métodos**. Escribes la firma —nombre, parámetros y tipo de retorno— y te detienes ahí, sin cuerpo:
 ```swift
 protocol Greeter {
     func greet() -> String
 }
 ```
-A conforming type must declare a method with exactly that signature, and it supplies the body:
+Un tipo que conforma debe declarar un método con exactamente esa firma, y es él quien aporta el cuerpo:
 ```swift
 struct Robot: Greeter {
     func greet() -> String {
@@ -35,22 +35,22 @@ struct Robot: Greeter {
 
 print(Robot().greet()) // BEEP
 ```
-If anything differs — the name, a parameter type, the return type — the type does not conform, and the compiler tells you which requirement is missing.
+Si algo difiere —el nombre, el tipo de un parámetro, el tipo de retorno—, el tipo no conforma, y el compilador te dice qué requisito falta.
 
 ---
 
-A property requirement always states how the property can be used. `{ get }` asks only that the value can be read; `{ get set }` asks that it can be read **and** assigned:
+Un requisito de propiedad siempre indica cómo se puede usar la propiedad. `{ get }` solo pide que el valor se pueda leer; `{ get set }` pide que se pueda leer **y** asignar:
 ```swift
 protocol Account {
     var owner: String { get }
     var balance: Int { get set }
 }
 ```
-A conforming type may always give more than the contract asks for: a `var` stored property satisfies `{ get }` perfectly well. It may never give less — a `let` constant, or a read-only computed property, cannot satisfy `{ get set }`.
+Un tipo que conforma siempre puede dar más de lo que pide el contrato: una propiedad almacenada `var` satisface `{ get }` perfectamente. Nunca puede dar menos —una constante `let`, o una propiedad computada de solo lectura, no puede satisfacer `{ get set }`.
 
 ---
 
-Protocols are not limited to structs. A **class** conforms in exactly the same way, by listing the protocol after a colon:
+Los protocolos no se limitan a los structs. Una **clase** conforma exactamente de la misma manera, poniendo el protocolo después de dos puntos:
 ```swift
 protocol Openable {
     func open() -> String
@@ -62,11 +62,11 @@ class Door: Openable {
     }
 }
 ```
-If the class also inherits from another class, the superclass comes first in the list and the protocols follow it. A type may adopt several protocols at once, separated by commas.
+Si la clase además hereda de otra clase, la superclase va primero en la lista y los protocolos la siguen. Un tipo puede adoptar varios protocolos a la vez, separados por comas.
 
 ---
 
-An **enum** can conform too. It has no stored properties, so a property requirement is usually met with a computed property that switches over the cases:
+Un **enum** también puede conformar. No tiene propiedades almacenadas, así que un requisito de propiedad normalmente se cumple con una propiedad computada que hace `switch` sobre los casos:
 ```swift
 protocol Priced {
     var price: Int { get }
@@ -85,11 +85,11 @@ enum Ticket: Priced {
 
 print(Ticket.adult.price) // 12
 ```
-Structs, classes and enums: all three adopt protocols the same way, and code written against the protocol works with all of them.
+Structs, clases y enums: los tres adoptan protocolos de la misma manera, y el código escrito contra el protocolo funciona con todos ellos.
 
 ---
 
-A protocol usually collects more than one requirement, and a conforming type must satisfy every one of them:
+Un protocolo normalmente reúne más de un requisito, y un tipo que conforma debe satisfacerlos todos:
 ```swift
 protocol Vehicle {
     var wheels: Int { get }
@@ -104,11 +104,11 @@ struct Bike: Vehicle {
     }
 }
 ```
-The order of the requirements inside the braces does not matter, and neither does the order in which the conforming type provides them: the compiler only checks that nothing is missing.
+El orden de los requisitos dentro de las llaves no importa, y tampoco importa el orden en que el tipo que conforma los proporciona: el compilador solo comprueba que no falte nada.
 
 ---
 
-A struct is a value type, so a method that changes one of its stored properties must be marked `mutating`. When that method is a protocol requirement, the protocol has to say so as well:
+Un struct es un tipo de valor, así que un método que cambia una de sus propiedades almacenadas debe marcarse `mutating`. Cuando ese método es un requisito del protocolo, el protocolo también tiene que indicarlo:
 ```swift
 protocol Togglable {
     mutating func toggle()
@@ -126,11 +126,11 @@ var lamp = Light()
 lamp.toggle()
 print(lamp.isOn) // true
 ```
-Without `mutating` in the protocol, a struct could never satisfy the requirement. Classes are reference types and never need the keyword: a class meets a `mutating` requirement with a plain method. Calling a mutating method needs a `var` — on a `let` it is a compile error.
+Sin `mutating` en el protocolo, un struct nunca podría satisfacer el requisito. Las clases son tipos de referencia y nunca necesitan la palabra clave: una clase cumple un requisito `mutating` con un método normal. Llamar a un método mutating necesita un `var` —sobre un `let` es un error de compilación.
 
 ---
 
-Conformance does not have to be declared next to the type. An **extension** can add it later, which keeps the type's own declaration focused on its data:
+La conformidad no tiene que declararse junto al tipo. Una **extensión** puede añadirla más tarde, lo que mantiene la propia declaración del tipo centrada en sus datos:
 ```swift
 protocol Resettable {
     mutating func reset()
@@ -146,11 +146,11 @@ extension Timer: Resettable {
     }
 }
 ```
-This also works for types you did not write: you can make a standard library type conform to one of your protocols without touching its source.
+Esto también funciona con tipos que no escribiste tú: puedes hacer que un tipo de la biblioteca estándar conforme a uno de tus protocolos sin tocar su código fuente.
 
 ---
 
-An extension of a **protocol** is a different tool: it adds members to every type that conforms, present and future. That is how you give a requirement a **default implementation**:
+Una extensión de un **protocolo** es una herramienta distinta: añade miembros a todo tipo que conforme, presente y futuro. Así es como le das a un requisito una **implementación por defecto**:
 ```swift
 protocol Greeter {
     var name: String { get }
@@ -169,11 +169,11 @@ struct Person: Greeter {
 
 print(Person(name: "Ada").greet()) // Hi, Ada
 ```
-`Person` never writes `greet()` and still conforms. Inside the protocol extension you can use every requirement of the protocol — here `name` — because any conforming type is guaranteed to have it.
+`Person` nunca escribe `greet()` y aun así conforma. Dentro de la extensión del protocolo puedes usar cualquier requisito del protocolo —aquí `name`— porque cualquier tipo que conforme tiene garantizado tenerlo.
 
 ---
 
-A protocol extension can also add members the protocol never listed as requirements. They are extra conveniences, available on every conforming type:
+Una extensión de protocolo también puede añadir miembros que el protocolo nunca listó como requisitos. Son comodidades extra, disponibles en todo tipo que conforme:
 ```swift
 protocol Sized {
     var count: Int { get }
@@ -185,11 +185,11 @@ extension Sized {
     }
 }
 ```
-`isEmpty` is not a requirement, so a conforming type does not have to provide it — it simply gets it.
+`isEmpty` no es un requisito, así que un tipo que conforma no tiene que proporcionarlo —simplemente lo obtiene.
 
 ---
 
-A protocol can build on another one. Writing a protocol name after the colon makes the new protocol **inherit** every requirement of the old one:
+Un protocolo puede construirse sobre otro. Escribir el nombre de un protocolo después de los dos puntos hace que el nuevo protocolo **herede** todos los requisitos del anterior:
 ```swift
 protocol Named {
     var name: String { get }
@@ -199,11 +199,11 @@ protocol Aged: Named {
     var age: Int { get }
 }
 ```
-A type conforming to `Aged` must provide `age` *and* `name`, and it counts as a `Named` type everywhere. A protocol can inherit from several protocols at once, separated by commas.
+Un tipo que conforma a `Aged` debe proporcionar `age` *y* `name`, y cuenta como un tipo `Named` en todas partes. Un protocolo puede heredar de varios protocolos a la vez, separados por comas.
 
 ---
 
-A default implementation is a fallback, not a rule. If a conforming type provides its own version of a requirement, its version is the one that runs:
+Una implementación por defecto es un respaldo, no una regla. Si un tipo que conforma proporciona su propia versión de un requisito, es esa versión la que se ejecuta:
 ```swift
 protocol Priced {
     var price: Int { get }
@@ -219,13 +219,13 @@ struct Ticket: Priced {
 
 print(Ticket().price) // 12, no 0
 ```
-The default only fills the gaps the type leaves open.
+El valor por defecto solo rellena los huecos que el tipo deja abiertos.
 
 ---
 
-The standard library is built out of protocols, and your own types can adopt them.
+La biblioteca estándar está construida a partir de protocolos, y tus propios tipos pueden adoptarlos.
 
-`Equatable` gives a type the `==` operator. For a struct whose stored properties are all `Equatable`, declaring the conformance is enough — Swift writes `==` for you:
+`Equatable` le da a un tipo el operador `==`. Para un struct cuyas propiedades almacenadas son todas `Equatable`, basta con declarar la conformidad —Swift escribe `==` por ti:
 ```swift
 struct Point: Equatable {
     var x: Int
@@ -234,7 +234,7 @@ struct Point: Equatable {
 
 print(Point(x: 1, y: 2) == Point(x: 1, y: 2)) // true
 ```
-`Comparable` inherits from `Equatable` and adds ordering. You implement a single operator, `<`, written as a `static func` taking the two values, and you get `>`, `<=`, `>=`, plus `sorted()`, `min()` and `max()` on collections for free:
+`Comparable` hereda de `Equatable` y añade ordenación. Implementas un único operador, `<`, escrito como una `static func` que toma los dos valores, y obtienes `>`, `<=`, `>=`, además de `sorted()`, `min()` y `max()` sobre colecciones gratis:
 ```swift
 struct Version: Comparable {
     var number: Int
@@ -247,7 +247,7 @@ struct Version: Comparable {
 
 ---
 
-`CustomStringConvertible` decides what `print` shows for your type. Its single requirement is a `description` property:
+`CustomStringConvertible` decide qué muestra `print` para tu tipo. Su único requisito es una propiedad `description`:
 ```swift
 struct Coin: CustomStringConvertible {
     var value: Int
@@ -259,20 +259,20 @@ struct Coin: CustomStringConvertible {
 
 print(Coin(value: 25)) // 25c
 ```
-Without the conformance, printing a struct falls back to a default dump like `Coin(value: 25)`, and a `description` property alone changes nothing — `print` looks for the protocol. String interpolation uses `description` too.
+Sin la conformidad, imprimir un struct recurre por defecto a un volcado como `Coin(value: 25)`, y una propiedad `description` por sí sola no cambia nada —`print` busca el protocolo. La interpolación de cadenas también usa `description`.
 
 ---
 
-A protocol name on its own is not a type, it is a constraint, so Swift asks you to say which of two things you mean.
+El nombre de un protocolo por sí solo no es un tipo, es una restricción, así que Swift te pide que digas cuál de dos cosas quieres decir.
 
-`some Shape` means *one specific conforming type*, fixed at compile time. The caller never learns which one, but it is always the same:
+`some Shape` significa *un tipo concreto que conforma*, fijado en tiempo de compilación. Quien llama nunca sabe cuál es, pero siempre es el mismo:
 ```swift
 func unitSquare() -> some Shape {
     return Square(side: 1)
 }
 ```
-`any Shape` means *a box that can hold any conforming type*, and two values of that type may hold different types. You need it whenever the concrete type can vary, such as inside a mixed array:
+`any Shape` significa *una caja que puede contener cualquier tipo que conforme*, y dos valores de ese tipo pueden contener tipos diferentes. Lo necesitas siempre que el tipo concreto pueda variar, como dentro de un array mixto:
 ```swift
 let shapes: [any Shape] = [Square(side: 2), Rect(width: 2, height: 3)]
 ```
-Both let you call the protocol's requirements. Prefer `some` when a single type is enough, because it costs nothing at run time; reach for `any` when you genuinely need to mix types.
+Ambos te dejan llamar a los requisitos del protocolo. Prefiere `some` cuando un único tipo es suficiente, porque no cuesta nada en tiempo de ejecución; recurre a `any` cuando realmente necesites mezclar tipos.
