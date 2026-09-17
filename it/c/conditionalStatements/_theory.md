@@ -88,3 +88,84 @@ if (num < 3) {
 }
 ```
 e l'output del codice è `il numero è 4`.
+
+---
+
+È il momento di mettere in pratica la sintassi dell'istruzione `if`: la parola chiave, una condizione tra parentesi e un blocco di codice racchiuso tra parentesi graffe.
+```c
+if (condition) {
+    // viene eseguito se la condizione è vera
+}
+```
+
+---
+
+I letterali booleani di C sono `true` e `false`: minuscoli, senza virgolette, e definiti da `<stdbool.h>` invece di essere integrati nel linguaggio. Scrivere `True` non compila come condizione — funziona solo la forma minuscola, e quando vale `true` il blocco viene eseguito.
+
+---
+
+C non ha un test booleano separato: una condizione è vera ogni volta che il suo valore è diverso da zero. `false` definito da `<stdbool.h>` è semplicemente `0`, quindi un blocco protetto da esso non viene mai eseguito.
+
+---
+
+Un'istruzione `if` in C è composta da tre parti: la parola chiave `if`, una condizione tra parentesi e un blocco tra parentesi graffe. Le parentesi sono obbligatorie — sono il modo in cui il compilatore capisce dove finisce la condizione.
+
+---
+
+Ogni istruzione condizionale inizia con una parola chiave che dice al compilatore che occorre verificare una condizione prima di decidere cosa eseguire successivamente.
+
+---
+
+Una condizione letterale `true` è sempre vera, quindi il blocco viene eseguito e il suo `printf` viene eseguito esattamente come scritto.
+
+---
+
+Una condizione letterale `false` non è mai vera, quindi il blocco viene saltato completamente e nulla al suo interno viene eseguito.
+
+---
+
+Le condizioni sono i valori che un'istruzione `if` controlla: quando una condizione è `true` il blocco viene eseguito, quando è `false` viene saltato.
+
+---
+
+La parentesi graffa di apertura può stare sulla stessa riga della condizione oppure sulla riga successiva. C ignora l'a capo, quindi entrambi gli stili compilano esattamente nello stesso programma.
+
+---
+
+Le parentesi attorno a una condizione fanno parte della sintassi dell'`if` in C, non sono un raggruppamento opzionale: `if true { ... }` non compila.
+
+---
+
+Una `"false"` tra virgolette è una stringa, non un booleano — e una stringa in una condizione è un indirizzo non nullo, che conta come vero. Solo il `false` senza virgolette impedisce l'esecuzione del blocco.
+
+---
+
+Gli spazi tra le parti di una riga `if` sono liberi in C: `if(true){` e `if (true) {` sono la stessa istruzione per il compilatore, quindi conta solo l'ordine delle parti.
+
+---
+
+Un blocco di codice non è limitato a una sola istruzione. Ogni istruzione tra le parentesi graffe viene eseguita, una dopo l'altra, nell'ordine in cui è scritta.
+
+---
+
+Una variabile booleana può essere usata direttamente come condizione, senza bisogno di confronti. Poiché `online` contiene già `true`, scrivere semplicemente `if (online)` è sufficiente per eseguire il blocco.
+
+---
+
+Una variabile `bool` funziona come condizione perché `if` guarda solo il valore che contiene in quel momento. Con `false` in `online`, `if (online)` si comporta esattamente come `if (false)`.
+
+---
+
+Solo il codice tra le parentesi graffe di un'istruzione `if` è condizionale. Tutto ciò che è scritto dopo la parentesi graffa di chiusura viene eseguito incondizionatamente, indipendentemente dalla condizione.
+
+---
+
+Non c'è un limite fisso al numero di istruzioni che un blocco di codice può contenere — una riga o cento, vengono eseguite tutte insieme quando la condizione è `true`.
+
+---
+
+Leggere una variabile booleana come condizione funziona proprio come un letterale: poiché `online` contiene `true`, il blocco viene eseguito e il suo `printf` viene eseguito.
+
+---
+
+Quando invece `online` contiene `false`, la condizione è falsa, quindi il blocco viene saltato completamente e non viene stampato nulla all'interno di quelle parentesi graffe.

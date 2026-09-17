@@ -88,3 +88,84 @@ if (num < 3) {
 }
 ```
 and the output of this code is `the number is 4`.
+
+---
+
+Time to put the `if` statement's syntax into practice: the keyword, a condition in parentheses, and a code block wrapped in curly braces.
+```c
+if (condition) {
+    // runs when condition is true
+}
+```
+
+---
+
+C's boolean literals are `true` and `false`: lowercase, unquoted, and defined by `<stdbool.h>` rather than being built into the language. Writing `True` won't compile as a condition — only the lowercase form works, and when it's `true` the block runs.
+
+---
+
+C has no separate boolean test: a condition is true whenever its value is anything other than zero. `false` from `<stdbool.h>` is simply `0`, so a block guarded by it never runs.
+
+---
+
+An `if` statement in C is made of three parts: the `if` keyword, a condition in parentheses, and a block in braces. The parentheses are required — they are how the compiler knows where the condition ends.
+
+---
+
+Every conditional statement starts with a keyword that tells the compiler a condition needs to be checked before deciding what runs next.
+
+---
+
+A literal `true` condition is always true, so the block runs and its `printf` executes exactly as written.
+
+---
+
+A literal `false` condition is never true, so the block is skipped completely and nothing inside it runs.
+
+---
+
+Conditions are the values an `if` statement checks: when a condition is `true` the block runs, when it's `false` it's skipped.
+
+---
+
+The opening brace may sit on the same line as the condition or on the line below it. C ignores the line break, so both styles compile to exactly the same program.
+
+---
+
+The parentheses around a condition are part of C's `if` syntax, not optional grouping: `if true { ... }` does not compile.
+
+---
+
+A quoted `"false"` is a string, not a boolean — and a string in a condition is a non-null address, which counts as true. Only the unquoted `false` keeps the block from running.
+
+---
+
+Spacing between the pieces of an `if` line is free in C: `if(true){` and `if (true) {` are the same statement to the compiler, so only the order of the pieces matters.
+
+---
+
+A code block isn't limited to one statement. Every statement between the braces runs, one after another, in the order it is written.
+
+---
+
+A boolean variable can be used directly as a condition, no comparison needed. Since `online` already holds `true`, writing `if (online)` on its own is enough to run the block.
+
+---
+
+A `bool` variable works as a condition because `if` looks only at the value stored in it at that moment. With `false` in `online`, `if (online)` behaves exactly like `if (false)`.
+
+---
+
+Only the code between an `if` statement's curly braces is conditional. Anything written after the closing brace runs unconditionally, no matter what the condition was.
+
+---
+
+There's no fixed limit on how many statements a code block can hold — one line or a hundred, they all run together when the condition is `true`.
+
+---
+
+Reading a boolean variable as a condition works just like a literal: since `online` holds `true`, the block executes and its `printf` runs.
+
+---
+
+When `online` holds `false` instead, the condition is false, so the block is skipped completely and nothing inside those braces gets printed.

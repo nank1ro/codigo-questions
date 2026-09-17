@@ -40,7 +40,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -307,12 +307,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -589,7 +589,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -750,7 +750,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -893,7 +893,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -1160,12 +1160,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -1442,7 +1442,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -1603,7 +1603,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -2599,7 +2599,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -2866,12 +2866,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -3148,7 +3148,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -3309,7 +3309,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -3452,7 +3452,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -3719,12 +3719,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -4001,7 +4001,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -4162,7 +4162,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -4305,7 +4305,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -4572,12 +4572,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -4854,7 +4854,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -5015,7 +5015,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -5158,7 +5158,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -5425,12 +5425,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -5707,7 +5707,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -5868,7 +5868,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -6011,7 +6011,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -6278,12 +6278,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -6560,7 +6560,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -6721,7 +6721,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -6864,7 +6864,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -7131,12 +7131,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -7413,7 +7413,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -7574,7 +7574,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -7717,7 +7717,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -7984,12 +7984,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -8266,7 +8266,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -8427,7 +8427,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -8570,7 +8570,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -8837,12 +8837,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -9119,7 +9119,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -9280,7 +9280,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {
@@ -9423,7 +9423,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 25,
           "totalExercises": 42
         },
         {
@@ -9690,12 +9690,12 @@
         },
         {
           "name": "comparisonLogicalOperators",
-          "trainUntil": 9,
+          "trainUntil": 15,
           "totalExercises": 23
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 8,
+          "trainUntil": 24,
           "totalExercises": 45
         },
         {
@@ -9972,7 +9972,7 @@
         },
         {
           "name": "conditionalStatements",
-          "trainUntil": 6,
+          "trainUntil": 41,
           "totalExercises": 43
         },
         {
@@ -10133,7 +10133,7 @@
         },
         {
           "name": "enumerations",
-          "trainUntil": 4,
+          "trainUntil": 5,
           "totalExercises": 9
         },
         {

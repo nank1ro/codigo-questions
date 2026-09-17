@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // prints blue, red, green
 ```
+
+---
+
+Instead of a `for-in` loop, you can iterate over a collection using its `forEach` method, which calls a closure once for each element:
+```swift
+Colors.allCases.forEach { print($0) }
+```

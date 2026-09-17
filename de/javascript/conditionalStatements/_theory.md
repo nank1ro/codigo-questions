@@ -122,3 +122,74 @@ Der Nil-Coalescing-Operator ist die Kurzform für den untenstehenden Code:
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+`if` ist das Schlüsselwort, das eine bedingte Anweisung in JavaScript einleitet. Es gibt hier kein Schlüsselwort `elif` — eine zweite Bedingung wird mit `else if` eingeleitet, geschrieben als zwei getrennte Wörter.
+
+---
+
+Die booleschen Literale in JavaScript sind kleingeschrieben: `true` und `false`, nicht `True`/`False`, und auch nicht die Zeichenketten `"true"`/`"false"`.
+
+---
+
+Damit ein Codeblock nicht ausgeführt wird, muss die Bedingung in den Klammern zu `false` ausgewertet werden.
+
+---
+
+Das Leerzeichen zwischen `if` und seinen Klammern ist rein kosmetisch: `if(true)` und `if (true)` sind für JavaScript dieselbe Anweisung.
+
+---
+
+Die geschwungenen Klammern sind es, die mehrere Anweisungen zu einem Block zusammenfassen. Ohne sie steuert ein `if` nur die einzelne Anweisung, die darauf folgt, weshalb `if (true) console.log("Hello!");` gültiges JavaScript ist.
+
+---
+
+Die Bedingung wird einmal ausgewertet, bevor der Block beginnt. JavaScript schaut sie sich nicht noch einmal an, während die Anweisungen zwischen den geschwungenen Klammern ausgeführt werden.
+
+---
+
+Eine `false`-Bedingung überspringt den Block vollständig, und das Programm setzt bei der ersten Anweisung nach der schließenden Klammer fort.
+
+---
+
+Eine Bedingung muss kein boolescher Wert sein: JavaScript wandelt alles, was es vorfindet, in einen solchen um, weshalb `if (1)` seinen Block ausführt und `if (0)` nicht. Ein literales `true` braucht überhaupt keine Umwandlung.
+
+---
+
+Ein Codeblock ist nicht auf eine einzige Zeile beschränkt — jede Anweisung innerhalb der geschwungenen Klammern wird der Reihe nach ausgeführt, wenn die Bedingung `true` ist.
+```javascript
+if (true) {
+    console.log("First line");
+    console.log("Second line");
+}
+```
+und die Ausgabe ist `First line`, gefolgt von `Second line`.
+
+---
+
+Anweisungen innerhalb eines Blocks werden nacheinander ausgeführt, von oben nach unten, weshalb zwei `console.log`-Aufrufe im selben Block auf zwei getrennten Zeilen ausgeben.
+
+---
+
+Die Einrückung der Anweisungen innerhalb eines Blocks ist nur eine Konvention zur besseren Lesbarkeit. JavaScript verwendet die geschwungenen Klammern, niemals die Einrückung, um zu entscheiden, was zum Block gehört.
+
+---
+
+Anweisungen wie `if`, `else if` und `else`, die Code je nachdem ausführen oder überspringen, ob eine Bedingung `true` oder `false` ist, werden **bedingte Anweisungen** genannt.
+
+---
+
+Eine boolesche Variable, selbst eine aus einer `!`-Negation gebildete wie `isAfternoon`, kann direkt als `if`-Bedingung verwendet werden, ohne dass ein Vergleich nötig ist.
+
+---
+
+Die Bedingung einer `if`-Anweisung steht immer innerhalb von Klammern `()`, direkt nach dem Schlüsselwort `if` und vor der öffnenden geschwungenen Klammer.
+
+---
+
+Ein Block kann eine beliebige Anzahl von Anweisungen enthalten, aber auch keine: `if (true) {}` ist gültiges JavaScript, das einfach nichts tut.
+
+---
+
+Der Codeblock einer `if`-Anweisung ist die Menge der Anweisungen innerhalb der geschwungenen Klammern `{ }`, der Teil, der tatsächlich ausgeführt wird, wenn die Bedingung `true` ist.

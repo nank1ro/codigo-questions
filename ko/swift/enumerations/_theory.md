@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // blue, red, green을 출력
 ```
+
+---
+
+`for-in` 루프 대신, 컬렉션의 `forEach` 메서드를 사용하여 각 요소마다 클로저를 한 번씩 호출하며 순회할 수 있습니다:
+```swift
+Colors.allCases.forEach { print($0) }
+```

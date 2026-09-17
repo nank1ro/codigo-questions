@@ -50,3 +50,10 @@ for color in Colors.allCases {
 }
 // blue, red, green प्रिंट करता है
 ```
+
+---
+
+`for-in` लूप के बजाय, आप किसी संग्रह पर उसकी `forEach` मेथड का उपयोग करके इटरेट कर सकते हैं, जो हर एलिमेंट के लिए एक बार क्लोज़र को कॉल करती है:
+```swift
+Colors.allCases.forEach { print($0) }
+```

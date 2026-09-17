@@ -88,3 +88,84 @@ if (num < 3) {
 }
 ```
 und die Ausgabe dieses Codes ist `the number is 4`.
+
+---
+
+Zeit, die Syntax der `if`-Anweisung in die Praxis umzusetzen: das Schlüsselwort, eine Bedingung in Klammern und ein Codeblock, der in geschwungene Klammern eingeschlossen ist.
+```c
+if (condition) {
+    // wird ausgeführt, wenn die Bedingung wahr ist
+}
+```
+
+---
+
+Die booleschen Literale in C sind `true` und `false`: kleingeschrieben, ohne Anführungszeichen, und definiert durch `<stdbool.h>`, statt fest in die Sprache eingebaut zu sein. `True` lässt sich als Bedingung nicht kompilieren — nur die kleingeschriebene Form funktioniert, und wenn sie `true` ist, wird der Block ausgeführt.
+
+---
+
+C kennt keinen eigenen booleschen Test: Eine Bedingung ist wahr, sobald ihr Wert etwas anderes als null ist. `false` aus `<stdbool.h>` ist schlicht `0`, weshalb ein davon abhängiger Block nie ausgeführt wird.
+
+---
+
+Eine `if`-Anweisung in C besteht aus drei Teilen: dem Schlüsselwort `if`, einer Bedingung in Klammern und einem Block in geschwungenen Klammern. Die Klammern sind erforderlich — an ihnen erkennt der Compiler, wo die Bedingung endet.
+
+---
+
+Jede bedingte Anweisung beginnt mit einem Schlüsselwort, das dem Compiler mitteilt, dass eine Bedingung geprüft werden muss, bevor entschieden wird, was als Nächstes ausgeführt wird.
+
+---
+
+Eine `true`-Bedingung ist immer wahr, also wird der Block ausgeführt und sein `printf` läuft genau so ab, wie geschrieben.
+
+---
+
+Eine `false`-Bedingung ist nie wahr, also wird der Block vollständig übersprungen und nichts darin wird ausgeführt.
+
+---
+
+Bedingungen sind die Werte, die eine `if`-Anweisung prüft: Ist eine Bedingung `true`, wird der Block ausgeführt, ist sie `false`, wird er übersprungen.
+
+---
+
+Die öffnende geschwungene Klammer kann in derselben Zeile wie die Bedingung stehen oder in der Zeile darunter. C ignoriert den Zeilenumbruch, sodass beide Stile zu genau demselben Programm kompiliert werden.
+
+---
+
+Die Klammern um eine Bedingung sind Teil der `if`-Syntax von C, keine optionale Gruppierung: `if true { ... }` lässt sich nicht kompilieren.
+
+---
+
+Ein in Anführungszeichen gesetztes `"false"` ist eine Zeichenkette, kein boolescher Wert — und eine Zeichenkette ist in einer Bedingung eine von null verschiedene Adresse, was als wahr zählt. Nur das nicht in Anführungszeichen gesetzte `false` verhindert, dass der Block ausgeführt wird.
+
+---
+
+Der Abstand zwischen den Teilen einer `if`-Zeile ist in C frei wählbar: `if(true){` und `if (true) {` sind für den Compiler dieselbe Anweisung, es zählt also nur die Reihenfolge der Teile.
+
+---
+
+Ein Codeblock ist nicht auf eine Anweisung beschränkt. Jede Anweisung zwischen den geschwungenen Klammern wird der Reihe nach ausgeführt, in der Reihenfolge, in der sie geschrieben ist.
+
+---
+
+Eine boolesche Variable kann direkt als Bedingung verwendet werden, ohne dass ein Vergleich nötig ist. Da `online` bereits `true` enthält, reicht `if (online)` allein aus, um den Block auszuführen.
+
+---
+
+Eine `bool`-Variable funktioniert als Bedingung, weil `if` nur den Wert betrachtet, der in diesem Moment darin gespeichert ist. Mit `false` in `online` verhält sich `if (online)` genau wie `if (false)`.
+
+---
+
+Nur der Code zwischen den geschwungenen Klammern einer `if`-Anweisung ist bedingt. Alles, was nach der schließenden Klammer steht, wird unbedingt ausgeführt, unabhängig davon, wie die Bedingung war.
+
+---
+
+Es gibt keine feste Grenze dafür, wie viele Anweisungen ein Codeblock enthalten kann — eine Zeile oder hundert, sie werden alle zusammen ausgeführt, wenn die Bedingung `true` ist.
+
+---
+
+Eine boolesche Variable als Bedingung zu lesen, funktioniert genau wie ein Literal: Da `online` `true` enthält, wird der Block ausgeführt und sein `printf` läuft.
+
+---
+
+Enthält `online` stattdessen `false`, ist die Bedingung falsch, also wird der Block vollständig übersprungen und nichts innerhalb dieser geschwungenen Klammern wird ausgegeben.

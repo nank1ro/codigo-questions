@@ -88,3 +88,84 @@ if (num < 3) {
 }
 ```
 et la sortie de ce code est `the number is 4`.
+
+---
+
+Il est temps de mettre en pratique la syntaxe de la déclaration `if` : le mot-clé, une condition entre parenthèses, et un bloc de code entre accolades.
+```c
+if (condition) {
+    // s'exécute si la condition est vraie
+}
+```
+
+---
+
+Les littéraux booléens en C sont `true` et `false` : en minuscules, sans guillemets, et définis par `<stdbool.h>` plutôt qu'intégrés au langage. Écrire `True` ne compilera pas comme condition — seule la forme en minuscules fonctionne, et quand elle vaut `true`, le bloc s'exécute.
+
+---
+
+Le C n'a pas de test booléen distinct : une condition est vraie dès que sa valeur est différente de zéro. `false`, défini dans `<stdbool.h>`, vaut simplement `0`, donc un bloc protégé par cette valeur ne s'exécute jamais.
+
+---
+
+Une déclaration `if` en C se compose de trois parties : le mot-clé `if`, une condition entre parenthèses, et un bloc entre accolades. Les parenthèses sont obligatoires — c'est ainsi que le compilateur sait où se termine la condition.
+
+---
+
+Chaque déclaration conditionnelle commence par un mot-clé qui indique au compilateur qu'une condition doit être vérifiée avant de décider ce qui s'exécute ensuite.
+
+---
+
+Une condition littérale `true` est toujours vraie, donc le bloc s'exécute et son `printf` s'exécute exactement tel qu'il est écrit.
+
+---
+
+Une condition littérale `false` n'est jamais vraie, donc le bloc est entièrement ignoré et rien de ce qu'il contient ne s'exécute.
+
+---
+
+Les conditions sont les valeurs qu'une déclaration `if` vérifie : quand une condition est `true`, le bloc s'exécute, quand elle est `false`, il est ignoré.
+
+---
+
+L'accolade ouvrante peut se trouver sur la même ligne que la condition ou sur la ligne suivante. Le C ignore le saut de ligne, donc les deux styles se compilent en exactement le même programme.
+
+---
+
+Les parenthèses autour d'une condition font partie de la syntaxe `if` du C, ce ne sont pas un regroupement optionnel : `if true { ... }` ne compile pas.
+
+---
+
+Un `"false"` entre guillemets est une chaîne de caractères, pas un booléen — et une chaîne dans une condition est une adresse non nulle, ce qui compte comme vrai. Seul le `false` sans guillemets empêche le bloc de s'exécuter.
+
+---
+
+L'espacement entre les éléments d'une ligne `if` est libre en C : `if(true){` et `if (true) {` sont la même instruction pour le compilateur, seul l'ordre des éléments compte.
+
+---
+
+Un bloc de code ne se limite pas à une seule instruction. Chaque instruction entre les accolades s'exécute, l'une après l'autre, dans l'ordre où elle est écrite.
+
+---
+
+Une variable booléenne peut être utilisée directement comme condition, sans avoir besoin de comparaison. Puisque `online` contient déjà `true`, écrire simplement `if (online)` suffit à exécuter le bloc.
+
+---
+
+Une variable `bool` fonctionne comme condition parce que `if` ne regarde que la valeur qu'elle contient à cet instant. Avec `false` dans `online`, `if (online)` se comporte exactement comme `if (false)`.
+
+---
+
+Seul le code entre les accolades d'une déclaration `if` est conditionnel. Tout ce qui est écrit après l'accolade fermante s'exécute sans condition, quelle qu'ait été la condition.
+
+---
+
+Il n'y a pas de limite fixe au nombre d'instructions qu'un bloc de code peut contenir — une ligne ou une centaine, elles s'exécutent toutes ensemble quand la condition est `true`.
+
+---
+
+Lire une variable booléenne comme condition fonctionne comme un littéral : puisque `online` contient `true`, le bloc s'exécute et son `printf` s'exécute.
+
+---
+
+Quand `online` contient `false` à la place, la condition est fausse, donc le bloc est entièrement ignoré et rien de ce qui se trouve dans ces accolades n'est affiché.

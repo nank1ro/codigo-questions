@@ -88,3 +88,84 @@ if (num < 3) {
 }
 ```
 a wynik tego kodu to `the number is 4`.
+
+---
+
+Czas przełożyć składnię instrukcji `if` na praktykę: słowo kluczowe, warunek w nawiasach oraz blok kodu ujęty w nawiasy klamrowe.
+```c
+if (condition) {
+    // wykonuje się, gdy warunek jest prawdziwy
+}
+```
+
+---
+
+Literały logiczne w C to `true` i `false`: pisane małymi literami, bez cudzysłowów, zdefiniowane w `<stdbool.h>`, a nie wbudowane w sam język. Zapisanie `True` nie skompiluje się jako warunek — działa tylko forma pisana małymi literami, a gdy ma wartość `true`, blok się wykonuje.
+
+---
+
+C nie ma osobnego testu logicznego: warunek jest prawdziwy, gdy jego wartość jest różna od zera. `false` z `<stdbool.h>` to po prostu `0`, więc blok zabezpieczony takim warunkiem nigdy się nie wykonuje.
+
+---
+
+Instrukcja `if` w C składa się z trzech części: słowa kluczowego `if`, warunku w nawiasach oraz bloku w nawiasach klamrowych. Nawiasy są wymagane — to dzięki nim kompilator wie, gdzie kończy się warunek.
+
+---
+
+Każda instrukcja warunkowa zaczyna się od słowa kluczowego, które informuje kompilator, że przed podjęciem decyzji, co wykona się dalej, trzeba sprawdzić warunek.
+
+---
+
+Warunek będący literałem `true` jest zawsze prawdziwy, więc blok się wykonuje, a jego `printf` działa dokładnie tak, jak zostało napisane.
+
+---
+
+Warunek będący literałem `false` nigdy nie jest prawdziwy, więc blok jest całkowicie pomijany i nic w jego wnętrzu się nie wykonuje.
+
+---
+
+Warunki to wartości, które sprawdza instrukcja `if`: gdy warunek ma wartość `true`, blok się wykonuje, gdy `false` — jest pomijany.
+
+---
+
+Nawias otwierający może znajdować się w tej samej linii co warunek albo w linii poniżej. C ignoruje złamanie linii, więc oba style kompilują się do dokładnie tego samego programu.
+
+---
+
+Nawiasy wokół warunku są częścią składni `if` w C, a nie opcjonalnym grupowaniem: `if true { ... }` się nie skompiluje.
+
+---
+
+`"false"` w cudzysłowie to ciąg znaków, a nie wartość logiczna — a ciąg znaków w warunku to niezerowy adres, który liczy się jako prawda. Tylko `false` bez cudzysłowu powstrzymuje wykonanie bloku.
+
+---
+
+Odstępy między elementami linii `if` są w C dowolne: `if(true){` oraz `if (true) {` to dla kompilatora ta sama instrukcja, liczy się tylko kolejność elementów.
+
+---
+
+Blok kodu nie jest ograniczony do jednej instrukcji. Każda instrukcja między nawiasami klamrowymi wykonuje się kolejno, w takiej kolejności, w jakiej została zapisana.
+
+---
+
+Zmienna logiczna może być użyta bezpośrednio jako warunek, bez potrzeby porównania. Ponieważ `online` ma już wartość `true`, samo napisanie `if (online)` wystarczy, by wykonać blok.
+
+---
+
+Zmienna typu `bool` działa jako warunek, ponieważ `if` sprawdza jedynie wartość przechowywaną w niej w danym momencie. Gdy w `online` znajduje się `false`, `if (online)` zachowuje się dokładnie tak jak `if (false)`.
+
+---
+
+Warunkowy jest wyłącznie kod znajdujący się między nawiasami klamrowymi instrukcji `if`. Wszystko, co zostało napisane po nawiasie zamykającym, wykonuje się bezwarunkowo, niezależnie od tego, jaki był warunek.
+
+---
+
+Nie ma stałego limitu tego, ile instrukcji może zawierać blok kodu — jedna linia czy sto, wszystkie wykonują się razem, gdy warunek ma wartość `true`.
+
+---
+
+Odczytanie zmiennej logicznej jako warunku działa tak samo jak literał: skoro `online` ma wartość `true`, blok się wykonuje, a jego `printf` działa.
+
+---
+
+Gdy `online` ma zamiast tego wartość `false`, warunek jest fałszywy, więc blok jest całkowicie pomijany i nic z wnętrza tych nawiasów nie zostaje wydrukowane.

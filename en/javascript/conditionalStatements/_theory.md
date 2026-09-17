@@ -122,3 +122,74 @@ The nil-coalescing operator is shorthand for the code below:
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+`if` is the keyword that introduces a conditional statement in JavaScript. There is no `elif` keyword here — a second condition is introduced with `else if`, written as two separate words.
+
+---
+
+JavaScript's boolean literals are lowercase: `true` and `false`, not `True`/`False`, and not the strings `"true"`/`"false"`.
+
+---
+
+To keep a code block from running, the condition inside the parentheses must evaluate to `false`.
+
+---
+
+The space between `if` and its parentheses is purely cosmetic: `if(true)` and `if (true)` are the same statement to JavaScript.
+
+---
+
+The curly braces are what group several statements into one block. Without them an `if` controls only the single statement that follows it, so `if (true) console.log("Hello!");` is valid JavaScript.
+
+---
+
+The condition is evaluated once, before the block starts. JavaScript doesn't look at it again while the statements between the braces are running.
+
+---
+
+A `false` condition skips the block entirely, and the program continues at the first statement after the closing brace.
+
+---
+
+A condition doesn't have to be a boolean: JavaScript converts whatever it finds to one, so `if (1)` runs its block and `if (0)` doesn't. A literal `true` needs no conversion at all.
+
+---
+
+A code block isn't limited to a single line — every statement inside the curly braces runs, in order, when the condition is `true`.
+```javascript
+if (true) {
+    console.log("First line");
+    console.log("Second line");
+}
+```
+and the output is `First line` followed by `Second line`.
+
+---
+
+Statements inside a block run one after another, top to bottom, so two `console.log` calls in the same block print on two separate lines.
+
+---
+
+Indenting the statements inside a block is a readability convention only. JavaScript uses the curly braces, never the indentation, to decide what belongs to the block.
+
+---
+
+Statements such as `if`, `else if`, and `else`, that run or skip code depending on whether a condition is `true` or `false`, are called **conditional statements**.
+
+---
+
+A boolean variable, even one built from a `!` negation like `isAfternoon`, can be used directly as an `if` condition, no comparison needed.
+
+---
+
+The condition of an `if` statement always goes inside parentheses `()`, placed right after the `if` keyword and before the opening curly brace.
+
+---
+
+A block can hold any number of statements, and it can also hold none: `if (true) {}` is valid JavaScript that simply does nothing.
+
+---
+
+The code block of an `if` statement is the set of instructions inside the curly braces `{ }`, the part that actually runs when the condition is `true`.

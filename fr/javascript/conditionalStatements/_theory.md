@@ -122,3 +122,74 @@ L'opérateur nil-coalescing est un raccourci pour le code ci-dessous :
 ```javascript
 a != nil ? a! : b;
 ```
+
+---
+
+`if` est le mot-clé qui introduit une déclaration conditionnelle en JavaScript. Il n'y a pas de mot-clé `elif` ici — une deuxième condition s'introduit avec `else if`, écrit en deux mots séparés.
+
+---
+
+Les littéraux booléens de JavaScript sont en minuscules : `true` et `false`, pas `True`/`False`, et pas les chaînes `"true"`/`"false"`.
+
+---
+
+Pour empêcher un bloc de code de s'exécuter, la condition entre les parenthèses doit s'évaluer à `false`.
+
+---
+
+L'espace entre `if` et ses parenthèses est purement esthétique : `if(true)` et `if (true)` sont la même instruction pour JavaScript.
+
+---
+
+Ce sont les accolades qui regroupent plusieurs instructions en un seul bloc. Sans elles, un `if` ne contrôle que l'unique instruction qui le suit, donc `if (true) console.log("Hello!");` est du JavaScript valide.
+
+---
+
+La condition est évaluée une seule fois, avant que le bloc ne commence. JavaScript ne la revérifie pas pendant que les instructions entre les accolades s'exécutent.
+
+---
+
+Une condition `false` ignore entièrement le bloc, et le programme continue à la première instruction après l'accolade fermante.
+
+---
+
+Une condition n'a pas besoin d'être un booléen : JavaScript convertit tout ce qu'il trouve en un booléen, donc `if (1)` exécute son bloc et `if (0)` non. Un littéral `true` n'a besoin d'aucune conversion.
+
+---
+
+Un bloc de code ne se limite pas à une seule ligne — chaque instruction à l'intérieur des accolades s'exécute, dans l'ordre, quand la condition est `true`.
+```javascript
+if (true) {
+    console.log("First line");
+    console.log("Second line");
+}
+```
+et la sortie est `First line` suivi de `Second line`.
+
+---
+
+Les instructions à l'intérieur d'un bloc s'exécutent l'une après l'autre, de haut en bas, donc deux appels `console.log` dans le même bloc s'affichent sur deux lignes distinctes.
+
+---
+
+Indenter les instructions à l'intérieur d'un bloc n'est qu'une convention de lisibilité. JavaScript utilise les accolades, jamais l'indentation, pour décider de ce qui appartient au bloc.
+
+---
+
+Les instructions telles que `if`, `else if` et `else`, qui exécutent ou ignorent du code selon qu'une condition est `true` ou `false`, sont appelées des **déclarations conditionnelles**.
+
+---
+
+Une variable booléenne, même construite à partir d'une négation `!` comme `isAfternoon`, peut être utilisée directement comme condition d'un `if`, sans avoir besoin de comparaison.
+
+---
+
+La condition d'une déclaration `if` se place toujours entre parenthèses `()`, juste après le mot-clé `if` et avant l'accolade ouvrante.
+
+---
+
+Un bloc peut contenir n'importe quel nombre d'instructions, et il peut aussi n'en contenir aucune : `if (true) {}` est du JavaScript valide qui ne fait simplement rien.
+
+---
+
+Le bloc de code d'une déclaration `if` est l'ensemble des instructions à l'intérieur des accolades `{ }`, la partie qui s'exécute réellement quand la condition est `true`.
