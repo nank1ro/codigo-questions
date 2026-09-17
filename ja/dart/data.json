@@ -138,5 +138,10 @@
     "order": 28,
     "title": "ジェネリクス",
     "description": "どんな型でも動くクラスと関数を書く"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "エラーと例外",
+    "description": "エラーを処理するために例外を投げ、捕まえ、定義する"
   }
 }

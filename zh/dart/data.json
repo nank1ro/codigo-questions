@@ -138,5 +138,10 @@
     "order": 28,
     "title": "泛型",
     "description": "编写可用于任何类型的类和函数"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "错误与异常",
+    "description": "抛出、捕获和定义异常以处理错误"
   }
 }

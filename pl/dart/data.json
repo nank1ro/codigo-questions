@@ -138,5 +138,10 @@
     "order": 28,
     "title": "Generyki",
     "description": "Pisz klasy i funkcje, które działają z dowolnym typem"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "Błędy i wyjątki",
+    "description": "Rzucaj, łap i definiuj wyjątki, aby obsługiwać błędy"
   }
 }

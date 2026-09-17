@@ -138,5 +138,10 @@
     "order": 28,
     "title": "제네릭",
     "description": "어떤 타입으로도 동작하는 클래스와 함수 작성하기"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "오류와 예외",
+    "description": "예외를 던지고, 잡고, 정의해서 오류를 처리하기"
   }
 }

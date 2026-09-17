@@ -138,5 +138,10 @@
     "order": 28,
     "title": "Génériques",
     "description": "Écrivez des classes et des fonctions qui fonctionnent avec n'importe quel type"
+  },
+  "errorHandling": {
+    "order": 29,
+    "title": "Erreurs et exceptions",
+    "description": "Levez, attrapez et définissez des exceptions pour gérer les erreurs"
   }
 }
