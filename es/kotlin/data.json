@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Funciones de ámbito",
     "description": "Usa let, run, with, apply y also para trabajar dentro del contexto de un objeto"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Errores y excepciones",
+    "description": "Lanza, captura y define excepciones para manejar errores"
   }
 }

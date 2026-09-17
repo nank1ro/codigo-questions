@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Fonctions de portée",
     "description": "Utilisez let, run, with, apply et also pour travailler dans le contexte d'un objet"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Erreurs et exceptions",
+    "description": "Levez, interceptez et définissez des exceptions pour gérer les erreurs"
   }
 }

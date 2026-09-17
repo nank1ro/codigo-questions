@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Scope Functions",
     "description": "Usa let, run, with, apply e also per lavorare nel contesto di un oggetto"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Errori ed Eccezioni",
+    "description": "Lancia, cattura e definisci le eccezioni per gestire gli errori"
   }
 }

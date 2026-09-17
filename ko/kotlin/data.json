@@ -133,5 +133,10 @@
     "order": 27,
     "title": "스코프 함수",
     "description": "let, run, with, apply, also를 사용하여 객체의 컨텍스트 안에서 작업하기"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "오류와 예외",
+    "description": "예외를 던지고, 잡고, 정의하여 오류를 처리하는 방법을 배웁니다"
   }
 }

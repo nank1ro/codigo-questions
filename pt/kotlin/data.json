@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Funções de escopo",
     "description": "Use let, run, with, apply e also para trabalhar dentro do contexto de um objeto"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Erros e Exceções",
+    "description": "Lance, capture e defina exceções para tratar erros"
   }
 }
