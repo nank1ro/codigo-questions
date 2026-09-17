@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 Calling `.split('')` with an empty separator gives you a list with every single character.
+
+---
+
+Some characters cannot be typed directly inside quotes. **Escape sequences** start with a backslash: `\n` is a newline, `\t` a tab, `\\` a backslash and `\$` a literal dollar sign (otherwise `$` starts an interpolation):
+
+```dart
+print('one\ntwo');   // prints one and two on separate lines
+print('Cost: \$5');  // Cost: $5
+```
+
+A **raw string** is prefixed with `r`: inside it, backslashes and `$` are plain characters, nothing is escaped or interpolated:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+For text that spans several lines, use a **multi-line string** delimited by triple quotes `'''` or `"""`: line breaks inside it are kept.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+Under the hood, every character of a string is stored as a number, its **code unit** (a UTF-16 code). `.codeUnitAt(index)` gives the code of one character and `.codeUnits` gives the whole list. `String.fromCharCode(code)` does the opposite, building a string from a code:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+Consecutive letters have consecutive codes: `'A'` is 65, `'B'` is 66, and so on.
+
+---
+
+Two strings are equal with `==` when they contain exactly the same characters, in the same order. The comparison is **case-sensitive** and counts every space:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+To compare while ignoring case, convert both sides first: `a.toLowerCase() == b.toLowerCase()`. For ordering, `.compareTo(other)` returns a negative number, `0` or a positive number depending on whether the string comes before, is equal to, or comes after the other.
+
+---
+
+Because strings are immutable, building a long text with `+=` in a loop creates a new string at every step. A **StringBuffer** collects pieces of text efficiently and produces the final string only when you ask for it:
+
+- `.write(value)` appends a value (any type is converted to text)
+- `.writeln(value)` appends the value followed by a newline
+- `.toString()` returns the string built so far
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+String methods return strings, so they can be **chained** one after the other. Combined with `.split('')`, the list property `.reversed` and `.join()`, this lets you reverse a string in a single expression:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+A **palindrome** is a text that reads the same forwards and backwards, like `level`.

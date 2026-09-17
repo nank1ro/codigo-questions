@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 Each call to `makeTimer()` creates a brand new `seconds` variable, so two timers never share their count.
+
+---
+
+Anonymous functions support the same parameter kinds as named functions: **optional positional** parameters in `[]` and **named** parameters in `{}`, both with default values:
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+An anonymous function does not have to be stored anywhere: it can be **called immediately** by writing the arguments right after its closing brace. This is handy to compute a value with a few temporary variables that should not leak into the surrounding code:
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+Here `pi` exists only inside the anonymous function, and `area` receives the returned value.
+
+---
+
+Functions that take and return other functions can be combined freely. A classic example is **composition**: building a new function that runs one function and then feeds its result into another:
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

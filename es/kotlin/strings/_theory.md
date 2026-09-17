@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Los números no son cadenas: llama primero a `toString()`, como en `42.toString().padStart(4, '0')`.
+
+---
+
+Dos cadenas son iguales cuando contienen los mismos caracteres en el mismo orden. En Kotlin, `==` compara el **contenido** de las cadenas, por lo que es la forma habitual de compararlas.
+`equals` hace lo mismo, pero también acepta `ignoreCase = true` para ignorar la diferencia entre mayúsculas y minúsculas:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` comprueba si dos variables apuntan exactamente al mismo objeto en memoria, algo que casi nunca es lo que quieres con cadenas.
+
+---
+
+`reversed()` devuelve la cadena con sus caracteres en orden inverso:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Una palabra que se lee igual en ambas direcciones, como `"level"`, se llama **palíndromo**.
+
+---
+
+Las cadenas son **inmutables**: una vez creadas, nunca cambian. Todas las funciones que has visto hasta ahora, como `uppercase()` o `replace()`, devuelven una cadena **nueva** y dejan la original intacta.
+Para conservar el resultado debes almacenarlo, por ejemplo reasignando una `var`:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // el resultado se descarta
+println(name)           // kotlin
+name = name.uppercase() // el resultado se almacena
+println(name)           // KOTLIN
+```
+
+---
+
+Construir una cadena larga poco a poco con `+` crea una cadena nueva en cada paso. Un `StringBuilder` es un buffer de texto mutable pensado para esta tarea: `append` añade texto al final (y devuelve el builder, así las llamadas se pueden encadenar) y `toString()` da la `String` final:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` acepta cadenas, caracteres y números.

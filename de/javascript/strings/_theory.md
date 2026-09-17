@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // gibt 45 aus
 ```
+
+---
+
+Die Methode `split(separator)` zerlegt einen String in ein **Array** von Teilen und trennt dabei bei jedem `separator`:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// gibt [ 'I', 'like', 'JavaScript' ] aus
+```
+Das Gegenteil ist die Array-Methode `join(separator)`, die die Teile wieder zu einem String zusammenfügt:
+```javascript
+console.log(words.join("-"));
+// gibt I-like-JavaScript aus
+```
+
+---
+
+Benutzereingaben enthalten oft zusätzliche Leerzeichen. Die Methode `trim()` gibt eine Kopie des Strings zurück, bei der Leerraum an **beiden** Enden entfernt wurde:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// gibt hello aus
+```
+`trimStart()` entfernt nur führenden Leerraum und `trimEnd()` nur nachfolgenden Leerraum.
+Leerzeichen in der Mitte des Strings werden nie berührt.
+
+---
+
+Die Methode `replace(search, replacement)` gibt einen neuen String zurück, bei dem das **erste** Vorkommen von `search` durch `replacement` ersetzt wird:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// gibt blue red aus
+```
+Um **jedes** Vorkommen zu ersetzen, verwende `replaceAll()`:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// gibt blue blue aus
+```
+
+---
+
+Die Methode `repeat(count)` gibt den String zurück, der `count`-mal wiederholt wird:
+```javascript
+console.log("ab".repeat(3));
+// gibt ababab aus
+console.log("ab".repeat(0));
+// gibt einen leeren String aus
+```
+
+---
+
+Die Methode `padStart(targetLength, padString)` fügt `padString` am **Anfang** des Strings hinzu, bis er `targetLength` Zeichen erreicht. `padEnd()` macht dasselbe am Ende:
+```javascript
+console.log("7".padStart(3, "0"));
+// gibt 007 aus
+console.log("Tea".padEnd(6, "."));
+// gibt Tea... aus
+```
+Wenn der String bereits lang genug ist, wird er unverändert zurückgegeben.
+Zahlen haben keine String-Methoden, also wandle sie zuerst mit `String(number)` um.
+
+---
+
+Zwei Strings sind mit `===` nur dann gleich, wenn sie exakt dieselben Zeichen in derselben Groß-/Kleinschreibung haben:
+```javascript
+console.log("hello" === "hello");
+// gibt true aus
+console.log("hello" === "Hello");
+// gibt false aus
+```
+Die Operatoren `<` und `>` vergleichen Strings alphabetisch, Zeichen für Zeichen.
+Großbuchstaben kommen vor Kleinbuchstaben, daher ist `"Zoo" < "apple"` gleich `true`.
+
+---
+
+Strings sind **unveränderlich** (immutable): Einmal erstellt, kann ein String nie mehr geändert werden.
+Eine Zuweisung an einen Index bewirkt nichts, und jede String-Methode gibt einen **neuen** String zurück, anstatt das Original zu verändern:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// gibt hello aus
+word.toUpperCase();
+console.log(word);
+// gibt hello aus
+```
+Um ein Ergebnis zu behalten, weise es der Variable erneut zu:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Der Aufruf von `split("")` mit einem leeren Trennzeichen wandelt einen String in ein Array seiner einzelnen Zeichen um.
+Arrays haben eine `reverse()`-Methode, sodass du einen String umkehren kannst, indem du ihn aufteilst, umkehrst und wieder zusammenfügst:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// gibt cba aus
+```

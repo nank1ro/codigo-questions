@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 Скобки `(name, age)` разбивают каждую запись на две переменные. Записи посещаются в порядке вставки.
+
+---
+
+Как и списки, map поддерживают `filter`. Лямбда получает каждую запись, которую можно деструктурировать в `(key, value)`; результатом является новый `Map`, содержащий только те записи, для которых лямбда возвращает `true`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+Также есть `filterKeys { }` и `filterValues { }`, когда условие касается только одной стороны записи.
+
+---
+
+`map` преобразует каждую запись map в новый элемент. В отличие от `filter`, результатом является `List`, а не `Map`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

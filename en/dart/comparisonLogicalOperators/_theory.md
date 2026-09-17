@@ -54,3 +54,31 @@ bool passed = score >= 50; // true
 ```
 
 Unlike `>`, this operator also returns `true` when both values are equal.
+
+---
+
+The **AND operator** `&&` combines two boolean expressions. It returns `true` only when **both** sides are `true`. If either side is `false`, the result is `false`.
+
+```dart
+bool a = true;
+bool b = true;
+bool result = a && b; // true
+
+bool c = true;
+bool d = false;
+bool result2 = c && d; // false
+```
+
+---
+
+The **OR operator** `||` combines two boolean expressions. It returns `true` when **at least one** side is `true`. It only returns `false` when **both** sides are `false`.
+
+```dart
+bool a = false;
+bool b = true;
+bool result = a || b; // true
+
+bool c = false;
+bool d = false;
+bool result2 = c || d; // false
+```

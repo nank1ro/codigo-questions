@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 各占一行
 }
 ```
+
+---
+
+集合支持经典的集合论运算。每个运算都会返回一个**新的**集合，原始集合保持不变：
+- `a.union(b)` 包含所有在 `a` 中、在 `b` 中，或者两者都在的元素
+- `a.intersection(b)` 只包含**同时**在 `a` 和 `b` 中的元素
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+另外两个操作补全了这个体系：
+- `a.subtracting(b)` 包含 `a` 中**不在** `b` 中的元素
+- `a.symmetricDifference(b)` 包含在 `a` 或 `b` 中，但**不同时在两者中**的元素
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+和 `union`、`intersection` 不同，`subtracting` 不是对称的：`a.subtracting(b)` 和 `b.subtracting(a)` 通常是不同的。
+
+---
+
+集合之间也可以互相比较。这些方法都返回 `Bool`：
+- `a.isSubset(of: b)` 在 `a` 的每个元素都在 `b` 中时为 `true`
+- `a.isSuperset(of: b)` 在 `a` 包含 `b` 的每个元素时为 `true`
+- `a.isDisjoint(with: b)` 在 `a` 和 `b` 没有共同元素时为 `true`
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+集合和数组之间可以很方便地互相转换。
+把一个数组传给 `Set(...)` 会用它的元素构建一个集合，这是**去除重复项**最快的方式：
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3}，顺序不定
+```
+把一个集合传给 `Array(...)` 会得到一个数组，但由于集合没有顺序，元素会以不可预测的顺序出现。
+这就是为什么当你需要有序结果时，通常会在集合上调用 `sorted()`，它本身就会返回一个数组：
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

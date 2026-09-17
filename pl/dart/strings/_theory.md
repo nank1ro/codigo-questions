@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 Wywołanie `.split('')` z pustym separatorem zwraca listę z każdym pojedynczym znakiem.
+
+---
+
+Niektórych znaków nie można wpisać bezpośrednio wewnątrz cudzysłowów. **Sekwencje escape** zaczynają się od ukośnika wstecznego: `\n` to nowa linia, `\t` to tabulator, `\\` to ukośnik wsteczny, a `\$` to dosłowny znak dolara (w przeciwnym razie `$` rozpoczyna interpolację):
+
+```dart
+print('one\ntwo');   // wypisuje one i two w osobnych liniach
+print('Cost: \$5');  // Cost: $5
+```
+
+**Raw string** jest poprzedzony literą `r`: wewnątrz niego ukośniki wsteczne i `$` są zwykłymi znakami, nic nie jest escapowane ani interpolowane:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+Dla tekstu obejmującego kilka linii użyj **ciągu wieloliniowego** ograniczonego potrójnymi cudzysłowami `'''` lub `"""`: podziały linii wewnątrz niego są zachowywane.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+Pod spodem każdy znak ciągu jest przechowywany jako liczba, jego **code unit** (kod UTF-16). `.codeUnitAt(index)` zwraca kod jednego znaku, a `.codeUnits` zwraca całą listę. `String.fromCharCode(code)` robi coś odwrotnego, budując ciąg znaków z kodu:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+Kolejne litery mają kolejne kody: `'A'` to 65, `'B'` to 66 i tak dalej.
+
+---
+
+Dwa ciągi znaków są równe za pomocą `==`, gdy zawierają dokładnie te same znaki w tej samej kolejności. Porównanie **rozróżnia wielkość liter** i liczy każdą spację:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+Aby porównać, ignorując wielkość liter, przekonwertuj najpierw obie strony: `a.toLowerCase() == b.toLowerCase()`. Do porządkowania `.compareTo(other)` zwraca liczbę ujemną, `0` lub liczbę dodatnią, w zależności od tego, czy ciąg znaków jest wcześniejszy, równy czy późniejszy od drugiego.
+
+---
+
+Ponieważ ciągi znaków są niemutowalne, budowanie długiego tekstu za pomocą `+=` w pętli tworzy nowy ciąg znaków przy każdym kroku. **StringBuffer** zbiera fragmenty tekstu w wydajny sposób i tworzy końcowy ciąg znaków dopiero wtedy, gdy o to poprosisz:
+
+- `.write(value)` dołącza wartość (dowolny typ jest konwertowany na tekst)
+- `.writeln(value)` dołącza wartość, a po niej znak nowej linii
+- `.toString()` zwraca ciąg znaków zbudowany do tej pory
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+Metody ciągów znaków zwracają ciągi znaków, więc można je **łączyć w łańcuch**, jedną po drugiej. W połączeniu z `.split('')`, właściwością list `.reversed` i `.join()` pozwala to odwrócić ciąg znaków w jednym wyrażeniu:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+**Palindrom** to tekst, który czyta się tak samo od przodu i od tyłu, na przykład `level`.

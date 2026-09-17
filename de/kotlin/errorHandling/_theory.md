@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` macht aus einem Fehler `null`, während `getOrElse { ... }` den Block ausführt, um einen Ersatz zu bauen. An der Aufrufstelle wird nichts ausgelöst, daher kann der Fehler herumgereicht und später behandelt werden.
+
+---
+
+Ein `Result` lässt sich auch untersuchen, ohne es auszupacken. `onFailure` führt seinen Block nur aus, wenn das Ergebnis eine Exception enthält, `onSuccess` nur, wenn es einen Wert enthält, und **beide geben dasselbe `Result` zurück**, sodass sich die Aufrufe verketten lassen:
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+Innerhalb des Blocks ist die Exception (oder der Wert) als `it` verfügbar, daher ist `it.message` der Text des Fehlers.
+
+Das ist die Form „melden und weitermachen“: das Problem dort berichten, wo es auftritt, dann weitermachen — ohne ein frühes `return` und ohne eine `var`, die an zwei Stellen gesetzt wird.
+
+---
+
+Wo das `try` steht, entscheidet, wie viel Arbeit ein einziger schlechter Wert vernichtet. Umschließen Sie die **gesamte Schleife**, bricht der erste Fehler den Rest des Stapels ab; umschließen Sie den **Schleifenkörper**, geht nur dieses eine Element verloren:
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // diesen Wert überspringen
+    }
+}
+println(total) // 8
+```
+Das lässt sich natürlich mit einer validierenden Funktion kombinieren, die auslöst: Die Funktion formuliert eine Regel und weist alles zurück, das sie verletzt, und die Schleife entscheidet, dass eine Zurückweisung nur ein Element kostet.

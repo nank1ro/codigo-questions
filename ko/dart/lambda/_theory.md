@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 `makeTimer()`를 호출할 때마다 완전히 새로운 `seconds` 변수가 만들어지므로, 두 타이머가 개수를 공유하는 일은 없습니다.
+
+---
+
+익명 함수는 이름 있는 함수와 같은 종류의 매개변수를 지원합니다. `[]`의 **선택적 위치** 매개변수와 `{}`의 **이름 있는** 매개변수이며, 둘 다 기본값을 가질 수 있습니다:
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+익명 함수는 어딘가에 저장해 둘 필요가 없습니다. 닫는 중괄호 바로 뒤에 인자를 써서 **즉시 호출**할 수 있습니다. 이는 주변 코드로 새어 나가지 않아야 하는 몇 개의 임시 변수로 값을 계산할 때 유용합니다:
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+여기서 `pi`는 익명 함수 안에만 존재하며, `area`는 반환된 값을 받습니다.
+
+---
+
+다른 함수를 받고 반환하는 함수들은 자유롭게 조합할 수 있습니다. 고전적인 예가 **합성**입니다. 하나의 함수를 실행한 다음 그 결과를 다른 함수에 넘기는 새로운 함수를 만드는 것입니다:
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

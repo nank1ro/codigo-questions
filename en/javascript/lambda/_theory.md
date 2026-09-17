@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // prints 6
 ```
 Read it from left to right: `makeAdder` takes `amount` and returns `(n) => n + amount`, an arrow function that captures `amount` through a closure. `makeAdder(1)(5)` calls the returned function immediately.
+
+---
+
+You do not have to store an arrow function to call it. Wrap it in parentheses and add the argument list right after: this is an **immediately invoked** arrow function:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// prints 10
+```
+The parentheses around the arrow are required: without them `(n) => n * 2(5)` would try to call the number `2`. Immediately invoked functions are handy to compute a value with a few temporary variables that should not leak into the rest of the program.
+
+---
+
+The biggest difference between a regular function and an arrow function is the keyword `this`.
+A regular `function` gets its **own** `this`, decided by *how it is called*: in `team.intro()` it is `team`, but in a callback passed to `map` nobody sets it, so `this.name` is `undefined` (or even an error in strict mode).
+An arrow function has **no** `this` of its own: it simply uses the `this` of the code around it (a **lexical** `this`). That is why arrow callbacks inside a method can keep using the object:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// prints [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+With `function (p) { return ... this.name ... }` as the callback, the same code would print `undefined` instead of `Tigers`.
+The flip side: do not use an arrow function as an object **method** that needs `this`, because it will not refer to the object.

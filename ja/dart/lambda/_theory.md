@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 `makeTimer()` を呼び出すたびにまったく新しい `seconds` 変数が作られるため、2つのタイマーがカウントを共有することはありません。
+
+---
+
+無名関数は、名前付き関数と同じ種類のパラメータをサポートしています。`[]` の**オプション位置パラメータ**と `{}` の**名前付きパラメータ**で、どちらもデフォルト値を持てます：
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+無名関数はどこにも格納する必要がありません。閉じ波括弧の直後に引数を書くことで**即座に呼び出す**ことができます。これは、周囲のコードに漏れてはならないいくつかの一時変数を使って値を計算するのに便利です：
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+ここで `pi` は無名関数の中にのみ存在し、`area` は返された値を受け取ります。
+
+---
+
+関数を受け取り関数を返す関数は、自由に組み合わせられます。古典的な例が**合成**です。1つの関数を実行し、その結果を別の関数に渡す新しい関数を作ることです：
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 每次调用 `makeTimer()` 都会创建一个全新的 `seconds` 变量，所以两个计时器永远不会共享它们的计数。
+
+---
+
+匿名函数支持与命名函数相同的参数种类：`[]` 中的**可选位置参数**和 `{}` 中的**命名参数**，两者都可以有默认值：
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+匿名函数不必存储在任何地方：通过在它的闭括号后面直接写出参数，就可以**立即调用**它。这在计算一个值时非常方便，可以避免一些临时变量泄漏到周围的代码中：
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+这里 `pi` 只存在于匿名函数内部，而 `area` 接收返回的值。
+
+---
+
+接收并返回其他函数的函数可以自由组合。一个经典的例子是**组合**：构建一个新函数，它先运行一个函数，然后把它的结果输入到另一个函数中：
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

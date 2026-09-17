@@ -99,3 +99,125 @@ fun name(shape: Shape): String = when (shape) {
 ```
 
 After `is Circle` the value is smart cast, so `shape.radius` is available inside that branch without any manual cast.
+
+---
+
+Sometimes you need exactly **one** instance of something: a logger, a registry, an application configuration. Replacing `class` with `object` declares that singleton for you:
+
+```kotlin
+object Registry {
+    var size = 0
+    fun add() {
+        size++
+    }
+}
+
+Registry.add()
+println(Registry.size) // 1
+```
+
+The instance is created the first time you touch it, and you use the name itself, there is no `Registry()` call and no constructor. An `object` can hold properties, methods, `init` blocks, and it can implement interfaces or extend a class.
+
+---
+
+A `companion object` is the singleton that belongs to a class. Besides constants, its natural job is holding **factory functions**: functions that check or transform the input before building an instance, and that can return `null` when the input makes no sense.
+
+Marking the constructor `private` forces every caller through the factory:
+
+```kotlin
+class Age private constructor(val years: Int) {
+    companion object {
+        fun of(years: Int): Age? = if (years >= 0) Age(years) else null
+    }
+}
+
+println(Age.of(30)?.years) // 30
+println(Age.of(-1))        // null
+```
+
+The companion is called on the class name, `Age.of(...)`, and it can reach the private constructor because it lives inside the class.
+
+---
+
+An `interface` lists what a type can do. Its members are abstract by default, but an interface may also ship a **default implementation**, a body that every implementing class inherits for free and may override:
+
+```kotlin
+interface Greeter {
+    val name: String              // abstract, the class must provide it
+    fun greet(): String = "Hi, $name"  // default implementation
+}
+
+class Person(override val name: String) : Greeter
+
+class Robot(override val name: String) : Greeter {
+    override fun greet(): String = "BEEP $name"
+}
+
+println(Person("Ann").greet()) // Hi, Ann
+println(Robot("R2").greet())   // BEEP R2
+```
+
+An interface cannot store state (it has no backing fields), so an abstract property has to be implemented by the class, usually with `override val` in the constructor. Unlike a class, a type can implement as many interfaces as it wants.
+
+---
+
+An `abstract` class sits between an interface and a normal class: it cannot be instantiated, and it mixes **abstract** members, which have no body and must be overridden, with concrete ones that subclasses inherit as they are.
+
+```kotlin
+abstract class Vehicle(val name: String) {
+    abstract fun wheels(): Int
+    fun describe(): String = "$name has ${wheels()} wheels"
+}
+
+class Bike(name: String) : Vehicle(name) {
+    override fun wheels(): Int = 2
+}
+
+println(Bike("BMX").describe()) // BMX has 2 wheels
+```
+
+Unlike an interface, an abstract class has a constructor and can store state in properties, which is why the subclass passes `name` up with `: Vehicle(name)`. A class can extend only one class, so reach for an abstract class when the subclasses share data, and for an interface when they only share behaviour. Abstract members are overridable without adding `open`.
+
+---
+
+A class declared inside another class is **nested** by default. It knows nothing about the outer instance and you build it from the outer class name:
+
+```kotlin
+class Outer {
+    class Nested {
+        fun hello() = "hi"
+    }
+}
+
+println(Outer.Nested().hello()) // hi
+```
+
+Add the `inner` keyword and the situation changes: an `inner` class carries a reference to the outer instance, so it can read the outer properties, and you build it **from an instance**:
+
+```kotlin
+class Counter(val step: Int) {
+    inner class Doubler {
+        fun value() = step * 2
+    }
+}
+
+println(Counter(5).Doubler().value()) // 10
+```
+
+Inside an `inner` class, `this` is the inner object; use `this@Counter` when you need the outer one explicitly.
+
+---
+
+The pieces of this topic are usually combined: an `enum class` whose entries carry their own properties models a fixed set of tags, while a `data class` carries the payload that goes with them.
+
+```kotlin
+enum class Speed(val surcharge: Int) {
+    STANDARD(0),
+    EXPRESS(15)
+}
+
+data class Order(val total: Int, val speed: Speed)
+
+val order = Order(100, Speed.EXPRESS)
+println(order.total + order.speed.surcharge) // 115
+```

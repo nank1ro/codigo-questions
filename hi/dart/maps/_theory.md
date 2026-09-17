@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+एक खाली मैप लिटरल `{}` में टाइप का अनुमान लगाने के लिए कोई जोड़ा नहीं होता, इसलिए इसे `<K, V>{}` से या टाइप एनोटेशन से स्पष्ट टाइप दें:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+`.isEmpty` प्रॉपर्टी `true` होती है जब मैप में कोई जोड़ा न हो, और `.isNotEmpty` `true` होती है जब कम से कम एक जोड़ा हो:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+`.forEach()` मेथड हर जोड़े के लिए एक बार फ़ंक्शन चलाती है। फ़ंक्शन दो पैरामीटर प्राप्त करता है: की और वैल्यू:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+एक मैप `Iterable` नहीं है, इसलिए आप इसे सीधे `for-in` से लूप नहीं कर सकते। इसके बजाय, `.entries` पर लूप करें: प्रत्येक तत्व एक `MapEntry` होता है जिसमें एक `.key` और एक `.value` होती है:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+`.putIfAbsent(key, ifAbsent)` मेथड एक जोड़ा **केवल तभी** जोड़ती है जब की अभी मैप में न हो। दूसरा आर्गुमेंट एक फ़ंक्शन है जो वैल्यू बनाता है। यदि की पहले से मौजूद है, तो मैप अपरिवर्तित रहता है। दोनों ही स्थितियों में, अब उस की के अंतर्गत संग्रहीत वैल्यू लौटाई जाती है:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann पहले से मौजूद है, कुछ नहीं बदलता
+ages.putIfAbsent('Bob', () => 25); // Bob जोड़ा जाता है
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+`.update(key, update)` मेथड किसी मौजूदा की की वैल्यू बदल देती है। दूसरा आर्गुमेंट एक फ़ंक्शन है जो वर्तमान वैल्यू प्राप्त करता है और नई वैल्यू लौटाता है। यदि की मौजूद नहीं है, तो `.update()` एक त्रुटि देता है, जब तक कि आप एक `ifAbsent` फ़ंक्शन पास न करें जो प्रारंभिक वैल्यू बनाता है:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple 4 हो जाता है
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi को 1 के साथ जोड़ा जाता है
+print(stock); // {apple: 4, kiwi: 1}
+```

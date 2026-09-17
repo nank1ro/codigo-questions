@@ -153,3 +153,33 @@ def set_age(age):
 | `IndexError` | シーケンスのインデックスが範囲外 | `[1, 2][5]` |
 
 新しい型をでっち上げる代わりにこれらの1つを使えば、Pythonを知っている人なら誰でもエラーを読みやすくなります。
+
+---
+
+ハンドラは、失敗の責任を負うことなく反応すべきときがあります：ログに記録し、カウントし、何かを閉じる — その後、呼び出し元に任せます。`except` ブロックの中で単独の `raise` は、処理中の例外を元の型、メッセージ、トレースバックをそのままにして**再発生（re-raise）**させます：
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+代わりに `raise ValueError(...)` と書くと、新しいトレースバックを持つ別の例外が作られます——それはもう捕まえたのと同じ失敗ではなくなり、単独の `raise` はまさにその同一性を保持します。
+
+---
+
+組み込みの型がどれも合わないときは、`Exception` のサブクラスを作って独自の型を定義します。空の本体で通常は十分です。名前自体が読み手へのメッセージです：
+```python
+class ConfigError(Exception):
+    pass
+```
+他の例外と同じように振る舞います：`raise ConfigError("bad port")` と発生させ、`except ConfigError:` で捕捉できます。
+
+低レベルの失敗を自分の型に変換することはよくありますが、その過程で元のエラーを失ってはいけません。`raise NewError(...) from original` は2つを**チェーン（連鎖）**させます：`original` を新しい例外の `__cause__` 属性に格納し、トレースバックには *The above exception was the direct cause of the following exception* の下に両方が表示されます：
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+`from e` がなくても2つは暗黙的にリンクされますが、`from` は最初のエラーが2番目を引き起こしたことをはっきり述べます。

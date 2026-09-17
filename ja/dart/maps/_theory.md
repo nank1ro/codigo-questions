@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+空のマップリテラル `{}` には型を推論するためのペアがないため、`<K, V>{}` または型アノテーションで明示的に型を指定してください：
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+`.isEmpty` プロパティは、マップにペアが1つもないときに `true` になり、`.isNotEmpty` は少なくとも1つあるときに `true` になります：
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+`.forEach()` メソッドは、すべてのペアに対して1回ずつ関数を実行します。この関数はキーと値の2つの引数を受け取ります：
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+マップは `Iterable` ではないため、`for-in` で直接ループすることはできません。代わりに `.entries` をループします。各要素は `.key` と `.value` を持つ `MapEntry` です：
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+`.putIfAbsent(key, ifAbsent)` メソッドは、キーがまだマップにない場合に**限り**ペアを追加します。第2引数は値を生成する関数です。キーがすでに存在する場合、マップは変更されません。どちらの場合も、そのキーの下に現在格納されている値が返されます：
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Annはすでに存在する、何も変わらない
+ages.putIfAbsent('Bob', () => 25); // Bobが追加される
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+`.update(key, update)` メソッドは、既存のキーの値を置き換えます。第2引数は現在の値を受け取り、新しい値を返す関数です。キーが存在しない場合、`.update()` はエラーをスローしますが、初期値を生成する `ifAbsent` 関数を渡せば例外です：
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // appleは4になる
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwiが1で追加される
+print(stock); // {apple: 4, kiwi: 1}
+```

@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()`은 실패를 `null`로 바꾸고, `getOrElse { ... }`는 블록을 실행하여 대체 값을 만듭니다. 호출 지점에서는 아무것도 던져지지 않으므로, 실패를 가지고 돌아다니다가 나중에 처리할 수 있습니다.
+
+---
+
+`Result`는 풀어내지 않고도 검사할 수 있습니다. `onFailure`는 결과가 예외를 담고 있을 때만 그 블록을 실행하고, `onSuccess`는 값을 담고 있을 때만 실행하며, **둘 다 같은 `Result`를 돌려주므로** 호출을 연쇄할 수 있습니다:
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+블록 안에서는 예외(또는 값)를 `it`으로 사용할 수 있으므로, `it.message`가 실패의 텍스트입니다.
+
+이것이 "기록하고 계속 진행"하는 형태입니다: 문제가 발생한 곳에서 보고한 뒤 계속 진행하며, 이른 `return`도 두 곳에서 설정되는 `var`도 없습니다.
+
+---
+
+`try`가 어디에 놓이는지에 따라 하나의 나쁜 값이 얼마나 많은 작업을 파괴하는지 결정됩니다. **루프 전체**를 감싸면 첫 번째 실패가 나머지 일괄 작업을 포기하고, **본문**을 감싸면 그 한 요소만 잃습니다:
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // 이 값은 건너뜁니다
+    }
+}
+println(total) // 8
+```
+이것은 던지는 검증 함수와 자연스럽게 짝을 이룹니다: 함수는 하나의 규칙을 명시하고 그 규칙을 깨는 것은 무엇이든 거절하며, 루프는 거절이 한 요소의 비용만 치른다고 결정합니다.

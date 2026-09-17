@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+Los miembros de una extensión se resuelven en **tiempo de compilación**, basándose en el **tipo estático** de la expresión, es decir, el tipo que el compilador conoce, no el objeto real en tiempo de ejecución. Un `String` almacenado en una variable de tipo `Object` sigue siendo un `String` cuando el programa se ejecuta, pero el compilador solo ve `Object`, así que no encuentra ninguna extensión para él:
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+Lo mismo se aplica a `dynamic`: los miembros de una extensión nunca se encuentran a través de un receptor `dynamic`. Convierte antes el valor con un *cast*, o decláralo con el tipo preciso.

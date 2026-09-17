@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` accepte directement une `String` Swift. N'utilise pas `%s` avec une chaîne Swift : ce spécificateur attend une chaîne C et affiche n'importe quoi ou plante.
+
+---
+
+Puisque `%` commence un spécificateur, un signe pourcentage littéral doit s'écrire `%%`. C'est ainsi que tu formates un pourcentage :
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Multiplie d'abord le rapport par `100`, puis choisis la précision : `%.0f%%` pour `46%`, `%.1f%%` pour `45.7%`.
+
+---
+
+Les drapeaux de largeur ne fonctionnent qu'à l'intérieur de `String(format:)`. Pour compléter toi-même une chaîne simple, construis les espaces avec `String(repeating:count:)` et joins-les au texte :
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+Si le texte est déjà plus long que la largeur, `4 - text.count` devient négatif et `String(repeating:count:)` plante. Protège-le avec `max(0, ...)`, pour que le compte ne descende jamais en dessous de zéro et que le texte long reste tel quel.
+
+---
+
+Foundation possède aussi une fonction utilitaire toute faite pour le remplissage à droite : `padding(toLength:withPad:startingAt:)`. Elle étend la chaîne jusqu'à la longueur donnée en répétant le texte de remplissage, et la coupe si elle est plus longue :
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` est l'indice à l'intérieur du texte de remplissage où la répétition commence ; avec un texte de remplissage d'un seul caractère, c'est toujours `0`.
+
+---
+
+Combine les deux outils pour afficher un tableau : `padding` aligne le texte de chaque ligne à gauche, `String(format:)` aligne les nombres à droite avec une largeur et une précision fixes :
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Comme chaque ligne a la même largeur, les points décimaux se retrouvent dans la même colonne.

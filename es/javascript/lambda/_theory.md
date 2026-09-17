@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // imprime 6
 ```
 Léela de izquierda a derecha: `makeAdder` toma `amount` y devuelve `(n) => n + amount`, una función flecha que captura `amount` mediante una clausura. `makeAdder(1)(5)` llama a la función devuelta inmediatamente.
+
+---
+
+No tienes que almacenar una función flecha para llamarla. Rodéala con paréntesis y añade la lista de argumentos justo después: esto es una función flecha **invocada inmediatamente**:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// imprime 10
+```
+Los paréntesis alrededor de la flecha son obligatorios: sin ellos `(n) => n * 2(5)` intentaría llamar al número `2`. Las funciones invocadas inmediatamente son útiles para calcular un valor con unas pocas variables temporales que no deberían filtrarse al resto del programa.
+
+---
+
+La mayor diferencia entre una función regular y una función flecha es la palabra clave `this`.
+Una `function` regular obtiene su **propio** `this`, decidido por *cómo se la llama*: en `team.intro()` es `team`, pero en un callback pasado a `map` nadie lo establece, así que `this.name` es `undefined` (o incluso un error en modo estricto).
+Una función flecha **no** tiene un `this` propio: simplemente usa el `this` del código que la rodea (un `this` **léxico**). Por eso los callbacks flecha dentro de un método pueden seguir usando el objeto:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// imprime [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+Con `function (p) { return ... this.name ... }` como callback, el mismo código imprimiría `undefined` en lugar de `Tigers`.
+El lado negativo: no uses una función flecha como **método** de un objeto que necesite `this`, porque no se referirá al objeto.

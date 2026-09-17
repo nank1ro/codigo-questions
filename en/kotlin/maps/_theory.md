@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 The parentheses `(name, age)` split every entry into two variables. Entries are visited in insertion order.
+
+---
+
+Like lists, maps support `filter`. The lambda receives each entry and you can destructure it into `(key, value)`; the result is a new `Map` with only the entries for which the lambda returns `true`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+There are also `filterKeys { }` and `filterValues { }` when the condition only involves one side of the entry.
+
+---
+
+`map` transforms every entry of a map into a new element. Unlike `filter`, the result is a `List`, not a `Map`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

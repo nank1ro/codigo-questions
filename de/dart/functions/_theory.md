@@ -76,3 +76,18 @@ void main() {
 ```
 
 Benannte Parameter verbessern die Lesbarkeit, besonders wenn eine Funktion viele Parameter hat.
+
+---
+
+Dart unterstützt außerdem **optionale positionelle Parameter** — Parameter, die in eckige Klammern `[]` eingeschlossen sind. Sie werden anhand ihrer Position übergeben, können vom Aufrufer weggelassen werden und können einen Standardwert haben:
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

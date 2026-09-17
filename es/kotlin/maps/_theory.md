@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 Los paréntesis `(name, age)` dividen cada entrada en dos variables. Las entradas se visitan en el orden de inserción.
+
+---
+
+Al igual que las listas, los mapas admiten `filter`. La lambda recibe cada entrada y puedes desestructurarla en `(key, value)`; el resultado es un nuevo `Map` con solo las entradas para las que la lambda devuelve `true`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+También existen `filterKeys { }` y `filterValues { }` cuando la condición solo involucra un lado de la entrada.
+
+---
+
+`map` transforma cada entrada de un mapa en un nuevo elemento. A diferencia de `filter`, el resultado es una `List`, no un `Map`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

@@ -75,3 +75,75 @@ nums.forEach((n) => console.log(n * 10));
 // 10 출력
 // 20 출력
 ```
+
+---
+
+`delete(value)`는 값이 제거되었으면 `true`를, 세트에 없었으면 `false`를 반환합니다.
+**모든** 값을 한 번에 제거하려면 `clear()`를 호출하세요:
+```javascript
+let cart = new Set(["pen", "ink"]);
+console.log(cart.delete("pen"));
+// true 출력
+console.log(cart.delete("pen"));
+// false 출력
+cart.clear();
+console.log(cart.size);
+// 0 출력
+```
+
+---
+
+세트는 `===`와 거의 같은 규칙으로 두 값이 "같은지" 판단합니다 (단, `NaN`은 자기 자신과 같다고 취급됩니다). 문자열과 숫자는 내용을 비교하지만, **객체는 참조로 비교됩니다**: 필드가 동일한 두 객체 리터럴은 서로 다른 두 값입니다.
+```javascript
+let alice = { name: "Alice" };
+let people = new Set();
+people.add(alice);
+people.add(alice);
+console.log(people.size);
+// 1 출력
+people.add({ name: "Alice" });
+console.log(people.size);
+// 2 출력
+```
+정확히 같은 객체를 다시 추가하는 경우에만 무시됩니다.
+
+---
+
+스프레드와 `filter()`를 결합하면 집합론의 고전적인 연산을 할 수 있습니다. 각각은 **새로운** 컬렉션을 만들고 원본은 그대로 둡니다:
+- **합집합**, `a`, `b` 또는 둘 다에 있는 모든 값: `new Set([...a, ...b])`
+- **교집합**, **둘 다**에 있는 값만: `[...a].filter((x) => b.has(x))`
+- **차집합**, `a`의 값 중 `b`에 **없는** 값: `[...a].filter((x) => !b.has(x))`
+
+```javascript
+let a = new Set([1, 2, 3]);
+let b = new Set([3, 4]);
+console.log([...new Set([...a, ...b])]);
+// [ 1, 2, 3, 4 ] 출력
+console.log([...a].filter((x) => b.has(x)));
+// [ 3 ] 출력
+console.log([...a].filter((x) => !b.has(x)));
+// [ 1, 2 ] 출력
+```
+최신 JavaScript 엔진은 세트에 직접 `a.union(b)`, `a.intersection(b)`, `a.difference(b)`도 제공하지만, 스프레드와 filter 버전은 어디서나 동작합니다.
+
+---
+
+`Map`과 같은 인터페이스를 유지하기 위해, 세트도 이터레이터 메서드 `values()`, `keys()`, `entries()`를 제공합니다.
+세트에는 키가 없으므로 `keys()`는 `values()`의 또 다른 이름일 뿐이며, `entries()`는 각 값을 `[value, value]` 쌍으로 **두 번** 반환합니다:
+```javascript
+let letters = new Set(["a", "b"]);
+console.log([...letters.values()]);
+// [ 'a', 'b' ] 출력
+console.log([...letters.entries()]);
+// [ [ 'a', 'a' ], [ 'b', 'b' ] ] 출력
+```
+실제로는 이 메서드들이 거의 필요하지 않습니다: `for...of`와 스프레드가 이미 값을 직접 순회하기 때문입니다.
+
+---
+
+`new Set()`은 배열뿐만 아니라 모든 **이터러블**을 받습니다. 문자열도 한 글자씩 순회할 수 있으므로, 텍스트의 고유한 문자들을 얻을 수 있습니다:
+```javascript
+let letters = new Set("hello");
+console.log([...letters]);
+// [ 'h', 'e', 'l', 'o' ] 출력
+```

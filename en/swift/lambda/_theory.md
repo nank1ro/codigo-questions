@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 The closure can compare anything, for example `words.sorted { $0.count < $1.count }` orders strings from the shortest to the longest.
+
+---
+
+A closure can use variables declared outside its body. It **captures** them: the variable keeps living as long as the closure exists, even after the function that declared it has returned.
+This lets a function build a closure with its own private state:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` is the type of a closure with no parameters that returns an `Int`. Each call to the returned closure increments the same captured `count`:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Returning a closure is a handy way to build customized functions. The parameters of the outer function are captured by the closure it returns:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+The return type `(Int) -> Int` describes the closure, and the shorthand `$0` refers to the argument of that closure, not of `makeAdder`.
+
+---
+
+A closure stored in a constant can be passed wherever a closure argument is expected, using the argument label of the parameter:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Every call to a function that returns a closure creates a **new** captured variable. Two closures built by separate calls don't share their state:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+The state is shared only between calls of the same closure.
+
+---
+
+By default a closure passed to a function must be used only while that function runs. If the function stores the closure or returns another closure that uses it, the closure **escapes** the function, and its parameter must be marked with `@escaping`:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Without `@escaping` the compiler reports an error, because the returned closure would use `task` after `twice` has finished.
+
+---
+
+Closures can be stored in arrays like any other value. The element type is the function type:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Looping over such an array and calling each closure in turn builds a small **pipeline** of transformations.

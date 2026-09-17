@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 Cada llamada a `makeTimer()` crea una variable `seconds` completamente nueva, así que dos temporizadores nunca comparten su contador.
+
+---
+
+Las funciones anónimas admiten los mismos tipos de parámetros que las funciones con nombre: parámetros **posicionales opcionales** entre `[]` y parámetros **con nombre** entre `{}`, ambos con valores por defecto:
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+Una función anónima no tiene que guardarse en ningún sitio: puede **llamarse inmediatamente** escribiendo los argumentos justo después de su llave de cierre. Esto es útil para calcular un valor con unas pocas variables temporales que no deben filtrarse en el código circundante:
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+Aquí `pi` existe solo dentro de la función anónima, y `area` recibe el valor devuelto.
+
+---
+
+Las funciones que toman y devuelven otras funciones pueden combinarse libremente. Un ejemplo clásico es la **composición**: construir una nueva función que ejecuta una función y luego pasa su resultado a otra:
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

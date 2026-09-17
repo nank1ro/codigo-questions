@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+Una mappa letterale vuota `{}` non ha coppie da cui dedurre i tipi, quindi assegnale tipi espliciti con `<K, V>{}` o con un'annotazione di tipo:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+La proprietà `.isEmpty` è `true` quando una mappa non ha coppie, e `.isNotEmpty` è `true` quando ne ha almeno una:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+Il metodo `.forEach()` esegue una funzione una volta per ogni coppia. La funzione riceve due parametri: la chiave e il valore:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+Una mappa non è un `Iterable`, quindi non puoi scorrerla direttamente con `for-in`. Scorri invece `.entries`: ogni elemento è un `MapEntry` con una `.key` e un `.value`:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+Il metodo `.putIfAbsent(key, ifAbsent)` aggiunge una coppia **solo se** la chiave non è ancora nella mappa. Il secondo argomento è una funzione che produce il valore. Se la chiave esiste già, la mappa rimane invariata. In entrambi i casi viene restituito il valore ora memorizzato sotto la chiave:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann è già presente, nulla cambia
+ages.putIfAbsent('Bob', () => 25); // Bob viene aggiunto
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+Il metodo `.update(key, update)` sostituisce il valore di una chiave esistente. Il secondo argomento è una funzione che riceve il valore attuale e restituisce quello nuovo. Se la chiave manca, `.update()` genera un errore, a meno che tu non passi una funzione `ifAbsent` che produce il valore iniziale:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple diventa 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi viene aggiunto con 1
+print(stock); // {apple: 4, kiwi: 1}
+```

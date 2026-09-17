@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Números não são strings: chame `toString()` primeiro, como em `42.toString().padStart(4, '0')`.
+
+---
+
+Duas strings são iguais quando contêm os mesmos caracteres na mesma ordem. Em Kotlin, `==` compara o **conteúdo** das strings, então essa é a forma normal de compará-las.
+`equals` faz o mesmo, mas também aceita `ignoreCase = true` para ignorar a diferença entre maiúsculas e minúsculas:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` verifica se duas variáveis apontam para o exato mesmo objeto na memória, o que quase nunca é o que você quer com strings.
+
+---
+
+`reversed()` retorna a string com seus caracteres na ordem oposta:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Uma palavra que se lê da mesma forma nas duas direções, como `"level"`, é chamada de **palíndromo**.
+
+---
+
+Strings são **imutáveis**: uma vez criadas, elas nunca mudam. Toda função que você viu até agora, como `uppercase()` ou `replace()`, retorna uma **nova** string e deixa a original intacta.
+Para manter o resultado você precisa armazená-lo, por exemplo reatribuindo uma `var`:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // o resultado é descartado
+println(name)           // kotlin
+name = name.uppercase() // o resultado é guardado
+println(name)           // KOTLIN
+```
+
+---
+
+Construir uma string longa pedaço por pedaço com `+` cria uma nova string a cada etapa. Um `StringBuilder` é um buffer de texto mutável feito para esse trabalho: `append` adiciona texto ao final (e retorna o builder, para que as chamadas possam ser encadeadas) e `toString()` fornece a `String` final:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` aceita strings, caracteres e números.

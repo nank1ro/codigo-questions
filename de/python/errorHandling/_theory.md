@@ -153,3 +153,33 @@ Eine Handvoll eingebauter Ausnahmen deckt die meisten alltäglichen Fehler ab:
 | `IndexError` | ein Sequenzindex ist außerhalb des Bereichs | `[1, 2][5]` |
 
 Zu einer dieser Ausnahmen zu greifen, statt einen neuen Typ zu erfinden, hält deine Fehler für jeden lesbar, der Python kennt.
+
+---
+
+Manchmal soll ein Handler auf einen Fehler reagieren, ohne die Verantwortung dafür zu übernehmen: ihn mitprotokollieren, ihn mitzählen, etwas schließen — und dann den Aufrufer damit umgehen lassen. Ein `raise` allein innerhalb eines `except`-Blocks **löst die behandelte Ausnahme erneut aus**, mit ihrem ursprünglichen Typ, ihrer Meldung und ihrem Traceback unversehrt:
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+Würdest du stattdessen `raise ValueError(...)` schreiben, entstünde eine neue Ausnahme mit einem neuen Traceback — es wäre nicht mehr derselbe Fehler, den du gefangen hast, und genau diese Identität bewahrt ein alleinstehendes `raise`.
+
+---
+
+Wenn kein eingebauter Typ passt, definiere deinen eigenen, indem du von `Exception` erbst. Ein leerer Körper genügt meist — der Name ist die Botschaft an den Leser:
+```python
+class ConfigError(Exception):
+    pass
+```
+Sie verhält sich wie jede andere Ausnahme: `raise ConfigError("bad port")` löst sie aus, und `except ConfigError:` fängt sie ab.
+
+Einen Fehler auf niedriger Ebene in deinen eigenen Typ zu übersetzen ist üblich, und der ursprüngliche Fehler sollte dabei nicht verloren gehen. `raise NewError(...) from original` **verkettet** beide: Es speichert `original` im `__cause__`-Attribut der neuen Ausnahme, und der Traceback zeigt beide unter *The above exception was the direct cause of the following exception* an:
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+Ohne `from e` hängen die beiden weiterhin implizit zusammen, aber `from` sagt laut heraus, dass der erste Fehler den zweiten verursacht hat.

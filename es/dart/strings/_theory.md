@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 Llamar a `.split('')` con un separador vacío te da una lista con cada carácter individual.
+
+---
+
+Algunos caracteres no se pueden escribir directamente dentro de comillas. Las **secuencias de escape** empiezan con una barra invertida: `\n` es un salto de línea, `\t` una tabulación, `\\` una barra invertida y `\$` un signo de dólar literal (de lo contrario `$` inicia una interpolación):
+
+```dart
+print('one\ntwo');   // imprime uno y dos en líneas separadas
+print('Cost: \$5');  // Cost: $5
+```
+
+Un **raw string** se antepone con `r`: dentro de él, las barras invertidas y `$` son caracteres normales, nada se escapa ni se interpola:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+Para texto que ocupa varias líneas, usa una **cadena multilínea** delimitada por comillas triples `'''` o `"""`: los saltos de línea dentro de ella se conservan.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+Por debajo, cada carácter de una cadena se almacena como un número, su **code unit** (un código UTF-16). `.codeUnitAt(index)` da el código de un carácter y `.codeUnits` la lista completa. `String.fromCharCode(code)` hace lo contrario, construyendo una cadena a partir de un código:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+Las letras consecutivas tienen códigos consecutivos: `'A'` es 65, `'B'` es 66, y así sucesivamente.
+
+---
+
+Dos cadenas son iguales con `==` cuando contienen exactamente los mismos caracteres, en el mismo orden. La comparación distingue mayúsculas de minúsculas y cuenta cada espacio:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+Para comparar ignorando mayúsculas y minúsculas, convierte antes ambos lados: `a.toLowerCase() == b.toLowerCase()`. Para ordenar, `.compareTo(other)` devuelve un número negativo, `0` o un número positivo según si la cadena va antes, es igual, o va después de la otra.
+
+---
+
+Como las cadenas son inmutables, construir un texto largo con `+=` en un bucle crea una nueva cadena en cada paso. Un **StringBuffer** recopila fragmentos de texto de forma eficiente y produce la cadena final solo cuando lo pides:
+
+- `.write(value)` añade un valor (cualquier tipo se convierte a texto)
+- `.writeln(value)` añade el valor seguido de un salto de línea
+- `.toString()` devuelve la cadena construida hasta el momento
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+Los métodos de las cadenas devuelven cadenas, así que se pueden **encadenar** uno tras otro. Combinado con `.split('')`, la propiedad de lista `.reversed` y `.join()`, esto te permite invertir una cadena en una sola expresión:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+Un **palíndromo** es un texto que se lee igual hacia adelante y hacia atrás, como `level`.

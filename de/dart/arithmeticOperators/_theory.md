@@ -57,3 +57,17 @@ int result = a ~/ b; // 3  (nicht 3.333...)
 ```
 
 Verwende `~/`, wenn du einen ganzzahligen Quotienten ohne Rest brauchst.
+
+---
+
+Dart folgt der Standard-Mathematik **Reihenfolge der Operationen** (Vorrang): Multiplikation und Division werden vor Addition und Subtraktion bewertet.
+
+```dart
+int result = 2 + 3 * 4; // 14, nicht 20
+```
+
+Verwende Klammern, um die Reihenfolge zu ändern:
+
+```dart
+int result = (2 + 3) * 4; // 20
+```

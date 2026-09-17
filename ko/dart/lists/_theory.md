@@ -63,3 +63,57 @@ print(fruits.contains('orange')); // false
 ```
 
 이것은 반복문 없이 포함 여부를 확인하는 데 유용합니다.
+
+---
+
+`.remove(value)` 메서드는 리스트에서 `value`와 같은 **첫 번째** 요소를 제거합니다. 요소가 제거되었으면 `true`, 값을 찾지 못했으면 `false`를 반환합니다.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+bool removed = colors.remove('green');
+print(removed); // true
+print(colors); // [red, blue]
+```
+
+---
+
+`.first`와 `.last` 속성은 인덱스를 사용하지 않고 리스트의 첫 번째와 마지막 요소를 알려줍니다.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.first); // red
+print(colors.last); // blue
+```
+
+리스트가 비어 있으면 둘 다 에러를 발생시킵니다.
+
+---
+
+`.isEmpty` 속성은 리스트에 요소가 없을 때 `true`이고, `.isNotEmpty`는 요소가 하나 이상 있을 때 `true`입니다.
+
+```dart
+var colors = <String>[];
+print(colors.isEmpty); // true
+colors.add('red');
+print(colors.isNotEmpty); // true
+```
+
+---
+
+`.indexOf(value)` 메서드는 `value`와 같은 첫 번째 요소의 인덱스를 반환합니다. 값이 리스트에 없으면 `-1`을 반환합니다.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.indexOf('green')); // 1
+print(colors.indexOf('pink')); // -1
+```
+
+---
+
+`.where()` 메서드는 함수가 `true`를 반환하는 요소만 남깁니다. 새 리스트가 아니라 지연 평가되는 `Iterable`을 반환하므로, 결과를 `List`로 되돌리려면 `.toList()`를 호출해야 합니다.
+
+```dart
+var numbers = [1, 2, 3, 4];
+List<int> big = numbers.where((n) => n > 2).toList();
+print(big); // [3, 4]
+```

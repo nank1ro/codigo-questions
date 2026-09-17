@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+当你确定类型时，你可以用 `as` 对值进行**强制转换**：`value as String` 把该值作为 `String` 给你。
+如果该值实际上是别的东西，`as` 会在运行时抛出 `ClassCastException`。
+**安全转换** `as?` 从不抛出异常：转换成功时它返回该值，失败时返回 `null`，因此它的结果是可空类型：
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null,"Kotlin" 不是 Int
+val bad = items[0] as Int        // 抛出 ClassCastException
+```
+需要检查时优先使用带智能转换的 `is`，在失败可以接受时使用 `as?`。

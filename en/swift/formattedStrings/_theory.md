@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` accepts a Swift `String` directly. Do not use `%s` with a Swift string: that specifier expects a C string and prints garbage or crashes.
+
+---
+
+Since `%` starts a specifier, a literal percent sign must be written as `%%`. This is how you format a percentage:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Multiply the ratio by `100` first, then pick the precision: `%.0f%%` for `46%`, `%.1f%%` for `45.7%`.
+
+---
+
+Width flags only work inside `String(format:)`. To pad a plain string yourself, build the spaces with `String(repeating:count:)` and join them to the text:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+If the text is already longer than the width, `4 - text.count` becomes negative and `String(repeating:count:)` crashes. Guard it with `max(0, ...)`, so the count never goes below zero and long text is left as it is.
+
+---
+
+Foundation also has a ready-made helper for padding on the right: `padding(toLength:withPad:startingAt:)`. It extends the string to the given length by repeating the pad text, and cuts it if it is longer:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` is the index inside the pad text where the repetition begins; with a single-character pad it is always `0`.
+
+---
+
+Put the two tools together to print a table: `padding` aligns the text of each row on the left, `String(format:)` aligns the numbers on the right with a fixed width and precision:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Because every row has the same width, the decimal points end up in the same column.

@@ -76,3 +76,18 @@ void main() {
 ```
 
 이름 있는 매개변수는 가독성을 향상시킵니다. 특히 함수에 매개변수가 많을 때 유용합니다.
+
+---
+
+Dart는 **선택적 위치 매개변수**도 지원합니다 — 대괄호 `[]`로 감싼 매개변수입니다. 위치로 전달되며, 호출자가 생략할 수 있고, 기본값을 가질 수 있습니다：
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

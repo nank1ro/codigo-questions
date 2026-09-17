@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 Appeler `.split('')` avec un séparateur vide vous donne une liste avec chaque caractère individuel.
+
+---
+
+Certains caractères ne peuvent pas être tapés directement entre guillemets. Les **séquences d'échappement** commencent par une barre oblique inverse : `\n` est un retour à la ligne, `\t` une tabulation, `\\` une barre oblique inverse et `\$` un signe dollar littéral (sinon `$` démarre une interpolation) :
+
+```dart
+print('one\ntwo');   // affiche one et two sur des lignes séparées
+print('Cost: \$5');  // Cost: $5
+```
+
+Une **chaîne brute** (raw string) est préfixée par `r` : à l'intérieur, les barres obliques inverses et `$` sont des caractères normaux, rien n'est échappé ni interpolé :
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+Pour un texte qui s'étend sur plusieurs lignes, utilisez une **chaîne multi-ligne** délimitée par des triples guillemets `'''` ou `"""` : les retours à la ligne à l'intérieur sont conservés.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+En interne, chaque caractère d'une chaîne est stocké comme un nombre, son **code unit** (un code UTF-16). `.codeUnitAt(index)` donne le code d'un caractère et `.codeUnits` donne la liste complète. `String.fromCharCode(code)` fait l'inverse, en construisant une chaîne à partir d'un code :
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+Des lettres consécutives ont des codes consécutifs : `'A'` vaut 65, `'B'` vaut 66, et ainsi de suite.
+
+---
+
+Deux chaînes sont égales avec `==` lorsqu'elles contiennent exactement les mêmes caractères, dans le même ordre. La comparaison est **sensible à la casse** et compte chaque espace :
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+Pour comparer en ignorant la casse, convertissez d'abord les deux côtés : `a.toLowerCase() == b.toLowerCase()`. Pour l'ordre, `.compareTo(other)` renvoie un nombre négatif, `0` ou un nombre positif selon que la chaîne vient avant, est égale, ou vient après l'autre.
+
+---
+
+Comme les chaînes sont immuables, construire un long texte avec `+=` dans une boucle crée une nouvelle chaîne à chaque étape. Un **StringBuffer** rassemble des morceaux de texte efficacement et ne produit la chaîne finale que lorsque vous la demandez :
+
+- `.write(value)` ajoute une valeur (tout type est converti en texte)
+- `.writeln(value)` ajoute la valeur suivie d'un retour à la ligne
+- `.toString()` renvoie la chaîne construite jusqu'à présent
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+Les méthodes de chaîne renvoient des chaînes, elles peuvent donc être **chaînées** les unes après les autres. Combiné avec `.split('')`, la propriété de liste `.reversed` et `.join()`, cela permet d'inverser une chaîne en une seule expression :
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+Un **palindrome** est un texte qui se lit de la même façon dans les deux sens, comme `level`.

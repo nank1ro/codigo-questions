@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3이 각각 다른 줄에
 }
 ```
+
+---
+
+set은 집합론의 고전적인 연산을 지원합니다. 각 연산은 **새로운** set을 반환하며 원본은 변경되지 않습니다:
+- `a.union(b)`(합집합)는 `a`, `b`, 또는 둘 다에 있는 모든 요소를 포함합니다
+- `a.intersection(b)`(교집합)는 `a`와 `b` **둘 다**에 있는 요소만 포함합니다
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+두 가지 연산이 더해지면 이 계열이 완성됩니다:
+- `a.subtracting(b)`(차집합)는 `a`의 요소 중 `b`에 **없는** 것들을 포함합니다
+- `a.symmetricDifference(b)`(대칭차)는 `a` 또는 `b`에는 있지만 **둘 다에는 없는** 요소를 포함합니다
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+`union`이나 `intersection`과 달리, `subtracting`은 대칭적이지 않습니다: `a.subtracting(b)`와 `b.subtracting(a)`는 대체로 다릅니다.
+
+---
+
+set끼리 서로 비교할 수도 있습니다. 이 메서드들은 `Bool`을 반환합니다:
+- `a.isSubset(of: b)`(부분집합)는 `a`의 모든 요소가 `b`에도 있을 때 `true`입니다
+- `a.isSuperset(of: b)`(상위집합)는 `a`가 `b`의 모든 요소를 포함할 때 `true`입니다
+- `a.isDisjoint(with: b)`(서로소)는 `a`와 `b`에 공통 요소가 없을 때 `true`입니다
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+set과 배열은 서로 쉽게 변환할 수 있습니다.
+배열을 `Set(...)`에 전달하면 그 요소들로 set이 만들어지며, 이는 **중복을 제거**하는 가장 빠른 방법입니다:
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} in some order
+```
+set을 `Array(...)`에 전달하면 배열이 반환되지만, set에는 순서가 없으므로 요소가 예측할 수 없는 순서로 나옵니다.
+그래서 순서가 있는 결과가 필요할 때는 보통 set에 `sorted()`를 대신 호출합니다. 이 메서드는 이미 배열을 반환합니다:
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

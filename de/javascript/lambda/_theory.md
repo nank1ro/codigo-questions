@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // gibt 6 aus
 ```
 Lies sie von links nach rechts: `makeAdder` nimmt `amount` entgegen und gibt `(n) => n + amount` zurück, eine Pfeilfunktion, die `amount` über eine Closure einfängt. `makeAdder(1)(5)` ruft die zurückgegebene Funktion sofort auf.
+
+---
+
+Du musst eine Pfeilfunktion nicht speichern, um sie aufzurufen. Setze sie in Klammern und füge direkt danach die Argumentliste hinzu: Das ist eine **sofort aufgerufene** Pfeilfunktion:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// gibt 10 aus
+```
+Die Klammern um den Pfeil sind erforderlich: Ohne sie würde `(n) => n * 2(5)` versuchen, die Zahl `2` aufzurufen. Sofort aufgerufene Funktionen sind praktisch, um einen Wert mit ein paar temporären Variablen zu berechnen, die nicht in den Rest des Programms hinein sichtbar sein sollen.
+
+---
+
+Der größte Unterschied zwischen einer regulären Funktion und einer Pfeilfunktion ist das Schlüsselwort `this`.
+Eine reguläre `function` erhält ihr **eigenes** `this`, das davon abhängt, *wie sie aufgerufen wird*: In `team.intro()` ist es `team`, aber in einem Callback, der an `map` übergeben wird, setzt es niemand, daher ist `this.name` `undefined` (oder sogar ein Fehler im strikten Modus).
+Eine Pfeilfunktion hat **kein** eigenes `this`: Sie verwendet einfach das `this` des umgebenden Codes (ein **lexikalisches** `this`). Deshalb können Pfeil-Callbacks innerhalb einer Methode weiter das Objekt verwenden:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// gibt [ 'Ana plays for Tigers', 'Bo plays for Tigers' ] aus
+```
+Mit `function (p) { return ... this.name ... }` als Callback würde derselbe Code stattdessen `undefined` ausgeben.
+Die Kehrseite: Verwende keine Pfeilfunktion als Objekt-**Methode**, die `this` braucht, weil sie nicht auf das Objekt verweist.

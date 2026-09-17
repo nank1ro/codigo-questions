@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+확장 멤버는 식의 **정적 타입**, 즉 컴파일러가 아는 타입을 기준으로 **컴파일 시간에** 결정되며, 런타임의 실제 객체를 기준으로 하지 않습니다. `Object` 타입 변수에 저장된 `String`은 프로그램이 실행될 때 여전히 `String`이지만, 컴파일러는 `Object`만 보기 때문에 그에 맞는 확장을 찾지 못합니다:
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+`dynamic`도 마찬가지입니다: 확장 멤버는 `dynamic` 수신자를 통해서는 절대 찾을 수 없습니다. 값을 먼저 캐스팅하거나 정확한 타입으로 선언하세요.

@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` convierte un fallo en `null`, mientras que `getOrElse { ... }` ejecuta el bloque para construir un reemplazo. Nada se lanza en el lugar de la llamada, así que el fallo puede llevarse de un lado a otro y tratarse más tarde.
+
+---
+
+Un `Result` también puede inspeccionarse sin desenvolverlo. `onFailure` ejecuta su bloque solo cuando el resultado contiene una excepción, `onSuccess` solo cuando contiene un valor, y **ambos devuelven el mismo `Result`** así que las llamadas pueden encadenarse:
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+Dentro del bloque la excepción (o el valor) está disponible como `it`, así que `it.message` es el texto del fallo.
+
+Esta es la forma de "registrar y continuar": informa del problema donde ocurrió, luego continúa, sin un `return` anticipado y sin un `var` asignado desde dos lugares.
+
+---
+
+Dónde se coloca el `try` decide cuánto trabajo destruye un único valor erróneo. Envuelve **todo el bucle** y el primer fallo abandona el resto del lote; envuelve el **cuerpo** y solo se pierde ese elemento:
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // ignora este valor
+    }
+}
+println(total) // 8
+```
+Esto se combina naturalmente con una función de validación que lanza: la función enuncia una regla y rechaza todo lo que la incumpla, y el bucle decide que un rechazo solo cuesta un elemento.

@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` przyjmuje bezpośrednio `String` ze Swifte. Nie używaj `%s` z ciągiem znaków Swifta: ten specyfikator oczekuje ciągu znaków z języka C i wypisuje śmieci lub powoduje awarię.
+
+---
+
+Ponieważ `%` rozpoczyna specyfikator, dosłowny znak procenta musi być zapisany jako `%%`. Tak formatujesz wartość procentową:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Najpierw pomnóż stosunek przez `100`, a potem wybierz precyzję: `%.0f%%` daje `46%`, `%.1f%%` daje `45.7%`.
+
+---
+
+Flagi szerokości działają tylko wewnątrz `String(format:)`. Aby samodzielnie dopełnić zwykły ciąg znaków, zbuduj spacje za pomocą `String(repeating:count:)` i dołącz je do tekstu:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+Jeśli tekst jest już dłuższy niż szerokość, `4 - text.count` staje się ujemne i `String(repeating:count:)` ulega awarii. Zabezpiecz to przez `max(0, ...)`, dzięki czemu liczba nigdy nie spadnie poniżej zera, a długi tekst pozostanie bez zmian.
+
+---
+
+Foundation ma też gotową funkcję pomocniczą do dopełniania po prawej: `padding(toLength:withPad:startingAt:)`. Wydłuża ona ciąg znaków do podanej długości przez powtarzanie tekstu wypełnienia, a jeśli jest on dłuższy, obcina go:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` to indeks wewnątrz tekstu wypełnienia, od którego zaczyna się powtarzanie; przy wypełnieniu z jednego znaku jest to zawsze `0`.
+
+---
+
+Połącz oba narzędzia, aby wypisać tabelę: `padding` wyrównuje tekst każdego wiersza do lewej, a `String(format:)` wyrównuje liczby do prawej ze stałą szerokością i precyzją:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Ponieważ każdy wiersz ma tę samą szerokość, kropki dziesiętne trafiają do tej samej kolumny.

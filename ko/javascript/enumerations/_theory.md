@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // false 출력
 ```
+
+---
+
+열거형은 `switch`문과 자연스럽게 어울립니다. `switch`문은 하나의 값을 여러 `case` 레이블 목록과 비교하여 처음으로 일치하는 것의 코드를 실행합니다.
+각 분기는 `return` 또는 `break`로 끝나며, 선택적인 `default` 분기는 어느 것도 일치하지 않을 때 실행됩니다:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// go 출력
+```
+항상 원시 값(`"red"`)이 아니라 멤버(`Light.RED`)와 비교하세요. 그러면 값이 나중에 바뀌더라도 `switch`가 계속 동작합니다.
+
+---
+
+값에서 멤버 이름으로 되돌아가는 것을 **역방향 조회**라고 합니다. `Object.keys()`로 이름들을 순회하며, 배열 메서드 `find()`를 사용해 값이 일치하는 첫 번째 이름을 고릅니다. `find()`는 콜백이 `true`가 되는 첫 번째 요소를 반환합니다(없으면 `undefined`를 반환합니다):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// HIGH 출력
+```
+`Priority[key]`는 변수 `key`에 저장된 이름을 가진 멤버를 읽습니다. 이는 어떤 객체에서든 사용하는 것과 같은 대괄호 표기법입니다.
+
+---
+
+문자열 멤버에는 한 가지 약점이 있습니다. 같은 텍스트를 가진 어떤 문자열이든 멤버로 인정된다는 점입니다.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// true 출력
+```
+오직 자기 자신과만 같은 멤버를 원한다면 `Symbol`을 사용하세요. `Symbol(description)`은 같은 설명으로 만들어진 것이라도 다른 모든 심볼과 다른, 완전히 새로운 값을 만듭니다:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// true 출력
+console.log(Suit.HEARTS === Symbol("hearts"));
+// false 출력
+console.log(typeof Suit.HEARTS);
+// symbol 출력
+```
+전달하는 텍스트는 디버깅용 라벨일 뿐이며, `description` 프로퍼티로 다시 읽을 수 있습니다(`Suit.HEARTS.description`은 `"hearts"`입니다).
+
+---
+
+열거형 값은 예를 들어 모든 멤버를 라벨이나 가격에 대응시키기 위해, 다른 객체의 **키**로 자주 사용됩니다. 객체 리터럴 안에서 키를 대괄호 `[ ]`로 감싸면 표현식이 평가되고 그 결과가 키로 사용됩니다(**계산된 키**). 이는 문자열 멤버와 심볼 멤버 모두에서 동작합니다:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// Completed 출력
+```
+대괄호가 없다면 `Status.DONE: "Completed"`는 구문 오류가 되고, `"Status.DONE"`은 그냥 문자열 키가 됩니다.
+
+---
+
+각 멤버가 여러 데이터나 자신만의 메서드를 필요로 할 때는 **클래스**가 열거형의 역할을 할 수 있습니다. 모든 멤버는 그 클래스의 인스턴스이며, `static` 프로퍼티, 즉 각 인스턴스가 아니라 클래스 자체에 속하는 프로퍼티에 저장됩니다:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// Earth 출력
+```
+클래스 뒤에 `Object.freeze(Planet)`을 호출해 아무도 멤버를 추가하거나 교체하지 못하게 막고, 생성자 안에서 `Object.freeze(this)`로 각 인스턴스를 동결하여 멤버 자체를 읽기 전용으로 유지하세요.

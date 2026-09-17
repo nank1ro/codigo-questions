@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // prints false
 ```
+
+---
+
+Enumerations pair naturally with the `switch` statement, which compares one value against a list of `case` labels and runs the code of the first matching one.
+Each branch ends with `return` or `break`, and the optional `default` branch runs when nothing matches:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// prints go
+```
+Always compare against the members (`Light.RED`), never against the raw values (`"red"`): if the value ever changes, the `switch` keeps working.
+
+---
+
+Going from a value back to its member name is called a **reverse lookup**. Loop over the names with `Object.keys()` and pick the first one whose value matches, using the array method `find()`, which returns the first element for which the callback is `true` (or `undefined` if there is none):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// prints HIGH
+```
+`Priority[key]` reads the member whose name is stored in the variable `key`, the same bracket notation you use for any object.
+
+---
+
+String members have one weakness: any string with the same text is accepted as a member.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// prints true
+```
+When you want members that are equal **only** to themselves, use a `Symbol`. `Symbol(description)` creates a brand-new value that is different from every other symbol, even one created with the same description:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// prints true
+console.log(Suit.HEARTS === Symbol("hearts"));
+// prints false
+console.log(typeof Suit.HEARTS);
+// prints symbol
+```
+The text you pass is only a label for debugging; you can read it back with the `description` property (`Suit.HEARTS.description` is `"hearts"`).
+
+---
+
+Enumeration values are often used as **keys** of another object, for example to map every member to a label or a price. Inside an object literal, wrapping a key in square brackets `[ ]` evaluates the expression and uses its result as the key (a **computed key**). This works both with string and with symbol members:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// prints Completed
+```
+Without the brackets, `Status.DONE: "Completed"` would be a syntax error, and `"Status.DONE"` would be a plain string key.
+
+---
+
+When each member needs several pieces of data or its own methods, a **class** can play the role of the enumeration. Every member is an instance of the class, stored in a `static` property, that is a property that belongs to the class itself instead of to each instance:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// prints Earth
+```
+Call `Object.freeze(Planet)` after the class to stop anyone from adding or replacing members, and freeze each instance in the constructor with `Object.freeze(this)` so that the members themselves stay read-only.

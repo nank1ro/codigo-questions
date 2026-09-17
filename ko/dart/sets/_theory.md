@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+Set은 고전적인 집합 연산을 지원합니다. 각 연산은 **새로운** Set을 반환하고 원본은 그대로 둡니다:
+
+- `a.union(b)`는 `a` **또는** `b`에 있는 요소를 담습니다
+- `a.intersection(b)`는 `a`와 `b` **둘 다**에 있는 요소를 담습니다
+- `a.difference(b)`는 `a`의 요소 중 `b`에 **없는** 요소를 담습니다
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+리스트를 Set으로 변환하는 것은 **중복을 제거하는** 가장 쉬운 방법입니다: 모든 리스트는 `.toSet()` 메서드를 가지고 있으며, 이는 처음 나온 순서대로 고유한 요소를 담은 Set을 반환합니다. Set에는 반대 방향으로 변환하는 `.toList()` 메서드가 있으므로, 이 둘을 연결하면 중복이 없는 리스트를 얻을 수 있습니다:
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+리스트와 Set 모두 `.contains()` 메서드를 가지고 있지만, 동작 방식은 매우 다릅니다. 리스트는 요소를 처음부터 하나씩 확인하므로, 긴 리스트에서의 탐색은 리스트가 커질수록 느려집니다. Set은 요소를 해시로 저장하므로, 요소가 아무리 많아도 `.contains()`는 거의 일정한 시간에 값을 찾습니다.
+
+멤버십을 여러 번 확인해야 하고 순서나 중복이 중요하지 않다면, Set이 적합한 도구입니다:
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // fast, 수백만 개의 요소가 있어도 빠름
+```

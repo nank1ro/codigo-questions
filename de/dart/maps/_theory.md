@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+Eine leere Map-Literal `{}` hat keine Paare, aus denen die Typen abgeleitet werden könnten, also gib ihr explizite Typen mit `<K, V>{}` oder mit einer Typannotation:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+Die Eigenschaft `.isEmpty` ist `true`, wenn eine Map keine Paare hat, und `.isNotEmpty` ist `true`, wenn sie mindestens eines hat:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+Die Methode `.forEach()` führt eine Funktion einmal für jedes Paar aus. Die Funktion erhält zwei Parameter: den Schlüssel und den Wert:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+Eine Map ist kein `Iterable`, daher kannst du nicht direkt mit `for-in` darüber iterieren. Iteriere stattdessen über `.entries`: Jedes Element ist ein `MapEntry` mit einem `.key` und einem `.value`:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+Die Methode `.putIfAbsent(key, ifAbsent)` fügt ein Paar **nur dann** hinzu, wenn der Schlüssel noch nicht in der Map ist. Das zweite Argument ist eine Funktion, die den Wert erzeugt. Wenn der Schlüssel bereits existiert, bleibt die Map unverändert. In beiden Fällen wird der jetzt unter dem Schlüssel gespeicherte Wert zurückgegeben:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann ist bereits vorhanden, nichts ändert sich
+ages.putIfAbsent('Bob', () => 25); // Bob wird hinzugefügt
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+Die Methode `.update(key, update)` ersetzt den Wert eines vorhandenen Schlüssels. Das zweite Argument ist eine Funktion, die den aktuellen Wert erhält und den neuen zurückgibt. Wenn der Schlüssel fehlt, wirft `.update()` einen Fehler, es sei denn, du übergibst eine `ifAbsent`-Funktion, die den Anfangswert erzeugt:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple wird 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi wird mit 1 hinzugefügt
+print(stock); // {apple: 4, kiwi: 1}
+```

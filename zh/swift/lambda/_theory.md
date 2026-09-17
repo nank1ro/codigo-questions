@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 闭包可以比较任何内容，例如 `words.sorted { $0.count < $1.count }` 会把字符串按从短到长排序。
+
+---
+
+闭包可以使用在其函数体外部声明的变量。它会**捕获**这些变量：只要闭包存在，该变量就会持续存在，即使声明它的函数已经返回。
+这让函数可以构建一个拥有自己私有状态的闭包：
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` 是一个不接收参数并返回 `Int` 的闭包类型。每次调用返回的闭包都会递增同一个被捕获的 `count`：
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+返回一个闭包是构建定制函数的便捷方式。外层函数的参数会被它返回的闭包捕获：
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+返回类型 `(Int) -> Int` 描述了这个闭包，简写 `$0` 指的是这个闭包的参数，而不是 `makeAdder` 的参数。
+
+---
+
+存储在常量中的闭包可以在任何需要闭包参数的地方传递，使用该参数的参数标签：
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+每次调用返回闭包的函数都会创建一个**新的**被捕获变量。由不同调用创建的两个闭包不会共享它们的状态：
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+状态只在同一个闭包的多次调用之间共享。
+
+---
+
+默认情况下，传递给函数的闭包只能在该函数运行期间使用。如果函数存储了这个闭包，或者返回了另一个使用它的闭包，那么这个闭包就会**逃逸**出该函数，它的参数必须标记为 `@escaping`：
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+如果不加 `@escaping`，编译器会报错，因为返回的闭包会在 `twice` 执行结束之后才使用 `task`。
+
+---
+
+闭包可以像其他值一样存储在数组中。元素类型就是函数类型：
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+遍历这样的数组并依次调用每个闭包，就构建出了一个小型的转换**流水线**（pipeline）。

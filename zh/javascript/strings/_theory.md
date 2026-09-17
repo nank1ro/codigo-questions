@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // 打印 45
 ```
+
+---
+
+`split(separator)` 方法将字符串拆分为一个**数组**片段，在每个 `separator` 处切分：
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// 打印 [ 'I', 'like', 'JavaScript' ]
+```
+与之相反的是数组方法 `join(separator)`，它把这些片段重新粘合成一个字符串：
+```javascript
+console.log(words.join("-"));
+// 打印 I-like-JavaScript
+```
+
+---
+
+用户输入常常带有多余的空格。`trim()` 方法返回一个去除**两端**空白字符的字符串副本：
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// 打印 hello
+```
+`trimStart()` 只去除开头的空白，`trimEnd()` 只去除结尾的空白。
+字符串中间的空格永远不会被处理。
+
+---
+
+`replace(search, replacement)` 方法返回一个新字符串，其中 `search` 的**第一次**出现被替换为 `replacement`：
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// 打印 blue red
+```
+要替换**所有**出现的位置，使用 `replaceAll()`：
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// 打印 blue blue
+```
+
+---
+
+`repeat(count)` 方法返回重复 `count` 次的字符串：
+```javascript
+console.log("ab".repeat(3));
+// 打印 ababab
+console.log("ab".repeat(0));
+// 打印空字符串
+```
+
+---
+
+`padStart(targetLength, padString)` 方法会在字符串的**开头**添加 `padString`，直到达到 `targetLength` 个字符。`padEnd()` 在结尾做同样的事：
+```javascript
+console.log("7".padStart(3, "0"));
+// 打印 007
+console.log("Tea".padEnd(6, "."));
+// 打印 Tea...
+```
+如果字符串已经足够长，则原样返回。
+数字没有字符串方法，所以要先用 `String(number)` 转换它们。
+
+---
+
+两个字符串只有在字符完全相同、大小写也相同的情况下，用 `===` 比较才相等：
+```javascript
+console.log("hello" === "hello");
+// 打印 true
+console.log("hello" === "Hello");
+// 打印 false
+```
+`<` 和 `>` 运算符按字母顺序逐个字符比较字符串。
+大写字母排在小写字母之前，所以 `"Zoo" < "apple"` 为 `true`。
+
+---
+
+字符串是**不可变的**：一旦创建，字符串就永远不能被更改。
+对索引赋值不会产生任何效果，每个字符串方法都会返回一个**新**字符串，而不是修改原字符串：
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// 打印 hello
+word.toUpperCase();
+console.log(word);
+// 打印 hello
+```
+要保留结果，需要把它重新赋值给变量：
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+使用空分隔符调用 `split("")` 会把字符串转换为由单个字符组成的数组。
+数组有一个 `reverse()` 方法，因此你可以通过拆分、反转再拼接来反转字符串：
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// 打印 cba
+```

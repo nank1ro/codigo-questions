@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // affiche 6
 ```
 Lisez-la de gauche à droite : `makeAdder` prend `amount` et renvoie `(n) => n + amount`, une fonction fléchée qui capture `amount` à travers une fermeture. `makeAdder(1)(5)` appelle immédiatement la fonction renvoyée.
+
+---
+
+Vous n'êtes pas obligé de stocker une fonction fléchée pour l'appeler. Enveloppez-la dans des parenthèses et ajoutez la liste des arguments juste après : c'est une fonction fléchée **invoquée immédiatement** :
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// affiche 10
+```
+Les parenthèses autour de la flèche sont obligatoires : sans elles, `(n) => n * 2(5)` essaierait d'appeler le nombre `2`. Les fonctions invoquées immédiatement sont pratiques pour calculer une valeur avec quelques variables temporaires qui ne doivent pas fuiter dans le reste du programme.
+
+---
+
+La plus grande différence entre une fonction régulière et une fonction fléchée est le mot-clé `this`.
+Une `function` régulière obtient son **propre** `this`, décidé par *la manière dont elle est appelée* : dans `team.intro()` c'est `team`, mais dans un callback passé à `map` personne ne le définit, donc `this.name` est `undefined` (ou même une erreur en mode strict).
+Une fonction fléchée n'a **pas** de `this` propre : elle utilise simplement le `this` du code qui l'entoure (un `this` **lexical**). C'est pourquoi les callbacks fléchés à l'intérieur d'une méthode peuvent continuer à utiliser l'objet :
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// affiche [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+Avec `function (p) { return ... this.name ... }` comme callback, le même code afficherait `undefined` au lieu de `Tigers`.
+Le revers de la médaille : n'utilisez pas une fonction fléchée comme **méthode** d'objet qui a besoin de `this`, car elle ne fera pas référence à l'objet.

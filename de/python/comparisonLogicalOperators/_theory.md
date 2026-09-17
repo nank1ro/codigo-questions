@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False, nur Schlüssel werden geprüft
 ```
 Beide geben einen Boolean zurück und lesen sich wie Englisch, was sie zur bevorzugten Art macht, Zugehörigkeit zu prüfen, statt eine Schleife zu schreiben.
+
+---
+
+`any(iterable)` gibt `True` zurück, wenn mindestens ein Element truthy ist, und `all(iterable)`, wenn jedes Element es ist (`all([])` ist `True`). In Kombination mit einem Generatorausdruck drücken sie eine Bedingung über eine ganze Sammlung aus, und sie schließen kurz wie `or` und `and`:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

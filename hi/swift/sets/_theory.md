@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 अलग-अलग लाइनों में
 }
 ```
+
+---
+
+Set, set theory के क्लासिक ऑपरेशन को सपोर्ट करते हैं। हर ऑपरेशन एक **नया** set लौटाता है और मूल sets को नहीं बदलता:
+- `a.union(b)` में वे सभी एलिमेंट होते हैं जो `a` में, `b` में, या दोनों में हों
+- `a.intersection(b)` में केवल वे एलिमेंट होते हैं जो `a` और `b` **दोनों** में हों
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+दो और ऑपरेशन इस समूह को पूरा करते हैं:
+- `a.subtracting(b)` में `a` के वे एलिमेंट होते हैं जो `b` में **नहीं** हैं
+- `a.symmetricDifference(b)` में वे एलिमेंट होते हैं जो `a` या `b` में हों, लेकिन **दोनों में नहीं**
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+`union` और `intersection` के विपरीत, `subtracting` सममित (symmetric) नहीं है: `a.subtracting(b)` और `b.subtracting(a)` आमतौर पर अलग होते हैं।
+
+---
+
+Sets की एक-दूसरे से तुलना भी की जा सकती है। ये मेथड `Bool` लौटाते हैं:
+- `a.isSubset(of: b)` `true` होता है जब `a` का हर एलिमेंट `b` में भी हो
+- `a.isSuperset(of: b)` `true` होता है जब `a` में `b` का हर एलिमेंट हो
+- `a.isDisjoint(with: b)` `true` होता है जब `a` और `b` में कोई कॉमन एलिमेंट न हो
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+Sets और ऐरे आसानी से एक-दूसरे में बदले जा सकते हैं।
+किसी ऐरे को `Set(...)` में पास करने पर उसके एलिमेंट्स से एक set बनता है, जो **डुप्लिकेट हटाने** का सबसे तेज़ तरीका है:
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} किसी भी क्रम में
+```
+किसी set को `Array(...)` में पास करने पर एक ऐरे वापस मिलता है, लेकिन चूंकि set का कोई क्रम नहीं होता, इसलिए एलिमेंट्स किसी अप्रत्याशित क्रम में आते हैं।
+इसीलिए, जब आपको क्रमबद्ध परिणाम चाहिए, तो आमतौर पर set पर `sorted()` कॉल करते हैं, जो पहले से ही एक ऐरे लौटाता है:
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

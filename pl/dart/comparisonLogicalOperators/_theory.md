@@ -54,3 +54,31 @@ bool passed = score >= 50; // true
 ```
 
 W przeciwieństwie do `>`, ten operator zwraca również `true`, gdy obie wartości są równe.
+
+---
+
+Operator **AND** `&&` łączy dwa wyrażenia logiczne. Zwraca `true` tylko wtedy, gdy **obie** strony są `true`. Jeśli choćby jedna strona jest `false`, wynik to `false`.
+
+```dart
+bool a = true;
+bool b = true;
+bool result = a && b; // true
+
+bool c = true;
+bool d = false;
+bool result2 = c && d; // false
+```
+
+---
+
+Operator **OR** `||` łączy dwa wyrażenia logiczne. Zwraca `true` jeśli **co najmniej jedna** strona jest `true`. Zwraca `false` tylko wtedy, gdy obie strony są `false`.
+
+```dart
+bool a = true;
+bool b = false;
+bool result = a || b; // true
+
+bool c = false;
+bool d = false;
+bool result2 = c || d; // false
+```

@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 文形式と同様に、enumに対するswitch式も網羅的でなければなりません。
+
+---
+
+Dart 2.17以降、enumはクラスと同じように**フィールド**と**コンストラクタ**を宣言できます。これは*拡張enum*と呼ばれます。各値はコンストラクタに独自の引数を渡します:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+3つのルールに注目してください: 値のリストは**セミコロン**`;`で終わること、フィールドは`final`でなければならないこと、コンストラクタは`const`でなければならないことです。
+
+---
+
+拡張enumは**メソッド**や**ゲッター**も宣言できます。それらの中では`this`は現在の値を指すため、その`name`、`index`、フィールドを直接使うことができます:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+フィールドを持たないenumでも、メソッドを宣言できます。その場合、値のリストは`;`で終わり、その後にメンバーが続きます。
+
+---
+
+`String`からenumの値に戻すには、`values`リストに対して`byName`を呼び出します。これは`name`が完全に一致する値を返します:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+その名前を持つ値がない場合、`byName`は`ArgumentError`をスローします。文字列がユーザー入力から来る場合は、`asNameMap()`の方が安全な選択です。これは名前から値への`Map<String, Direction>`を返すため、未知の名前を検索するとエラーではなく`null`が得られます:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+enumの値は**マップのキー**として非常に優れています。一意であり、比較が容易で、コンパイラが実在する値しか使われないことを保証してくれます。enumをキーの型としてマップを宣言し、`[]`で値を検索します:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+通常のマップと同様に、キーが存在しない場合の検索結果は`null`になるため、`??`でフォールバックを用意してください。
+
+---
+
+enumは`implements`キーワードを使って**インターフェースを実装**できます。enumはインターフェースが宣言するすべてのメンバーを提供することを約束し、その値はそのインターフェース型が期待される場所ならどこでも使用できます:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+インターフェースで宣言されたゲッターは、ゲッターまたは同名の`final`フィールドのどちらでも実装できます。

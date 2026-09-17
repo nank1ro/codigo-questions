@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // 6 を出力
 ```
 左から右に読みます。`makeAdder`は`amount`を受け取り、`(n) => n + amount`（クロージャを通して`amount`をキャプチャするアロー関数）を返します。`makeAdder(1)(5)`は返された関数をすぐに呼び出します。
+
+---
+
+アロー関数は格納しなくても呼び出せます。括弧で囲み、その直後に引数リストを追加します。これが**即時実行**されるアロー関数です：
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// 10 を出力
+```
+アローの周りの括弧は必須です。括弧がないと、`(n) => n * 2(5)`は数値`2`を呼び出そうとしてしまいます。即時実行関数は、プログラムの残りの部分に漏れてはならないいくつかの一時変数を使って値を計算するのに便利です。
+
+---
+
+通常の関数とアロー関数の最大の違いは、キーワード`this`です。
+通常の`function`は**独自の**`this`を持ち、その値は*呼び出され方*で決まります。`team.intro()`では`this`は`team`ですが、`map`に渡されるコールバックでは誰も設定しないため、`this.name`は`undefined`になります（strictモードではエラーになることさえあります）。
+アロー関数は**独自の**`this`を持ちません。周囲のコードの`this`をそのまま使います（**レキシカルな**`this`）。そのため、メソッド内のアローコールバックでもオブジェクトを使い続けられます：
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// [ 'Ana plays for Tigers', 'Bo plays for Tigers' ] を出力
+```
+コールバックとして`function (p) { return ... this.name ... }`を使うと、同じコードでも`Tigers`の代わりに`undefined`が出力されます。
+逆に、`this`を必要とするオブジェクトの**メソッド**にはアロー関数を使わないでください。オブジェクトを参照しなくなります。

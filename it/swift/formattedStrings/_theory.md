@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` accetta direttamente una `String` di Swift. Non usare `%s` con una stringa Swift: quello specificatore si aspetta una stringa C e stampa spazzatura o va in crash.
+
+---
+
+Dato che `%` inizia uno specificatore, un segno di percentuale letterale va scritto come `%%`. È così che si formatta una percentuale:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Moltiplica prima il rapporto per `100`, poi scegli la precisione: `%.0f%%` per `46%`, `%.1f%%` per `45.7%`.
+
+---
+
+I flag di larghezza funzionano solo dentro `String(format:)`. Per riempire da solo una stringa normale, costruisci gli spazi con `String(repeating:count:)` e uniscili al testo:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+Se il testo è già più lungo della larghezza, `4 - text.count` diventa negativo e `String(repeating:count:)` va in crash. Proteggilo con `max(0, ...)`, così il conteggio non scende mai sotto zero e un testo lungo viene lasciato com'è.
+
+---
+
+Foundation ha anche un aiuto già pronto per il riempimento a destra: `padding(toLength:withPad:startingAt:)`. Estende la stringa alla lunghezza indicata ripetendo il testo di riempimento, e la taglia se è più lunga:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` è l'indice dentro il testo di riempimento da cui inizia la ripetizione; con un riempimento di un solo carattere è sempre `0`.
+
+---
+
+Unisci i due strumenti per stampare una tabella: `padding` allinea a sinistra il testo di ogni riga, `String(format:)` allinea a destra i numeri con larghezza e precisione fisse:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Poiché ogni riga ha la stessa larghezza, i punti decimali finiscono nella stessa colonna.

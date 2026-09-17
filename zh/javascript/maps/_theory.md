@@ -111,3 +111,62 @@ let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
 // 打印 30
 ```
+
+---
+
+Map 和普通对象都在键下存储值，但它们在一些重要方面有所不同：
+- 对象的键始终是字符串（或 symbol），而 Map 的键可以是**任意**类型
+- Map 会保持其键值对的确切**插入顺序**
+- Map 知道自己的 `size`，而对象需要用 `Object.keys(obj).length`
+- Map 一开始是真正为空的，而对象会从其原型继承像 `toString` 这样的键
+
+---
+
+Map 没有像 `sort()` 或 `filter()` 这样的数组方法。要使用它们，需要用 `Array.from()` 或展开运算符 `...` 把 Map（或它的键、值）转换成数组：
+```javascript
+let ages = new Map([["Bob", 25], ["Ann", 30]]);
+let pairs = Array.from(ages);
+console.log(pairs);
+// 打印 [ [ 'Bob', 25 ], [ 'Ann', 30 ] ]
+let names = [...ages.keys()];
+console.log(names);
+// 打印 [ 'Bob', 'Ann' ]
+let values = [...ages.values()];
+console.log(values);
+// 打印 [ 25, 30 ]
+```
+反向转换 `Object.fromEntries(ages)` 可以把 Map 转换回普通对象。
+
+---
+
+和数组一样，Map 也有一个 `forEach()` 方法，会为每一对键值对调用一个函数。
+要注意参数的顺序：回调函数**先接收值**，然后才是键：
+```javascript
+let stock = new Map([["apple", 3], ["pear", 5]]);
+stock.forEach((qty, name) => {
+  console.log(`${name} x${qty}`);
+});
+// 打印 apple x3
+// 打印 pear x5
+```
+
+---
+
+`delete(key)` 在成功删除一对键值对时返回 `true`，在该键不存在时返回 `false`。
+要一次性删除**所有**键值对，调用 `clear()`：
+```javascript
+let cart = new Map([["pen", 2], ["ink", 1]]);
+console.log(cart.delete("pen"));
+// 打印 true
+console.log(cart.delete("pen"));
+// 打印 false
+cart.clear();
+console.log(cart.size);
+// 打印 0
+```
+
+---
+
+那么，什么时候应该使用 `Map` 而不是普通对象呢？
+- 当键是在运行时添加和删除的、键不是字符串，或者你需要 `size` 和可靠的顺序时，使用 **Map**
+- 当记录的字段名是固定且已知的，比如 `{ name, email }`，或者需要将数据转换为 JSON 时，使用**对象**，因为 `JSON.stringify()` 会忽略 map 的内容

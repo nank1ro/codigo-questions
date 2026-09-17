@@ -80,3 +80,109 @@ let r = Rectangle(width: 3, height: 4)
 print(r.area) // 12，没有括号
 ```
 计算属性不属于逐一成员初始化器的一部分，因为没有东西需要存储。当值由其他值推导而来时使用计算属性，当工作需要参数时使用方法。
+
+---
+
+结构体是一种**值类型**：把它赋值给另一个变量，或把它传递给函数时，交出去的是一份*副本*。修改副本不会影响原始值。
+```swift
+struct Point {
+    var x: Int
+}
+
+var a = Point(x: 1)
+var b = a
+b.x = 99
+print(a.x) // 1
+```
+类是一种**引用类型**：`b = a` 会让两个名字指向同一个实例，因此 `b.x = 99` 也会把 `a.x` 改成 `99`。
+
+这就是两者真正的区别，也是 Swift 用结构体对大多数数据进行建模的原因：你持有的值不会被接收它的代码在背后修改。
+
+---
+
+因为结构体是一个值，所以方法不允许修改它的属性，除非你用 `mutating` 关键字声明：
+```swift
+struct Counter {
+    var value = 0
+
+    mutating func increase(by amount: Int) {
+        value += amount
+    }
+}
+
+var c = Counter()
+c.increase(by: 5)
+print(c.value) // 5
+```
+mutating 方法只能在存储于 `var` 中的实例上调用。对于 `let` 实例，它的值是冻结的，因此 `c.increase(by: 5)` 将无法编译。
+
+---
+
+当逐一成员初始化器不是你希望的类型构建方式时，可以编写自己的**初始化器**。它用 `init` 声明，接收你选择的参数，并且必须在结束前给每个存储属性赋值。在它内部，`self` 是正在被创建的实例：
+```swift
+struct Square {
+    var side: Int
+
+    init(_ side: Int) {
+        self.side = side
+    }
+}
+
+let s = Square(5)
+print(s.side) // 5
+```
+在结构体的大括号内编写 `init` 会取代逐一成员初始化器，因此从现在起 `Square(side: 5)` 就不复存在了。
+
+---
+
+有些值属于类型本身，而不是属于任何单个实例：货币代码、共享的默认值、构建常见情形的工厂。把它们标记为 `static`，然后通过类型名来读取：
+```swift
+struct Money {
+    static let currency = "EUR"
+    var amount: Int
+
+    static func zero() -> Money {
+        return Money(amount: 0)
+    }
+}
+
+print(Money.currency)     // EUR
+print(Money.zero().amount) // 0
+```
+这里 `currency` 用 `let` 声明，因为它从不改变，所以它是一个由整个程序共享的常量。`Money.currency` 无需创建任何 `Money` 就能使用，而 `amount` 则需要实例。
+
+---
+
+在类型声明它支持之前，两个结构体无法用 `==` 进行比较。你可以通过遵循 `Equatable` **协议**来做到这一点，协议写在声明中冒号的后面：
+```swift
+struct Point: Equatable {
+    var x: Int
+    var y: Int
+}
+
+let a = Point(x: 1, y: 2)
+let b = Point(x: 1, y: 2)
+print(a == b) // true
+```
+你不必自己编写 `==`：当每个存储属性都已经符合 `Equatable` 时，Swift 会为你合成它，逐个比较属性。当两个实例的所有属性都相等时，它们就是相等的，这正是你对一个值的期望。
+
+---
+
+结构体和其他类型一样，因此它可以存储在数组、字典或集合中，并且你已经掌握的每个工具都能继续作用于它：
+```swift
+struct Item {
+    var name: String
+    var price: Int
+}
+
+let items = [Item(name: "Tea", price: 3), Item(name: "Cake", price: 7)]
+
+for item in items {
+    print(item.name)
+}
+
+let names = items.map { $0.name }
+let total = items.reduce(0) { $0 + $1.price }
+print(total) // 10
+```
+记住数组存储的是*副本*：把 `items[0]` 读入一个变量再修改它，不会触及数组本身。

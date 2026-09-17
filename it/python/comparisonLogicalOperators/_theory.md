@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False, vengono controllate solo le chiavi
 ```
 Entrambi restituiscono un booleano e si leggono come l'inglese, il che li rende il modo preferito per verificare l'appartenenza invece di scrivere un ciclo.
+
+---
+
+`any(iterable)` restituisce `True` se almeno un elemento è vero e `all(iterable)` se lo sono tutti (`all([])` è `True`). Combinati con una generator expression esprimono una condizione su un'intera collezione, e vanno in corto circuito come `or` e `and`:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

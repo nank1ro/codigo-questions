@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 La fermeture peut comparer n'importe quoi, par exemple `words.sorted { $0.count < $1.count }` trie les chaînes de la plus courte à la plus longue.
+
+---
+
+Une fermeture peut utiliser des variables déclarées en dehors de son corps. Elle les **capture** : la variable continue d'exister tant que la fermeture existe, même après que la fonction qui l'a déclarée a terminé.
+Cela permet à une fonction de construire une fermeture avec son propre état privé :
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` est le type d'une fermeture sans paramètre qui renvoie un `Int`. Chaque appel à la fermeture renvoyée incrémente le même `count` capturé :
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Renvoyer une fermeture est un moyen pratique de construire des fonctions personnalisées. Les paramètres de la fonction externe sont capturés par la fermeture qu'elle renvoie :
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+Le type de retour `(Int) -> Int` décrit la fermeture, et la forme abrégée `$0` fait référence à l'argument de cette fermeture, pas à celui de `makeAdder`.
+
+---
+
+Une fermeture stockée dans une constante peut être passée partout où un argument de type fermeture est attendu, en utilisant le libellé de l'argument du paramètre :
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Chaque appel à une fonction qui renvoie une fermeture crée une **nouvelle** variable capturée. Deux fermetures construites par des appels séparés ne partagent pas leur état :
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+L'état n'est partagé qu'entre les appels d'une même fermeture.
+
+---
+
+Par défaut, une fermeture passée à une fonction ne doit être utilisée que pendant l'exécution de cette fonction. Si la fonction stocke la fermeture ou renvoie une autre fermeture qui l'utilise, la fermeture **s'échappe** de la fonction, et son paramètre doit être marqué avec `@escaping` :
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Sans `@escaping`, le compilateur signale une erreur, car la fermeture renvoyée utiliserait `task` après la fin de `twice`.
+
+---
+
+Les fermetures peuvent être stockées dans des tableaux comme n'importe quelle autre valeur. Le type d'élément est le type de fonction :
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Boucler sur un tel tableau et appeler chaque fermeture à tour de rôle construit un petit **pipeline** de transformations.

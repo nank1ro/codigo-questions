@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // выводит 45
 ```
+
+---
+
+Метод `split(separator)` разбивает строку на **массив** частей, разрезая её на каждом `separator`:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// выводит [ 'I', 'like', 'JavaScript' ]
+```
+Противоположность — метод массива `join(separator)`, который склеивает части обратно в строку:
+```javascript
+console.log(words.join("-"));
+// выводит I-like-JavaScript
+```
+
+---
+
+Пользовательский ввод часто содержит лишние пробелы вокруг него. Метод `trim()` возвращает копию строки с удалёнными пробельными символами с **обоих** концов:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// выводит hello
+```
+`trimStart()` удаляет только пробелы в начале, а `trimEnd()` — только в конце.
+Пробелы в середине строки никогда не затрагиваются.
+
+---
+
+Метод `replace(search, replacement)` возвращает новую строку, в которой **первое** вхождение `search` заменено на `replacement`:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// выводит blue red
+```
+Чтобы заменить **все** вхождения, используйте `replaceAll()`:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// выводит blue blue
+```
+
+---
+
+Метод `repeat(count)` возвращает строку, повторённую `count` раз:
+```javascript
+console.log("ab".repeat(3));
+// выводит ababab
+console.log("ab".repeat(0));
+// выводит an empty string
+```
+
+---
+
+Метод `padStart(targetLength, padString)` добавляет `padString` в **начало** строки, пока она не достигнет `targetLength` символов. `padEnd()` делает то же самое в конце:
+```javascript
+console.log("7".padStart(3, "0"));
+// выводит 007
+console.log("Tea".padEnd(6, "."));
+// выводит Tea...
+```
+Если строка уже достаточно длинная, она возвращается без изменений.
+У чисел нет строковых методов, поэтому сначала преобразуйте их с помощью `String(number)`.
+
+---
+
+Две строки равны с помощью `===` только если у них полностью совпадают символы, в одном и том же регистре:
+```javascript
+console.log("hello" === "hello");
+// выводит true
+console.log("hello" === "Hello");
+// выводит false
+```
+Операторы `<` и `>` сравнивают строки по алфавиту, посимвольно.
+Заглавные буквы идут раньше строчных, поэтому `"Zoo" < "apple"` — это `true`.
+
+---
+
+Строки **неизменяемы**: после создания строку никогда нельзя изменить.
+Присваивание по индексу ничего не делает, и каждый строковый метод возвращает **новую** строку вместо изменения исходной:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// выводит hello
+word.toUpperCase();
+console.log(word);
+// выводит hello
+```
+Чтобы сохранить результат, присвойте его обратно переменной:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Вызов `split("")` с пустым разделителем превращает строку в массив её отдельных символов.
+У массивов есть метод `reverse()`, поэтому строку можно перевернуть, разбив её, перевернув и снова соединив:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// выводит cba
+```

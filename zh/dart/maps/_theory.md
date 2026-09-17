@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+空的 map 字面量 `{}` 没有可供推断类型的键值对，所以要用 `<K, V>{}` 或类型注解显式指定类型：
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+当 map 没有任何键值对时，`.isEmpty` 属性为 `true`；当它至少有一对时，`.isNotEmpty` 为 `true`：
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+`.forEach()` 方法会对每一对键值对执行一次函数。该函数接收两个参数：键和值：
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+map 不是 `Iterable`，所以不能直接用 `for-in` 遍历它。你需要遍历 `.entries`：每个元素都是一个 `MapEntry`，拥有 `.key` 和 `.value`：
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+`.putIfAbsent(key, ifAbsent)` 方法**仅当**键还不在 map 中时才添加一对键值对。第二个参数是一个生成值的函数。如果键已经存在，map 保持不变。两种情况下都会返回该键当前存储的值：
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann 已经存在，没有变化
+ages.putIfAbsent('Bob', () => 25); // Bob 被添加
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+`.update(key, update)` 方法会替换已有键的值。第二个参数是一个函数，它接收当前值并返回新值。如果键不存在，`.update()` 会抛出错误，除非你传入一个生成初始值的 `ifAbsent` 函数：
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple 变为 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi 以 1 被添加
+print(stock); // {apple: 4, kiwi: 1}
+```

@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 su righe separate
 }
 ```
+
+---
+
+I set supportano le operazioni classiche della teoria degli insiemi. Ognuna restituisce un **nuovo** set e lascia inalterati gli originali:
+- `a.union(b)` contiene ogni elemento presente in `a`, in `b`, o in entrambi
+- `a.intersection(b)` contiene solo gli elementi presenti in **entrambi**, `a` e `b`
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+Altre due operazioni completano la famiglia:
+- `a.subtracting(b)` contiene gli elementi di `a` che **non** sono in `b`
+- `a.symmetricDifference(b)` contiene gli elementi presenti in `a` o in `b`, ma **non in entrambi**
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+A differenza di `union` e `intersection`, `subtracting` non è simmetrica: `a.subtracting(b)` e `b.subtracting(a)` sono di solito diversi.
+
+---
+
+I set possono anche essere confrontati tra loro. Questi metodi restituiscono un `Bool`:
+- `a.isSubset(of: b)` è `true` quando ogni elemento di `a` è presente anche in `b`
+- `a.isSuperset(of: b)` è `true` quando `a` contiene ogni elemento di `b`
+- `a.isDisjoint(with: b)` è `true` quando `a` e `b` non hanno alcun elemento in comune
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+I set e gli array si convertono facilmente l'uno nell'altro.
+Passare un array a `Set(...)` crea un set a partire dai suoi elementi, il modo più rapido per **rimuovere i duplicati**:
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} in un ordine qualsiasi
+```
+Passare un set a `Array(...)` restituisce un array, ma poiché un set non ha un ordine, gli elementi escono in una sequenza imprevedibile.
+Per questo, quando hai bisogno di un risultato ordinato, di solito chiami invece `sorted()` sul set, che restituisce già un array:
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

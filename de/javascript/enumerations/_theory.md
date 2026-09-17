@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // gibt false aus
 ```
+
+---
+
+Enumerationen passen natürlich zur `switch`-Anweisung, die einen Wert mit einer Liste von `case`-Marken vergleicht und den Code der ersten passenden ausführt.
+Jeder Zweig endet mit `return` oder `break`, und der optionale `default`-Zweig läuft, wenn nichts passt:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// gibt go aus
+```
+Vergleiche immer mit den Mitgliedern (`Light.RED`), niemals mit den rohen Werten (`"red"`): Wenn sich der Wert jemals ändert, funktioniert der `switch` weiterhin.
+
+---
+
+Von einem Wert zurück zu seinem Mitgliedsnamen zu gelangen, nennt man eine **Rückwärtssuche**. Durchlaufe die Namen mit `Object.keys()` und wähle den ersten aus, dessen Wert übereinstimmt, mit der Array-Methode `find()`, die das erste Element zurückgibt, für das der Callback `true` ist (oder `undefined`, wenn es keines gibt):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// gibt HIGH aus
+```
+`Priority[key]` liest das Mitglied, dessen Name in der Variablen `key` gespeichert ist, dieselbe Klammer-Notation, die du für jedes Objekt verwendest.
+
+---
+
+String-Mitglieder haben eine Schwäche: Jeder String mit demselben Text wird als Mitglied akzeptiert.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// gibt true aus
+```
+Wenn du Mitglieder willst, die **nur** zu sich selbst gleich sind, verwende ein `Symbol`. `Symbol(description)` erzeugt einen brandneuen Wert, der sich von jedem anderen Symbol unterscheidet, selbst von einem, das mit derselben Beschreibung erstellt wurde:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// gibt true aus
+console.log(Suit.HEARTS === Symbol("hearts"));
+// gibt false aus
+console.log(typeof Suit.HEARTS);
+// gibt symbol aus
+```
+Der Text, den du übergibst, ist nur eine Bezeichnung zum Debuggen; du kannst ihn mit der Eigenschaft `description` zurücklesen (`Suit.HEARTS.description` ist `"hearts"`).
+
+---
+
+Enumerationswerte werden oft als **Schlüssel** eines anderen Objekts verwendet, zum Beispiel um jedes Mitglied auf eine Bezeichnung oder einen Preis abzubilden. Innerhalb eines Objektliterals wertet das Einschließen eines Schlüssels in eckige Klammern `[ ]` den Ausdruck aus und verwendet dessen Ergebnis als Schlüssel (ein **berechneter Schlüssel**). Das funktioniert sowohl mit String- als auch mit Symbol-Mitgliedern:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// gibt Completed aus
+```
+Ohne die Klammern wäre `Status.DONE: "Completed"` ein Syntaxfehler, und `"Status.DONE"` wäre ein einfacher String-Schlüssel.
+
+---
+
+Wenn jedes Mitglied mehrere Datenteile oder eigene Methoden braucht, kann eine **Klasse** die Rolle der Enumeration übernehmen. Jedes Mitglied ist eine Instanz der Klasse, gespeichert in einer `static`-Eigenschaft, also einer Eigenschaft, die zur Klasse selbst gehört statt zu jeder Instanz:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// gibt Earth aus
+```
+Rufe `Object.freeze(Planet)` nach der Klasse auf, um zu verhindern, dass jemand Mitglieder hinzufügt oder ersetzt, und friere jede Instanz im Konstruktor mit `Object.freeze(this)` ein, damit die Mitglieder selbst nur lesbar bleiben.

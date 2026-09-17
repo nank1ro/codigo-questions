@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+集合支持经典的集合运算。每个运算都会返回一个**新**集合，并保持原集合不变：
+
+- `a.union(b)` 包含在 `a` **或** `b` 中的元素
+- `a.intersection(b)` 包含**同时**在 `a` 和 `b` 中的元素
+- `a.difference(b)` 包含 `a` 中**不在** `b` 中的元素
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+把列表转换成集合是**去除重复项**最简单的方法：每个列表都有一个 `.toSet()` 方法，它会返回一个包含其唯一元素的集合，顺序为元素首次出现的顺序。集合有一个反向操作的 `.toList()` 方法，因此将两者链式调用就能得到一个没有重复项的列表：
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+列表和集合都有 `.contains()` 方法，但它们的工作方式截然不同。列表从头开始逐一检查元素，所以在长列表中查找会随着列表变长而变慢。集合按元素的哈希值存储，所以无论有多少元素，`.contains()` 都能在近乎恒定的时间内找到一个值。
+
+如果你需要多次检查某个值是否存在，而顺序或重复项无关紧要，集合就是合适的工具：
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // 快，即使有数百万个元素
+```

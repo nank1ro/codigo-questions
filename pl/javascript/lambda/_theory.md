@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // wypisuje 6
 ```
 Czytaj od lewej do prawej: `makeAdder` przyjmuje `amount` i zwraca `(n) => n + amount`, funkcję strzałkową, która przechwytuje `amount` dzięki domknięciu. `makeAdder(1)(5)` od razu wywołuje zwróconą funkcję.
+
+---
+
+Nie musisz zapisywać funkcji strzałkowej, aby ją wywołać. Owiń ją w nawiasy okrągłe i dodaj listę argumentów zaraz po nich: to **natychmiastowo wywoływana** funkcja strzałkowa:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// wypisuje 10
+```
+Nawiasy wokół strzałki są wymagane: bez nich `(n) => n * 2(5)` próbowałoby wywołać liczbę `2`. Natychmiastowo wywoływane funkcje przydają się do obliczenia wartości za pomocą kilku tymczasowych zmiennych, które nie powinny przedostawać się do reszty programu.
+
+---
+
+Największa różnica między zwykłą funkcją a funkcją strzałkową dotyczy słowa kluczowego `this`.
+Zwykła `function` dostaje **własne** `this`, zależne od tego, *jak zostanie wywołana*: w `team.intro()` jest nim `team`, ale w callbacku przekazanym do `map` nikt go nie ustawia, więc `this.name` to `undefined` (w trybie stryktnym nawet błąd).
+Funkcja strzałkowa nie ma **żadnego** własnego `this`: po prostu używa `this` otaczającego kodu (**leksykalne** `this`). Dlatego strzałkowe callbacki wewnątrz metody mogą nadal korzystać z obiektu:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// wypisuje [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+Z `function (p) { return ... this.name ... }` jako callbackiem ten sam kod wypisałby `undefined` zamiast `Tigers`.
+Druga strona medalu: nie używaj funkcji strzałkowej jako **metody** obiektu potrzebującej `this`, bo nie będzie odnosić się do obiektu.

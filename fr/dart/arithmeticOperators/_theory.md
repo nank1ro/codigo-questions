@@ -57,3 +57,17 @@ int result = a ~/ b; // 3  (pas 3.333...)
 ```
 
 Utilisez `~/` lorsque vous avez besoin d'un quotient entier sans reste.
+
+---
+
+Dart suit l'**ordre standard des opérations** (priorité) : la multiplication et la division sont évaluées avant l'addition et la soustraction.
+
+```dart
+int result = 2 + 3 * 4; // 14, pas 20
+```
+
+Utilisez des parenthèses pour changer l'ordre :
+
+```dart
+int result = (2 + 3) * 4; // 20
+```

@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // 打印 false
 ```
+
+---
+
+枚举天然地与 `switch` 语句搭配使用，`switch` 会将一个值与一系列 `case` 标签进行比较，并执行第一个匹配项的代码。
+每个分支以 `return` 或 `break` 结尾，可选的 `default` 分支会在没有任何匹配时执行：
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// 打印 go
+```
+始终与成员（`Light.RED`）进行比较，而不是与原始值（`"red"`）比较：这样即使值发生变化，`switch` 仍能正常工作。
+
+---
+
+从值反过来找到其成员名称，称为**反向查找**。用 `Object.keys()` 遍历名称，并使用数组方法 `find()` 选出第一个值匹配的名称，`find()` 返回第一个使回调函数结果为 `true` 的元素（如果没有则返回 `undefined`）：
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// 打印 HIGH
+```
+`Priority[key]` 读取名称存储在变量 `key` 中的那个成员，这与你对任何对象使用的方括号表示法相同。
+
+---
+
+字符串成员有一个弱点：任何具有相同文本的字符串都会被当作该成员接受。
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// 打印 true
+```
+当你想要成员**只**与自身相等时，使用 `Symbol`。`Symbol(description)` 会创建一个全新的值，它与任何其他 symbol 都不同，即使是用相同描述创建的：
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// 打印 true
+console.log(Suit.HEARTS === Symbol("hearts"));
+// 打印 false
+console.log(typeof Suit.HEARTS);
+// 打印 symbol
+```
+你传入的文本只是一个用于调试的标签；你可以通过 `description` 属性读取它（`Suit.HEARTS.description` 是 `"hearts"`）。
+
+---
+
+枚举的值经常被用作另一个对象的**键**，例如将每个成员映射到一个标签或价格。在对象字面量中，把一个键用方括号 `[ ]` 包裹起来会对表达式求值，并将其结果用作键（**计算属性名**）。这对字符串成员和 symbol 成员都适用：
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// 打印 Completed
+```
+如果不加方括号，`Status.DONE: "Completed"` 会是语法错误，而 `"Status.DONE"` 只会是一个普通的字符串键。
+
+---
+
+当每个成员都需要多项数据或自己的方法时，**类**可以扮演枚举的角色。每个成员都是该类的一个实例，存储在一个 `static` 属性中，也就是属于类本身而不是属于每个实例的属性：
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// 打印 Earth
+```
+在类之后调用 `Object.freeze(Planet)`，防止任何人添加或替换成员，并在构造函数中用 `Object.freeze(this)` 冻结每个实例，使成员本身保持只读。

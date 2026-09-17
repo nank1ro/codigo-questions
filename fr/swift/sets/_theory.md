@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 sur des lignes séparées
 }
 ```
+
+---
+
+Les sets prennent en charge les opérations classiques de la théorie des ensembles. Chacune renvoie un **nouveau** set et laisse les originaux inchangés :
+- `a.union(b)` contient chaque élément présent dans `a`, dans `b`, ou dans les deux
+- `a.intersection(b)` ne contient que les éléments présents à la fois dans `a` et dans `b`
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+Deux autres opérations complètent la famille :
+- `a.subtracting(b)` contient les éléments de `a` qui ne sont **pas** dans `b`
+- `a.symmetricDifference(b)` contient les éléments présents dans `a` ou dans `b`, mais **pas dans les deux**
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+Contrairement à `union` et `intersection`, `subtracting` n'est pas symétrique : `a.subtracting(b)` et `b.subtracting(a)` sont généralement différents.
+
+---
+
+Les sets peuvent aussi être comparés entre eux. Ces méthodes renvoient un `Bool` :
+- `a.isSubset(of: b)` vaut `true` lorsque chaque élément de `a` est aussi dans `b`
+- `a.isSuperset(of: b)` vaut `true` lorsque `a` contient chaque élément de `b`
+- `a.isDisjoint(with: b)` vaut `true` lorsque `a` et `b` n'ont aucun élément en commun
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+Les sets et les tableaux se convertissent facilement l'un en l'autre.
+Passer un tableau à `Set(...)` construit un set à partir de ses éléments, ce qui est le moyen le plus rapide de **supprimer les doublons** :
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} in some order
+```
+Passer un set à `Array(...)` renvoie un tableau, mais comme un set n'a pas d'ordre, les éléments sortent dans une séquence imprévisible.
+C'est pourquoi, quand tu as besoin d'un résultat ordonné, tu appelles plutôt généralement `sorted()` sur le set, qui renvoie déjà un tableau :
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

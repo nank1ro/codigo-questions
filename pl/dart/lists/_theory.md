@@ -63,3 +63,57 @@ print(fruits.contains('orange')); // false
 ```
 
 Jest to przydatne do sprawdzania przynależności bez potrzeby używania pętli.
+
+---
+
+Metoda `.remove(value)` usuwa **pierwszy** element równy `value` z listy. Zwraca `true`, jeśli element został usunięty, lub `false`, jeśli wartości nie znaleziono.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+bool removed = colors.remove('green');
+print(removed); // true
+print(colors); // [red, blue]
+```
+
+---
+
+Właściwości `.first` i `.last` dają dostęp do pierwszego i ostatniego elementu listy bez użycia indeksu.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.first); // red
+print(colors.last); // blue
+```
+
+Obie zgłaszają błąd, jeśli lista jest pusta.
+
+---
+
+Właściwość `.isEmpty` ma wartość `true`, gdy lista nie ma elementów, a `.isNotEmpty` ma wartość `true`, gdy ma co najmniej jeden.
+
+```dart
+var colors = <String>[];
+print(colors.isEmpty); // true
+colors.add('red');
+print(colors.isNotEmpty); // true
+```
+
+---
+
+Metoda `.indexOf(value)` zwraca indeks pierwszego elementu równego `value`. Jeśli wartości nie ma na liście, zwraca `-1`.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.indexOf('green')); // 1
+print(colors.indexOf('pink')); // -1
+```
+
+---
+
+Metoda `.where()` zachowuje tylko elementy, dla których funkcja zwraca `true`. Nie zwraca nowej listy, lecz leniwy `Iterable`, dlatego trzeba wywołać `.toList()`, aby zamienić wynik z powrotem na `List`.
+
+```dart
+var numbers = [1, 2, 3, 4];
+List<int> big = numbers.where((n) => n > 2).toList();
+print(big); // [3, 4]
+```

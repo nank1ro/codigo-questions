@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 Wie bei der Anweisungsform muss ein switch-Ausdruck über ein Enum erschöpfend sein.
+
+---
+
+Seit Dart 2.17 kann ein Enum **Felder** und einen **Konstruktor** deklarieren, genau wie eine Klasse. Das nennt man ein *erweitertes Enum*. Jeder Wert übergibt dann seine eigenen Argumente an den Konstruktor:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+Beachte die drei Regeln: Die Liste der Werte endet mit einem **Semikolon** `;`, die Felder müssen `final` sein, und der Konstruktor muss `const` sein.
+
+---
+
+Ein erweitertes Enum kann auch **Methoden** und **Getter** deklarieren. Innerhalb von ihnen ist `this` der aktuelle Wert, sodass du direkt auf seinen `name`, `index` und seine Felder zugreifen kannst:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+Ein Enum ohne Felder kann trotzdem Methoden deklarieren: Die Liste der Werte endet dann mit `;`, gefolgt von den Members.
+
+---
+
+Um von einem `String` zurück zu einem Enum-Wert zu gelangen, rufe `byName` auf der `values`-Liste auf. Es gibt den Wert zurück, dessen `name` genau übereinstimmt:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+Wenn kein Wert diesen Namen hat, wirft `byName` einen `ArgumentError`. Wenn der String aus einer Benutzereingabe stammt, ist `asNameMap()` die sicherere Wahl: Es gibt eine `Map<String, Direction>` von Namen zu Werten zurück, sodass eine Suche nach einem unbekannten Namen `null` statt eines Fehlers liefert:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+Enum-Werte eignen sich hervorragend als **Map-Schlüssel**: Sie sind eindeutig, leicht zu vergleichen, und der Compiler stellt sicher, dass du nur echte Werte verwendest. Deklariere die Map mit dem Enum als Schlüsseltyp und greife mit `[]` auf die Werte zu:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+Wie bei jeder Map liefert eine Suche `null`, wenn der Schlüssel fehlt, also verwende `??`, um einen Ersatzwert bereitzustellen.
+
+---
+
+Ein Enum kann eine **Schnittstelle implementieren** mit dem Schlüsselwort `implements`. Das Enum verspricht dann, jedes Member bereitzustellen, das die Schnittstelle deklariert, und seine Werte können überall dort verwendet werden, wo dieser Schnittstellentyp erwartet wird:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+Ein in der Schnittstelle deklarierter Getter kann entweder mit einem Getter oder mit einem `final`-Feld desselben Namens implementiert werden.

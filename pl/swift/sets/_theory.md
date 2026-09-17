@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 w osobnych liniach
 }
 ```
+
+---
+
+Zbiory obsługują klasyczne operacje teorii mnogości. Każda z nich zwraca **nowy** zbiór i pozostawia oryginały niezmienione:
+- `a.union(b)` zawiera każdy element, który jest w `a`, w `b`, lub w obu
+- `a.intersection(b)` zawiera tylko elementy, które są w **obu** `a` i `b`
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+Dwie kolejne operacje uzupełniają tę rodzinę:
+- `a.subtracting(b)` zawiera elementy `a`, których **nie ma** w `b`
+- `a.symmetricDifference(b)` zawiera elementy, które są w `a` lub w `b`, ale **nie w obu**
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+W przeciwieństwie do `union` i `intersection`, `subtracting` nie jest symetryczne: `a.subtracting(b)` i `b.subtracting(a)` zazwyczaj się różnią.
+
+---
+
+Zbiory można również porównywać ze sobą. Te metody zwracają `Bool`:
+- `a.isSubset(of: b)` ma wartość `true`, gdy każdy element `a` jest również w `b`
+- `a.isSuperset(of: b)` ma wartość `true`, gdy `a` zawiera każdy element `b`
+- `a.isDisjoint(with: b)` ma wartość `true`, gdy `a` i `b` nie mają wspólnego elementu
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+Zbiory i tablice łatwo konwertują się jedne w drugie.
+Przekazanie tablicy do `Set(...)` tworzy zbiór z jej elementów, co jest najszybszym sposobem na **usunięcie duplikatów**:
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} in some order
+```
+Przekazanie zbioru do `Array(...)` zwraca tablicę, ale ponieważ zbiór nie ma kolejności, elementy pojawiają się w nieprzewidywalnej kolejności.
+Dlatego, gdy potrzebujesz uporządkowanego wyniku, zwykle wywołujesz `sorted()` na zbiorze, który już zwraca tablicę:
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

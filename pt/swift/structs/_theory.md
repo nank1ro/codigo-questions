@@ -80,3 +80,109 @@ let r = Rectangle(width: 3, height: 4)
 print(r.area) // 12, no parentheses
 ```
 Propriedades computadas não fazem parte do inicializador membro a membro, já que não há nada a armazenar. Use uma quando o valor for derivado dos outros, e um método quando o trabalho precisar de parâmetros.
+
+---
+
+Uma struct é um **value type**: atribuí-la a outra variável, ou passá-la a uma função, entrega uma *cópia*. Alterar a cópia deixa o original intacto.
+```swift
+struct Point {
+    var x: Int
+}
+
+var a = Point(x: 1)
+var b = a
+b.x = 99
+print(a.x) // 1
+```
+Uma classe é um **reference type**: `b = a` faria ambos os nomes apontarem para a mesma instância, então `b.x = 99` também mudaria `a.x` para `99`.
+
+Essa é a verdadeira diferença entre os dois, e a razão pela qual o Swift modela a maioria dos dados como structs: um valor que você possui não pode ser modificado pelas suas costas pelo código que o recebeu.
+
+---
+
+Como uma struct é um valor, um método não tem permissão para alterar suas propriedades, a menos que você indique isso com a palavra-chave `mutating`:
+```swift
+struct Counter {
+    var value = 0
+
+    mutating func increase(by amount: Int) {
+        value += amount
+    }
+}
+
+var c = Counter()
+c.increase(by: 5)
+print(c.value) // 5
+```
+Um método `mutating` só pode ser chamado em uma instância armazenada em um `var`. Em uma instância `let` o valor está congelado, então `c.increase(by: 5)` não compilaria.
+
+---
+
+Quando o inicializador membro a membro não é a forma como você quer que seu tipo seja construído, escreva seu próprio **inicializador**. Ele é declarado com `init`, recebe os parâmetros que você escolher e deve dar a cada propriedade armazenada um valor antes de terminar. Dentro dele, `self` é a instância que está sendo criada:
+```swift
+struct Square {
+    var side: Int
+
+    init(_ side: Int) {
+        self.side = side
+    }
+}
+
+let s = Square(5)
+print(s.side) // 5
+```
+Escrever um `init` dentro das chaves da struct substitui o membro a membro, então de agora em diante `Square(side: 5)` não existe mais.
+
+---
+
+Alguns valores pertencem ao próprio tipo, e não a uma única instância: um código de moeda, um padrão compartilhado, uma fábrica que constrói um caso comum. Marque-os como `static` e leia-os através do nome do tipo:
+```swift
+struct Money {
+    static let currency = "EUR"
+    var amount: Int
+
+    static func zero() -> Money {
+        return Money(amount: 0)
+    }
+}
+
+print(Money.currency)     // EUR
+print(Money.zero().amount) // 0
+```
+Aqui `currency` é declarado com `let` porque nunca muda, então é uma constante compartilhada pelo programa inteiro. `Money.currency` funciona sem criar um único `Money`, enquanto `amount` precisa de uma instância.
+
+---
+
+Duas structs não podem ser comparadas com `==` até que o tipo diga que oferece esse suporte. Você faz isso conformando-se ao **protocolo** `Equatable`, escrito depois de dois-pontos na declaração:
+```swift
+struct Point: Equatable {
+    var x: Int
+    var y: Int
+}
+
+let a = Point(x: 1, y: 2)
+let b = Point(x: 1, y: 2)
+print(a == b) // true
+```
+Você não precisa escrever `==` você mesmo: quando toda propriedade armazenada já é `Equatable`, o Swift o sintetiza para você, comparando as propriedades uma a uma. Duas instâncias são iguais quando todas as suas propriedades são iguais, que é exatamente o que se espera de um valor.
+
+---
+
+Uma struct é um tipo como qualquer outro, então pode ser armazenada em um array, um dicionário ou um conjunto, e toda ferramenta que você já conhece continua funcionando sobre ela:
+```swift
+struct Item {
+    var name: String
+    var price: Int
+}
+
+let items = [Item(name: "Tea", price: 3), Item(name: "Cake", price: 7)]
+
+for item in items {
+    print(item.name)
+}
+
+let names = items.map { $0.name }
+let total = items.reduce(0) { $0 + $1.price }
+print(total) // 10
+```
+Lembre-se de que o array contém *cópias*: ler `items[0]` em uma variável e alterá-la não afeta o array.

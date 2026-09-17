@@ -153,3 +153,33 @@ A handful of built-in exceptions cover most everyday failures:
 | `IndexError` | a sequence index is out of range | `[1, 2][5]` |
 
 Reaching for one of these instead of inventing a new type keeps your errors readable to anyone who knows Python.
+
+---
+
+Sometimes a handler should react to a failure without taking responsibility for it: log it, count it, close something — then let the caller deal with it. A `raise` on its own inside an `except` block **re-raises** the exception being handled, with its original type, message and traceback intact:
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+Writing `raise ValueError(...)` instead would create a new exception with a new traceback — it's no longer the same failure you caught, which is exactly what a bare `raise` preserves.
+
+---
+
+When no built-in type fits, define your own by subclassing `Exception`. An empty body is usually enough — the name is the message to the reader:
+```python
+class ConfigError(Exception):
+    pass
+```
+It behaves like any other exception: `raise ConfigError("bad port")`, and `except ConfigError:` catches it.
+
+Translating a low-level failure into your own type is common, and the original error should not be lost in the process. `raise NewError(...) from original` **chains** them: it stores `original` in the new exception's `__cause__` attribute, and the traceback shows both under *The above exception was the direct cause of the following exception*:
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+Without `from e` the two are still linked implicitly, but `from` says out loud that the first error caused the second.

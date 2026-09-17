@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // 45 출력
 ```
+
+---
+
+`split(separator)` 메서드는 `separator`가 나타날 때마다 잘라서 문자열을 조각들의 **배열**로 나눕니다:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// [ 'I', 'like', 'JavaScript' ] 출력
+```
+그 반대는 배열 메서드 `join(separator)`로, 조각들을 다시 하나의 문자열로 이어붙입니다:
+```javascript
+console.log(words.join("-"));
+// I-like-JavaScript 출력
+```
+
+---
+
+사용자 입력에는 앞뒤로 불필요한 공백이 들어있는 경우가 많습니다. `trim()` 메서드는 문자열의 **양쪽** 끝에서 공백을 제거한 사본을 반환합니다:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// hello 출력
+```
+`trimStart()`는 앞쪽 공백만, `trimEnd()`는 뒤쪽 공백만 제거합니다.
+문자열 중간에 있는 공백은 절대 건드리지 않습니다.
+
+---
+
+`replace(search, replacement)` 메서드는 `search`가 **처음** 나타난 부분을 `replacement`로 바꾼 새 문자열을 반환합니다:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// blue red 출력
+```
+**모든** 부분을 바꾸려면 `replaceAll()`을 사용하세요:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// blue blue 출력
+```
+
+---
+
+`repeat(count)` 메서드는 문자열을 `count`번 반복한 결과를 반환합니다:
+```javascript
+console.log("ab".repeat(3));
+// ababab 출력
+console.log("ab".repeat(0));
+// 빈 문자열 출력
+```
+
+---
+
+`padStart(targetLength, padString)` 메서드는 문자열이 `targetLength` 길이에 도달할 때까지 **앞쪽**에 `padString`을 추가합니다. `padEnd()`는 뒤쪽에 대해 같은 일을 합니다:
+```javascript
+console.log("7".padStart(3, "0"));
+// 007 출력
+console.log("Tea".padEnd(6, "."));
+// Tea... 출력
+```
+문자열이 이미 충분히 길면 변경 없이 그대로 반환됩니다.
+숫자에는 문자열 메서드가 없으므로 먼저 `String(number)`로 변환하세요.
+
+---
+
+두 문자열은 정확히 같은 문자가 같은 대소문자로 이루어져 있을 때만 `===`로 같습니다:
+```javascript
+console.log("hello" === "hello");
+// true 출력
+console.log("hello" === "Hello");
+// false 출력
+```
+`<`와 `>` 연산자는 문자열을 한 글자씩 알파벳 순서로 비교합니다.
+대문자가 소문자보다 앞에 오므로 `"Zoo" < "apple"`은 `true`입니다.
+
+---
+
+문자열은 **불변**입니다: 한 번 만들어진 문자열은 절대 변경할 수 없습니다.
+인덱스에 값을 대입해도 아무 일도 일어나지 않으며, 모든 문자열 메서드는 원본을 수정하는 대신 **새로운** 문자열을 반환합니다:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// hello 출력
+word.toUpperCase();
+console.log(word);
+// hello 출력
+```
+결과를 유지하려면 변수에 다시 대입하세요:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+빈 구분자로 `split("")`을 호출하면 문자열이 한 글자씩 담긴 배열이 됩니다.
+배열에는 `reverse()` 메서드가 있으므로, 나누고 뒤집고 다시 합쳐서 문자열을 뒤집을 수 있습니다:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// cba 출력
+```

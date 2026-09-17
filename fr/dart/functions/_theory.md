@@ -76,3 +76,18 @@ void main() {
 ```
 
 Les paramètres nommés améliorent la lisibilité, surtout quand une fonction a de nombreux paramètres.
+
+---
+
+Dart prend également en charge les **paramètres positionnels optionnels** — des paramètres entourés de crochets `[]`. Ils sont passés par position, peuvent être omis par l'appelant et peuvent avoir une valeur par défaut :
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

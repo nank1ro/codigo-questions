@@ -138,3 +138,51 @@ De manera opuesta, si queremos que el bloque de código **NO** se ejecute, debem
 ---
 
 A medida que practicamos, veremos que la estructura de una sentencia `if` es muy flexible. Podemos poner la condición directamente en el paréntesis y el bloque de código entre las llaves.
+
+---
+
+Ahora practicaremos escribiendo la sentencia `if` completa con la condición, los paréntesis y las llaves. Es importante que el bloque de código esté correctamente entre las llaves para que se ejecute.
+
+---
+
+En este ejercicio, practicaremos más sobre las partes que componen una sentencia `if`. Recuerda que necesitas la palabra clave `if`, la condición entre paréntesis, y el bloque de código entre llaves.
+
+---
+
+Continuamos practicando. Recuerda que para que el bloque de código se ejecute, la condición debe ser `true`. Si la condición es `false`, el bloque de código se salta y no se ejecuta nada.
+
+---
+
+Podemos tener varias líneas de código dentro de un bloque de sentencia `if`. El bloque de código puede contener tantas líneas como queramos, siempre que todas estén indentadas dentro de las llaves.
+
+---
+
+Ahora practicaremos agregando múltiples líneas de código dentro del bloque de una sentencia `if`. Cada línea que está dentro del bloque y está indentada se ejecutará si la condición es `true`.
+
+---
+
+Cuando tenemos múltiples sentencias `console.log()` dentro del bloque de código, ambas se ejecutarán en orden si la condición es `true`. Esto demuestra que podemos controlar qué código se ejecuta con una sola sentencia `if`.
+
+---
+
+Sigamos practicando la estructura completa de la sentencia `if`. Recuerda que necesitas todos los elementos: la palabra clave `if`, la condición entre paréntesis, y el bloque de código entre llaves.
+
+---
+
+Las sentencias que se encargan de controlar el flujo del programa basándose en condiciones son fundamentales en la programación. Son la base para tomar decisiones en el código.
+
+---
+
+Cuando trabajamos con variables booleanas o expresiones que devuelven valores booleanos, podemos usarlos directamente en las sentencias condicionales. Esto es muy útil para crear código más limpio y legible.
+
+---
+
+En la sentencia `if`, la condición es lo más importante. La ubicación exacta de la condición dentro de la estructura es crucial para que el código funcione correctamente.
+
+---
+
+Una de las características poderosas de las sentencias condicionales es que podemos tener un bloque de código que contenga tantas líneas como necesitemos. No hay límite en el número de instrucciones que podemos ejecutar.
+
+---
+
+El bloque de código dentro de una sentencia `if` es el conjunto de instrucciones que se ejecutan condicionalmente. Entender qué es exactamente es fundamental para dominar las sentencias condicionales.

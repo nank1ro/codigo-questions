@@ -153,3 +153,33 @@ Um punhado de exceções embutidas cobre a maioria das falhas do dia a dia:
 | `IndexError` | o índice de uma sequência está fora do intervalo | `[1, 2][5]` |
 
 Usar uma destas em vez de inventar um novo tipo mantém seus erros legíveis para qualquer pessoa que conheça Python.
+
+---
+
+Às vezes um manipulador deve reagir a uma falha sem assumir a responsabilidade por ela: registrá-la, contá-la, fechar algo — e então deixar o chamador lidar com ela. Um `raise` sozinho dentro de um bloco `except` **relança** a exceção sendo tratada, com seu tipo, mensagem e traceback originais intactos:
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+Escrever `raise ValueError(...)` em vez disso criaria uma nova exceção com seu próprio traceback — não seria mais a mesma falha que você capturou, e é exatamente essa identidade que um `raise` sozinho preserva.
+
+---
+
+Quando nenhum tipo embutido serve, defina o seu próprio criando uma subclasse de `Exception`. Um corpo vazio geralmente basta — o nome é a mensagem para o leitor:
+```python
+class ConfigError(Exception):
+    pass
+```
+Ela se comporta como qualquer outra exceção: `raise ConfigError("bad port")`, e `except ConfigError:` a captura.
+
+Traduzir uma falha de baixo nível para o seu próprio tipo é comum, e o erro original não deve se perder no processo. `raise NewError(...) from original` os **encadeia**: ele armazena `original` no atributo `__cause__` da nova exceção, e o traceback mostra ambos sob *The above exception was the direct cause of the following exception*:
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+Sem `from e` os dois ainda ficam vinculados implicitamente, mas o `from` diz em voz alta que o primeiro erro causou o segundo.

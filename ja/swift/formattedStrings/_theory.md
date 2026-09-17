@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@`はSwiftの`String`を直接受け付けます。Swiftの文字列に`%s`は使わないでください。この書式指定子はC文字列を想定しているため、意味不明な出力やクラッシュを引き起こします。
+
+---
+
+`%`は書式指定子の開始を意味するため、リテラルのパーセント記号は`%%`と書かなければなりません。パーセントを書式設定するには次のようにします:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+まず比率に`100`を掛け、それから精度を選びます。`46%`なら`%.0f%%`、`45.7%`なら`%.1f%%`です。
+
+---
+
+幅のフラグは`String(format:)`の中でしか機能しません。普通の文字列を自分でパディングするには、`String(repeating:count:)`でスペースを作り、テキストに連結します:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+テキストが既に幅より長い場合、`4 - text.count`は負になり、`String(repeating:count:)`はクラッシュします。`max(0, ...)`で防げば、カウントがゼロ未満にならず、長いテキストはそのまま残されます。
+
+---
+
+Foundationには右側のパディングのための既成のヘルパーもあります: `padding(toLength:withPad:startingAt:)`です。これはパッドテキストを繰り返して文字列を指定の長さまで伸ばし、長すぎる場合は切り詰めます:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt`はパッドテキスト内で繰り返しが始まるインデックスです。1文字のパッドでは常に`0`です。
+
+---
+
+2つの手段を組み合わせてテーブルを出力しましょう。`padding`は各行のテキストを左揃えにし、`String(format:)`は固定の幅と精度で数値を右揃えにします:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+すべての行が同じ幅を持つため、小数点が同じ列に揃います。

@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` 可以直接接受 Swift 的 `String`。不要对 Swift 字符串使用 `%s`：该格式说明符期望的是 C 字符串，会打印出乱码或导致崩溃。
+
+---
+
+由于 `%` 表示一个格式说明符的开始，字面上的百分号必须写成 `%%`。这就是格式化百分比的方式：
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+先把比例乘以 `100`，再选择精度：`%.0f%%` 得到 `46%`，`%.1f%%` 得到 `45.7%`。
+
+---
+
+宽度标志只在 `String(format:)` 内部起作用。要自己填充普通字符串，可以用 `String(repeating:count:)` 构建空格并把它们拼接到文本上：
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+如果文本已经比宽度长，`4 - text.count` 会变成负数，`String(repeating:count:)` 会崩溃。用 `max(0, ...)` 来防护，这样数量永远不会低于零，较长的文本保持原样。
+
+---
+
+Foundation 还有一个用于右侧填充的现成辅助方法：`padding(toLength:withPad:startingAt:)`。它通过重复填充文本把字符串延长到给定长度，如果字符串更长则进行截断：
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` 是填充文本中重复开始的索引；使用单字符填充时它总是 `0`。
+
+---
+
+把这两种工具结合起来打印一张表格：`padding` 将每行的文本左对齐，`String(format:)` 以固定的宽度和精度将数字右对齐：
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+因为每一行的宽度都相同，小数点最终会落在同一列上。

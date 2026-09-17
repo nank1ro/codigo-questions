@@ -111,3 +111,62 @@ let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
 // stampa 30
 ```
+
+---
+
+Le map e gli oggetti semplici memorizzano entrambi valori sotto chiavi, ma differiscono in alcuni aspetti importanti:
+- le chiavi di un oggetto sono sempre stringhe (o simboli), le chiavi di una map possono essere di **qualsiasi** tipo
+- una map conserva l'esatto **ordine di inserimento** delle sue coppie
+- una map conosce il proprio `size`, mentre per un oggetto serve `Object.keys(obj).length`
+- una map inizia davvero vuota, mentre un oggetto eredita chiavi come `toString` dal suo prototipo
+
+---
+
+Le map non hanno metodi da array come `sort()` o `filter()`. Per usarli, converti la map (o le sue chiavi o i suoi valori) in un array con `Array.from()` o l'operatore spread `...`:
+```javascript
+let ages = new Map([["Bob", 25], ["Ann", 30]]);
+let pairs = Array.from(ages);
+console.log(pairs);
+// stampa [ [ 'Bob', 25 ], [ 'Ann', 30 ] ]
+let names = [...ages.keys()];
+console.log(names);
+// stampa [ 'Bob', 'Ann' ]
+let values = [...ages.values()];
+console.log(values);
+// stampa [ 25, 30 ]
+```
+La conversione opposta, `Object.fromEntries(ages)`, trasforma di nuovo una map in un oggetto semplice.
+
+---
+
+Come gli array, anche le map hanno un metodo `forEach()` che chiama una funzione per ogni coppia.
+Fai attenzione all'ordine dei parametri: il callback riceve prima il **valore**, poi la chiave:
+```javascript
+let stock = new Map([["apple", 3], ["pear", 5]]);
+stock.forEach((qty, name) => {
+  console.log(`${name} x${qty}`);
+});
+// stampa apple x3
+// stampa pear x5
+```
+
+---
+
+`delete(key)` restituisce `true` quando una coppia è stata rimossa e `false` quando la chiave non era presente.
+Per rimuovere **tutte** le coppie in una volta, chiama `clear()`:
+```javascript
+let cart = new Map([["pen", 2], ["ink", 1]]);
+console.log(cart.delete("pen"));
+// stampa true
+console.log(cart.delete("pen"));
+// stampa false
+cart.clear();
+console.log(cart.size);
+// stampa 0
+```
+
+---
+
+Quindi, quando dovresti usare una `Map` invece di un oggetto semplice?
+- Usa una **Map** quando le chiavi vengono aggiunte e rimosse a runtime, quando non sono stringhe, o quando ti serve `size` e un ordine affidabile
+- Usa un **oggetto** per un record fisso con nomi di campo noti, come `{ name, email }`, e ogni volta che devi convertire i dati in JSON, poiché `JSON.stringify()` ignora il contenuto di una map

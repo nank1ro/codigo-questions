@@ -153,3 +153,33 @@ def set_age(age):
 | `IndexError` | 序列索引超出范围 | `[1, 2][5]` |
 
 使用这些异常而不是发明新类型，能让任何懂 Python 的人都轻松读懂你的错误。
+
+---
+
+有时，处理程序应该对一次失败作出反应，但不必为此承担责任：记录它、计数、关闭某个东西——然后把问题交给调用者处理。在 `except` 块中单独使用一个 `raise` 会**重新引发**正在处理的异常，其原始的类型、消息和回溯信息都保持原样：
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+改为编写 `raise ValueError(...)` 会创建一个带有全新回溯信息的新异常——它不再是你捕获的那个失败，而单独的 `raise` 保留的正是这种同一性。
+
+---
+
+当没有合适的内置类型时，可以通过继承 `Exception` 来定义自己的异常。空的类体通常就足够了——类名本身就是传达给阅读者的信息：
+```python
+class ConfigError(Exception):
+    pass
+```
+它的行为和其他任何异常一样：使用 `raise ConfigError("bad port")` 引发它，用 `except ConfigError:` 捕获它。
+
+把低层级的失败转换成自己的类型是很常见的做法，而原始错误不应在这个过程中丢失。`raise NewError(...) from original` 会把它们**链接**起来：它把 `original` 存入新异常的 `__cause__` 属性，回溯信息会在 *The above exception was the direct cause of the following exception* 标题下同时显示两者：
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+如果没有 `from e`，两者仍会隐式地关联，但 `from` 明确说出了第一个错误导致了第二个错误。

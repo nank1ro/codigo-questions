@@ -54,3 +54,31 @@ bool passed = score >= 50; // true
 ```
 
 `>` と異なり、この演算子は両方の値が等しい場合にも `true` を返します。
+
+---
+
+**AND演算子** `&&` は2つのブール式を組み合わせます。**両方**の側が `true` のときだけ `true` を返します。どちらか一方の側が `false` の場合、結果は `false` です。
+
+```dart
+bool a = true;
+bool b = true;
+bool result = a && b; // true
+
+bool c = true;
+bool d = false;
+bool result2 = c && d; // false
+```
+
+---
+
+**OR演算子** `||` は2つのブール式を組み合わせます。**少なくとも1つ**の側が `true` のとき `true` を返します。**両方**の側が `false` のときだけ `false` を返します。
+
+```dart
+bool a = false;
+bool b = true;
+bool result = a || b; // true
+
+bool c = false;
+bool d = false;
+bool result2 = c || d; // false
+```

@@ -153,3 +153,33 @@ Garść wbudowanych wyjątków pokrywa większość codziennych awarii:
 | `IndexError` | indeks sekwencji jest poza zakresem | `[1, 2][5]` |
 
 Sięgnięcie po jeden z nich zamiast wymyślania nowego typu sprawia, że twoje błędy pozostają czytelne dla każdego, kto zna Pythona.
+
+---
+
+Czasem program obsługi powinien zareagować na awarię, nie biorąc za nią odpowiedzialności: zapisać ją, policzyć, coś zamknąć — a potem pozwolić zająć się nią wywołującemu. Samo `raise` wewnątrz bloku `except` **ponownie zgłasza** obsługiwany wyjątek, z nienaruszonym pierwotnym typem, komunikatem i tracebackiem:
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+Napisanie zamiast tego `raise ValueError(...)` utworzyłoby nowy wyjątek z własnym tracebackiem — nie byłaby to już ta sama awaria, którą przechwyciłeś, a to właśnie tę tożsamość zachowuje samo `raise`.
+
+---
+
+Gdy żaden wbudowany typ nie pasuje, zdefiniuj własny, dziedzicząc po `Exception`. Puste ciało zwykle wystarcza — nazwa jest komunikatem dla czytelnika:
+```python
+class ConfigError(Exception):
+    pass
+```
+Zachowuje się jak każdy inny wyjątek: `raise ConfigError("bad port")`, a `except ConfigError:` go przechwytuje.
+
+Przetłumaczenie niskopoziomowej awarii na własny typ jest częste, a pierwotny błąd nie powinien przy tym zginąć. `raise NewError(...) from original` **łączy** je w łańcuch: zapisuje `original` w atrybucie `__cause__` nowego wyjątku, a traceback pokazuje oba pod napisem *The above exception was the direct cause of the following exception*:
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+Bez `from e` oba nadal są powiązane niejawnie, ale `from` mówi wprost, że pierwszy błąd spowodował drugi.

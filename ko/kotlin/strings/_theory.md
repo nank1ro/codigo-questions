@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 숫자는 문자열이 아니므로, `42.toString().padStart(4, '0')`처럼 먼저 `toString()`을 호출하세요.
+
+---
+
+두 문자열은 같은 순서로 같은 문자를 포함할 때 같다고 판단됩니다. 코틀린에서 `==`는 문자열의 **내용**을 비교하므로, 이것이 문자열을 비교하는 일반적인 방법입니다.
+`equals`도 같은 일을 하지만, 대소문자의 차이를 무시하기 위해 `ignoreCase = true`도 받을 수 있습니다:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===`는 두 변수가 메모리에서 정확히 같은 객체를 가리키는지 확인하는데, 문자열에서는 이것이 원하는 동작인 경우가 거의 없습니다.
+
+---
+
+`reversed()`는 문자 순서를 반대로 뒤집은 문자열을 반환합니다:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+`"level"`처럼 앞뒤로 읽어도 같은 단어를 **회문**이라고 합니다.
+
+---
+
+문자열은 **불변**입니다: 한 번 만들어지면 절대 바뀌지 않습니다. 지금까지 본 `uppercase()`나 `replace()` 같은 모든 함수는 **새로운** 문자열을 반환하고 원본은 그대로 둡니다.
+결과를 유지하려면 그것을 저장해야 합니다. 예를 들어 `var`에 다시 대입하는 방법이 있습니다:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // 결과가 버려집니다
+println(name)           // kotlin
+name = name.uppercase() // 결과가 저장됩니다
+println(name)           // KOTLIN
+```
+
+---
+
+`+`로 긴 문자열을 한 조각씩 만들면 매번 새로운 문자열이 생성됩니다. `StringBuilder`는 이 작업을 위해 만들어진 변경 가능한 텍스트 버퍼입니다: `append`는 끝에 텍스트를 추가하고(빌더 자신을 반환하므로 호출을 연결할 수 있습니다), `toString()`은 최종 `String`을 반환합니다:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append`는 문자열, 문자, 숫자를 받을 수 있습니다.

@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+Sets support the classic set operations. Each one returns a **new** set and leaves the originals untouched:
+
+- `a.union(b)` contains the elements that are in `a` **or** in `b`
+- `a.intersection(b)` contains the elements that are in **both** `a` and `b`
+- `a.difference(b)` contains the elements of `a` that are **not** in `b`
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+Converting a list to a set is the easiest way to **remove duplicates**: every list has a `.toSet()` method that returns a set with its unique elements, in order of first appearance. A set has a `.toList()` method that goes the other way, so chaining the two gives you a list without duplicates:
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+Both lists and sets have a `.contains()` method, but they work very differently. A list checks its elements one by one from the start, so a lookup in a long list gets slower as the list grows. A set stores its elements by their hash, so `.contains()` finds a value in roughly constant time no matter how many elements there are.
+
+If you need to check membership many times and the order or duplicates do not matter, a set is the right tool:
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // fast, even with millions of elements
+```

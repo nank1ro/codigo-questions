@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` transforme un échec en `null`, tandis que `getOrElse { ... }` exécute le bloc pour construire une valeur de remplacement. Rien n'est levé sur le site d'appel, si bien que l'échec peut être transporté et traité plus tard.
+
+---
+
+Un `Result` peut aussi être inspecté sans être déballé. `onFailure` exécute son bloc uniquement lorsque le résultat contient une exception, `onSuccess` uniquement lorsqu'il contient une valeur, et **tous deux rendent le même `Result`**, si bien que les appels peuvent être enchaînés :
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+Dans le bloc, l'exception (ou la valeur) est disponible comme `it`, si bien que `it.message` est le texte de l'échec.
+
+C'est la forme « journaliser et continuer » : signalez le problème là où il se produit, puis continuez, sans `return` prématuré et sans `var` définie depuis deux endroits.
+
+---
+
+L'endroit où se trouve le `try` décide de la quantité de travail qu'une seule valeur incorrecte détruit. Englobez la **boucle entière** et le premier échec abandonne le reste du lot ; englobez le **corps** et seul cet élément est perdu :
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // on ignore celle-ci
+    }
+}
+println(total) // 8
+```
+Cela se marie naturellement avec une fonction de validation qui lève une exception : la fonction énonce une règle et refuse tout ce qui la viole, et la boucle décide qu'un refus ne coûte qu'un seul élément.

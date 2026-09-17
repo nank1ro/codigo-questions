@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // stampa 6
 ```
 Leggila da sinistra a destra: `makeAdder` prende `amount` e restituisce `(n) => n + amount`, una funzione freccia che cattura `amount` tramite una closure. `makeAdder(1)(5)` chiama immediatamente la funzione restituita.
+
+---
+
+Non sei obbligato a memorizzare una funzione freccia per chiamarla. Racchiudila tra parentesi e aggiungi subito dopo la lista degli argomenti: questa è una funzione freccia **invocata immediatamente**:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// stampa 10
+```
+Le parentesi attorno alla freccia sono obbligatorie: senza di esse `(n) => n * 2(5)` proverebbe a chiamare il numero `2`. Le funzioni invocate immediatamente sono comode per calcolare un valore con qualche variabile temporanea che non deve finire nel resto del programma.
+
+---
+
+La differenza più grande tra una funzione normale e una funzione freccia è la parola chiave `this`.
+Una `function` normale ha il **proprio** `this`, deciso da *come viene chiamata*: in `team.intro()` è `team`, ma in un callback passato a `map` nessuno lo imposta, quindi `this.name` è `undefined` (o addirittura un errore in strict mode).
+Una funzione freccia **non** ha un proprio `this`: usa semplicemente il `this` del codice circostante (un `this` **lessicale**). Ecco perché i callback freccia dentro un metodo possono continuare a usare l'oggetto:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// stampa [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+Con `function (p) { return ... this.name ... }` come callback, lo stesso codice stamperebbe `undefined` invece di `Tigers`.
+Il rovescio della medaglia: non usare una funzione freccia come **metodo** di un oggetto che ha bisogno di `this`, perché non si riferirà all'oggetto.

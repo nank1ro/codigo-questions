@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+जब आप टाइप के बारे में निश्चित हों, तो आप `as` के साथ एक मान को **कास्ट** कर सकते हैं: `value as String` आपको वह मान एक `String` के रूप में देता है।
+यदि मान वास्तव में कुछ और है, तो `as` रनटाइम पर एक `ClassCastException` थ्रो करता है।
+**सेफ कास्ट** `as?` कभी थ्रो नहीं करता: वह कास्ट सफल होने पर मान लौटाता है और विफल होने पर `null`, इसलिए उसका परिणाम एक nullable टाइप होता है:
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null, "Kotlin" एक Int नहीं है
+val bad = items[0] as Int        // ClassCastException फेंकता है
+```
+जब आपको जांच करनी हो तो स्मार्ट कास्ट के साथ `is` को प्राथमिकता दें, और `as?` को तब जब विफलता स्वीकार्य हो।

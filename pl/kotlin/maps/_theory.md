@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 Nawiasy `(name, age)` dzielą każdy wpis na dwie zmienne. Wpisy są odwiedzane w kolejności wstawiania.
+
+---
+
+Podobnie jak listy, mapy obsługują `filter`. Lambda otrzymuje każdy wpis, który możesz rozłożyć na `(key, value)`; wynikiem jest nowa `Map` zawierająca tylko wpisy, dla których lambda zwraca `true`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+Istnieją też `filterKeys { }` i `filterValues { }`, gdy warunek dotyczy tylko jednej strony wpisu.
+
+---
+
+`map` przekształca każdy wpis mapy w nowy element. W przeciwieństwie do `filter`, wynikiem jest `List`, a nie `Map`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

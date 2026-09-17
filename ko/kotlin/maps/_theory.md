@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 괄호 `(name, age)`는 각 항목을 두 개의 변수로 나눕니다. 항목은 삽입된 순서대로 방문됩니다.
+
+---
+
+리스트와 마찬가지로 map도 `filter`를 지원합니다. 람다는 각 항목을 받아 `(key, value)`로 구조 분해할 수 있으며, 결과는 람다가 `true`를 반환한 항목만 담은 새로운 `Map`입니다:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+조건이 항목의 한쪽에만 관련될 때는 `filterKeys { }`와 `filterValues { }`도 있습니다.
+
+---
+
+`map`은 map의 각 항목을 새로운 요소로 변환합니다. `filter`와 달리 결과는 `Map`이 아니라 `List`입니다:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```
