@@ -7,18 +7,18 @@ title: ATM
 
 # --description--
 
-James would like to withdraw N dollars from an ATM.
-The cash machine will only accept the transaction if N is a multiple of 5, and James' account has enough cash to perform the withdrawal transaction (including bank charges).
-For each successful withdrawal the bank charges `0.50$`.
-Calculate James' account balance after an attempted transaction.
-The inputs are in the following order:
-1. the amount of cash which James wishes to withdraw is in the following range: `0 < N <= 2000`.
-2. James' initial balance is given with two digits of precision and is in the following range: `0 < B <= 2000`.
+James quiere retirar N dólares de un cajero automático.
+El cajero solo aceptará la transacción si N es múltiplo de 5, y la cuenta de James tiene suficiente dinero para realizar el retiro (incluyendo las comisiones bancarias).
+Por cada retiro exitoso, el banco cobra `0.50$`.
+Calcula el saldo de la cuenta de James después de un intento de transacción.
+Los datos de entrada vienen en el siguiente orden:
+1. la cantidad de dinero que James desea retirar está en el siguiente rango: `0 < N <= 2000`.
+2. el saldo inicial de James se da con dos dígitos de precisión y está en el siguiente rango: `0 < B <= 2000`.
 
 # --instructions--
 
-Return the account balance after the attempted transaction, given as a number with two digits of precision.
-If there is not enough money in the account to complete the transaction, return the current bank balance.
+Devuelve el saldo de la cuenta después del intento de transacción, como un número con dos dígitos de precisión.
+Si no hay suficiente dinero en la cuenta para completar la transacción, devuelve el saldo bancario actual.
 
 # --before-seed--
 

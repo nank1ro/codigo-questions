@@ -14,12 +14,12 @@ let owner = null;
 console.log(owner);
 // null प्रिंट करता है
 ```
-So `undefined` is usually the language telling you that something is missing, while `null` is the programmer stating that something is intentionally empty.
+तो `undefined` आमतौर पर भाषा की तरफ़ से यह बताने का तरीका है कि कोई मान मौजूद नहीं है, जबकि `null` प्रोग्रामर द्वारा यह जताने का तरीका है कि यह जानबूझकर खाली रखा गया है।
 
 ---
 
-Functions produce `undefined` in two more situations.
-When you call a function with **fewer arguments** than it declares, the missing parameters hold `undefined`:
+फ़ंक्शन दो और स्थितियों में `undefined` देते हैं।
+जब आप किसी फ़ंक्शन को उसकी घोषणा से **कम आर्ग्युमेंट** देकर कॉल करते हैं, तो जो पैरामीटर छूट जाते हैं वे `undefined` रखते हैं:
 ```javascript
 function greet(name) {
   console.log(name);
@@ -27,43 +27,43 @@ function greet(name) {
 greet();
 // undefined प्रिंट करता है
 ```
-When a function finishes **without a `return`** (or with a bare `return;`), calling it gives `undefined`:
+जब कोई फ़ंक्शन **बिना `return`** के (या सिर्फ़ `return;` के साथ) खत्म होता है, तो उसे कॉल करने पर `undefined` मिलता है:
 ```javascript
 function log(message) {
   console.log(message);
 }
 const result = log("hi");
 console.log(result);
-// hi प्रिंट करता है, फिर undefined
+// पहले hi, फिर undefined प्रिंट करता है
 ```
-Notice that passing `null` explicitly is not the same as omitting the argument: `greet(null)` prints `null`, because `null` is a real value that was handed to the function.
+ध्यान दें कि जानबूझकर `null` पास करना आर्ग्युमेंट को छोड़ने जैसा नहीं है: `greet(null)` `null` प्रिंट करता है, क्योंकि `null` एक असली मान है जो फ़ंक्शन को दिया गया।
 
 ---
 
-The `typeof` operator returns the type of a value as a string. For `undefined` it answers `"undefined"`, as you would expect:
+`typeof` ऑपरेटर किसी मान का प्रकार एक स्ट्रिंग के रूप में लौटाता है। `undefined` के लिए यह उम्मीद के मुताबिक `"undefined"` बताता है:
 ```javascript
 let city;
 console.log(typeof city);
 // undefined प्रिंट करता है
 ```
-For `null`, however, it answers `"object"`. This is a bug from the very first version of JavaScript that was never fixed, because too much code depends on it:
+लेकिन `null` के लिए यह `"object"` बताता है। यह JavaScript के बिल्कुल शुरुआती वर्शन की एक बग है जिसे कभी ठीक नहीं किया गया, क्योंकि बहुत सारा कोड इस पर निर्भर हो चुका है:
 ```javascript
 console.log(typeof null);
 // object प्रिंट करता है
 ```
-So `typeof` is a reliable way to detect `undefined`, but not `null`. To check for `null`, compare with it directly: `value === null`.
+इसलिए `typeof`, `undefined` का पता लगाने का एक भरोसेमंद तरीका है, लेकिन `null` का नहीं। `null` जाँचने के लिए सीधे उससे तुलना करें: `value === null`।
 
 ---
 
-How do `null` and `undefined` compare with each other? It depends on the operator.
-The **loose** equality `==` treats them as the same thing, and considers them different from any other value, including `0`, `""` and `false`:
+`null` और `undefined` एक-दूसरे से तुलना किए जाने पर कैसा व्यवहार करते हैं? यह ऑपरेटर पर निर्भर करता है।
+**ढीली (loose)** समानता `==` उन्हें एक ही चीज़ मानती है, और उन्हें किसी भी दूसरे मान से अलग मानती है, `0`, `""` और `false` समेत:
 ```javascript
 console.log(null == undefined);
 // true प्रिंट करता है
 console.log(null == 0, undefined == "");
 // false false प्रिंट करता है
 ```
-The **strict** equality `===` also compares the type, and `null` and `undefined` have different types:
+**सख्त (strict)** समानता `===` प्रकार की भी तुलना करती है, और `null` तथा `undefined` के प्रकार अलग-अलग होते हैं:
 ```javascript
 console.log(null === undefined);
 // false प्रिंट करता है
@@ -73,8 +73,8 @@ console.log(null === null);
 
 ---
 
-Most of the time you do not care *which* of the two "no value" markers you got: you just want to know whether a value is there.
-Because `null == undefined` is `true` and nothing else is loosely equal to `null`, the comparison `value == null` is the standard idiom to catch **both** at once:
+ज़्यादातर समय आपको यह फ़र्क नहीं पड़ता कि "कोई मान नहीं" के दो संकेतकों में से आपको *कौन सा* मिला: आप बस यह जानना चाहते हैं कि कोई मान है भी या नहीं।
+चूँकि `null == undefined` `true` होता है और इसके अलावा और कुछ भी ढीले रूप से `null` के बराबर नहीं होता, इसलिए `value == null` तुलना **दोनों** को एक साथ पकड़ने का मानक तरीका है:
 ```javascript
 function show(value) {
   if (value == null) {
@@ -87,30 +87,30 @@ console.log(show(null), show(undefined));
 console.log(show(0), show(""));
 // present present प्रिंट करता है
 ```
-This is the one case where `==` is preferred over `===`: writing `value === null || value === undefined` does exactly the same job, only longer.
-Values such as `0`, `""` and `false` are *not* `null`: they are real values that happen to be falsy.
+यह वह एक मामला है जहाँ `===` की जगह `==` को प्राथमिकता दी जाती है: `value === null || value === undefined` लिखने से बिल्कुल वही काम होता है, बस लंबा।
+`0`, `""` और `false` जैसे मान `null` *नहीं* होते: ये असली मान हैं जो संयोग से फ़ॉल्सी हैं।
 
 ---
 
-Reading a property of `null` or `undefined` is an error that stops the program:
+`null` या `undefined` की कोई प्रॉपर्टी पढ़ना एक एरर है जो प्रोग्राम को रोक देती है:
 ```javascript
 const user = { name: "Ana" };
 console.log(user.address.city);
 // TypeError: Cannot read properties of undefined (reading 'city')
 ```
-`user.address` is `undefined`, and `undefined` has no properties. The **optional chaining** operator `?.` solves this: if the value on its left is `null` or `undefined`, the whole expression stops and evaluates to `undefined` instead of throwing:
+`user.address` `undefined` है, और `undefined` की कोई प्रॉपर्टी नहीं होती। **ऑप्शनल चेनिंग** (optional chaining) ऑपरेटर `?.` इसे हल करता है: अगर उसके बाईं ओर का मान `null` या `undefined` हो, तो पूरी एक्सप्रेशन वहीं रुक जाती है और थ्रो करने की बजाय `undefined` का मान देती है:
 ```javascript
 console.log(user.address?.city);
 // undefined प्रिंट करता है
 console.log(user.name?.length);
 // 3 प्रिंट करता है
 ```
-When the left side does have a value, `?.` behaves exactly like a normal `.`. You can chain several: `user.address?.street?.name` returns `undefined` as soon as any link is missing.
+जब बाईं ओर वाकई कोई मान होता है, तो `?.` बिल्कुल सामान्य `.` की तरह काम करता है। आप कई `?.` को चेन कर सकते हैं: `user.address?.street?.name` किसी भी लिंक के गायब होते ही `undefined` लौटा देता है।
 
 ---
 
-Optional chaining is not limited to dot properties. There are two more forms.
-`?.[]` reads an element or a computed key only when the left side has a value:
+ऑप्शनल चेनिंग सिर्फ़ डॉट प्रॉपर्टी तक सीमित नहीं है। इसके दो और रूप भी हैं।
+`?.[]` किसी एलिमेंट या कंप्यूटेड key को तभी पढ़ता है जब बाईं ओर कोई मान हो:
 ```javascript
 const post = { tags: ["js", "node"] };
 console.log(post.tags?.[0]);
@@ -119,19 +119,19 @@ const empty = {};
 console.log(empty.tags?.[0]);
 // undefined प्रिंट करता है
 ```
-`?.()` calls a function only when it exists, which is handy for optional callbacks:
+`?.()` किसी फ़ंक्शन को तभी कॉल करता है जब वह मौजूद हो, जो ऑप्शनल कॉलबैक के लिए उपयोगी है:
 ```javascript
 const task = { name: "build" };
 task.onDone?.();
 // कुछ नहीं होता, कोई एरर नहीं
 ```
-In every form, the check applies to the value **right before** the `?.`: `post?.tags?.[0]` is safe even when `post` itself is `null` or `undefined`.
+हर रूप में, जाँच `?.` से **ठीक पहले** वाले मान पर लागू होती है: `post?.tags?.[0]` तब भी सुरक्षित है जब `post` खुद `null` या `undefined` हो।
 
 ---
 
-Once you know a value may be missing, you usually want a **default** in its place. Two operators do that, and they differ in what they consider "missing".
-`a || b` returns `b` whenever `a` is **falsy**: not only `null` and `undefined`, but also `0`, `""`, `false` and `NaN`.
-The **nullish coalescing** operator `a ?? b` returns `b` only when `a` is `null` or `undefined`, and keeps every other value:
+एक बार जब आपको पता चल जाए कि कोई मान गायब हो सकता है, तो आमतौर पर आप उसकी जगह एक **डिफ़ॉल्ट** मान चाहते हैं। इसके लिए दो ऑपरेटर हैं, और वे इस बात में अलग हैं कि वे किसे "गायब" मानते हैं।
+`a || b` तब `b` लौटाता है जब `a` **फ़ॉल्सी** हो: सिर्फ़ `null` और `undefined` ही नहीं, बल्कि `0`, `""`, `false` और `NaN` भी।
+**नलिश कोअलेसिंग** (nullish coalescing) ऑपरेटर `a ?? b` तभी `b` लौटाता है जब `a`, `null` या `undefined` हो, और बाकी हर मान को वैसा ही रहने देता है:
 ```javascript
 const count = 0;
 console.log(count || 10);
@@ -142,15 +142,15 @@ let name;
 console.log(name ?? "Guest");
 // Guest प्रिंट करता है
 ```
-Use `??` when `0`, `""` or `false` are legitimate values that must be kept, and `||` when you really want to replace every falsy value.
+`??` का उपयोग तब करें जब `0`, `""` या `false` वैध मान हों जिन्हें बनाए रखना ज़रूरी है, और `||` का उपयोग तब करें जब आप वाकई हर फ़ॉल्सी मान को बदलना चाहते हों।
 
 ---
 
-A very common pattern is "fill in this property only if it is not set yet". Written with `??` it repeats the name:
+एक बहुत आम पैटर्न है "इस प्रॉपर्टी को तभी भरें जब यह अभी सेट न हो"। `??` से लिखने पर नाम दोहराना पड़ता है:
 ```javascript
 options.timeout = options.timeout ?? 1000;
 ```
-The **nullish assignment** operator `??=` does the same in one step: it assigns the right side only when the left side is currently `null` or `undefined`, and leaves any other value untouched:
+**नलिश असाइनमेंट** (nullish assignment) ऑपरेटर `??=` यही काम एक ही चरण में करता है: यह दाईं ओर का मान तभी असाइन करता है जब बाईं ओर का मान फ़िलहाल `null` या `undefined` हो, और किसी भी अन्य मान को बिना छेड़े छोड़ देता है:
 ```javascript
 const options = { retries: 0 };
 options.retries ??= 3;
@@ -158,11 +158,11 @@ options.timeout ??= 1000;
 console.log(options);
 // { retries: 0, timeout: 1000 } प्रिंट करता है
 ```
-`retries` stays `0` because `0` is not nullish; `timeout` did not exist, so it receives `1000`. The same idea exists for `||` as `||=`, which overwrites every falsy value.
+`retries`, `0` ही रहता है क्योंकि `0` नलिश नहीं है; `timeout` पहले मौजूद ही नहीं था, इसलिए उसे `1000` मिल जाता है। `||` के लिए भी यही विचार `||=` के रूप में मौजूद है, जो हर फ़ॉल्सी मान को ओवरराइट कर देता है।
 
 ---
 
-A **default parameter** gives a parameter a value when the caller does not provide one. The rule is precise: the default is used only when the argument is `undefined`, which includes omitting it. Passing `null` does **not** trigger the default, because `null` is a value:
+एक **डिफ़ॉल्ट पैरामीटर** (default parameter) किसी पैरामीटर को तब मान देता है जब कॉलर कोई मान नहीं देता। नियम स्पष्ट है: डिफ़ॉल्ट तभी उपयोग होता है जब आर्ग्युमेंट `undefined` हो, जिसमें उसे छोड़ना भी शामिल है। `null` पास करने से डिफ़ॉल्ट **लागू नहीं** होता, क्योंकि `null` खुद एक मान है:
 ```javascript
 function repeat(text, times = 2) {
   return text.repeat(times);
@@ -174,11 +174,11 @@ console.log(repeat("ab", undefined));
 console.log(repeat("ab", null));
 // एक खाली स्ट्रिंग प्रिंट करता है, क्योंकि null को 0 में बदल दिया जाता है
 ```
-Default parameters follow the `undefined` rule, while `??` covers both `null` and `undefined`: choose the one that matches how your function will be called.
+डिफ़ॉल्ट पैरामीटर `undefined` वाले नियम का पालन करते हैं, जबकि `??` `null` और `undefined` दोनों को कवर करता है: वह चुनें जो आपके फ़ंक्शन के कॉल होने के तरीके से मेल खाए।
 
 ---
 
-Optional chaining and the `== null` guard work well together: the chain reads the nested value without throwing, and the guard decides what to do when the result is missing:
+ऑप्शनल चेनिंग और `== null` गार्ड मिलकर अच्छे से काम करते हैं: चेन बिना थ्रो किए नेस्टेड मान पढ़ती है, और गार्ड यह तय करता है कि परिणाम गायब होने पर क्या करना है:
 ```javascript
 function cityOf(user) {
   if (user?.address?.city == null) {
@@ -187,18 +187,18 @@ function cityOf(user) {
   return user.address.city;
 }
 ```
-Inside the last `return` a plain `.` is safe, because the guard has already proven that every link exists.
+आख़िरी `return` के अंदर एक सादा `.` सुरक्षित है, क्योंकि गार्ड पहले ही यह साबित कर चुका है कि हर लिंक मौजूद है।
 
 ---
 
-Many built-in methods report "nothing found" by returning `undefined`. The array method `find(callback)` is the typical example: it returns the first element for which the callback is `true`, or `undefined` when no element matches:
+कई बिल्ट-इन मेथड "कुछ नहीं मिला" को `undefined` लौटाकर बताते हैं। ऐरे मेथड `find(callback)` इसका एक आम उदाहरण है: यह उस पहले एलिमेंट को लौटाता है जिसके लिए कॉलबैक `true` हो, या कोई एलिमेंट मेल न खाने पर `undefined`:
 ```javascript
 const products = [{ name: "pen", price: 2 }];
 const found = products.find((p) => p.name === "ink");
 console.log(found);
 // undefined प्रिंट करता है
 ```
-Reading `found.price` here would throw, so `?.` and `??` are the natural companions of `find`:
+यहाँ `found.price` पढ़ने से एरर आएगी, इसलिए `?.` और `??`, `find` के स्वाभाविक साथी हैं:
 ```javascript
 console.log(products.find((p) => p.name === "ink")?.price ?? "no price");
 // no price प्रिंट करता है
@@ -206,14 +206,14 @@ console.log(products.find((p) => p.name === "ink")?.price ?? "no price");
 
 ---
 
-`null` and `undefined` behave differently when an object is converted to JSON with `JSON.stringify()`.
-JSON has a `null` value but no `undefined`, so a property whose value is `undefined` is simply **left out**, while a `null` property is kept:
+जब किसी ऑब्जेक्ट को `JSON.stringify()` से JSON में बदला जाता है, तो `null` और `undefined` अलग-अलग व्यवहार करते हैं।
+JSON में `null` मान होता है लेकिन `undefined` नहीं, इसलिए जिस प्रॉपर्टी का मान `undefined` हो उसे बस **छोड़ दिया** जाता है, जबकि `null` वाली प्रॉपर्टी बनी रहती है:
 ```javascript
 const user = { name: "Ana", nickname: undefined, email: null };
 console.log(JSON.stringify(user));
 // {"name":"Ana","email":null} प्रिंट करता है
 ```
-Inside arrays the positions cannot disappear, so `undefined` becomes `null` there:
+ऐरे के अंदर पोज़िशन गायब नहीं हो सकतीं, इसलिए वहाँ `undefined`, `null` बन जाता है:
 ```javascript
 console.log(JSON.stringify([1, undefined, 3]));
 // [1,null,3] प्रिंट करता है
@@ -221,8 +221,8 @@ console.log(JSON.stringify([1, undefined, 3]));
 
 ---
 
-Checking `obj.key === undefined` cannot tell two situations apart: the property does not exist, or it exists and holds the value `undefined`.
-`Object.hasOwn(obj, key)` answers the first question only: it returns `true` when the object has its **own** property named `key`, whatever its value:
+`obj.key === undefined` जाँचने से दो स्थितियों में फ़र्क नहीं किया जा सकता: या तो प्रॉपर्टी मौजूद ही नहीं है, या वह मौजूद है और उसका मान `undefined` है।
+`Object.hasOwn(obj, key)` सिर्फ़ पहला सवाल पूछता है: यह `true` लौटाता है जब ऑब्जेक्ट में `key` नाम की उसकी **खुद की** प्रॉपर्टी हो, चाहे उसका मान कुछ भी हो:
 ```javascript
 const config = { debug: undefined };
 console.log(config.debug === undefined, config.level === undefined);
@@ -230,4 +230,4 @@ console.log(config.debug === undefined, config.level === undefined);
 console.log(Object.hasOwn(config, "debug"), Object.hasOwn(config, "level"));
 // true false प्रिंट करता है
 ```
-"Own" means declared on the object itself: inherited members such as `toString` are available on every object but `Object.hasOwn(config, "toString")` is `false`.
+"खुद की" का मतलब है ऑब्जेक्ट पर सीधे घोषित की गई: इनहेरिट किए गए सदस्य जैसे `toString` हर ऑब्जेक्ट पर उपलब्ध होते हैं, लेकिन `Object.hasOwn(config, "toString")` `false` होता है।

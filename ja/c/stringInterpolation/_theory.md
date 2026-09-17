@@ -35,25 +35,25 @@ printf("%s\n", message); // "Hello, Ada!" を出力する
 
 ---
 
-`%x` prints an integer in hexadecimal with lowercase letters, and `%X` does the same with uppercase letters. `%c` takes an integer character code and prints the character it stands for, so `%c` with `65` prints `A`:
+`%x`は整数を小文字の16進数で出力し、`%X`は同じことを大文字で行います。`%c`は整数の文字コードを受け取り、それが表す文字を出力するので、`65`に対する`%c`は`A`を出力します:
 ```c
 printf("%x %X %c\n", 31, 31, 66); // "1f 1F B" を出力する
 ```
 
 ---
 
-A number between `%` and the letter sets the minimum **width** of the field. The value is padded with spaces on the left, and **flags** placed right after the `%` change the padding:
+`%`と文字の間の数字は、フィールドの最小**幅**を設定します。値は左側にスペースで埋められ、`%`の直後に置かれた**フラグ**がその埋め方を変えます:
 ```c
-printf("[%5d]\n", 42);  // "[   42]" を5桁で右揃えにして出力する
-printf("[%-5d]\n", 42); // "[42   ]" を出力する。- フラグは左揃えにする
-printf("[%05d]\n", 42); // "[00042]" を出力する。0 フラグはゼロで埋める
-printf("[%+d]\n", 42);  // "[+42]" を出力する。+ フラグは常に符号を表示する
+printf("[%5d]\n", 42);  // "[   42]" を出力する(5列で右寄せ)
+printf("[%-5d]\n", 42); // "[42   ]" を出力する(-フラグは左寄せにする)
+printf("[%05d]\n", 42); // "[00042]" を出力する(0フラグはゼロで埋める)
+printf("[%+d]\n", 42);  // "[+42]" を出力する(+フラグは常に符号を表示する)
 ```
-A value longer than the width is never cut, the field simply grows.
+幅より長い値が切り詰められることはなく、フィールドは単に広がります。
 
 ---
 
-Width and flags work with every specifier, so `%02x` prints an integer as hexadecimal padded with zeros to two digits. This is how colors are written as `#rrggbb`:
+幅とフラグはすべての指定子で使えるので、`%02x`は整数を2桁のゼロ埋め16進数として出力します。これは色を`#rrggbb`として書き表す方法です:
 ```c
 printf("%02x\n", 5);   // "05" を出力する
 printf("%02x\n", 255); // "ff" を出力する
@@ -61,23 +61,23 @@ printf("%02x\n", 255); // "ff" を出力する
 
 ---
 
-A dot followed by a number sets the **precision**. For `%f` it is the number of decimals, rounded; for `%s` it is the maximum number of characters printed:
+ドットとそれに続く数字は**精度**を設定します。`%f`の場合は四捨五入された小数点以下の桁数、`%s`の場合は出力される最大文字数です:
 ```c
 printf("%.2f\n", 3.14159);    // "3.14" を出力する
 printf("%.3s\n", "formatting"); // "for" を出力する
 ```
-Width and precision can be combined: `%8.2f` prints two decimals right-aligned in 8 columns.
+幅と精度は組み合わせることができます: `%8.2f`は8列で右寄せされた小数点以下2桁を出力します。
 
 ---
 
-Precision is the usual way to control how a `double` looks in a string. A ratio like `0.425` becomes a percentage by multiplying by `100` and printing one decimal followed by `%%`:
+精度は、文字列内で`double`の見た目を制御する一般的な方法です。`0.425`のような比率は、`100`を掛けて小数点以下1桁を`%%`とともに出力することでパーセンテージになります:
 ```c
-sprintf(out, "%.1f%%", 0.425 * 100); // out は "42.5%"
+sprintf(out, "%.1f%%", 0.425 * 100); // out は "42.5%" になる
 ```
 
 ---
 
-`sprintf` and `printf` **return** the number of characters written, not counting the terminating `'\0'`. This is the length of the string that was just built, without a separate `strlen` call:
+`sprintf`と`printf`は、終端の`'\0'`を数えずに書き込んだ文字数を**戻り値として返します**。これは、別途`strlen`を呼び出さなくても得られる、たった今組み立てた文字列の長さです:
 ```c
 char buffer[32];
 int length = sprintf(buffer, "%d-%d", 3, 7);
@@ -86,67 +86,67 @@ printf("%d\n", length); // "3" を出力する
 
 ---
 
-`sprintf` has no idea how big the buffer is. `snprintf` takes the buffer size as its second argument and never writes more than `size - 1` characters plus the `'\0'`, cutting the text if needed. Its return value is the length the **complete** text would have had, so a result greater than or equal to `size` means the output was truncated:
+`sprintf`はバッファの大きさを知りません。`snprintf`は第2引数としてバッファサイズを受け取り、`size - 1`文字と`'\0'`を超えて書き込むことは決してなく、必要であればテキストを切り詰めます。戻り値は**完全な**テキストであれば持っていたはずの長さなので、結果が`size`以上であれば出力が切り詰められたことを意味します:
 ```c
 char buffer[8];
 int n = snprintf(buffer, sizeof buffer, "%s", "formatting");
 printf("%s %d\n", buffer, n); // "formatt 10" を出力する
 ```
-`sizeof buffer` gives the size of the array in bytes, which for a `char` array is its number of elements.
+`sizeof buffer`は配列のサイズをバイト単位で返しますが、`char`配列の場合それは要素数と同じです。
 
 ---
 
-Comparing the return value of `snprintf` with the buffer size tells whether everything fit. This is the safe pattern for building strings of unknown length:
+`snprintf`の戻り値とバッファサイズを比較することで、すべてが収まったかどうかがわかります。これは、長さが分からない文字列を組み立てるための安全なパターンです:
 ```c
 int n = snprintf(out, size, "%s", text);
 if (n >= size) {
-    // out には text の先頭 size - 1 文字だけが入る
+    // out には text の最初の size - 1 文字だけが入っている
 }
 ```
 
 ---
 
-A string can be built in several steps by writing each piece right after the previous one. The return value tells where the text ends, so `buffer + n` is the address of the terminator and the next `sprintf` can continue from there:
+文字列は、各部分を直前の部分のすぐ後ろに書き込むことで、複数の手順で組み立てることができます。戻り値はテキストがどこで終わるかを示すので、`buffer + n`は終端文字のアドレスになり、次の`sprintf`はそこから続けることができます:
 ```c
 char buffer[32];
 int n = sprintf(buffer, "%s", "Hello");
-n += sprintf(buffer + n, ", %s", "world"); // buffer は "Hello, world"、n は 12
+n += sprintf(buffer + n, ", %s", "world"); // buffer は "Hello, world" になり、n は 12 になる
 ```
-Adding each return value to `n` keeps it equal to the total length of the text built so far.
+各戻り値を`n`に加算していくことで、`n`はこれまでに組み立てたテキストの合計の長さと等しく保たれます。
 
 ---
 
-Strings can also be combined without a format string. `strcat` from `string.h` appends a copy of its second argument to the end of the first, which must have enough free space, and `strncat` appends at most a given number of characters:
+文字列はフォーマット文字列を使わずに結合することもできます。`string.h`の`strcat`は、第2引数のコピーを第1引数の末尾に追加します。第1引数には十分な空き容量が必要で、`strncat`は指定した文字数までしか追加しません:
 ```c
 char text[32] = "Hi";
-strcat(text, "!!!");        // text は "Hi!!!"
-strncat(text, "abcdef", 2); // text は "Hi!!!ab"
+strcat(text, "!!!");        // text は "Hi!!!" になる
+strncat(text, "abcdef", 2); // text は "Hi!!!ab" になる
 ```
-Both always add the terminating `'\0'` after the appended characters.
+どちらも、追加した文字の後に必ず終端文字`'\0'`を付け加えます。
 
 ---
 
-When there is nothing to format, `puts` prints a string followed by a newline. Unlike `printf` it does not interpret `%`, so the text is printed exactly as written:
+フォーマットする必要が何もない場合、`puts`は文字列と改行を出力します。`printf`と違って`%`を解釈しないため、テキストはそのまま出力されます:
 ```c
 puts("Done");      // "Done" と改行を出力する
 puts("50% off");   // "50% off" と改行を出力する
 printf("50% off"); // 未定義: % off は有効な指定子ではない
 ```
-`puts` is the right choice for fixed text, and `printf` when values must be inserted.
+固定のテキストには`puts`が、値を挿入する必要がある場合は`printf`が適した選択です。
 
 ---
 
-`strncat` is useful when only a part of a string must be appended, or when the appended piece must be limited to a maximum length:
+`strncat`は、文字列の一部だけを追加したい場合や、追加する部分を最大長で制限したい場合に便利です:
 ```c
 char name[16] = "file";
-strncat(name, ".backup", 3); // name は "file.ba"
+strncat(name, ".backup", 3); // name は "file.ba" になる
 ```
-When the limit is larger than the string, the whole string is appended.
+上限が文字列より大きい場合は、文字列全体が追加されます。
 
 ---
 
-Putting it together: a report row combines a left-aligned text field, a separator and a right-aligned number with a fixed number of decimals, written with `snprintf` so it never overflows the buffer:
+総まとめ：レポートの1行は、左寄せのテキストフィールド、区切り文字、固定の小数桁数を持つ右寄せの数値を組み合わせたもので、バッファをあふれさせないよう`snprintf`で書き込みます:
 ```c
-snprintf(out, size, "%-6s|%5.1f", "Ada", 9.5); // out は "Ada   |  9.5"
+snprintf(out, size, "%-6s|%5.1f", "Ada", 9.5); // out は "Ada   |  9.5" になる
 ```
-As long as every value fits its width, all rows have the same length, so the columns line up when the rows are printed one under the other.
+すべての値がその幅に収まっている限り、すべての行は同じ長さになるため、行を1行ずつ出力すると列がそろいます。

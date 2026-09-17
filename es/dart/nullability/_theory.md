@@ -212,7 +212,7 @@ late String report = buildReport(); // buildReport() se ejecuta solo cuando se u
 
 ---
 
-Nullability shapes how you declare **named parameters**. A named parameter with a nullable type is optional: when the caller omits it, it is simply `null`.
+La nulabilidad determina cómo declaras los **parámetros nombrados**. Un parámetro nombrado con un tipo nullable es opcional: cuando quien lo llama lo omite, simplemente es `null`.
 
 ```dart
 String label({String? title}) => title ?? 'untitled';
@@ -221,7 +221,7 @@ print(label());               // untitled
 print(label(title: 'Notes')); // Notes
 ```
 
-A named parameter with a non-nullable type and no default value would have no value when omitted, so Dart requires you to mark it `required`; the caller must then always pass it:
+Un parámetro nombrado con un tipo no nullable y sin valor por defecto no tendría ningún valor si se omitiera, así que Dart te exige marcarlo `required`; quien llama debe entonces pasarlo siempre:
 
 ```dart
 String label({required String name, String? title}) { ... }
@@ -233,26 +233,26 @@ label(title: 'Dr.');              // error: the named parameter 'name' is requir
 
 ---
 
-Nullability also applies to the **elements** of a collection. A `List<int>` never contains `null`, while a `List<int?>` may:
+La nulabilidad también se aplica a los **elementos** de una colección. Una `List<int>` nunca contiene `null`, mientras que una `List<int?>` sí puede:
 
 ```dart
 List<int?> scores = [7, null, 9];
 ```
 
-Note the difference with `List<int>?`, which is a list that may itself be missing but, when present, holds only real numbers.
+Fíjate en la diferencia con `List<int>?`, que es una lista que puede faltar ella misma, pero que, cuando está presente, solo contiene números reales.
 
-To get rid of the `null` elements, `nonNulls` returns an `Iterable` with only the present values, typed without `?`:
+Para deshacerte de los elementos `null`, `nonNulls` devuelve un `Iterable` solo con los valores presentes, tipado sin `?`:
 
 ```dart
 var present = scores.nonNulls.toList(); // List<int>
 print(present); // [7, 9]
 ```
 
-`whereType<int>()` does the same and also works when the list mixes several types.
+`whereType<int>()` hace lo mismo y también funciona cuando la lista mezcla varios tipos.
 
 ---
 
-Many library functions use `null` to report that something **could not be done**. Converting a string to a number is the classic example: `int.parse` throws a `FormatException` when the text is not a number, while `int.tryParse` returns `null` instead and lets you decide what to do:
+Muchas funciones de biblioteca usan `null` para indicar que algo **no se pudo hacer**. Convertir una cadena en un número es el ejemplo clásico: `int.parse` lanza un `FormatException` cuando el texto no es un número, mientras que `int.tryParse` devuelve `null` en su lugar y te deja decidir qué hacer:
 
 ```dart
 print(int.tryParse('42'));  // 42
@@ -260,20 +260,20 @@ print(int.tryParse('4x2')); // null
 print(int.tryParse(''));    // null
 ```
 
-The return type of `int.tryParse` is `int?`, so everything you learned applies: `??` for a default, `?.` to chain, and an `if` check to promote. `double.tryParse` works the same way.
+El tipo de retorno de `int.tryParse` es `int?`, así que todo lo que has aprendido se aplica: `??` para un valor por defecto, `?.` para encadenar, y una comprobación `if` para promocionar. `double.tryParse` funciona de la misma manera.
 
 ---
 
-Two more operators have a null-aware variant.
+Dos operadores más tienen una variante null-aware.
 
-The **null-aware cascade** `?..` runs a chain of cascade operations only when the object is not `null`, and skips them all otherwise:
+La **cascada null-aware** `?..` ejecuta una cadena de operaciones en cascada solo cuando el objeto no es `null`, y las omite todas en caso contrario:
 
 ```dart
 List<int>? numbers;
 numbers?..add(1)..add(2); // no pasa nada, numbers sigue siendo null
 ```
 
-The **null-aware spread** `...?` inserts the elements of a nullable collection into a literal, adding nothing when the collection is `null`:
+El **spread null-aware** `...?` inserta los elementos de una colección nullable en un literal, sin añadir nada cuando la colección es `null`:
 
 ```dart
 List<int>? extra;
@@ -283,8 +283,8 @@ extra = [1, 2];
 print([0, ...?extra]); // [0, 1, 2]
 ```
 
-Without the `?`, `...extra` on a `List<int>?` would be a compile error.
+Sin el `?`, `...extra` sobre una `List<int>?` sería un error de compilación.
 
 ---
 
-Real data is full of gaps: a form field left empty, a column missing from a file, a string that is not quite a number. The tools of this chapter combine naturally to handle them: `nonNulls` to drop missing elements, `int.tryParse` to convert safely, `??` or an `if` check to deal with what could not be converted.
+Los datos reales están llenos de huecos: un campo de formulario que queda vacío, una columna que falta en un archivo, una cadena que no es del todo un número. Las herramientas de este capítulo se combinan de forma natural para manejarlos: `nonNulls` para descartar los elementos que faltan, `int.tryParse` para convertir de forma segura, y `??` o una comprobación `if` para lidiar con lo que no se pudo convertir.
