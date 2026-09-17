@@ -213,3 +213,25 @@ do {
 }
 ```
 Pierwsze `try`, które zgłosi błąd, kończy blok, więc późniejsze kroki nigdy się nie wykonają — wartość po prostu nigdy nie istniała. To właśnie sprawia, że ta forma jest czytelna: szczęśliwa ścieżka pozostaje jedną prostą linią na górze, a każdy sposób, w jaki może pójść źle, jest wypisany pod spodem.
+
+---
+
+To, gdzie znajduje się blok `do`, decyduje o tym, ile kosztuje pojedyncza awaria. Umieść go **wewnątrz** pętli, a każdy element dostanie własną próbę, dzięki czemu jedna zła wartość zostanie pominięta, a reszta i tak się wykona:
+```swift
+for age in [4, -1, 7] {
+    do {
+        print(try label(age))
+    } catch {
+        print("skipped")
+    }
+}
+```
+Owinięcie całej pętli w jeden `do` zatrzymałoby się natomiast na pierwszym błędzie i nigdy nie dotarłoby do `7`. Żadne z tych podejść nie jest błędne — to różnica między *jednym złym elementem* a *poddaniem się*.
+
+---
+
+Wszystko w tym rozdziale odpowiada na jedno pytanie: kto zajmuje się awarią?
+
+Funkcja zgłaszająca błąd odmawia odpowiedzi na nie. Nazywa to, co poszło nie tak — przypadek wyliczenia `Error`, niosący wszystko, czego będzie potrzebować procedura obsługi — i przekazuje decyzję wyżej. Wywołujący wybiera wtedy narzędzie: `do`/`catch`, by reagować przypadek po przypadku, `try?` i `??`, by cofnąć się do wartości domyślnej, `defer`, by posprzątać przy wyjściu, niezależnie od tego, jak się ono odbędzie.
+
+Właśnie w tym podziale tkwi cały sens. Funkcja, która wykrywa problem, rzadko wie, co powinno stać się dalej, a kod, który to wie, rzadko chce powtarzać sprawdzenie.

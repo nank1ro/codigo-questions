@@ -213,3 +213,25 @@ do {
 }
 ```
 The first `try` that throws ends the block, so the later steps never run — the value simply never existed. That is what makes this shape readable: the happy path stays in one straight line at the top, and every way it can go wrong is listed underneath.
+
+---
+
+Where the `do` block sits decides how much work a single failure costs. Put it **inside** the loop and each item gets its own attempt, so one bad value is skipped and the rest still run:
+```swift
+for age in [4, -1, 7] {
+    do {
+        print(try label(age))
+    } catch {
+        print("skipped")
+    }
+}
+```
+Wrapping the whole loop in one `do` instead would stop at the first error and never reach `7`. Neither is wrong — it is the difference between *one bad item* and *give up*.
+
+---
+
+Everything in this chapter answers one question: who deals with the failure?
+
+A throwing function refuses to answer it. It names what went wrong — a case of an `Error` enum, carrying whatever the handler will need — and hands the decision upwards. The caller then picks a tool: `do`/`catch` to react case by case, `try?` and `??` to fall back on a default, `defer` to clean up on the way out either way.
+
+That split is the whole point. The function that detects the problem rarely knows what should happen next, and the code that knows rarely wants to repeat the check.

@@ -210,6 +210,19 @@ println(bad.getOrElse { 0 }) // 0
 
 ---
 
+Ponieważ `Result` jest zwykłą wartością, można go przechować w `val` i odpytywać dowolną liczbę razy:
+
+```kotlin
+val result = runCatching { "abc".toInt() }
+
+println(result.getOrElse { 0 })  // 0
+println(result.getOrNull())      // null
+println(result.isSuccess)        // false
+```
+`try`/`catch` nie potrafi tego zrobić. Tam wynik jest obsługiwany tylko raz, w miejscu awarii, a potem znika. `Result` zachowuje awarię, dzięki czemu kod, który na nią reaguje, nie musi znajdować się tam, gdzie się wydarzyła.
+
+---
+
 A `Result` can also be inspected without unwrapping it. `onFailure` runs its block only when the result holds an exception, `onSuccess` only when it holds a value, and **both give the same `Result` back** so the calls can be chained:
 
 ```kotlin

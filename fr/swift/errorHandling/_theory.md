@@ -213,3 +213,25 @@ do {
 }
 ```
 Le premier `try` qui lève une erreur met fin au bloc, donc les étapes suivantes ne s'exécutent jamais — la valeur n'a tout simplement jamais existé. C'est ce qui rend cette forme lisible : le chemin heureux reste sur une seule ligne droite en haut, et chaque manière de mal tourner est listée en dessous.
+
+---
+
+L'endroit où se trouve le bloc `do` décide du coût d'un seul échec. Place-le **à l'intérieur** de la boucle et chaque élément obtient sa propre tentative, de sorte qu'une mauvaise valeur est ignorée et que le reste continue de s'exécuter :
+```swift
+for age in [4, -1, 7] {
+    do {
+        print(try label(age))
+    } catch {
+        print("skipped")
+    }
+}
+```
+Envelopper toute la boucle dans un seul `do` s'arrêterait à la première erreur et n'atteindrait jamais `7`. Aucune des deux n'est fausse — c'est la différence entre *un mauvais élément* et *abandonner*.
+
+---
+
+Tout dans ce chapitre répond à une seule question : qui s'occupe de l'échec ?
+
+Une fonction qui lève une erreur refuse d'y répondre. Elle nomme ce qui a mal tourné — un cas d'une énumération `Error`, portant tout ce dont le gestionnaire aura besoin — et transmet la décision plus haut. L'appelant choisit alors un outil : `do`/`catch` pour réagir cas par cas, `try?` et `??` pour revenir à une valeur par défaut, `defer` pour nettoyer en sortant, quoi qu'il arrive.
+
+Cette séparation est tout l'intérêt. La fonction qui détecte le problème sait rarement ce qui doit se passer ensuite, et le code qui le sait veut rarement répéter la vérification.
