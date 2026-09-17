@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Scope-Funktionen",
     "description": "Mit let, run, with, apply und also im Kontext eines Objekts arbeiten"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Fehler und Exceptions",
+    "description": "Exceptions auslösen, abfangen und definieren, um Fehler zu behandeln"
   }
 }

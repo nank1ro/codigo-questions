@@ -133,5 +133,10 @@
     "order": 27,
     "title": "Funkcje zasięgu",
     "description": "Używaj let, run, with, apply i also, aby pracować w kontekście obiektu"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "Błędy i wyjątki",
+    "description": "Zgłaszaj, przechwytuj i definiuj wyjątki, aby obsługiwać błędy"
   }
 }

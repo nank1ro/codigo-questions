@@ -133,5 +133,10 @@
     "order": 27,
     "title": "スコープ関数",
     "description": "let、run、with、apply、alsoを使ってオブジェクトのコンテキストの中で処理を行う"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "エラーと例外",
+    "description": "例外をスロー、キャッチ、定義してエラーを処理する方法を学ぶ"
   }
 }

@@ -133,5 +133,10 @@
     "order": 27,
     "title": "作用域函数",
     "description": "使用 let、run、with、apply 和 also 在对象的上下文中工作"
+  },
+  "errorHandling": {
+    "order": 28,
+    "title": "错误与异常",
+    "description": "抛出、捕获和定义异常以处理错误"
   }
 }

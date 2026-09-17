@@ -462,6 +462,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -547,7 +552,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -1305,6 +1310,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -1390,7 +1400,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -2148,6 +2158,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -2233,7 +2248,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -2991,6 +3006,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3076,7 +3096,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -3834,6 +3854,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -3919,7 +3944,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -4677,6 +4702,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -4762,7 +4792,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -5520,6 +5550,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -5605,7 +5640,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -6363,6 +6398,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -6448,7 +6488,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -7206,6 +7246,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -7291,7 +7336,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -8049,6 +8094,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8134,7 +8184,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -8892,6 +8942,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -8977,7 +9032,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
@@ -9735,6 +9790,11 @@
           "totalExercises": 16
         },
         {
+          "name": "errorHandling",
+          "trainUntil": 15,
+          "totalExercises": 16
+        },
+        {
           "name": "extensions",
           "trainUntil": 16,
           "totalExercises": 16
@@ -9820,7 +9880,7 @@
           "totalExercises": 44
         }
       ],
-      "totalExercises": 546
+      "totalExercises": 562
     },
     {
       "name": "python",
