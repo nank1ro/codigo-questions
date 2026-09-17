@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protocols",
         "description": "Define requirements that types can adopt and extend"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Errors and Exceptions",
+        "description": "Throw, catch and define errors to handle failures"
     }
 }

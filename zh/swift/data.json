@@ -138,5 +138,10 @@
         "order": 28,
         "title": "协议",
         "description": "学习如何定义类型可以采用和扩展的要求"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "错误与异常",
+        "description": "抛出、捕获和定义错误以处理失败"
     }
 }

@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protocoles",
         "description": "Définissez les exigences que les types peuvent adopter et étendre"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Erreurs et exceptions",
+        "description": "Levez, interceptez et définissez des erreurs pour gérer les échecs"
     }
 }

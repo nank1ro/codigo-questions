@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protocolli",
         "description": "Definisci i requisiti che i tipi possono adottare ed estendere"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Errori ed Eccezioni",
+        "description": "Lancia, cattura e definisci gli errori per gestire i fallimenti"
     }
 }

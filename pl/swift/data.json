@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protokoły",
         "description": "Definiuj wymagania, które typy mogą przyjmować i rozszerzać"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Obsługa błędów",
+        "description": "Zgłaszaj, łap i definiuj błędy, aby obsługiwać niepowodzenia"
     }
 }
