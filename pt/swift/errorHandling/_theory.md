@@ -213,3 +213,25 @@ do {
 }
 ```
 O primeiro `try` que lança encerra o bloco, então os passos seguintes nunca executam — o valor simplesmente nunca existiu. É isso que torna esse formato legível: o caminho feliz fica em uma linha reta no topo, e cada maneira de dar errado é listada embaixo.
+
+---
+
+Onde o bloco `do` fica decide quanto custa uma única falha. Coloque-o **dentro** do loop e cada item recebe sua própria tentativa, então um valor ruim é pulado e o resto continua rodando:
+```swift
+for age in [4, -1, 7] {
+    do {
+        print(try label(age))
+    } catch {
+        print("skipped")
+    }
+}
+```
+Envolver o loop inteiro em um único `do`, em vez disso, pararia no primeiro erro e nunca chegaria a `7`. Nenhuma das opções está errada — é a diferença entre *um item ruim* e *desistir*.
+
+---
+
+Tudo neste capítulo responde a uma única pergunta: quem lida com a falha?
+
+Uma função que lança erros se recusa a responder isso. Ela nomeia o que deu errado — um caso de um enum `Error`, carregando tudo o que quem trata vai precisar — e passa a decisão para cima. Quem chama então escolhe uma ferramenta: `do`/`catch` para reagir caso a caso, `try?` e `??` para recorrer a um valor padrão, `defer` para limpar na saída de qualquer forma.
+
+Essa divisão é o ponto principal. A função que detecta o problema raramente sabe o que deve acontecer em seguida, e o código que sabe raramente quer repetir a verificação.

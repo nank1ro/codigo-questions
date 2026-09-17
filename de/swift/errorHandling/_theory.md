@@ -213,3 +213,25 @@ do {
 }
 ```
 Das erste `try`, das wirft, beendet den Block, daher laufen die späteren Schritte nie — der Wert existierte schlicht nie. Das macht diese Form lesbar: Der Happy Path bleibt oben in einer geraden Linie, und jede Art, wie er schiefgehen kann, ist darunter aufgelistet.
+
+---
+
+Wo der `do`-Block sitzt, entscheidet, wie viel ein einzelner Fehlschlag kostet. Setze ihn **innerhalb** der Schleife, und jedes Element bekommt seinen eigenen Versuch, sodass ein schlechter Wert übersprungen wird und der Rest trotzdem läuft:
+```swift
+for age in [4, -1, 7] {
+    do {
+        print(try label(age))
+    } catch {
+        print("skipped")
+    }
+}
+```
+Die ganze Schleife stattdessen in ein einziges `do` zu packen würde beim ersten Fehler anhalten und `7` nie erreichen. Keines von beidem ist falsch — es ist der Unterschied zwischen *einem schlechten Element* und *aufgeben*.
+
+---
+
+Alles in diesem Kapitel beantwortet eine Frage: Wer kümmert sich um den Fehlschlag?
+
+Eine werfende Funktion weigert sich, das zu beantworten. Sie benennt, was schiefgegangen ist — einen Fall eines `Error`-Enums, der alles trägt, was der Handler brauchen wird — und gibt die Entscheidung nach oben weiter. Der Aufrufer wählt dann ein Werkzeug: `do`/`catch`, um Fall für Fall zu reagieren, `try?` und `??`, um auf einen Standardwert zurückzufallen, `defer`, um so oder so beim Verlassen aufzuräumen.
+
+Genau diese Trennung ist der ganze Sinn. Die Funktion, die das Problem erkennt, weiß selten, was als Nächstes geschehen soll, und der Code, der es weiß, will die Prüfung selten wiederholen.

@@ -210,6 +210,19 @@ println(bad.getOrElse { 0 }) // 0
 
 ---
 
+因为 `Result` 是一个普通的值，它可以被存放在 `val` 中，并且可以随你喜欢地反复查询：
+
+```kotlin
+val result = runCatching { "abc".toInt() }
+
+println(result.getOrElse { 0 })  // 0
+println(result.getOrNull())      // null
+println(result.isSuccess)        // false
+```
+`try`/`catch` 做不到这一点。在那里，结果只在失败发生的那一刻被处理一次，之后就消失了。`Result` 会把失败保留下来，因此对它做出反应的代码不必待在失败发生的地方。
+
+---
+
 `Result` 也可以在不拆开它的情况下被检查。`onFailure` 只在结果持有异常时运行它的块，`onSuccess` 只在结果持有值时运行，而且**两者都会返回同一个 `Result`**，因此这些调用可以链在一起：
 
 ```kotlin

@@ -210,6 +210,19 @@ println(bad.getOrElse { 0 }) // 0
 
 ---
 
+`Result` は普通の値なので、`val` に格納していつでも好きなだけ問い合わせることができます:
+
+```kotlin
+val result = runCatching { "abc".toInt() }
+
+println(result.getOrElse { 0 })  // 0
+println(result.getOrNull())      // null
+println(result.isSuccess)        // false
+```
+`try`/`catch` にはこれができません。そこでは結果は失敗が起きたその場で一度だけ処理され、その後は消えてしまいます。`Result` は失敗を保持し続けるので、それに反応するコードは失敗が起きた場所にある必要がありません。
+
+---
+
 `Result` は開封しなくても調べられます。`onFailure` は結果が例外を保持しているときにだけブロックを実行し、`onSuccess` は値を保持しているときにだけ実行します。そして**両方とも同じ `Result` を返す**ので、呼び出しをチェーンできます：
 
 ```kotlin

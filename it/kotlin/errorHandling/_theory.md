@@ -210,6 +210,19 @@ println(bad.getOrElse { 0 }) // 0
 
 ---
 
+Poiché un `Result` è un valore ordinario, può essere memorizzato in un `val` e interrogato tutte le volte che vuoi:
+
+```kotlin
+val result = runCatching { "abc".toInt() }
+
+println(result.getOrElse { 0 })  // 0
+println(result.getOrNull())      // null
+println(result.isSuccess)        // false
+```
+Un `try`/`catch` non può farlo. Lì il risultato viene gestito una sola volta, nel punto del fallimento, e poi scompare. Un `Result` mantiene il fallimento, quindi il codice che vi reagisce non deve trovarsi dove è successo.
+
+---
+
 Un `Result` può anche essere esaminato senza aprirlo. `onFailure` esegue il suo blocco solo quando il risultato contiene un'eccezione, `onSuccess` solo quando contiene un valore, ed **entrambi restituiscono lo stesso `Result`**, così le chiamate si possono incatenare:
 
 ```kotlin
