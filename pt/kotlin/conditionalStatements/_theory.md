@@ -1,6 +1,6 @@
-A tomada de decisao e necessaria quando queremos executar codigo apenas se uma determinada condicao for satisfeita.
+A tomada de decisão é necessária quando queremos executar código apenas se uma determinada condição for satisfeita.
 Vamos supor que queremos brincar ao ar livre apenas se o clima estiver bom.
-Na programacao, podemos salvar uma variavel booleana `niceWeather` e executar a acao de brincar ao ar livre `if` (se) essa variavel for `true`, assim:
+Na programação, podemos salvar uma variável booleana `niceWeather` e executar a ação de brincar ao ar livre `if` (se) essa variável for `true`, assim:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -17,14 +17,14 @@ if (niceWeather) {
     // brincar lá fora
 }
 ```
-Vimos que a instrucao `if` executa o bloco de codigo apenas se a condicao for `true`.
-Outra coisa importante a considerar sao as **chaves** `{}` que indicam um bloco de codigo.
+Vimos que a instrução `if` executa o bloco de código apenas se a condição for `true`.
+Outra coisa importante a considerar são as **chaves** `{}` que indicam um bloco de código.
 
 ---
 
-Acabamos de ver como executar um bloco de codigo se uma condicao ocorrer, agora vamos ver como executar outro bloco de codigo se a primeira condicao falhar.
-Vamos brincar ao ar livre se o clima estiver bom; caso contrario, ficamos em casa.
-Em Kotlin podemos usar a instrucao `else`, assim:
+Acabamos de ver como executar um bloco de código se uma condição ocorrer, agora vamos ver como executar outro bloco de código se a primeira condição falhar.
+Vamos brincar ao ar livre se o clima estiver bom; caso contrário, ficamos em casa.
+Em Kotlin podemos usar a instrução `else`, assim:
 ```kotlin
 var niceWeather = true
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Vamos supor que temos outra condicao para verificar, como neste exemplo:
+Vamos supor que temos outra condição para verificar, como neste exemplo:
 ```kotlin
 var num = 3
 if (num == 2) {
@@ -47,9 +47,9 @@ if (num == 2) {
     println("do something else")
 }
 ```
-e a saida deste codigo e `the number is 3`.
-Primeiro, vamos verificar se o numero e igual a 2, isso e falso.
-Entao vamos para a segunda instrucao e verificamos se `num` e igual a 3, sendo verdadeiro executamos o bloco de codigo seguinte imprimindo `the number is 3`
+e a saída deste código é `the number is 3`.
+Primeiro, vamos verificar se o número é igual a 2, isso é falso.
+Então vamos para a segunda instrução e verificamos se `num` é igual a 3, sendo verdadeiro executamos o bloco de código seguinte imprimindo `the number is 3`
 
 ---
 
@@ -72,7 +72,7 @@ e a saida deste codigo e `the number is 4`.
 
 ---
 
-Tambem podemos aninhar uma instrucao condicional (`if`, `else if` ou `else`) dentro de outra instrucao condicional, para criar uma estrutura mais complexa.
+Também podemos aninhar uma instrução condicional (`if`, `else if` ou `else`) dentro de outra instrução condicional, para criar uma estrutura mais complexa.
 ```kotlin
 var num = 4
 if (num < 3) {
@@ -87,14 +87,14 @@ if (num < 3) {
     }
 }
 ```
-e a saida deste codigo e `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 
-O _operador elvis_ `a ?: b` desembrulha um opcional `a` se ele contiver um valor, ou retorna um valor padrao `b` se `a` for `null`.
-A expressao `a` e sempre de um tipo opcional.
-A expressao `b` deve corresponder ao tipo que esta armazenado dentro de a.
-O operador elvis e uma abreviacao para o codigo abaixo:
+O _operador elvis_ `a ?: b` desembrulha um opcional `a` se ele contiver um valor, ou retorna um valor padrão `b` se `a` for `null`.
+A expressão `a` é sempre de um tipo opcional.
+A expressão `b` deve corresponder ao tipo que está armazenado dentro de a.
+O operador elvis é uma abreviação para o código abaixo:
 ```kotlin
 if (a != null) a else b
 ```

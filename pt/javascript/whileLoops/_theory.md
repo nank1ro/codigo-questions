@@ -1,19 +1,19 @@
-Frequentemente na programacao, precisamos repetir um bloco de codigo, por exemplo:
+Frequentemente na programação, precisamos repetir um bloco de código, por exemplo:
 ```javascript
 console.log("2 seconds");
 console.log("3 seconds");
 console.log("4 seconds");
 console.log("5 seconds");
 ```
-Isso produz a seguinte saida:
+Isso produz a seguinte saída:
 ```javascript
 2 seconds
 3 seconds
 4 seconds
 5 seconds
 ```
-Obviamente, para instrucoes longas gastariamos muito tempo escrevendo o codigo, mas felizmente, podemos usar lacos de repeticao.
-Vamos aprender o laco `while`, obtendo a mesma saida acima.
+Obviamente, para instruções longas gastaríamos muito tempo escrevendo o código, mas felizmente, podemos usar laços de repetição.
+Vamos aprender o laço `while`, obtendo a mesma saída acima.
 ```javascript
 var count = 2;
 while (count <= 5) {
@@ -21,15 +21,15 @@ while (count <= 5) {
     count += 1;
 }
 ```
-Entao criamos uma variavel `count` atribuindo `2`, o valor inicial.
-Depois usamos a instrucao `while` que executara o bloco de codigo enquanto a condicao `count <= 5` for `true`.
-Dentro do bloco de codigo, **NAO** devemos esquecer de adicionar a linha `count += 1`.
-Ela incrementa o valor de `count`, caso contrario, nosso laco sera infinito
+Então criamos uma variável `count` atribuindo `2`, o valor inicial.
+Depois usamos a instrução `while` que executará o bloco de código enquanto a condição `count <= 5` for `true`.
+Dentro do bloco de código, **NÃO** devemos esquecer de adicionar a linha `count += 1`.
+Ela incrementa o valor de `count`, caso contrário, nosso laço será infinito
 
 ---
 
-Para controlar quantas vezes um laco `while` se repete, comecamos com uma variavel definida como um numero.
-Chamamos essa variavel de variavel contadora
+Para controlar quantas vezes um laço `while` se repete, começamos com uma variável definida como um número.
+Chamamos essa variável de variável contadora
 
 ---
 
@@ -45,6 +45,6 @@ A ordem em que voce escreve o codigo afeta a saida.
 
 ---
 
-Em JavaScript tambem temos a variacao **do-while** do laco `while`.
-Ela executa uma unica passagem pelo bloco do laco primeiro, _antes_ de considerar a condicao do laco.
-Depois continua repetindo o laco ate que a condicao seja `false`.
+Em JavaScript também temos a variação **do-while** do laço `while`.
+Ela executa uma única passagem pelo bloco do laço primeiro, _antes_ de considerar a condição do laço.
+Depois continua repetindo o laço até que a condição seja `false`.

@@ -1,6 +1,6 @@
-A tomada de decisao e necessaria quando queremos executar um codigo apenas se uma determinada condicao for satisfeita.
+A tomada de decisão é necessária quando queremos executar um código apenas se uma determinada condição for satisfeita.
 Vamos supor que queremos brincar ao ar livre apenas se o clima estiver bom.
-Na programacao, podemos salvar uma variavel booleana `niceWeather` e executar a acao de brincar ao ar livre `if` (se) essa variavel for `true`, assim:
+Na programação, podemos salvar uma variável booleana `niceWeather` e executar a ação de brincar ao ar livre `if` (se) essa variável for `true`, assim:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -17,14 +17,14 @@ if (niceWeather) {
     // brincar ao ar livre
 }
 ```
-Vimos que a instrucao `if` executa o bloco de codigo apenas se a condicao for `true`.
-Outra coisa importante a considerar sao as **chaves** `{}` que indicam um bloco de codigo.
+Vimos que a instrução `if` executa o bloco de código apenas se a condição for `true`.
+Outra coisa importante a considerar são as **chaves** `{}` que indicam um bloco de código.
 
 ---
 
-Acabamos de ver como executar um bloco de codigo se uma condicao ocorrer, agora vamos ver como executar outro bloco de codigo se a primeira condicao falhar.
-Vamos brincar ao ar livre se o clima estiver bom; caso contrario, ficamos em casa.
-Em JavaScript podemos usar a instrucao `else`, assim:
+Acabamos de ver como executar um bloco de código se uma condição ocorrer, agora vamos ver como executar outro bloco de código se a primeira condição falhar.
+Vamos brincar ao ar livre se o clima estiver bom; caso contrário, ficamos em casa.
+Em JavaScript podemos usar a instrução `else`, assim:
 ```javascript
 var niceWeather = true;
 if (niceWeather) {
@@ -36,7 +36,7 @@ if (niceWeather) {
 
 ---
 
-Vamos supor que temos outra condicao para verificar, como neste exemplo:
+Vamos supor que temos outra condição para verificar, como neste exemplo:
 ```javascript
 var num = 3;
 if (num == 2) {
@@ -47,9 +47,9 @@ if (num == 2) {
     console.log("do something else");
 }
 ```
-e a saida deste codigo e `the number is 3`.
-Primeiro, vamos verificar se o numero e igual a 2, isso e falso.
-Entao vamos para a segunda instrucao e verificamos se `num` e igual a 3, sendo verdadeiro executamos o bloco de codigo seguinte imprimindo `the number is 3`
+e a saída deste código é `the number is 3`.
+Primeiro, vamos verificar se o número é igual a 2, isso é falso.
+Então vamos para a segunda instrução e verificamos se `num` é igual a 3, sendo verdadeiro executamos o bloco de código seguinte imprimindo `the number is 3`
 
 ---
 
@@ -72,7 +72,7 @@ e a saida deste codigo e `the number is 4`.
 
 ---
 
-Tambem podemos aninhar uma instrucao condicional (`if`, `else if` ou `else`) dentro de outra instrucao condicional, para criar uma estrutura mais complexa.
+Também podemos aninhar uma instrução condicional (`if`, `else if` ou `else`) dentro de outra instrução condicional, para criar uma estrutura mais complexa.
 ```javascript
 var num = 4;
 if (num < 3) {
@@ -87,13 +87,13 @@ if (num < 3) {
     }
 }
 ```
-e a saida deste codigo e `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 
-O operador condicional ternario e um operador especial com tres partes, que assume a forma `pergunta ? resposta1 : resposta2`.
-E um atalho para avaliar uma de duas expressoes com base em se a `pergunta` e verdadeira ou falsa.
-Se `pergunta` for verdadeira, ele avalia `resposta1` e retorna seu valor; caso contrario, ele avalia `resposta2` e retorna seu valor.
+O operador condicional ternário é um operador especial com três partes, que assume a forma `pergunta ? resposta1 : resposta2`.
+É um atalho para avaliar uma de duas expressões com base em se a `pergunta` é verdadeira ou falsa.
+Se `pergunta` for verdadeira, ele avalia `resposta1` e retorna seu valor; caso contrário, ele avalia `resposta2` e retorna seu valor.
 ```javascript
 let a = 10, b = 20, c = 0;
 if (a < b) {
@@ -104,21 +104,21 @@ if (a < b) {
 console.log(c);
 // imprime 10
 ```
-A forma abreviada do codigo acima e:
+A forma abreviada do código acima é:
 ```javascript
 let a = 10, b = 20, c = 0;
 c = a < b ? a : b;
 console.log(c);
 // imprime 10
 ```
-`c` recebe o valor de `a`, porque a condicao `a < b` era verdadeira
+`c` recebe o valor de `a`, porque a condição `a < b` era verdadeira
 
 ---
 
-O _operador de coalescencia nula_ `a ?? b` desempacota um opcional `a` se ele contiver um valor, ou retorna um valor padrao `b` se `a` for `nil`.
-A expressao `a` e sempre de um tipo opcional.
-A expressao `b` deve corresponder ao tipo que esta armazenado dentro de a.
-O operador de coalescencia nula e uma forma abreviada do codigo abaixo:
+O _operador de coalescência nula_ `a ?? b` desempacota um opcional `a` se ele contiver um valor, ou retorna um valor padrão `b` se `a` for `nil`.
+A expressão `a` é sempre de um tipo opcional.
+A expressão `b` deve corresponder ao tipo que está armazenado dentro de a.
+O operador de coalescência nula é uma forma abreviada do código abaixo:
 ```javascript
 a != nil ? a! : b;
 ```

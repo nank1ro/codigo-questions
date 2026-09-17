@@ -5,61 +5,61 @@ let a = 5;
 
 ---
 
-Ja temos uma variavel inicializada `total`
+Já temos uma variável inicializada `total`
 ```javascript
 var total = 5;
 ```
-Digamos que queremos adicionar o numero `2` a variavel `total`, podemos escrever
+Digamos que queremos adicionar o número `2` à variável `total`, podemos escrever
 ```javascript
 total = total + 2;
 ```
-Ok, funciona! Mas existe uma versao mais curta para fazer a mesma coisa:
+Ok, funciona! Mas existe uma versão mais curta para fazer a mesma coisa:
 ```javascript
 total += 2;
 ```
-O sinal `+=` e chamado de **atribuicao com adicao**.
-Ele adiciona um valor ao valor da variavel e atribui o resultado a essa variavel.
+O sinal `+=` é chamado de **atribuição com adição**.
+Ele adiciona um valor ao valor da variável e atribui o resultado a essa variável.
 
 ---
 
-Assim como na atribuicao com adicao, temos a **atribuicao com subtracao** `-=`.
-O funcionamento e o mesmo, a unica diferenca e que ela realiza a subtracao.
-Portanto, as expressoes a seguir sao exatamente iguais
+Assim como na atribuição com adição, temos a **atribuição com subtração** `-=`.
+O funcionamento é o mesmo, a única diferença é que ela realiza a subtração.
+Portanto, as expressões a seguir são exatamente iguais
 ```javascript
 var num = num - 5;
-// e igual a
+// é igual a
 num -= 5;
 ```
 
 ---
 
-Vamos ver o operador de **atribuicao com multiplicacao** `*=`.
-Ele multiplica a variavel por um valor e atribui o resultado a essa variavel.
-Portanto, as expressoes a seguir sao exatamente iguais
+Vamos ver o operador de **atribuição com multiplicação** `*=`.
+Ele multiplica a variável por um valor e atribui o resultado a essa variável.
+Portanto, as expressões a seguir são exatamente iguais
 ```javascript
 var num = num * 5;
-// e igual a
+// é igual a
 num *= 5;
 ```
 
 ---
 
-Vamos ver o operador de **atribuicao com divisao** `/=`.
-Ele divide a variavel por um valor e atribui o resultado a essa variavel.
-Portanto, as expressoes a seguir sao exatamente iguais
+Vamos ver o operador de **atribuição com divisão** `/=`.
+Ele divide a variável por um valor e atribui o resultado a essa variável.
+Portanto, as expressões a seguir são exatamente iguais
 ```javascript
 num = num / 5;
-// e igual a
+// é igual a
 num /= 5;
 ```
 
 ---
 
-Vamos ver o operador de **atribuicao com resto** `%=`.
-Ele calcula o resto da divisao da variavel por um valor e atribui o resultado a essa variavel.
-Portanto, as expressoes a seguir sao exatamente iguais
+Vamos ver o operador de **atribuição com resto** `%=`.
+Ele calcula o resto da divisão da variável por um valor e atribui o resultado a essa variável.
+Portanto, as expressões a seguir são exatamente iguais
 ```javascript
 num = num % 5;
-// e igual a
+// é igual a
 num %= 5;
 ```

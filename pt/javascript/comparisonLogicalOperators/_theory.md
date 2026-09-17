@@ -1,5 +1,5 @@
-Vamos comecar com o operador de comparacao **igual** `==`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se duas expressoes sao iguais, por exemplo:
+Vamos começar com o operador de comparação **igual** `==`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se duas expressões são iguais, por exemplo:
 ```javascript
 console.log(2 == 2);
 // imprime true
@@ -9,20 +9,20 @@ console.log(2 == 3);
 
 ---
 
-Vamos continuar com o operador de comparacao **diferente** `!=`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se duas expressoes **NAO** sao iguais, por exemplo:
+Vamos continuar com o operador de comparação **diferente** `!=`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se duas expressões **NÃO** são iguais, por exemplo:
 ```javascript
 console.log(2 != 2);
 // imprime false
 console.log(2 != 3);
 // imprime true
 ```
-E exatamente o oposto do operador *igual*
+É exatamente o oposto do operador *igual*
 
 ---
 
-Vamos continuar com o operador de comparacao **maior que** `>`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressao e maior que a outra, por exemplo:
+Vamos continuar com o operador de comparação **maior que** `>`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressão é maior que a outra, por exemplo:
 ```javascript
 console.log(2 > 2);
 // imprime false
@@ -32,8 +32,8 @@ console.log(3 > 2);
 
 ---
 
-Vamos continuar com o operador de comparacao **menor que** `<`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressao e menor que a outra, por exemplo:
+Vamos continuar com o operador de comparação **menor que** `<`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressão é menor que a outra, por exemplo:
 ```javascript
 console.log(2 < 2);
 // imprime false
@@ -43,8 +43,8 @@ console.log(2 < 3);
 
 ---
 
-Vamos continuar com o operador de comparacao **maior ou igual a** `>=`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressao e maior ou igual a outra, por exemplo:
+Vamos continuar com o operador de comparação **maior ou igual a** `>=`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressão é maior ou igual a outra, por exemplo:
 ```javascript
 console.log(2 >= 2);
 // imprime true
@@ -56,8 +56,8 @@ console.log(3 >= 4);
 
 ---
 
-Vamos continuar com o operador de comparacao **menor ou igual a** `<=`.
-Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressao e menor ou igual a outra, por exemplo:
+Vamos continuar com o operador de comparação **menor ou igual a** `<=`.
+Ele retorna um **booleano** (`true` ou `false`) indicando se uma expressão é menor ou igual a outra, por exemplo:
 ```javascript
 console.log(2 <= 2);
 // imprime true
@@ -69,8 +69,8 @@ console.log(3 <= 4);
 
 ---
 
-Agora vamos ver os operadores **logicos**, comecando pelo primeiro chamado __AND__ `&&`.
-Ele retorna o primeiro operando que resulta em *false* ou o ultimo se todos forem *true*.
+Agora vamos ver os operadores **lógicos**, começando pelo primeiro chamado __AND__ `&&`.
+Ele retorna o primeiro operando que resulta em *false* ou o último se todos forem *true*.
 ```javascript
 console.log(2 == 2 && 2 == 3);
 // imprime false
@@ -80,8 +80,8 @@ console.log(1 == 1 && 1 == 1.0);
 
 ---
 
-Vamos continuar com o operador logico **ou** `||`.
-Ele retorna o primeiro operando que resulta em *true* ou o ultimo se todos forem *false*.
+Vamos continuar com o operador lógico **ou** `||`.
+Ele retorna o primeiro operando que resulta em *true* ou o último se todos forem *false*.
 ```javascript
 console.log(2 == 2 || 2 == 3);
 // imprime true
@@ -91,8 +91,8 @@ console.log(1 == 2 || 1 == 3);
 
 ---
 
-Vamos finalizar com o operador logico **not** `!`.
-Ele retorna um booleano que e o inverso do estado logico de uma expressao.
+Vamos finalizar com o operador lógico **not** `!`.
+Ele retorna um booleano que é o inverso do estado lógico de uma expressão.
 ```javascript
 console.log(!true);
 // imprime false

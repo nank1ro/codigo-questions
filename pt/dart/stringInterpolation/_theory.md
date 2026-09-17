@@ -1,5 +1,5 @@
-Uma _interpolacao_ de String e uma forma programatica de gerar uma String.
-Em Dart, podemos usar o sinal `+` (concatenacao) para exibir duas ou mais strings juntas, como:
+Uma _interpolação_ de String é uma forma programática de gerar uma String.
+Em Dart, podemos usar o sinal `+` (concatenação) para exibir duas ou mais strings juntas, como:
 ```dart
 print("Hello " + "Dart!");
 // imprime "Hello Dart!"
@@ -7,17 +7,17 @@ print("Hello " + "Dart!");
 
 ---
 
-Mas usar o sinal `+` para adicionar um numero como '10' a uma string como ` "friends"` produz um erro, pois sao tipos diferentes de valores
+Mas usar o sinal `+` para adicionar um número como '10' a uma string como ` "friends"` produz um erro, pois são tipos diferentes de valores
 
 ---
 
-A interpolacao de string nos permite exibir expressoes como adicionar uma string a um numero, sem nenhum erro.
-Colocar uma expressao dentro de `${}` a avalia.
-O valor retornado e convertido em uma String e inserido na String resultante
+A interpolação de string nos permite exibir expressões como adicionar uma string a um número, sem nenhum erro.
+Colocar uma expressão dentro de `${}` a avalia.
+O valor retornado é convertido em uma String e inserido na String resultante
 
 ---
 
-Se voce colocar um `$` antes do nome de um identificador, a interpolacao de string inserira o conteudo desse identificador na `String`
+Se você colocar um `$` antes do nome de um identificador, a interpolação de string inserirá o conteúdo desse identificador na `String`
 
 ---
 
@@ -41,4 +41,4 @@ print("The answer is ${true ? "correct": "wrong"}");
 
 ---
 
-A interpolacao de string e melhor usada em instrucoes de impressao, mas tambem podemos armazena-las em variaveis como strings normais.
+A interpolação de string é melhor usada em instruções de impressão, mas também podemos armazená-las em variáveis como strings normais.
