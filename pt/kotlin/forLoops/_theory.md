@@ -1,4 +1,4 @@
-> A palavra-chave `for` executa um bloco de codigo para cada valor em uma sequencia.
+> A palavra-chave `for` executa um bloco de código para cada valor em uma sequência.
 
 O loop `for` itera por qualquer coisa que forneça um iterador.
 

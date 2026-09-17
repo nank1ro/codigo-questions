@@ -33,15 +33,15 @@ Chamamos essa variável de variável contadora
 
 ---
 
-Em seguida, usamos uma comparacao na condicao para comparar a variavel `counter` com um numero.
+Em seguida, usamos uma comparação na condição para comparar a variável `counter` com um número.
 
 ---
 
-Dentro do bloco de codigo, para parar o laco `while`, incrementamos a variavel `counter`.
+Dentro do bloco de código, para parar o laço `while`, incrementamos a variável `counter`.
 
 ---
 
-A ordem em que voce escreve o codigo afeta a saida.
+A ordem em que você escreve o código afeta a saída.
 
 ---
 

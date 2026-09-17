@@ -8,17 +8,17 @@ def say_hi():
 
 ---
 
-Os parenteses na __definicao da funcao__ nao precisam estar vazios.
-Dentro deles, podemos especificar parametros
+Os parênteses na __definicao da funcao__ não precisam estar vazios.
+Dentro deles, podemos especificar parâmetros
 
 ---
 
-As vezes queremos que uma funcao __retorne__ um valor.
+Às vezes queremos que uma função __retorne__ um valor.
 Bem, existe a palavra-chave `return`
 
 ---
 
-Nas funcoes, podemos adicionar um _comentario opcional_ que explica o que a funcao faz:
+Nas funções, podemos adicionar um _comentario opcional_ que explica o que a função faz:
 ```python
 """
 Prints 'Hello World' to the console.

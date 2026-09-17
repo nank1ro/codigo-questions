@@ -1,4 +1,4 @@
-Ja aprendemos que para atribuir um valor a uma variavel podemos usar o sinal `=`, assim:
+Já aprendemos que para atribuir um valor a uma variável podemos usar o sinal `=`, assim:
 ```javascript
 let a = 5;
 ```

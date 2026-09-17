@@ -8,8 +8,8 @@ Para incluir um módulo, usamos a palavra-chave `import`
 
 ---
 
-Tambem podemos importar apenas funcoes especificas que precisamos de um modulo usando as palavras-chave `from` e `import`
+Também podemos importar apenas funções específicas que precisamos de um módulo usando as palavras-chave `from` e `import`
 
 ---
 
-Tambem podemos renomear uma funcao importando-a com a palavra-chave `as`
+Também podemos renomear uma função importando-a com a palavra-chave `as`
