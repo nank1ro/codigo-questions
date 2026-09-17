@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // imprime 45
 ```
+
+---
+
+O método `split(separator)` divide uma string em um **array** de pedaços, cortando em cada `separator`:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// imprime [ 'I', 'like', 'JavaScript' ]
+```
+O oposto é o método de array `join(separator)`, que cola os pedaços de volta em uma string:
+```javascript
+console.log(words.join("-"));
+// imprime I-like-JavaScript
+```
+
+---
+
+A entrada do usuário costuma ter espaços extras ao redor. O método `trim()` retorna uma cópia da string com os espaços em branco removidos de **ambas** as extremidades:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// imprime hello
+```
+`trimStart()` remove apenas os espaços do início e `trimEnd()` apenas os do final.
+Os espaços no meio da string nunca são alterados.
+
+---
+
+O método `replace(search, replacement)` retorna uma nova string onde a **primeira** ocorrência de `search` é trocada por `replacement`:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// imprime blue red
+```
+Para substituir **todas** as ocorrências, use `replaceAll()`:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// imprime blue blue
+```
+
+---
+
+O método `repeat(count)` retorna a string repetida `count` vezes:
+```javascript
+console.log("ab".repeat(3));
+// imprime ababab
+console.log("ab".repeat(0));
+// imprime uma string vazia
+```
+
+---
+
+O método `padStart(targetLength, padString)` adiciona `padString` ao **início** da string até que ela atinja `targetLength` caracteres. `padEnd()` faz o mesmo no final:
+```javascript
+console.log("7".padStart(3, "0"));
+// imprime 007
+console.log("Tea".padEnd(6, "."));
+// imprime Tea...
+```
+Se a string já for longa o suficiente, ela é retornada sem alterações.
+Números não têm métodos de string, então converta-os primeiro com `String(number)`.
+
+---
+
+Duas strings são iguais com `===` somente se tiverem exatamente os mesmos caracteres, na mesma caixa:
+```javascript
+console.log("hello" === "hello");
+// imprime true
+console.log("hello" === "Hello");
+// imprime false
+```
+Os operadores `<` e `>` comparam strings em ordem alfabética, caractere por caractere.
+Letras maiúsculas vêm antes das minúsculas, então `"Zoo" < "apple"` é `true`.
+
+---
+
+Strings são **imutáveis**: uma vez criada, uma string nunca pode ser alterada.
+Atribuir a um índice não faz nada, e todo método de string retorna uma **nova** string em vez de modificar a original:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// imprime hello
+word.toUpperCase();
+console.log(word);
+// imprime hello
+```
+Para manter um resultado, atribua-o de volta à variável:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Chamar `split("")` com um separador vazio transforma uma string em um array de caracteres individuais.
+Arrays têm um método `reverse()`, então você pode inverter uma string dividindo, invertendo e juntando novamente:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// imprime cba
+```

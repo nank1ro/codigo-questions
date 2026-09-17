@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+拡張のメンバーは、式の**静的型**、つまりコンパイラが知っている型に基づいて、**コンパイル時**に解決されます。実行時の実際のオブジェクトではありません。`Object` 型の変数に格納された `String` は、プログラムが実行されるときにはまだ `String` ですが、コンパイラには `Object` しか見えないため、それに対する拡張を見つけられません：
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+同じことは `dynamic` にも当てはまります。拡張のメンバーは `dynamic` のレシーバーを通しては決して見つかりません。先に値をキャストするか、正確な型で宣言してください。

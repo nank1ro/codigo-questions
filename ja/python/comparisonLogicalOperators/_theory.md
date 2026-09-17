@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False、キーだけがチェックされる
 ```
 どちらもブール値を返し、英語のように読めるため、ループを書く代わりに所属を調べる方法として好まれます。
+
+---
+
+`any(iterable)` は少なくとも1つの要素が真ならば `True` を返し、`all(iterable)` はすべての要素が真ならば `True` を返します (`all([])` は `True` です)。ジェネレータ式と組み合わせるとコレクション全体に対する条件を表現でき、`or` や `and` と同じように短絡評価されます:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

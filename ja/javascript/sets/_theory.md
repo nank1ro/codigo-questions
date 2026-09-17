@@ -75,3 +75,75 @@ nums.forEach((n) => console.log(n * 10));
 // 10 を出力
 // 20 を出力
 ```
+
+---
+
+`delete(value)`は、値が削除された場合は`true`を、セットに存在しなかった場合は`false`を返します。
+**すべて**の値を一度に削除するには、`clear()`を呼び出します：
+```javascript
+let cart = new Set(["pen", "ink"]);
+console.log(cart.delete("pen"));
+// true を出力
+console.log(cart.delete("pen"));
+// false を出力
+cart.clear();
+console.log(cart.size);
+// 0 を出力
+```
+
+---
+
+セットは、`===`とほぼ同じルールで2つの値が「同じ」かどうかを判断します（ただし`NaN`は自分自身と等しいとみなされます）。文字列や数値の場合はその内容を比較しますが、**オブジェクトは参照によって比較されます**：同じフィールドを持つ2つのオブジェクトリテラルは、異なる2つの値として扱われます。
+```javascript
+let alice = { name: "Alice" };
+let people = new Set();
+people.add(alice);
+people.add(alice);
+console.log(people.size);
+// 1 を出力
+people.add({ name: "Alice" });
+console.log(people.size);
+// 2 を出力
+```
+まったく同じオブジェクトを再度追加した場合のみ無視されます。
+
+---
+
+スプレッドと`filter()`を組み合わせることで、集合論の古典的な演算を行うことができます。それぞれが**新しい**コレクションを作り、元のセットは変更されません：
+- **和集合**：`a`、`b`、またはその両方にある値すべて：`new Set([...a, ...b])`
+- **積集合**：**両方**にある値だけ：`[...a].filter((x) => b.has(x))`
+- **差集合**：`a`の値のうち`b`に**ない**もの：`[...a].filter((x) => !b.has(x))`
+
+```javascript
+let a = new Set([1, 2, 3]);
+let b = new Set([3, 4]);
+console.log([...new Set([...a, ...b])]);
+// [ 1, 2, 3, 4 ] を出力
+console.log([...a].filter((x) => b.has(x)));
+// [ 3 ] を出力
+console.log([...a].filter((x) => !b.has(x)));
+// [ 1, 2 ] を出力
+```
+最近のJavaScriptエンジンでは、セットに直接`a.union(b)`、`a.intersection(b)`、`a.difference(b)`も用意されていますが、スプレッドとfilterによる方法はどこでも使えます。
+
+---
+
+`Map`と同じインターフェースを保つため、セットにもイテレーターメソッド`values()`、`keys()`、`entries()`が用意されています。
+セットにはキーがないため、`keys()`は`values()`の別名にすぎず、`entries()`は各値を`[value, value]`というペアとして**2回**返します：
+```javascript
+let letters = new Set(["a", "b"]);
+console.log([...letters.values()]);
+// [ 'a', 'b' ] を出力
+console.log([...letters.entries()]);
+// [ [ 'a', 'a' ], [ 'b', 'b' ] ] を出力
+```
+実際にはこれらを使う必要はほとんどありません：`for...of`とスプレッドはすでに値を直接ループしてくれます。
+
+---
+
+`new Set()`は配列だけでなく、あらゆる**イテラブル**を受け取ります。文字列も1文字ずつイテラブルなので、テキストの異なる文字を取得できます：
+```javascript
+let letters = new Set("hello");
+console.log([...letters]);
+// [ 'h', 'e', 'l', 'o' ] を出力
+```

@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Zahlen sind keine Zeichenketten: Rufe zuerst `toString()` auf, wie in `42.toString().padStart(4, '0')`.
+
+---
+
+Zwei Zeichenketten sind gleich, wenn sie dieselben Zeichen in derselben Reihenfolge enthalten. In Kotlin vergleicht `==` den **Inhalt** der Zeichenketten, weshalb es der normale Weg ist, sie zu vergleichen.
+`equals` macht dasselbe, akzeptiert aber zusätzlich `ignoreCase = true`, um den Unterschied zwischen Groß- und Kleinschreibung zu ignorieren:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` prüft, ob zwei Variablen auf genau dasselbe Objekt im Speicher zeigen, was bei Zeichenketten fast nie das ist, was du willst.
+
+---
+
+`reversed()` gibt die Zeichenkette mit ihren Zeichen in umgekehrter Reihenfolge zurück:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Ein Wort, das in beide Richtungen gleich gelesen wird, wie `"level"`, wird **Palindrom** genannt.
+
+---
+
+Zeichenketten sind **unveränderlich (immutable)**: Einmal erstellt, ändern sie sich nie. Jede Funktion, die du bisher gesehen hast, wie `uppercase()` oder `replace()`, gibt eine **neue** Zeichenkette zurück und lässt das Original unangetastet.
+Um das Ergebnis zu behalten, musst du es speichern, zum Beispiel indem du es einer `var` neu zuweist:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // Ergebnis wird verworfen
+println(name)           // kotlin
+name = name.uppercase() // Ergebnis wird gespeichert
+println(name)           // KOTLIN
+```
+
+---
+
+Wenn du eine lange Zeichenkette Stück für Stück mit `+` zusammensetzt, wird bei jedem Schritt eine neue Zeichenkette erstellt. Ein `StringBuilder` ist ein veränderlicher Textpuffer, der genau für diese Aufgabe gemacht ist: `append` fügt Text am Ende hinzu (und gibt den Builder zurück, sodass Aufrufe verkettet werden können) und `toString()` liefert den fertigen `String`:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` akzeptiert Zeichenketten, Zeichen und Zahlen.

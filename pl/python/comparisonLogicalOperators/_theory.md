@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False, sprawdzane są tylko klucze
 ```
 Oba zwracają wartość logiczną i czytają się jak angielski, co czyni je preferowanym sposobem sprawdzania przynależności zamiast pisania pętli.
+
+---
+
+`any(iterable)` zwraca `True`, jeśli co najmniej jeden element jest prawdziwy, a `all(iterable)`, jeśli każdy jest (`all([])` to `True`). W połączeniu z wyrażeniem generatorowym wyrażają warunek dla całej kolekcji i stosują skrócone obliczanie jak `or` i `and`:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

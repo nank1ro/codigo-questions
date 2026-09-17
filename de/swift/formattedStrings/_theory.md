@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` akzeptiert einen Swift-`String` direkt. Verwende `%s` nicht mit einem Swift-String: Dieser Spezifizierer erwartet einen C-String und gibt Datenmüll aus oder stürzt ab.
+
+---
+
+Da `%` einen Spezifizierer einleitet, muss ein Prozentzeichen als Literal als `%%` geschrieben werden. So formatierst du einen Prozentsatz:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Multipliziere das Verhältnis zuerst mit `100` und wähle dann die Präzision: `%.0f%%` für `46%`, `%.1f%%` für `45.7%`.
+
+---
+
+Breiten-Flags funktionieren nur innerhalb von `String(format:)`. Um einen einfachen String selbst aufzufüllen, erzeuge die Leerzeichen mit `String(repeating:count:)` und hänge sie an den Text an:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+Ist der Text bereits länger als die Breite, wird `4 - text.count` negativ und `String(repeating:count:)` stürzt ab. Sichere es mit `max(0, ...)` ab, damit die Anzahl nie unter null fällt und langer Text unverändert bleibt.
+
+---
+
+Foundation hat außerdem einen fertigen Helfer zum Auffüllen auf der rechten Seite: `padding(toLength:withPad:startingAt:)`. Er verlängert den String auf die angegebene Länge, indem er den Fülltext wiederholt, und schneidet ihn ab, wenn er länger ist:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` ist der Index im Fülltext, an dem die Wiederholung beginnt; bei einem einstelligen Fülltext ist er immer `0`.
+
+---
+
+Setze die beiden Werkzeuge zusammen ein, um eine Tabelle auszugeben: `padding` richtet den Text jeder Zeile linksbündig aus, `String(format:)` richtet die Zahlen rechtsbündig mit fester Breite und Präzision aus:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Da jede Zeile dieselbe Breite hat, landen die Dezimalpunkte in derselben Spalte.

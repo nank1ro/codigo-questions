@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // wypisuje false
 ```
+
+---
+
+Enumeracje naturalnie łączą się z instrukcją `switch`, która porównuje jedną wartość z listą etykiet `case` i uruchamia kod pierwszej pasującej.
+Każda gałąź kończy się `return` lub `break`, a opcjonalna gałąź `default` uruchamia się, gdy nic nie pasuje:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// wypisuje go
+```
+Zawsze porównuj ze składowymi (`Light.RED`), nigdy z surowymi wartościami (`"red"`): jeśli wartość kiedykolwiek się zmieni, `switch` nadal będzie działać.
+
+---
+
+Przejście od wartości z powrotem do nazwy jej składowej nazywa się **wyszukiwaniem odwrotnym**. Przejdź przez nazwy za pomocą `Object.keys()` i wybierz pierwszą, której wartość pasuje, używając metody tablicowej `find()`, która zwraca pierwszy element, dla którego funkcja zwrotna zwraca `true` (lub `undefined`, jeśli żaden nie pasuje):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// wypisuje HIGH
+```
+`Priority[key]` odczytuje składową, której nazwa jest przechowywana w zmiennej `key`, tę samą notację nawiasową, której używasz dla dowolnego obiektu.
+
+---
+
+Składowe będące ciągami znaków mają jedną słabość: jako składowa akceptowany jest każdy ciąg znaków o tym samym tekście.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// wypisuje true
+```
+Gdy chcesz mieć składowe równe **tylko** samym sobie, użyj `Symbol`. `Symbol(description)` tworzy zupełnie nową wartość, różną od każdego innego symbolu, nawet takiego utworzonego z tym samym opisem:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// wypisuje true
+console.log(Suit.HEARTS === Symbol("hearts"));
+// wypisuje false
+console.log(typeof Suit.HEARTS);
+// wypisuje symbol
+```
+Przekazywany tekst jest jedynie etykietą do celów debugowania; możesz go odczytać z powrotem za pomocą właściwości `description` (`Suit.HEARTS.description` to `"hearts"`).
+
+---
+
+Wartości enumeracji są często używane jako **klucze** innego obiektu, na przykład aby zmapować każdą składową na etykietę lub cenę. Wewnątrz literału obiektu, ujęcie klucza w nawiasy kwadratowe `[ ]` powoduje obliczenie wyrażenia i użycie jego wyniku jako klucza (**klucz obliczany**). Działa to zarówno ze składowymi typu string, jak i symbol:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// wypisuje Completed
+```
+Bez nawiasów, `Status.DONE: "Completed"` byłoby błędem składni, a `"Status.DONE"` byłoby zwykłym kluczem tekstowym.
+
+---
+
+Gdy każda składowa potrzebuje kilku danych lub własnych metod, rolę enumeracji może pełnić **klasa**. Każda składowa jest instancją klasy, przechowywaną we właściwości `static`, czyli właściwości należącej do samej klasy, a nie do każdej instancji:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// wypisuje Earth
+```
+Wywołaj `Object.freeze(Planet)` po klasie, aby uniemożliwić komukolwiek dodawanie lub zastępowanie składowych, i zamroź każdą instancję w konstruktorze za pomocą `Object.freeze(this)`, aby same składowe pozostały tylko do odczytu.

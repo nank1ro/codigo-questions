@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` は失敗を `null` に変え、`getOrElse { ... }` はブロックを実行して代替値を作ります。呼び出し場所で何かがスローされることはないので、失敗は持ち運んで後で対処できます。
+
+---
+
+`Result` は開封しなくても調べられます。`onFailure` は結果が例外を保持しているときにだけブロックを実行し、`onSuccess` は値を保持しているときにだけ実行します。そして**両方とも同じ `Result` を返す**ので、呼び出しをチェーンできます：
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+ブロックの中では例外（または値）が `it` として利用できるので、`it.message` が失敗のテキストになります。
+
+これが「記録して続行」の形です。問題が起きた場所で報告してから続行します。早期の `return` も、2箇所から代入される `var` もありません。
+
+---
+
+`try` をどこに置くかで、1つの不正な値がどれだけの作業をだめにするかが決まります。**ループ全体**を包めば最初の失敗で残りのバッチが諦められ、**本体**を包めばその1要素だけが失われます：
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // この値はスキップする
+    }
+}
+println(total) // 8
+```
+これはスローする検証関数と自然に組み合わさります。関数は1つのルールを述べてそれに反するものを拒否し、ループは拒否されても1要素分しか損しないと判断します。

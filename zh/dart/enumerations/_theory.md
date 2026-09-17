@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 和语句形式一样，作用于枚举的 switch 表达式也必须是穷举的。
+
+---
+
+从 Dart 2.17 开始，枚举可以像类一样声明**字段**和**构造函数**。这被称为*增强枚举*。每个值会向构造函数传入自己的参数：
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+注意这三条规则：值列表以**分号** `;` 结尾，字段必须是 `final`，构造函数必须是 `const`。
+
+---
+
+增强枚举还可以声明**方法**和 **getter**。在它们内部，`this` 就是当前值，因此你可以直接使用它的 `name`、`index` 和字段：
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+没有字段的枚举仍然可以声明方法：这时值列表以 `;` 结尾，后面跟着成员。
+
+---
+
+要从 `String` 转换回枚举值，可以在 `values` 列表上调用 `byName`。它会返回 `name` 完全匹配的那个值：
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+如果没有值具有该名称，`byName` 会抛出 `ArgumentError`。当字符串来自用户输入时，`asNameMap()` 是更安全的选择：它返回一个从名称到值的 `Map<String, Direction>`，因此查找一个未知名称会得到 `null` 而不是错误：
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+枚举值是极好的 **map 键**：它们是唯一的、易于比较，并且编译器会检查你只使用真实存在的值。将枚举声明为键类型来创建 map，并使用 `[]` 查找值：
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+和任何 map 一样，当键不存在时查找会返回 `null`，因此使用 `??` 提供一个回退值。
+
+---
+
+枚举可以使用 `implements` 关键字**实现一个接口**。这样枚举就承诺提供接口声明的每一个成员，并且它的值可以用在任何期望该接口类型的地方：
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+接口中声明的 getter 既可以用 getter 实现，也可以用同名的 `final` 字段实现。

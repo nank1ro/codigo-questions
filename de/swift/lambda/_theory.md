@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 Die Closure kann alles Mögliche vergleichen, zum Beispiel ordnet `words.sorted { $0.count < $1.count }` Strings von der kürzesten zur längsten.
+
+---
+
+Eine Closure kann Variablen verwenden, die außerhalb ihres Rumpfes deklariert wurden. Sie **erfasst** sie: Die Variable bleibt so lange bestehen, wie die Closure existiert, selbst nachdem die Funktion, die sie deklariert hat, zurückgekehrt ist.
+Dadurch kann eine Funktion eine Closure mit ihrem eigenen privaten Zustand erstellen:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` ist der Typ einer Closure ohne Parameter, die einen `Int` zurückgibt. Jeder Aufruf der zurückgegebenen Closure erhöht dasselbe erfasste `count`:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Eine Closure zurückzugeben ist eine praktische Möglichkeit, angepasste Funktionen zu erstellen. Die Parameter der äußeren Funktion werden von der Closure erfasst, die sie zurückgibt:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+Der Rückgabetyp `(Int) -> Int` beschreibt die Closure, und die Kurzform `$0` bezieht sich auf das Argument dieser Closure, nicht auf das von `makeAdder`.
+
+---
+
+Eine in einer Konstante gespeicherte Closure kann überall dort übergeben werden, wo ein Closure-Argument erwartet wird, unter Verwendung des Argumentlabels des Parameters:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Jeder Aufruf einer Funktion, die eine Closure zurückgibt, erzeugt eine **neue** erfasste Variable. Zwei durch getrennte Aufrufe erstellte Closures teilen sich nicht denselben Zustand:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+Der Zustand wird nur zwischen Aufrufen derselben Closure geteilt.
+
+---
+
+Standardmäßig darf eine an eine Funktion übergebene Closure nur verwendet werden, während diese Funktion läuft. Wenn die Funktion die Closure speichert oder eine andere Closure zurückgibt, die sie verwendet, **entkommt** die Closure der Funktion, und ihr Parameter muss mit `@escaping` gekennzeichnet werden:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Ohne `@escaping` meldet der Compiler einen Fehler, weil die zurückgegebene Closure `task` verwenden würde, nachdem `twice` beendet ist.
+
+---
+
+Closures können wie jeder andere Wert in Arrays gespeichert werden. Der Elementtyp ist der Funktionstyp:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Über ein solches Array zu iterieren und jede Closure der Reihe nach aufzurufen, baut eine kleine **Pipeline** von Transformationen.

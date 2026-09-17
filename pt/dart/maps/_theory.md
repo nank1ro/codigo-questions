@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+Um map literal vazio `{}` não tem pares para inferir os tipos, então dê a ele tipos explícitos com `<K, V>{}` ou com uma anotação de tipo:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+A propriedade `.isEmpty` é `true` quando um map não tem pares, e `.isNotEmpty` é `true` quando ele tem pelo menos um:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+O método `.forEach()` executa uma função uma vez para cada par. A função recebe dois parâmetros: a chave e o valor:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+Um map não é um `Iterable`, então você não pode percorrê-lo diretamente com `for-in`. Em vez disso, percorra `.entries`: cada elemento é um `MapEntry` com um `.key` e um `.value`:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+O método `.putIfAbsent(key, ifAbsent)` adiciona um par **somente se** a chave ainda não estiver no map. O segundo argumento é uma função que produz o valor. Se a chave já existir, o map permanece inalterado. Em ambos os casos, o valor agora armazenado sob a chave é retornado:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann já está lá, nada muda
+ages.putIfAbsent('Bob', () => 25); // Bob é adicionado
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+O método `.update(key, update)` substitui o valor de uma chave existente. O segundo argumento é uma função que recebe o valor atual e retorna o novo. Se a chave não existir, `.update()` lança um erro, a menos que você passe uma função `ifAbsent` que produza o valor inicial:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple se torna 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi é adicionado com 1
+print(stock); // {apple: 4, kiwi: 1}
+```

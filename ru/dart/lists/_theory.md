@@ -63,3 +63,57 @@ print(fruits.contains('orange')); // false
 ```
 
 Это удобно для проверки наличия элемента без использования цикла.
+
+---
+
+Метод `.remove(value)` удаляет **первый** элемент, равный `value`, из списка. Он возвращает `true`, если элемент был удалён, или `false`, если значение не найдено.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+bool removed = colors.remove('green');
+print(removed); // true
+print(colors); // [red, blue]
+```
+
+---
+
+Свойства `.first` и `.last` дают первый и последний элемент списка без использования индекса.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.first); // red
+print(colors.last); // blue
+```
+
+Оба выбрасывают ошибку, если список пуст.
+
+---
+
+Свойство `.isEmpty` равно `true`, когда список не содержит элементов, а `.isNotEmpty` равно `true`, когда в нём есть хотя бы один элемент.
+
+```dart
+var colors = <String>[];
+print(colors.isEmpty); // true
+colors.add('red');
+print(colors.isNotEmpty); // true
+```
+
+---
+
+Метод `.indexOf(value)` возвращает индекс первого элемента, равного `value`. Если значения нет в списке, возвращается `-1`.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.indexOf('green')); // 1
+print(colors.indexOf('pink')); // -1
+```
+
+---
+
+Метод `.where()` оставляет только те элементы, для которых функция возвращает `true`. Он возвращает не новый список, а ленивый `Iterable`, поэтому вызовите `.toList()`, чтобы снова превратить результат в `List`.
+
+```dart
+var numbers = [1, 2, 3, 4];
+List<int> big = numbers.where((n) => n > 2).toList();
+print(big); // [3, 4]
+```

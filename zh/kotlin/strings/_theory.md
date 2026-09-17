@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 数字不是字符串：先调用 `toString()`，例如 `42.toString().padStart(4, '0')`。
+
+---
+
+当两个字符串包含相同顺序的相同字符时，它们就是相等的。在 Kotlin 中，`==` 比较字符串的**内容**，所以它是比较字符串的常规方式。
+`equals` 的作用相同，但它还接受 `ignoreCase = true` 来忽略大小写的差异：
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` 检查两个变量是否指向内存中完全相同的对象，这在字符串上几乎从来都不是你想要的。
+
+---
+
+`reversed()` 返回字符顺序相反的字符串：
+```kotlin
+println("stressed".reversed()) // desserts
+```
+像 `"level"` 这样正读反读都一样的单词被称为**回文**。
+
+---
+
+字符串是**不可变的**：一旦创建就永远不会改变。到目前为止你见过的每个函数，比如 `uppercase()` 或 `replace()`，都会返回一个**新的**字符串，而原字符串保持不变。
+要保留结果，你必须把它存起来，例如重新赋值给一个 `var`：
+```kotlin
+var name = "kotlin"
+name.uppercase()        // 结果被丢弃
+println(name)           // kotlin
+name = name.uppercase() // 结果被存储了下来
+println(name)           // KOTLIN
+```
+
+---
+
+用 `+` 一段一段地拼接长字符串，每一步都会创建一个新字符串。`StringBuilder` 是一个专为此设计的可变文本缓冲区：`append` 把文本添加到末尾（并返回 builder 本身，因此调用可以链式进行），`toString()` 给出最终的 `String`：
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` 接受字符串、字符和数字。

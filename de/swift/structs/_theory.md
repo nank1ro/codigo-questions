@@ -80,3 +80,109 @@ let r = Rectangle(width: 3, height: 4)
 print(r.area) // 12, ohne Klammern
 ```
 Berechnete Eigenschaften sind nicht Teil des memberwise initializers, da es nichts zu speichern gibt. Verwende eine, wenn der Wert aus den anderen abgeleitet ist, und eine Methode, wenn die Arbeit Parameter benötigt.
+
+---
+
+Ein Struct ist ein **Werttyp**: Weist man es einer anderen Variable zu oder übergibt es an eine Funktion, wird eine *Kopie* übergeben. Die Kopie zu ändern lässt das Original unberührt.
+```swift
+struct Point {
+    var x: Int
+}
+
+var a = Point(x: 1)
+var b = a
+b.x = 99
+print(a.x) // 1
+```
+Eine Klasse ist ein **Referenztyp**: `b = a` würde beide Namen auf dieselbe Instanz zeigen lassen, deshalb würde `b.x = 99` auch `a.x` auf `99` ändern.
+
+Das ist der echte Unterschied zwischen beiden und der Grund, warum Swift die meisten Daten als Structs modelliert: Ein Wert, den du hältst, kann von Code, der ihn erhalten hat, nicht heimlich geändert werden.
+
+---
+
+Da ein Struct ein Wert ist, darf eine Methode seine Eigenschaften nicht ändern, außer du sagst es mit dem Schlüsselwort `mutating`:
+```swift
+struct Counter {
+    var value = 0
+
+    mutating func increase(by amount: Int) {
+        value += amount
+    }
+}
+
+var c = Counter()
+c.increase(by: 5)
+print(c.value) // 5
+```
+Eine mutating-Methode kann nur auf einer Instanz aufgerufen werden, die in einem `var` gespeichert ist. Bei einer `let`-Instanz ist der Wert eingefroren, deshalb würde `c.increase(by: 5)` nicht kompilieren.
+
+---
+
+Wenn der memberwise initializer nicht die Art ist, wie dein Typ erstellt werden soll, schreibe deinen eigenen **Initializer**. Er wird mit `init` deklariert, nimmt die Parameter, die du wählst, und muss jeder gespeicherten Eigenschaft einen Wert geben, bevor er endet. In ihm ist `self` die Instanz, die erstellt wird:
+```swift
+struct Square {
+    var side: Int
+
+    init(_ side: Int) {
+        self.side = side
+    }
+}
+
+let s = Square(5)
+print(s.side) // 5
+```
+Das Schreiben eines `init` innerhalb der geschweiften Klammern des Structs ersetzt den memberwise initializer, daher existiert `Square(side: 5)` von nun an nicht mehr.
+
+---
+
+Manche Werte gehören zum Typ selbst und nicht zu einer einzelnen Instanz: ein Währungscode, ein geteilter Standardwert, eine Fabrik, die einen häufigen Fall erstellt. Markiere sie als `static` und lies sie über den Typnamen:
+```swift
+struct Money {
+    static let currency = "EUR"
+    var amount: Int
+
+    static func zero() -> Money {
+        return Money(amount: 0)
+    }
+}
+
+print(Money.currency)     // EUR
+print(Money.zero().amount) // 0
+```
+Hier ist `currency` mit `let` deklariert, weil es sich nie ändert, es ist also eine Konstante, die vom ganzen Programm geteilt wird. `Money.currency` funktioniert, ohne ein einziges `Money` zu erstellen, während `amount` eine Instanz benötigt.
+
+---
+
+Zwei Structs können nicht mit `==` verglichen werden, bis der Typ sagt, dass er es unterstützt. Das machst du, indem du dich an das `Equatable`-**Protokoll** hältst, das in der Deklaration nach einem Doppelpunkt geschrieben wird:
+```swift
+struct Point: Equatable {
+    var x: Int
+    var y: Int
+}
+
+let a = Point(x: 1, y: 2)
+let b = Point(x: 1, y: 2)
+print(a == b) // true
+```
+`==` musst du nicht selbst schreiben: Wenn jede gespeicherte Eigenschaft bereits `Equatable` ist, generiert Swift ihn für dich und vergleicht die Eigenschaften einzeln. Zwei Instanzen sind gleich, wenn alle ihre Eigenschaften gleich sind, was genau das ist, was du von einem Wert erwartest.
+
+---
+
+Ein Struct ist ein Typ wie jeder andere, also kann es in einem Array, einem Wörterbuch oder einem Set gespeichert werden, und jedes Werkzeug, das du bereits kennst, funktioniert damit weiter:
+```swift
+struct Item {
+    var name: String
+    var price: Int
+}
+
+let items = [Item(name: "Tea", price: 3), Item(name: "Cake", price: 7)]
+
+for item in items {
+    print(item.name)
+}
+
+let names = items.map { $0.name }
+let total = items.reduce(0) { $0 + $1.price }
+print(total) // 10
+```
+Denke daran, dass das Array *Kopien* enthält: `items[0]` in eine Variable zu lesen und sie zu ändern, berührt das Array nicht.

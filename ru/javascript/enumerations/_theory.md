@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // выводит false
 ```
+
+---
+
+Перечисления естественно сочетаются с оператором `switch`, который сравнивает одно значение со списком меток `case` и выполняет код первой подходящей.
+Каждая ветка заканчивается `return` или `break`, а необязательная ветка `default` выполняется, когда ничего не подошло:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// выводит go
+```
+Всегда сравнивайте с членами (`Light.RED`), а не с исходными значениями (`"red"`): если значение когда-нибудь изменится, `switch` продолжит работать.
+
+---
+
+Переход от значения обратно к имени его члена называется **обратным поиском**. Пройдитесь по именам с помощью `Object.keys()` и выберите первое, чьё значение совпадает, используя метод массива `find()`, который возвращает первый элемент, для которого функция обратного вызова возвращает `true` (или `undefined`, если такого нет):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// выводит HIGH
+```
+`Priority[key]` читает член, чьё имя хранится в переменной `key`, ту же самую нотацию с квадратными скобками, которую вы используете для любого объекта.
+
+---
+
+У строковых членов есть одна слабость: любая строка с тем же текстом принимается как член.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// выводит true
+```
+Когда вам нужны члены, равные **только** самим себе, используйте `Symbol`. `Symbol(description)` создаёт совершенно новое значение, отличное от любого другого символа, даже созданного с тем же описанием:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// выводит true
+console.log(Suit.HEARTS === Symbol("hearts"));
+// выводит false
+console.log(typeof Suit.HEARTS);
+// выводит symbol
+```
+Передаваемый текст — это лишь метка для отладки; вы можете прочитать её обратно через свойство `description` (`Suit.HEARTS.description` равно `"hearts"`).
+
+---
+
+Значения перечисления часто используются в качестве **ключей** другого объекта, например для сопоставления каждого члена с меткой или ценой. Внутри объектного литерала заключение ключа в квадратные скобки `[ ]` вычисляет выражение и использует его результат как ключ (**вычисляемый ключ**). Это работает как со строковыми, так и с символьными членами:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// выводит Completed
+```
+Без скобок `Status.DONE: "Completed"` было бы синтаксической ошибкой, а `"Status.DONE"` было бы обычным строковым ключом.
+
+---
+
+Когда каждому члену нужно несколько данных или собственные методы, роль перечисления может сыграть **класс**. Каждый член — это экземпляр класса, хранящийся в свойстве `static`, то есть свойстве, принадлежащем самому классу, а не каждому экземпляру:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// выводит Earth
+```
+Вызовите `Object.freeze(Planet)` после класса, чтобы никто не мог добавлять или заменять члены, и заморозьте каждый экземпляр в конструкторе с помощью `Object.freeze(this)`, чтобы сами члены оставались доступными только для чтения.

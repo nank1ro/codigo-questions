@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+Los Sets admiten las operaciones clásicas de conjuntos. Cada una devuelve un Set **nuevo** y deja los originales sin modificar:
+
+- `a.union(b)` contiene los elementos que están en `a` **o** en `b`
+- `a.intersection(b)` contiene los elementos que están en **ambos**, `a` y `b`
+- `a.difference(b)` contiene los elementos de `a` que **no** están en `b`
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+Convertir una lista en un Set es la forma más fácil de **eliminar duplicados**: toda lista tiene un método `.toSet()` que devuelve un Set con sus elementos únicos, en el orden de su primera aparición. Un Set tiene un método `.toList()` que hace el camino inverso, así que encadenar ambos te da una lista sin duplicados:
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+Tanto las listas como los Sets tienen un método `.contains()`, pero funcionan de forma muy diferente. Una lista comprueba sus elementos uno por uno desde el principio, así que una búsqueda en una lista larga se vuelve más lenta a medida que la lista crece. Un Set almacena sus elementos según su hash, así que `.contains()` encuentra un valor en un tiempo aproximadamente constante sin importar cuántos elementos haya.
+
+Si necesitas comprobar la pertenencia muchas veces y el orden o los duplicados no importan, un Set es la herramienta adecuada:
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // rápido, incluso con millones de elementos
+```

@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 数値は文字列ではないので、`42.toString().padStart(4, '0')`のように、まず`toString()`を呼び出してください。
+
+---
+
+2つの文字列は、同じ文字が同じ順序で含まれているとき等しくなります。Kotlinでは`==`は文字列の**内容**を比較するので、通常はこれを使って比較します。
+`equals`も同じことをしますが、大文字と小文字の違いを無視するための`ignoreCase = true`も受け付けます:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===`は、2つの変数がメモリ上でまったく同じオブジェクトを指しているかどうかを調べるもので、文字列に対してこれを使いたい場面はほとんどありません。
+
+---
+
+`reversed()`は文字の順序を逆にした文字列を返します:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+`"level"`のように前から読んでも後ろから読んでも同じ単語は、**回文**と呼ばれます。
+
+---
+
+文字列は**イミュータブル**です。つまり、一度作られると決して変化しません。ここまでに見てきた`uppercase()`や`replace()`のような関数はすべて、**新しい**文字列を返し、元の文字列には手を加えません。
+結果を保持するには、それを保存する必要があります。例えば`var`に再代入する方法があります:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // 結果が捨てられる
+println(name)           // kotlin
+name = name.uppercase() // 結果が保存される
+println(name)           // KOTLIN
+```
+
+---
+
+`+`を使って長い文字列を1つずつ組み立てると、その都度新しい文字列が作られます。`StringBuilder`はこの作業のために作られた、変更可能なテキストバッファです。`append`は末尾にテキストを追加し（ビルダー自身を返すので呼び出しを連結できます）、`toString()`は最終的な`String`を返します:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append`は文字列、文字、数値を受け付けます。

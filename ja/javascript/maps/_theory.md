@@ -111,3 +111,62 @@ let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
 // 30 を出力
 ```
+
+---
+
+マップとプレーンなオブジェクトはどちらもキーの下に値を格納しますが、いくつかの重要な違いがあります：
+- オブジェクトのキーは常に文字列（またはシンボル）ですが、マップのキーは**どんな**型でも構いません
+- マップはペアの正確な**挿入順序**を保持します
+- マップは自身の`size`を知っていますが、オブジェクトでは`Object.keys(obj).length`が必要です
+- マップは本当に空の状態から始まりますが、オブジェクトはそのプロトタイプから`toString`のようなキーを継承しています
+
+---
+
+マップには`sort()`や`filter()`のような配列のメソッドがありません。それらを使うには、`Array.from()`かスプレッド演算子`...`でマップ（またはそのキーや値）を配列に変換します：
+```javascript
+let ages = new Map([["Bob", 25], ["Ann", 30]]);
+let pairs = Array.from(ages);
+console.log(pairs);
+// [ [ 'Bob', 25 ], [ 'Ann', 30 ] ] を出力
+let names = [...ages.keys()];
+console.log(names);
+// [ 'Bob', 'Ann' ] を出力
+let values = [...ages.values()];
+console.log(values);
+// [ 25, 30 ] を出力
+```
+逆の変換、`Object.fromEntries(ages)`は、マップをプレーンなオブジェクトに戻します。
+
+---
+
+配列と同じように、マップにもすべてのペアに対して関数を呼び出す`forEach()`メソッドがあります。
+パラメータの順序に注意してください：コールバックは**値が先**で、その後にキーを受け取ります：
+```javascript
+let stock = new Map([["apple", 3], ["pear", 5]]);
+stock.forEach((qty, name) => {
+  console.log(`${name} x${qty}`);
+});
+// apple x3 を出力
+// pear x5 を出力
+```
+
+---
+
+`delete(key)`は、ペアが削除されたときは`true`を、キーが存在しなかったときは`false`を返します。
+**すべての**ペアを一度に削除するには、`clear()`を呼び出します：
+```javascript
+let cart = new Map([["pen", 2], ["ink", 1]]);
+console.log(cart.delete("pen"));
+// true を出力
+console.log(cart.delete("pen"));
+// false を出力
+cart.clear();
+console.log(cart.size);
+// 0 を出力
+```
+
+---
+
+では、プレーンなオブジェクトの代わりに`Map`を使うべきなのはどんなときでしょうか？
+- キーが実行時に追加・削除される場合、キーが文字列でない場合、または`size`と信頼できる順序が必要な場合は**Map**を使う
+- `{ name, email }`のようにフィールド名が決まっている固定のレコードの場合や、データをJSONに変換する必要がある場合は**オブジェクト**を使う。`JSON.stringify()`はマップの中身を無視するため

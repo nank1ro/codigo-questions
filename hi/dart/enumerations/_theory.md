@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 स्टेटमेंट रूप की तरह ही, enum पर switch expression भी exhaustive होनी चाहिए।
+
+---
+
+Dart 2.17 से एक enum, क्लास की तरह ही, **fields** और एक **constructor** घोषित कर सकता है। इसे *enhanced enum* कहा जाता है। हर value फिर अपने खुद के आर्ग्युमेंट्स constructor को पास करती है:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+तीन नियमों पर ध्यान दें: values की लिस्ट **सेमीकोलन** `;` पर समाप्त होती है, fields ज़रूर `final` होने चाहिए, और constructor ज़रूर `const` होना चाहिए।
+
+---
+
+एक enhanced enum **methods** और **getters** भी घोषित कर सकता है। उनके अंदर, `this` वर्तमान value होती है, इसलिए आप सीधे इसकी `name`, `index` और fields का उपयोग कर सकते हैं:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+बिना fields वाला enum भी methods घोषित कर सकता है: उस स्थिति में values की लिस्ट `;` पर समाप्त होती है और उसके बाद members आते हैं।
+
+---
+
+`String` से वापस enum value पर जाने के लिए, `values` लिस्ट पर `byName` कॉल करें। यह वह value लौटाता है जिसका `name` बिल्कुल मेल खाता है:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+अगर उस नाम की कोई value नहीं है, तो `byName` एक `ArgumentError` फेंकता है। जब स्ट्रिंग यूज़र इनपुट से आती है, तो `asNameMap()` एक ज़्यादा सुरक्षित विकल्प है: यह नामों से values तक का एक `Map<String, Direction>` लौटाता है, इसलिए किसी अज्ञात नाम को खोजने पर एरर की बजाय `null` मिलता है:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+enum values शानदार **map keys** बनती हैं: ये यूनिक होती हैं, इन्हें compare करना आसान होता है, और कंपाइलर यह सुनिश्चित करता है कि आप केवल वास्तविक values का ही उपयोग करें। enum को key type के रूप में उपयोग करते हुए map घोषित करें और `[]` से values खोजें:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+किसी भी map की तरह, key न मिलने पर लुकअप `null` लौटाता है, इसलिए एक फ़ॉलबैक देने के लिए `??` का उपयोग करें।
+
+---
+
+एक enum `implements` कीवर्ड से एक **interface को implement** कर सकता है। फिर enum, interface द्वारा घोषित हर member को उपलब्ध कराने का वादा करता है, और उसकी values का उपयोग वहाँ किया जा सकता है जहाँ भी वह interface type अपेक्षित हो:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+interface में घोषित किया गया getter, या तो एक getter से या उसी नाम की एक `final` field से implement किया जा सकता है।

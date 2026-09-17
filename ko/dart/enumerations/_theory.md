@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 문 형태와 마찬가지로, enum에 대한 switch 표현식도 완전해야(exhaustive) 합니다.
+
+---
+
+Dart 2.17부터 enum은 클래스처럼 **필드**와 **생성자**를 선언할 수 있습니다. 이를 *확장 enum*이라고 합니다. 각 값은 자신만의 인자를 생성자에 전달합니다:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+세 가지 규칙에 주목하세요: 값 목록은 **세미콜론** `;`으로 끝나야 하고, 필드는 `final`이어야 하며, 생성자는 `const`여야 합니다.
+
+---
+
+확장 enum은 **메서드**와 **게터**도 선언할 수 있습니다. 그 안에서는 `this`가 현재 값이므로, 그 값의 `name`, `index`, 필드를 바로 사용할 수 있습니다:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+필드가 없는 enum도 메서드를 선언할 수 있습니다. 이 경우 값 목록은 `;`으로 끝나고 그 뒤에 멤버가 이어집니다.
+
+---
+
+`String`에서 enum 값으로 되돌아가려면 `values` 리스트에 대해 `byName`을 호출하세요. 이는 `name`이 정확히 일치하는 값을 반환합니다:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+그 이름을 가진 값이 없으면 `byName`은 `ArgumentError`를 던집니다. 문자열이 사용자 입력에서 온 경우에는 `asNameMap()`이 더 안전한 선택입니다. 이는 이름에서 값으로의 `Map<String, Direction>`을 반환하므로, 알 수 없는 이름을 조회하면 오류 대신 `null`을 얻습니다:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+enum 값은 **맵의 키**로 아주 훌륭합니다: 유일하고, 비교하기 쉬우며, 컴파일러가 실제 값만 사용되는지 확인해 줍니다. enum을 키 타입으로 하는 맵을 선언하고 `[]`로 값을 조회하세요:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+다른 맵과 마찬가지로, 키가 없으면 조회 결과는 `null`이므로 `??`로 대체 값을 제공하세요.
+
+---
+
+enum은 `implements` 키워드로 **인터페이스를 구현**할 수 있습니다. 그러면 enum은 인터페이스가 선언한 모든 멤버를 제공하기로 약속하며, 그 값들은 해당 인터페이스 타입이 필요한 곳이라면 어디서든 사용할 수 있습니다:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+인터페이스에 선언된 게터는 게터로 구현하거나, 같은 이름의 `final` 필드로 구현할 수 있습니다.

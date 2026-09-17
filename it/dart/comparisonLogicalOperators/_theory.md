@@ -54,3 +54,31 @@ bool passed = score >= 50; // true
 ```
 
 A differenza di `>`, questo operatore restituisce anche `true` quando entrambi i valori sono uguali.
+
+---
+
+L'**operatore AND** `&&` combina due espressioni booleane. Restituisce `true` solo quando **entrambi** i lati sono `true`. Se uno dei lati è `false`, il risultato è `false`.
+
+```dart
+bool a = true;
+bool b = true;
+bool result = a && b; // true
+
+bool c = true;
+bool d = false;
+bool result2 = c && d; // false
+```
+
+---
+
+L'**operatore OR** `||` combina due espressioni booleane. Restituisce `true` quando **almeno un** lato è `true`. Restituisce `false` solo quando **entrambi** i lati sono `false`.
+
+```dart
+bool a = false;
+bool b = true;
+bool result = a || b; // true
+
+bool c = false;
+bool d = false;
+bool result2 = c || d; // false
+```

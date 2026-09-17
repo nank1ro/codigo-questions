@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // affiche 45
 ```
+
+---
+
+La méthode `split(separator)` découpe une chaîne en un **tableau** de morceaux, en coupant à chaque `separator` :
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// affiche [ 'I', 'like', 'JavaScript' ]
+```
+L'opération inverse est la méthode de tableau `join(separator)`, qui recolle les morceaux en une chaîne :
+```javascript
+console.log(words.join("-"));
+// affiche I-like-JavaScript
+```
+
+---
+
+La saisie utilisateur contient souvent des espaces superflus. La méthode `trim()` renvoie une copie de la chaîne dont les espaces ont été supprimés aux **deux** extrémités :
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// affiche hello
+```
+`trimStart()` supprime uniquement les espaces au début et `trimEnd()` uniquement ceux à la fin.
+Les espaces au milieu de la chaîne ne sont jamais touchés.
+
+---
+
+La méthode `replace(search, replacement)` renvoie une nouvelle chaîne dans laquelle la **première** occurrence de `search` est remplacée par `replacement` :
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// affiche blue red
+```
+Pour remplacer **chaque** occurrence, utilise `replaceAll()` :
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// affiche blue blue
+```
+
+---
+
+La méthode `repeat(count)` renvoie la chaîne répétée `count` fois :
+```javascript
+console.log("ab".repeat(3));
+// affiche ababab
+console.log("ab".repeat(0));
+// affiche une chaîne vide
+```
+
+---
+
+La méthode `padStart(targetLength, padString)` ajoute `padString` au **début** de la chaîne jusqu'à atteindre `targetLength` caractères. `padEnd()` fait la même chose à la fin :
+```javascript
+console.log("7".padStart(3, "0"));
+// affiche 007
+console.log("Tea".padEnd(6, "."));
+// affiche Tea...
+```
+Si la chaîne est déjà assez longue, elle est renvoyée inchangée.
+Les nombres n'ont pas de méthodes de chaîne, alors convertis-les d'abord avec `String(number)`.
+
+---
+
+Deux chaînes sont égales avec `===` seulement si elles ont exactement les mêmes caractères, dans la même casse :
+```javascript
+console.log("hello" === "hello");
+// affiche true
+console.log("hello" === "Hello");
+// affiche false
+```
+Les opérateurs `<` et `>` comparent les chaînes par ordre alphabétique, caractère par caractère.
+Les majuscules viennent avant les minuscules, donc `"Zoo" < "apple"` vaut `true`.
+
+---
+
+Les chaînes sont **immuables** : une fois créée, une chaîne ne peut jamais être modifiée.
+Assigner à un index ne fait rien, et chaque méthode de chaîne renvoie une **nouvelle** chaîne au lieu de modifier l'originale :
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// affiche hello
+word.toUpperCase();
+console.log(word);
+// affiche hello
+```
+Pour conserver un résultat, réassigne-le à la variable :
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Appeler `split("")` avec un séparateur vide transforme une chaîne en un tableau de ses caractères individuels.
+Les tableaux ont une méthode `reverse()`, donc tu peux inverser une chaîne en la découpant, en l'inversant et en la recollant :
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// affiche cba
+```

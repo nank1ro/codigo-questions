@@ -81,3 +81,91 @@ console.log(Object.values(Color).includes("red"));
 console.log(Object.values(Color).includes("pink"));
 // imprime false
 ```
+
+---
+
+As enumerações combinam naturalmente com a instrução `switch`, que compara um valor com uma lista de rótulos `case` e executa o código do primeiro que corresponder.
+Cada ramo termina com `return` ou `break`, e o ramo opcional `default` é executado quando nada corresponde:
+```javascript
+const Light = Object.freeze({ RED: "red", GREEN: "green" });
+
+function action(light) {
+  switch (light) {
+    case Light.RED:
+      return "stop";
+    case Light.GREEN:
+      return "go";
+    default:
+      return "unknown";
+  }
+}
+console.log(action(Light.GREEN));
+// imprime go
+```
+Sempre compare com os membros (`Light.RED`), nunca com os valores brutos (`"red"`): se o valor mudar algum dia, o `switch` continua funcionando.
+
+---
+
+Ir de um valor de volta ao nome do seu membro é chamado de **busca reversa**. Percorra os nomes com `Object.keys()` e escolha o primeiro cujo valor corresponda, usando o método de array `find()`, que retorna o primeiro elemento para o qual o callback é `true` (ou `undefined` se nenhum for encontrado):
+```javascript
+const Priority = Object.freeze({ LOW: 1, HIGH: 3 });
+let name = Object.keys(Priority).find((key) => Priority[key] === 3);
+console.log(name);
+// imprime HIGH
+```
+`Priority[key]` lê o membro cujo nome está armazenado na variável `key`, a mesma notação de colchetes usada para qualquer objeto.
+
+---
+
+Membros do tipo string têm uma fraqueza: qualquer string com o mesmo texto é aceita como membro.
+```javascript
+const Color = Object.freeze({ RED: "red" });
+console.log(Color.RED === "red");
+// imprime true
+```
+Quando você quiser membros que sejam iguais **apenas** a si mesmos, use um `Symbol`. `Symbol(description)` cria um valor totalmente novo, diferente de qualquer outro símbolo, mesmo um criado com a mesma descrição:
+```javascript
+const Suit = Object.freeze({
+  HEARTS: Symbol("hearts"),
+  SPADES: Symbol("spades"),
+});
+console.log(Suit.HEARTS === Suit.HEARTS);
+// imprime true
+console.log(Suit.HEARTS === Symbol("hearts"));
+// imprime false
+console.log(typeof Suit.HEARTS);
+// imprime symbol
+```
+O texto que você passa é apenas um rótulo para depuração; você pode lê-lo de volta com a propriedade `description` (`Suit.HEARTS.description` é `"hearts"`).
+
+---
+
+Os valores de uma enumeração costumam ser usados como **chaves** de outro objeto, por exemplo para mapear cada membro a um rótulo ou a um preço. Dentro de um objeto literal, envolver uma chave em colchetes `[ ]` avalia a expressão e usa seu resultado como chave (uma **chave computada**). Isso funciona tanto com membros do tipo string quanto do tipo symbol:
+```javascript
+const Status = Object.freeze({ ACTIVE: "active", DONE: "done" });
+const labels = {
+  [Status.ACTIVE]: "In progress",
+  [Status.DONE]: "Completed",
+};
+console.log(labels[Status.DONE]);
+// imprime Completed
+```
+Sem os colchetes, `Status.DONE: "Completed"` seria um erro de sintaxe, e `"Status.DONE"` seria apenas uma chave string comum.
+
+---
+
+Quando cada membro precisa de várias informações ou de métodos próprios, uma **classe** pode desempenhar o papel da enumeração. Cada membro é uma instância da classe, armazenada em uma propriedade `static`, ou seja, uma propriedade que pertence à própria classe em vez de a cada instância:
+```javascript
+class Planet {
+  static MERCURY = new Planet("Mercury", 0.4);
+  static EARTH = new Planet("Earth", 1);
+
+  constructor(name, gravity) {
+    this.name = name;
+    this.gravity = gravity;
+  }
+}
+console.log(Planet.EARTH.name);
+// imprime Earth
+```
+Chame `Object.freeze(Planet)` depois da classe para impedir que alguém adicione ou substitua membros, e congele cada instância no construtor com `Object.freeze(this)` para que os próprios membros permaneçam somente leitura.

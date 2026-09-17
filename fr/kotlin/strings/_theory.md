@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Les nombres ne sont pas des chaînes : appelez d'abord `toString()`, comme dans `42.toString().padStart(4, '0')`.
+
+---
+
+Deux chaînes sont égales quand elles contiennent les mêmes caractères dans le même ordre. En Kotlin, `==` compare le **contenu** des chaînes, c'est donc la manière normale de les comparer.
+`equals` fait la même chose, mais accepte aussi `ignoreCase = true` pour ignorer la différence entre majuscules et minuscules :
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` vérifie si deux variables pointent vers exactement le même objet en mémoire, ce qui n'est presque jamais ce que vous voulez avec des chaînes.
+
+---
+
+`reversed()` retourne la chaîne avec ses caractères dans l'ordre inverse :
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Un mot qui se lit de la même façon dans les deux sens, comme `"level"`, s'appelle un **palindrome**.
+
+---
+
+Les chaînes sont **immuables** : une fois créées, elles ne changent jamais. Toutes les fonctions vues jusqu'ici, comme `uppercase()` ou `replace()`, retournent une **nouvelle** chaîne et laissent l'originale intacte.
+Pour conserver le résultat, vous devez le stocker, par exemple en réaffectant une `var` :
+```kotlin
+var name = "kotlin"
+name.uppercase()        // le résultat est jeté
+println(name)           // kotlin
+name = name.uppercase() // le résultat est stocké
+println(name)           // KOTLIN
+```
+
+---
+
+Construire une longue chaîne morceau par morceau avec `+` crée une nouvelle chaîne à chaque étape. Un `StringBuilder` est un tampon de texte mutable conçu pour ce travail : `append` ajoute du texte à la fin (et retourne le builder, ce qui permet d'enchaîner les appels) et `toString()` donne la `String` finale :
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` accepte des chaînes, des caractères et des nombres.

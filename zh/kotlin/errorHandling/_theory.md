@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` 把失败变成 `null`，而 `getOrElse { ... }` 会运行代码块来构建替代值。调用处不会抛出任何东西，因此失败可以被带着到处传递，之后再处理。
+
+---
+
+`Result` 也可以在不拆开它的情况下被检查。`onFailure` 只在结果持有异常时运行它的块，`onSuccess` 只在结果持有值时运行，而且**两者都会返回同一个 `Result`**，因此这些调用可以链在一起：
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+在块中，异常（或值）以 `it` 的形式可用，因此 `it.message` 就是失败的文本。
+
+这就是“记录日志并继续”的形态：在问题发生的地方报告问题，然后继续执行，既不需要提前 `return`，也不需要从两处赋值的 `var`。
+
+---
+
+`try` 放在哪里决定了单个坏值会毁掉多少工作。包住**整个循环**，第一次失败就会放弃批次中剩余的部分；包住**循环体**，则只损失那一个元素：
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // 跳过这一个
+    }
+}
+println(total) // 8
+```
+这与会抛出异常的校验函数天然搭配：函数声明一条规则并拒绝一切违反它的输入，而循环则决定一次拒绝只损失一个元素。

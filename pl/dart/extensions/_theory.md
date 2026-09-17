@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+Składowe rozszerzeń są rozwiązywane w **czasie kompilacji**, na podstawie **typu statycznego** wyrażenia, czyli typu, który zna kompilator, a nie rzeczywistego obiektu w czasie działania. `String` zapisany w zmiennej typu `Object` nadal jest `String`, gdy program działa, ale kompilator widzi tylko `Object`, więc nie znajduje dla niego rozszerzenia:
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+To samo dotyczy `dynamic`: składowych rozszerzeń nigdy nie znajduje się przez odbiornik typu `dynamic`. Najpierw rzutuj wartość albo zadeklaruj ją z dokładnym typem.

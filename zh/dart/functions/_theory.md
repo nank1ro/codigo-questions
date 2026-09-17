@@ -76,3 +76,18 @@ void main() {
 ```
 
 命名参数提高了代码的可读性，尤其是当函数有多个参数时。
+
+---
+
+Dart 还支持**可选位置参数**——用方括号 `[]` 包裹的参数。它们按位置传递，调用者可以省略，并且可以有默认值：
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

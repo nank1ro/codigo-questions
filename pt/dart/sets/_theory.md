@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+Conjuntos suportam as operações clássicas de conjuntos. Cada uma retorna um **novo** conjunto e deixa os originais intactos:
+
+- `a.union(b)` contém os elementos que estão em `a` **ou** em `b`
+- `a.intersection(b)` contém os elementos que estão em **ambos** `a` e `b`
+- `a.difference(b)` contém os elementos de `a` que **não** estão em `b`
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+Converter uma lista em um conjunto é a maneira mais fácil de **remover duplicatas**: toda lista tem um método `.toSet()` que retorna um conjunto com seus elementos únicos, na ordem da primeira aparição. Um conjunto tem um método `.toList()` que faz o caminho inverso, então encadear os dois lhe dá uma lista sem duplicatas:
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+Tanto listas quanto conjuntos têm um método `.contains()`, mas eles funcionam de maneiras muito diferentes. Uma lista verifica seus elementos um por um desde o início, então uma busca em uma lista longa fica mais lenta conforme a lista cresce. Um conjunto armazena seus elementos pelo seu hash, então `.contains()` encontra um valor em tempo praticamente constante, não importa quantos elementos existam.
+
+Se você precisa verificar a presença de um valor muitas vezes e a ordem ou as duplicatas não importam, um conjunto é a ferramenta certa:
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // rápido, mesmo com milhões de elementos
+```

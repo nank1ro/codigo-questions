@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 I numeri non sono stringhe: chiama prima `toString()`, come in `42.toString().padStart(4, '0')`.
+
+---
+
+Due stringhe sono uguali quando contengono gli stessi caratteri nello stesso ordine. In Kotlin `==` confronta il **contenuto** delle stringhe, quindi è il modo normale per confrontarle.
+`equals` fa lo stesso, ma accetta anche `ignoreCase = true` per ignorare la differenza tra maiuscole e minuscole:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` verifica se due variabili puntano esattamente allo stesso oggetto in memoria, cosa che quasi mai è ciò che vuoi con le stringhe.
+
+---
+
+`reversed()` restituisce la stringa con i caratteri in ordine inverso:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Una parola che si legge allo stesso modo in entrambe le direzioni, come `"level"`, si chiama **palindromo**.
+
+---
+
+Le stringhe sono **immutabili**: una volta create, non cambiano mai. Ogni funzione vista finora, come `uppercase()` o `replace()`, restituisce una **nuova** stringa e lascia intatta quella originale.
+Per conservare il risultato devi memorizzarlo, ad esempio riassegnando una `var`:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // il risultato viene scartato
+println(name)           // kotlin
+name = name.uppercase() // il risultato viene memorizzato
+println(name)           // KOTLIN
+```
+
+---
+
+Costruire una stringa lunga pezzo per pezzo con `+` crea una nuova stringa a ogni passaggio. Uno `StringBuilder` è un buffer di testo mutabile pensato proprio per questo compito: `append` aggiunge testo alla fine (e restituisce il builder, così le chiamate possono essere concatenate) e `toString()` restituisce la `String` finale:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` accetta stringhe, caratteri e numeri.

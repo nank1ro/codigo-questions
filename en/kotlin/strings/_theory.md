@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Numbers are not strings: call `toString()` first, as in `42.toString().padStart(4, '0')`.
+
+---
+
+Two strings are equal when they contain the same characters in the same order. In Kotlin `==` compares the **content** of the strings, so it is the normal way to compare them.
+`equals` does the same, but it also accepts `ignoreCase = true` to ignore the difference between upper and lower case:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` checks whether two variables point to the very same object in memory, which is almost never what you want with strings.
+
+---
+
+`reversed()` returns the string with its characters in the opposite order:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+A word that reads the same in both directions, like `"level"`, is called a **palindrome**.
+
+---
+
+Strings are **immutable**: once created they never change. Every function you have seen so far, like `uppercase()` or `replace()`, returns a **new** string and leaves the original untouched.
+To keep the result you must store it, for example by reassigning a `var`:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // result is thrown away
+println(name)           // kotlin
+name = name.uppercase() // result is stored
+println(name)           // KOTLIN
+```
+
+---
+
+Building a long string piece by piece with `+` creates a new string at every step. A `StringBuilder` is a mutable text buffer made for this job: `append` adds text to the end (and returns the builder, so calls can be chained) and `toString()` gives the final `String`:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` accepts strings, characters and numbers.

@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+扩展成员是在**编译期**解析的，依据是表达式的**静态类型**，也就是编译器所知道的类型，而不是运行时的实际对象。存放在 `Object` 类型变量中的 `String` 在程序运行时仍然是 `String`，但编译器只看到 `Object`，因此为它找不到扩展：
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+`dynamic` 也是如此：通过 `dynamic` 接收者永远找不到扩展成员。请先转换值的类型，或用精确的类型来声明它。

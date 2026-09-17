@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@`는 Swift `String`을 바로 받습니다. Swift 문자열에 `%s`를 사용하지 마세요: 이 지정자는 C 문자열을 기대하므로 쓰레기 값을 출력하거나 크래시가 납니다.
+
+---
+
+`%`가 지정자의 시작이므로, 리터럴 퍼센트 기호는 `%%`로 적어야 합니다. 퍼센트를 포맷하는 방법이 바로 이것입니다:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+먼저 비율에 `100`을 곱한 다음 정밀도를 고르세요: `46%`라면 `%.0f%%`, `45.7%`라면 `%.1f%%`입니다.
+
+---
+
+너비 플래그는 `String(format:)` 안에서만 동작합니다. 일반 문자열에 직접 패딩하려면 `String(repeating:count:)`로 공백을 만들어 텍스트에 이어 붙입니다:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+텍스트가 이미 너비보다 길면 `4 - text.count`가 음수가 되어 `String(repeating:count:)`가 크래시가 납니다. `max(0, ...)`으로 보호하세요. 그러면 개수가 절대 0 아래로 내려가지 않아 긴 텍스트는 그대로 유지됩니다.
+
+---
+
+Foundation에는 오른쪽 패딩을 위한 바로 쓸 수 있는 헬퍼도 있습니다: `padding(toLength:withPad:startingAt:)`. 이 메서드는 패드 텍스트를 반복해 문자열을 주어진 길이로 늘리고, 더 길면 잘라냅니다:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt`는 패드 텍스트 안에서 반복이 시작되는 인덱스입니다; 한 글자짜리 패드에서는 항상 `0`입니다.
+
+---
+
+두 도구를 합쳐 테이블을 출력해 봅시다: `padding`은 각 행의 텍스트를 왼쪽 정렬하고, `String(format:)`은 숫자를 고정된 너비와 정밀도로 오른쪽 정렬합니다:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+모든 행의 너비가 같기 때문에 소수점이 같은 열에 맞춰집니다.

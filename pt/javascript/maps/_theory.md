@@ -111,3 +111,62 @@ let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
 // imprime 30
 ```
+
+---
+
+Maps e objetos comuns armazenam valores sob chaves, mas diferem em alguns aspectos importantes:
+- chaves de objeto são sempre strings (ou symbols), chaves de map podem ser de **qualquer** tipo
+- um map mantém a **ordem de inserção** exata de seus pares
+- um map conhece seu próprio `size`, enquanto para um objeto você precisa de `Object.keys(obj).length`
+- um map começa realmente vazio, enquanto um objeto herda chaves como `toString` de seu protótipo
+
+---
+
+Maps não têm métodos de array como `sort()` ou `filter()`. Para usá-los, converta o map (ou suas chaves ou valores) em um array com `Array.from()` ou o operador spread `...`:
+```javascript
+let ages = new Map([["Bob", 25], ["Ann", 30]]);
+let pairs = Array.from(ages);
+console.log(pairs);
+// imprime [ [ 'Bob', 25 ], [ 'Ann', 30 ] ]
+let names = [...ages.keys()];
+console.log(names);
+// imprime [ 'Bob', 'Ann' ]
+let values = [...ages.values()];
+console.log(values);
+// imprime [ 25, 30 ]
+```
+A conversão inversa, `Object.fromEntries(ages)`, transforma um map de volta em um objeto comum.
+
+---
+
+Assim como arrays, maps têm um método `forEach()` que chama uma função para cada par.
+Cuidado com a ordem dos parâmetros: o callback recebe o **valor primeiro**, depois a chave:
+```javascript
+let stock = new Map([["apple", 3], ["pear", 5]]);
+stock.forEach((qty, name) => {
+  console.log(`${name} x${qty}`);
+});
+// imprime apple x3
+// imprime pear x5
+```
+
+---
+
+`delete(key)` retorna `true` quando um par foi removido e `false` quando a chave não existia.
+Para remover **todos** os pares de uma vez, chame `clear()`:
+```javascript
+let cart = new Map([["pen", 2], ["ink", 1]]);
+console.log(cart.delete("pen"));
+// imprime true
+console.log(cart.delete("pen"));
+// imprime false
+cart.clear();
+console.log(cart.size);
+// imprime 0
+```
+
+---
+
+Então, quando você deve usar um `Map` em vez de um objeto comum?
+- Use um **Map** quando as chaves são adicionadas e removidas em tempo de execução, quando não são strings, ou quando você precisa de `size` e ordenação confiável
+- Use um **objeto** para um registro fixo com nomes de campo conhecidos, como `{ name, email }`, e sempre que precisar converter os dados para JSON, já que `JSON.stringify()` ignora o conteúdo de um map

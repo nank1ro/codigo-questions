@@ -99,3 +99,125 @@ fun name(shape: Shape): String = when (shape) {
 ```
 
 `is Circle`の後は値がスマートキャストされるため、そのブランチ内では手動のキャストなしで`shape.radius`にアクセスできます。
+
+---
+
+ロガー、レジストリ、アプリケーションの設定など、あるもののインスタンスが**ちょうど1つ**だけ必要なことがあります。`class`を`object`に置き換えると、そのシングルトンを宣言してくれます：
+
+```kotlin
+object Registry {
+    var size = 0
+    fun add() {
+        size++
+    }
+}
+
+Registry.add()
+println(Registry.size) // 1
+```
+
+インスタンスは最初に触ったときに作成され、名前そのものを使います。`Registry()`のような呼び出しもコンストラクタもありません。`object`はプロパティ、メソッド、`init`ブロックを持つことができ、インターフェースを実装したりクラスを継承したりすることもできます。
+
+---
+
+`companion object`はクラスに属するシングルトンです。定数に加えて、その本来の役割は**ファクトリ関数**を保持することです：ファクトリ関数はインスタンスを作成する前に入力を検証または変換し、入力が意味をなさないときは`null`を返すことができます。
+
+コンストラクタを`private`にすると、すべての呼び出し元はファクトリを経由するようになります：
+
+```kotlin
+class Age private constructor(val years: Int) {
+    companion object {
+        fun of(years: Int): Age? = if (years >= 0) Age(years) else null
+    }
+}
+
+println(Age.of(30)?.years) // 30
+println(Age.of(-1))        // null
+```
+
+コンパニオンはクラス名に対して`Age.of(...)`のように呼び出され、クラスの中に存在するためプライベートコンストラクタにアクセスできます。
+
+---
+
+`interface`は型が何をできるかを列挙します。そのメンバーはデフォルトで抽象ですが、インターフェースは**デフォルト実装**も提供できます。デフォルト実装とは、実装するすべてのクラスが無料で継承し、オーバーライドしてもよい本体のことです：
+
+```kotlin
+interface Greeter {
+    val name: String              // abstract、クラス側で実装する必要がある
+    fun greet(): String = "Hi, $name"  // デフォルト実装
+}
+
+class Person(override val name: String) : Greeter
+
+class Robot(override val name: String) : Greeter {
+    override fun greet(): String = "BEEP $name"
+}
+
+println(Person("Ann").greet()) // Hi, Ann
+println(Robot("R2").greet())   // BEEP R2
+```
+
+インターフェースは状態を保存できない（バッキングフィールドを持たない）ため、抽象プロパティはクラスによって実装されなければならず、通常はコンストラクタで`override val`を使います。クラスとは異なり、型は好きなだけ多くのインターフェースを実装できます。
+
+---
+
+`abstract`クラスはインターフェースと通常のクラスの中間に位置します。インスタンス化はできず、本体を持たずオーバーライドが必須の**抽象**メンバーと、サブクラスがそのまま継承する具象メンバーを混在させられます。
+
+```kotlin
+abstract class Vehicle(val name: String) {
+    abstract fun wheels(): Int
+    fun describe(): String = "$name has ${wheels()} wheels"
+}
+
+class Bike(name: String) : Vehicle(name) {
+    override fun wheels(): Int = 2
+}
+
+println(Bike("BMX").describe()) // BMX has 2 wheels
+```
+
+インターフェースと違い、抽象クラスはコンストラクタを持ち、プロパティに状態を保持できます。だからこそサブクラスは`: Vehicle(name)`で`name`を上位に渡します。クラスは1つのクラスしか継承できないので、サブクラスがデータを共有するときは抽象クラスを、振る舞いだけを共有するときはインターフェースを選びましょう。抽象メンバーは`open`を付けなくてもオーバーライドできます。
+
+---
+
+別のクラスの内部で宣言されたクラスは、デフォルトで**ネストクラス**になります。外側のインスタンスについては何も知らず、外側のクラス名から生成します：
+
+```kotlin
+class Outer {
+    class Nested {
+        fun hello() = "hi"
+    }
+}
+
+println(Outer.Nested().hello()) // hi
+```
+
+`inner`キーワードを付けると状況が変わります。`inner`クラスは外側のインスタンスへの参照を持つため外側のプロパティを読むことができ、**インスタンスから**生成します：
+
+```kotlin
+class Counter(val step: Int) {
+    inner class Doubler {
+        fun value() = step * 2
+    }
+}
+
+println(Counter(5).Doubler().value()) // 10
+```
+
+`inner`クラスの内部では`this`は内側のオブジェクトを指します。外側を明示的に指したいときは`this@Counter`を使います。
+
+---
+
+このトピックの要素は組み合わせて使われるのが普通です。各定数が独自のプロパティを持つ`enum class`は固定されたラベルの集合をモデル化し、`data class`はそれに伴うデータを運びます。
+
+```kotlin
+enum class Speed(val surcharge: Int) {
+    STANDARD(0),
+    EXPRESS(15)
+}
+
+data class Order(val total: Int, val speed: Speed)
+
+val order = Order(100, Speed.EXPRESS)
+println(order.total + order.speed.surcharge) // 115
+```

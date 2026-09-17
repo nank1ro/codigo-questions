@@ -181,3 +181,42 @@ print(timer()); // 20
 ```
 
 Każde wywołanie `makeTimer()` tworzy zupełnie nową zmienną `seconds`, więc dwa zegary nigdy nie współdzielą swojego licznika.
+
+---
+
+Funkcje anonimowe obsługują te same rodzaje parametrów co funkcje nazwane: parametry **opcjonalne pozycyjne** w `[]` i parametry **nazwane** w `{}`, oba z wartościami domyślnymi:
+
+```dart
+var repeat = (String text, [int times = 2]) => text * times;
+print(repeat('ab'));    // abab
+print(repeat('ab', 3)); // ababab
+
+var describe = ({required String item, int count = 1}) => '$count x $item';
+print(describe(item: 'apple'));           // 1 x apple
+print(describe(item: 'pear', count: 4));  // 4 x pear
+```
+
+---
+
+Funkcja anonimowa nie musi być nigdzie zapisywana: można ją **wywołać natychmiast**, pisząc argumenty bezpośrednio po jej nawiasie zamykającym. Jest to wygodne do obliczenia wartości z kilkoma tymczasowymi zmiennymi, które nie powinny przedostawać się do otaczającego kodu:
+
+```dart
+var area = (double radius) {
+  var pi = 3.14;
+  return pi * radius * radius;
+}(2.0);
+
+print(area); // 12.56
+```
+
+Tutaj `pi` istnieje tylko wewnątrz funkcji anonimowej, a `area` otrzymuje zwróconą wartość.
+
+---
+
+Funkcje, które przyjmują i zwracają inne funkcje, można swobodnie łączyć. Klasycznym przykładem jest **kompozycja**: budowanie nowej funkcji, która uruchamia jedną funkcję, a następnie przekazuje jej wynik do innej:
+
+```dart
+int Function(int) then(int Function(int) first, int Function(int) second) {
+  return (n) => second(first(n));
+}
+```

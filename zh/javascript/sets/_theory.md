@@ -75,3 +75,75 @@ nums.forEach((n) => console.log(n * 10));
 // 打印 10
 // 打印 20
 ```
+
+---
+
+当值被移除时，`delete(value)` 返回 `true`；当该值不在 set 中时，返回 `false`。
+要一次性移除**所有**值，调用 `clear()`：
+```javascript
+let cart = new Set(["pen", "ink"]);
+console.log(cart.delete("pen"));
+// 打印 true
+console.log(cart.delete("pen"));
+// 打印 false
+cart.clear();
+console.log(cart.size);
+// 打印 0
+```
+
+---
+
+set 判断两个值是否"相同"的规则与 `===` 几乎一样（区别是 `NaN` 被视为与自身相等）。对于字符串和数字，这比较的是内容，但**对象是按引用比较的**：两个字段完全相同的对象字面量是两个不同的值。
+```javascript
+let alice = { name: "Alice" };
+let people = new Set();
+people.add(alice);
+people.add(alice);
+console.log(people.size);
+// 打印 1
+people.add({ name: "Alice" });
+console.log(people.size);
+// 打印 2
+```
+只有再次添加完全相同的那个对象才会被忽略。
+
+---
+
+把展开运算符和 `filter()` 结合起来，就能得到集合论中的经典操作。每一种都会构建一个**新的**集合，不会改变原来的集合：
+- **并集**，出现在 `a`、`b` 或两者中的每一个值：`new Set([...a, ...b])`
+- **交集**，只有同时出现在**两者**中的值：`[...a].filter((x) => b.has(x))`
+- **差集**，`a` 中**不**在 `b` 里的值：`[...a].filter((x) => !b.has(x))`
+
+```javascript
+let a = new Set([1, 2, 3]);
+let b = new Set([3, 4]);
+console.log([...new Set([...a, ...b])]);
+// 打印 [ 1, 2, 3, 4 ]
+console.log([...a].filter((x) => b.has(x)));
+// 打印 [ 3 ]
+console.log([...a].filter((x) => !b.has(x)));
+// 打印 [ 1, 2 ]
+```
+较新的 JavaScript 引擎也直接在 set 上提供了 `a.union(b)`、`a.intersection(b)` 和 `a.difference(b)`，但展开加 filter 的写法在任何地方都能用。
+
+---
+
+为了保持和 `Map` 相同的接口，set 提供了迭代器方法 `values()`、`keys()` 和 `entries()`。
+由于 set 没有键，`keys()` 只是 `values()` 的另一个名字，而 `entries()` 会把每个值产出**两次**，作为一个 `[value, value]` 对：
+```javascript
+let letters = new Set(["a", "b"]);
+console.log([...letters.values()]);
+// 打印 [ 'a', 'b' ]
+console.log([...letters.entries()]);
+// 打印 [ [ 'a', 'a' ], [ 'b', 'b' ] ]
+```
+实际上你很少需要它们：`for...of` 和展开运算符已经可以直接遍历值。
+
+---
+
+`new Set()` 接受任何**可迭代对象**，而不仅仅是数组。字符串是可以逐字符迭代的，因此可以用它得到一段文本中不同的字符：
+```javascript
+let letters = new Set("hello");
+console.log([...letters]);
+// 打印 [ 'h', 'e', 'l', 'o' ]
+```

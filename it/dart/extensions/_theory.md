@@ -241,3 +241,20 @@ void main() {
   print([2, 4, 6].all((n) => n.isEven)); // true
 }
 ```
+
+---
+
+I membri delle estensioni vengono risolti al **compile time**, in base al **tipo statico** dell'espressione, cioè il tipo che il compilatore conosce, non l'oggetto reale a runtime. Una `String` memorizzata in una variabile di tipo `Object` è ancora una `String` quando il programma viene eseguito, ma il compilatore vede solo `Object`, quindi non trova nessuna estensione per essa:
+
+```dart
+extension Shout on String {
+  String shout() => toUpperCase() + '!';
+}
+
+void main() {
+  Object text = 'hi';
+  print(text.shout()); // error: the method 'shout' isn't defined for the type 'Object'
+}
+```
+
+Lo stesso vale per `dynamic`: i membri delle estensioni non vengono mai trovati attraverso un ricevente `dynamic`. Fai prima il cast del valore, oppure dichiaralo con il tipo preciso.

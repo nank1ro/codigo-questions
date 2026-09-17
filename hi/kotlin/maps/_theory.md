@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 कोष्ठक `(name, age)` हर entry को दो वेरिएबल्स में बाँट देते हैं। entries उसी क्रम में देखी जाती हैं जिसमें उन्हें डाला गया था।
+
+---
+
+लिस्ट की तरह, map भी `filter` को सपोर्ट करता है। लैम्ब्डा हर entry को प्राप्त करता है और आप इसे `(key, value)` में विभाजित कर सकते हैं; परिणाम एक नया `Map` है जिसमें केवल वे entries हैं जिनके लिए लैम्ब्डा `true` लौटाता है:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+जब शर्त entry के केवल एक पक्ष से संबंधित हो, तो `filterKeys { }` और `filterValues { }` भी उपलब्ध हैं।
+
+---
+
+`map` एक map की हर entry को एक नए element में बदल देता है। `filter` के विपरीत, परिणाम `Map` नहीं बल्कि `List` होता है:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

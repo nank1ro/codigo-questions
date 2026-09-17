@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 빈 구분자로 `.split('')`을 호출하면 문자 하나하나로 이루어진 리스트를 얻습니다.
+
+---
+
+일부 문자는 따옴표 안에 직접 입력할 수 없습니다. **이스케이프 시퀀스**는 백슬래시로 시작합니다: `\n`은 줄바꿈, `\t`는 탭, `\\`는 백슬래시, `\$`는 달러 기호 그 자체입니다(그렇지 않으면 `$`는 보간을 시작합니다):
+
+```dart
+print('one\ntwo');   // one과 two를 각각 다른 줄에 출력
+print('Cost: \$5');  // Cost: $5
+```
+
+**원시 문자열**(raw string)은 앞에 `r`을 붙입니다. 그 안에서는 백슬래시와 `$`가 그냥 문자일 뿐이며, 어떤 이스케이프나 보간도 일어나지 않습니다:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+여러 줄에 걸친 텍스트에는, 삼중 따옴표 `'''` 또는 `"""`로 구분되는 **여러 줄 문자열**을 사용하세요. 그 안의 줄바꿈은 그대로 유지됩니다.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+내부적으로 문자열의 모든 문자는 숫자, 즉 **코드 유닛**(UTF-16 코드)으로 저장됩니다. `.codeUnitAt(index)`는 문자 하나의 코드를, `.codeUnits`는 코드 전체 리스트를 반환합니다. `String.fromCharCode(code)`는 반대로 코드로부터 문자열을 만듭니다:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+연속된 문자는 연속된 코드를 가집니다: `'A'`는 65, `'B'`는 66, 이런 식으로 이어집니다.
+
+---
+
+두 문자열이 `==`로 같으려면 정확히 같은 문자가 같은 순서로 들어 있어야 합니다. 이 비교는 **대소문자를 구분**하며 모든 공백도 고려합니다:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+대소문자를 무시하고 비교하려면 양쪽을 먼저 변환하세요: `a.toLowerCase() == b.toLowerCase()`. 순서를 비교할 때는 `.compareTo(other)`가 그 문자열이 상대보다 앞서는지, 같은지, 뒤에 오는지에 따라 음수, `0`, 또는 양수를 반환합니다.
+
+---
+
+문자열은 불변이기 때문에, 반복문에서 `+=`로 긴 텍스트를 만들면 매 단계마다 새로운 문자열이 생성됩니다. **StringBuffer**는 텍스트 조각을 효율적으로 모아두었다가, 필요할 때만 최종 문자열을 만들어냅니다:
+
+- `.write(value)`는 값을 추가합니다(어떤 타입이든 텍스트로 변환됩니다)
+- `.writeln(value)`는 값을 추가한 뒤 줄바꿈을 붙입니다
+- `.toString()`는 지금까지 만든 문자열을 반환합니다
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+문자열 메서드는 문자열을 반환하므로, 계속해서 **체이닝**할 수 있습니다. `.split('')`, 리스트 프로퍼티인 `.reversed`, `.join()`을 조합하면 하나의 식으로 문자열을 뒤집을 수 있습니다:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+**회문**(palindrome)은 `level`처럼 앞뒤로 읽어도 같은 텍스트입니다.

@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+型が確実なときは、`as`で値を**キャスト**できます。`value as String`は値を`String`として返します。
+値が実際には別のものだった場合、`as`は実行時に`ClassCastException`をスローします。
+**安全なキャスト**である`as?`はスローしません。キャストが成功すれば値を返し、失敗すれば`null`を返します。そのため結果はnull許容型になります：
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null、"Kotlin" は Int ではない
+val bad = items[0] as Int        // ClassCastException を投げる
+```
+チェックが必要なときはスマートキャストを伴う`is`を、失敗が許容できるときは`as?`を使いましょう。

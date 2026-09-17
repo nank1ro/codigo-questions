@@ -99,3 +99,125 @@ fun name(shape: Shape): String = when (shape) {
 ```
 
 Dopo `is Circle` il valore viene sottoposto a smart cast, quindi `shape.radius` è disponibile dentro quel ramo senza alcun cast manuale.
+
+---
+
+A volte serve esattamente **una** istanza di qualcosa: un logger, un registro, una configurazione dell'applicazione. Sostituire `class` con `object` dichiara quel singleton al posto tuo:
+
+```kotlin
+object Registry {
+    var size = 0
+    fun add() {
+        size++
+    }
+}
+
+Registry.add()
+println(Registry.size) // 1
+```
+
+L'istanza viene creata la prima volta che la usi, e adoperi direttamente il nome: non c'è nessuna chiamata `Registry()` e nessun costruttore. Un `object` può contenere proprietà, metodi, blocchi `init`, e può implementare interfacce o estendere una classe.
+
+---
+
+Un `companion object` è il singleton che appartiene a una classe. Oltre alle costanti, il suo compito naturale è contenere **funzioni factory**: funzioni che controllano o trasformano l'input prima di costruire un'istanza, e che possono restituire `null` quando l'input non ha senso.
+
+Marcare il costruttore come `private` obbliga ogni chiamante a passare dalla factory:
+
+```kotlin
+class Age private constructor(val years: Int) {
+    companion object {
+        fun of(years: Int): Age? = if (years >= 0) Age(years) else null
+    }
+}
+
+println(Age.of(30)?.years) // 30
+println(Age.of(-1))        // null
+```
+
+Il companion si chiama sul nome della classe, `Age.of(...)`, e può raggiungere il costruttore privato perché vive dentro la classe.
+
+---
+
+Un'`interface` elenca ciò che un tipo sa fare. I suoi membri sono astratti per impostazione predefinita, ma un'interfaccia può anche fornire un'**implementazione di default**, un corpo che ogni classe che la implementa eredita gratuitamente e può sovrascrivere:
+
+```kotlin
+interface Greeter {
+    val name: String              // astratto, la classe deve fornirlo
+    fun greet(): String = "Hi, $name"  // implementazione di default
+}
+
+class Person(override val name: String) : Greeter
+
+class Robot(override val name: String) : Greeter {
+    override fun greet(): String = "BEEP $name"
+}
+
+println(Person("Ann").greet()) // Hi, Ann
+println(Robot("R2").greet())   // BEEP R2
+```
+
+Un'interfaccia non può conservare stato (non ha backing field), quindi una proprietà astratta deve essere implementata dalla classe, di solito con `override val` nel costruttore. A differenza di una classe, un tipo può implementare tutte le interfacce che vuole.
+
+---
+
+Una classe `abstract` sta tra un'interfaccia e una classe normale: non può essere istanziata, e mescola membri **astratti**, che non hanno corpo e devono essere sovrascritti, con membri concreti che le sottoclassi ereditano così come sono.
+
+```kotlin
+abstract class Vehicle(val name: String) {
+    abstract fun wheels(): Int
+    fun describe(): String = "$name has ${wheels()} wheels"
+}
+
+class Bike(name: String) : Vehicle(name) {
+    override fun wheels(): Int = 2
+}
+
+println(Bike("BMX").describe()) // BMX has 2 wheels
+```
+
+A differenza di un'interfaccia, una classe astratta ha un costruttore e può conservare stato nelle proprietà, ed è per questo che la sottoclasse passa `name` verso l'alto con `: Vehicle(name)`. Una classe può estendere una sola classe, quindi scegli una classe astratta quando le sottoclassi condividono dati, e un'interfaccia quando condividono solo comportamento. I membri astratti sono sovrascrivibili senza aggiungere `open`.
+
+---
+
+Una classe dichiarata dentro un'altra classe è **nested** per impostazione predefinita. Non sa nulla dell'istanza esterna e la costruisci a partire dal nome della classe esterna:
+
+```kotlin
+class Outer {
+    class Nested {
+        fun hello() = "hi"
+    }
+}
+
+println(Outer.Nested().hello()) // hi
+```
+
+Aggiungi la parola chiave `inner` e la situazione cambia: una classe `inner` porta con sé un riferimento all'istanza esterna, quindi può leggerne le proprietà, e la costruisci **a partire da un'istanza**:
+
+```kotlin
+class Counter(val step: Int) {
+    inner class Doubler {
+        fun value() = step * 2
+    }
+}
+
+println(Counter(5).Doubler().value()) // 10
+```
+
+Dentro una classe `inner`, `this` è l'oggetto interno; usa `this@Counter` quando ti serve esplicitamente quello esterno.
+
+---
+
+I pezzi di questo argomento di solito si combinano: una `enum class` le cui costanti portano proprietà proprie modella un insieme fisso di etichette, mentre una `data class` porta il contenuto che le accompagna.
+
+```kotlin
+enum class Speed(val surcharge: Int) {
+    STANDARD(0),
+    EXPRESS(15)
+}
+
+data class Order(val total: Int, val speed: Speed)
+
+val order = Order(100, Speed.EXPRESS)
+println(order.total + order.speed.surcharge) // 115
+```

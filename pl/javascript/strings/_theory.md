@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // wypisuje 45
 ```
+
+---
+
+Metoda `split(separator)` dzieli łańcuch na **tablicę** fragmentów, przecinając przy każdym wystąpieniu `separator`:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// wypisuje [ 'I', 'like', 'JavaScript' ]
+```
+Przeciwieństwem jest metoda tablicy `join(separator)`, która skleja fragmenty z powrotem w łańcuch:
+```javascript
+console.log(words.join("-"));
+// wypisuje I-like-JavaScript
+```
+
+---
+
+Dane wprowadzone przez użytkownika często mają dodatkowe spacje wokół nich. Metoda `trim()` zwraca kopię łańcucha z usuniętymi białymi znakami z **obu** końców:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// wypisuje hello
+```
+`trimStart()` usuwa tylko wiodące białe znaki, a `trimEnd()` tylko końcowe.
+Spacje w środku łańcucha nigdy nie są ruszane.
+
+---
+
+Metoda `replace(search, replacement)` zwraca nowy łańcuch, w którym **pierwsze** wystąpienie `search` jest zamienione na `replacement`:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// wypisuje blue red
+```
+Aby zamienić **wszystkie** wystąpienia, użyj `replaceAll()`:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// wypisuje blue blue
+```
+
+---
+
+Metoda `repeat(count)` zwraca łańcuch powtórzony `count` razy:
+```javascript
+console.log("ab".repeat(3));
+// wypisuje ababab
+console.log("ab".repeat(0));
+// wypisuje pusty string
+```
+
+---
+
+Metoda `padStart(targetLength, padString)` dodaje `padString` na **początku** łańcucha, dopóki nie osiągnie `targetLength` znaków. `padEnd()` robi to samo na końcu:
+```javascript
+console.log("7".padStart(3, "0"));
+// wypisuje 007
+console.log("Tea".padEnd(6, "."));
+// wypisuje Tea...
+```
+Jeśli łańcuch jest już wystarczająco długi, jest zwracany bez zmian.
+Liczby nie mają metod łańcuchowych, więc najpierw przekształć je za pomocą `String(number)`.
+
+---
+
+Dwa łańcuchy są równe za pomocą `===` tylko wtedy, gdy mają dokładnie te same znaki, w tej samej wielkości liter:
+```javascript
+console.log("hello" === "hello");
+// wypisuje true
+console.log("hello" === "Hello");
+// wypisuje false
+```
+Operatory `<` i `>` porównują łańcuchy alfabetycznie, znak po znaku.
+Wielkie litery są mniejsze od małych, więc `"Zoo" < "apple"` to `true`.
+
+---
+
+Łańcuchy są **niemutowalne**: po utworzeniu łańcuch nigdy nie może zostać zmieniony.
+Przypisanie do indeksu nic nie robi, a każda metoda łańcucha zwraca **nowy** łańcuch zamiast modyfikować oryginał:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// wypisuje hello
+word.toUpperCase();
+console.log(word);
+// wypisuje hello
+```
+Aby zachować wynik, przypisz go z powrotem do zmiennej:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Wywołanie `split("")` z pustym separatorem zamienia łańcuch w tablicę jego pojedynczych znaków.
+Tablice mają metodę `reverse()`, więc możesz odwrócić łańcuch, dzieląc go, odwracając i łącząc z powrotem:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// wypisuje cba
+```

@@ -63,3 +63,57 @@ print(fruits.contains('orange')); // false
 ```
 
 这对于不使用循环进行成员检查非常有用。
+
+---
+
+`.remove(value)` 方法会从列表中删除**第一个**等于 `value` 的元素。如果删除了元素则返回 `true`，如果未找到该值则返回 `false`。
+
+```dart
+var colors = ['red', 'green', 'blue'];
+bool removed = colors.remove('green');
+print(removed); // true
+print(colors); // [red, blue]
+```
+
+---
+
+`.first` 和 `.last` 属性可以让你在不使用索引的情况下获取列表的第一个和最后一个元素。
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.first); // red
+print(colors.last); // blue
+```
+
+如果列表为空，两者都会抛出错误。
+
+---
+
+当列表没有元素时，`.isEmpty` 属性为 `true`；当列表至少有一个元素时，`.isNotEmpty` 属性为 `true`。
+
+```dart
+var colors = <String>[];
+print(colors.isEmpty); // true
+colors.add('red');
+print(colors.isNotEmpty); // true
+```
+
+---
+
+`.indexOf(value)` 方法返回第一个等于 `value` 的元素的索引。如果列表中不存在该值，则返回 `-1`。
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.indexOf('green')); // 1
+print(colors.indexOf('pink')); // -1
+```
+
+---
+
+`.where()` 方法只保留使函数返回 `true` 的元素。它返回的不是新列表，而是一个惰性的 `Iterable`，因此需要调用 `.toList()` 才能将结果转换回 `List`。
+
+```dart
+var numbers = [1, 2, 3, 4];
+List<int> big = numbers.where((n) => n > 2).toList();
+print(big); // [3, 4]
+```

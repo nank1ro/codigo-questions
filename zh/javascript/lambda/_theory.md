@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // 打印 6
 ```
 从左往右阅读：`makeAdder` 接收 `amount` 并返回 `(n) => n + amount`，这是一个通过闭包捕获 `amount` 的箭头函数。`makeAdder(1)(5)` 会立即调用返回的函数。
+
+---
+
+你不必存储箭头函数也可以调用它。把它用圆括号包裹起来，并在后面直接加上实参列表：这就是**立即调用**的箭头函数：
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// 打印 10
+```
+箭头两侧的圆括号是必需的：没有它们，`(n) => n * 2(5)` 会尝试调用数字 `2`。立即调用的函数非常适合用几个临时变量来计算一个值，而这些变量不会泄漏到程序的其他部分。
+
+---
+
+普通函数和箭头函数之间最大的区别是关键字 `this`。
+普通的 `function` 有**自己的** `this`，由*它被调用的方式*决定：在 `team.intro()` 中它是 `team`，但在传给 `map` 的回调中没有人设置它，所以 `this.name` 是 `undefined`（在严格模式下甚至是一个错误）。
+箭头函数**没有**自己的 `this`：它只是使用周围代码的 `this`（即**词法** `this`）。这就是为什么方法内部的箭头回调可以继续使用该对象：
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// 打印 [ 'Ana plays for Tigers', 'Bo plays for Tigers' ]
+```
+如果用 `function (p) { return ... this.name ... }` 作为回调，同样的代码会打印 `undefined` 而不是 `Tigers`。
+反过来也一样：不要把箭头函数用作需要 `this` 的对象**方法**，因为它不会引用该对象。

@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 括弧`(name, age)`は各エントリを2つの変数に分割します。エントリは挿入順に処理されます。
+
+---
+
+リストと同様に、マップも`filter`をサポートします。ラムダは各エントリを受け取り、`(key, value)`に分解代入できます。結果は、ラムダが`true`を返したエントリだけを含む新しい`Map`です：
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+条件がエントリの片側だけに関係する場合は、`filterKeys { }`と`filterValues { }`もあります。
+
+---
+
+`map`はマップの各エントリを新しい要素に変換します。`filter`とは異なり、結果は`Map`ではなく`List`です：
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

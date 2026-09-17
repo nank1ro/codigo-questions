@@ -60,3 +60,56 @@ for number in numbers.sorted() {
     print(number) // 1, 2, 3 を別々の行に出力
 }
 ```
+
+---
+
+セットは集合論の古典的な演算をサポートします。それぞれが**新しい**セットを返し、元のセットは変更されません：
+- `a.union(b)`（和集合）は、`a`、`b`、またはその両方に含まれるすべての要素を含みます
+- `a.intersection(b)`（積集合）は、`a`と`b`の**両方**に含まれる要素のみを含みます
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.union(b).sorted())        // [1, 2, 3, 4]
+print(a.intersection(b).sorted()) // [3]
+```
+
+---
+
+さらに2つの演算があり、これで演算の一群が揃います：
+- `a.subtracting(b)`（差集合）は、`a`の要素のうち`b`に**含まれない**ものを含みます
+- `a.symmetricDifference(b)`（対称差）は、`a`または`b`のどちらか一方にのみ含まれる要素、つまり**両方には含まれない**要素を含みます
+```swift
+let a: Set<Int> = [1, 2, 3]
+let b: Set<Int> = [3, 4]
+print(a.subtracting(b).sorted())          // [1, 2]
+print(a.symmetricDifference(b).sorted())  // [1, 2, 4]
+```
+`union`や`intersection`とは異なり、`subtracting`は対称ではありません：`a.subtracting(b)`と`b.subtracting(a)`は通常異なります。
+
+---
+
+セット同士を比較することもできます。これらのメソッドは`Bool`を返します：
+- `a.isSubset(of: b)`（部分集合）は、`a`のすべての要素が`b`にも含まれるとき`true`になります
+- `a.isSuperset(of: b)`（上位集合）は、`a`が`b`のすべての要素を含むとき`true`になります
+- `a.isDisjoint(with: b)`（互いに素）は、`a`と`b`に共通する要素がないとき`true`になります
+```swift
+let small: Set<Int> = [1, 2]
+let big: Set<Int> = [1, 2, 3]
+print(small.isSubset(of: big))   // true
+print(big.isSuperset(of: small)) // true
+print(small.isDisjoint(with: big)) // false
+```
+
+---
+
+セットと配列は簡単に互いに変換できます。
+配列を`Set(...)`に渡すと、その要素からセットが作られます。これは**重複を取り除く**最も手早い方法です：
+```swift
+let votes = [3, 1, 3, 2, 1]
+let unique = Set(votes) // {1, 2, 3} in some order
+```
+セットを`Array(...)`に渡すと配列が返りますが、セットには順序がないため、要素は予測できない順序で出てきます。
+そのため、順序付けられた結果が必要な場合は、代わりにセットに対して`sorted()`を呼び出すのが一般的です。これはすでに配列を返します：
+```swift
+let ordered = unique.sorted() // [1, 2, 3]
+```

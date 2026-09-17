@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+타입을 확신할 때는 `as`로 값을 **캐스트**할 수 있습니다: `value as String`은 그 값을 `String`으로서 반환합니다.
+값이 실제로는 다른 것이라면, `as`는 런타임에 `ClassCastException`을 던집니다.
+**안전한 캐스트**인 `as?`는 절대 예외를 던지지 않습니다: 캐스트에 성공하면 값을, 실패하면 `null`을 반환하므로 그 결과는 널 가능 타입입니다:
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null, "Kotlin"은 Int가 아닙니다
+val bad = items[0] as Int        // throws ClassCastException
+```
+검사가 필요할 때는 스마트 캐스트와 함께 `is`를, 실패가 허용될 때는 `as?`를 사용하는 것이 좋습니다.

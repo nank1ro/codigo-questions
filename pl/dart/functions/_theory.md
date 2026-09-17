@@ -76,3 +76,18 @@ void main() {
 ```
 
 Nazwane parametry poprawiają czytelność kodu, szczególnie gdy funkcja ma wiele parametrów.
+
+---
+
+Dart obsługuje również **opcjonalne parametry pozycyjne** — parametry ujęte w nawiasy kwadratowe `[]`. Są przekazywane pozycyjnie, mogą zostać pominięte przez wywołującego i mogą mieć wartość domyślną:
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

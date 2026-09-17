@@ -75,3 +75,75 @@ nums.forEach((n) => console.log(n * 10));
 // gibt 10 aus
 // gibt 20 aus
 ```
+
+---
+
+`delete(value)` gibt `true` zurück, wenn der Wert entfernt wurde, und `false`, wenn er nicht im Set war.
+Um **alle** Werte auf einmal zu entfernen, rufe `clear()` auf:
+```javascript
+let cart = new Set(["pen", "ink"]);
+console.log(cart.delete("pen"));
+// gibt true aus
+console.log(cart.delete("pen"));
+// gibt false aus
+cart.clear();
+console.log(cart.size);
+// gibt 0 aus
+```
+
+---
+
+Ein Set entscheidet mit fast derselben Regel wie `===`, ob zwei Werte "gleich" sind (außer dass `NaN` als gleich zu sich selbst zählt). Bei Strings und Zahlen wird dabei der Inhalt verglichen, aber **Objekte werden anhand ihrer Referenz verglichen**: zwei Objektliterale mit identischen Feldern sind zwei verschiedene Werte.
+```javascript
+let alice = { name: "Alice" };
+let people = new Set();
+people.add(alice);
+people.add(alice);
+console.log(people.size);
+// gibt 1 aus
+people.add({ name: "Alice" });
+console.log(people.size);
+// gibt 2 aus
+```
+Nur das erneute Hinzufügen genau desselben Objekts wird ignoriert.
+
+---
+
+Die Kombination von Spread und `filter()` liefert dir die klassischen Operationen der Mengenlehre. Jede davon erstellt eine **neue** Sammlung und lässt die Originale unverändert:
+- **Vereinigung**, jeder Wert, der in `a`, in `b` oder in beiden ist: `new Set([...a, ...b])`
+- **Schnittmenge**, nur die Werte, die in **beiden** sind: `[...a].filter((x) => b.has(x))`
+- **Differenz**, die Werte von `a`, die **nicht** in `b` sind: `[...a].filter((x) => !b.has(x))`
+
+```javascript
+let a = new Set([1, 2, 3]);
+let b = new Set([3, 4]);
+console.log([...new Set([...a, ...b])]);
+// gibt [ 1, 2, 3, 4 ] aus
+console.log([...a].filter((x) => b.has(x)));
+// gibt [ 3 ] aus
+console.log([...a].filter((x) => !b.has(x)));
+// gibt [ 1, 2 ] aus
+```
+Neuere JavaScript-Engines bieten außerdem `a.union(b)`, `a.intersection(b)` und `a.difference(b)` direkt auf Sets an, aber die Spread- und Filter-Varianten funktionieren überall.
+
+---
+
+Um dieselbe Schnittstelle wie `Map` beizubehalten, bietet ein Set die Iterator-Methoden `values()`, `keys()` und `entries()`.
+Da ein Set keine Schlüssel hat, ist `keys()` nur ein anderer Name für `values()`, und `entries()` liefert jeden Wert **zweimal**, als `[value, value]`-Paar:
+```javascript
+let letters = new Set(["a", "b"]);
+console.log([...letters.values()]);
+// gibt [ 'a', 'b' ] aus
+console.log([...letters.entries()]);
+// gibt [ [ 'a', 'a' ], [ 'b', 'b' ] ] aus
+```
+In der Praxis brauchst du sie selten: `for...of` und Spread iterieren bereits direkt über die Werte.
+
+---
+
+`new Set()` akzeptiert jedes **iterierbare Objekt**, nicht nur Arrays. Ein String ist zeichenweise iterierbar, sodass du damit die eindeutigen Zeichen eines Textes erhältst:
+```javascript
+let letters = new Set("hello");
+console.log([...letters]);
+// gibt [ 'h', 'e', 'l', 'o' ] aus
+```

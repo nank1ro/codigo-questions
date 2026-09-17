@@ -76,3 +76,18 @@ void main() {
 ```
 
 名前付きパラメータは可読性を向上させます。特に関数に多くのパラメータがある場合に有効です。
+
+---
+
+Dartは**オプション位置パラメータ**もサポートしています — 角括弧 `[]` で囲まれたパラメータです。これらは位置で渡され、呼び出し元が省略でき、デフォルト値を持つことができます：
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

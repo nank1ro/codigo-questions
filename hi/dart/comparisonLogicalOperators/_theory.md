@@ -54,3 +54,31 @@ bool passed = score >= 50; // true
 ```
 
 `>` के विपरीत, यह ऑपरेटर भी `true` लौटाता है जब दोनों मान बराबर हों।
+
+---
+
+**AND ऑपरेटर** `&&` दो बूलियन अभिव्यक्तियों को जोड़ता है। यह `true` लौटाता है केवल जब **दोनों** पक्ष `true` हों। यदि कोई भी पक्ष `false` है, तो परिणाम `false` है।
+
+```dart
+bool a = true;
+bool b = true;
+bool result = a && b; // true
+
+bool c = true;
+bool d = false;
+bool result2 = c && d; // false
+```
+
+---
+
+**OR ऑपरेटर** `||` दो बूलियन अभिव्यक्तियों को जोड़ता है। यह `true` लौटाता है जब **कम से कम एक** पक्ष `true` हो। यह केवल `false` लौटाता है जब **दोनों** पक्ष `false` हों।
+
+```dart
+bool a = false;
+bool b = true;
+bool result = a || b; // true
+
+bool c = false;
+bool d = false;
+bool result2 = c || d; // false
+```

@@ -76,3 +76,18 @@ void main() {
 ```
 
 Named parameters improve readability, especially when a function has many parameters.
+
+---
+
+Dart also supports **optional positional parameters** — parameters wrapped in square brackets `[]`. They are passed by position, can be omitted by the caller, and can have a default value:
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

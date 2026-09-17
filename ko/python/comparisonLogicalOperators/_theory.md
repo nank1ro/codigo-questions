@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False, 키만 확인됨
 ```
 둘 다 불리언을 반환하고 영어처럼 읽히므로, 반복문을 쓰는 대신 포함 여부를 확인하는 선호되는 방법입니다.
+
+---
+
+`any(iterable)`은 최소한 하나의 요소가 참이면 `True`를 반환하고 `all(iterable)`은 모든 요소가 참이면 `True`를 반환합니다 (`all([])`은 `True`입니다). 제너레이터 표현식과 결합하면 컬렉션 전체에 대한 조건을 표현할 수 있으며, `or`와 `and`처럼 단락 평가를 합니다:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+When you are sure of the type, you can **cast** a value with `as`: `value as String` gives you the value as a `String`.
+If the value is actually something else, `as` throws a `ClassCastException` at runtime.
+The **safe cast** `as?` never throws: it returns the value when the cast succeeds and `null` when it fails, so its result is a nullable type:
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null, "Kotlin" is not an Int
+val bad = items[0] as Int        // throws ClassCastException
+```
+Prefer `is` with smart casts when you need to check, and `as?` when a failure is acceptable.

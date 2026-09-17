@@ -97,3 +97,50 @@ let age = 36
 print(String(format: "%@ is %d years old", name, age)) // Ada is 36 years old
 ```
 `%@` acepta un `String` de Swift directamente. No uses `%s` con una cadena de Swift: ese especificador espera una cadena de C e imprime basura o se bloquea.
+
+---
+
+Como `%` inicia un especificador, un signo de porcentaje literal debe escribirse como `%%`. Así se formatea un porcentaje:
+```swift
+let ratio = 0.4567
+print(String(format: "%.1f%%", ratio * 100)) // 45.7%
+```
+Multiplica primero la proporción por `100` y luego elige la precisión: `%.0f%%` para `46%`, `%.1f%%` para `45.7%`.
+
+---
+
+Las banderas de ancho solo funcionan dentro de `String(format:)`. Para rellenar una cadena por tu cuenta, construye los espacios con `String(repeating:count:)` y únelos al texto:
+```swift
+let text = "7"
+let spaces = String(repeating: " ", count: 4 - text.count)
+print(spaces + text + "|") //    7|
+```
+Si el texto ya es más largo que el ancho, `4 - text.count` se vuelve negativo y `String(repeating:count:)` se bloquea. Protégelo con `max(0, ...)`, así el conteo nunca baja de cero y el texto largo se queda como está.
+
+---
+
+Foundation también tiene un helper ya hecho para rellenar a la derecha: `padding(toLength:withPad:startingAt:)`. Extiende la cadena hasta la longitud dada repitiendo el texto de relleno, y la corta si es más larga:
+```swift
+import Foundation
+
+let name = "Ada"
+print(name.padding(toLength: 8, withPad: " ", startingAt: 0) + "|") // Ada     |
+print("Tea".padding(toLength: 6, withPad: ".", startingAt: 0))     // Tea...
+```
+`startingAt` es el índice dentro del texto de relleno donde empieza la repetición; con un relleno de un solo carácter siempre es `0`.
+
+---
+
+Combina las dos herramientas para imprimir una tabla: `padding` alinea a la izquierda el texto de cada fila, y `String(format:)` alinea a la derecha los números con un ancho y una precisión fijos:
+```swift
+import Foundation
+
+let items = [("Tea", 2.5), ("Cake", 12.0)]
+for (name, price) in items {
+    let label = name.padding(toLength: 6, withPad: ".", startingAt: 0)
+    print(label + String(format: "%6.2f", price))
+}
+// Tea...  2.50
+// Cake.. 12.00
+```
+Como cada fila tiene el mismo ancho, los puntos decimales acaban en la misma columna.

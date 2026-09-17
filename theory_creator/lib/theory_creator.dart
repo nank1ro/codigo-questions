@@ -60,8 +60,9 @@ Future<void> main() async {
             );
         for (final exercise in exercises) {
           final exerciseModel = await parser.parse(file: exercise as File);
-          // If there isn't a description, stop the iteration.
-          if (exerciseModel.description == null) break;
+          // Exercises without a description contribute nothing to the theory;
+          // skip them instead of stopping, or a gap would hide every later one.
+          if (exerciseModel.description == null) continue;
 
           // Save each theory in the buffer dividing
           // each one with the `---` sign

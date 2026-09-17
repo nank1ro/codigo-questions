@@ -153,3 +153,33 @@ def set_age(age):
 | `IndexError` | 시퀀스 인덱스가 범위를 벗어난 경우 | `[1, 2][5]` |
 
 새 타입을 만드는 대신 이 중 하나를 사용하면, Python을 아는 누구에게나 여러분의 오류가 읽기 쉽게 유지됩니다.
+
+---
+
+때로는 핸들러가 실패를 자신의 책임으로 떠안지 않고 반응만 해야 할 때가 있습니다: 기록하고, 세고, 무언가를 닫은 다음 — 호출자가 처리하도록 남겨두는 것입니다. `except` 블록 안에서 홀로 쓰인 `raise`는 처리 중인 예외를 원래의 타입, 메시지, 트레이스백을 그대로 둔 채 **다시 발생시킵니다**:
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+대신 `raise ValueError(...)`를 쓰면 자체 트레이스백을 가진 새 예외가 만들어집니다 — 더 이상 잡았던 것과 같은 실패가 아니게 되는데, 바로 이 동일성을 홀로 쓰인 `raise`가 지켜줍니다.
+
+---
+
+내장 타입이 맞지 않을 때는 `Exception`을 상속하여 직접 정의하세요. 빈 몸통으로도 보통 충분합니다 — 이름 자체가 읽는 이에게 하는 메시지입니다:
+```python
+class ConfigError(Exception):
+    pass
+```
+다른 예외와 똑같이 동작합니다: `raise ConfigError("bad port")`로 발생시키고, `except ConfigError:`로 잡습니다.
+
+저수준 실패를 여러분의 타입으로 바꿔 번역하는 일은 흔하며, 그 과정에서 원래 오류가 사라져서는 안 됩니다. `raise NewError(...) from original`은 둘을 **연결**합니다: `original`을 새 예외의 `__cause__` 속성에 저장하고, 트레이스백은 *The above exception was the direct cause of the following exception* 아래에 둘 다 보여줍니다:
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+`from e`가 없어도 둘은 암묵적으로 연결되지만, `from`은 첫 번째 오류가 두 번째를 일으켰다는 사실을 말로 밝혀줍니다.

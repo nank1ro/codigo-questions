@@ -89,3 +89,105 @@ let colon = time.indexOf(":");
 console.log(time.slice(colon + 1));
 // prints 45
 ```
+
+---
+
+The `split(separator)` method breaks a string into an **array** of pieces, cutting at every `separator`:
+```javascript
+let sentence = "I like JavaScript";
+let words = sentence.split(" ");
+console.log(words);
+// prints [ 'I', 'like', 'JavaScript' ]
+```
+The opposite is the array method `join(separator)`, which glues the pieces back into a string:
+```javascript
+console.log(words.join("-"));
+// prints I-like-JavaScript
+```
+
+---
+
+User input often has extra spaces around it. The `trim()` method returns a copy of the string with whitespace removed from **both** ends:
+```javascript
+let input = "   hello   ";
+console.log(input.trim());
+// prints hello
+```
+`trimStart()` removes only leading whitespace and `trimEnd()` only trailing whitespace.
+Spaces in the middle of the string are never touched.
+
+---
+
+The `replace(search, replacement)` method returns a new string where the **first** occurrence of `search` is swapped for `replacement`:
+```javascript
+let text = "red red";
+console.log(text.replace("red", "blue"));
+// prints blue red
+```
+To replace **every** occurrence, use `replaceAll()`:
+```javascript
+console.log(text.replaceAll("red", "blue"));
+// prints blue blue
+```
+
+---
+
+The `repeat(count)` method returns the string repeated `count` times:
+```javascript
+console.log("ab".repeat(3));
+// prints ababab
+console.log("ab".repeat(0));
+// prints an empty string
+```
+
+---
+
+The `padStart(targetLength, padString)` method adds `padString` to the **start** of the string until it reaches `targetLength` characters. `padEnd()` does the same at the end:
+```javascript
+console.log("7".padStart(3, "0"));
+// prints 007
+console.log("Tea".padEnd(6, "."));
+// prints Tea...
+```
+If the string is already long enough, it is returned unchanged.
+Numbers do not have string methods, so convert them first with `String(number)`.
+
+---
+
+Two strings are equal with `===` only if they have exactly the same characters, in the same case:
+```javascript
+console.log("hello" === "hello");
+// prints true
+console.log("hello" === "Hello");
+// prints false
+```
+The `<` and `>` operators compare strings alphabetically, character by character.
+Uppercase letters come before lowercase ones, so `"Zoo" < "apple"` is `true`.
+
+---
+
+Strings are **immutable**: once created, a string can never be changed.
+Assigning to an index does nothing, and every string method returns a **new** string instead of modifying the original:
+```javascript
+let word = "hello";
+word[0] = "j";
+console.log(word);
+// prints hello
+word.toUpperCase();
+console.log(word);
+// prints hello
+```
+To keep a result, assign it back to the variable:
+```javascript
+word = word.toUpperCase();
+```
+
+---
+
+Calling `split("")` with an empty separator turns a string into an array of its single characters.
+Arrays have a `reverse()` method, so you can reverse a string by splitting, reversing and joining:
+```javascript
+let word = "abc";
+console.log(word.split("").reverse().join(""));
+// prints cba
+```

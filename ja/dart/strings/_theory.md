@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 空のセパレーターで `.split('')` を呼び出すと、1文字ずつのリストが得られます。
+
+---
+
+一部の文字は引用符の中に直接入力できません。**エスケープシーケンス**はバックスラッシュで始まります: `\n` は改行、`\t` はタブ、`\\` はバックスラッシュ、`\$` はドル記号そのもの（そうしないと `$` は補間を開始してしまいます）です:
+
+```dart
+print('one\ntwo');   // oneとtwoを別々の行に出力
+print('Cost: \$5');  // Cost: $5
+```
+
+**生文字列**（raw string）は `r` を接頭辞として付けます。その中ではバックスラッシュと `$` は単なる文字であり、エスケープも補間も行われません:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+複数行にまたがるテキストには、トリプルクォート `'''` または `"""` で区切られた**複数行文字列**を使います。その中の改行はそのまま保持されます。
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+内部では、文字列のすべての文字は数値、つまり**コードユニット**（UTF-16コード）として格納されています。`.codeUnitAt(index)` は1文字分のコードを、`.codeUnits` はそのリスト全体を返します。`String.fromCharCode(code)` は逆に、コードから文字列を作成します:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+連続する文字は連続するコードを持ちます。`'A'` は65、`'B'` は66、というように続きます。
+
+---
+
+2つの文字列が `==` で等しくなるのは、まったく同じ文字が同じ順序で含まれている場合です。この比較は**大文字・小文字を区別**し、スペースもすべて考慮されます:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+大文字・小文字を無視して比較するには、まず両辺を変換します: `a.toLowerCase() == b.toLowerCase()`。順序については、`.compareTo(other)` が、その文字列が相手より前にあるか、等しいか、後にあるかに応じて負の数、`0`、または正の数を返します。
+
+---
+
+文字列はイミュータブルであるため、ループの中で `+=` を使って長いテキストを組み立てると、その都度新しい文字列が作られてしまいます。**StringBuffer** はテキストの断片を効率的に集め、必要になったときにだけ最終的な文字列を生成します:
+
+- `.write(value)` は値を追加します（どんな型もテキストに変換されます）
+- `.writeln(value)` は値を追加し、その後に改行を入れます
+- `.toString()` はこれまでに組み立てた文字列を返します
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+文字列メソッドは文字列を返すため、続けて**チェーン**することができます。`.split('')`、リストのプロパティである `.reversed`、`.join()` を組み合わせることで、1つの式で文字列を反転できます:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+**回文**（palindrome）とは、`level` のように前から読んでも後ろから読んでも同じになるテキストのことです。

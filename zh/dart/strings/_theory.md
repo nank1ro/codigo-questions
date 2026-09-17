@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 用空字符串调用 `.split('')` 会得到一个包含每个单独字符的列表。
+
+---
+
+有些字符不能直接输入到引号内。**转义序列**以反斜杠开头：`\n` 表示换行，`\t` 表示制表符，`\\` 表示反斜杠，`\$` 表示字面的美元符号（否则 `$` 会触发插值）：
+
+```dart
+print('one\ntwo');   // 在两行中分别打印 one 和 two
+print('Cost: \$5');  // Cost: $5
+```
+
+**原始字符串（raw string）**以 `r` 为前缀：在它内部，反斜杠和 `$` 都是普通字符，不会被转义或插值：
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+对于跨多行的文本，可以使用由三重引号 `'''` 或 `"""` 界定的**多行字符串**：其中的换行会被保留。
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+在底层，字符串的每个字符都以数字形式存储，即它的**代码单元（code unit）**（一个 UTF-16 编码）。`.codeUnitAt(index)` 返回某个字符的编码，`.codeUnits` 返回整个编码列表。`String.fromCharCode(code)` 则相反，根据编码构建字符串：
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+连续的字母有连续的编码：`'A'` 是 65，`'B'` 是 66，以此类推。
+
+---
+
+当两个字符串包含完全相同、顺序也相同的字符时，用 `==` 比较它们会相等。这种比较是**区分大小写**的，并且会计入每一个空格：
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+如果要忽略大小写进行比较，先转换两边：`a.toLowerCase() == b.toLowerCase()`。对于排序，`.compareTo(other)` 会根据该字符串在另一个字符串之前、相等还是之后，返回一个负数、`0` 或一个正数。
+
+---
+
+由于字符串是不可变的，在循环中用 `+=` 拼接长文本会在每一步都创建一个新字符串。**StringBuffer** 可以高效地收集文本片段，只有在你需要时才生成最终的字符串：
+
+- `.write(value)` 追加一个值（任何类型都会被转换为文本）
+- `.writeln(value)` 追加该值，并在其后加上换行符
+- `.toString()` 返回目前为止构建出的字符串
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+字符串方法会返回字符串，因此可以一个接一个地**链式调用**。结合 `.split('')`、列表的 `.reversed` 属性和 `.join()`，可以在一个表达式中反转字符串：
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+**回文（palindrome）**是指正着读和倒着读都一样的文本，例如 `level`。

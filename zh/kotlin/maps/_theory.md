@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 括号 `(name, age)` 把每个条目拆分成两个变量。条目按插入顺序被访问。
+
+---
+
+和列表一样，map 也支持 `filter`。lambda 接收每个条目，你可以将其解构为 `(key, value)`；结果是一个新的 `Map`，只包含 lambda 返回 `true` 的条目：
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+当条件只涉及键或值中的一边时，还有 `filterKeys { }` 和 `filterValues { }`。
+
+---
+
+`map` 会把 map 的每个条目转换成一个新元素。与 `filter` 不同，结果是一个 `List`，而不是 `Map`：
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

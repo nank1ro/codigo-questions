@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+Une Map littérale vide `{}` n'a aucune paire permettant d'inférer les types, donnez-lui donc des types explicites avec `<K, V>{}` ou avec une annotation de type :
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+La propriété `.isEmpty` vaut `true` quand une Map n'a aucune paire, et `.isNotEmpty` vaut `true` quand elle en a au moins une :
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+La méthode `.forEach()` exécute une fonction une fois pour chaque paire. La fonction reçoit deux paramètres : la clé et la valeur :
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+Une Map n'est pas un `Iterable`, vous ne pouvez donc pas la parcourir directement avec `for-in`. Parcourez plutôt `.entries` : chaque élément est un `MapEntry` avec une `.key` et une `.value` :
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+La méthode `.putIfAbsent(key, ifAbsent)` ajoute une paire **seulement si** la clé n'est pas encore dans la Map. Le deuxième argument est une fonction qui produit la valeur. Si la clé existe déjà, la Map reste inchangée. Dans les deux cas, la valeur désormais stockée sous la clé est renvoyée :
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann est déjà présente, rien ne change
+ages.putIfAbsent('Bob', () => 25); // Bob est ajouté
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+La méthode `.update(key, update)` remplace la valeur d'une clé existante. Le deuxième argument est une fonction qui reçoit la valeur actuelle et renvoie la nouvelle. Si la clé est absente, `.update()` lève une erreur, sauf si vous passez une fonction `ifAbsent` qui produit la valeur initiale :
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple devient 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi est ajouté avec 1
+print(stock); // {apple: 4, kiwi: 1}
+```

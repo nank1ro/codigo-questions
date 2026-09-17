@@ -111,3 +111,62 @@ let userMap = new Map(Object.entries(user));
 console.log(userMap.get("age"));
 // prints 30
 ```
+
+---
+
+Maps and plain objects both store values under keys, but they differ in some important ways:
+- object keys are always strings (or symbols), map keys can be **any** type
+- a map keeps the exact **insertion order** of its pairs
+- a map knows its own `size`, while for an object you need `Object.keys(obj).length`
+- a map starts truly empty, while an object inherits keys like `toString` from its prototype
+
+---
+
+Maps do not have array methods like `sort()` or `filter()`. To use them, convert the map (or its keys or values) into an array with `Array.from()` or the spread operator `...`:
+```javascript
+let ages = new Map([["Bob", 25], ["Ann", 30]]);
+let pairs = Array.from(ages);
+console.log(pairs);
+// prints [ [ 'Bob', 25 ], [ 'Ann', 30 ] ]
+let names = [...ages.keys()];
+console.log(names);
+// prints [ 'Bob', 'Ann' ]
+let values = [...ages.values()];
+console.log(values);
+// prints [ 25, 30 ]
+```
+The opposite conversion, `Object.fromEntries(ages)`, turns a map back into a plain object.
+
+---
+
+Like arrays, maps have a `forEach()` method that calls a function for every pair.
+Be careful with the order of the parameters: the callback receives the **value first**, then the key:
+```javascript
+let stock = new Map([["apple", 3], ["pear", 5]]);
+stock.forEach((qty, name) => {
+  console.log(`${name} x${qty}`);
+});
+// prints apple x3
+// prints pear x5
+```
+
+---
+
+`delete(key)` returns `true` when a pair was removed and `false` when the key was not there.
+To remove **every** pair at once, call `clear()`:
+```javascript
+let cart = new Map([["pen", 2], ["ink", 1]]);
+console.log(cart.delete("pen"));
+// prints true
+console.log(cart.delete("pen"));
+// prints false
+cart.clear();
+console.log(cart.size);
+// prints 0
+```
+
+---
+
+So when should you reach for a `Map` instead of a plain object?
+- Use a **Map** when keys are added and removed at runtime, when they are not strings, or when you need `size` and reliable ordering
+- Use an **object** for a fixed record with known field names, like `{ name, email }`, and whenever you need to convert the data to JSON, since `JSON.stringify()` ignores the content of a map

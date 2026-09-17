@@ -76,3 +76,18 @@ void main() {
 ```
 
 Parâmetros nomeados melhoram a legibilidade, especialmente quando uma função tem muitos parâmetros.
+
+---
+
+Dart também suporta **parâmetros posicionais opcionais** — parâmetros entre colchetes `[]`. Eles são passados por posição, podem ser omitidos pelo chamador e podem ter um valor padrão:
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

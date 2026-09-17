@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 클로저는 무엇이든 비교할 수 있습니다. 예를 들어 `words.sorted { $0.count < $1.count }`는 문자열을 짧은 것부터 긴 것 순으로 정렬합니다.
+
+---
+
+클로저는 자신의 본문 밖에서 선언된 변수를 사용할 수 있습니다. 클로저는 그 변수를 **캡처**합니다. 즉, 그 변수를 선언한 함수가 이미 반환되었더라도, 클로저가 존재하는 한 그 변수는 계속 살아 있습니다.
+이를 통해 함수는 자신만의 프라이빗한 상태를 가진 클로저를 만들 수 있습니다:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int`는 매개변수가 없고 `Int`를 반환하는 클로저의 타입입니다. 반환된 클로저를 호출할 때마다 캡처된 같은 `count`가 증가합니다:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+클로저를 반환하는 것은 커스터마이즈된 함수를 만드는 편리한 방법입니다. 바깥 함수의 매개변수는 그 함수가 반환하는 클로저에 캡처됩니다:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+반환 타입 `(Int) -> Int`는 그 클로저를 나타내며, 축약형 `$0`은 `makeAdder`의 인수가 아니라 그 클로저의 인수를 가리킵니다.
+
+---
+
+상수에 저장된 클로저는 매개변수의 인자 레이블을 사용해 클로저 인수가 필요한 곳이라면 어디든 전달할 수 있습니다:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+클로저를 반환하는 함수를 호출할 때마다 **새로운** 캡처 변수가 만들어집니다. 서로 다른 호출로 만들어진 두 클로저는 상태를 공유하지 않습니다:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+상태는 같은 클로저를 호출할 때만 공유됩니다.
+
+---
+
+기본적으로 함수에 전달된 클로저는 그 함수가 실행되는 동안에만 사용될 수 있습니다. 함수가 클로저를 저장하거나 그것을 사용하는 다른 클로저를 반환하면, 그 클로저는 함수를 **탈출**한다고 하며, 해당 매개변수에는 `@escaping`을 표시해야 합니다:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+`@escaping`이 없으면 컴파일러가 오류를 보고합니다. 반환된 클로저가 `twice`가 끝난 뒤에 `task`를 사용하게 되기 때문입니다.
+
+---
+
+클로저는 다른 값과 마찬가지로 배열에 저장할 수 있습니다. 요소의 타입은 함수 타입입니다:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+이런 배열을 반복하면서 각 클로저를 순서대로 호출하면 작은 변환 **파이프라인**을 만들 수 있습니다.

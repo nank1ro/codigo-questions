@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+Когда вы уверены в типе, можно **привести** значение с помощью `as`: `value as String` даёт вам значение как `String`.
+Если значение на самом деле другое, `as` выбрасывает `ClassCastException` во время выполнения.
+**Безопасное приведение** `as?` никогда не выбрасывает исключение: оно возвращает значение, когда приведение удалось, и `null`, когда нет, поэтому его результат — тип, допускающий null:
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null, "Kotlin" — не Int
+val bad = items[0] as Int        // выбрасывает ClassCastException
+```
+Предпочитайте `is` с умным приведением, когда нужна проверка, и `as?`, когда неудача допустима.

@@ -92,3 +92,42 @@ for (var n in numbers) {
 // 1
 // 4
 ```
+
+---
+
+Zbiory obsługują klasyczne operacje na zbiorach. Każda z nich zwraca **nowy** zbiór i nie zmienia oryginałów:
+
+- `a.union(b)` zawiera elementy, które są w `a` **lub** w `b`
+- `a.intersection(b)` zawiera elementy, które są **zarówno** w `a`, jak i w `b`
+- `a.difference(b)` zawiera elementy `a`, których **nie ma** w `b`
+
+```dart
+var a = {1, 2, 3};
+var b = {2, 3, 4};
+print(a.union(b));        // {1, 2, 3, 4}
+print(a.intersection(b)); // {2, 3}
+print(a.difference(b));   // {1}
+```
+
+---
+
+Konwersja listy na zbiór to najprostszy sposób na **usunięcie duplikatów**: każda lista ma metodę `.toSet()`, która zwraca zbiór jej unikalnych elementów, w kolejności pierwszego wystąpienia. Zbiór ma metodę `.toList()`, która działa w drugą stronę, więc połączenie obu daje listę bez duplikatów:
+
+```dart
+var votes = ['a', 'b', 'a', 'c', 'b'];
+Set<String> unique = votes.toSet();
+print(unique); // {a, b, c}
+List<String> cleaned = votes.toSet().toList();
+print(cleaned); // [a, b, c]
+```
+
+---
+
+Zarówno listy, jak i zbiory mają metodę `.contains()`, ale działają one zupełnie inaczej. Lista sprawdza swoje elementy jeden po drugim od początku, więc wyszukiwanie w długiej liście staje się wolniejsze wraz z jej wzrostem. Zbiór przechowuje swoje elementy według ich hasha, więc `.contains()` znajduje wartość w niemal stałym czasie, niezależnie od liczby elementów.
+
+Jeśli musisz wielokrotnie sprawdzać przynależność, a kolejność lub duplikaty nie mają znaczenia, zbiór jest właściwym narzędziem:
+
+```dart
+var banned = {'spam', 'scam'};
+print(banned.contains('spam')); // szybkie, nawet przy milionach elementów
+```

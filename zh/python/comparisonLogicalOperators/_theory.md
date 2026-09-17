@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False，只检查键
 ```
 两者都返回布尔值，读起来像英语，因此它们是检查成员关系的首选方式，而不必写循环。
+
+---
+
+`any(iterable)` 在至少有一个元素为真时返回 `True`，`all(iterable)` 在每个元素都为真时返回 `True`（`all([])` 是 `True`）。与生成器表达式结合，它们可以表达对整个集合的条件，并且像 `or` 和 `and` 一样短路：
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

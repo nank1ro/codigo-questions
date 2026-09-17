@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 Domknięcie może porównywać cokolwiek, na przykład `words.sorted { $0.count < $1.count }` porządkuje ciągi znaków od najkrótszego do najdłuższego.
+
+---
+
+Domknięcie może korzystać ze zmiennych zadeklarowanych poza jego treścią. **Przechwytuje** je: zmienna nadal istnieje tak długo, jak istnieje domknięcie, nawet po zakończeniu funkcji, która ją zadeklarowała.
+Dzięki temu funkcja może zbudować domknięcie z własnym, prywatnym stanem:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` to typ domknięcia bez parametrów, które zwraca `Int`. Każde wywołanie zwróconego domknięcia zwiększa to samo przechwycone `count`:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Zwracanie domknięcia to wygodny sposób na budowanie dostosowanych funkcji. Parametry funkcji zewnętrznej są przechwytywane przez domknięcie, które ona zwraca:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+Typ zwracany `(Int) -> Int` opisuje domknięcie, a skrót `$0` odnosi się do argumentu tego domknięcia, a nie `makeAdder`.
+
+---
+
+Domknięcie zapisane w stałej może być przekazane wszędzie tam, gdzie oczekiwany jest argument-domknięcie, przy użyciu etykiety argumentu parametru:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Każde wywołanie funkcji zwracającej domknięcie tworzy **nową** przechwyconą zmienną. Dwa domknięcia zbudowane przez osobne wywołania nie współdzielą swojego stanu:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+Stan jest współdzielony tylko między wywołaniami tego samego domknięcia.
+
+---
+
+Domyślnie domknięcie przekazane do funkcji może być używane tylko podczas działania tej funkcji. Jeśli funkcja przechowuje domknięcie albo zwraca inne domknięcie, które go używa, domknięcie **ucieka** (escapes) z funkcji, a jego parametr musi być oznaczony `@escaping`:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Bez `@escaping` kompilator zgłasza błąd, ponieważ zwrócone domknięcie używałoby `task` już po zakończeniu działania `twice`.
+
+---
+
+Domknięcia można przechowywać w tablicach jak każdą inną wartość. Typem elementu jest typ funkcyjny:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Przechodzenie po takiej tablicy i wywoływanie po kolei każdego domknięcia tworzy mały **potok** (pipeline) przekształceń.

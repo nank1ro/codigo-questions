@@ -127,3 +127,11 @@ print("ex" in "text")            # True
 print("age" in {"name": "Ada"})  # False, only keys are checked
 ```
 Both return a boolean and read like English, which makes them the preferred way to test membership instead of writing a loop.
+
+---
+
+`any(iterable)` returns `True` if at least one element is truthy and `all(iterable)` if every element is (`all([])` is `True`). Combined with a generator expression they express a condition over a whole collection, and they short-circuit like `or` and `and`:
+```python
+print(any(ch.isdigit() for ch in "abc1"))  # True
+print(all(ch.isalpha() for ch in "ab1"))   # False
+```

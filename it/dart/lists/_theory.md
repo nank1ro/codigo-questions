@@ -63,3 +63,57 @@ print(fruits.contains('orange')); // false
 ```
 
 Questo è utile per verificare l'appartenenza senza necessità di un ciclo.
+
+---
+
+Il metodo `.remove(value)` rimuove il **primo** elemento uguale a `value` da una lista. Restituisce `true` se un elemento è stato rimosso, oppure `false` se il valore non è stato trovato.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+bool removed = colors.remove('green');
+print(removed); // true
+print(colors); // [red, blue]
+```
+
+---
+
+Le proprietà `.first` e `.last` restituiscono il primo e l'ultimo elemento di una lista senza usare un indice.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.first); // red
+print(colors.last); // blue
+```
+
+Entrambe generano un errore se la lista è vuota.
+
+---
+
+La proprietà `.isEmpty` è `true` quando una lista non ha elementi, e `.isNotEmpty` è `true` quando ne ha almeno uno.
+
+```dart
+var colors = <String>[];
+print(colors.isEmpty); // true
+colors.add('red');
+print(colors.isNotEmpty); // true
+```
+
+---
+
+Il metodo `.indexOf(value)` restituisce l'indice del primo elemento uguale a `value`. Se il valore non è presente nella lista, restituisce `-1`.
+
+```dart
+var colors = ['red', 'green', 'blue'];
+print(colors.indexOf('green')); // 1
+print(colors.indexOf('pink')); // -1
+```
+
+---
+
+Il metodo `.where()` mantiene solo gli elementi per cui una funzione restituisce `true`. Non restituisce una nuova lista ma un `Iterable` lazy (pigro), quindi è necessario chiamare `.toList()` per riconvertire il risultato in una `List`.
+
+```dart
+var numbers = [1, 2, 3, 4];
+List<int> big = numbers.where((n) => n > 2).toList();
+print(big); // [3, 4]
+```

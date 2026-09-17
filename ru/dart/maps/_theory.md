@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+У пустого литерала карты `{}` нет пар, по которым можно вывести типы, поэтому задайте явные типы с помощью `<K, V>{}` или аннотации типа:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+Свойство `.isEmpty` равно `true`, когда карта не содержит пар, а `.isNotEmpty` равно `true`, когда в ней есть хотя бы одна:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+Метод `.forEach()` запускает функцию один раз для каждой пары. Функция принимает два параметра: ключ и значение:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+Карта не является `Iterable`, поэтому нельзя перебрать её напрямую с помощью `for-in`. Вместо этого перебирайте `.entries`: каждый элемент — это `MapEntry` со свойствами `.key` и `.value`:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+Метод `.putIfAbsent(key, ifAbsent)` добавляет пару **только если** ключа ещё нет в карте. Второй аргумент — функция, которая создаёт значение. Если ключ уже существует, карта остаётся без изменений. В обоих случаях возвращается значение, теперь хранящееся под этим ключом:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann уже там, ничего не меняется
+ages.putIfAbsent('Bob', () => 25); // Bob добавлен
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+Метод `.update(key, update)` заменяет значение существующего ключа. Второй аргумент — функция, которая получает текущее значение и возвращает новое. Если ключа нет, `.update()` выбрасывает ошибку, если только вы не передадите функцию `ifAbsent`, создающую начальное значение:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple становится 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi добавляется с 1
+print(stock); // {apple: 4, kiwi: 1}
+```

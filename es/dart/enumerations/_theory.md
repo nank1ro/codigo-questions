@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 Al igual que la forma de sentencia, una expresión switch sobre un enum debe ser exhaustiva.
+
+---
+
+Desde Dart 2.17, un enum puede declarar **campos** y un **constructor**, igual que una clase. Esto se llama un *enum mejorado*. Cada valor pasa entonces sus propios argumentos al constructor:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+Fíjate en las tres reglas: la lista de valores termina con un **punto y coma** `;`, los campos deben ser `final`, y el constructor debe ser `const`.
+
+---
+
+Un enum mejorado también puede declarar **métodos** y **getters**. Dentro de ellos, `this` es el valor actual, así que puedes usar directamente su `name`, `index` y sus campos:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+Un enum sin campos puede seguir declarando métodos: la lista de valores termina entonces con `;` y los miembros van a continuación.
+
+---
+
+Para pasar de un `String` de vuelta a un valor de enum, llama a `byName` sobre la lista `values`. Devuelve el valor cuyo `name` coincide exactamente:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+Si ningún valor tiene ese nombre, `byName` lanza un `ArgumentError`. Cuando el string proviene de la entrada del usuario, `asNameMap()` es una opción más segura: devuelve un `Map<String, Direction>` de nombres a valores, de modo que una búsqueda de un nombre desconocido da `null` en lugar de un error:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+Los valores de un enum son excelentes **claves de mapa**: son únicos, fáciles de comparar, y el compilador comprueba que solo uses valores reales. Declara el mapa con el enum como tipo de clave y busca los valores con `[]`:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+Como con cualquier mapa, una búsqueda devuelve `null` cuando falta la clave, así que usa `??` para proporcionar un valor alternativo.
+
+---
+
+Un enum puede **implementar una interfaz** con la palabra clave `implements`. El enum promete entonces proporcionar cada miembro que declara la interfaz, y sus valores pueden usarse en cualquier lugar donde se espere ese tipo de interfaz:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+Un getter declarado en la interfaz puede implementarse tanto con un getter como con un campo `final` del mismo nombre.

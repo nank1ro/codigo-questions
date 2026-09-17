@@ -89,3 +89,22 @@ for ((name, age) in ages) {
 // Bob is 25
 ```
 Die Klammern `(name, age)` teilen jeden Eintrag in zwei Variablen auf. Die Einträge werden in der Reihenfolge besucht, in der sie eingefügt wurden.
+
+---
+
+Wie Listen unterstützen auch Maps `filter`. Die Lambda-Funktion erhält jeden Eintrag, den Sie in `(key, value)` destrukturieren können; das Ergebnis ist eine neue `Map` mit nur den Einträgen, für die die Lambda-Funktion `true` zurückgibt:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25, "Zoe" to 40)
+val adults = ages.filter { (name, age) -> age >= 30 }
+println(adults) // {Alice=30, Zoe=40}
+```
+Es gibt auch `filterKeys { }` und `filterValues { }`, wenn die Bedingung nur eine Seite des Eintrags betrifft.
+
+---
+
+`map` wandelt jeden Eintrag einer Map in ein neues Element um. Im Gegensatz zu `filter` ist das Ergebnis eine `List`, keine `Map`:
+```kotlin
+val ages = mapOf("Alice" to 30, "Bob" to 25)
+val labels = ages.map { (name, age) -> "$name: $age" }
+println(labels) // [Alice: 30, Bob: 25]
+```

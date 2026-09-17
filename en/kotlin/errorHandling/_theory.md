@@ -207,3 +207,33 @@ println(bad.getOrNull())     // null
 println(bad.getOrElse { 0 }) // 0
 ```
 `getOrNull()` turns a failure into `null`, while `getOrElse { ... }` runs the block to build a replacement. Nothing is thrown at the call site, so the failure can be carried around and dealt with later.
+
+---
+
+A `Result` can also be inspected without unwrapping it. `onFailure` runs its block only when the result holds an exception, `onSuccess` only when it holds a value, and **both give the same `Result` back** so the calls can be chained:
+
+```kotlin
+runCatching { "abc".toInt() }
+    .onFailure { println("could not read it") }
+    .onSuccess { println("read $it") }
+```
+Inside the block the exception (or the value) is available as `it`, so `it.message` is the text of the failure.
+
+This is the "log and carry on" shape: report the problem where it happened, then continue, without an early `return` and without a `var` set from two places.
+
+---
+
+Where the `try` sits decides how much work a single bad value destroys. Wrap the **whole loop** and the first failure abandons the rest of the batch; wrap the **body** and only that one element is lost:
+
+```kotlin
+var total = 0
+for (value in listOf("3", "x", "5")) {
+    try {
+        total += value.toInt()
+    } catch (e: NumberFormatException) {
+        // skip this one
+    }
+}
+println(total) // 8
+```
+This pairs naturally with a validating function that throws: the function states one rule and refuses anything breaking it, and the loop decides that a refusal only costs one element.

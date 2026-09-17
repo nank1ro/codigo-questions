@@ -76,3 +76,18 @@ void main() {
 ```
 
 Los parámetros con nombre mejoran la legibilidad, especialmente cuando una función tiene muchos parámetros.
+
+---
+
+Dart también admite **parámetros posicionales opcionales** — parámetros encerrados entre corchetes `[]`. Se pasan por posición, quien llama puede omitirlos y pueden tener un valor por defecto:
+
+```dart
+String greet([String name = "World"]) {
+  return "Hello, $name!";
+}
+
+void main() {
+  print(greet());         // Hello, World!
+  print(greet("Alice"));  // Hello, Alice!
+}
+```

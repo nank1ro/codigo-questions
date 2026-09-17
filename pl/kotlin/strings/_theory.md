@@ -132,3 +132,45 @@ println("hi".padEnd(5, '.'))    // hi...
 println("1234".padStart(2, '0')) // 1234
 ```
 Liczby nie są ciągami znaków: najpierw wywołaj `toString()`, jak w `42.toString().padStart(4, '0')`.
+
+---
+
+Dwa ciągi znaków są równe, gdy zawierają te same znaki w tej samej kolejności. W Kotlinie `==` porównuje **zawartość** ciągów znaków, więc to normalny sposób ich porównywania.
+`equals` robi to samo, ale dodatkowo przyjmuje `ignoreCase = true`, aby zignorować różnicę między wielkimi i małymi literami:
+```kotlin
+println("hello" == "hello")                          // true
+println("Hello" == "hello")                          // false
+println("Hello".equals("hello", ignoreCase = true))  // true
+```
+`===` sprawdza, czy dwie zmienne wskazują na dokładnie ten sam obiekt w pamięci, co przy ciągach znaków niemal nigdy nie jest tym, czego chcesz.
+
+---
+
+`reversed()` zwraca ciąg znaków z jego znakami w odwrotnej kolejności:
+```kotlin
+println("stressed".reversed()) // desserts
+```
+Słowo, które czyta się tak samo w obu kierunkach, jak `"level"`, nazywa się **palindromem**.
+
+---
+
+Ciągi znaków są **niemutowalne**: raz utworzone nigdy się nie zmieniają. Każda funkcja, którą widziałeś do tej pory, jak `uppercase()` czy `replace()`, zwraca **nowy** ciąg znaków i pozostawia oryginał nietknięty.
+Aby zachować wynik, musisz go zapisać, na przykład przez ponowne przypisanie do `var`:
+```kotlin
+var name = "kotlin"
+name.uppercase()        // wynik jest odrzucany
+println(name)           // kotlin
+name = name.uppercase() // wynik jest zapisywany
+println(name)           // KOTLIN
+```
+
+---
+
+Budowanie długiego ciągu znaków fragment po fragmencie za pomocą `+` tworzy nowy ciąg znaków na każdym kroku. `StringBuilder` to mutowalny bufor tekstu stworzony do tego zadania: `append` dodaje tekst na końcu (i zwraca builder, dzięki czemu wywołania można łączyć w łańcuch), a `toString()` zwraca końcowy `String`:
+```kotlin
+val sb = StringBuilder()
+sb.append("Hello")
+sb.append(", ").append("world")
+println(sb.toString()) // Hello, world
+```
+`append` przyjmuje ciągi znaków, znaki i liczby.

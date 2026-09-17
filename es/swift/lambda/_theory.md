@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 El cierre puede comparar cualquier cosa, por ejemplo `words.sorted { $0.count < $1.count }` ordena las cadenas de la más corta a la más larga.
+
+---
+
+Un cierre puede usar variables declaradas fuera de su cuerpo. Las **captura**: la variable sigue existiendo mientras el cierre exista, incluso después de que la función que la declaró haya retornado.
+Esto permite que una función construya un cierre con su propio estado privado:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` es el tipo de un cierre sin parámetros que devuelve un `Int`. Cada llamada al cierre devuelto incrementa el mismo `count` capturado:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Devolver un cierre es una forma práctica de construir funciones personalizadas. Los parámetros de la función externa son capturados por el cierre que devuelve:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+El tipo de retorno `(Int) -> Int` describe el cierre, y la forma abreviada `$0` se refiere al argumento de ese cierre, no al de `makeAdder`.
+
+---
+
+Un cierre almacenado en una constante se puede pasar donde se espere un argumento de tipo cierre, usando la etiqueta del argumento del parámetro:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Cada llamada a una función que devuelve un cierre crea una **nueva** variable capturada. Dos cierres construidos por llamadas separadas no comparten su estado:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+El estado se comparte solo entre llamadas del mismo cierre.
+
+---
+
+Por defecto, un cierre pasado a una función solo debe usarse mientras esa función se ejecuta. Si la función almacena el cierre o devuelve otro cierre que lo usa, el cierre **escapa** de la función, y su parámetro debe marcarse con `@escaping`:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Sin `@escaping` el compilador informa un error, porque el cierre devuelto usaría `task` después de que `twice` haya terminado.
+
+---
+
+Los cierres se pueden almacenar en arrays como cualquier otro valor. El tipo del elemento es el tipo de función:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Recorrer un array así y llamar a cada cierre en orden construye un pequeño **pipeline** de transformaciones.

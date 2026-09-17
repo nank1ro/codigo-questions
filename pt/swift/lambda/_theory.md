@@ -104,3 +104,76 @@ print(nums.sorted { $0 < $1 }) // [1, 2, 3]
 print(nums.sorted { $0 > $1 }) // [3, 2, 1]
 ```
 A closure pode comparar qualquer coisa, por exemplo `words.sorted { $0.count < $1.count }` ordena strings da mais curta para a mais longa.
+
+---
+
+Uma closure pode usar variáveis declaradas fora do seu corpo. Ela as **captura**: a variável continua existindo enquanto a closure existir, mesmo depois que a função que a declarou tiver retornado.
+Isso permite que uma função construa uma closure com seu próprio estado privado:
+```swift
+func makeCounter() -> () -> Int {
+    var count = 0
+    return {
+        count += 1
+        return count
+    }
+}
+```
+`() -> Int` é o tipo de uma closure sem parâmetros que retorna um `Int`. Cada chamada à closure retornada incrementa o mesmo `count` capturado:
+```swift
+let counter = makeCounter()
+print(counter()) // 1
+print(counter()) // 2
+```
+
+---
+
+Retornar uma closure é uma forma prática de construir funções personalizadas. Os parâmetros da função externa são capturados pela closure que ela retorna:
+```swift
+func makeAdder(_ amount: Int) -> (Int) -> Int {
+    return { $0 + amount }
+}
+let addFive = makeAdder(5)
+print(addFive(10)) // 15
+```
+O tipo de retorno `(Int) -> Int` descreve a closure, e a abreviação `$0` se refere ao argumento dessa closure, não de `makeAdder`.
+
+---
+
+Uma closure armazenada em uma constante pode ser passada sempre que uma closure for esperada como argumento, usando o rótulo de argumento do parâmetro:
+```swift
+let ascending = { (a: Int, b: Int) -> Bool in a < b }
+print([3, 1, 2].sorted(by: ascending)) // [1, 2, 3]
+```
+
+---
+
+Cada chamada a uma função que retorna uma closure cria uma **nova** variável capturada. Duas closures construídas por chamadas separadas não compartilham seu estado:
+```swift
+let first = makeCounter()
+let second = makeCounter()
+print(first())  // 1
+print(first())  // 2
+print(second()) // 1
+```
+O estado é compartilhado somente entre chamadas da mesma closure.
+
+---
+
+Por padrão, uma closure passada para uma função só pode ser usada enquanto essa função estiver em execução. Se a função armazenar a closure ou retornar outra closure que a use, a closure **escapa** da função, e seu parâmetro precisa ser marcado com `@escaping`:
+```swift
+func twice(_ task: @escaping () -> Int) -> () -> Int {
+    return { task() * 2 }
+}
+let answer = twice { 21 }
+print(answer()) // 42
+```
+Sem `@escaping` o compilador reporta um erro, porque a closure retornada usaria `task` depois que `twice` já tivesse terminado.
+
+---
+
+Closures podem ser armazenadas em arrays como qualquer outro valor. O tipo do elemento é o tipo de função:
+```swift
+let steps: [(Int) -> Int] = [{ $0 + 1 }, { $0 * 10 }]
+print(steps[1](3)) // 30
+```
+Percorrer um array assim e chamar cada closure em sequência constrói um pequeno **pipeline** de transformações.

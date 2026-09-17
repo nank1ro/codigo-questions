@@ -177,3 +177,16 @@ when (value) {
     is Boolean -> println(!value)
 }
 ```
+
+---
+
+Gdy masz pewność co do typu, możesz **rzutować** wartość za pomocą `as`: `value as String` daje wartość jako `String`.
+Jeśli wartość jest tak naprawdę czymś innym, `as` rzuca `ClassCastException` w czasie działania.
+**Bezpieczne rzutowanie** `as?` nigdy nie rzuca wyjątku: zwraca wartość, gdy rzutowanie się powiedzie, i `null`, gdy zawiedzie, więc jego wynik jest typu nullable:
+```kotlin
+val items: List<Any> = listOf("Kotlin", 7)
+val text = items[0] as String    // "Kotlin"
+val number = items[0] as? Int    // null, "Kotlin" to nie Int
+val bad = items[0] as Int        // rzuca ClassCastException
+```
+Gdy potrzebujesz sprawdzić typ, wybieraj `is` ze smart cast, a `as?`, gdy niepowodzenie jest akceptowalne.

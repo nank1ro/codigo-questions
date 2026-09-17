@@ -153,3 +153,33 @@ Une poignée d'exceptions intégrées couvre la plupart des défaillances du quo
 | `IndexError` | un index de séquence est hors de portée | `[1, 2][5]` |
 
 Utiliser l'une d'elles au lieu d'inventer un nouveau type garde vos erreurs lisibles pour quiconque connaît Python.
+
+---
+
+Parfois, un gestionnaire doit réagir à une défaillance sans en prendre la responsabilité : l'enregistrer, la compter, fermer quelque chose — puis laisser l'appelant s'en occuper. Un `raise` seul à l'intérieur d'un bloc `except` **relance** l'exception en cours de traitement, avec son type, son message et sa traceback d'origine intacts :
+```python
+try:
+    value = int(text)
+except ValueError:
+    print("could not read the value")
+    raise
+```
+Écrire `raise ValueError(...)` à la place créerait une nouvelle exception avec sa propre traceback — ce ne serait plus la même défaillance que celle que vous avez interceptée, ce qui est exactement ce qu'un `raise` seul préserve.
+
+---
+
+Quand aucun type intégré ne convient, définissez le vôtre en le faisant hériter de `Exception`. Un corps vide suffit généralement — le nom est le message pour le lecteur :
+```python
+class ConfigError(Exception):
+    pass
+```
+Elle se comporte comme n'importe quelle autre exception : `raise ConfigError("bad port")`, et `except ConfigError:` l'intercepte.
+
+Traduire une défaillance de bas niveau dans votre propre type est courant, et l'erreur d'origine ne doit pas se perdre dans le processus. `raise NewError(...) from original` les **chaîne** : il stocke `original` dans l'attribut `__cause__` de la nouvelle exception, et la traceback affiche les deux sous *The above exception was the direct cause of the following exception* :
+```python
+try:
+    port = int(text)
+except ValueError as e:
+    raise ConfigError("bad port") from e
+```
+Sans `from e`, les deux restent liés implicitement, mais `from` dit explicitement que la première erreur a causé la seconde.

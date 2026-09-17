@@ -88,3 +88,68 @@ List<int> years = ages.values.toList();
 print(names); // [Ann, Bob]
 print(years); // [30, 25]
 ```
+
+---
+
+An empty map literal `{}` has no pairs to infer the types from, so give it explicit types with `<K, V>{}` or with a type annotation:
+
+```dart
+var cart = <String, int>{};
+Map<String, int> other = {};
+```
+
+The `.isEmpty` property is `true` when a map has no pairs, and `.isNotEmpty` is `true` when it has at least one:
+
+```dart
+print(cart.isEmpty); // true
+cart['pen'] = 2;
+print(cart.isNotEmpty); // true
+```
+
+---
+
+The `.forEach()` method runs a function once for every pair. The function receives two parameters: the key and the value:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+ages.forEach((name, age) {
+  print('$name is $age');
+});
+// Ann is 30
+// Bob is 25
+```
+
+---
+
+A map is not an `Iterable`, so you cannot loop over it directly with `for-in`. Instead, loop over `.entries`: each element is a `MapEntry` with a `.key` and a `.value`:
+
+```dart
+var ages = {'Ann': 30, 'Bob': 25};
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Ann: 30
+// Bob: 25
+```
+
+---
+
+The `.putIfAbsent(key, ifAbsent)` method adds a pair **only if** the key is not in the map yet. The second argument is a function that produces the value. If the key already exists, the map is left untouched. In both cases the value now stored under the key is returned:
+
+```dart
+var ages = {'Ann': 30};
+ages.putIfAbsent('Ann', () => 99); // Ann is already there, nothing changes
+ages.putIfAbsent('Bob', () => 25); // Bob is added
+print(ages); // {Ann: 30, Bob: 25}
+```
+
+---
+
+The `.update(key, update)` method replaces the value of an existing key. The second argument is a function that receives the current value and returns the new one. If the key is missing, `.update()` throws an error, unless you pass an `ifAbsent` function that produces the initial value:
+
+```dart
+var stock = {'apple': 3};
+stock.update('apple', (n) => n + 1); // apple becomes 4
+stock.update('kiwi', (n) => n + 1, ifAbsent: () => 1); // kiwi is added with 1
+print(stock); // {apple: 4, kiwi: 1}
+```

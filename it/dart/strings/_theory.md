@@ -140,3 +140,81 @@ print(parts.join(' - ')); // a - b - c
 ```
 
 Chiamare `.split('')` con un separatore vuoto ti dà una lista con ogni singolo carattere.
+
+---
+
+Alcuni caratteri non possono essere digitati direttamente tra virgolette. Le **sequenze di escape** iniziano con un backslash: `\n` è un a capo, `\t` un tab, `\\` un backslash e `\$` un segno di dollaro letterale (altrimenti `$` avvia un'interpolazione):
+
+```dart
+print('one\ntwo');   // stampa one e two su righe separate
+print('Cost: \$5');  // Cost: $5
+```
+
+Una **raw string** è preceduta da `r`: al suo interno, i backslash e `$` sono caratteri normali, niente viene escapato o interpolato:
+
+```dart
+print(r'C:\new\folder'); // C:\new\folder
+print(r'Cost: $5');      // Cost: $5
+```
+
+Per un testo che si estende su più righe, usa una **stringa multi-riga** delimitata da triple virgolette `'''` o `"""`: gli a capo al suo interno vengono mantenuti.
+
+```dart
+var poem = '''
+roses are red
+violets are blue''';
+```
+
+---
+
+Sotto il cofano, ogni carattere di una stringa è memorizzato come un numero, il suo **code unit** (un codice UTF-16). `.codeUnitAt(index)` restituisce il codice di un carattere e `.codeUnits` l'intera lista. `String.fromCharCode(code)` fa il contrario, costruendo una stringa a partire da un codice:
+
+```dart
+var word = 'AB';
+print(word.codeUnitAt(0));         // 65
+print(word.codeUnits);             // [65, 66]
+print(String.fromCharCode(67));    // C
+```
+
+Lettere consecutive hanno codici consecutivi: `'A'` è 65, `'B'` è 66, e così via.
+
+---
+
+Due stringhe sono uguali con `==` quando contengono esattamente gli stessi caratteri, nello stesso ordine. Il confronto è **case-sensitive** e conta ogni spazio:
+
+```dart
+print('dart' == 'dart');    // true
+print('Dart' == 'dart');    // false
+print('dart ' == 'dart');   // false
+```
+
+Per confrontare ignorando maiuscole e minuscole, converti prima entrambi i lati: `a.toLowerCase() == b.toLowerCase()`. Per l'ordinamento, `.compareTo(other)` restituisce un numero negativo, `0` o un numero positivo a seconda che la stringa venga prima, sia uguale, o venga dopo l'altra.
+
+---
+
+Poiché le stringhe sono immutabili, costruire un testo lungo con `+=` in un ciclo crea una nuova stringa a ogni passo. Uno **StringBuffer** raccoglie pezzi di testo in modo efficiente e produce la stringa finale solo quando la richiedi:
+
+- `.write(value)` aggiunge un valore (qualsiasi tipo viene convertito in testo)
+- `.writeln(value)` aggiunge il valore seguito da un a capo
+- `.toString()` restituisce la stringa costruita finora
+
+```dart
+var buffer = StringBuffer();
+buffer.write('Hello');
+buffer.write(', ');
+buffer.writeln('Dart!');
+buffer.write(42);
+print(buffer.toString()); // Hello, Dart!\n42
+```
+
+---
+
+I metodi delle stringhe restituiscono stringhe, quindi possono essere **concatenati** uno dopo l'altro. Combinato con `.split('')`, la proprietà `.reversed` delle liste e `.join()`, questo ti permette di invertire una stringa in un'unica espressione:
+
+```dart
+var text = 'Dart';
+print(text.split('').reversed.join()); // traD
+print(text.toLowerCase().replaceAll('a', '4')); // d4rt
+```
+
+Un **palindromo** è un testo che si legge allo stesso modo in avanti e indietro, come `level`.

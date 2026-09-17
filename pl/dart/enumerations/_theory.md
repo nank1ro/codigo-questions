@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 Podobnie jak w formie instrukcji, wyrażenie switch nad enumem musi być wyczerpujące.
+
+---
+
+Od Dart 2.17 enum może deklarować **pola** i **konstruktor**, tak jak klasa. Nazywa się to *rozszerzonym enumem*. Każda wartość przekazuje wtedy swoje własne argumenty do konstruktora:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+Zwróć uwagę na trzy zasady: lista wartości kończy się **średnikiem** `;`, pola muszą być `final`, a konstruktor musi być `const`.
+
+---
+
+Rozszerzony enum może również deklarować **metody** i **gettery**. Wewnątrz nich `this` to bieżąca wartość, więc możesz bezpośrednio korzystać z jej `name`, `index` i pól:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+Enum bez pól nadal może deklarować metody: lista wartości kończy się wtedy `;`, a po niej następują składowe.
+
+---
+
+Aby przejść z `String` z powrotem do wartości enum, wywołaj `byName` na liście `values`. Zwraca ona wartość, której `name` dokładnie pasuje:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+Jeśli żadna wartość nie ma takiej nazwy, `byName` rzuca `ArgumentError`. Gdy ciąg znaków pochodzi z danych wejściowych użytkownika, bezpieczniejszym wyborem jest `asNameMap()`: zwraca on `Map<String, Direction>` z nazw na wartości, więc wyszukanie nieznanej nazwy daje `null` zamiast błędu:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+Wartości enum świetnie sprawdzają się jako **klucze mapy**: są unikalne, łatwe do porównania, a kompilator sprawdza, że używasz tylko rzeczywistych wartości. Zadeklaruj mapę z enumem jako typem klucza i wyszukuj wartości za pomocą `[]`:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+Podobnie jak w każdej mapie, wyszukanie zwraca `null`, gdy brakuje klucza, więc użyj `??`, aby podać wartość zastępczą.
+
+---
+
+Enum może **implementować interfejs** za pomocą słowa kluczowego `implements`. Enum wtedy zobowiązuje się dostarczyć każdą składową zadeklarowaną przez interfejs, a jego wartości mogą być używane wszędzie tam, gdzie oczekiwany jest ten typ interfejsu:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+Getter zadeklarowany w interfejsie może być zaimplementowany zarówno za pomocą gettera, jak i pola `final` o tej samej nazwie.

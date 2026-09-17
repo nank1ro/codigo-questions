@@ -57,3 +57,17 @@ int result = a ~/ b; // 3  (nie 3.333...)
 ```
 
 Używaj `~/` gdy potrzebujesz ilorazu będącego liczbą całkowitą bez reszty.
+
+---
+
+Dart podąża standardową matematyczną **kolejnością operacji** (priorytetem): mnożenie i dzielenie są oceniane przed dodawaniem i odejmowaniem.
+
+```dart
+int result = 2 + 3 * 4; // 14, nie 20
+```
+
+Użyj nawiasów aby zmienić kolejność:
+
+```dart
+int result = (2 + 3) * 4; // 20
+```

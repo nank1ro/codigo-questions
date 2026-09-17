@@ -159,3 +159,32 @@ console.log(makeAdder(1)(5));
 // 6 출력
 ```
 왼쪽에서 오른쪽으로 읽어 보세요: `makeAdder`는 `amount`를 받아 `(n) => n + amount`, 즉 클로저를 통해 `amount`를 붙잡아 두는 화살표 함수를 반환합니다. `makeAdder(1)(5)`는 반환된 함수를 즉시 호출합니다.
+
+---
+
+화살표 함수를 저장하지 않고도 호출할 수 있습니다. 괄호로 감싸고 바로 뒤에 인수 목록을 붙이면 **즉시 호출되는** 화살표 함수가 됩니다:
+```javascript
+const doubled = ((n) => n * 2)(5);
+console.log(doubled);
+// 10 출력
+```
+화살표 주위의 괄호는 필수입니다. 괄호가 없으면 `(n) => n * 2(5)`는 숫자 `2`를 호출하려고 합니다. 즉시 호출되는 함수는 프로그램의 나머지 부분으로 새어 나가면 안 되는 몇 개의 임시 변수로 값을 계산할 때 유용합니다.
+
+---
+
+일반 함수와 화살표 함수의 가장 큰 차이는 `this` 키워드입니다.
+일반 `function`은 *호출되는 방식*에 따라 정해지는 **자신만의** `this`를 가집니다. `team.intro()`에서는 `this`가 `team`이지만, `map`에 전달된 콜백에서는 아무도 `this`를 설정하지 않으므로 `this.name`은 `undefined`입니다(엄격 모드에서는 아예 오류가 날 수도 있습니다).
+화살표 함수는 자체적인 `this`가 **없습니다**: 단순히 주변 코드의 `this`를 사용합니다(**렉시컬** `this`). 그렇기 때문에 메서드 안의 화살표 콜백은 객체를 계속 사용할 수 있습니다:
+```javascript
+const team = {
+  name: "Tigers",
+  players: ["Ana", "Bo"],
+  intro() {
+    return this.players.map((p) => `${p} plays for ${this.name}`);
+  },
+};
+console.log(team.intro());
+// [ 'Ana plays for Tigers', 'Bo plays for Tigers' ] 출력
+```
+콜백으로 `function (p) { return ... this.name ... }`을 사용하면 같은 코드가 `Tigers` 대신 `undefined`를 출력합니다.
+반대로 주의할 점: `this`가 필요한 객체 **메서드**에는 화살표 함수를 사용하지 마세요. 객체를 가리키지 않기 때문입니다.

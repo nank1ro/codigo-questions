@@ -117,3 +117,107 @@ String arrow(Direction direction) => switch (direction) {
 ```
 
 Like the statement form, a switch expression over an enum must be exhaustive.
+
+---
+
+Since Dart 2.17 an enum can declare **fields** and a **constructor**, just like a class. This is called an *enhanced enum*. Each value then passes its own arguments to the constructor:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+}
+
+print(Planet.mars.moons); // 2
+```
+
+Notice the three rules: the list of values ends with a **semicolon** `;`, the fields must be `final`, and the constructor must be `const`.
+
+---
+
+An enhanced enum can also declare **methods** and **getters**. Inside them, `this` is the current value, so you can use its `name`, `index` and fields directly:
+
+```dart
+enum Planet {
+  mercury(0),
+  earth(1),
+  mars(2);
+
+  final int moons;
+
+  const Planet(this.moons);
+
+  bool get hasMoons => moons > 0;
+
+  String describe() => '$name has $moons moon(s)';
+}
+
+print(Planet.earth.hasMoons);   // true
+print(Planet.mars.describe()); // mars has 2 moon(s)
+```
+
+An enum with no fields can still declare methods: the value list then ends with `;` and the members follow.
+
+---
+
+To go from a `String` back to an enum value, call `byName` on the `values` list. It returns the value whose `name` matches exactly:
+
+```dart
+enum Direction { north, south, east, west }
+
+var direction = Direction.values.byName('east');
+print(direction == Direction.east); // true
+```
+
+If no value has that name, `byName` throws an `ArgumentError`. When the string comes from user input, `asNameMap()` is a safer choice: it returns a `Map<String, Direction>` from names to values, so a lookup for an unknown name gives `null` instead of an error:
+
+```dart
+print(Direction.values.asNameMap()['up']); // null
+```
+
+---
+
+Enum values make excellent **map keys**: they are unique, easy to compare and the compiler checks that you only use real values. Declare the map with the enum as the key type and look values up with `[]`:
+
+```dart
+enum Direction { north, south, east, west }
+
+Map<Direction, String> arrows = {
+  Direction.north: '^',
+  Direction.south: 'v',
+  Direction.east: '>',
+  Direction.west: '<',
+};
+
+print(arrows[Direction.east]); // >
+```
+
+As with any map, a lookup returns `null` when the key is missing, so use `??` to provide a fallback.
+
+---
+
+An enum can **implement an interface** with the `implements` keyword. The enum then promises to provide every member the interface declares, and its values can be used wherever that interface type is expected:
+
+```dart
+abstract class Describable {
+  String describe();
+}
+
+enum Animal implements Describable {
+  dog,
+  cat;
+
+  @override
+  String describe() => 'I am a $name';
+}
+
+Describable pet = Animal.cat;
+print(pet.describe()); // I am a cat
+```
+
+A getter declared in the interface can be implemented either with a getter or with a `final` field of the same name.
