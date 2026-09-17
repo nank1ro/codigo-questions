@@ -138,5 +138,10 @@
         "order": 28,
         "title": "プロトコル",
         "description": "型が採用し拡張できる要件を定義する方法を学ぶ"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "エラーと例外",
+        "description": "エラーをスロー、キャッチ、定義して失敗を処理する方法を学ぶ"
     }
 }

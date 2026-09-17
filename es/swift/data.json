@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protocolos",
         "description": "Define requisitos que los tipos pueden adoptar y extender"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Errores",
+        "description": "Lanza, captura y define errores para manejar fallos"
     }
 }

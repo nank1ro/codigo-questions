@@ -138,5 +138,10 @@
         "order": 28,
         "title": "Protokolle",
         "description": "Lerne, wie man Anforderungen definiert, die Typen annehmen und erweitern können"
+    },
+    "errorHandling": {
+        "order": 29,
+        "title": "Fehler und Ausnahmen",
+        "description": "Fehler werfen, abfangen und definieren, um Fehlschläge zu behandeln"
     }
 }
