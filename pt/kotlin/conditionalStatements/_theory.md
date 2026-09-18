@@ -53,7 +53,7 @@ Então vamos para a segunda instrução e verificamos se `num` é igual a 3, sen
 
 ---
 
-Podemos adicionar quantas instrucoes `else if` quisermos, nao ha limites
+Podemos adicionar quantas instruções `else if` quisermos, não há limites
 ```kotlin
 var num = 4
 if (num == 2) {
@@ -68,7 +68,7 @@ if (num == 2) {
     println("the number is 6")
 }
 ```
-e a saida deste codigo e `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 

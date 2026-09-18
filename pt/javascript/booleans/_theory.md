@@ -4,7 +4,7 @@ Você pode avaliar qualquer expressão em JavaScript e obter uma de duas respost
 
 ---
 
-Podemos armazenar o valor booleano `true` em uma variavel assim como um numero ou uma string.
+Podemos armazenar o valor booleano `true` em uma variável assim como um número ou uma string.
 
 ---
 

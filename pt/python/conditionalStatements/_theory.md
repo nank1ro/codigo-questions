@@ -53,7 +53,7 @@ Então vamos passar para a segunda instrução e verificar se `num` é igual a 3
 
 ---
 
-Podemos adicionar quantas instrucoes `elif` quisermos, nao ha limites
+Podemos adicionar quantas instruções `elif` quisermos, não há limites
 ```python
 num = 4
 if (num == 2):
@@ -67,7 +67,7 @@ elif (num == 5):
 elif (num == 6):
     print("the number is 6")
 ```
-e a saida deste codigo e `the number is 4`.
+e a saída deste código é `the number is 4`.
 
 ---
 

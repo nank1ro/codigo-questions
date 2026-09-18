@@ -21,7 +21,7 @@ Em um loop `for` podemos especificar quantas vezes queremos que nosso loop execu
 
 ---
 
-Podemos usar `..<` para iterar ate o proximo numero excluido, ou `...` para iterar ate o proximo numero incluido
+Podemos usar `..<` para iterar até o próximo número excluído, ou `...` para iterar até o próximo número incluído
 
 ---
 
@@ -41,11 +41,11 @@ Tenha em mente que o valor `to` é excluído
 
 ---
 
-Com a funcao `stride()` tambem podemos usar intervalos fechados, usando:
+Com a função `stride()` também podemos usar intervalos fechados, usando:
 ```swift
 stride(from:through:by:)
 ```
-Neste caso, o valor `through` e incluido
+Neste caso, o valor `through` é incluído
 
 ---
 

@@ -34,8 +34,8 @@ names[0] # Obtém o novo valor "Jordan"
 
 ---
 
-Assim como strings, listas tem um **comprimento**.
-O comprimento de uma lista e o numero de itens que ela contem
+Assim como strings, listas têm um **comprimento**.
+O comprimento de uma lista é o número de itens que ela contém
 
 ---
 
@@ -125,7 +125,7 @@ Para criar uma tupla usamos os parênteses `()`
 ---
 
 Pode haver momentos em que queremos converter nossa tupla em uma lista.
-Para fazer isso, podemos usar a funcao `list()`
+Para fazer isso, podemos usar a função `list()`
 
 ---
 

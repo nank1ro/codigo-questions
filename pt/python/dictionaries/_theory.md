@@ -9,10 +9,10 @@ A chave `key1` aponta para o valor `1`, `key2` para `2`, e assim por diante.
 
 ---
 
-Acessar valores de um dicionario por chave e igual a acessar valores de uma lista por indice:
+Acessar valores de um dicionário por chave é igual a acessar valores de uma lista por índice:
 ```python
 user['age']
-# obtem o valor de age do dicionario user
+# obtém o valor de age do dicionário user
 ```
 
 ---
@@ -39,13 +39,13 @@ irá remover a chave `key_name` e seu valor associado do dicionário.
 
 ---
 
-E se quisermos listar todas as chaves do dicionario?
-Bem, existe o metodo `keys()`.
+E se quisermos listar todas as chaves do dicionário?
+Bem, existe o método `keys()`.
 
 ---
 
-E se quisermos listar todos os valores do dicionario?
-Bem, existe o metodo `values()`.
+E se quisermos listar todos os valores do dicionário?
+Bem, existe o método `values()`.
 
 ---
 
@@ -66,8 +66,8 @@ Para __adicionar__ ou __alterar__ valores em um dicionário, também podemos usa
 
 ---
 
-E se quisermos __remover__ um valor de um dicionario?
-Existe o metodo `pop()`:
+E se quisermos __remover__ um valor de um dicionário?
+Existe o método `pop()`:
 ```python
 dict_name.pop("key_name")
 ```

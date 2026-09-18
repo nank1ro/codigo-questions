@@ -25,7 +25,7 @@ Se o que vem após o sinal `$` não for reconhecido como um identificador de pro
 
 ---
 
-Tambem podemos inserir variaveis apos os sinais de dolar para mostrar seus valores
+Também podemos inserir variáveis após os sinais de dólar para mostrar seus valores
 
 ---
 
@@ -33,7 +33,7 @@ Podemos usar chaves para inserir valores quantas vezes quisermos usando a interp
 
 ---
 
-Dentro de `${}` tambem podemos colocar condicoes, por exemplo:
+Dentro de `${}` também podemos colocar condições, por exemplo:
 ```dart
 print("The answer is ${true ? "correct": "wrong"}");
 // imprime The answer is correct

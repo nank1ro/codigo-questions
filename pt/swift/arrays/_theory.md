@@ -39,8 +39,8 @@ print(names[0])
 
 ---
 
-Assim como strings, arrays tem um **comprimento** `count`.
-O comprimento de um array e o numero de itens que ele contem
+Assim como strings, arrays têm um **comprimento** `count`.
+O comprimento de um array é o número de itens que ele contém
 
 ---
 

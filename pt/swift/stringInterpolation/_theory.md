@@ -9,7 +9,7 @@ Mas usar o sinal `+` para adicionar um número como '10' a uma string como `"fri
 
 ---
 
-A interpolacao de strings nos permite exibir expressoes como adicionar uma string a um numero, sem nenhum erro.
+A interpolação de strings nos permite exibir expressões como adicionar uma string a um número, sem nenhum erro.
 
 ---
 
@@ -21,7 +21,7 @@ Em seguida, adicionamos o tipo diferente de valor entre chaves para que ele seja
 
 ---
 
-Inserir variaveis como `friends` entre os parenteses tambem exibe seus valores
+Inserir variáveis como `friends` entre os parênteses também exibe seus valores
 
 ---
 
