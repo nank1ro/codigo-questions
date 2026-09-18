@@ -129,4 +129,56 @@ assert strip_comments('/** doc */', 'c') != strip_comments('/* doc */', 'c')
 # but a translated comment behind the same marker still normalizes identically
 assert strip_comments('/// uno', 'c') == strip_comments('/// one', 'c')
 
+# --- the unterminated-string collector, used by check_string_literals.py ---
+from check_string_literals import unterminated
+
+def ex(lang, *lines):
+    body = '\n'.join(lines)
+    return unterminated(f'---\nlanguage: {lang}\nexerciseType: 1\n---\n\n'
+                        f'# --solutions--\n\n```{lang}\n{body}\n```\n')
+
+# the defect this exists for: a dropped \n escape leaves the literal open
+assert ex('c', 'printf("%f', '", x);')
+# ... including when the dropped backslash leaves three adjacent quotes in a language
+# that has no triple-quoted string
+assert ex('c', 'printf(""");')
+# ... and when an earlier single-quoted string on the line ends in a URL
+assert ex('javascript', "const u = 'https://e.com'; const s = \"broken")
+
+# a double quote inside a C character literal opens nothing
+assert not ex('c', "char quote = '\"';")
+# a // inside a string is a URL, not a comment
+assert not ex('kotlin', 'val site = "https://codigo.dev" // the project home page')
+assert not ex('javascript', 'const u = "https://example.com";')
+# a quote inside a real comment is not a string, and locale comments may differ from en
+assert not ex('kotlin', 'val x = 1  // stampa il carattere "')
+assert not ex('c', "// apostrophes in prose are fine: it's fine")
+# an escaped quote is not a delimiter
+assert not ex('c', 'printf("\\"");')
+# swift/kotlin/dart triple-quoted strings legitimately span lines
+assert not ex('swift', 'let poem = """', 'roses are red', '"""')
+
+# a [/] placeholder can stand for a quote, so a seed holding one is not decidable
+seed = '---\nlanguage: c\nexerciseType: 2\n---\n\n# --seed--\n\n```c\nprintf([/]%s", x);\n```\n'
+assert not unterminated(seed)
+# an intentionally unclosed /* (en/c/comments/5.md) makes the rest of the block unlexable
+unclosed = ('---\nlanguage: c\nexerciseType: 1\n---\n\n# --seed--\n\n```c\n'
+            "int r = n * 2; /* il doppio dell'input\nreturn r;\n```\n")
+assert not unterminated(unclosed)
+
+# prose outside a code fence is not code: apostrophes there must not register
+assert not unterminated("---\nlanguage: swift\nexerciseType: 1\n---\n\n"
+                        "# --description--\n\nBonjour l'utilisateur !\n")
+
+# the en baseline excuses only the line en trips on: a locale slip further down the
+# same fence still reports (excusing the whole fence used to swallow it)
+excused = {(f, ln) for f, ln, _ in ex('c', 'printf("deliberate', 'int ok = 1;')}
+locale = ex('c', 'printf("deliberate', 'printf("slip')
+assert [t for t in locale if t[:2] not in excused] == [(0, 1, 'printf("slip')]
+
+# a /* inside a string is not an unclosed block comment, so nothing after it is dropped
+assert ex('c', 'printf("/*");', 'printf("broken')
+# ... nor is one behind a line comment
+assert ex('c', '// mentions /* in prose', 'printf("broken')
+
 print('ok')
