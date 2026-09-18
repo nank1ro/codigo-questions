@@ -18,8 +18,12 @@ TRIPLE_QUOTES = {
     'swift': ('"""',),
 }
 
-def strip_comments(body, lang):
+def strip_comments(body, lang, unterminated=None, open_block=None):
     """Blank out comment text, keeping the marker so a missing comment still shows up.
+
+    Pass a list as `unterminated` to also collect (quote_offset, line_text) for every
+    line on which a string literal was left open, or as `open_block` to collect the
+    offset of every /* that never closes - see check_string_literals.py.
 
     Single-pass scanner tracking string/comment state as it walks `body`, so a marker
     or /* */ sequence inside a string literal is never mistaken for a real comment.
@@ -118,7 +122,12 @@ def strip_comments(body, lang):
                     j += 2
                     continue
                 if cj == '\n':
-                    break  # unterminated string on this line: don't leak past it
+                    # unterminated string on this line: don't leak past it
+                    if unterminated is not None:
+                        # report where the quote itself opened, not where its line began:
+                        # callers cut at lexer offsets that can fall mid-line
+                        unterminated.append((i, body[body.rfind('\n', 0, i) + 1:j]))
+                    break
                 if cj == q:
                     j += 1
                     break
@@ -130,6 +139,8 @@ def strip_comments(body, lang):
             end = body.find('*/', i + 2)
             if end == -1:
                 # no closing delimiter anywhere: not a real comment, don't swallow the rest
+                if open_block is not None:
+                    open_block.append(i)
                 i += 2
                 continue
             flush(i)
