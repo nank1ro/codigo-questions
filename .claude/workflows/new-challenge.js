@@ -25,7 +25,7 @@ export const meta = {
 const SPECS = (Array.isArray(args) ? args : [args]).filter(Boolean)
 if (!SPECS.length) throw new Error('new-challenge: pass args as an array of {challenge, name, difficulty, icon, brief}')
 
-const MAIN = '/Users/ale/.t3/worktrees/codigo-questions/t3code-3441c85c'
+const MAIN = '/Users/ale/github/codigo-questions'
 const LANGS = ['c', 'dart', 'javascript', 'kotlin', 'python', 'swift']
 const LOCALE_GROUPS = [['de', 'es', 'fr', 'it'], ['pt', 'pl', 'ru', 'zh'], ['ja', 'ko', 'hi']]
 
