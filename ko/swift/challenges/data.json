@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "애너그램"
+  },
+  "matching_brackets": {
+    "difficulty": 3,
+    "name": "괄호 짝 맞추기"
   }
 }

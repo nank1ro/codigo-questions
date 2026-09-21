@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "Anagramme"
+  },
+  "matching_brackets": {
+    "difficulty": 3,
+    "name": "Crochets correspondants"
   }
 }
