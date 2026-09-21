@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "Anagrama"
+  },
+  "clock": {
+    "difficulty": 2,
+    "name": "Relógio"
   }
 }
