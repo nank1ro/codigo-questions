@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "アナグラム"
+  },
+  "run_length_encoding": {
+    "difficulty": 2,
+    "name": "ランレングス符号化"
   }
 }

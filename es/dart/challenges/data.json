@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "Anagrama"
+  },
+  "run_length_encoding": {
+    "difficulty": 2,
+    "name": "Codificación por longitud de serie"
   }
 }
