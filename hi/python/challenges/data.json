@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "अनाग्राम"
+  },
+  "run_length_encoding": {
+    "difficulty": 2,
+    "name": "रन लंबाई एन्कोडिंग"
   }
 }

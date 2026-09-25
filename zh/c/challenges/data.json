@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "变位词"
+  },
+  "run_length_encoding": {
+    "difficulty": 2,
+    "name": "游程编码"
   }
 }

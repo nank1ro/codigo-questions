@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "Anagramme"
+  },
+  "run_length_encoding": {
+    "difficulty": 2,
+    "name": "Codage par plages"
   }
 }
