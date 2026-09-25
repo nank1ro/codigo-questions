@@ -122,5 +122,13 @@
   "anagram": {
     "difficulty": 2,
     "name": "애너그램"
+  },
+  "clock": {
+    "difficulty": 2,
+    "name": "시계"
+  },
+  "clock": {
+    "difficulty": 2,
+    "name": "시계"
   }
 }
