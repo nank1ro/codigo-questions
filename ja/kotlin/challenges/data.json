@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "アナグラム"
+  },
+  "matching_brackets": {
+    "difficulty": 3,
+    "name": "括弧の対応"
   }
 }

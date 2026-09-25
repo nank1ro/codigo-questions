@@ -122,5 +122,9 @@
   "anagram": {
     "difficulty": 2,
     "name": "Anagram"
+  },
+  "matching_brackets": {
+    "difficulty": 3,
+    "name": "Pasujące nawiasy"
   }
 }
